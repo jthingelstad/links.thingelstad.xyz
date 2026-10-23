@@ -29,11 +29,16 @@ bookmark, an unknown field, a bad id, or a duplicate.
 
 The join to The Weekly Thing, written by `tools/join_issues.py` from the issue files
 at `~/Projects/thingelstad.com/weekly.thingelstad.com/apps/site/archive/<n>.md`
-(front matter `number`, `subject`, `publish_date`, `links`).
+(front matter `number`, `subject`, `publish_date`, `links`). Twenty-one issues of 2017
+and 2018 (WT32 to WT52) were imported into WT Builder as plain text and list no links in
+front matter; for an issue whose front matter lists none, the rows are the link items of
+the body instead: every Markdown link that is a whole line (with or without a heading
+marker) under its `##` section, leaving out Jamie's own posts on thingelstad.com and
+the photo files. Two issues (WT213 on Ukraine, WT322 from Banff) really have no links.
 
 ```json
 {
-  "source": "weekly.thingelstad.com archive front matter",
+  "source": "weekly.thingelstad.com archive front matter, or the issue body where the front matter lists no links",
   "issues": [
     {
       "number": 350,

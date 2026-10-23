@@ -141,6 +141,69 @@ class ReadIssueTest(unittest.TestCase):
             ],
         )
 
+    def test_links_come_from_the_body_when_the_front_matter_lists_none(self):
+        path = Path(self.dir) / "32.md"
+        path.write_text(
+            textwrap.dedent(
+                """\
+                ---
+                number: 32
+                subject: Weekly Thing for December 16, 2017
+                publish_date: '2017-12-16T13:42:00Z'
+                slug: weekly-thing-for-december-16-2017
+                links: []
+                permalink: /archive/32/
+                ---
+                Intro with an [inline link](https://inline.example/) that is not an item.
+
+                ## Photo 📷
+
+                ![](https://files.thingelstad.com/weekly-thing/32/cover.jpg)
+
+                ## Links 📌
+
+                ### [It's a post](https://example.com/post)
+
+                What Jamie wrote.
+
+                ## Tech
+
+                [Not saved](https://elsewhere.example/)
+                elsewhere.example
+
+                [ ](https://files.thingelstad.com/weekly-thing/32/big.jpg)
+
+                ## Status 🎈
+
+                [Friday @ 5:13 PM](https://www.thingelstad.com/2018/03/09/hallway.html)
+                """
+            ),
+            encoding="utf-8",
+        )
+        issue = read_issue(path, self.index)
+        self.assertEqual(issue["number"], 32)
+        self.assertEqual(
+            issue["links"],
+            [
+                {
+                    "position": 0,
+                    "id": ID["https://www.example.com/post/"],
+                    "url": "https://example.com/post",
+                    "text": "It's a post",
+                    "section": "Links 📌",
+                    "heading_context": "[It's a post](https://example.com/post)",
+                },
+                {
+                    "position": 1,
+                    "id": None,
+                    "url": "https://elsewhere.example/",
+                    "text": "Not saved",
+                    "section": "Tech",
+                    "heading_context": "[Not saved](https://elsewhere.example/)",
+                },
+            ],
+        )
+
     def test_the_special_issue_and_a_slug_that_is_not_the_path(self):
         path = issue_file(
             self.dir,

@@ -68,7 +68,7 @@ export function linkJson(link: Link) {
 }
 
 const item = (link: Link) =>
-  `- [${link.title.replace(/[[\]]/g, '\\$&')}](${absolute(linkPath(link.id))}) (${link.host}, ${dateLabel(link.saved)})`;
+  `- [${link.title.replace(/[\\[\]]/g, '\\$&')}](${absolute(linkPath(link.id))}) (${link.host}, ${dateLabel(link.saved)})`;
 
 export function linkMarkdown(link: Link) {
   const c = connectionsOf(link);

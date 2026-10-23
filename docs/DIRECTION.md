@@ -80,7 +80,8 @@ Two things in the data shape the design:
 
 ### The join to the Weekly Thing is clean
 
-Every issue on weekly.thingelstad.com carries its links in front matter
+Every issue on weekly.thingelstad.com carries its links in front matter (21 imported
+issues of 2017 and 2018 list none there, so the join reads their bodies; docs/DATA.md)
 (`links: [{url, text, domain, heading_context, section}]`), 6,510 rows across 330
 issues. Normalising URLs (scheme, www, trailing slash, tracking parameters) matches
 6,465 of them (99.3%) to a Pinboard bookmark, 6,465 distinct links. The 45 misses are mobile hosts,
