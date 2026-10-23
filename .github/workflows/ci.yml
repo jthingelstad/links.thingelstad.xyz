@@ -1,0 +1,146 @@
+name: Validate and deploy
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      allow_removals:
+        description: >-
+          Pages a deploy may remove beyond the guard (the exact count the
+          refused run printed). Leave empty otherwise.
+        required: false
+        default: ''
+permissions:
+  contents: read
+jobs:
+  quality:
+    name: Quality
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.13'
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run format:check
+      - run: npm run check
+      - run: npm test
+      - run: npm run sites:check
+      - run: pipx run --spec ruff==0.17.0 ruff check tools tests
+      - run: npm audit --audit-level=high
+      - run: pipx run --spec cfn-lint==1.57.2 cfn-lint infra/storage.json infra/certificate.json infra/site.json infra/delivery.json
+      - run: npm run validate:infra
+      - run: npm run validate:data
+  codeql:
+    name: CodeQL
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: github/codeql-action/init@24c54180a607b1449ed407dd24f251e4e9147c8d # v4
+        with:
+          languages: javascript-typescript,python
+          build-mode: none
+          config-file: ./.github/codeql-config.yml
+      - uses: github/codeql-action/analyze@24c54180a607b1449ed407dd24f251e4e9147c8d # v4
+      - name: Reject high or critical security findings
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --paginate "repos/${GITHUB_REPOSITORY}/code-scanning/alerts?state=open&ref=${GITHUB_REF}" \
+            --jq '.[] | select(.rule.security_severity_level == "high" or .rule.security_severity_level == "critical") | "\(.rule.id): \(.most_recent_instance.location.path)"' > /tmp/links-security-findings.txt
+          if test -s /tmp/links-security-findings.txt; then
+            cat /tmp/links-security-findings.txt
+            exit 1
+          fi
+  # Builds from the committed data/ alone: no AWS access, no Pinboard token.
+  # The Pinboard sync runs on Jamie's Mac and commits data/ (docs/deployment.md).
+  # On main the build turns Tinylytics on (the layout still loads it only on
+  # the production host), and the archive it verifies is what the deploy
+  # publishes.
+  build:
+    name: Build and browser validation
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.13'
+      - run: npm ci
+      - run: npm run build
+        env:
+          PUBLIC_TINYLYTICS_ENABLED: ${{ github.ref == 'refs/heads/main' && 'true' || 'false' }}
+      - run: npm run validate:site
+      - run: npm run revision
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:ci-browser
+      - name: Package the verified static build
+        if: github.ref == 'refs/heads/main'
+        run: tar -czf /tmp/links-site.tar.gz -C dist .
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: github.ref == 'refs/heads/main'
+        with:
+          name: verified-site
+          path: /tmp/links-site.tar.gz
+          retention-days: 3
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        with:
+          name: browser-evidence
+          path: /tmp/links-site-qa/
+          retention-days: 7
+  deploy:
+    name: Deploy
+    needs: [quality, codeql, build]
+    # Deploys only once the delivery role exists (repository variable set after
+    # tools/bootstrap-infra.mjs apply). Until then main builds and stops here.
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      (github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
+      vars.AWS_DEPLOY_ROLE_ARN != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    concurrency:
+      group: production-deployment
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
+        with:
+          name: verified-site
+          path: .build/
+      - run: mkdir -p dist && tar -xzf .build/links-site.tar.gz -C dist
+      - uses: aws-actions/configure-aws-credentials@e1253824e5c10ff9df46874f81ed3ec929e19cfd # v6.3.0
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: us-east-1
+      - run: npm run deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEPLOY_ALLOW_REMOVALS: ${{ inputs.allow_removals }}

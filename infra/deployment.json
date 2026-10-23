@@ -1,0 +1,25 @@
+{
+  "account": "999153317627",
+  "region": "us-east-1",
+  "stacks": {
+    "storage": "links-storage",
+    "site": "links-site",
+    "delivery": "links-delivery",
+    "certificate": "links-certificate"
+  },
+  "siteBucket": "links-storage-web-999153317627",
+  "distributionId": null,
+  "cloudfrontDomain": null,
+  "deliveryUrl": null,
+  "productionUrl": "https://links.thingelstad.xyz/",
+  "certificateArn": null,
+  "deploymentRoleArn": null,
+  "stackTags": {
+    "Application": "Thingelstad",
+    "Project": "links",
+    "Repository": "jthingelstad/links.thingelstad.xyz",
+    "ManagedBy": "cloudformation",
+    "Environment": "production"
+  },
+  "alarmTopic": "arn:aws:sns:us-east-1:999153317627:weekly-thing-librarian-alarms"
+}

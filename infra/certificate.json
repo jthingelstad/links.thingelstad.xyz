@@ -1,0 +1,19 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "links.thingelstad.xyz HTTPS certificate with external DNS validation",
+  "Resources": {
+    "Certificate": {
+      "Type": "AWS::CertificateManager::Certificate",
+      "Properties": {
+        "DomainName": "links.thingelstad.xyz",
+        "ValidationMethod": "DNS"
+      }
+    }
+  },
+  "Outputs": {
+    "CertificateArn": {
+      "Value": { "Ref": "Certificate" },
+      "Description": "links.thingelstad.xyz HTTPS certificate"
+    }
+  }
+}
