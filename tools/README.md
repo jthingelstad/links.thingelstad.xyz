@@ -121,7 +121,10 @@ templates and are not read. For each issue:
 - `url` is `https://weekly.thingelstad.com` plus the front matter `permalink`
   (`/archive/<n>/`), falling back to `/archive/<file name>/`. It is never built from
   the slug: `/archive/<slug>/` pages are meta-refresh redirects to the permalink.
-- `links` keeps the front matter order. A row without a `url` is skipped, so
+- `links` keeps the front matter order; when the front matter lists no links (the
+  21 imported issues WT32 to WT52), the rows come from the body: whole-line Markdown
+  links under their `##` section, minus Jamie's own posts on thingelstad.com and the
+  photo files (`body_links`). A row without a `url` is skipped, so
   `position` counts only the rows kept, from 0. `text`, `section` and
   `heading_context` are copied as strings, or `null` where the front matter has
   `null` (about 2,700 rows have no `heading_context`).
