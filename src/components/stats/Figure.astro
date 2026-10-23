@@ -1,0 +1,34 @@
+---
+// One chart on /stats/: its title, a sentence of fact, an optional legend,
+// the chart (the default slot) and its numbers as a table (slot "table"), the
+// text alternative every chart carries.
+interface Props {
+  id: string;
+  title: string;
+  caption: string;
+  legend?: { cls: string; label: string }[];
+}
+const { id, title, caption, legend } = Astro.props;
+---
+
+<figure class="viz-figure" id={id}>
+  <figcaption>
+    <h3>{title}</h3>
+    <p>{caption}</p>
+  </figcaption>
+  {legend && (
+    <ul class="viz-legend">
+      {legend.map((item) => (
+        <li>
+          <span class={`swatch ${item.cls}`} />
+          {item.label}
+        </li>
+      ))}
+    </ul>
+  )}
+  <slot />
+  <details class="viz-numbers">
+    <summary>The numbers</summary>
+    <slot name="table" />
+  </details>
+</figure>

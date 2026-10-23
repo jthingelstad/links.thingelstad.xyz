@@ -1,0 +1,115 @@
+---
+// A grid of cells, one hue from light to dark by class (stats.ts breaks()),
+// with its scale legend. A zero is an empty cell; a null is outside the data
+// and not drawn. Cells are parted by a 2px surface gap and each has a native
+// tooltip; a cell with an href links there. A grid narrower than the
+// viewBox width keeps the other charts' scale, so its text matches theirs.
+import { WIDTH, classLabels, r1 } from '../../lib/charts';
+import { classOf } from '../../lib/stats';
+interface Props {
+  label: string;
+  rows: { label: string; href?: string }[];
+  cols: (string | null)[];
+  values: (number | null)[][];
+  tips: (string | null)[][];
+  hrefs?: (string | null)[][];
+  cuts: number[];
+  shares?: boolean;
+  labelWidth?: number;
+  cellH?: number;
+  maxCellW?: number;
+  noneLabel?: string;
+}
+const {
+  label,
+  rows,
+  cols,
+  values,
+  tips,
+  hrefs,
+  cuts,
+  shares = false,
+  labelWidth = 48,
+  cellH = 20,
+  maxCellW = 44,
+  noneLabel = '0',
+} = Astro.props;
+const top = 26;
+const cellW = Math.min(maxCellW, (WIDTH - labelWidth) / cols.length);
+const svgWidth = r1(labelWidth + cellW * cols.length);
+const svgHeight = top + cellH * rows.length;
+const legend = [noneLabel, ...classLabels(cuts, shares)];
+const cells = values.flatMap((row, r) =>
+  row.map((value, c) =>
+    value === null
+      ? null
+      : {
+          x: r1(labelWidth + cellW * c + 1),
+          y: r1(top + cellH * r + 1),
+          cls: `q${classOf(value, cuts)}`,
+          tip: tips[r][c] ?? '',
+          href: hrefs?.[r][c] ?? null,
+        },
+  ),
+);
+const w = r1(cellW - 2);
+const h = r1(cellH - 2);
+---
+
+<ul class="viz-legend scale">
+  {legend.map((text, i) => (
+    <li>
+      <span class={`swatch q${i}`} />
+      {text}
+    </li>
+  ))}
+</ul>
+<svg
+  class="viz"
+  viewBox={`0 0 ${svgWidth} ${svgHeight}`}
+  style={`width: ${r1((100 * svgWidth) / WIDTH)}%; max-width: ${r1((40 * svgWidth) / WIDTH)}rem`}
+  role="img"
+  aria-label={label}
+>
+  {cols.map((text, c) =>
+    text ? (
+      <text
+        class="tick"
+        x={r1(labelWidth + cellW * c + cellW / 2)}
+        y="18"
+        text-anchor="middle"
+      >
+        {text}
+      </text>
+    ) : null,
+  )}
+  {rows.map((row, r) => {
+    const label = (
+      <text
+        class="tick"
+        x={labelWidth - 8}
+        y={r1(top + cellH * r + cellH / 2 + 5)}
+        text-anchor="end"
+      >
+        {row.label}
+      </text>
+    );
+    return row.href ? <a href={row.href}>{label}</a> : label;
+  })}
+  {cells.map((cell) => {
+    if (!cell) return null;
+    const rect = (
+      <rect
+        class={`cell ${cell.cls}`}
+        x={cell.x}
+        y={cell.y}
+        width={w}
+        height={h}
+        rx="2"
+      >
+        <title>{cell.tip}</title>
+      </rect>
+    );
+    return cell.href ? <a href={cell.href}>{rect}</a> : rect;
+  })}
+</svg>

@@ -1,0 +1,105 @@
+---
+// One series over a numeric x (issue numbers): a 2px line over a 10% wash,
+// broken where a value is missing (null). Each x has a hover target the width
+// of its step, with a native tooltip, linking to its page when it has one.
+import {
+  WIDTH,
+  axisLeft,
+  compact,
+  r1,
+  textWidth,
+  ticks,
+} from '../../lib/charts';
+interface Props {
+  label: string;
+  points: { x: number; y: number | null; tip: string; href?: string }[];
+  xTicks: number[];
+  height?: number;
+}
+const { label, points, xTicks, height = 170 } = Astro.props;
+const yTicks = ticks(Math.max(...points.map((p) => p.y ?? 0)), 4);
+const scaleTop = yTicks[yTicks.length - 1];
+const left = axisLeft(yTicks.map(compact));
+const right = 8;
+const top = 16;
+const base = top + height;
+const svgHeight = base + 30;
+const xs = points.map((p) => p.x);
+const x0 = Math.min(...xs);
+const x1 = Math.max(...xs);
+const step = (WIDTH - left - right) / Math.max(1, x1 - x0);
+const x = (v: number) => left + (v - x0) * step;
+// An x tick label stays inside the viewBox.
+const tickX = (t: number) => {
+  const half = textWidth(String(t)) / 2;
+  return Math.min(Math.max(x(t), half), WIDTH - half);
+};
+const y = (v: number) => base - (v / scaleTop) * height;
+
+// Runs of points with a value, each drawn as its own line and wash.
+const runs: { x: number; y: number }[][] = [];
+let run: { x: number; y: number }[] = [];
+for (const p of points) {
+  if (p.y === null) {
+    if (run.length) runs.push(run);
+    run = [];
+  } else run.push({ x: x(p.x), y: y(p.y) });
+}
+if (run.length) runs.push(run);
+const line = (r: { x: number; y: number }[]) =>
+  r.map((p, i) => `${i ? 'L' : 'M'}${r1(p.x)},${r1(p.y)}`).join('');
+const area = (r: { x: number; y: number }[]) =>
+  `${line(r)}L${r1(r[r.length - 1].x)},${base}L${r1(r[0].x)},${base}Z`;
+---
+
+<svg
+  class="viz"
+  viewBox={`0 0 ${WIDTH} ${svgHeight}`}
+  role="img"
+  aria-label={label}
+>
+  {yTicks.slice(1).map((t) => (
+    <line
+      class="grid"
+      x1={left}
+      x2={WIDTH - right}
+      y1={r1(y(t))}
+      y2={r1(y(t))}
+    />
+  ))}
+  {yTicks.map((t) => (
+    <text class="tick" x={left - 8} y={r1(y(t) + 5)} text-anchor="end">
+      {compact(t)}
+    </text>
+  ))}
+  {runs.map((r) => (
+    <path class="wash s1" d={area(r)} />
+  ))}
+  {runs.map((r) =>
+    r.length > 1 ? (
+      <path class="line s1" d={line(r)} />
+    ) : (
+      <circle class="dot s1" cx={r1(r[0].x)} cy={r1(r[0].y)} r="2" />
+    ),
+  )}
+  <line class="axis" x1={left} x2={WIDTH - right} y1={base} y2={base} />
+  {xTicks.map((t) => (
+    <text class="tick" x={r1(tickX(t))} y={base + 22} text-anchor="middle">
+      {t}
+    </text>
+  ))}
+  {points.map((p) => {
+    const hit = (
+      <rect
+        class="hit"
+        x={r1(x(p.x) - step / 2)}
+        y={top}
+        width={r1(step)}
+        height={height}
+      >
+        <title>{p.tip}</title>
+      </rect>
+    );
+    return p.href ? <a href={p.href}>{hit}</a> : hit;
+  })}
+</svg>
