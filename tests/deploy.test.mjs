@@ -243,6 +243,20 @@ test('a small deploy invalidates its paths; a large one invalidates /*', () => {
   );
 });
 
+test('a year llms file is plain text that revalidates', () => {
+  // /years/<yyyy>/llms.txt sits beside the year page (src/lib/dataset.ts).
+  for (const key of ['years/2008/llms.txt', 'years/2026/llms.txt']) {
+    assert.equal(contentType(key), 'text/plain; charset=utf-8', key);
+    assert.equal(cacheControl(key), cachePolicies.revalidate, key);
+    assert.ok(!isHashedAsset(key), key);
+    assert.ok(!shadowedByRedirect(key), key);
+    assert.deepEqual(publicationGroups([key]), [[], [key], [], []]);
+  }
+  assert.deepEqual(invalidationPaths(['years/2008/llms.txt']), [
+    '/years/2008/llms.txt',
+  ]);
+});
+
 test('only the hosts index may sit directly under hosts/', () => {
   assert.ok(!shadowedByRedirect('hosts/index.html'));
   assert.ok(!shadowedByRedirect('hosts/obsidian.md/index.html'));

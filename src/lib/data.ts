@@ -254,8 +254,10 @@ export const datasetPath = {
   hosts: '/hosts.json',
   issues: '/issues.json',
   llms: '/llms.txt',
-  llmsFull: '/llms-full.txt',
 } as const;
+// Every record for language models, a file per year beside the year's page
+// (dataset.ts).
+export const yearLlmsPath = (year: number) => `${yearPath(year)}llms.txt`;
 
 // Elsewhere: the Wayback Machine's copies of the destination.
 export const waybackUrl = (url: string) =>

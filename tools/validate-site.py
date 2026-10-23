@@ -26,8 +26,10 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   has its pair;
 - /links.json is every record exactly as data/links has it, plus its
   permalink; /hosts.json and /issues.json match the pages and the join;
-- llms.txt follows llmstxt.org's shape and llms-full.txt is every Markdown
-  twin, newest first; every URL on this site inside the feeds, the JSON files
+- llms.txt follows llmstxt.org's shape and links every year's
+  /years/<yyyy>/llms.txt; the year files hold every record exactly once, each
+  in the file of its Central year, and none passes 4 MB (past that a year is
+  split by month); every URL on this site inside the feeds, the JSON files
   and the llms files resolves to a built file;
 - the sitemap lists pages only (no feeds, JSON or text files).
 """
@@ -37,7 +39,7 @@ import os
 import re
 import sys
 import xml.etree.ElementTree as ET
-from datetime import datetime, timedelta
+from datetime import datetime
 from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
 from pathlib import Path
@@ -51,6 +53,8 @@ SITE = "https://links.thingelstad.xyz"
 TINYLYTICS = "https://tinylytics.app/embed/x4A9AVd_xma4hyT9xLZw.js?kudos=custom"
 PRODUCTION = os.environ.get("PUBLIC_TINYLYTICS_ENABLED") == "true"
 FEED_SIZE = 50
+# A year's llms.txt past this would be split by month (src/lib/dataset.ts).
+LLMS_YEAR_LIMIT = 4_000_000
 CENTRAL = ZoneInfo("America/Chicago")
 # Pinboard's fields, in the mirror's order (docs/DATA.md).
 MIRROR_FIELDS = ["id", "hash", "url", "title", "note", "saved", "tags", "toread", "meta"]
@@ -367,31 +371,80 @@ def check_dataset(data_links, newest, host_pages, problems):
                 problems.append(f"issues.json: {source['slug']} link {row.get('position')}")
 
 
-def check_llms(newest, problems):
+RECORD_LINE = re.compile(r"^- Record: (\S+)$", re.M)
+
+
+def year_llms_files():
+    return sorted(DIST.glob("years/*/llms.txt"))
+
+
+def check_llms(data_links, problems):
     """llms.txt has llmstxt.org's shape (an H1, a blockquote, then sections of
-    links) and its links resolve; llms-full.txt is every twin, newest first."""
+    links), its links resolve and it links every year file; the year files
+    hold every record once, each in its own Central year, newest first."""
     file = DIST / "llms.txt"
     llms = file.read_text() if file.exists() else ""
     lines = llms.splitlines()
-    if not lines or not lines[0].startswith("# ") or not any(l.startswith("> ") for l in lines):
+    if not lines or not lines[0].startswith("# ") or not any(line.startswith("> ") for line in lines):
         problems.append("llms.txt: needs an H1 and a blockquote summary")
-    for target in re.findall(r"\]\(([^)\s]+)\)", llms):
+    targets = re.findall(r"\]\(([^)\s]+)\)", llms)
+    for target in targets:
         path = target[len(SITE):] if target.startswith(SITE + "/") else None
         if path is None or not target_file(unquote(urlsplit(path).path)).exists():
             problems.append(f"llms.txt: {target} is not a built file on this site")
-    file = DIST / "llms-full.txt"
-    full = file.read_text() if file.exists() else ""
-    body = "\n".join((DIST / "links" / f"{id}.md").read_text() for id in newest)
-    if not full.startswith("# ") or not full.endswith(body) or len(full) - len(body) > 2000:
-        problems.append("llms-full.txt: is not a short header and every twin, newest first")
+    if (DIST / "llms-full.txt").exists():
+        problems.append("llms-full.txt: replaced by the year files; it should not be built")
+
+    saved = {link["id"]: link["saved"] for link in data_links}
+    years = {
+        datetime.fromisoformat(moment.replace("Z", "+00:00")).astimezone(CENTRAL).year
+        for moment in saved.values()
+    }
+    files = year_llms_files()
+    if {int(f.parent.name) for f in files} != years:
+        problems.append(f"years/*/llms.txt: {len(files)} files for {len(years)} years with links")
+    seen = {}
+    for f in files:
+        rel = f.relative_to(DIST).as_posix()
+        if SITE + "/" + rel not in targets:
+            problems.append(f"llms.txt: does not link {rel}")
+        text = f.read_text()
+        if len(text.encode()) > LLMS_YEAR_LIMIT:
+            problems.append(f"{rel}: over {LLMS_YEAR_LIMIT // 1_000_000} MB; split the year by month")
+        if not text.startswith("# ") or "\n> " not in text:
+            problems.append(f"{rel}: needs an H1 and a blockquote summary")
+        ids = [record_id(url) for url in RECORD_LINE.findall(text)]
+        if None in ids:
+            problems.append(f"{rel}: a Record line that is not a record permalink")
+        ids = [i for i in ids if i]
+        year = int(f.parent.name)
+        for i in ids:
+            seen[i] = seen.get(i, 0) + 1
+            moment = saved.get(i)
+            if moment is None:
+                problems.append(f"{rel}: {i} is not a saved link")
+            elif datetime.fromisoformat(moment.replace("Z", "+00:00")).astimezone(CENTRAL).year != year:
+                problems.append(f"{rel}: {i} was not saved in {year}")
+        moments = [saved[i] for i in ids if i in saved]
+        if moments != sorted(moments, reverse=True):
+            problems.append(f"{rel}: records are not newest first")
+    missing = sorted(set(saved) - set(seen))
+    twice = sorted(i for i, n in seen.items() if n > 1)
+    if missing or twice:
+        problems.append(
+            f"years/*/llms.txt: {len(missing)} records missing (first {missing[:3]}),"
+            f" {len(twice)} listed more than once (first {twice[:3]})"
+        )
+    return files
 
 
 def check_site_urls(problems):
     """Every URL on this site inside the feeds, the JSON files and the llms
     files names a built file."""
-    names = ("links.json", "hosts.json", "issues.json", "llms.txt", "llms-full.txt")
+    names = ("links.json", "hosts.json", "issues.json", "llms.txt")
     inside = set()
-    for file in [DIST / name for name in names] + sorted(DIST.rglob("feed.*")):
+    files = [DIST / name for name in names] + year_llms_files() + sorted(DIST.rglob("feed.*"))
+    for file in files:
         if file.exists():
             # A sentence may end just after a URL; no path here ends in . or ,
             inside.update(path.rstrip(".,") for path in SITE_URL.findall(file.read_text()))
@@ -557,12 +610,12 @@ def main():
     check_tinylytics(records, kudos, loaders, content_names_tinylytics, problems)
     newest = [
         link["id"]
-        for link in sorted(data_links, key=lambda l: (l["saved"], l["id"]), reverse=True)
+        for link in sorted(data_links, key=lambda r: (r["saved"], r["id"]), reverse=True)
     ]
     host_pages = sorted((DIST / "hosts").glob("*/index.html"))
     feeds = check_feeds(newest, host_pages, alternates, listed_records, problems)
     check_dataset(data_links, newest, host_pages, problems)
-    check_llms(newest, problems)
+    year_files = check_llms(data_links, problems)
     inside = check_site_urls(problems)
 
     if problems:
@@ -574,7 +627,7 @@ def main():
         f"{len(pages)} pages ({len(records)} records with twins), {len(links)} internal"
         f" links, {len(seen)} sitemap URLs; links, metadata and sitemap valid;"
         f" {feeds} feeds, links.json, hosts.json, issues.json, llms.txt and"
-        f" llms-full.txt valid ({len(inside)} site URLs inside resolve);"
+        f" {len(year_files)} year llms files valid ({len(inside)} site URLs inside resolve);"
         f" Tinylytics {'on (production build)' if PRODUCTION else 'absent'}"
         + (" (a saved link names it; only fetches checked)" if content_names_tinylytics else "")
         + f"; off-site fetches: {', '.join(sorted(off_site_seen)) or 'none'}"
