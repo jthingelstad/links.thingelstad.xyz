@@ -576,46 +576,82 @@ img {
   display: none;
 }
 
-/* Home */
+/* Home: the front door is a search box, after Google's front page (Jamie,
+   2026-10-23). Everything is centred under the wordmark; the first screen
+   holds the wordmark, the box and the count at phone and desktop widths. */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(32px, 14vh, 150px) 0 clamp(24px, 8vh, 96px);
+  text-align: center;
+}
+.home-wordmark {
+  margin: 0 0 28px;
+  color: var(--link);
+  font-size: clamp(2.5rem, 10.5vw, 5.25rem);
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.14em;
+}
 .home-search {
-  margin: 16px 0 12px;
-  max-width: 44rem;
+  width: 100%;
+  max-width: 40rem;
 }
-.home-title {
-  font-size: var(--jt-size-hero);
-  margin-bottom: 16px;
+.home-search input[type='search'] {
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-size: var(--jt-size-base);
 }
-.numbers {
-  margin: 0 0 48px;
+.home-search button {
+  padding: 14px 22px;
+  border-radius: 999px;
+}
+.home-count {
+  margin: 16px 0 0;
   color: var(--text-soft);
+  font-size: var(--jt-size-small);
+  font-variant-numeric: tabular-nums;
 }
-.numbers b {
+.home-count b {
   color: var(--ink);
   font-weight: 600;
 }
-.pick {
-  max-width: var(--jt-measure);
-  padding: 20px 24px;
-  border-radius: 8px;
-  background: var(--card);
+.home-entries ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 24px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--jt-size-ui);
 }
-.pick .title {
-  font-family: var(--jt-font-heading);
-  font-weight: var(--jt-weight-heading);
-  font-size: var(--jt-size-h3);
-  letter-spacing: var(--jt-tracking-heading);
+.home-entries a,
+.home-entries a:visited {
+  color: var(--link);
+  font-weight: 500;
 }
-.pick p {
-  margin: 8px 0 0;
+.home-quote {
+  max-width: 34rem;
+  margin: 56px 0 0;
+  color: var(--text-soft);
 }
-.home-grid {
-  display: grid;
-  gap: 48px;
+.home-quote blockquote {
+  margin: 0;
+  text-wrap: balance;
 }
-@media (min-width: 60rem) {
-  .home-grid {
-    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
-  }
+.home-quote blockquote p {
+  margin: 0 0 8px;
+}
+.home-quote figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: var(--jt-size-small);
+}
+.home-quote figcaption a,
+.home-quote figcaption a:visited {
+  color: inherit;
 }
 
 /* Search */

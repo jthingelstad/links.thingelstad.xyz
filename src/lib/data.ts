@@ -258,6 +258,8 @@ export const datasetPath = {
 // Every record for language models, a file per year beside the year's page
 // (dataset.ts).
 export const yearLlmsPath = (year: number) => `${yearPath(year)}llms.txt`;
+// The newest links as a page, the site feed's links.
+export const newestPath = '/newest/';
 
 // Elsewhere: the Wayback Machine's copies of the destination.
 export const waybackUrl = (url: string) =>
@@ -437,15 +439,3 @@ export const counts = {
 export const number = (n: number) => n.toLocaleString('en-US');
 export const plural = (n: number, one: string, many = `${one}s`) =>
   `${number(n)} ${n === 1 ? one : many}`;
-
-// One link for the home page, chosen at build: the same all day (Central),
-// different the next. Drawn from the notes in Jamie's own words.
-export function linkOfTheDay(now = new Date()) {
-  const pool = links.filter(
-    (link) => link.voice === 'jamie' || link.voice === 'mixed',
-  );
-  let seed = 0;
-  for (const char of centralDay(now.toISOString()))
-    seed = (seed * 31 + char.charCodeAt(0)) >>> 0;
-  return pool[seed % pool.length];
-}

@@ -1,75 +1,80 @@
 ---
-// The front door: a search box, the numbers, the newest links, and one link
-// chosen at build. A plain form: search runs on /search/.
+// The front door is a search box (Jamie, 2026-10-23: "very much like
+// Google's front page, where it's just a search box"): the wordmark, the
+// box, how many links are in the index, a row of ways in for someone who
+// does not know what to search for, and a quote of the day from
+// content/quotes.md when it has one. A plain form: search runs on /search/.
+// The newest links are on /newest/.
+//
+// Every quote is in the page and the build shows the day it runs; the script
+// turns to today's (day.ts), since the page may be days old. With no quotes
+// nothing renders and the script finds nothing to do.
 import Layout from '../layouts/Layout.astro';
-import LinkList from '../components/LinkList.astro';
-import {
-  counts,
-  dateLabel,
-  hostPath,
-  linkOfTheDay,
-  linkPath,
-  newest,
-  noteText,
-  number,
-  yearPath,
-  years,
-} from '../lib/data';
-const pick = linkOfTheDay();
+import { counts, feedPath, newestPath, number, years } from '../lib/data';
+import { dayIndex } from '../lib/day';
+import { quotes } from '../lib/quotes';
+const pick = quotes.length ? dayIndex(quotes.length) : -1;
+const entries = [
+  [newestPath, 'Newest'],
+  ['/years/', 'Years'],
+  ['/hosts/', 'Hosts'],
+  ['/issues/', 'Issues'],
+  ['/stats/', 'Stats'],
+  [feedPath('rss'), 'Feed'],
+];
 ---
 
-<Layout>
-  <h1 class="home-title">Every link Jamie has saved since 2005</h1>
-  <form class="search-form home-search" role="search" action="/search/">
-    <label class="sr-only" for="home-query">
-      Search the links
-    </label>
-    <input
-      id="home-query"
-      name="q"
-      type="search"
-      autocomplete="off"
-      placeholder="DNS, Stratechery, site:kottke.org, year:2012"
-    />
-    <button type="submit">Search</button>
-  </form>
-  <p class="numbers">
-    <b>{number(counts.links)}</b> links from <b>{number(counts.hosts)}</b> hosts
-    over{' '}
-    <a href="/years/">
-      <b>{counts.years}</b> years
-    </a>
-    ; <b>{number(counts.withNote)}</b> with a note,{' '}
-    <b>{number(counts.inIssues)}</b> in{' '}
-    <a href="/issues/">{number(counts.issues)} Weekly Thing issues</a>.
-  </p>
-  <div class="home-grid">
-    <section class="section">
-      <h2>Newest</h2>
-      <LinkList links={newest.slice(0, 20)} snippet />
-      <p class="more">
-        <a href={yearPath(years[years.length - 1])}>
-          Everything from {years[years.length - 1]}
-        </a>
-      </p>
-    </section>
-    {pick && (
-      <section class="section">
-        <h2>From the archive</h2>
-        <div class="pick">
-          <p class="meta">
-            <a href={hostPath(pick.host)}>{pick.host}</a> ·{' '}
-            {dateLabel(pick.saved)}
-          </p>
-          <a class="title" href={linkPath(pick.id)}>
-            {pick.title}
-          </a>
-          <p>{noteText(pick, 280)}</p>
-        </div>
-        <p class="more">
-          A different one every day, picked when the site is built.
-        </p>
-      </section>
-    )}
+<Layout home>
+  <div class="home">
+    <h1 class="home-wordmark">Linking Things</h1>
+    <form class="search-form home-search" role="search" action="/search/">
+      <label class="sr-only" for="home-query">
+        Search the links
+      </label>
+      <input
+        id="home-query"
+        name="q"
+        type="search"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="DNS, Stratechery, site:kottke.org, year:2012"
+      />
+      <button type="submit">Search</button>
+    </form>
+    <p class="home-count">
+      Searching <b>{number(counts.links)}</b> links saved from {years[0]} to{' '}
+      {years[years.length - 1]}
+    </p>
+    <nav class="home-entries" aria-label="Ways in">
+      <ul>
+        {/* Topics: a later phase (DIRECTION.md, "Topics"). When /topics/ is
+             built its entry goes first in this row, as Topics; until then
+             nothing renders for it. */}
+        {entries.map(([href, label]) => (
+          <li>
+            <a href={href}>{label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    {quotes.map((quote, i) => (
+      <figure class="home-quote" data-quote hidden={i !== pick}>
+        <blockquote cite={quote.source}>
+          {quote.words.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+        </blockquote>
+        <figcaption>
+          <a href={quote.source}>{quote.who}</a>
+        </figcaption>
+      </figure>
+    ))}
   </div>
 </Layout>
+
+<script>
+  import { dayIndex } from '../lib/day';
+  const figures = document.querySelectorAll<HTMLElement>('[data-quote]');
+  const today = figures.length ? dayIndex(figures.length) : -1;
+  figures.forEach((figure, i) => (figure.hidden = i !== today));
+</script>

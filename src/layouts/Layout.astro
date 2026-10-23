@@ -1,6 +1,7 @@
 ---
 // Every page: the shared type (shared/tokens.css, vendored), the "Jamie's
-// sites" strip, the header, and the footer with Jamie's h-card. The site's
+// sites" strip, the header (not on the front page, whose wordmark is its
+// title), and the footer with Jamie's h-card. The site's
 // feeds are advertised on every page, a page's own feeds before them. No
 // script runs here but Tinylytics, in the production build only
 // (Analytics.astro); the search page adds Pagefind's.
@@ -17,6 +18,8 @@ interface Props {
   alternates?: { type: string; href: string; title?: string }[];
   // The 404 page: served at any address, so it names none.
   notFound?: boolean;
+  // The front page: the search box is the page, so no site header.
+  home?: boolean;
 }
 const SITE_NAME = 'Linking Things';
 const {
@@ -24,6 +27,7 @@ const {
   description = 'Every link Jamie Thingelstad has saved since 2005: a searchable, connected database of twenty-one years of curation.',
   alternates = [],
   notFound = false,
+  home = false,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const sections = [
@@ -116,18 +120,20 @@ const current = (href: string) =>
         </ul>
       </div>
     </nav>
-    <header class="site-header">
-      <a class="wordmark" href="/">
-        Linking Things
-      </a>
-      <nav aria-label="Site">
-        {sections.map(([href, label]) => (
-          <a href={href} aria-current={current(href)}>
-            {label}
-          </a>
-        ))}
-      </nav>
-    </header>
+    {!home && (
+      <header class="site-header">
+        <a class="wordmark" href="/">
+          Linking Things
+        </a>
+        <nav aria-label="Site">
+          {sections.map(([href, label]) => (
+            <a href={href} aria-current={current(href)}>
+              {label}
+            </a>
+          ))}
+        </nav>
+      </header>
+    )}
     <main id="main" class="site-main">
       <slot />
     </main>

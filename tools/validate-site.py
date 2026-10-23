@@ -31,7 +31,8 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   in the file of its Central year, and none passes 4 MB (past that a year is
   split by month); every URL on this site inside the feeds, the JSON files
   and the llms files resolves to a built file;
-- the sitemap lists pages only (no feeds, JSON or text files).
+- /newest/ lists the newest 50 links, and the sitemap lists pages only (no
+  feeds, JSON or text files).
 """
 
 import json
@@ -454,6 +455,12 @@ def check_site_urls(problems):
     return inside
 
 
+def check_newest(newest, listed_records, problems):
+    """/newest/ lists the newest links, the site feed's, in order."""
+    if listed_records.get("/newest/") != newest[:FEED_SIZE]:
+        problems.append(f"/newest/: does not list the newest {FEED_SIZE} links, newest first")
+
+
 def main():
     problems = []
     sites = json.loads((ROOT / "shared/sites.json").read_text())
@@ -480,7 +487,7 @@ def main():
     off_site_seen = set()
     alternates = {}  # page url to its <link rel="alternate"> (type, href)
     kudos = {}  # page url to its Kudos buttons
-    listed_records = {}  # host pages to the records they list, in order
+    listed_records = {}  # host pages and /newest/ to the records they list, in order
     loaders = 0
     for page in pages:
         rel = page.relative_to(DIST).as_posix()
@@ -491,7 +498,7 @@ def main():
         ids[url] = parser.ids
         alternates[url] = parser.alternates
         kudos[url] = parser.kudos
-        if url.startswith("/hosts/"):
+        if url.startswith("/hosts/") or url == "/newest/":
             listed_records[url] = [
                 record_id(ref) for ref in parser.refs if record_id(ref)
             ]
@@ -617,6 +624,7 @@ def main():
     check_dataset(data_links, newest, host_pages, problems)
     year_files = check_llms(data_links, problems)
     inside = check_site_urls(problems)
+    check_newest(newest, listed_records, problems)
 
     if problems:
         sys.exit(
@@ -628,6 +636,7 @@ def main():
         f" links, {len(seen)} sitemap URLs; links, metadata and sitemap valid;"
         f" {feeds} feeds, links.json, hosts.json, issues.json, llms.txt and"
         f" {len(year_files)} year llms files valid ({len(inside)} site URLs inside resolve);"
+        f" /newest/ lists the newest {FEED_SIZE};"
         f" Tinylytics {'on (production build)' if PRODUCTION else 'absent'}"
         + (" (a saved link names it; only fetches checked)" if content_names_tinylytics else "")
         + f"; off-site fetches: {', '.join(sorted(off_site_seen)) or 'none'}"

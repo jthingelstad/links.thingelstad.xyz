@@ -1,0 +1,24 @@
+---
+// The newest links, the same as the site feed (src/lib/feeds.ts), as a page:
+// the list the front page used to carry, now that the front page is a search
+// box. Not in the search index (Pagefind indexes the record pages only).
+import Layout from '../layouts/Layout.astro';
+import LinkList from '../components/LinkList.astro';
+import { feedPath, yearPath, years } from '../lib/data';
+import { siteFeed } from '../lib/feeds';
+const latest = years[years.length - 1];
+---
+
+<Layout
+  title="Newest · Linking Things"
+  description={`The ${siteFeed.links.length} links Jamie Thingelstad saved most recently, newest first.`}
+>
+  <h1 class="page-title">Newest</h1>
+  <p class="lede">
+    The {siteFeed.links.length} links saved most recently, newest first, as in
+    the feed (<a href={feedPath('rss')}>RSS</a> or{' '}
+    <a href={feedPath('json')}>JSON Feed</a>). Everything saved in {latest} is
+    on <a href={yearPath(latest)}>its year page</a>.
+  </p>
+  <LinkList links={siteFeed.links} snippet />
+</Layout>

@@ -67,6 +67,7 @@ test('paths come from data.ts', () => {
   );
   assert.equal(data.datasetPath.links, '/links.json');
   assert.equal(data.yearLlmsPath(2019), '/years/2019/llms.txt');
+  assert.equal(data.newestPath, '/newest/');
 });
 
 test('the site feed is the newest 50 links', () => {
@@ -197,6 +198,7 @@ test('llms.txt has the llmstxt.org shape', () => {
     '/hosts.json',
     '/issues.json',
     '/feed.json',
+    '/newest/',
     ...data.years.map((year) => `/years/${year}/llms.txt`),
   ])
     assert.ok(text.includes(`(https://links.thingelstad.xyz${path})`), path);
