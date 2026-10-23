@@ -1,0 +1,78 @@
+---
+// Search over the record pages. Pagefind writes the index to /pagefind/ after
+// the build (npm run build); src/scripts/search.ts loads it. `npm run dev` has
+// no index, so search there says so. This is the only page with a script.
+import Layout from '../layouts/Layout.astro';
+import { issues, years } from '../lib/data';
+// wt:N with no other words links to /issues/N/ when there is such an issue.
+const numbers = issues.flatMap((issue) => issue.number ?? []);
+---
+
+<Layout
+  title="Search · Linking Things"
+  description="Search every link Jamie Thingelstad has saved since 2005, by title, note and host."
+>
+  <div data-search data-issues={JSON.stringify(numbers)}>
+    <h1 class="page-title">Search</h1>
+    <form class="search-form" role="search" action="/search/" data-search-form>
+      <label class="sr-only" for="search-query">
+        Search the links
+      </label>
+      <input
+        id="search-query"
+        name="q"
+        type="search"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="DNS, Stratechery, site:kottke.org, year:2012"
+        data-search-query
+      />
+      <button type="submit">Search</button>
+    </form>
+    <div class="search-options" data-search-options>
+      <label>
+        Year
+        <select name="year" data-search-year>
+          <option value="">Any</option>
+          {[...years].reverse().map((y) => (
+            <option value={String(y)}>{y}</option>
+          ))}
+        </select>
+      </label>
+      <label>
+        <input type="checkbox" name="wt" value="yes" data-search-wt /> In a
+        Weekly Thing
+      </label>
+      <label>
+        <input type="checkbox" name="note" value="yes" data-search-note /> Has a
+        note
+      </label>
+      <label>
+        Order
+        <select name="sort" data-search-sort>
+          <option value="">Best match</option>
+          <option value="new">Newest first</option>
+          <option value="old">Oldest first</option>
+        </select>
+      </label>
+    </div>
+    <p class="search-help">
+      Also <code>site:macstories.net</code>, <code>year:2019</code>,{' '}
+      <code>wt:300</code>, <code>"exact phrase"</code> and <code>-word</code>.
+      Press <kbd>/</kbd> to search, arrow keys to move through results.
+    </p>
+    <p class="search-status" role="status" data-search-status>
+      Search needs JavaScript. Every link is also listed by{' '}
+      <a href="/years/">year</a>, <a href="/issues/">issue</a> and{' '}
+      <a href="/hosts/">host</a>.
+    </p>
+    <ul class="link-list search-results" data-search-results></ul>
+    <button type="button" class="search-more" data-search-more hidden>
+      Show more
+    </button>
+  </div>
+  <script>
+    import { initSearch } from '../scripts/search';
+    initSearch();
+  </script>
+</Layout>

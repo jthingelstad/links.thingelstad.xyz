@@ -1,0 +1,96 @@
+---
+// The links one Weekly Thing carried, in issue order and by section. A link
+// that was never saved to Pinboard is listed as the plain external link.
+import Layout from '../../layouts/Layout.astro';
+import {
+  type Issue,
+  dateLabel,
+  hostOf,
+  issueLabel,
+  issueKey,
+  issuePath,
+  issueTitle,
+  issues,
+  linkById,
+  linkPath,
+  plural,
+  shortDateLabel,
+} from '../../lib/data';
+import { siteRef } from '../../lib/sites';
+
+export function getStaticPaths() {
+  return issues.map((issue, i) => ({
+    params: { key: issueKey(issue) },
+    props: { issue, previous: issues[i - 1], next: issues[i + 1] },
+  }));
+}
+interface Props {
+  issue: Issue;
+  previous?: Issue;
+  next?: Issue;
+}
+const { issue, previous, next } = Astro.props;
+const rows = [...issue.links].sort((a, b) => a.position - b.position);
+const sections: { name: string; rows: typeof rows }[] = [];
+for (const row of rows) {
+  const name = row.section || 'Links';
+  const last = sections[sections.length - 1];
+  if (last?.name === name) last.rows.push(row);
+  else sections.push({ name, rows: [row] });
+}
+const saved = rows.filter((row) => row.id && linkById.has(row.id)).length;
+---
+
+<Layout
+  title={`${issueTitle(issue)} · Linking Things`}
+  description={`The ${plural(rows.length, 'link')} in ${issueTitle(issue)}, ${dateLabel(issue.date)}.`}
+>
+  <p class="kicker">Weekly Thing · {dateLabel(issue.date)}</p>
+  <h1 class="page-title">{issueTitle(issue)}</h1>
+  <p class="lede">
+    {plural(rows.length, 'link')}
+    {saved === 0
+      ? ', none of them saved to Pinboard'
+      : saved < rows.length && `, ${saved} of them saved to Pinboard`}
+    .{' '}
+    <a href={siteRef(issue.url, 'issue')}>
+      Read {issueLabel(issue)} on Weekly Thing
+    </a>
+    .
+  </p>
+  {sections.map((section) => (
+    <section class="section">
+      <h2>{section.name}</h2>
+      <ul class="link-list">
+        {section.rows.map((row) => {
+          const link = row.id ? linkById.get(row.id) : undefined;
+          return link ? (
+            <li>
+              <a class="title" href={linkPath(link.id)}>
+                {link.title}
+              </a>
+              <span class="meta">
+                {link.host} · saved {shortDateLabel(link.saved)}
+              </span>
+            </li>
+          ) : (
+            <li>
+              <a class="title" href={row.url}>
+                {row.text || row.url}
+              </a>
+              <span class="meta">
+                {hostOf(row.url)} ·{' '}
+                <span class="not-saved">not saved to Pinboard</span>
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  ))}
+  <nav class="year-nav" aria-label="Issues">
+    {previous && <a href={issuePath(previous)}>← {issueLabel(previous)}</a>}
+    <a href="/issues/">All issues</a>
+    {next && <a href={issuePath(next)}>{issueLabel(next)} →</a>}
+  </nav>
+</Layout>

@@ -1,0 +1,154 @@
+---
+// Every page: the shared type (shared/tokens.css, vendored), the "Jamie's
+// sites" strip, the header, and the footer with Jamie's h-card. No script runs
+// here; the search page adds Pagefind's and nothing else.
+import '../../shared/tokens.css';
+import '../styles/global.css';
+import inter from '../../shared/fonts/inter-latin-wght-normal.woff2?url';
+import interTight from '../../shared/fonts/inter-tight-latin-wght-normal.woff2?url';
+import { owner, sitesStrip } from '../lib/sites';
+interface Props {
+  title?: string;
+  description?: string;
+  alternates?: { type: string; href: string }[];
+  // The 404 page: served at any address, so it names none.
+  notFound?: boolean;
+}
+const SITE_NAME = 'Linking Things';
+const {
+  title = SITE_NAME,
+  description = 'Every link Jamie Thingelstad has saved since 2005: a searchable, connected database of twenty-one years of curation.',
+  alternates = [],
+  notFound = false,
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const sections = [
+  ['/search/', 'Search'],
+  ['/years/', 'Years'],
+  ['/issues/', 'Issues'],
+  ['/hosts/', 'Hosts'],
+];
+const current = (href: string) =>
+  Astro.url.pathname.startsWith(href) ? 'page' : undefined;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {notFound ? (
+      <meta name="robots" content="noindex" />
+    ) : (
+      <link rel="canonical" href={canonical} />
+    )}
+    <link
+      rel="preload"
+      href={inter}
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href={interTight}
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    {owner.rel_me.map((href) => (
+      <link rel="me" href={href} />
+    ))}
+    {alternates.map((alt) => (
+      <link rel="alternate" type={alt.type} href={alt.href} />
+    ))}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    {!notFound && <meta property="og:url" content={canonical} />}
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#131316"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {/*
+        TINYLYTICS GOES HERE in phase 1 (design/tinylytics.md): one script
+        with ?kudos=custom, production host only, the POAP layout's pattern.
+        QA never sends a hit or a kudos. The Like on each record (Kudos.astro,
+        keyed on /links/<id>/) arrives with it, and tools/validate-site.py
+        then allows that one script host.
+      */}
+  </head>
+  <body>
+    <a href="#main" class="skip-link">
+      Skip to content
+    </a>
+    <nav class="sites-strip" aria-label="Jamie's sites">
+      <div class="sites-strip__inner">
+        <span class="sites-strip__label">Jamie's sites</span>
+        <ul class="sites-strip__list">
+          {sitesStrip.map((item) => (
+            <li
+              class:list={[
+                'sites-strip__item',
+                `sites-strip__item--${item.id}`,
+                { 'sites-strip__item--current': item.current },
+              ]}
+            >
+              <a
+                href={item.href}
+                title={item.description}
+                aria-current={item.current ? 'true' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+    <header class="site-header">
+      <a class="wordmark" href="/">
+        Linking Things
+      </a>
+      <nav aria-label="Site">
+        {sections.map(([href, label]) => (
+          <a href={href} aria-current={current(href)}>
+            {label}
+          </a>
+        ))}
+      </nav>
+    </header>
+    <main id="main" class="site-main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>
+        Every link saved to Pinboard since 2005 by{' '}
+        <a class="h-card" href={owner.url} rel="me author">
+          <img
+            class="u-photo"
+            src={owner.avatar}
+            alt=""
+            width="24"
+            height="24"
+          />
+          <span class="p-name">{owner.name}</span>
+          <data class="p-note" value={owner.note}></data>
+        </a>
+        , as a database: one page per link, and what connects them. Times are US
+        Central.
+      </p>
+    </footer>
+  </body>
+</html>

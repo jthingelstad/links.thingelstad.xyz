@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { centralDay, hostPath, hosts, number, plural } from '../../lib/data';
+const year = (iso: string) => centralDay(iso).slice(0, 4);
+const shown = hosts.filter((host) => host.count >= 10);
+const single = hosts.filter((host) => host.count === 1).length;
+const max = shown[0]?.count ?? 1;
+---
+
+<Layout
+  title="Hosts · Linking Things"
+  description="The sites Jamie Thingelstad has linked most, by number of links saved."
+>
+  <h1 class="page-title">Hosts</h1>
+  <p class="lede">
+    {number(hosts.length)} hosts in all; {number(single)} of them have a single
+    link. These are the {shown.length} with ten or more. Every host has its own
+    page, reached from any of its links.
+  </p>
+  <ul class="bars">
+    {shown.map((host) => (
+      <li>
+        <a href={hostPath(host.host)}>{host.host}</a>
+        <span
+          class="bar"
+          style={`width: ${Math.max(2, (100 * host.count) / max)}%`}
+          title={`${year(host.first)} to ${year(host.last)}`}
+        />
+        <span class="n">{plural(host.count, 'link')}</span>
+      </li>
+    ))}
+  </ul>
+</Layout>

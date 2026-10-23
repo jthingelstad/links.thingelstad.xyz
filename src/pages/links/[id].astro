@@ -1,0 +1,230 @@
+---
+// The record (DIRECTION.md, "The record page"): the link as the hero, then
+// only the rows that have something to say. A bare link is the same card with
+// fewer rows, never an empty heading. Pagefind indexes the title (weighted),
+// the note and the host; everything else is marked out of the index.
+import Layout from '../../layouts/Layout.astro';
+import LinkList from '../../components/LinkList.astro';
+import {
+  type Link,
+  appearances,
+  connectionsOf,
+  dateLabel,
+  displayUrl,
+  hostPath,
+  issueLabel,
+  issuePath,
+  issueTitle,
+  linkJsonPath,
+  linkMarkdownPath,
+  links,
+  monthNames,
+  monthPath,
+  noteHtml,
+  noteText,
+  pinboardSearchUrl,
+  plural,
+  shortDateLabel,
+  timeLabel,
+  waybackUrl,
+} from '../../lib/data';
+import { siteRef } from '../../lib/sites';
+
+export function getStaticPaths() {
+  return links.map((link) => ({ params: { id: link.id }, props: { link } }));
+}
+interface Props {
+  link: Link;
+}
+const { link } = Astro.props;
+const c = connectionsOf(link);
+const appears = appearances.get(link.id) ?? [];
+const excerpt = link.voice === 'excerpt';
+const era = link.year >= 2007 && link.year <= 2016;
+const description = link.hasNote
+  ? noteText(link, 155)
+  : `A link from ${link.host}, saved by Jamie Thingelstad on ${dateLabel(link.saved)}.`;
+---
+
+<Layout
+  title={`${link.title} · Linking Things`}
+  description={description}
+  alternates={[
+    { type: 'application/json', href: linkJsonPath(link.id) },
+    { type: 'text/markdown', href: linkMarkdownPath(link.id) },
+  ]}
+>
+  <article class="record h-entry" data-pagefind-body>
+    <header class="record-hero">
+      <p class="meta" data-pagefind-ignore>
+        <a href={hostPath(link.host)}>{link.host}</a> · Saved{' '}
+        <time
+          class="dt-published"
+          datetime={link.saved}
+          title={`${timeLabel(link.saved)} Central`}
+        >
+          {dateLabel(link.saved)}
+        </time>
+      </p>
+      <h1 class="record-title p-name" data-pagefind-weight="10">
+        <a class="u-bookmark-of" href={link.url}>
+          {link.title}
+        </a>
+      </h1>
+      <p class="record-url" data-pagefind-ignore title={link.url}>
+        {displayUrl(link.url)}
+      </p>
+    </header>
+
+    <div class="record-body">
+      {link.hasNote && (
+        <section class="section record-note">
+          <h2 data-pagefind-ignore>
+            {excerpt ? 'From the page' : 'What Jamie wrote'}
+          </h2>
+          {excerpt && (
+            <p class="note-label" data-pagefind-ignore>
+              {era
+                ? `Saved with the link. Notes from 2007 to 2016 are mostly the page's own words, so this is probably an excerpt.`
+                : 'A quotation saved with the link.'}
+            </p>
+          )}
+          <div
+            class:list={['note', 'e-content', { excerpt }]}
+            set:html={noteHtml(link)}
+          />
+        </section>
+      )}
+
+      <aside class="record-side" data-pagefind-ignore="all">
+        {appears.length > 0 && (
+          <section class="section">
+            <h2>Appears in</h2>
+            <ul class="appear">
+              {appears.map((a) => (
+                <li>
+                  <a class="issue-title" href={siteRef(a.issue.url, 'record')}>
+                    {issueTitle(a.issue)}
+                  </a>
+                  <span class="meta">
+                    {[a.section, shortDateLabel(a.issue.date)]
+                      .filter(Boolean)
+                      .join(' · ')}
+                    {' · '}
+                    <a href={issuePath(a.issue)}>
+                      {plural(a.issue.links.length, 'link')} in{' '}
+                      {issueLabel(a.issue)}
+                    </a>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+        <section class="section record-elsewhere">
+          <h2>Elsewhere</h2>
+          <ul class="elsewhere">
+            <li>
+              <a href={waybackUrl(link.url)}>Wayback Machine copies</a>
+            </li>
+            <li>
+              <a href={pinboardSearchUrl(link.url)}>Find it on Pinboard</a>
+            </li>
+            <li>
+              This record as <a href={linkJsonPath(link.id)}>JSON</a> or{' '}
+              <a href={linkMarkdownPath(link.id)}>Markdown</a>
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <div class="connections" data-pagefind-ignore="all">
+        {c.savedTwice.length > 0 && (
+          <section class="section">
+            <h2>Saved twice</h2>
+            <LinkList links={c.savedTwice} compact />
+          </section>
+        )}
+        {c.mentionedBy.length > 0 && (
+          <section class="section">
+            <h2>Mentioned by</h2>
+            <LinkList links={c.mentionedBy} compact />
+          </section>
+        )}
+        {c.sameHost.total > 0 && (
+          <section class="section">
+            <h2>
+              Same host{' '}
+              <span class="count">
+                · {plural(c.sameHost.total + 1, 'link')} from {link.host}
+              </span>
+            </h2>
+            <LinkList links={c.sameHost.nearest} compact host={false} />
+            {c.sameHost.total > c.sameHost.nearest.length && (
+              <p class="more">
+                <a href={hostPath(link.host)}>
+                  All {plural(c.sameHost.total + 1, 'link')} from {link.host}
+                </a>
+              </p>
+            )}
+          </section>
+        )}
+        {c.sameWeek.total > 0 && (
+          <section class="section">
+            <h2>
+              Saved the same week{' '}
+              <span class="count">
+                · {plural(c.sameWeek.total + 1, 'link')} that week
+              </span>
+            </h2>
+            <LinkList links={c.sameWeek.nearest} compact />
+            {c.sameWeek.total > c.sameWeek.nearest.length && (
+              <p class="more">
+                <a href={monthPath(link.year, link.month)}>
+                  Everything saved in {monthNames[link.month - 1]} {link.year}
+                </a>
+              </p>
+            )}
+          </section>
+        )}
+      </div>
+    </div>
+
+    <span
+      hidden
+      data-pagefind-meta="host[data-host], date[data-date]"
+      data-host={link.host}
+      data-date={shortDateLabel(link.saved)}
+    ></span>
+    {appears.length > 0 && (
+      <span
+        hidden
+        data-pagefind-meta="issue[data-issue]"
+        data-issue={appears.map((a) => issueLabel(a.issue)).join(', ')}
+      />
+    )}
+    <span
+      hidden
+      data-pagefind-filter="year[data-year]"
+      data-year={String(link.year)}
+    ></span>
+    {appears.map((a) => (
+      <span
+        hidden
+        data-pagefind-filter="issue[data-issue]"
+        data-issue={String(a.issue.number ?? 'special')}
+      />
+    ))}
+    {appears.length > 0 && (
+      <span hidden data-pagefind-filter="wt[data-wt]" data-wt="yes" />
+    )}
+    {link.hasNote && (
+      <span hidden data-pagefind-filter="note[data-note]" data-note="yes" />
+    )}
+    <span
+      hidden
+      data-pagefind-sort="date[data-sort]"
+      data-sort={link.saved}
+    ></span>
+  </article>
+</Layout>

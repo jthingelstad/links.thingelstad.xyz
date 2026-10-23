@@ -1,0 +1,51 @@
+---
+// A list of saved links: the title opens the record, then host and date in
+// Central, and a chip when the link was in a Weekly Thing.
+import {
+  type Link,
+  appearances,
+  issueLabel,
+  linkPath,
+  noteText,
+  shortDateLabel,
+} from '../lib/data';
+interface Props {
+  links: Link[];
+  compact?: boolean;
+  host?: boolean;
+  snippet?: boolean;
+  date?: (link: Link) => string;
+}
+const {
+  links,
+  compact = false,
+  host = true,
+  snippet = false,
+  date = (link: Link) => shortDateLabel(link.saved),
+} = Astro.props;
+---
+
+<ul class:list={['link-list', { compact }]}>
+  {links.map((link) => {
+    const issues = appearances.get(link.id);
+    return (
+      <li>
+        <a class="title" href={linkPath(link.id)}>
+          {link.title}
+        </a>
+        <span class="meta">
+          {[host && link.host, date(link)].filter(Boolean).join(' · ')}
+          {issues && (
+            <>
+              {' '}
+              <span class="chip">{issueLabel(issues[0].issue)}</span>
+            </>
+          )}
+        </span>
+        {snippet && link.hasNote && (
+          <p class="snippet">{noteText(link, 180)}</p>
+        )}
+      </li>
+    );
+  })}
+</ul>

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+public/
+data/
+pinboard/
+archive/
+# Byte-for-byte copies of thingelstad.com's shared/ (npm run sites:sync).
+shared/
+package-lock.json
+.DS_Store

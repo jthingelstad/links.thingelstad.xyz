@@ -651,10 +651,41 @@ treatment is left to the build to explore; build started with Opus 5.5 agents on
 Still open: which of the ideas beyond the brief earn a phase; creating the GitHub
 repository and the Tinylytics site, both Jamie's go.
 
+## Spike results (2026-10-23)
+
+Phase 0 was built the same day by an Opus 5.5 agent and measured on this Mac:
+
+| What | Measured |
+| --- | --- |
+| Build | 31 to 44 s (Astro 16 to 22 s, Pagefind 14 to 21 s) |
+| Pages | 23,970 HTML (16,524 records, 7,064 hosts, 354 issues, 22 years) plus 33,048 JSON and Markdown twins; 284 MB |
+| Record page | 8.1 KB mean, about 2.9 KB gzipped; one 14 KB stylesheet; 5 KB of script, on the search page only |
+| Pagefind index | 12.5 MB in 16,687 files; 143 index chunks |
+| One search | 340 to 400 KB, of which 308 KB is fixed start-up (`pf_meta` 148 KB, wasm 73 KB, script and worker 87 KB) |
+
+Two Pagefind behaviours needed handling at this scale. A query with no words (a
+filter alone, such as `wt:3`) loaded the whole 4 MB index; such queries now go to
+the year or issue page instead and Pagefind loads only on the first worded search.
+And an unmatched word falls back to a shorter prefix (a nonsense word found the ZX
+Spectrum post); results are now kept only when the first three letters of each typed
+word begin a word in the title, host or text. `pf_meta` grows with the record count
+and is the number to watch.
+
+**Bare links, decided:** every link keeps its record page. The bare card (title, host,
+date, URL, then only the rows with content) was rendered beside the alternative of
+sending bare rows straight to the destination on host pages; the alternative made one
+list hold two kinds of row and lost the twin, the Librarian unit and the connections.
+The bare example still had twelve links saved the same week. Enrichment rows go to
+bare records first.
+
+**Voice label:** the excerpt era is 2007 to 2016 after sampling, wider than the 2007
+to 2011 first estimated. Counts: Jamie's words 6,084, mixed 2,270, excerpt 4,569, no
+note 3,601. It is a label, never an assertion.
+
 ## Risks and unknowns
 
-- **Pagefind at 17,000 records.** Documented to a goal of tens of thousands; measured
-  at 10,000. The spike measures ours and shortens the excerpt if needed.
+- **Pagefind at 17,000 records.** Measured in the spike: it holds, with the two
+  behaviours above handled in the browser; `pf_meta` is the fixed cost that grows.
 - **The archive format** is unknown until it lands. The adapter contains it.
 - **Link rot** is the normal state: 7% of hosts gone, more pages. The record page is
   designed to outlive its destination.

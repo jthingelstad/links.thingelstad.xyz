@@ -1,0 +1,75 @@
+---
+// The front door: a search box, the numbers, the newest links, and one link
+// chosen at build. A plain form: search runs on /search/.
+import Layout from '../layouts/Layout.astro';
+import LinkList from '../components/LinkList.astro';
+import {
+  counts,
+  dateLabel,
+  hostPath,
+  linkOfTheDay,
+  linkPath,
+  newest,
+  noteText,
+  number,
+  yearPath,
+  years,
+} from '../lib/data';
+const pick = linkOfTheDay();
+---
+
+<Layout>
+  <h1 class="home-title">Every link Jamie has saved since 2005</h1>
+  <form class="search-form home-search" role="search" action="/search/">
+    <label class="sr-only" for="home-query">
+      Search the links
+    </label>
+    <input
+      id="home-query"
+      name="q"
+      type="search"
+      autocomplete="off"
+      placeholder="DNS, Stratechery, site:kottke.org, year:2012"
+    />
+    <button type="submit">Search</button>
+  </form>
+  <p class="numbers">
+    <b>{number(counts.links)}</b> links from <b>{number(counts.hosts)}</b> hosts
+    over{' '}
+    <a href="/years/">
+      <b>{counts.years}</b> years
+    </a>
+    ; <b>{number(counts.withNote)}</b> with a note,{' '}
+    <b>{number(counts.inIssues)}</b> in{' '}
+    <a href="/issues/">{number(counts.issues)} Weekly Thing issues</a>.
+  </p>
+  <div class="home-grid">
+    <section class="section">
+      <h2>Newest</h2>
+      <LinkList links={newest.slice(0, 20)} snippet />
+      <p class="more">
+        <a href={yearPath(years[years.length - 1])}>
+          Everything from {years[years.length - 1]}
+        </a>
+      </p>
+    </section>
+    {pick && (
+      <section class="section">
+        <h2>From the archive</h2>
+        <div class="pick">
+          <p class="meta">
+            <a href={hostPath(pick.host)}>{pick.host}</a> ·{' '}
+            {dateLabel(pick.saved)}
+          </p>
+          <a class="title" href={linkPath(pick.id)}>
+            {pick.title}
+          </a>
+          <p>{noteText(pick, 280)}</p>
+        </div>
+        <p class="more">
+          A different one every day, picked when the site is built.
+        </p>
+      </section>
+    )}
+  </div>
+</Layout>

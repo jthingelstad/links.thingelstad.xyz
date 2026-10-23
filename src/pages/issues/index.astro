@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {
+  issuePath,
+  issueTitle,
+  issues,
+  number,
+  plural,
+  shortDateLabel,
+} from '../../lib/data';
+const list = [...issues].reverse();
+const rows = issues.reduce((n, issue) => n + issue.links.length, 0);
+---
+
+<Layout
+  title="Issues · Linking Things"
+  description="Every Weekly Thing issue and the links it carried."
+>
+  <h1 class="page-title">Weekly Thing issues</h1>
+  <p class="lede">
+    {number(issues.length)} issues since May 2017, carrying {number(rows)}{' '}
+    links. Each page lists an issue's links in the order they ran.
+  </p>
+  <ul class="link-list compact">
+    {list.map((issue) => (
+      <li>
+        <a class="title" href={issuePath(issue)}>
+          {issueTitle(issue)}
+        </a>
+        <span class="meta">
+          {shortDateLabel(issue.date)} · {plural(issue.links.length, 'link')}
+        </span>
+      </li>
+    ))}
+  </ul>
+</Layout>

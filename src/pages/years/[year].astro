@@ -1,0 +1,61 @@
+---
+// One year of saving, by month, oldest first: the date spine, kept to a page
+// per year.
+import Layout from '../../layouts/Layout.astro';
+import LinkList from '../../components/LinkList.astro';
+import {
+  type Link,
+  appearances,
+  linksByYear,
+  monthAnchor,
+  monthNames,
+  number,
+  plural,
+  yearPath,
+  years,
+} from '../../lib/data';
+
+export function getStaticPaths() {
+  return years.map((year) => ({ params: { year: String(year) } }));
+}
+const year = Number(Astro.params.year);
+const list = linksByYear.get(year) ?? [];
+const months = monthNames
+  .map((name, i) => ({
+    name,
+    month: i + 1,
+    links: list.filter((link) => link.month === i + 1),
+  }))
+  .filter((m) => m.links.length);
+const notes = list.filter((link) => link.hasNote).length;
+const inIssues = list.filter((link) => appearances.has(link.id)).length;
+const day = (link: Link) =>
+  `${monthNames[link.month - 1].slice(0, 3)} ${Number(link.day.slice(8))}`;
+---
+
+<Layout
+  title={`${year} · Linking Things`}
+  description={`The ${plural(list.length, 'link')} Jamie Thingelstad saved in ${year}, by month.`}
+>
+  <p class="kicker">Year</p>
+  <h1 class="page-title">{year}</h1>
+  <p class="lede">
+    {plural(list.length, 'link')} saved in {year}; {number(notes)} with a note
+    {inIssues > 0 && `, ${number(inIssues)} in a Weekly Thing`}.
+  </p>
+  <nav class="year-nav" aria-label="Years">
+    {years.map((y) => (
+      <a href={yearPath(y)} aria-current={y === year ? 'page' : undefined}>
+        {y}
+      </a>
+    ))}
+  </nav>
+  {months.map((m) => (
+    <section class="month" id={monthAnchor(year, m.month)}>
+      <h2>
+        {m.name} <span class="meta">{plural(m.links.length, 'link')}</span>
+      </h2>
+      <LinkList links={m.links} compact date={day} />
+    </section>
+  ))}
+</Layout>

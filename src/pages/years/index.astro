@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { linksByYear, number, yearPath, years } from '../../lib/data';
+const max = Math.max(...years.map((y) => linksByYear.get(y)!.length));
+---
+
+<Layout
+  title="Years · Linking Things"
+  description="Links saved by year, 2005 to now."
+>
+  <h1 class="page-title">Years</h1>
+  <p class="lede">Links saved each year, in US Central time.</p>
+  <ul class="bars">
+    {years.map((y) => {
+      const n = linksByYear.get(y)!.length;
+      return (
+        <li>
+          <a href={yearPath(y)}>{y}</a>
+          <span class="bar" style={`width: ${(100 * n) / max}%`} />
+          <span class="n">{number(n)}</span>
+        </li>
+      );
+    })}
+  </ul>
+</Layout>

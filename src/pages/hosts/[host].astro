@@ -1,0 +1,40 @@
+---
+// Every link from one host, newest first, with the host's facts.
+import Layout from '../../layouts/Layout.astro';
+import LinkList from '../../components/LinkList.astro';
+import {
+  dateLabel,
+  hosts,
+  linksByHost,
+  plural,
+  type Host,
+} from '../../lib/data';
+
+export function getStaticPaths() {
+  return hosts.map((host) => ({
+    params: { host: host.host },
+    props: { host },
+  }));
+}
+interface Props {
+  host: Host;
+}
+const { host } = Astro.props;
+const list = [...(linksByHost.get(host.host) ?? [])].reverse();
+const span =
+  host.count === 1
+    ? `saved on ${dateLabel(host.first)}`
+    : `first saved ${dateLabel(host.first)}, latest ${dateLabel(host.last)}`;
+---
+
+<Layout
+  title={`${host.host} · Linking Things`}
+  description={`${plural(host.count, 'link')} Jamie Thingelstad saved from ${host.host}, ${span}.`}
+>
+  <p class="kicker">Host</p>
+  <h1 class="page-title">{host.host}</h1>
+  <p class="lede">
+    {plural(host.count, 'link')}, {span}.
+  </p>
+  <LinkList links={list} host={false} snippet />
+</Layout>
