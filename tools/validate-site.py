@@ -29,8 +29,7 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
 - llms.txt follows llmstxt.org's shape and llms-full.txt is every Markdown
   twin, newest first; every URL on this site inside the feeds, the JSON files
   and the llms files resolves to a built file;
-- /on-this-day/ has one page per Central calendar day with a link, and the
-  sitemap lists pages only (no feeds, JSON or text files).
+- the sitemap lists pages only (no feeds, JSON or text files).
 """
 
 import json
@@ -402,21 +401,6 @@ def check_site_urls(problems):
     return inside
 
 
-def check_on_this_day(data_links, listed_records, problems):
-    """A page per Central calendar day with a link, listing exactly those."""
-    days = {}
-    for link in data_links:
-        moment = datetime.fromisoformat(link["saved"].replace("Z", "+00:00"))
-        days.setdefault(moment.astimezone(CENTRAL).strftime("%m-%d"), set()).add(link["id"])
-    built = {p.parent.name for p in (DIST / "on-this-day").glob("*/index.html")}
-    if built != set(days) or not (DIST / "on-this-day/index.html").exists():
-        problems.append(f"on-this-day: {len(built)} day pages for {len(days)} days with links")
-    for day, wanted in days.items():
-        if set(listed_records.get(f"/on-this-day/{day}/", [])) != wanted:
-            problems.append(f"on-this-day/{day}/: does not list exactly that day's links")
-    return days
-
-
 def main():
     problems = []
     sites = json.loads((ROOT / "shared/sites.json").read_text())
@@ -443,7 +427,7 @@ def main():
     off_site_seen = set()
     alternates = {}  # page url to its <link rel="alternate"> (type, href)
     kudos = {}  # page url to its Kudos buttons
-    listed_records = {}  # host and day pages to the records they list, in order
+    listed_records = {}  # host pages to the records they list, in order
     loaders = 0
     for page in pages:
         rel = page.relative_to(DIST).as_posix()
@@ -454,7 +438,7 @@ def main():
         ids[url] = parser.ids
         alternates[url] = parser.alternates
         kudos[url] = parser.kudos
-        if url.startswith(("/hosts/", "/on-this-day/")):
+        if url.startswith("/hosts/"):
             listed_records[url] = [
                 record_id(ref) for ref in parser.refs if record_id(ref)
             ]
@@ -580,7 +564,6 @@ def main():
     check_dataset(data_links, newest, host_pages, problems)
     check_llms(newest, problems)
     inside = check_site_urls(problems)
-    days = check_on_this_day(data_links, listed_records, problems)
 
     if problems:
         sys.exit(
@@ -592,7 +575,6 @@ def main():
         f" links, {len(seen)} sitemap URLs; links, metadata and sitemap valid;"
         f" {feeds} feeds, links.json, hosts.json, issues.json, llms.txt and"
         f" llms-full.txt valid ({len(inside)} site URLs inside resolve);"
-        f" {len(days)} on-this-day pages;"
         f" Tinylytics {'on (production build)' if PRODUCTION else 'absent'}"
         + (" (a saved link names it; only fetches checked)" if content_names_tinylytics else "")
         + f"; off-site fetches: {', '.join(sorted(off_site_seen)) or 'none'}"

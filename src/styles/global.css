@@ -733,60 +733,6 @@ img {
   font-size: var(--jt-size-meta);
 }
 
-/* On this day: twelve months of days, each with its count. */
-.calendar {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
-  gap: 32px 40px;
-  scroll-margin-top: 16px;
-}
-.calendar-month > h2 {
-  font-size: var(--jt-size-h3);
-  margin-bottom: 10px;
-}
-.calendar-days {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 4px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.calendar-days a,
-.calendar-days .empty {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 4px 0 3px;
-  border-radius: 6px;
-  line-height: 1.2;
-  text-decoration: none;
-}
-.calendar-days a {
-  background: var(--card);
-}
-.calendar-days a:hover {
-  outline: 1px solid var(--link);
-}
-.calendar-days .d {
-  font-weight: 600;
-}
-.calendar-days .n {
-  color: var(--muted);
-  font-size: var(--jt-size-label);
-}
-.calendar-days .empty {
-  color: var(--muted);
-}
-.day-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 8px 20px;
-  max-width: var(--jt-measure);
-  margin: 0 0 32px;
-  font-size: var(--jt-size-small);
-}
 .not-saved {
   color: var(--muted);
   font-size: var(--jt-size-label);

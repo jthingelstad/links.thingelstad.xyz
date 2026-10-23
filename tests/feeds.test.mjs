@@ -1,6 +1,6 @@
-// Feeds, the dataset files, llms.txt and on this day (src/lib/feeds.ts,
-// src/lib/dataset.ts, src/lib/data.ts), checked on the real data/. The built
-// files themselves are checked by npm run validate:site.
+// Feeds, the dataset files and llms.txt (src/lib/feeds.ts, src/lib/dataset.ts,
+// src/lib/data.ts), checked on the real data/. The built files themselves are
+// checked by npm run validate:site.
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { test } from 'node:test';
@@ -65,8 +65,6 @@ test('paths come from data.ts', () => {
     data.feedPath('rss', data.hostPath('feedbin.com')),
     '/hosts/feedbin.com/feed.xml',
   );
-  assert.equal(data.onThisDayPath(), '/on-this-day/');
-  assert.equal(data.onThisDayPath('10-23'), '/on-this-day/10-23/');
   assert.equal(data.datasetPath.links, '/links.json');
 });
 
@@ -146,23 +144,6 @@ test('feed text is escaped for XML', () => {
   assert.ok(rss.includes('a=1&amp;amp;b=2'));
 });
 
-test('on this day groups by Central calendar day', () => {
-  const total = [...data.linksByMonthDay.values()].reduce(
-    (sum, list) => sum + list.length,
-    0,
-  );
-  assert.equal(total, data.links.length);
-  assert.deepEqual(data.monthDays, [...data.monthDays].sort());
-  // 04:58 UTC on New Year's Day 2011 is December 31 in Central.
-  assert.ok(
-    data.linksByMonthDay
-      .get('12-31')
-      .some((link) => link.id === '698e834d2c11'),
-  );
-  assert.equal(data.monthDayLabel('02-29'), 'February 29');
-  assert.equal(data.monthDayLabel('10-03'), 'October 3');
-});
-
 test('links.json is every record exactly as data/links has it', () => {
   const doc = JSON.parse(dataset.linksDocument('2026-10-23T00:00:00.000Z'));
   assert.deepEqual(Object.keys(doc), ['site', 'generated', 'count', 'links']);
@@ -219,6 +200,7 @@ test('llms.txt has the llmstxt.org shape', () => {
   ])
     assert.ok(text.includes(`(https://links.thingelstad.xyz${path})`), path);
   assert.ok(text.includes('`/links/<id>.md`'));
+  assert.ok(!text.includes('on-this-day'));
   // No em-dash (U+2014) anywhere, and no Pinboard in what readers see.
   assert.ok(!text.includes('\u2014'));
   assert.ok(!/pinboard/i.test(text));

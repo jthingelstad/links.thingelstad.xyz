@@ -23,7 +23,6 @@ import {
   links,
   newest,
   number,
-  onThisDayPath,
   site,
 } from './data.ts';
 import { FEED_SIZE } from './feeds.ts';
@@ -142,7 +141,6 @@ export function llmsTxt() {
     `- [Home](${a('/')}): a search box, the numbers, the newest links`,
     `- [Search](${a('/search/')}): full-text search over titles, notes and hosts, with \`site:\`, \`year:\` and \`wt:\``,
     `- [Years](${a('/years/')}): the links saved each year, by month`,
-    `- [On this day](${a(onThisDayPath())}): the links saved on each calendar day, across the years`,
     `- [Issues](${a('/issues/')}): every Weekly Thing issue and the links it carried`,
     `- [Hosts](${a('/hosts/')}): the sites linked most; every host has a page at \`/hosts/<host>/\``,
     '',
