@@ -124,6 +124,45 @@ export function centralDay(iso: string) {
   );
   return `${parts.year}-${parts.month}-${parts.day}`;
 }
+// A UTC timestamp as Central wall time with its real offset (-05:00 in
+// daylight time, -06:00 in standard time), for feeds: RFC 3339 for JSON Feed,
+// RFC 822 with a four-digit year (as RFC 1123 has it) for RSS.
+const wallClock = new Intl.DateTimeFormat('en-US', {
+  timeZone: zone,
+  hourCycle: 'h23',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+});
+function centralWall(iso: string) {
+  const date = new Date(iso);
+  const p = Object.fromEntries(
+    wallClock.formatToParts(date).map((part) => [part.type, part.value]),
+  );
+  const wall = new Date(
+    Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour, +p.minute, +p.second),
+  );
+  const minutes = Math.round(
+    (wall.getTime() - Math.floor(date.getTime() / 1000) * 1000) / 60000,
+  );
+  const sign = minutes < 0 ? '-' : '+';
+  const hh = String(Math.floor(Math.abs(minutes) / 60)).padStart(2, '0');
+  const mm = String(Math.abs(minutes) % 60).padStart(2, '0');
+  return { p, wall, sign, hh, mm };
+}
+export function rfc3339Central(iso: string) {
+  const { p, sign, hh, mm } = centralWall(iso);
+  return `${p.year}-${p.month}-${p.day}T${p.hour}:${p.minute}:${p.second}${sign}${hh}:${mm}`;
+}
+const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+export function rfc822Central(iso: string) {
+  const { p, wall, sign, hh, mm } = centralWall(iso);
+  const month = monthNames[+p.month - 1].slice(0, 3);
+  return `${weekdays[wall.getUTCDay()]}, ${p.day} ${month} ${p.year} ${p.hour}:${p.minute}:${p.second} ${sign}${hh}${mm}`;
+}
 export function weekOf(day: string) {
   const date = new Date(`${day}T00:00:00Z`);
   date.setUTCDate(date.getUTCDate() - ((date.getUTCDay() + 6) % 7));
@@ -204,6 +243,22 @@ export const monthAnchor = (year: number, month: number) =>
 export const monthPath = (year: number, month: number) =>
   `${yearPath(year)}#${monthAnchor(year, month)}`;
 export const absolute = (path: string) => new URL(path, site).href;
+// Feeds: the site's pair at the root, and every host's pair under its page
+// (DIRECTION.md, "Pages"). `under` is the path of the page a feed follows.
+export type FeedKind = 'rss' | 'json';
+export const feedPath = (kind: FeedKind, under = '/') =>
+  `${under}${kind === 'rss' ? 'feed.xml' : 'feed.json'}`;
+// The whole public dataset and the doorway for language models.
+export const datasetPath = {
+  links: '/links.json',
+  hosts: '/hosts.json',
+  issues: '/issues.json',
+  llms: '/llms.txt',
+  llmsFull: '/llms-full.txt',
+} as const;
+// On this day: /on-this-day/ is every calendar day, /on-this-day/MM-DD/ one.
+export const onThisDayPath = (monthDay?: string) =>
+  monthDay ? `/on-this-day/${monthDay}/` : '/on-this-day/';
 
 // Elsewhere. Pinboard's own bookmark ids are private (DIRECTION.md, "The id"),
 // so a record offers a search for its URL in Jamie's account instead.
@@ -326,6 +381,19 @@ for (const link of links) {
 }
 export const years = [...linksByYear.keys()].sort((a, b) => a - b);
 
+// On this day: every link by its Central calendar day, MM-DD, across the
+// years, oldest first. Only days with a link are listed.
+export const linksByMonthDay = new Map<string, Link[]>();
+for (const link of links) {
+  const monthDay = link.day.slice(5);
+  const list = linksByMonthDay.get(monthDay) ?? [];
+  list.push(link);
+  linksByMonthDay.set(monthDay, list);
+}
+export const monthDays = [...linksByMonthDay.keys()].sort();
+export const monthDayLabel = (monthDay: string) =>
+  `${monthNames[Number(monthDay.slice(0, 2)) - 1]} ${Number(monthDay.slice(3))}`;
+
 // The others nearest in time to a link, from a list it belongs to.
 function nearest(link: Link, list: Link[], limit: number) {
   const t = Date.parse(link.saved);
@@ -356,11 +424,15 @@ export function connectionsOf(link: Link, limit = 5) {
   };
 }
 
-export const noteHtml = (link: Link) =>
+// `full` makes record links absolute, for feeds, where a reader has no page
+// to resolve a path against.
+export const noteHtml = (link: Link, full = false) =>
   renderNote(link.note, (href) => {
     const id = resolveUrl(href, link.saved);
     const target = id && id !== link.id ? linkById.get(id) : undefined;
-    return target ? { path: linkPath(target.id), title: target.title } : null;
+    if (!target) return null;
+    const path = linkPath(target.id);
+    return { path: full ? absolute(path) : path, title: target.title };
   });
 export const noteText = (link: Link, max?: number) => plainNote(link.note, max);
 

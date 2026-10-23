@@ -1,5 +1,6 @@
 ---
-// Every link from one host, newest first, with the host's facts.
+// Every link from one host, newest first, with the host's facts, and the
+// host's own RSS and JSON Feed pair (src/lib/feeds.ts).
 import Layout from '../../layouts/Layout.astro';
 import LinkList from '../../components/LinkList.astro';
 import {
@@ -9,6 +10,7 @@ import {
   plural,
   type Host,
 } from '../../lib/data';
+import { feedAlternates, hasHostFeed, hostFeed } from '../../lib/feeds';
 
 export function getStaticPaths() {
   return hosts.map((host) => ({
@@ -25,11 +27,13 @@ const span =
   host.count === 1
     ? `saved on ${dateLabel(host.first)}`
     : `first saved ${dateLabel(host.first)}, latest ${dateLabel(host.last)}`;
+const feeds = hasHostFeed(host.host) ? feedAlternates(hostFeed(host)) : [];
 ---
 
 <Layout
   title={`${host.host} · Linking Things`}
   description={`${plural(host.count, 'link')} Jamie Thingelstad saved from ${host.host}, ${span}.`}
+  alternates={feeds}
 >
   <p class="kicker">Host</p>
   <h1 class="page-title">{host.host}</h1>

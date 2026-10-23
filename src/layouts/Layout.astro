@@ -1,16 +1,20 @@
 ---
 // Every page: the shared type (shared/tokens.css, vendored), the "Jamie's
-// sites" strip, the header, and the footer with Jamie's h-card. No script runs
-// here; the search page adds Pagefind's and nothing else.
+// sites" strip, the header, and the footer with Jamie's h-card. The site's
+// feeds are advertised on every page, a page's own feeds before them. No
+// script runs here but Tinylytics, in the production build only
+// (Analytics.astro); the search page adds Pagefind's.
 import '../../shared/tokens.css';
 import '../styles/global.css';
 import inter from '../../shared/fonts/inter-latin-wght-normal.woff2?url';
 import interTight from '../../shared/fonts/inter-tight-latin-wght-normal.woff2?url';
 import { owner, sitesStrip } from '../lib/sites';
+import { siteFeedAlternates } from '../lib/feeds';
+import Analytics from '../components/Analytics.astro';
 interface Props {
   title?: string;
   description?: string;
-  alternates?: { type: string; href: string }[];
+  alternates?: { type: string; href: string; title?: string }[];
   // The 404 page: served at any address, so it names none.
   notFound?: boolean;
 }
@@ -62,8 +66,8 @@ const current = (href: string) =>
     {owner.rel_me.map((href) => (
       <link rel="me" href={href} />
     ))}
-    {alternates.map((alt) => (
-      <link rel="alternate" type={alt.type} href={alt.href} />
+    {[...alternates, ...siteFeedAlternates].map((alt) => (
+      <link rel="alternate" type={alt.type} title={alt.title} href={alt.href} />
     ))}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -82,13 +86,7 @@ const current = (href: string) =>
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    {/*
-        TINYLYTICS GOES HERE in phase 1 (design/tinylytics.md): one script
-        with ?kudos=custom, production host only, the POAP layout's pattern.
-        QA never sends a hit or a kudos. The Like on each record (Kudos.astro,
-        keyed on /links/<id>/) arrives with it, and tools/validate-site.py
-        then allows that one script host.
-      */}
+    {/* Tinylytics loads at the end of the body (Analytics.astro). */}
   </head>
   <body>
     <a href="#main" class="skip-link">
@@ -151,5 +149,6 @@ const current = (href: string) =>
         Central.
       </p>
     </footer>
+    <Analytics />
   </body>
 </html>

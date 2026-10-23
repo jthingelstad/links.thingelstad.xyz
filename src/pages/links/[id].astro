@@ -5,6 +5,7 @@
 // the note and the host; everything else is marked out of the index.
 import Layout from '../../layouts/Layout.astro';
 import LinkList from '../../components/LinkList.astro';
+import Kudos from '../../components/Kudos.astro';
 import {
   type Link,
   appearances,
@@ -17,6 +18,7 @@ import {
   issueTitle,
   linkJsonPath,
   linkMarkdownPath,
+  linkPath,
   links,
   monthNames,
   monthPath,
@@ -74,6 +76,7 @@ const description = link.hasNote
       <p class="record-url" data-pagefind-ignore title={link.url}>
         {displayUrl(link.url)}
       </p>
+      <Kudos path={linkPath(link.id)} title={link.title} />
     </header>
 
     <div class="record-body">
