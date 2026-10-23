@@ -24,7 +24,6 @@ import {
   monthPath,
   noteHtml,
   noteText,
-  pinboardSearchUrl,
   plural,
   shortDateLabel,
   timeLabel,
@@ -129,9 +128,6 @@ const description = link.hasNote
           <ul class="elsewhere">
             <li>
               <a href={waybackUrl(link.url)}>Wayback Machine copies</a>
-            </li>
-            <li>
-              <a href={pinboardSearchUrl(link.url)}>Find it on Pinboard</a>
             </li>
             <li>
               This record as <a href={linkJsonPath(link.id)}>JSON</a> or{' '}

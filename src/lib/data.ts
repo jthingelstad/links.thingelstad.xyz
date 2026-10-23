@@ -260,10 +260,7 @@ export const datasetPath = {
 export const onThisDayPath = (monthDay?: string) =>
   monthDay ? `/on-this-day/${monthDay}/` : '/on-this-day/';
 
-// Elsewhere. Pinboard's own bookmark ids are private (DIRECTION.md, "The id"),
-// so a record offers a search for its URL in Jamie's account instead.
-export const pinboardSearchUrl = (url: string) =>
-  `https://pinboard.in/search/u:jthingelstad?query=${encodeURIComponent(url)}`;
+// Elsewhere: the Wayback Machine's copies of the destination.
 export const waybackUrl = (url: string) =>
   `https://web.archive.org/web/*/${url}`;
 

@@ -121,13 +121,13 @@ export function llmsTxt() {
   return `${[
     '# Linking Things',
     '',
-    `> Every public link Jamie Thingelstad has saved to Pinboard since 2005, as a static database: ${number(counts.links)} links from ${number(counts.hosts)} hosts, ${span()}, one page per link and what connects them. Times are US Central.`,
+    `> Every public link Jamie Thingelstad has saved since 2005, as a static database: ${number(counts.links)} links from ${number(counts.hosts)} hosts, ${span()}, one page per link and what connects them. Times are US Central.`,
     '',
     "Each link's record is at `/links/<id>/`, where `<id>` is the first 12 hex characters of the md5 of the URL exactly as saved, so anyone can compute it from a URL; a 404 means the link was never saved or is not public. Every record has a JSON twin at `/links/<id>.json` and a Markdown twin at `/links/<id>.md`. Notes from 2007 to 2016 are mostly excerpts from the page, not Jamie's words; the JSON twin carries that label as `voice`.",
     '',
     '## Data',
     '',
-    `- [Every link](${a(datasetPath.links)}): ${number(counts.links)} public links, newest first, with Pinboard's fields (id, hash, url, title, note, saved, tags, toread, meta) and the permalink`,
+    `- [Every link](${a(datasetPath.links)}): ${number(counts.links)} public links, newest first, with every field as saved (id, hash, url, title, note, saved, tags, toread, meta) and the permalink`,
     `- [Hosts](${a(datasetPath.hosts)}): every host with its number of links, the first and latest saved, and its page`,
     `- [Weekly Thing issues](${a(datasetPath.issues)}): the links each of ${number(counts.issues)} issues of The Weekly Thing carried, joined to the saved links`,
     `- [JSON Feed](${a(feedPath('json'))}) and [RSS](${a(feedPath('rss'))}): the newest ${FEED_SIZE} links; every host page has its own pair at \`feed.json\` and \`feed.xml\` under its path, as in \`/hosts/<host>/feed.json\``,
@@ -159,7 +159,7 @@ export function llmsFullTxt() {
   const header = [
     '# Linking Things: every record',
     '',
-    `> Every public link Jamie Thingelstad has saved to Pinboard, ${number(counts.links)} records, newest first, ${span()}. Each record below is its Markdown twin, the same text as \`/links/<id>.md\`. Times are US Central. The index is [llms.txt](${absolute(datasetPath.llms)}).`,
+    `> Every public link Jamie Thingelstad has saved, ${number(counts.links)} records, newest first, ${span()}. Each record below is its Markdown twin, the same text as \`/links/<id>.md\`. Times are US Central. The index is [llms.txt](${absolute(datasetPath.llms)}).`,
     '',
   ].join('\n');
   full = `${header}\n${newest.map((link) => linkMarkdown(link)).join('\n')}`;

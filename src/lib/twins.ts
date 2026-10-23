@@ -14,7 +14,6 @@ import {
   linkJsonPath,
   linkMarkdownPath,
   linkPath,
-  pinboardSearchUrl,
   waybackUrl,
 } from './data.ts';
 
@@ -64,7 +63,6 @@ export function linkJson(link: Link) {
     },
     elsewhere: {
       wayback: waybackUrl(link.url),
-      pinboard_search: pinboardSearchUrl(link.url),
     },
   };
 }
@@ -117,7 +115,6 @@ export function linkMarkdown(link: Link) {
     '## Elsewhere',
     '',
     `- Wayback Machine: ${waybackUrl(link.url)}`,
-    `- Pinboard: ${pinboardSearchUrl(link.url)}`,
   );
   return `${out.join('\n')}\n`;
 }

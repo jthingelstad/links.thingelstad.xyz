@@ -50,8 +50,8 @@ const saved = rows.filter((row) => row.id && linkById.has(row.id)).length;
   <p class="lede">
     {plural(rows.length, 'link')}
     {saved === 0
-      ? ', none of them saved to Pinboard'
-      : saved < rows.length && `, ${saved} of them saved to Pinboard`}
+      ? ', none of them in the collection'
+      : saved < rows.length && `, ${saved} of them in the collection`}
     .{' '}
     <a href={siteRef(issue.url, 'issue')}>
       Read {issueLabel(issue)} on Weekly Thing
@@ -80,7 +80,7 @@ const saved = rows.filter((row) => row.id && linkById.has(row.id)).length;
               </a>
               <span class="meta">
                 {hostOf(row.url)} ·{' '}
-                <span class="not-saved">not saved to Pinboard</span>
+                <span class="not-saved">not in the collection</span>
               </span>
             </li>
           );

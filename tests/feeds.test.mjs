@@ -219,6 +219,7 @@ test('llms.txt has the llmstxt.org shape', () => {
   ])
     assert.ok(text.includes(`(https://links.thingelstad.xyz${path})`), path);
   assert.ok(text.includes('`/links/<id>.md`'));
-  // No em-dash (U+2014) anywhere.
+  // No em-dash (U+2014) anywhere, and no Pinboard in what readers see.
   assert.ok(!text.includes('\u2014'));
+  assert.ok(!/pinboard/i.test(text));
 });

@@ -424,7 +424,7 @@ img {
   gap: 0 56px;
 }
 /* One column: the note, where it appeared, then the connections; the
-   utility links (Wayback, Pinboard, the twins) go last. */
+   utility links (Wayback, the twins) go last. */
 @media (max-width: 59.99rem) {
   .record-side {
     display: contents;
