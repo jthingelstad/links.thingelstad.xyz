@@ -125,7 +125,7 @@ const span = () =>
 // Thing issues it was in, its permalink) and then the note in full. The
 // connections a twin lists (same host, same week) are left out; the twin at
 // /links/<id>.md has them. Measured 2026-10-23, the largest year (2008) is
-// 0.8 MB and all of them 10.5 MB; npm run validate:site fails a year past
+// 0.8 MB and all of them 10.6 MB; npm run validate:site fails a year past
 // 4 MB, the size at which a year would be split by month instead.
 export interface LlmsYear {
   year: number;
