@@ -37,6 +37,7 @@ at `~/Projects/thingelstad.com/weekly.thingelstad.com/apps/site/archive/<n>.md`
   "issues": [
     {
       "number": 350,
+      "slug": "350",
       "title": "Builders Puzzlers And Agents",
       "subject": "WT350 — Builders Puzzlers And Agents",
       "date": "2026-09-19T12:00:00Z",
@@ -58,10 +59,17 @@ at `~/Projects/thingelstad.com/weekly.thingelstad.com/apps/site/archive/<n>.md`
 
 `id` is the Pinboard link matched by normalised URL, or `null` when the issue link
 is not in Pinboard (45 rows today: tracking-parameter variants, mobile hosts,
-Jamie's own sites). `position` is the link's order in the issue. Each issue also
-carries `slug` (the archive path segment); `number` is `null` for the one special
-issue (`special-thing-140-matching-donations-to-second`). Issues are sorted by
-`date` then `slug`; `url` is the issue on weekly.thingelstad.com, not Buttondown.
+Jamie's own sites). When several saved links normalise to the same key, the
+tie-break is: an exact saved URL wins, then the latest link saved at or before the
+issue date, then the earliest saved. `position` is the link's order in the issue.
+`text`, `section` and `heading_context` are strings or `null`, never the string
+"null". Field order per issue is `number, slug, title, subject, date, url, links`.
+`slug` is the archive path segment and `number` is `null` for the one special issue
+(slug `special-thing-140-matching-donations-to-second`). `date` is the front
+matter's `publish_date` as written, which may carry fractional seconds. `url` is the
+issue's `permalink` on weekly.thingelstad.com (`/archive/<n>/`, and
+`/archive/140-special/` for the special issue; slug paths there are redirects), not
+Buttondown. Issues are sorted by `date` then `slug`.
 
 ## URL normalisation (for joins only)
 
@@ -75,9 +83,11 @@ a saved URL. Never used to form an id.
    `mc_cid`, `mc_eid`, `fbclid`, `gclid`; keep the rest in their original order.
 5. Drop the fragment.
 
-Both sides are normalised the same way. When two saved URLs normalise alike (44
-pairs today, scheme or www only), both records exist and each lists the other as
-"saved twice".
+Both sides are normalised the same way. When saved URLs normalise alike (43 groups
+today: 41 pairs and 2 triples, differing by scheme, www, trailing slash, percent
+escape, fragment, query or host case), every record exists and each lists the
+others as "saved twice". `tools/README.md` has the edge-case table (byte-wise UTF-8
+decoding of the path, no IDNA on the host) that the TypeScript port must match.
 
 ## Derived at build, not stored
 

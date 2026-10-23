@@ -58,9 +58,9 @@ graph. That is the difference to protect.
 | Distinct hosts | 7,259 (www stripped); 5,959 hosts have exactly one link |
 | Top hosts | youtube.com 302, medium.com 266, github.com 256, macstories.net 239, nytimes.com 208 |
 | Scheme | 6,901 saved as `http://` (41%), 9,981 as `https://` |
-| Near-duplicate URLs | 44 pairs differ only by scheme or www |
-| In a Weekly Thing issue | 6,456 links (38% of all; 41% to 87% of each year since 2017) |
-| In two or more issues | 9 |
+| Near-duplicate URLs | 43 groups (41 pairs, 2 triples) differ by scheme, www, trailing slash, escape, fragment or case |
+| In a Weekly Thing issue | 6,465 links (39% of all; 41% to 87% of each year since 2017) |
+| In two or more issues | 0. A link featured again was always saved again under another URL form |
 | Note links to another saved link | 202 edges from 190 notes; 226 note links go to Jamie's own sites |
 | Hosts that no longer resolve | 21 of a random 300 (7%), carrying 22 of those hosts' 568 links |
 | `hash[:12]` unique | Yes, across all 16,882, so Pinboard's own short id works as ours |
@@ -81,7 +81,7 @@ Two things in the data shape the design:
 Every issue on weekly.thingelstad.com carries its links in front matter
 (`links: [{url, text, domain, heading_context, section}]`), 6,510 rows across 330
 issues. Normalising URLs (scheme, www, trailing slash, tracking parameters) matches
-6,465 of them (99.3%) to a Pinboard bookmark. The 45 misses are mobile hosts,
+6,465 of them (99.3%) to a Pinboard bookmark, 6,465 distinct links. The 45 misses are mobile hosts,
 tracking-parameter variants and Jamie's own sites. "Appears in WT350" is a build-time
 join, no new data entry. The Librarian's link index goes further (19,922 links across
 issues, blog and podcast, with a role of headline, commentary or journal, queryable by
@@ -120,7 +120,7 @@ the URL alone: take the URL exactly as saved, md5 it, keep the first 12 hex char
   `get_item` can form the permalink the same way.
 - **Editing a URL in Pinboard changes its id.** The sync detects a vanished hash and a
   new one with the same title and date, writes an alias, and the old permalink
-  redirects. The same mechanism handles the 44 scheme-only duplicate pairs.
+  redirects. The same mechanism handles the 43 saved-twice groups.
 - **The saved URL is the key, not a normalised one.** Normalisation is for joining
   (issues, note mentions, cites), never for the id.
 
@@ -284,11 +284,11 @@ The graph is the point of the site. Edge types, their source, and when they arri
 
 | Edge | Source | Coverage today | Phase |
 | --- | --- | --- | --- |
-| appears in issue | weekly.thingelstad.com front matter; the Librarian for blog and podcast | 6,456 links, 330 issues | 1 |
+| appears in issue | weekly.thingelstad.com front matter; the Librarian for blog and podcast | 6,465 links, 354 issues | 1 |
 | same host | the URL | every link | 1 |
 | saved the same week | `time` | every link | 1 |
 | mentioned by (a note links here) | URLs inside notes | 202 edges | 1 |
-| saved twice | normalised URL | 44 pairs | 1 |
+| saved twice | normalised URL | 43 groups | 1 |
 | now at (redirected) | liveness check | unknown until checked | 2 |
 | cites / cited by | outbound links of the archived page copy, matched to saved URLs | unknown until the archive is parsed; the richest source of real hyperlink structure | 2 |
 | same topic | topics | every link | 3 |
