@@ -38,9 +38,15 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   `pinboard/posts_all.json` holds private bookmarks and must never be published or
   copied into `data/`. Never print the Pinboard token.
 - Run `npm run lint`, `npm run format:check`, `npm run check`, `npm test`,
-  `npm run sites:check`, `npm run validate:data`, `npm run build` and
-  `npm run validate:site` before pushing. Chromium for screenshots:
-  `npx playwright install chromium`.
+  `npm run sites:check`, `npm run validate:infra`, `npm run validate:data`,
+  `npm run build`, `npm run validate:site` and `npm run test:ci-browser` before
+  pushing. Chromium for screenshots: `npx playwright install chromium`.
+- **Hosting** is S3 and CloudFront in four stacks (`infra/`), deployed from main by
+  GitHub Actions through an OIDC role; `docs/deployment.md` has the stacks, the
+  bootstrap, the DNS records and what a deploy uploads, removes and invalidates. A new
+  file extension needs its Content-Type in `tools/delivery-plan.mjs` or the deploy
+  stops. The Pinboard sync runs on the Mac and commits `data/`; CI never holds the
+  token.
 - Infrastructure changes go through reviewed CloudFormation change sets with the
-  `cloud-engineer` identity, applied on Jamie's go. DNS changes (Namecheap) are made
-  by Jamie.
+  `cloud-engineer` identity, applied on Jamie's go, never through the deployment role.
+  DNS changes (Namecheap) are made by Jamie.

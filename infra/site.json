@@ -1,0 +1,335 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "links.thingelstad.xyz static site CDN with private S3 origin",
+  "Parameters": {
+    "SiteBucket": {
+      "Type": "String",
+      "AllowedPattern": "[a-z0-9.-]+",
+      "Default": "links-storage-web-999153317627"
+    },
+    "CertificateArn": {
+      "Type": "String",
+      "AllowedPattern": "(^$|arn:aws:acm:us-east-1:[0-9]{12}:certificate/.*)",
+      "Default": ""
+    }
+  },
+  "Conditions": {
+    "HasCertificate": {
+      "Fn::Not": [
+        {
+          "Fn::Equals": [
+            {
+              "Ref": "CertificateArn"
+            },
+            ""
+          ]
+        }
+      ]
+    }
+  },
+  "Resources": {
+    "OriginAccess": {
+      "Type": "AWS::CloudFront::OriginAccessControl",
+      "Properties": {
+        "OriginAccessControlConfig": {
+          "Name": {
+            "Fn::Sub": "${AWS::StackName}-origin"
+          },
+          "OriginAccessControlOriginType": "s3",
+          "SigningBehavior": "always",
+          "SigningProtocol": "sigv4"
+        }
+      }
+    },
+    "CachePolicy": {
+      "Type": "AWS::CloudFront::CachePolicy",
+      "Properties": {
+        "CachePolicyConfig": {
+          "Name": {
+            "Fn::Sub": "${AWS::StackName}-cache"
+          },
+          "MinTTL": 0,
+          "DefaultTTL": 300,
+          "MaxTTL": 31536000,
+          "ParametersInCacheKeyAndForwardedToOrigin": {
+            "EnableAcceptEncodingGzip": true,
+            "EnableAcceptEncodingBrotli": true,
+            "CookiesConfig": {
+              "CookieBehavior": "none"
+            },
+            "HeadersConfig": {
+              "HeaderBehavior": "none"
+            },
+            "QueryStringsConfig": {
+              "QueryStringBehavior": "none"
+            }
+          }
+        }
+      }
+    },
+    "Headers": {
+      "Type": "AWS::CloudFront::ResponseHeadersPolicy",
+      "Properties": {
+        "ResponseHeadersPolicyConfig": {
+          "Name": {
+            "Fn::Sub": "${AWS::StackName}-headers"
+          },
+          "SecurityHeadersConfig": {
+            "ContentTypeOptions": {
+              "Override": true
+            },
+            "FrameOptions": {
+              "FrameOption": "DENY",
+              "Override": true
+            },
+            "ReferrerPolicy": {
+              "ReferrerPolicy": "strict-origin-when-cross-origin",
+              "Override": true
+            },
+            "StrictTransportSecurity": {
+              "AccessControlMaxAgeSec": 31536000,
+              "Override": true
+            }
+          }
+        }
+      }
+    },
+    "IndexFunction": {
+      "Type": "AWS::CloudFront::Function",
+      "Properties": {
+        "Name": {
+          "Fn::Sub": "${AWS::StackName}-index"
+        },
+        "AutoPublish": true,
+        "FunctionConfig": {
+          "Runtime": "cloudfront-js-2.0",
+          "Comment": "Serve directory routes from index.html and redirect a route without its trailing slash"
+        },
+        "FunctionCode": {
+          "Fn::Join": [
+            "\n",
+            [
+              "function handler(event) {",
+              "  var request = event.request;",
+              "  var uri = request.uri;",
+              "  if (uri.endsWith('/')) {",
+              "    request.uri = uri + 'index.html';",
+              "    return request;",
+              "  }",
+              "  var parts = uri.split('/');",
+              "  var name = parts[parts.length - 1];",
+              "  var hostPage = parts.length === 3 && parts[1] === 'hosts' && name !== 'index.html';",
+              "  if (name.indexOf('.') !== -1 && !hostPage) return request;",
+              "  var query = [];",
+              "  for (var key in request.querystring) {",
+              "    var field = request.querystring[key];",
+              "    var values = field.multiValue || [field];",
+              "    for (var i = 0; i < values.length; i++) query.push(key + '=' + values[i].value);",
+              "  }",
+              "  var location = uri + '/' + (query.length ? '?' + query.join('&') : '');",
+              "  return { statusCode: 301, statusDescription: 'Moved Permanently', headers: { location: { value: location } } };",
+              "}"
+            ]
+          ]
+        }
+      }
+    },
+    "Distribution": {
+      "Type": "AWS::CloudFront::Distribution",
+      "Properties": {
+        "DistributionConfig": {
+          "Enabled": true,
+          "Comment": "Linking Things",
+          "HttpVersion": "http2and3",
+          "IPV6Enabled": true,
+          "PriceClass": "PriceClass_100",
+          "DefaultRootObject": "index.html",
+          "Aliases": {
+            "Fn::If": [
+              "HasCertificate",
+              ["links.thingelstad.xyz"],
+              {
+                "Ref": "AWS::NoValue"
+              }
+            ]
+          },
+          "ViewerCertificate": {
+            "Fn::If": [
+              "HasCertificate",
+              {
+                "AcmCertificateArn": {
+                  "Ref": "CertificateArn"
+                },
+                "SslSupportMethod": "sni-only",
+                "MinimumProtocolVersion": "TLSv1.2_2021"
+              },
+              {
+                "CloudFrontDefaultCertificate": true
+              }
+            ]
+          },
+          "Origins": [
+            {
+              "Id": "website",
+              "DomainName": {
+                "Fn::Sub": "${SiteBucket}.s3.${AWS::Region}.${AWS::URLSuffix}"
+              },
+              "OriginAccessControlId": {
+                "Ref": "OriginAccess"
+              },
+              "S3OriginConfig": {
+                "OriginAccessIdentity": ""
+              }
+            }
+          ],
+          "DefaultCacheBehavior": {
+            "TargetOriginId": "website",
+            "ViewerProtocolPolicy": "redirect-to-https",
+            "AllowedMethods": ["GET", "HEAD"],
+            "CachedMethods": ["GET", "HEAD"],
+            "Compress": true,
+            "CachePolicyId": {
+              "Ref": "CachePolicy"
+            },
+            "ResponseHeadersPolicyId": {
+              "Ref": "Headers"
+            },
+            "FunctionAssociations": [
+              {
+                "EventType": "viewer-request",
+                "FunctionARN": {
+                  "Fn::GetAtt": [
+                    "IndexFunction",
+                    "FunctionMetadata.FunctionARN"
+                  ]
+                }
+              }
+            ]
+          },
+          "CustomErrorResponses": [
+            {
+              "ErrorCode": 403,
+              "ResponseCode": 404,
+              "ResponsePagePath": "/404.html",
+              "ErrorCachingMinTTL": 0
+            },
+            {
+              "ErrorCode": 404,
+              "ResponseCode": 404,
+              "ResponsePagePath": "/404.html",
+              "ErrorCachingMinTTL": 0
+            }
+          ]
+        }
+      }
+    },
+    "AccessLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/links/web-access",
+        "RetentionInDays": 14
+      }
+    },
+    "AccessLogSource": {
+      "Type": "AWS::Logs::DeliverySource",
+      "Properties": {
+        "Name": "links-web-access",
+        "LogType": "ACCESS_LOGS",
+        "ResourceArn": {
+          "Fn::Sub": "arn:${AWS::Partition}:cloudfront::${AWS::AccountId}:distribution/${Distribution}"
+        }
+      }
+    },
+    "AccessLogDestination": {
+      "Type": "AWS::Logs::DeliveryDestination",
+      "Properties": {
+        "Name": "links-web-access",
+        "DestinationResourceArn": {
+          "Fn::GetAtt": ["AccessLogGroup", "Arn"]
+        },
+        "OutputFormat": "json"
+      }
+    },
+    "AccessLogDelivery": {
+      "Type": "AWS::Logs::Delivery",
+      "DependsOn": "AccessLogSource",
+      "Properties": {
+        "DeliverySourceName": "links-web-access",
+        "DeliveryDestinationArn": {
+          "Fn::GetAtt": ["AccessLogDestination", "Arn"]
+        },
+        "RecordFields": [
+          "timestamp(ms)",
+          "cs-method",
+          "cs-uri-stem",
+          "sc-status",
+          "sc-bytes",
+          "sc-range-start",
+          "sc-range-end",
+          "time-taken",
+          "time-to-first-byte",
+          "x-edge-result-type",
+          "x-edge-detailed-result-type",
+          "x-edge-location",
+          "cs-protocol",
+          "cs(User-Agent)"
+        ]
+      }
+    },
+    "Distribution5xxAlarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": {
+          "Fn::Sub": "${AWS::StackName}-distribution-5xx"
+        },
+        "AlarmDescription": "CloudFront returned more than 5% 5xx responses for links.thingelstad.xyz in two of three five-minute windows.",
+        "Namespace": "AWS/CloudFront",
+        "MetricName": "5xxErrorRate",
+        "Dimensions": [
+          {
+            "Name": "DistributionId",
+            "Value": {
+              "Ref": "Distribution"
+            }
+          },
+          {
+            "Name": "Region",
+            "Value": "Global"
+          }
+        ],
+        "Statistic": "Average",
+        "Period": 300,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 2,
+        "Threshold": 5,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "AlarmActions": [
+          {
+            "Fn::Sub": "arn:${AWS::Partition}:sns:${AWS::Region}:${AWS::AccountId}:weekly-thing-librarian-alarms"
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "DistributionId": {
+      "Value": {
+        "Ref": "Distribution"
+      },
+      "Description": "Site distribution"
+    },
+    "DistributionDomain": {
+      "Value": {
+        "Fn::GetAtt": ["Distribution", "DomainName"]
+      },
+      "Description": "Public review URL and DNS target"
+    },
+    "AccessLogGroup": {
+      "Value": {
+        "Ref": "AccessLogGroup"
+      },
+      "Description": "CloudFront access log, 14 days, no client IPs"
+    }
+  }
+}
