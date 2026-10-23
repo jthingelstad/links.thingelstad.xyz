@@ -17,8 +17,8 @@ export default defineConfig({
       watch: { ignored: ['**/pinboard/**', '**/archive/**'] },
     },
   },
-  // The sitemap lists pages, /on-this-day/ and its days among them. The
-  // feeds, the .json and .md twins, /links.json, /hosts.json, /issues.json
-  // and the llms files are not pages, and none of them ends in a slash.
+  // The sitemap lists pages, /newest/ among them. The feeds, the .json and
+  // .md twins, /links.json, /hosts.json, /issues.json and the llms files
+  // are not pages, and none of them ends in a slash.
   integrations: [sitemap({ filter: (page) => page.endsWith('/') })],
 });
