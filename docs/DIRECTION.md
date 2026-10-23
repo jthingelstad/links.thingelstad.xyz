@@ -192,12 +192,11 @@ to have a landing page".
 
 The record is a card that scales with what is known, never a landing page with
 nothing on it. For a bare link the card is: the title as the destination link, the
-host and the date, then only the rows that have content: appears in, now at (if it
-moved), page facts once enriched, same host, saved the same week, cites and cited
-by, nearest neighbours. No empty "What Jamie wrote" heading, no filler. The
-permalink exists because the JSON twin, the Librarian source, the tombstone and the
-"now at" redirect all need a unit to hang on, and because a bare link still has
-neighbours, which is the point of the site.
+host and the date, then only the rows that have content: appears in, page facts once
+enriched, same host, saved the same week, cites and cited by, nearest neighbours. No empty "What Jamie wrote" heading, no filler. The
+permalink exists because the JSON twin, the Librarian source and the tombstone all
+need a unit to hang on, and because a bare link still has neighbours, which is the
+point of the site.
 
 The alternative, kept open: bare links get no HTML page, only the JSON twin, and
 search results, host pages and year pages send them straight to the destination. It
@@ -298,7 +297,6 @@ The graph is the point of the site. Edge types, their source, and when they arri
 | saved the same week | `time` | every link | 1 |
 | mentioned by (a note links here) | URLs inside notes | 202 edges | 1 |
 | saved twice | normalised URL | 43 groups | 1 |
-| now at (redirected) | liveness check | unknown until checked | 2 |
 | cites / cited by | outbound links of the archived page copy, matched to saved URLs | unknown until the archive is parsed; the richest source of real hyperlink structure | 2 |
 | same topic | topics | every link | 3 |
 | similar | embeddings over title, note and excerpt, top 10 kept per link | every link | 3 |
@@ -363,14 +361,18 @@ the vectors out of git; keep the top-10 neighbours per link in `neighbors.json`.
 ## Enrichment
 
 What to collect, and from where. All of it is observation, none of it editorial.
+And none of it judges a link. Jamie, 2026-10-23: "You don't need to validate the
+links. They just are." So no page says whether a destination works, shows a status
+or a redirect target, or counts the alive and the gone. The liveness part of the
+page tool exists and is not run for the site; nothing is built from it.
 
-**Per link** (`data/enrichment/pages/<yyyy>.json`, keyed by id; the liveness and
-Wayback parts are built, sampled 2026-10-23 on 150 links: 114 alive, 36 dead, of
-which about 7 are bot walls; alive by era 59% for 2005 to 2009 rising to 90% for
-2020 on):
+**Per link** (`data/enrichment/pages/<yyyy>.json`, keyed by id; the Wayback part is
+built and was sampled 2026-10-23 on 150 links. The liveness part was built and
+sampled the same day, 114 alive and 36 dead with about 7 bot walls, before Jamie's
+rule above; it stays in the tool and the contract, unused):
 
-- Liveness: status now, final URL after redirects, checked-at. Dead links rechecked
-  monthly, live ones quarterly.
+- Liveness (status now, final URL after redirects, checked-at) is in the contract
+  and the tool and is not run: the site shows nothing from it.
 - Page facts: HTML title, description, canonical, author, published date (meta tags
   and JSON-LD), language, word count and reading time, the feeds it advertises
   (`rel=alternate`), the outbound links. From the archived copy where we have one,
@@ -401,9 +403,8 @@ the CNAME showed and RDAP could not):
   Things I've built on 2026-10-18; this is a different site with a different reason.
 
 Pacing: one request per second with a named user agent, incremental by checked-at,
-so the first liveness pass is about five hours and a weekly run is minutes. Steps
-that read the 70 GB archive run on the Mac; DNS, liveness and Wayback can run
-anywhere.
+so a first page-facts pass is hours and a weekly run is minutes. Steps that read
+the 70 GB archive run on the Mac; DNS, RDAP and Wayback can run anywhere.
 
 ## Special hosts and kinds
 
@@ -415,7 +416,7 @@ together hold 7,263 of them (44%). Measured 2026-10-23, public links:
 | --- | --- | --- |
 | YouTube (youtube.com, youtu.be) | 287 | The video id is the key, so one video saved under two URL forms is one record. Title and channel from oEmbed (no key). A thumbnail fetched at build and stored with the site, shown as a click-to-play facade; the click loads the `youtube-nocookie.com` embed. No YouTube script until the visitor asks for the video. |
 | GitHub (github.com, gists) | 256 | A repository card: description, language, stars, license, archived, last push, from the REST API with the Actions token (the Things I've built stars collector pattern). |
-| Medium | 261 | Many moved to custom domains; the redirect chain is the fact. Author as the entity. |
+| Medium | 261 | Many moved to custom domains; the saved URL stands as saved. Author as the entity. |
 | macstories.net, daringfireball.net, kottke.org, simonwillison.net, tbray.org, seths.blog, stratechery.com, scripting.com, lethain.com and the other personal sites in the top 50 | 50 to 240 each | These hosts are people. The host page names the author, the feed, and the span of years; together they are the blogroll (section "Ideas beyond the brief", OPML). |
 | nytimes.com, arstechnica.com, techcrunch.com, theverge.com, theguardian.com, theatlantic.com, wired.com, bloomberg.com, economist.com, hbr.org | 45 to 204 each | Author and published date from page metadata; nothing more. |
 | tuaw.com, gigaom.com, readwrite.com | 131, 115, 58 | Closed or changed hands. The host page says when the site closed; its records carry the Wayback link, as every record does. TUAW's domain was reported in 2024 to have been bought and refilled with generated articles under former writers' names: the case for RDAP. |
@@ -501,6 +502,56 @@ For links:
   dated sources change its index size and retrieval mix. That is a change in the
   Librarian's own repo with its own review, and the one scheduled model cost in this
   plan: embedding the week's new links, cents.
+
+## Agents and the MCP
+
+Jamie asked on 2026-10-23 whether "a static read-only MCP structure for this data set
+with no authentication" is possible: "a set of static URLs that would allow Claude to
+navigate this database in an effective way", and said "an MCP server is for sure going
+to be in our future as a read-only interface on this."
+
+**A static MCP does not exist, as a matter of protocol.** MCP's transport is JSON-RPC
+over HTTP POST (`initialize`, `tools/list`, `tools/call`); a static host answers GET
+only, and the older SSE transport needs a POST endpoint too. So there are two layers,
+not one:
+
+**The static layer, which is built.** It is what an agent with a fetch tool uses today,
+and it costs nothing to serve:
+
+- `/llms.txt` is the map: what the site is, the data files, the record shape, the
+  pages. `/years/<yyyy>/llms.txt` is the full text in year-sized pieces (Jamie:
+  "Trim. Probably by year").
+- Every record has `.json` and `.md` twins at its own address, and `/links.json`,
+  `/hosts.json`, `/issues.json` are the whole database in three files.
+- The feeds, per site and per host, are the "what is new" interface.
+- CORS is open for GET and HEAD, so a browser-based agent can fetch all of it.
+
+The walk is: read `llms.txt`, then a year file or `links.json`, then record twins.
+What it lacks is a word index: Pagefind's index is static files too, but shaped for
+its own client. If agents turn out to struggle, a static term index (`/index/<two
+letters>.json`, words to ids, built with the site) is the next step and still no
+server. Not built until a real agent needs it.
+
+**The MCP, when it comes.** A small, stateless, read-only server with no
+authentication, on a Lambda Web Function behind its own hostname, the pattern of the
+thingelstad.com and Elixir servers. It reads the same built files the site publishes
+(`links.json`, `issues.json`, `hosts.json`, 12 MB, bundled with the function or read
+from the site bucket at cold start), so it is never ahead of or behind the site; the
+deploy workflow publishes it after the site. Tools, in the family's conventions (one
+id everywhere, `serverInfo.version` bumps on schema change, notes[] in every answer):
+`links_search` (the search grammar: words, site:, year:, wt:), `links_get` (id or
+URL), `links_host`, `links_issue`, `links_year`, `links_stats`, `links_random`. Search
+is an in-memory index over 16,524 records built at cold start, tens of milliseconds.
+No model at serve time (Jamie's rule: "serving the site should be public and not
+having model cost"), no state, no keys; public data needs no auth, and the edge's
+rate limit is the only guard.
+
+**And the Librarian.** Once links are a source there (section "The Librarian"), its
+MCP answers "what did Jamie say about X" across everything at once. Both can be true:
+the Librarian for questions, the links MCP for the record, fast and plain, with no
+model in between. Order: the static layer (done), the Librarian ingestion (planned),
+the links MCP when there is a concrete consumer (a Claude connector, Otto, WT Builder
+asking "has this been linked before?").
 
 ## If Pinboard went away
 
@@ -640,7 +691,7 @@ for the repo.
 `llms.txt` and a file per year, About in Jamie's words, Tinylytics, weekly sync, a Things I've built
 entry. Connections from existing data only.
 
-**2. Depth.** Liveness and redirects, host DNS and open-web signals, RDAP for the
+**2. Depth.** Host DNS and open-web signals, RDAP for the
 428 hosts with five or more links, Wayback, page facts and the "cites" graph from the
 archive, kinds, and the first adapters (YouTube, GitHub, Wikipedia, Amazon books).
 
@@ -648,8 +699,9 @@ archive, kinds, and the first adapters (YouTube, GitHub, Wikipedia, Amazon books
 neighbours, "similar".
 
 **4. The Librarian.** The SQLite download, `links.json` in its final shape, and the
-Librarian ingesting it (section "The Librarian"). No links MCP of its own: Thingy and
-the Librarian are the conversational layer, and this site stays static.
+Librarian ingesting it (section "The Librarian"), and a links MCP of its own once
+there is a consumer for it (section "Agents and the MCP"). The site itself stays
+static.
 
 ## Decisions
 
@@ -669,7 +721,7 @@ Jamie, 2026-10-23, with the design's response:
 | A private Like, or a public count | "The kudos button (let's use that name instead of like) is of course public. That is how that feature of tinylytics works." | Named Kudos everywhere. The count shows: the embed's `?kudos=custom` writes it into a button the site draws, and `validate:site` fails a private one. `design/tinylytics.md`. |
 | `llms-full.txt` at 36 MB | "Trim. Probably by year or even year month?" | By year: `/years/<yyyy>/llms.txt`, slim rows, 22 files and 10.6 MB together, the largest 0.8 MB, so no month split; `llms.txt` lists them with counts and sizes. A year past 4 MB fails validation and would split by month. |
 | On this day | "I'm not sure on-this-day is meaningful for this data set?" | Removed: the 366 day pages, the grid, their checks and their helpers. |
-| Checking that links still work | "You don't need to validate the links. They just are." | No page promises a check. The "Link rot, measured" and "Then and now" ideas are dropped; the liveness and "now at" parts of sections "Enrichment" and "Connections" and of phase 2 are still to be brought in line. |
+| Checking that links still work | "You don't need to validate the links. They just are." | No page promises a check. The "Link rot, measured" and "Then and now" ideas are dropped; the liveness and "now at" parts of sections "Enrichment" and "Connections" and of phase 2 were brought in line the same day. |
 | "Find it on Pinboard" on the record | "get rid of 'find it on pinboard' nobody needs to know pinboard exists." | Gone from every page, twin, feed and llms file; Elsewhere is the Wayback copy and the twins. The "Save to your Pinboard" idea is dropped. Maintainer docs still name Pinboard, as the source. |
 | The front page | "very much like Google's front page, where it's just a search box. I think there should be topics, so if you don't know what you want to search, you could do topics. Should show how many pages are in the index. I probably at some point will add like a quote from me on how amazing the hyperlink is. Maybe we have a collection of some quotes like that." | Built: the wordmark, the box and the count above the fold at 500 and 1200 px; a row of ways in, with Topics to go first once topic pages exist; quotes in `content/quotes.md`, one a day, nothing shown while it is empty. The newest links moved to `/newest/`. |
 

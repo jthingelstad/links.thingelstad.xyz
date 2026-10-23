@@ -8,12 +8,12 @@
     "certificate": "links-certificate"
   },
   "siteBucket": "links-storage-web-999153317627",
-  "distributionId": null,
-  "cloudfrontDomain": null,
-  "deliveryUrl": null,
+  "distributionId": "EL588B3EJIVDL",
+  "cloudfrontDomain": "d2s9dfby71zqve.cloudfront.net",
+  "deliveryUrl": "https://d2s9dfby71zqve.cloudfront.net/",
   "productionUrl": "https://links.thingelstad.xyz/",
-  "certificateArn": null,
-  "deploymentRoleArn": null,
+  "certificateArn": "arn:aws:acm:us-east-1:999153317627:certificate/9861cfff-b8dd-4157-8935-8aff5a7decfe",
+  "deploymentRoleArn": "arn:aws:iam::999153317627:role/links-delivery-DeploymentRole-38md8sad6OG8",
   "stackTags": {
     "Application": "Thingelstad",
     "Project": "links",

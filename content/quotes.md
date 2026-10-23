@@ -20,3 +20,23 @@ Who and Source are both required, and Source is an http or https address.
 An entry missing either, or any other text outside this comment except a
 heading, fails the build. Everything inside this comment is ignored.
 -->
+
+> The fundamental building block of the web isn't HTML or a web page — it is the link. The way that closed platforms fight links makes them feel rebellious to even use. Long live the hyperlink!
+
+Who: Jamie Thingelstad, Weekly Thing 352
+Source: https://weekly.thingelstad.com/archive/352/
+
+> Two decades ago when I started publishing on the web I would have never guessed that linking to websites, with no URL redirection or tracking tags, would feel almost subversive now. I now find myself delighting in adding even more links to blog posts. Creating the web I want!
+
+Who: Jamie Thingelstad, May 2024
+Source: https://www.thingelstad.com/2024/05/19/two-decades-ago.html
+
+> Most (all?) of the major social platforms have largely pushed the hyperlink, what I would suggest is the most fundamental thing about the web, out.
+
+Who: Jamie Thingelstad, Weekly Thing 295
+Source: https://weekly.thingelstad.com/archive/295/
+
+> Even the simple act of formatting with bold, italics, and using hyperlinks freely can only be achieved on your own blog.
+
+Who: Jamie Thingelstad, January 2025
+Source: https://www.thingelstad.com/2025/01/11/microone-making-blogging-more-accessible.html
