@@ -12,6 +12,7 @@ import tempfile
 import unittest
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlsplit
 
 TOOLS = Path(__file__).resolve().parent.parent / "tools"
 sys.path.insert(0, str(TOOLS))
@@ -271,7 +272,7 @@ class PagesTest(Base):
         code, out = self.run_pages(web_client=web_client)
         self.assertEqual(code, 1)
         self.assertIn("STOPPED", out.strip().splitlines()[-1])
-        cdx_calls = [url for url, _, _ in transport.calls if "web.archive.org" in url]
+        cdx_calls = [url for url, _, _ in transport.calls if urlsplit(url).hostname == "web.archive.org"]
         self.assertEqual(len(cdx_calls), 2)  # the request and its one retry, then no more
         # Liveness carried on for every link and was written.
         self.assertEqual(len(jsonio.load(self.data / "enrichment" / "pages" / "2005.json")), 2)

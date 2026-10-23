@@ -38,7 +38,7 @@ import os
 import re
 import sys
 import xml.etree.ElementTree as ET
-from datetime import datetime, timedelta
+from datetime import datetime
 from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
 from pathlib import Path
@@ -371,7 +371,7 @@ def check_llms(newest, problems):
     file = DIST / "llms.txt"
     llms = file.read_text() if file.exists() else ""
     lines = llms.splitlines()
-    if not lines or not lines[0].startswith("# ") or not any(l.startswith("> ") for l in lines):
+    if not lines or not lines[0].startswith("# ") or not any(line.startswith("> ") for line in lines):
         problems.append("llms.txt: needs an H1 and a blockquote summary")
     for target in re.findall(r"\]\(([^)\s]+)\)", llms):
         path = target[len(SITE):] if target.startswith(SITE + "/") else None
@@ -570,7 +570,7 @@ def main():
     check_tinylytics(records, kudos, loaders, content_names_tinylytics, problems)
     newest = [
         link["id"]
-        for link in sorted(data_links, key=lambda l: (l["saved"], l["id"]), reverse=True)
+        for link in sorted(data_links, key=lambda r: (r["saved"], r["id"]), reverse=True)
     ]
     host_pages = sorted((DIST / "hosts").glob("*/index.html"))
     feeds = check_feeds(newest, host_pages, alternates, listed_records, problems)

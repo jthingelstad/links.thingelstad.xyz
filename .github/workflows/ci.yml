@@ -75,6 +75,9 @@ jobs:
     timeout-minutes: 30
     permissions:
       contents: read
+    env:
+      # The build and validate:site must agree on it (tools/validate-site.py).
+      PUBLIC_TINYLYTICS_ENABLED: ${{ github.ref == 'refs/heads/main' && 'true' || 'false' }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
@@ -86,8 +89,6 @@ jobs:
           python-version: '3.13'
       - run: npm ci
       - run: npm run build
-        env:
-          PUBLIC_TINYLYTICS_ENABLED: ${{ github.ref == 'refs/heads/main' && 'true' || 'false' }}
       - run: npm run validate:site
       - run: npm run revision
       - run: npx playwright install --with-deps chromium

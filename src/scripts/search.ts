@@ -143,7 +143,7 @@ export async function initSearch() {
     root.querySelector<HTMLSelectElement>('[data-search-sort]')!;
   const status = root.querySelector<HTMLElement>('[data-search-status]')!;
   const issueNumbers = new Set(
-    (JSON.parse(root.dataset.issues ?? '[]') as number[]).map(String),
+    JSON.parse(root.dataset.issues ?? '[]') as number[],
   );
   const list = root.querySelector<HTMLUListElement>('[data-search-results]')!;
   const more = root.querySelector<HTMLButtonElement>('[data-search-more]')!;
@@ -173,6 +173,9 @@ export async function initSearch() {
   let dropped = 0;
   let query: Query = parse('');
   let exact: (data: Data) => boolean = () => true;
+  // The host page offered with a site: query. Its address is taken from a
+  // matching result's host, which the build wrote, never from the typed text.
+  let siteHost: string | undefined;
 
   function link(href: string, text: string) {
     const a = document.createElement('a');
@@ -190,8 +193,11 @@ export async function initSearch() {
       ? `${!complete && dropped ? 'Up to ' : ''}${n.toLocaleString('en-US')} ${n === 1 ? 'link' : 'links'}` +
         `${site ? ` from ${site}` : ''}${exclude.length ? ` without ${exclude.join(', ')}` : ''}.`
       : 'No links match.';
-    if (site)
-      status.append(' ', link(`/hosts/${site}/`, `Every link from ${site}`));
+    if (siteHost)
+      status.append(
+        ' ',
+        link(`/hosts/${siteHost}/`, `Every link from ${siteHost}`),
+      );
   }
 
   // Reserve the next range before its data loads, so a second click while a
@@ -221,6 +227,7 @@ export async function initSearch() {
     cursor = 0;
     shown = 0;
     dropped = 0;
+    siteHost = undefined;
     more.hidden = true;
     const typed = input.value.trim();
     query = parse(typed);
@@ -251,11 +258,14 @@ export async function initSearch() {
       .join(' ');
     if (!term) {
       list.replaceChildren();
-      const issue = query.issue && issueNumbers.has(query.issue);
+      // Page addresses are formed from numbers, so no typed text reaches an href.
+      const issue = Number(query.issue);
+      const yearPage = Number(year);
       const pages = [
-        issue &&
-          link(`/issues/${query.issue}/`, `Every link in WT${query.issue}`),
-        year && link(`/years/${year}/`, `Every link from ${year}`),
+        issueNumbers.has(issue) &&
+          link(`/issues/${issue}/`, `Every link in WT${issue}`),
+        yearPage > 0 &&
+          link(`/years/${yearPage}/`, `Every link from ${yearPage}`),
       ].filter((a): a is HTMLAnchorElement => !!a);
       status.replaceChildren(
         pages.length
@@ -303,12 +313,12 @@ export async function initSearch() {
         (word) => new RegExp(`(?:^|[^\\p{L}\\p{N}])${word.slice(0, 3)}`, 'u'),
       );
     exact = (data) => {
+      const host = data.meta.host;
+      if (site && host === site) siteHost = host;
       const text =
-        `${data.meta.title ?? ''} ${data.meta.host ?? ''} ${data.content}`.toLowerCase();
+        `${data.meta.title ?? ''} ${host ?? ''} ${data.content}`.toLowerCase();
       return (
-        (!site ||
-          data.meta.host === site ||
-          !!data.meta.host?.endsWith(`.${site}`)) &&
+        (!site || host === site || !!host?.endsWith(`.${site}`)) &&
         starts.every((start) => start.test(text)) &&
         !exclude.some((word) => text.includes(word))
       );
