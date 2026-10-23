@@ -101,6 +101,7 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 | `/issues/<n>/` | The links that appeared in Weekly Thing n, in issue order, pointing at weekly.thingelstad.com/archive/n/ |
 | `/topics/<slug>/` | Links in a topic, co-topics, the hosts and issues most present in it (phase 3) |
 | `/years/<yyyy>/` | The year's links by month; `/on-this-day/` across the years |
+| `/stats/` | Linking volume along its dimensions (section "Statistics") |
 | `/about/` | The homage, in Jamie's words: what this is, why links matter, how it is made |
 | `/feed.xml`, `/feed.json` | The newest 50 links as RSS 2.0 and JSON Feed 1.1, the Link Thing feed reborn; every host and topic page carries its own pair at `feed.xml` and `feed.json` under its path |
 | `/links.json`, `/hosts.json`, `/topics.json` | The whole public dataset |
@@ -218,6 +219,31 @@ Results open the record, not the destination. The destination is one click away 
 every record and marked on every result. The record is the product (the connections
 live there); a Google-style jump to the destination would make the site a redirect
 service.
+
+### Statistics
+
+Jamie, 2026-10-23: "a stats page that shows linking volume along a number of
+interesting dimensions". Computed at build from the data module, drawn as SVG at
+build (no chart library at serve time), each chart with its table beside it for
+readers and machines. Dimensions, all from data already in hand:
+
+- Links per year and per month, 2005 to now, with the Weekly Thing's share of each
+  year once issues began (2017).
+- Per weekday and per hour of the day, in US Central: when Jamie saves.
+- Notes versus bare links per year, and note length per year (the voice shift from
+  excerpts to commentary shows here).
+- Hosts: new hosts per year, the top ten hosts per year as a bump chart, and hosts
+  that stopped (last link before a cutoff).
+- The web's shape: http versus https by year, top-level domains, URL length, the
+  share of links on the ten largest hosts (concentration) by year.
+- The Weekly Thing: links per issue over time, sections, the share of a week's saved
+  links that were published (the cutting-room floor, in aggregate).
+- Once enrichment lands: alive versus gone by year saved, redirected versus direct,
+  domains that changed hands; once topics land, topics by year.
+
+The home page's "line of numbers" is the first row of this page. The dataviz skill
+is loaded before any chart is drawn, so the charts read as one system in light and
+dark.
 
 ## The data layer
 
@@ -457,6 +483,25 @@ For links:
   Librarian's own repo with its own review, and the one scheduled model cost in this
   plan: embedding the week's new links, cents.
 
+## If Pinboard went away
+
+Jamie, 2026-10-23: no plans to leave Pinboard, but "if Pinboard ever went away this
+site would give me a possible new solution to stage links for the Weekly Thing". So
+the mirror is kept lossless and Pinboard-shaped, not merely sufficient for pages:
+
+- Every field Pinboard returns for a public bookmark is in `data/links/`, including
+  `tags` (WT Builder's filing marks) and `meta`. Nothing is summarised away.
+- The 358 private bookmarks live only in the raw export on the Mac. That file is the
+  one copy of them outside Pinboard; it belongs in the sysadmin critical-state backup
+  bundle (a request for the Systems Administrator, not a change here).
+- The sync tool's offline mode already reads a file instead of the API. The day the
+  API is gone, the same tool reads the last raw export and the site keeps building.
+- WT Builder reads Pinboard through its own integration (`wt-builder/docs/integrations.md`).
+  A replacement would be a small, local, Pinboard-shaped reader over `data/` and the
+  raw export, so WT Builder's filing marks and notes keep working unchanged. Not
+  built, not planned; the point is only that the data shape must never drift from
+  Pinboard's.
+
 ## Build and hosting
 
 - **Astro and TypeScript** on the nnxyz and POAP pattern, static output, one data
@@ -589,9 +634,9 @@ Jamie, 2026-10-23, with the design's response:
 | Results open the record | Agree | Done. |
 | Which model classifies topics | Defer until the archive is in hand | Phase 3; the design does not depend on it. |
 | Archived pages: facts plus an excerpt | Not even that; data only; "I don't want us to be a Wayback Machine" | Facts and the cites graph only; no excerpts anywhere. Section "The archive". |
-| `_exclude` links and links with no text | Include them, but no landing page for a bare link | The card that scales with what is known; the no-page alternative rendered in the spike. Section "Links that are nothing but a link". |
+| `_exclude` links and links with no text | Include them, but no landing page for a bare link; later, "I'm good with you exploring what works best" | The card that scales with what is known, explored in the spike with screenshots of both the rich and the bare case. Section "Links that are nothing but a link". |
 | Deleted bookmarks | Tombstone, "that could be fun" | Done. |
-| RDAP | "I don't know what that is" | Explained under Enrichment; recommended for the 428 hosts with five or more links. Still Jamie's yes or no. |
+| RDAP | "I don't know what that is", then "RDAP yes, for sure" | In, phase 2, for the 428 hosts with five or more links first, the rest after. |
 | Joins the sites strip | 99% yes | Planned from the start; one registry line when done. |
 | Where the weekly sync runs | Defer; consider the Librarian's timing | Deferred; the `links-published` dispatch settles the ordering either way. |
 
@@ -599,8 +644,12 @@ Earlier, same day: the Librarian ingests the site; Tinylytics with a Like per li
 RSS and JSON Feed; model cost at build only, never at serving. The name is Linking
 Things.
 
-Still open: RDAP yes or no; which of the ideas beyond the brief earn a phase; the
-bare-link card versus no page, on the spike's screenshots.
+Later the same day: RDAP yes; a statistics page (section "Statistics"); the bare-link
+treatment is left to the build to explore; build started with Opus 5.5 agents on
+2026-10-23, the repository initialised locally on `main`.
+
+Still open: which of the ideas beyond the brief earn a phase; creating the GitHub
+repository and the Tinylytics site, both Jamie's go.
 
 ## Risks and unknowns
 

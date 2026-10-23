@@ -87,6 +87,70 @@ note is empty, the appearances index (id to issues), same-week neighbours, note
 mentions (URLs inside notes resolved to ids), and the saved-twice pairs. Hosts,
 years and issues get pages from these; nothing of that is written back to `data/`.
 
-Later files, each with a `method` and `version` field, each with its own writer:
-`data/enrichment/hosts/<host>.json` (DNS, RDAP, liveness), `data/enrichment/pages/<id>.json`,
-`data/derived/topics.json`, `data/derived/neighbors.json`, `data/derived/stats.json`.
+## Enrichment (phase 2)
+
+Observations about hosts and pages, sharded so git stays sane: hosts by the first
+character of the host name, pages by the year the link was saved. Each shard is a
+JSON object keyed by host or id with sorted keys, indent 1, trailing newline. Every
+record carries `checked` (UTC), `method` and `version`; a reader treats a missing
+record as "not yet observed", never as "dead".
+
+`data/enrichment/hosts/<a-z0-9>.json`, written by `tools/enrich_hosts.py`:
+
+```json
+{
+  "macstories.net": {
+    "checked": "2026-10-24T02:00:00Z",
+    "method": "enrich_hosts",
+    "version": 1,
+    "dns": { "resolves": true, "a": ["1.2.3.4"], "aaaa": [], "cname": null, "ns": ["ns1.example.net"], "mx": true },
+    "https": { "reachable": true, "redirects_http": true, "status": 200 },
+    "rdap": {
+      "domain": "macstories.net",
+      "registrar": "Example Registrar",
+      "registered": "2009-03-01",
+      "expires": "2027-03-01",
+      "status": ["client transfer prohibited"],
+      "nameservers": ["ns1.example.net"],
+      "checked": "2026-10-24T02:00:00Z"
+    }
+  }
+}
+```
+
+DNS from `dig +short` (A, AAAA, CNAME, NS, MX; stdlib `socket` is only A/AAAA).
+RDAP through the bootstrap redirector `https://rdap.org/domain/<domain>`, which
+302s to the registry; `domain` is the registrable domain of the host (strip labels
+from the left until RDAP answers, cache the answer per domain; a small list of
+two-level public suffixes such as `co.uk` avoids wasted calls). Pace one request a
+second per service with a User-Agent naming the site. `rdap` is `null` when the
+registry has no RDAP (some country codes) and the reason is recorded.
+
+`data/enrichment/pages/<yyyy>.json`, written by `tools/enrich_pages.py`:
+
+```json
+{
+  "8b8dc6b42f12": {
+    "checked": "2026-10-24T02:00:00Z",
+    "method": "enrich_pages",
+    "version": 1,
+    "status": 200,
+    "alive": true,
+    "final_url": "https://www.amitgawande.com/blog/2026/the-fuzzy-mind/",
+    "redirects": [],
+    "content_type": "text/html",
+    "wayback": { "first": "2026-07-01T10:11:12Z", "last": "2026-10-01T00:00:00Z", "count": 4, "checked": "2026-10-24T02:00:00Z" }
+  }
+}
+```
+
+`alive` is true for a 2xx or 3xx that ends in a 2xx; a 4xx, 5xx, DNS failure or
+timeout is false with the reason in `error`. GET with a 15 second timeout, follow
+up to five redirects, never download more than 256 KB. Wayback from the CDX API
+(`https://web.archive.org/cdx/search/cdx?url=<url>&output=json&limit=1` and the
+same with `&limit=-1` for the latest) at a six-second pace, because bursts get the
+IP blocked (learned on thingelstad.xyz). Recheck dead pages monthly, live ones
+quarterly, by `checked`.
+
+Later derived files, each with `method` and `version`: `data/derived/topics.json`,
+`data/derived/neighbors.json`.
