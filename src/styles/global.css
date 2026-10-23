@@ -524,7 +524,10 @@ img {
 .elsewhere li {
   margin: 0 0 6px;
 }
-/* The Like (Kudos.astro): a heart in the hyperlink's colour once given. */
+/* Kudos (Kudos.astro): a heart, and beside it inside the button the public
+   count, which Tinylytics writes into the empty button (?kudos=custom). The
+   heart takes the hyperlink's colour once given; Tinylytics then marks the
+   button did_select and disables it. */
 .kudos-row {
   display: flex;
   flex-wrap: wrap;
@@ -535,16 +538,25 @@ img {
   font-size: var(--jt-size-small);
 }
 .kudos {
-  display: inline-grid;
-  place-items: center;
-  width: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 2rem;
   height: 2rem;
-  padding: 0;
+  padding: 0 12px 0 10px;
   border: 1px solid var(--line);
-  border-radius: 50%;
+  border-radius: 999px;
   background: var(--card);
+  color: var(--ink);
+  font-size: var(--jt-size-meta);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
   line-height: 1;
   cursor: pointer;
+}
+.kudos:empty {
+  padding: 0;
 }
 .kudos::before {
   content: '♥';
@@ -553,6 +565,12 @@ img {
 .kudos:hover::before,
 .kudos.did_select::before {
   color: var(--link);
+}
+.kudos.did_select {
+  border-color: var(--link);
+}
+.kudos:disabled {
+  cursor: default;
 }
 .kudos-notice:empty {
   display: none;

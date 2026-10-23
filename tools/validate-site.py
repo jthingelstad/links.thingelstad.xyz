@@ -13,8 +13,8 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
 - Tinylytics: a build without PUBLIC_TINYLYTICS_ENABLED=true mentions
   tinylytics.app nowhere in dist/; a build with it (validate it with the same
   variable set) loads exactly that one script on every page and mentions
-  tinylytics.app nowhere else; every record has one Like keyed on its
-  permalink, with a private count;
+  tinylytics.app nowhere else; every record has one Kudos button keyed on its
+  permalink, with a public count (no data-private, Jamie's call 2026-10-23);
 - the sitemap index lists sitemaps that exist, every sitemap URL is a built
   page, and every page but the 404 is in the sitemap, once;
 - every record page has its JSON and Markdown twins, the JSON names the same
@@ -279,11 +279,14 @@ def check_feed_pair(folder, expected, problems):
 
 
 def check_tinylytics(records, kudos, loaders, content_names_tinylytics, problems):
-    """The Like on every record; tinylytics.app in no file but the pages."""
+    """Kudos on every record; tinylytics.app in no file but the pages."""
     for record in records:
         buttons = [(b.get("data-path"), b.get("data-private")) for b in kudos[f"/links/{record}/"]]
-        if buttons != [(f"/links/{record}/", "true")]:
-            problems.append(f"links/{record}/: needs one private Like keyed on its permalink")
+        if buttons != [(f"/links/{record}/", None)]:
+            problems.append(
+                f"links/{record}/: needs one public Kudos button keyed on its permalink"
+                " (no data-private)"
+            )
     if not content_names_tinylytics:
         for file in sorted(DIST.rglob("*")):
             if file.suffix in TEXT_SUFFIXES - {".html"} and file.is_file():
@@ -439,7 +442,7 @@ def main():
     links = []  # (page, ref, target url path, fragment)
     off_site_seen = set()
     alternates = {}  # page url to its <link rel="alternate"> (type, href)
-    kudos = {}  # page url to its Like buttons
+    kudos = {}  # page url to its Kudos buttons
     listed_records = {}  # host and day pages to the records they list, in order
     loaders = 0
     for page in pages:

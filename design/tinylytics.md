@@ -19,24 +19,38 @@ The pattern is poap.thingelstad.xyz's (`design/tinylytics.md` there). Built
   build and for `npm run validate:site` after it (the validator reads the same
   variable to know which build it is checking). Nothing else sets it: `npm run dev`,
   `npm run build` on the Mac and every test build carry no reference to tinylytics.app.
-- **Kudos** (`src/components/Kudos.astro`): one Like per record page, a button with
-  `class="tinylytics_kudos"`, `data-private="true"` and `data-path` set to the
-  permalink `/links/<id>/`, which is why the id must never change. A status element
-  beside it announces "Liked. Thank you." when Tinylytics marks the button
-  `did_select`, and, on a build without Tinylytics, says that likes count on the
-  published site only. The heart and its ring use the site's tokens (`--line`,
+- **Kudos, public** (`src/components/Kudos.astro`). Jamie, 2026-10-23: "The kudos
+  button (let's use that name instead of like) is of course public. That is how that
+  feature of tinylytics works." One Kudos button per record page, keyed on the
+  permalink, which is why the id must never change:
+
+  ```html
+  <button type="button" id="kudos-links-<id>" class="tinylytics_kudos kudos"
+    data-path="/links/<id>/" aria-labelledby="kudos-links-<id>-label kudos-links-<id>"
+    title="Give kudos to this link"></button>
+  <span class="kudos-label" id="kudos-links-<id>-label" aria-hidden="true">Kudos</span>
+  ```
+
+  The embed is loaded with `?kudos=custom`, which "returns only the count"
+  (https://tinylytics.app/docs/widgets/kudos, "Emoji and custom markup"; the
+  parameters are in the table at https://tinylytics.app/docs/widgets): the script
+  writes the public count into the empty button, and the site draws the heart in CSS
+  before it. There is no `data-private`, which would hide the count. After a click
+  Tinylytics adds `.did_select` and disables the button; the CSS turns the ring and
+  the heart to the link colour, and a status line beside it says "Kudos given. Thank
+  you." On a build without Tinylytics the status line says that kudos are counted on
+  the published site only, and the button shows the heart alone. A screen reader
+  hears "Kudos" and then the count. The colours are the site's tokens (`--line`,
   `--card`, `--muted`, `--link`). It is outside the Pagefind index.
 - **`npm run validate:site` checks it.** Without the variable: no file in `dist/`
   mentions tinylytics.app at all (HTML, script, JSON, XML, text and Markdown alike),
   and a loader found there fails with "validate it with the same setting". With it:
   every page carries exactly one loader for exactly that URL, and tinylytics.app is the
-  one off-site fetch allowed, for that URL only. Either way every record has one
-  private Like keyed on its own permalink.
+  one off-site fetch allowed, for that URL only. Either way every record has exactly
+  one Kudos button keyed on its own permalink, and a `data-private` on it fails: the
+  count is public.
 - Never send a live hit or a kudos from QA. Screenshots of a production build are taken
   from 127.0.0.1 (where the hostname gate keeps the loader out) with requests to
   tinylytics.app blocked as well. Never create events, hits or kudos from tools or the
   Tinylytics MCP.
 - Nothing else is tracked: no per-visitor identity, no search terms.
-
-Open, for Jamie: the count is private (`data-private="true"`, as on the POAP site),
-while `docs/DIRECTION.md` first described the Like "with the count so far".
