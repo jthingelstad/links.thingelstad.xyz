@@ -1,0 +1,804 @@
+---
+// Linking volume along its dimensions (DIRECTION.md, "Statistics"). Every
+// number is computed at build by src/lib/stats.ts from the data module, and
+// every chart is inline SVG drawn at build: no script. Captions state facts
+// only; interpretation is Jamie's to write. Not indexed by Pagefind (record
+// pages only).
+import Layout from '../layouts/Layout.astro';
+import Columns from '../components/stats/Columns.astro';
+import DataTable from '../components/stats/DataTable.astro';
+import Figure from '../components/stats/Figure.astro';
+import HBars from '../components/stats/HBars.astro';
+import Heatmap from '../components/stats/Heatmap.astro';
+import Line from '../components/stats/Line.astro';
+import {
+  centralDay,
+  dateLabel,
+  hostPath,
+  issueLabel,
+  issuePath,
+  issues,
+  linkPath,
+  monthNames,
+  monthPath,
+  number,
+  plural,
+  timeLabel,
+  yearPath,
+} from '../lib/data';
+import {
+  breaks,
+  dayLabel,
+  hourRange,
+  hourTick,
+  listOf,
+  median,
+  monthDay,
+  percent,
+  ranges,
+  stats as s,
+  weekdays,
+} from '../lib/stats';
+
+type Row = (typeof s.perYear)[number];
+const maxBy = <T,>(items: T[], f: (item: T) => number) =>
+  items.reduce((best, item) => (f(item) > f(best) ? item : best));
+const minBy = <T,>(items: T[], f: (item: T) => number) =>
+  items.reduce((best, item) => (f(item) < f(best) ? item : best));
+// Cap labels for the few columns named in a caption.
+const capsAt = (rows: Row[], picks: Row[], text: (row: Row) => string) =>
+  rows.map((row) => (picks.includes(row) ? text(row) : null));
+
+const years = s.years;
+const rows = s.perYear;
+const firstYear = years[0];
+const lastYear = years[years.length - 1];
+const lastRow = rows[rows.length - 1];
+// Years strictly inside the span; the first and latest are partial.
+const fullRows = rows.filter(
+  (row) => row.year > firstYear && row.year < lastYear,
+);
+const yearCats = rows.map((row) => String(row.year));
+const yearTicks = years.map((year) => (year % 5 === 0 ? String(year) : null));
+const yearCell = (year: number) => ({
+  text: String(year),
+  href: yearPath(year),
+});
+const monthName = (month: number) => monthNames[month - 1];
+const firstDay = s.first.day;
+const lastDay = s.last.day;
+
+// Volume.
+const busiestYear = maxBy(rows, (row) => row.links);
+const mostDays = maxBy(rows, (row) => row.days);
+const fewestDays = minBy(fullRows.length ? fullRows : rows, (row) => row.days);
+const monthCuts = breaks(
+  s.months.flat().filter((n): n is number => n !== null),
+);
+const busiestDay = s.busiestDays[0];
+
+// When.
+const busiestWeekday = maxBy(
+  weekdays.map((_, d) => d),
+  (d) => s.weekdayTotals[d],
+);
+const busiestHour = maxBy(
+  s.hourTotals.map((_, h) => h),
+  (h) => s.hourTotals[h],
+);
+const clockCuts = breaks(s.clock.flat());
+const weekdayShare = (row: Row, d: number) => row.weekdays[d] / row.links;
+const weekdayCuts = breaks(
+  rows.flatMap((row) => weekdays.map((_, d) => weekdayShare(row, d))),
+  5,
+  { shares: true, halving: true },
+);
+const peakWeekdayYear = maxBy(rows, (row) => weekdayShare(row, busiestWeekday));
+const weekdayPercent = (row: Row) =>
+  percent(row.weekdays[busiestWeekday], row.links);
+
+// Notes.
+const noteShare = (row: Row) => row.withNote / row.links;
+const mostNoted = maxBy(rows, noteShare);
+const leastNoted = minBy(rows, noteShare);
+const longestMedian = maxBy(rows, (row) => row.medianNote);
+const shortestMedian = minBy(rows, (row) => row.medianNote);
+
+// The Weekly Thing.
+const firstIssueYear = Number(centralDay(s.firstIssue.date).slice(0, 4));
+const issueRows = rows.filter((row) => row.year >= firstIssueYear);
+const before = rows
+  .filter((row) => row.year < firstIssueYear)
+  .reduce((sum, row) => sum + row.inIssue, 0);
+const linksSince = issueRows.reduce((sum, row) => sum + row.links, 0);
+const inSince = issueRows.reduce((sum, row) => sum + row.inIssue, 0);
+const issueShare = (row: Row) => row.inIssue / row.links;
+const mostInIssues = maxBy(issueRows, issueShare);
+const emptyRanges = listOf(
+  ranges(s.emptyIssues.map((row) => row.number)).map(([a, b]) =>
+    a === b ? `WT${a}` : `WT${a} to WT${b}`,
+  ),
+);
+const listedLinks = s.listedIssues.map((row) => row.links);
+const fullestIssue = maxBy(s.listedIssues, (row) => row.links);
+const lastIssue = s.issues[s.issues.length - 1];
+const issueTicks = [1, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500].filter(
+  (n) => n <= lastIssue.number,
+);
+
+// Hosts and the web.
+const mostHosts = maxBy(rows, (row) => row.hosts);
+const mostNewHosts = maxBy(rows, (row) => row.newHosts);
+const hostCuts = breaks(s.topHosts.flatMap((host) => host.perYear));
+const topTen = s.concentration.find((c) => c.top === 10);
+const topHundred = s.concentration.find((c) => c.top === 100);
+const httpsShare = (row: Row) => row.https / row.links;
+const halfHttps = rows.find((row) => httpsShare(row) > 0.5);
+const topHostsShown = s.topHosts.length;
+
+const tiles = [
+  {
+    label: 'Links',
+    value: number(s.links),
+    sub: `${dayLabel(firstDay)} to ${dayLabel(lastDay)}`,
+  },
+  {
+    label: 'Years',
+    value: number(years.length),
+    sub: `${firstYear} to ${lastYear}`,
+  },
+  {
+    label: 'Hosts',
+    value: number(s.hosts),
+    sub: `${number(s.singles)} with a single link`,
+  },
+  {
+    label: 'With a note',
+    value: number(s.withNote),
+    sub: `${percent(s.withNote, s.links)} of links`,
+  },
+  {
+    label: 'Bare links',
+    value: number(s.links - s.withNote),
+    sub: 'No note, only the link',
+  },
+  {
+    label: 'Weekly Thing issues',
+    value: number(issues.length),
+    sub: `Since ${dateLabel(s.firstIssue.date)}`,
+  },
+  {
+    label: 'Links in an issue',
+    value: number(s.inIssue),
+    sub: `${percent(s.inIssue, s.links)} of links`,
+  },
+  {
+    label: 'Days with a link',
+    value: number(s.activeDays),
+    sub: `Of ${number(s.spanDays)} since the first`,
+  },
+];
+
+const records = [
+  {
+    label: 'Busiest day',
+    value: plural(busiestDay.count, 'link'),
+    sub: dayLabel(busiestDay.day),
+    href: monthPath(
+      Number(busiestDay.day.slice(0, 4)),
+      Number(busiestDay.day.slice(5, 7)),
+    ),
+  },
+  {
+    label: 'Busiest week',
+    value: plural(s.busiestWeek.count, 'link'),
+    sub: `The week of ${dayLabel(s.busiestWeek.week)}`,
+  },
+  {
+    label: 'Busiest month',
+    value: plural(s.busiestMonth.count, 'link'),
+    sub: `${monthName(s.busiestMonth.month)} ${s.busiestMonth.year}`,
+    href: monthPath(s.busiestMonth.year, s.busiestMonth.month),
+  },
+  s.run && {
+    label: 'Longest run',
+    value: plural(s.run.days, 'day'),
+    sub: `${dayLabel(s.run.from)} to ${dayLabel(s.run.to)}, a link every day`,
+  },
+  s.gap && {
+    label: 'Longest gap',
+    value: plural(s.gap.days, 'day'),
+    sub: `${dayLabel(s.gap.from)} to ${dayLabel(s.gap.to)}, no link`,
+  },
+  {
+    label: 'Longest note',
+    value: number(s.longestNote.length),
+    sub: `Characters, saved ${dateLabel(s.longestNote.link.saved)}`,
+    href: linkPath(s.longestNote.link.id),
+  },
+].filter(
+  (
+    record,
+  ): record is { label: string; value: string; sub: string; href?: string } =>
+    !!record,
+);
+
+const sections = [
+  ['numbers', 'By the numbers'],
+  ['volume', 'Volume'],
+  ['when', 'When'],
+  ['notes', 'Notes'],
+  ['weekly', 'The Weekly Thing'],
+  ['hosts', 'Hosts and the web'],
+];
+---
+
+<Layout
+  title="Statistics · Linking Things"
+  description="Linking volume along a number of dimensions: Jamie Thingelstad's links by year, month, weekday and hour, notes, Weekly Thing issues and hosts."
+>
+  <h1 class="page-title">Statistics</h1>
+  <p class="lede">
+    Linking volume along a number of dimensions, from the first link, saved{' '}
+    {dayLabel(firstDay)}, to the latest, saved {dayLabel(lastDay)}. Every number
+    here is computed from the data when the site is built. Days, weekdays and
+    hours are US Central.
+  </p>
+  <nav class="stats-nav" aria-label="On this page">
+    {sections.map(([id, label]) => (
+      <a href={`#${id}`}>{label}</a>
+    ))}
+  </nav>
+
+  <section class="stats-section" id="numbers">
+    <h2>By the numbers</h2>
+    <p>The whole collection, every public link at Pinboard.</p>
+    <dl class="tiles">
+      {tiles.map((tile) => (
+        <div>
+          <dt>{tile.label}</dt>
+          <dd>
+            <span class="value">{tile.value}</span>
+            <span class="sub">{tile.sub}</span>
+          </dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+
+  <section class="stats-section" id="volume">
+    <h2>Volume</h2>
+    <p>
+      {firstYear} starts on {monthDay(firstDay)} and {lastYear} runs to{' '}
+      {monthDay(lastDay)}, so both are part years.
+    </p>
+    <div class="stats-grid">
+      <Figure
+        id="per-year"
+        title="Links saved per year"
+        caption={`${number(s.links)} links in ${years.length} years. The most in one year: ${number(busiestYear.links)}, in ${busiestYear.year}.`}
+      >
+        <Columns
+          label="Links saved per year"
+          categories={yearCats}
+          xLabels={yearTicks}
+          series={[{ cls: 's1', values: rows.map((row) => row.links) }]}
+          tips={rows.map((row) => `${row.year}: ${plural(row.links, 'link')}`)}
+          caps={capsAt(rows, [busiestYear, lastRow], (row) =>
+            number(row.links),
+          )}
+        />
+        <DataTable
+          slot="table"
+          label="Links saved per year"
+          head={['Year', 'Links']}
+          rows={rows.map((row) => [yearCell(row.year), row.links])}
+        />
+      </Figure>
+
+      <Figure
+        id="days"
+        title="Days with a link, per year"
+        caption={`${number(s.activeDays)} of the ${number(s.spanDays)} days from the first link to the latest have at least one. The most in a year: ${number(mostDays.days)}, in ${mostDays.year}; the fewest in a full year: ${number(fewestDays.days)}, in ${fewestDays.year}.`}
+      >
+        <Columns
+          label="Days with at least one link, per year"
+          categories={yearCats}
+          xLabels={yearTicks}
+          series={[{ cls: 's1', values: rows.map((row) => row.days) }]}
+          tips={rows.map(
+            (row) =>
+              `${row.year}: ${plural(row.days, 'day')} with a link, ${(row.links / row.days).toFixed(1)} links on each`,
+          )}
+          caps={capsAt(rows, [mostDays, fewestDays], (row) => number(row.days))}
+        />
+        <DataTable
+          slot="table"
+          label="Days with at least one link, per year"
+          head={['Year', 'Days with a link', 'Links', 'Links per day with one']}
+          rows={rows.map((row) => [
+            yearCell(row.year),
+            row.days,
+            row.links,
+            (row.links / row.days).toFixed(1),
+          ])}
+        />
+      </Figure>
+
+      <Figure
+        id="months"
+        title="Links per month"
+        caption={`The busiest month: ${monthName(s.busiestMonth.month)} ${s.busiestMonth.year}, with ${number(s.busiestMonth.count)}. ${
+          s.emptyMonths.length
+            ? `${s.emptyMonths.length === 1 ? 'One month has' : `${s.emptyMonths.length} months have`} none: ${listOf(s.emptyMonths.map((m) => `${monthName(m.month)} ${m.year}`))}.`
+            : 'Every month has at least one.'
+        }`}
+      >
+        <Heatmap
+          label="Links per month, a row for each year"
+          rows={years.map((year) => ({
+            label: String(year),
+            href: yearPath(year),
+          }))}
+          cols={monthNames.map((name) => name.slice(0, 3))}
+          values={s.months}
+          tips={s.months.map((row, y) =>
+            row.map((n, m) =>
+              n === null
+                ? null
+                : `${monthNames[m]} ${years[y]}: ${plural(n, 'link')}`,
+            ),
+          )}
+          hrefs={s.months.map((row, y) =>
+            row.map((n, m) => (n ? monthPath(years[y], m + 1) : null)),
+          )}
+          cuts={monthCuts}
+          cellH={19}
+        />
+        <DataTable
+          slot="table"
+          label="Links per month"
+          head={['Year', ...monthNames.map((name) => name.slice(0, 3)), 'Year']}
+          rows={s.months.map((row, y) => [
+            yearCell(years[y]),
+            ...row.map((n) => (n === null ? '' : n)),
+            rows[y].links,
+          ])}
+        />
+      </Figure>
+
+      <section class="viz-figure" id="records" aria-labelledby="records-title">
+        <h3 id="records-title">Records</h3>
+        <dl class="tiles pairs">
+          {records.map((record) => (
+            <div>
+              <dt>{record.label}</dt>
+              <dd>
+                <span class="value">{record.value}</span>
+                <span class="sub">
+                  {record.href ? (
+                    <a href={record.href}>{record.sub}</a>
+                  ) : (
+                    record.sub
+                  )}
+                </span>
+              </dd>
+            </div>
+          ))}
+        </dl>
+        <h3 class="records-title">The ten busiest days</h3>
+        <ol class="records">
+          {s.busiestDays.map((day) => (
+            <li>
+              <a
+                href={monthPath(
+                  Number(day.day.slice(0, 4)),
+                  Number(day.day.slice(5, 7)),
+                )}
+              >
+                {dayLabel(day.day)}
+              </a>
+              : {plural(day.count, 'link')}
+              {day.sameSecond > 1 &&
+                `, ${number(day.sameSecond)} of them saved in the same second (${timeLabel(day.at)})`}
+            </li>
+          ))}
+        </ol>
+      </section>
+    </div>
+  </section>
+
+  <section class="stats-section" id="when">
+    <h2>When</h2>
+    <p>
+      The weekday and the hour each link was saved, in US Central time with
+      daylight saving.
+    </p>
+    <div class="stats-grid">
+      <Figure
+        id="clock"
+        title="Weekday and hour"
+        caption={`${weekdays[busiestWeekday]} has ${number(s.weekdayTotals[busiestWeekday])} links, ${percent(s.weekdayTotals[busiestWeekday], s.links)} of all. The busiest hour: ${hourRange(busiestHour)}, with ${number(s.hourTotals[busiestHour])}.`}
+      >
+        <Heatmap
+          label="Links by weekday and hour of the day, US Central"
+          rows={weekdays.map((day) => ({ label: day.slice(0, 3) }))}
+          cols={Array.from({ length: 24 }, (_, h) =>
+            h % 3 === 0 ? hourTick(h) : null,
+          )}
+          values={s.clock}
+          tips={s.clock.map((hours, d) =>
+            hours.map(
+              (n, h) => `${weekdays[d]}, ${hourRange(h)}: ${plural(n, 'link')}`,
+            ),
+          )}
+          cuts={clockCuts}
+          labelWidth={44}
+          cellH={26}
+        />
+        <DataTable
+          slot="table"
+          label="Links by weekday and hour, US Central"
+          head={[
+            'Weekday',
+            ...Array.from({ length: 24 }, (_, h) => hourTick(h)),
+            'All',
+          ]}
+          rows={s.clock.map((hours, d) => [
+            weekdays[d],
+            ...hours,
+            s.weekdayTotals[d],
+          ])}
+        />
+      </Figure>
+
+      <Figure
+        id="weekday-year"
+        title="Weekday, year by year"
+        caption={`Each row is one year's links by weekday, as shares of that year. ${weekdays[busiestWeekday]} had ${weekdayPercent(rows[0])} in ${firstYear} and ${weekdayPercent(lastRow)} in ${lastYear}; its highest share was ${weekdayPercent(peakWeekdayYear)}, in ${peakWeekdayYear.year}.`}
+      >
+        <Heatmap
+          label="Share of each year's links by weekday"
+          rows={years.map((year) => ({
+            label: String(year),
+            href: yearPath(year),
+          }))}
+          cols={weekdays.map((day) => day.slice(0, 3))}
+          values={rows.map((row) =>
+            weekdays.map((_, d) => weekdayShare(row, d)),
+          )}
+          tips={rows.map((row) =>
+            weekdays.map(
+              (day, d) =>
+                `${row.year}, ${day}: ${plural(row.weekdays[d], 'link')}, ${percent(row.weekdays[d], row.links)} of the year`,
+            ),
+          )}
+          cuts={weekdayCuts}
+          shares
+          noneLabel="none"
+          cellH={19}
+        />
+        <DataTable
+          slot="table"
+          label="Links by weekday, per year"
+          head={['Year', ...weekdays.map((day) => day.slice(0, 3)), 'Links']}
+          rows={rows.map((row) => [
+            yearCell(row.year),
+            ...row.weekdays.map(
+              (n) => `${number(n)} (${percent(n, row.links)})`,
+            ),
+            row.links,
+          ])}
+        />
+      </Figure>
+    </div>
+  </section>
+
+  <section class="stats-section" id="notes">
+    <h2>Notes</h2>
+    <p>
+      A note is the text saved with a link at Pinboard; a bare link has none.
+      Lengths are in characters.
+    </p>
+    <div class="stats-grid">
+      <Figure
+        id="note-share"
+        title="Links with a note, per year"
+        caption={`${percent(s.withNote, s.links)} of all links have a note. By year, from ${percent(leastNoted.withNote, leastNoted.links)} in ${leastNoted.year} to ${percent(mostNoted.withNote, mostNoted.links)} in ${mostNoted.year}.`}
+      >
+        <Columns
+          label="Share of each year's links with a note"
+          categories={yearCats}
+          xLabels={yearTicks}
+          series={[{ cls: 's1', values: rows.map(noteShare) }]}
+          shares
+          max={1}
+          tips={rows.map(
+            (row) =>
+              `${row.year}: ${number(row.withNote)} of ${plural(row.links, 'link')} with a note, ${percent(row.withNote, row.links)}`,
+          )}
+          caps={capsAt(rows, [leastNoted, mostNoted], (row) =>
+            percent(row.withNote, row.links),
+          )}
+        />
+        <DataTable
+          slot="table"
+          label="Links with a note, per year"
+          head={['Year', 'With a note', 'Bare', 'Share with a note']}
+          rows={rows.map((row) => [
+            yearCell(row.year),
+            row.withNote,
+            row.bare,
+            percent(row.withNote, row.links),
+          ])}
+        />
+      </Figure>
+
+      <Figure
+        id="note-length"
+        title="Median note length, per year"
+        caption={`The median note is ${plural(s.medianNote, 'character')} long. The longest yearly median: ${number(longestMedian.medianNote)}, in ${longestMedian.year}; the shortest: ${number(shortestMedian.medianNote)}, in ${shortestMedian.year}.`}
+      >
+        <Columns
+          label="Median note length in characters, per year"
+          categories={yearCats}
+          xLabels={yearTicks}
+          series={[{ cls: 's1', values: rows.map((row) => row.medianNote) }]}
+          tips={rows.map(
+            (row) =>
+              `${row.year}: median ${plural(row.medianNote, 'character')}, over ${plural(row.withNote, 'note')}`,
+          )}
+          caps={capsAt(rows, [longestMedian, shortestMedian], (row) =>
+            number(row.medianNote),
+          )}
+        />
+        <DataTable
+          slot="table"
+          label="Median note length, per year"
+          head={['Year', 'Notes', 'Median length']}
+          rows={rows.map((row) => [
+            yearCell(row.year),
+            row.withNote,
+            row.medianNote,
+          ])}
+        />
+      </Figure>
+    </div>
+  </section>
+
+  <section class="stats-section" id="weekly">
+    <h2>The Weekly Thing</h2>
+    <p>
+      A link is in an issue when the issue's archive lists it.{' '}
+      {s.emptyIssues.length > 0 &&
+        `${plural(s.emptyIssues.length, 'issue')} list no links in the archive (${emptyRanges}) and count as none here.`}
+    </p>
+    <div class="stats-grid">
+      <Figure
+        id="wt-share"
+        title="Links in an issue, by year saved"
+        caption={`Of the ${number(linksSince)} links saved since ${firstIssueYear}, ${number(inSince)} (${percent(inSince, linksSince)}) appear in an issue; the highest share is ${percent(mostInIssues.inIssue, mostInIssues.links)}, of ${mostInIssues.year}'s links.${before ? ` ${plural(before, 'link')} saved before ${firstIssueYear} ${before === 1 ? 'appears' : 'appear'} in one too.` : ''}`}
+      >
+        <Columns
+          label="Share of each year's links that appear in a Weekly Thing issue"
+          categories={issueRows.map((row) => String(row.year))}
+          series={[{ cls: 's1', values: issueRows.map(issueShare) }]}
+          shares
+          max={1}
+          tips={issueRows.map(
+            (row) =>
+              `${row.year}: ${number(row.inIssue)} of ${plural(row.links, 'link')} in an issue, ${percent(row.inIssue, row.links)}`,
+          )}
+          caps={capsAt(
+            issueRows,
+            [mostInIssues, issueRows[issueRows.length - 1]],
+            (row) => percent(row.inIssue, row.links),
+          )}
+        />
+        <DataTable
+          slot="table"
+          label="Links in a Weekly Thing issue, by year saved"
+          head={['Year', 'Links', 'In an issue', 'Share']}
+          rows={issueRows.map((row) => [
+            yearCell(row.year),
+            row.links,
+            row.inIssue,
+            percent(row.inIssue, row.links),
+          ])}
+        />
+      </Figure>
+
+      <Figure
+        id="per-issue"
+        title="Links per issue"
+        caption={`${plural(s.listedIssues.length, 'numbered issue')} list ${number(listedLinks.reduce((a, b) => a + b, 0))} links, a median of ${number(median(listedLinks))} each; the most is ${fullestIssue.links}, in ${issueLabel(fullestIssue.issue)}.`}
+      >
+        <Line
+          label="Links listed in each numbered Weekly Thing issue"
+          points={s.issues.map((row) => ({
+            x: row.number,
+            y: row.links || null,
+            tip: row.links
+              ? `${issueLabel(row.issue)}, ${dateLabel(row.issue.date)}: ${plural(row.links, 'link')}`
+              : `${issueLabel(row.issue)}, ${dateLabel(row.issue.date)}: no links listed`,
+            href: issuePath(row.issue),
+          }))}
+          xTicks={issueTicks}
+        />
+        <DataTable
+          slot="table"
+          label="Links per Weekly Thing issue"
+          head={['Issue', 'Date', 'Links listed', 'Saved here']}
+          rows={s.issues.map((row) => [
+            { text: issueLabel(row.issue), href: issuePath(row.issue) },
+            dateLabel(row.issue.date),
+            row.links,
+            row.saved,
+          ])}
+        />
+      </Figure>
+
+      {s.tags.length > 0 && (
+        <section class="viz-figure" id="tags" aria-labelledby="tags-title">
+          <h3 id="tags-title">Tags</h3>
+          <p class="viz-text">
+            {plural(s.tagged, 'link')} carry a tag, and none more than{' '}
+            {s.maxTags === 1 ? 'one' : number(s.maxTags)}. The tags are{' '}
+            {listOf(s.tags.map((tag) => `${tag.tag} (${number(tag.count)})`))},
+            and the earliest tagged link was saved in {s.tagYears[0].year}.
+          </p>
+          <DataTable
+            label="Tags by year"
+            head={['Year', ...s.tags.map((tag) => tag.tag)]}
+            rows={s.tagYears.map((row) => [yearCell(row.year), ...row.counts])}
+          />
+        </section>
+      )}
+    </div>
+  </section>
+
+  <section class="stats-section" id="hosts">
+    <h2>Hosts and the web</h2>
+    <p>A host is the site's name in the link, without a leading www.</p>
+    <div class="stats-grid">
+      <Figure
+        id="hosts-per-year"
+        title="Hosts linked per year"
+        caption={`${number(s.hosts)} hosts in all. The most in one year: ${number(mostHosts.hosts)}, in ${mostHosts.year}; the most linked for the first time: ${number(mostNewHosts.newHosts)}, in ${mostNewHosts.year}.`}
+        legend={[
+          { cls: 's1', label: 'First linked that year' },
+          { cls: 's2', label: 'Linked in an earlier year' },
+        ]}
+      >
+        <Columns
+          label="Hosts linked per year, first linked that year and linked before"
+          categories={yearCats}
+          xLabels={yearTicks}
+          series={[
+            { cls: 's1', values: rows.map((row) => row.newHosts) },
+            { cls: 's2', values: rows.map((row) => row.returningHosts) },
+          ]}
+          tips={rows.map(
+            (row) =>
+              `${row.year}: ${plural(row.hosts, 'host')}, ${number(row.newHosts)} first linked that year`,
+          )}
+          caps={capsAt(rows, [mostHosts], (row) => number(row.hosts))}
+        />
+        <DataTable
+          slot="table"
+          label="Hosts linked per year"
+          head={['Year', 'Hosts', 'First linked', 'Linked before']}
+          rows={rows.map((row) => [
+            yearCell(row.year),
+            row.hosts,
+            row.newHosts,
+            row.returningHosts,
+          ])}
+        />
+      </Figure>
+
+      <Figure
+        id="concentration"
+        title="How concentrated the linking is"
+        caption={`${topTen ? `The 10 most-linked hosts hold ${percent(topTen.links, s.links)} of all links` : ''}${topHundred ? `, the top 100 ${percent(topHundred.links, s.links)}` : ''}. The ${number(s.singles)} hosts with a single link hold ${percent(s.singles, s.links)}.`}
+      >
+        <HBars
+          label="Share of all links held by the most-linked hosts"
+          max={1}
+          rows={s.concentration.map((c) => ({
+            label: c.top === 1 ? 'Top host' : `Top ${number(c.top)}`,
+            value: c.share,
+            text: percent(c.links, s.links),
+            tip: `The ${c.top === 1 ? 'most-linked host' : `${number(c.top)} most-linked hosts`}: ${plural(c.links, 'link')}, ${percent(c.links, s.links)} of all`,
+          }))}
+        />
+        <DataTable
+          slot="table"
+          label="Share of all links held by the most-linked hosts"
+          head={['Hosts', 'Links', 'Share of all']}
+          rows={[
+            ...s.concentration.map((c) => [
+              c.top === 1 ? 'The top host' : `The top ${number(c.top)}`,
+              c.links,
+              percent(c.links, s.links),
+            ]),
+            [
+              `The ${number(s.singles)} with a single link`,
+              s.singles,
+              percent(s.singles, s.links),
+            ],
+          ]}
+        />
+      </Figure>
+
+      <Figure
+        id="top-hosts"
+        title={`The ${topHostsShown} most-linked hosts, by year`}
+        caption={`Ranked by links in all, from ${s.topHosts[0].host} with ${number(s.topHosts[0].count)} to ${s.topHosts[topHostsShown - 1].host} with ${number(s.topHosts[topHostsShown - 1].count)}. Each cell is one year.`}
+      >
+        <Heatmap
+          label={`Links per year for the ${topHostsShown} most-linked hosts`}
+          rows={s.topHosts.map((host) => ({
+            label: host.host,
+            href: hostPath(host.host),
+          }))}
+          cols={yearTicks}
+          values={s.topHosts.map((host) => host.perYear)}
+          tips={s.topHosts.map((host) =>
+            host.perYear.map(
+              (n, y) => `${host.host}, ${years[y]}: ${plural(n, 'link')}`,
+            ),
+          )}
+          cuts={hostCuts}
+          labelWidth={164}
+          cellH={20}
+        />
+        <DataTable
+          slot="table"
+          label={`Links per year for the ${topHostsShown} most-linked hosts`}
+          head={['Host', 'All', ...years.map(String)]}
+          rows={s.topHosts.map((host) => [
+            { text: host.host, href: hostPath(host.host) },
+            host.count,
+            ...host.perYear,
+          ])}
+        />
+      </Figure>
+
+      <Figure
+        id="https"
+        title="Saved as https, per year"
+        caption={`${percent(rows[0].https, rows[0].links)} of ${firstYear}'s links were saved with an https address, and ${percent(lastRow.https, lastRow.links)} of ${lastYear}'s.${halfHttps ? ` The share first passed half in ${halfHttps.year}, at ${percent(halfHttps.https, halfHttps.links)}.` : ''}`}
+      >
+        <Columns
+          label="Share of each year's links saved with an https address"
+          categories={yearCats}
+          xLabels={yearTicks}
+          series={[{ cls: 's1', values: rows.map(httpsShare) }]}
+          shares
+          max={1}
+          tips={rows.map(
+            (row) =>
+              `${row.year}: ${number(row.https)} of ${plural(row.links, 'link')} as https, ${percent(row.https, row.links)}`,
+          )}
+          caps={capsAt(
+            rows,
+            [rows[0], ...(halfHttps ? [halfHttps] : []), lastRow],
+            (row) => percent(row.https, row.links),
+          )}
+        />
+        <DataTable
+          slot="table"
+          label="Links saved as https, per year"
+          head={['Year', 'Links', 'https', 'Share']}
+          rows={rows.map((row) => [
+            yearCell(row.year),
+            row.links,
+            row.https,
+            percent(row.https, row.links),
+          ])}
+        />
+      </Figure>
+    </div>
+  </section>
+</Layout>

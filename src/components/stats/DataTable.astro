@@ -1,0 +1,48 @@
+---
+// A chart's numbers as a plain table: the first column labels the row, the
+// rest are values, right-aligned.
+export type Cell = string | number | { text: string; href: string };
+interface Props {
+  label: string;
+  head: string[];
+  rows: Cell[][];
+}
+const { label, head, rows } = Astro.props;
+const text = (cell: Cell) =>
+  typeof cell === 'number'
+    ? cell.toLocaleString('en-US')
+    : typeof cell === 'string'
+      ? cell
+      : cell.text;
+const href = (cell: Cell) => (typeof cell === 'object' ? cell.href : undefined);
+---
+
+<div class="table-wrap">
+  <table class="data-table" aria-label={label}>
+    <thead>
+      <tr>
+        {head.map((h) => (
+          <th scope="col">{h}</th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map(([first, ...rest]) => (
+        <tr>
+          <th scope="row">
+            {href(first) ? (
+              <a href={href(first)}>{text(first)}</a>
+            ) : (
+              text(first)
+            )}
+          </th>
+          {rest.map((cell) => (
+            <td>
+              {href(cell) ? <a href={href(cell)}>{text(cell)}</a> : text(cell)}
+            </td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

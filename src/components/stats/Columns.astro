@@ -1,0 +1,155 @@
+---
+// Columns over categories (years, mostly), one series or a stack. Thin
+// columns from one baseline with a 4px round data end; stacked segments are
+// parted by a 2px gap in the surface colour; hairline grid. Each column is
+// one hover target (its whole slot) with a native tooltip, and `caps` prints
+// a value over the few columns worth labelling, where it clears its
+// neighbours.
+import {
+  WIDTH,
+  axisLeft,
+  columnPath,
+  compact,
+  r1,
+  rectPath,
+  textWidth,
+  ticks,
+} from '../../lib/charts';
+interface Props {
+  label: string;
+  categories: string[];
+  // A label under each column, or null for none (to keep them apart).
+  xLabels?: (string | null)[];
+  series: { cls: string; values: number[] }[];
+  tips: string[];
+  caps?: (string | null)[];
+  // The values are shares from 0 to 1.
+  shares?: boolean;
+  max?: number;
+  height?: number;
+}
+const {
+  label,
+  categories,
+  xLabels = categories,
+  series,
+  tips,
+  caps = [],
+  shares = false,
+  height = 170,
+} = Astro.props;
+const totals = categories.map((_, i) =>
+  series.reduce((sum, s) => sum + s.values[i], 0),
+);
+const yTicks = ticks(Astro.props.max ?? Math.max(...totals), 4);
+const scaleTop = yTicks[yTicks.length - 1];
+const tick = (v: number) => (shares ? `${Math.round(v * 100)}%` : compact(v));
+const left = axisLeft(yTicks.map(tick));
+const right = 2;
+const top = 28;
+const base = top + height;
+const svgHeight = base + 30;
+const slot = (WIDTH - left - right) / categories.length;
+const barW = Math.min(24, slot * 0.62);
+const y = (v: number) => base - (v / scaleTop) * height;
+
+const columns = categories.map((_, i) => {
+  const cx = left + slot * i + slot / 2;
+  const x = cx - barW / 2;
+  const drawn = series.filter((s) => s.values[i] > 0);
+  let sum = 0;
+  const segments = drawn.map((s, k) => {
+    const y0 = y(sum);
+    sum += s.values[i];
+    const y1 = y(sum);
+    // The 2px surface gap comes out of the upper segment, so the column's
+    // top stays true to its total.
+    const bottom = k === 0 ? y0 : y0 - 2;
+    const h = Math.max(0.6, bottom - y1);
+    return {
+      cls: s.cls,
+      d:
+        k === drawn.length - 1
+          ? columnPath(x, y1, barW, h)
+          : rectPath(x, y1, barW, h),
+    };
+  });
+  return { cx, segments, tip: tips[i], top: y(sum) };
+});
+
+// Cap labels, kept inside the viewBox and dropped when they would touch the
+// one before or a taller column beside them.
+let lastRight = -Infinity;
+const clears = (c: { x: number; y: number; w: number }) =>
+  columns.every(
+    (other) =>
+      other.cx + barW / 2 < c.x - c.w / 2 - 2 ||
+      other.cx - barW / 2 > c.x + c.w / 2 + 2 ||
+      other.top > c.y + 4,
+  );
+const capLabels = columns
+  .map((column, i) => ({ column, text: caps[i] }))
+  .filter((c): c is { column: (typeof columns)[number]; text: string } =>
+    Boolean(c.text),
+  )
+  .map(({ column, text }) => {
+    const w = textWidth(text, 15, true);
+    const x = Math.min(Math.max(column.cx, left + w / 2), WIDTH - w / 2);
+    return { x, y: column.top - 8, text, w };
+  })
+  .filter((c) => {
+    if (c.x - c.w / 2 < lastRight + 6 || !clears(c)) return false;
+    lastRight = c.x + c.w / 2;
+    return true;
+  });
+---
+
+<svg
+  class="viz"
+  viewBox={`0 0 ${WIDTH} ${svgHeight}`}
+  role="img"
+  aria-label={label}
+>
+  {yTicks.slice(1).map((t) => (
+    <line
+      class="grid"
+      x1={left}
+      x2={WIDTH - right}
+      y1={r1(y(t))}
+      y2={r1(y(t))}
+    />
+  ))}
+  {yTicks.map((t) => (
+    <text class="tick" x={left - 8} y={r1(y(t) + 5)} text-anchor="end">
+      {tick(t)}
+    </text>
+  ))}
+  {columns.map((column, i) => (
+    <g class="col">
+      <title>{column.tip}</title>
+      <rect
+        class="hit"
+        x={r1(left + slot * i)}
+        y={top}
+        width={r1(slot)}
+        height={height}
+      />
+      {column.segments.map((s) => (
+        <path class={`mark ${s.cls}`} d={s.d} />
+      ))}
+    </g>
+  ))}
+  <line class="axis" x1={left} x2={WIDTH - right} y1={base} y2={base} />
+  {columns.map((column, i) =>
+    xLabels[i] ? (
+      <text class="tick" x={r1(column.cx)} y={base + 22} text-anchor="middle">
+        {xLabels[i]}
+      </text>
+    ) : null,
+  )}
+  {capLabels.map((c) => (
+    <text class="value" x={r1(c.x)} y={r1(c.y)} text-anchor="middle">
+      {c.text}
+    </text>
+  ))}
+</svg>

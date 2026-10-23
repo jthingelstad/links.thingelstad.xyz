@@ -1,0 +1,59 @@
+---
+// Horizontal bars, one series, each labelled at its tip: for a handful of
+// rows where every value is the point.
+import { WIDTH, barPath, r1, textWidth } from '../../lib/charts';
+interface Props {
+  label: string;
+  rows: { label: string; value: number; text: string; tip: string }[];
+  max?: number;
+  labelWidth?: number;
+}
+const { label, rows, labelWidth = 136 } = Astro.props;
+const max = Astro.props.max ?? Math.max(...rows.map((row) => row.value));
+const rowH = 34;
+const barH = 16;
+const room = Math.max(...rows.map((row) => textWidth(row.text, 15, true))) + 12;
+const span = WIDTH - labelWidth - room;
+const svgHeight = rowH * rows.length + 4;
+const bars = rows.map((row, i) => {
+  const w = Math.max(1, (row.value / max) * span);
+  const y = 2 + rowH * i;
+  return { ...row, w, y, mid: y + rowH / 2 };
+});
+---
+
+<svg
+  class="viz"
+  viewBox={`0 0 ${WIDTH} ${svgHeight}`}
+  role="img"
+  aria-label={label}
+>
+  {bars.map((bar) => (
+    <g class="col">
+      <title>{bar.tip}</title>
+      <rect class="hit" x="0" y={bar.y} width={WIDTH} height={rowH} />
+      <text
+        class="tick"
+        x={labelWidth - 10}
+        y={r1(bar.mid + 5)}
+        text-anchor="end"
+      >
+        {bar.label}
+      </text>
+      <path
+        class="mark s1"
+        d={barPath(labelWidth, bar.mid - barH / 2, bar.w, barH)}
+      />
+      <text class="value" x={r1(labelWidth + bar.w + 8)} y={r1(bar.mid + 5)}>
+        {bar.text}
+      </text>
+    </g>
+  ))}
+  <line
+    class="axis"
+    x1={labelWidth}
+    x2={labelWidth}
+    y1="2"
+    y2={svgHeight - 2}
+  />
+</svg>

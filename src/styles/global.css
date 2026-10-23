@@ -685,3 +685,291 @@ img {
   color: var(--muted);
   font-size: var(--jt-size-label);
 }
+
+/* Statistics (/stats/): charts drawn as inline SVG at build. The colour roles
+   are defined here once and the charts use only these. Series are the family
+   fills (tokens.css), which stay the same in dark; the heatmap classes are
+   one blue from light to dark (reversed in dark, so more is brighter). All
+   were run through the dataviz checks on this site's grounds, #ffffff and
+   #131316: the two series pass every categorical gate in both modes, and
+   each five-step ramp is monotone with its faintest step at 2:1 or more. */
+:root {
+  --viz-1: var(--jt-weekly);
+  --viz-2: var(--jt-thingy);
+  --viz-grid: var(--line);
+  --viz-axis: #c3c2b7;
+  --viz-none: var(--card);
+  --viz-q1: #86b6ef;
+  --viz-q2: #5598e7;
+  --viz-q3: #2a78d6;
+  --viz-q4: #1c5cab;
+  --viz-q5: #0d366b;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --viz-axis: #383835;
+    --viz-q1: #184f95;
+    --viz-q2: #256abf;
+    --viz-q3: #3987e5;
+    --viz-q4: #6da7ec;
+    --viz-q5: #b7d3f6;
+  }
+}
+.stats-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin: 0 0 40px;
+  font-size: var(--jt-size-small);
+}
+.stats-section {
+  margin: 0 0 64px;
+  scroll-margin-top: 16px;
+}
+.stats-section > h2 {
+  font-size: var(--jt-size-h2);
+  margin-bottom: 8px;
+}
+.stats-section > p {
+  max-width: var(--jt-measure);
+  margin: 0 0 28px;
+  color: var(--text-soft);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+@media (min-width: 60rem) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+@media (min-width: 60rem) {
+  .tiles {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.tiles.pairs {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.tiles > div {
+  padding: 14px 16px 16px;
+  border-radius: 8px;
+  background: var(--card);
+}
+.tiles dt {
+  color: var(--muted);
+  font-size: var(--jt-size-label);
+  font-weight: 600;
+}
+.tiles dd {
+  margin: 0;
+}
+.tiles .value {
+  display: block;
+  font-family: var(--jt-font-heading);
+  font-size: var(--jt-size-h2);
+  font-weight: 700;
+  letter-spacing: var(--jt-tracking-heading);
+  line-height: 1.2;
+  color: var(--ink);
+}
+.tiles .sub {
+  display: block;
+  margin-top: 2px;
+  color: var(--text-soft);
+  font-size: var(--jt-size-label);
+  line-height: 1.4;
+}
+.viz-figure {
+  margin: 0;
+  min-width: 0;
+}
+.viz-figure h3 {
+  font-size: var(--jt-size-h3);
+  margin-bottom: 6px;
+}
+.viz-figure figcaption p {
+  max-width: var(--jt-measure);
+  margin: 0 0 12px;
+  color: var(--text-soft);
+  font-size: var(--jt-size-small);
+}
+.viz-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 16px;
+  margin: 0 0 8px;
+  padding: 0;
+  list-style: none;
+  color: var(--text-soft);
+  font-size: var(--jt-size-label);
+}
+.viz-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.viz-legend .swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+.swatch.s1 {
+  background: var(--viz-1);
+}
+.swatch.s2 {
+  background: var(--viz-2);
+}
+.viz {
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+  height: auto;
+}
+.viz text {
+  font-family: var(--jt-font-body);
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+  fill: var(--muted);
+}
+.viz .value {
+  fill: var(--ink);
+  font-weight: 600;
+}
+.viz a text {
+  fill: var(--link);
+  text-decoration: underline;
+}
+.viz a:visited text {
+  fill: var(--visited);
+}
+.viz .grid {
+  stroke: var(--viz-grid);
+  stroke-width: 1;
+}
+.viz .axis {
+  stroke: var(--viz-axis);
+  stroke-width: 1;
+}
+.viz .hit {
+  fill: transparent;
+}
+.viz .mark.s1,
+.viz .dot.s1 {
+  fill: var(--viz-1);
+}
+.viz .mark.s2 {
+  fill: var(--viz-2);
+}
+.viz .wash.s1 {
+  fill: var(--viz-1);
+  fill-opacity: 0.1;
+}
+.viz .line.s1 {
+  fill: none;
+  stroke: var(--viz-1);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.viz .col:hover .mark,
+.viz .cell:hover {
+  opacity: 0.75;
+}
+.viz a:hover .cell,
+.viz a:focus-visible .cell,
+.viz a:focus-visible .hit {
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+.q0 {
+  fill: var(--viz-none);
+  background: var(--viz-none);
+}
+.q1 {
+  fill: var(--viz-q1);
+  background: var(--viz-q1);
+}
+.q2 {
+  fill: var(--viz-q2);
+  background: var(--viz-q2);
+}
+.q3 {
+  fill: var(--viz-q3);
+  background: var(--viz-q3);
+}
+.q4 {
+  fill: var(--viz-q4);
+  background: var(--viz-q4);
+}
+.q5 {
+  fill: var(--viz-q5);
+  background: var(--viz-q5);
+}
+.viz-legend .swatch.q0 {
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.viz-numbers {
+  margin-top: 12px;
+  font-size: var(--jt-size-small);
+}
+.viz-numbers summary {
+  color: var(--link);
+  cursor: pointer;
+}
+.table-wrap {
+  max-height: 28rem;
+  overflow: auto;
+  margin-top: 8px;
+}
+.data-table {
+  border-collapse: collapse;
+  font-size: var(--jt-size-meta);
+  font-variant-numeric: tabular-nums;
+}
+.data-table th,
+.data-table td {
+  padding: 3px 12px 3px 0;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+  white-space: nowrap;
+}
+.data-table th[scope='row'],
+.data-table thead th:first-child {
+  text-align: left;
+}
+.data-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--ground);
+  color: var(--muted);
+  font-weight: 600;
+}
+.viz-text {
+  max-width: var(--jt-measure);
+  margin: 0 0 12px;
+  color: var(--text-soft);
+  font-size: var(--jt-size-small);
+}
+.records-title {
+  margin-top: 28px;
+}
+.records {
+  margin: 8px 0 0;
+  padding: 0 0 0 1.6em;
+  font-size: var(--jt-size-small);
+  font-variant-numeric: tabular-nums;
+}
+.records li {
+  padding: 3px 0;
+}
