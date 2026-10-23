@@ -6,11 +6,12 @@ https://links.thingelstad.xyz/. The design is `docs/DIRECTION.md` and the data c
 is `docs/DATA.md`; read them before changing structure, URLs or data.
 
 - Built with Astro and TypeScript on the POAP pattern (`poap.thingelstad.xyz`): static
-  output, Pagefind over the record pages only, minimal JavaScript (the search page is
-  the only page with a script), no frameworks, no third-party scripts, nothing fetched
-  at serve time from another host. The one exception today is the footer photo,
-  `owner.avatar` from `shared/sites.json`; Tinylytics will be the second
-  (`design/tinylytics.md`).
+  output, Pagefind over the record pages only, minimal JavaScript (search, the Like's
+  status line on record pages, and the go-to-today line on `/on-this-day/`), no
+  frameworks, nothing fetched at serve time from another host. The exceptions are the
+  footer photo, `owner.avatar` from `shared/sites.json`, and Tinylytics, one script in
+  production builds only (`PUBLIC_TINYLYTICS_ENABLED=true`, set by the deploy
+  workflow; `design/tinylytics.md`). Never send a hit or a kudos from QA.
 - **Data.** `data/` is written only by the Python tools (`tools/sync.py`,
   `tools/join_issues.py`; `tools/README.md`). Never edit it by hand.
   `src/lib/data.ts` is the only module that reads it, and everything derived (hosts,
@@ -21,10 +22,14 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   `npm test` checks that on every URL.
 - **URLs are fixed** (DIRECTION.md, "Pages"): `/links/<id>/` with its `.json` and `.md`
   twins, `/hosts/<host>/`, `/issues/<n>/` (the Weekly Thing archive key, `140-special`
-  for the special issue), `/years/<yyyy>/`, `/search/`. Kudos, the Librarian and WT
-  Builder depend on them. `src/lib/data.ts` is the one place they are formed.
-- **Times** are stored in UTC and shown in US Central, and years, months and weeks are
-  Central too.
+  for the special issue), `/years/<yyyy>/`, `/on-this-day/<mm>-<dd>/`, `/search/`,
+  the feeds (`feed.xml` and `feed.json` at the root and under each host page) and
+  `/links.json`, `/hosts.json`, `/issues.json`, `/llms.txt`, `/llms-full.txt`. Kudos,
+  feed readers, the Librarian and WT Builder depend on them. `src/lib/data.ts` is the
+  one place they are formed.
+- **Times** are stored in UTC and shown in US Central, and years, months, weeks and
+  on-this-day days are Central too. Feed dates are Central with the real offset
+  (RFC 822 in RSS, RFC 3339 in JSON Feed).
 - **Jamie's sites.** The strip, the footer h-card, the rel=me links and the shared type
   (`shared/sites.json`, `shared/tokens.css`, `shared/fonts/`) are vendored from
   `../thingelstad.com/shared/` by `npm run sites:sync`; `npm run sites:check` fails on

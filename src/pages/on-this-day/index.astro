@@ -1,0 +1,81 @@
+---
+// Every calendar day, as twelve months of day links with their counts. With
+// JavaScript the page goes straight to today (Central); the grid is the page
+// without it, and /on-this-day/#days (the "Every day" link on each day page)
+// stays on the grid.
+import Layout from '../../layouts/Layout.astro';
+import {
+  linksByMonthDay,
+  monthDayLabel,
+  monthDays,
+  monthNames,
+  onThisDayPath,
+  plural,
+} from '../../lib/data';
+// A leap year, so February has its 29th.
+const lengths = monthNames.map((_, i) =>
+  new Date(Date.UTC(2024, i + 1, 0)).getUTCDate(),
+);
+const months = monthNames.map((name, i) => ({
+  name,
+  days: Array.from({ length: lengths[i] }, (_, d) => {
+    const key = `${String(i + 1).padStart(2, '0')}-${String(d + 1).padStart(2, '0')}`;
+    return { key, n: d + 1, count: linksByMonthDay.get(key)?.length ?? 0 };
+  }),
+}));
+const known = monthDays;
+const pattern = onThisDayPath('MM-DD');
+---
+
+<Layout
+  title="On this day · Linking Things"
+  description="The links Jamie Thingelstad saved on each calendar day, across every year since 2005."
+>
+  <script is:inline define:vars={{ known, pattern }}>
+    if (!location.hash) {
+      const parts = Object.fromEntries(
+        new Intl.DateTimeFormat('en-US', {
+          timeZone: 'America/Chicago',
+          month: '2-digit',
+          day: '2-digit',
+        })
+          .formatToParts(new Date())
+          .map((part) => [part.type, part.value]),
+      );
+      const today = `${parts.month}-${parts.day}`;
+      if (known.includes(today))
+        location.replace(pattern.replace('MM-DD', today));
+    }
+  </script>
+  <h1 class="page-title">On this day</h1>
+  <p class="lede">
+    Every day of the year, and the links saved on it in every year since 2005.
+    The number under each day is how many. Days are US Central.
+  </p>
+  <div class="calendar" id="days">
+    {months.map((month) => (
+      <section class="calendar-month">
+        <h2>{month.name}</h2>
+        <ol class="calendar-days">
+          {month.days.map((day) => (
+            <li>
+              {day.count > 0 ? (
+                <a
+                  href={onThisDayPath(day.key)}
+                  aria-label={`${monthDayLabel(day.key)}, ${plural(day.count, 'link')}`}
+                >
+                  <span class="d">{day.n}</span>
+                  <span class="n">{day.count}</span>
+                </a>
+              ) : (
+                <span class="empty">
+                  <span class="d">{day.n}</span>
+                </span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))}
+  </div>
+</Layout>

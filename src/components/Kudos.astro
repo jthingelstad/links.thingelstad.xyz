@@ -1,0 +1,47 @@
+---
+// One Like per record (design/tinylytics.md), the POAP site's Kudos.astro:
+// Tinylytics finds the button by its class and counts it under data-path, the
+// record's permalink /links/<id>/, so the id must never change. The count
+// stays private (data-private). The status line says what a click did, for
+// screen readers and anyone else; where the embed is not loaded (any build
+// but production, any host but links.thingelstad.xyz) nothing is counted and
+// the line says so.
+interface Props {
+  path: string;
+  title: string;
+}
+const { path, title } = Astro.props;
+---
+
+<div class="kudos-row" data-kudos data-pagefind-ignore="all">
+  <button
+    type="button"
+    class="tinylytics_kudos kudos"
+    data-path={path}
+    data-private="true"
+    aria-label={`Like ${title}`}
+    title="Like this link"
+  ></button>
+  <span class="kudos-label" aria-hidden="true">
+    Like
+  </span>
+  <span class="kudos-notice" role="status"></span>
+</div>
+
+<script>
+  for (const row of document.querySelectorAll<HTMLElement>('[data-kudos]')) {
+    const button = row.querySelector('button')!;
+    const notice = row.querySelector<HTMLElement>('[role="status"]')!;
+    let clicked = false;
+    // Tinylytics marks a button it has counted with did_select.
+    new MutationObserver(() => {
+      if (clicked && button.classList.contains('did_select'))
+        notice.textContent = 'Liked. Thank you.';
+    }).observe(button, { attributes: true, attributeFilter: ['class'] });
+    button.addEventListener('click', () => {
+      clicked = true;
+      if (document.documentElement.dataset.tinylytics !== 'on')
+        notice.textContent = 'Likes count on the published site only.';
+    });
+  }
+</script>

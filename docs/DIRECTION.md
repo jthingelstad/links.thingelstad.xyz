@@ -100,13 +100,14 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 | `/hosts/<host>/` | Every link from a host, newest first, with the host facts (section "Enrichment") |
 | `/issues/<n>/` | The links that appeared in Weekly Thing n, in issue order, pointing at weekly.thingelstad.com/archive/n/ |
 | `/topics/<slug>/` | Links in a topic, co-topics, the hosts and issues most present in it (phase 3) |
-| `/years/<yyyy>/` | The year's links by month; `/on-this-day/` across the years |
+| `/years/<yyyy>/` | The year's links by month |
+| `/on-this-day/<mm>-<dd>/` | Built: one page per Central calendar day with a link (366), the day's links in every year, newest year first, with the previous and next day. `/on-this-day/` is a twelve-month grid of days with their counts; with JavaScript it goes straight to today (Central), and `/on-this-day/#days` stays on the grid. In the sitemap, not in the search index |
 | `/stats/` | Linking volume along its dimensions (section "Statistics") |
 | `/about/` | The homage, in Jamie's words: what this is, why links matter, how it is made |
-| `/feed.xml`, `/feed.json` | The newest 50 links as RSS 2.0 and JSON Feed 1.1, the Link Thing feed reborn; every host and topic page carries its own pair at `feed.xml` and `feed.json` under its path |
-| `/links.json`, `/hosts.json`, `/topics.json` | The whole public dataset |
+| `/feed.xml`, `/feed.json` | The newest 50 links as RSS 2.0 and JSON Feed 1.1, the Link Thing feed reborn; every host and topic page carries its own pair at `feed.xml` and `feed.json` under its path. Built for the site and all 7,064 host pages (the host's newest 50); topics with the topic pages. Each item is the record: its permalink as link and id, the destination and the note as content, Central dates with the real offset, tags as categories. Every page advertises the site pair; a host page advertises its own first |
+| `/links.json`, `/hosts.json`, `/issues.json`, `/topics.json` | The whole public dataset. Built: `links.json` (every record, newest first, Pinboard's fields plus `permalink`; section "If Pinboard went away"), `hosts.json` (host, count, first, last, url) and `issues.json` (the join, with each issue's `page` here and each saved link's `permalink`). `topics.json` comes with topics |
 | `/links.db` | The SQLite database the site is built from, public fields only |
-| `/llms.txt`, `/llms-full.txt` | As on every other site of Jamie's |
+| `/llms.txt`, `/llms-full.txt` | As on every other site of Jamie's. Built: `llms.txt` in llmstxt.org's shape (the data files, the record shape, the pages); `llms-full.txt` is every Markdown twin, newest first, under a short header (36 MB) |
 
 ### The id
 
@@ -167,7 +168,8 @@ the date saved (US Central). Under it:
 - **Elsewhere.** A Pinboard search for the URL in Jamie's account (the exact
   Pinboard permalink is a private id, section "The id"); the Wayback copy.
 - **Like.** A Tinylytics kudos button keyed on the permalink, the POAP site's per-drop
-  pattern, with the count so far.
+  pattern, with the count so far. Built with the count private
+  (`data-private="true"`, `design/tinylytics.md`); showing it is Jamie's call.
 
 A record must stand on its own after the destination dies. About 7% of hosts are
 gone already, and far more pages. The title, note, page facts and Wayback link are
@@ -460,7 +462,11 @@ For links:
 - **`links.json` is the ingestion surface**: `site`, `generated`, then `links` (id,
   url, title, note, voice, saved, host, issues, topics, excerpt, page facts,
   connections), `hosts`, `topics` and `issues`. The importer drops `generated` and
-  sorts, so an unchanged corpus commits nothing, as with things.
+  sorts, so an unchanged corpus commits nothing, as with things. Phase 1 builds it as
+  the Pinboard-shaped mirror (`site`, `generated`, `count`, then `links` with
+  Pinboard's fields and `permalink`), beside `hosts.json` and `issues.json`. Whether
+  phase 4 adds the richer fields to these rows or publishes them in a file of their
+  own, so the Pinboard shape never drifts, is open.
 - **One source per link**, `link-<id>`, `source_kind: "link"`, dated by the saved date.
   Things are undated; links are not, so the date-anchored tools (`on_this_day`,
   `archive_lens`, `compare_eras`) reach twenty-one years of links. The chunk text is
@@ -491,6 +497,10 @@ the mirror is kept lossless and Pinboard-shaped, not merely sufficient for pages
 
 - Every field Pinboard returns for a public bookmark is in `data/links/`, including
   `tags` (WT Builder's filing marks) and `meta`. Nothing is summarised away.
+- The site publishes that mirror as `/links.json`: every public record with Pinboard's
+  fields in Pinboard's order, plus its permalink, newest first as `posts/all` returns
+  them. `npm run validate:site` checks it against `data/links/` field by field, so the
+  published copy alone could restore the public bookmarks.
 - The 358 private bookmarks live only in the raw export on the Mac. That file is the
   one copy of them outside Pinboard; it belongs in the sysadmin critical-state backup
   bundle (a request for the Systems Administrator, not a change here).
@@ -527,17 +537,24 @@ the mirror is kept lossless and Pinboard-shaped, not merely sufficient for pages
   when new links arrive and are committed from here.
 - **Checks**: lint, format, types, unit tests on the data module and the URL
   normaliser, `validate:data` (no private links, no unknown fields),
-  `validate:site` (every page in the sitemap, every internal link resolves), browser
-  tests at three widths with analytics blocked.
+  `validate:site` (every page in the sitemap, every internal link resolves; every
+  feed parses and holds the right records with Central dates; the dataset files match
+  `data/`; every site URL in a feed, data or llms file is built; one on-this-day page
+  per day; Tinylytics only in a production build), browser tests at three widths with
+  analytics blocked.
 - **Analytics and kudos**: Tinylytics, one script in the layout with `?kudos=custom`,
   production host only; a Like on every record (`class="tinylytics_kudos"`,
   `data-private`, the POAP `Kudos.astro` pattern) keyed on `/links/<id>/`. QA never
   sends a hit or a kudos, and the site check fails if a request reaches
-  tinylytics.app. Needs a Tinylytics site for links.thingelstad.xyz, created in phase 1.
+  tinylytics.app. Built 2026-10-23 on site 3842: the script is in the build only when
+  the deploy workflow sets `PUBLIC_TINYLYTICS_ENABLED=true`, and loads only on
+  links.thingelstad.xyz; `validate:site` fails if any other build mentions
+  tinylytics.app (`design/tinylytics.md`).
 - **Feeds**: RSS 2.0 and JSON Feed 1.1, as weekly.thingelstad.com ships them (`rss.njk`,
   `feed.njk`). The site feed carries the newest 50 links; each host and topic page has
-  its own pair. About 15,000 small feed files for 7,259 hosts, minutes of upload, no
-  other cost.
+  its own pair. Measured 2026-10-23: 14,128 host feed files for 7,064 hosts, 41 MB,
+  about 1.5 s of build, so every host keeps its pair (the fallback was the 428 hosts
+  with five or more links).
 - **The sites strip**: Linking Things joins `sites.json` and the strip when it is
   done (Jamie, 2026-10-23: "99% sure"). The layout vendors `tokens.css` and carries the
   shared h-card and `rel=me` from the start, so joining is one registry line.
@@ -594,7 +611,8 @@ marked. None is in a phase until Jamie says so.
 - **Notes that are essays.** The longest notes (the longest is 23,492 characters) are
   posts in all but name. A page of the hundred longest, newest first.
 - **Surprise me, and on this day.** A random record from the home page, and the
-  on-this-day page across the years, which the Librarian can also answer from.
+  on-this-day page across the years, which the Librarian can also answer from. On
+  this day is built (`/on-this-day/`, 2026-10-23).
 
 **People**
 
