@@ -124,7 +124,16 @@ if (edge)
   ]) {
     const response = await fetch(base + from, { redirect: 'manual' });
     assert.equal(response.status, 301, `${from} redirects`);
-    assert.equal(response.headers.get('location'), to, `${from} goes to ${to}`);
+    // CloudFront sorts query parameters before the function sees them, so the
+    // live redirect may carry them in another order. Same path, same pairs.
+    const got = new URL(response.headers.get('location'), base);
+    const want = new URL(to, base);
+    assert.equal(got.pathname, want.pathname, `${from} goes to ${to}`);
+    assert.deepEqual(
+      [...got.searchParams].sort(),
+      [...want.searchParams].sort(),
+      `${from} keeps its query`,
+    );
   }
 
 assert.deepEqual(errors, [], 'no console or page errors');
