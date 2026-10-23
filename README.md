@@ -23,11 +23,14 @@ Everything a page shows is also data, built with the pages:
   Pinboard's order (`id, hash, url, title, note, saved, tags, toread, meta`) plus its
   `permalink`. `/hosts.json` (host, count, first, last, url) and `/issues.json` (the
   Weekly Thing join, with each issue's page here).
-- `/llms.txt` (llmstxt.org) and `/llms-full.txt`, every Markdown twin, newest first.
+- `/llms.txt` (llmstxt.org), which lists `/years/<yyyy>/llms.txt`: every record saved
+  that year (Central), newest first, as a slim row with the note in full. The largest
+  year is under 1 MB.
+- `/newest/` is the newest 50 as a page.
 
 ## Analytics
 
-Tinylytics and the Like on each record load only from a production build:
+Tinylytics and the public Kudos on each record load only from a production build:
 `PUBLIC_TINYLYTICS_ENABLED=true`, which the deploy workflow sets for `npm run build`
 and `npm run validate:site`, and only on links.thingelstad.xyz. Every other build has
 no reference to tinylytics.app, and `npm run validate:site` fails if it does

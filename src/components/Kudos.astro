@@ -1,29 +1,35 @@
 ---
-// One Like per record (design/tinylytics.md), the POAP site's Kudos.astro:
-// Tinylytics finds the button by its class and counts it under data-path, the
-// record's permalink /links/<id>/, so the id must never change. The count
-// stays private (data-private). The status line says what a click did, for
-// screen readers and anyone else; where the embed is not loaded (any build
-// but production, any host but links.thingelstad.xyz) nothing is counted and
-// the line says so.
+// One Kudos button per record (design/tinylytics.md), after the POAP site's
+// Kudos.astro. Tinylytics finds the button by its class and counts it under
+// data-path, the record's permalink /links/<id>/, so the id must never
+// change. The count is public (Jamie, 2026-10-23): the layout loads the embed
+// with ?kudos=custom, which writes only the count into the empty button
+// (https://tinylytics.app/docs/widgets/kudos, "Emoji and custom markup"), so
+// the button stays empty here and the heart is drawn in CSS. Tinylytics adds
+// .did_select and disables the button once a visitor has given kudos.
+//
+// The button's name is the label beside it and then its own content, the
+// count. The status line says what a click did; where the embed is not
+// loaded (any build but production, any host but links.thingelstad.xyz)
+// nothing is counted and the line says so.
 interface Props {
   path: string;
-  title: string;
 }
-const { path, title } = Astro.props;
+const { path } = Astro.props;
+const key = `kudos-${path.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '')}`;
 ---
 
 <div class="kudos-row" data-kudos data-pagefind-ignore="all">
   <button
     type="button"
+    id={key}
     class="tinylytics_kudos kudos"
     data-path={path}
-    data-private="true"
-    aria-label={`Like ${title}`}
-    title="Like this link"
+    aria-labelledby={`${key}-label ${key}`}
+    title="Give kudos to this link"
   ></button>
-  <span class="kudos-label" aria-hidden="true">
-    Like
+  <span class="kudos-label" id={`${key}-label`} aria-hidden="true">
+    Kudos
   </span>
   <span class="kudos-notice" role="status"></span>
 </div>
@@ -36,12 +42,12 @@ const { path, title } = Astro.props;
     // Tinylytics marks a button it has counted with did_select.
     new MutationObserver(() => {
       if (clicked && button.classList.contains('did_select'))
-        notice.textContent = 'Liked. Thank you.';
+        notice.textContent = 'Kudos given. Thank you.';
     }).observe(button, { attributes: true, attributeFilter: ['class'] });
     button.addEventListener('click', () => {
       clicked = true;
       if (document.documentElement.dataset.tinylytics !== 'on')
-        notice.textContent = 'Likes count on the published site only.';
+        notice.textContent = 'Kudos are counted on the published site only.';
     });
   }
 </script>

@@ -1,6 +1,6 @@
-// Feeds, the dataset files, llms.txt and on this day (src/lib/feeds.ts,
-// src/lib/dataset.ts, src/lib/data.ts), checked on the real data/. The built
-// files themselves are checked by npm run validate:site.
+// Feeds, the dataset files, llms.txt and the year llms files
+// (src/lib/feeds.ts, src/lib/dataset.ts, src/lib/data.ts), checked on the real
+// data/. The built files themselves are checked by npm run validate:site.
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { test } from 'node:test';
@@ -65,9 +65,9 @@ test('paths come from data.ts', () => {
     data.feedPath('rss', data.hostPath('feedbin.com')),
     '/hosts/feedbin.com/feed.xml',
   );
-  assert.equal(data.onThisDayPath(), '/on-this-day/');
-  assert.equal(data.onThisDayPath('10-23'), '/on-this-day/10-23/');
   assert.equal(data.datasetPath.links, '/links.json');
+  assert.equal(data.yearLlmsPath(2019), '/years/2019/llms.txt');
+  assert.equal(data.newestPath, '/newest/');
 });
 
 test('the site feed is the newest 50 links', () => {
@@ -146,23 +146,6 @@ test('feed text is escaped for XML', () => {
   assert.ok(rss.includes('a=1&amp;amp;b=2'));
 });
 
-test('on this day groups by Central calendar day', () => {
-  const total = [...data.linksByMonthDay.values()].reduce(
-    (sum, list) => sum + list.length,
-    0,
-  );
-  assert.equal(total, data.links.length);
-  assert.deepEqual(data.monthDays, [...data.monthDays].sort());
-  // 04:58 UTC on New Year's Day 2011 is December 31 in Central.
-  assert.ok(
-    data.linksByMonthDay
-      .get('12-31')
-      .some((link) => link.id === '698e834d2c11'),
-  );
-  assert.equal(data.monthDayLabel('02-29'), 'February 29');
-  assert.equal(data.monthDayLabel('10-03'), 'October 3');
-});
-
 test('links.json is every record exactly as data/links has it', () => {
   const doc = JSON.parse(dataset.linksDocument('2026-10-23T00:00:00.000Z'));
   assert.deepEqual(Object.keys(doc), ['site', 'generated', 'count', 'links']);
@@ -215,10 +198,72 @@ test('llms.txt has the llmstxt.org shape', () => {
     '/hosts.json',
     '/issues.json',
     '/feed.json',
-    '/llms-full.txt',
+    '/newest/',
+    ...data.years.map((year) => `/years/${year}/llms.txt`),
   ])
     assert.ok(text.includes(`(https://links.thingelstad.xyz${path})`), path);
   assert.ok(text.includes('`/links/<id>.md`'));
-  // No em-dash (U+2014) anywhere.
+  assert.ok(!text.includes('llms-full'));
+  assert.ok(!text.includes('on-this-day'));
+  // No em-dash (U+2014) anywhere, and no Pinboard in what readers see.
   assert.ok(!text.includes('\u2014'));
+  assert.ok(!/pinboard/i.test(text));
+});
+
+test('the year llms files hold every record once, in its Central year', () => {
+  const files = dataset.llmsYears();
+  assert.deepEqual(
+    files.map((file) => file.year),
+    [...data.years].reverse(),
+  );
+  const seen = files.flatMap((file) =>
+    [
+      ...file.text.matchAll(
+        /^- Record: https:\/\/links\.thingelstad\.xyz\/links\/([0-9a-f]{12})\/$/gm,
+      ),
+    ].map((m) => {
+      assert.equal(data.linkById.get(m[1]).year, file.year, m[1]);
+      return m[1];
+    }),
+  );
+  assert.equal(seen.length, data.links.length);
+  assert.equal(new Set(seen).size, data.links.length);
+  for (const file of files) {
+    assert.ok(file.text.startsWith(`# Linking Things: ${file.year}\n`));
+    assert.equal(file.bytes, Buffer.byteLength(file.text));
+    assert.ok(file.bytes < 4_000_000, `${file.year} is ${file.bytes} bytes`);
+    // Slimmer than the twin: no same-host or same-week rows.
+    assert.ok(!file.text.includes('## Same host'));
+    assert.ok(!file.text.includes('## Saved the same week'));
+  }
+});
+
+test('a year llms record: title, URL, date and host, issues, permalink, note', () => {
+  const link = data.links.find(
+    (l) => data.appearances.has(l.id) && l.hasNote && l.tags.length,
+  );
+  const record = dataset.llmsRecord(link);
+  const lines = record.split('\n');
+  assert.equal(lines[0], `## ${link.title.trim()}`);
+  assert.ok(record.includes(`- <${link.url}>\n`));
+  assert.ok(
+    record.includes(`- Saved ${data.dateLabel(link.saved)}, ${link.host}\n`),
+  );
+  assert.ok(record.includes(`- Tags: ${link.tags.join(', ')}\n`));
+  const issue = data.appearances.get(link.id)[0].issue;
+  assert.ok(record.includes(`(${issue.url})`));
+  assert.ok(
+    record.includes(
+      `- Record: https://links.thingelstad.xyz/links/${link.id}/\n`,
+    ),
+  );
+  assert.ok(record.trimEnd().endsWith(link.note.trim()));
+  const excerpt = data.links.find((l) => l.voice === 'excerpt');
+  assert.ok(
+    dataset
+      .llmsRecord(excerpt)
+      .includes("From the page (probably an excerpt, not Jamie's words):"),
+  );
+  const bare = data.links.find((l) => !l.hasNote);
+  assert.ok(dataset.llmsRecord(bare).trimEnd().endsWith('/'));
 });

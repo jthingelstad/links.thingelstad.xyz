@@ -34,6 +34,7 @@ test('files pass through', () => {
     '/robots.txt',
     '/sitemap-index.xml',
     '/hosts/index.html',
+    '/years/2008/llms.txt',
     '/pagefind/pagefind-entry.json?ts=1761200000000',
     '/_astro/Layout.Bx3k.css',
   ])

@@ -119,7 +119,7 @@ deploy can fail to load an old chunk until it is reloaded.
 | JSON twins and other `.json`                                            | `application/json`                                                           | the same                                       |
 | Markdown twins (`.md`)                                                  | `text/markdown; charset=utf-8`                                               | the same                                       |
 | Feeds, `feed.xml` and `feed.json` wherever they sit                     | `application/rss+xml; charset=utf-8`, `application/feed+json; charset=utf-8` | the same                                       |
-| Sitemaps (`.xml`), `robots.txt`, `llms.txt`, `llms-full.txt`            | `application/xml; charset=utf-8`, `text/plain; charset=utf-8`                | the same                                       |
+| Sitemaps (`.xml`), `robots.txt`, `llms.txt`, `years/<yyyy>/llms.txt`    | `application/xml; charset=utf-8`, `text/plain; charset=utf-8`                | the same                                       |
 | Pagefind's entry file, scripts and wasm                                 | JSON, JavaScript, `application/octet-stream`                                 | the same                                       |
 | `_astro/` bundles and fonts, Pagefind `.pf_*` chunks (named by content) | by extension                                                                 | `public,max-age=31536000,immutable`            |
 | `favicon.svg`                                                           | `image/svg+xml`                                                              | `public,max-age=3600`                          |
@@ -134,7 +134,8 @@ directly under `hosts/`; the deploy refuses one.
 CloudFront compresses with Brotli or gzip for clients that ask, for the types on its list
 (HTML, JSON, XML, CSS, JavaScript, plain text, SVG) between 1 KB and 10 MB. Markdown
 (`text/markdown`) is not on that list, so the twins (2 KB on average) go uncompressed,
-and so would a single JSON file over 10 MB. A client that sends no `Accept-Encoding`
+and so would a single JSON file over 10 MB. The year llms files are under 1 MB each, so
+they are compressed. A client that sends no `Accept-Encoding`
 (Python's urllib, curl without `--compressed`) gets the plain bytes.
 
 ## The Pinboard sync runs on the Mac, not in CI

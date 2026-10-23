@@ -254,16 +254,14 @@ export const datasetPath = {
   hosts: '/hosts.json',
   issues: '/issues.json',
   llms: '/llms.txt',
-  llmsFull: '/llms-full.txt',
 } as const;
-// On this day: /on-this-day/ is every calendar day, /on-this-day/MM-DD/ one.
-export const onThisDayPath = (monthDay?: string) =>
-  monthDay ? `/on-this-day/${monthDay}/` : '/on-this-day/';
+// Every record for language models, a file per year beside the year's page
+// (dataset.ts).
+export const yearLlmsPath = (year: number) => `${yearPath(year)}llms.txt`;
+// The newest links as a page, the site feed's links.
+export const newestPath = '/newest/';
 
-// Elsewhere. Pinboard's own bookmark ids are private (DIRECTION.md, "The id"),
-// so a record offers a search for its URL in Jamie's account instead.
-export const pinboardSearchUrl = (url: string) =>
-  `https://pinboard.in/search/u:jthingelstad?query=${encodeURIComponent(url)}`;
+// Elsewhere: the Wayback Machine's copies of the destination.
 export const waybackUrl = (url: string) =>
   `https://web.archive.org/web/*/${url}`;
 
@@ -381,19 +379,6 @@ for (const link of links) {
 }
 export const years = [...linksByYear.keys()].sort((a, b) => a - b);
 
-// On this day: every link by its Central calendar day, MM-DD, across the
-// years, oldest first. Only days with a link are listed.
-export const linksByMonthDay = new Map<string, Link[]>();
-for (const link of links) {
-  const monthDay = link.day.slice(5);
-  const list = linksByMonthDay.get(monthDay) ?? [];
-  list.push(link);
-  linksByMonthDay.set(monthDay, list);
-}
-export const monthDays = [...linksByMonthDay.keys()].sort();
-export const monthDayLabel = (monthDay: string) =>
-  `${monthNames[Number(monthDay.slice(0, 2)) - 1]} ${Number(monthDay.slice(3))}`;
-
 // The others nearest in time to a link, from a list it belongs to.
 function nearest(link: Link, list: Link[], limit: number) {
   const t = Date.parse(link.saved);
@@ -454,15 +439,3 @@ export const counts = {
 export const number = (n: number) => n.toLocaleString('en-US');
 export const plural = (n: number, one: string, many = `${one}s`) =>
   `${number(n)} ${n === 1 ? one : many}`;
-
-// One link for the home page, chosen at build: the same all day (Central),
-// different the next. Drawn from the notes in Jamie's own words.
-export function linkOfTheDay(now = new Date()) {
-  const pool = links.filter(
-    (link) => link.voice === 'jamie' || link.voice === 'mixed',
-  );
-  let seed = 0;
-  for (const char of centralDay(now.toISOString()))
-    seed = (seed * 31 + char.charCodeAt(0)) >>> 0;
-  return pool[seed % pool.length];
-}

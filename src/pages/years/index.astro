@@ -1,12 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import {
-  linksByYear,
-  number,
-  onThisDayPath,
-  yearPath,
-  years,
-} from '../../lib/data';
+import { linksByYear, number, yearPath, years } from '../../lib/data';
 const max = Math.max(...years.map((y) => linksByYear.get(y)!.length));
 ---
 
@@ -15,10 +9,7 @@ const max = Math.max(...years.map((y) => linksByYear.get(y)!.length));
   description="Links saved by year, 2005 to now."
 >
   <h1 class="page-title">Years</h1>
-  <p class="lede">
-    Links saved each year, in US Central time. Or by calendar day:{' '}
-    <a href={onThisDayPath()}>on this day</a> in every year.
-  </p>
+  <p class="lede">Links saved each year, in US Central time.</p>
   <ul class="bars">
     {years.map((y) => {
       const n = linksByYear.get(y)!.length;

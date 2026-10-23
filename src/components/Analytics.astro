@@ -5,7 +5,8 @@
 // plain npm run build) carries no reference to tinylytics.app at all, and
 // tools/validate-site.py fails if one does. Even the production build loads
 // the script only on links.thingelstad.xyz, so serving dist/ anywhere else
-// sends nothing. ?kudos=custom lets Kudos.astro draw the Like.
+// sends nothing. ?kudos=custom writes only the count into each Kudos button,
+// which Kudos.astro draws itself.
 const analytics =
   import.meta.env.PROD && import.meta.env.PUBLIC_TINYLYTICS_ENABLED === 'true';
 ---

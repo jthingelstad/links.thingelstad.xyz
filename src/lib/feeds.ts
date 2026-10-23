@@ -37,7 +37,7 @@ export interface Feed {
 export const siteFeed: Feed = {
   title: SITE_NAME,
   description:
-    'The newest links Jamie Thingelstad has saved to Pinboard, with what Jamie wrote about them.',
+    'The newest links Jamie Thingelstad has saved, with what Jamie wrote about them.',
   page: '/',
   links: newest.slice(0, FEED_SIZE),
 };

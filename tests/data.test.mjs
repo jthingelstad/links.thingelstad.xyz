@@ -9,6 +9,7 @@ import { createHash } from 'node:crypto';
 import { readdirSync, readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import * as data from '../src/lib/data.ts';
+import * as day from '../src/lib/day.ts';
 import { normalizeUrl } from '../src/lib/normalize.ts';
 
 const raw = readdirSync('data/links')
@@ -301,10 +302,31 @@ test('normalisation agrees with tools/linking/urls.py on every URL', () => {
   assert.deepEqual(differ.slice(0, 10), []);
 });
 
-test('the link of the day is the same all day and has a note', () => {
-  const morning = data.linkOfTheDay(new Date('2026-10-23T11:00:00Z'));
-  const evening = data.linkOfTheDay(new Date('2026-10-24T04:00:00Z'));
-  assert.equal(morning.id, evening.id);
-  assert.ok(morning.hasNote);
-  assert.ok(morning.voice === 'jamie' || morning.voice === 'mixed');
+test('the pick of the day is the same all day, in Central', () => {
+  const pool = data.links.slice(0, 1000);
+  // 11:00 UTC on the 23rd and 04:00 UTC on the 24th are both October 23 in
+  // Central.
+  const morning = day.ofTheDay(pool, new Date('2026-10-23T11:00:00Z'));
+  const evening = day.ofTheDay(pool, new Date('2026-10-24T04:00:00Z'));
+  assert.equal(morning, evening);
+  const days = new Set(
+    Array.from({ length: 30 }, (_, i) =>
+      day.ofTheDay(pool, new Date(Date.UTC(2026, 9, 1 + i, 18))),
+    ),
+  );
+  assert.ok(days.size > 1, 'another pick on other days');
+  assert.equal(day.ofTheDay([]), undefined);
+  // The browser's Central date (day.ts) is the build's (data.ts), across
+  // both clock changes of 2026 and every saved time.
+  const instants = [
+    '2026-03-08T07:59:59Z',
+    '2026-03-08T08:00:00Z',
+    '2026-11-01T05:59:59Z',
+    '2026-11-01T06:00:00Z',
+    ...data.links.map((link) => link.saved),
+  ];
+  const differ = instants.filter(
+    (iso) => day.centralDate(new Date(iso)) !== data.centralDay(iso),
+  );
+  assert.deepEqual(differ, []);
 });

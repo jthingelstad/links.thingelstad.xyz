@@ -33,6 +33,7 @@ const path = (url) => new URL(url).pathname;
 const routes = [
   '/',
   '/search/',
+  '/newest/',
   '/hosts/',
   '/issues/',
   '/years/',

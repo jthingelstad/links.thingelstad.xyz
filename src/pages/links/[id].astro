@@ -24,7 +24,6 @@ import {
   monthPath,
   noteHtml,
   noteText,
-  pinboardSearchUrl,
   plural,
   shortDateLabel,
   timeLabel,
@@ -76,7 +75,7 @@ const description = link.hasNote
       <p class="record-url" data-pagefind-ignore title={link.url}>
         {displayUrl(link.url)}
       </p>
-      <Kudos path={linkPath(link.id)} title={link.title} />
+      <Kudos path={linkPath(link.id)} />
     </header>
 
     <div class="record-body">
@@ -129,9 +128,6 @@ const description = link.hasNote
           <ul class="elsewhere">
             <li>
               <a href={waybackUrl(link.url)}>Wayback Machine copies</a>
-            </li>
-            <li>
-              <a href={pinboardSearchUrl(link.url)}>Find it on Pinboard</a>
             </li>
             <li>
               This record as <a href={linkJsonPath(link.id)}>JSON</a> or{' '}
