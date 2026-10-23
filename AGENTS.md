@@ -6,8 +6,8 @@ https://links.thingelstad.xyz/. The design is `docs/DIRECTION.md` and the data c
 is `docs/DATA.md`; read them before changing structure, URLs or data.
 
 - Built with Astro and TypeScript on the POAP pattern (`poap.thingelstad.xyz`): static
-  output, Pagefind over the record pages only, minimal JavaScript (search, the Like's
-  status line on record pages, and the go-to-today line on `/on-this-day/`), no
+  output, Pagefind over the record pages only, minimal JavaScript (search, the Kudos
+  status line on record pages, and turning the home page to today's quote), no
   frameworks, nothing fetched at serve time from another host. The exceptions are the
   footer photo, `owner.avatar` from `shared/sites.json`, and Tinylytics, one script in
   production builds only (`PUBLIC_TINYLYTICS_ENABLED=true`, set by the deploy
@@ -22,14 +22,19 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   `npm test` checks that on every URL.
 - **URLs are fixed** (DIRECTION.md, "Pages"): `/links/<id>/` with its `.json` and `.md`
   twins, `/hosts/<host>/`, `/issues/<n>/` (the Weekly Thing archive key, `140-special`
-  for the special issue), `/years/<yyyy>/`, `/on-this-day/<mm>-<dd>/`, `/search/`,
+  for the special issue), `/years/<yyyy>/` with its `llms.txt`, `/newest/`, `/search/`,
   the feeds (`feed.xml` and `feed.json` at the root and under each host page) and
-  `/links.json`, `/hosts.json`, `/issues.json`, `/llms.txt`, `/llms-full.txt`. Kudos,
+  `/links.json`, `/hosts.json`, `/issues.json`, `/llms.txt`. Kudos,
   feed readers, the Librarian and WT Builder depend on them. `src/lib/data.ts` is the
   one place they are formed.
 - **Times** are stored in UTC and shown in US Central, and years, months, weeks and
-  on-this-day days are Central too. Feed dates are Central with the real offset
+  the quote of the day turn over in Central too. Feed dates are Central with the real offset
   (RFC 822 in RSS, RFC 3339 in JSON Feed).
+- **Reader-facing text never names Pinboard** (Jamie, 2026-10-23: "nobody needs to
+  know pinboard exists"): pages, twins, feeds and llms files. Code comments and the
+  docs may. Nor does any page say whether a link still works; links are not checked.
+- **Prose is content.** The home page's quotes are `content/quotes.md` (format at the
+  top of the file); a malformed entry fails the build with its line number.
 - **Jamie's sites.** The strip, the footer h-card, the rel=me links and the shared type
   (`shared/sites.json`, `shared/tokens.css`, `shared/fonts/`) are vendored from
   `../thingelstad.com/shared/` by `npm run sites:sync`; `npm run sites:check` fails on

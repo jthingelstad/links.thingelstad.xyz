@@ -43,7 +43,9 @@ graph. That is the difference to protect.
   I've built. The link becomes the unit the Librarian reasons with; the Weekly Thing
   as a source is mostly subsumed by the blog and the links as specific units, and the
   Weekly Thing stays indexed too (section "The Librarian").
-- **Tinylytics is on this site, with a Like on every link** powered by kudos.
+- **Tinylytics is on this site, with public Kudos on every link** (the name, Jamie,
+  2026-10-23: "let's use that name instead of like"), the count shown the way
+  Tinylytics shows it.
 - **RSS and JSON Feed** for the site, every host and every topic.
 
 ## What we have (measured 2026-10-23)
@@ -93,7 +95,7 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 
 | URL | What |
 | --- | --- |
-| `/` | A search box, a line of numbers (links, hosts, years), the newest links, a random link |
+| `/` | Built as a search box, like Google's front page (Jamie, 2026-10-23): the wordmark, the box, how many links are in the index and the years they span, and a row of ways in (Newest, Years, Hosts, Issues, Stats, Feed; Topics goes first once topic pages exist). A quote of the day from `content/quotes.md` when it holds any; nothing while it is empty. The site header is left off this page |
 | `/search/?q=` | Results: title, host, saved date, a snippet of the note, a WT chip; filters for topic, year, in a Weekly Thing, has a note; sort by relevance or date |
 | `/links/<id>/` | The record (below). `<id>` is the first 12 hex characters of md5 of the saved URL, which is Pinboard's API `hash`; anyone can compute it from the URL |
 | `/links/<id>.json`, `/links/<id>.md` | Machine twins of the record, the Things I've built pattern |
@@ -101,13 +103,13 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 | `/issues/<n>/` | The links that appeared in Weekly Thing n, in issue order, pointing at weekly.thingelstad.com/archive/n/ |
 | `/topics/<slug>/` | Links in a topic, co-topics, the hosts and issues most present in it (phase 3) |
 | `/years/<yyyy>/` | The year's links by month |
-| `/on-this-day/<mm>-<dd>/` | Built: one page per Central calendar day with a link (366), the day's links in every year, newest year first, with the previous and next day. `/on-this-day/` is a twelve-month grid of days with their counts; with JavaScript it goes straight to today (Central), and `/on-this-day/#days` stays on the grid. In the sitemap, not in the search index |
+| `/newest/` | Built: the newest 50 links, the site feed's links, as a page |
 | `/stats/` | Linking volume along its dimensions (section "Statistics") |
 | `/about/` | The homage, in Jamie's words: what this is, why links matter, how it is made |
 | `/feed.xml`, `/feed.json` | The newest 50 links as RSS 2.0 and JSON Feed 1.1, the Link Thing feed reborn; every host and topic page carries its own pair at `feed.xml` and `feed.json` under its path. Built for the site and all 7,064 host pages (the host's newest 50); topics with the topic pages. Each item is the record: its permalink as link and id, the destination and the note as content, Central dates with the real offset, tags as categories. Every page advertises the site pair; a host page advertises its own first |
 | `/links.json`, `/hosts.json`, `/issues.json`, `/topics.json` | The whole public dataset. Built: `links.json` (every record, newest first, Pinboard's fields plus `permalink`; section "If Pinboard went away"), `hosts.json` (host, count, first, last, url) and `issues.json` (the join, with each issue's `page` here and each saved link's `permalink`). `topics.json` comes with topics |
 | `/links.db` | The SQLite database the site is built from, public fields only |
-| `/llms.txt`, `/llms-full.txt` | As on every other site of Jamie's. Built: `llms.txt` in llmstxt.org's shape (the data files, the record shape, the pages); `llms-full.txt` is every Markdown twin, newest first, under a short header (36 MB) |
+| `/llms.txt`, `/years/<yyyy>/llms.txt` | As on every other site of Jamie's. Built: `llms.txt` in llmstxt.org's shape (the data files, the record shape, the pages, and each year's file with its link count and size). A year's file holds every record saved in that Central year, newest first, as a slim row: title, URL, date saved and host, tags, the issues it appeared in, the permalink, then the note in full. 22 files, 10.5 MB together, the largest (2008) 0.8 MB; a year past about 4 MB would split by month, and `validate:site` fails one. They replaced `llms-full.txt` (every twin in one 36 MB file) on 2026-10-23 |
 
 ### The id
 
@@ -136,14 +138,15 @@ private ids. So:
 
 - Linking Things ids are md5-based and ours; they are not Pinboard's `b:` ids, and
   the two never need to agree.
-- A record cannot link to its exact Pinboard page from API data. "Elsewhere" offers a
-  Pinboard search for the URL within the account instead, and the Wayback copy.
+- A record cannot link to its exact Pinboard page from API data, and it does not
+  try: no page sends a reader to Pinboard (Jamie, 2026-10-23). "Elsewhere" on the
+  record is the Wayback copy and the record's JSON and Markdown twins.
 - "N others on Pinboard" (3, 8, 13, 40 on the pasted page) is a connection to the
   Pinboard commons the API does not expose; it stays out unless the archive export
   carries it.
 - The archive export may name each bookmark's folder by the `cached/` id, which is
-  the `b:` id. If it does, the mapping arrives free and the Pinboard permalink comes
-  back; check on the day the archive lands.
+  the `b:` id. If it does, the mapping arrives free, as data (still no link to
+  Pinboard on the record); check on the day the archive lands.
 
 Also confirmed from the paste: Pinboard's web pages show times in US Central
 (12:35:06 on the page is 17:35:06Z in the export), and the API is UTC; the `☑` beside
@@ -160,20 +163,22 @@ the date saved (US Central). Under it:
 - **Appears in.** WT350, Notable, with a link to the issue; blog posts and episodes
   that link it, from the Librarian.
 - **About the page.** Description, author, published date, language, reading time,
-  the feed it advertises, whether it is still up (status, or where it redirects now),
-  first and latest Wayback capture, the date Pinboard archived it.
+  the feed it advertises, first and latest Wayback capture.
 - **Connections.** Same host; same issue; mentioned by other notes; cited by (saved
   pages whose own links point here); cites (where this page links, among saved
   links); same topics; similar; saved the same week.
-- **Elsewhere.** A Pinboard search for the URL in Jamie's account (the exact
-  Pinboard permalink is a private id, section "The id"); the Wayback copy.
-- **Like.** A Tinylytics kudos button keyed on the permalink, the POAP site's per-drop
-  pattern, with the count so far. Built with the count private
-  (`data-private="true"`, `design/tinylytics.md`); showing it is Jamie's call.
+- **Elsewhere.** The Wayback Machine's copies, and the record as JSON and Markdown.
+  Nothing on any page names Pinboard: "nobody needs to know pinboard exists" (Jamie,
+  2026-10-23).
+- **Kudos.** A Tinylytics kudos button keyed on the permalink, the POAP site's
+  per-drop pattern, with its public count beside a heart (`design/tinylytics.md`).
+  Jamie, 2026-10-23: "The kudos button (let's use that name instead of like) is of
+  course public. That is how that feature of tinylytics works."
 
-A record must stand on its own after the destination dies. About 7% of hosts are
-gone already, and far more pages. The title, note, page facts and Wayback link are
-the memorial.
+A record stands on its own: the title, the note, the page facts and the Wayback link
+are what was saved, whatever the destination does later. Links are not checked, and
+no page says whether a destination still works: "You don't need to validate the
+links. They just are." (Jamie, 2026-10-23).
 
 ### Links that are nothing but a link
 
@@ -240,10 +245,11 @@ readers and machines. Dimensions, all from data already in hand:
   share of links on the ten largest hosts (concentration) by year.
 - The Weekly Thing: links per issue over time, sections, the share of a week's saved
   links that were published (the cutting-room floor, in aggregate).
-- Once enrichment lands: alive versus gone by year saved, redirected versus direct,
-  domains that changed hands; once topics land, topics by year.
+- Once enrichment lands: domains that changed hands (RDAP); once topics land, topics
+  by year.
 
-The home page's "line of numbers" is the first row of this page. The dataviz skill
+The home page's count (the links in the index and the years they span) is the first
+row of this page. The dataviz skill
 is loaded before any chart is drawn, so the charts read as one system in light and
 dark.
 
@@ -406,12 +412,12 @@ together hold 7,263 of them (44%). Measured 2026-10-23, public links:
 
 | Host or kind | Links | Treatment |
 | --- | --- | --- |
-| YouTube (youtube.com, youtu.be) | 287 | The video id is the key, so one video saved under two URL forms is one record. Title and channel from oEmbed (no key). A thumbnail fetched at build and stored with the site, shown as a click-to-play facade; the click loads the `youtube-nocookie.com` embed. No YouTube script until the visitor asks for the video. Removed videos are flagged. |
-| GitHub (github.com, gists) | 256 | A repository card: description, language, stars, license, archived, last push, from the REST API with the Actions token (the Things I've built stars collector pattern). An archived repository is GitHub's link rot. |
+| YouTube (youtube.com, youtu.be) | 287 | The video id is the key, so one video saved under two URL forms is one record. Title and channel from oEmbed (no key). A thumbnail fetched at build and stored with the site, shown as a click-to-play facade; the click loads the `youtube-nocookie.com` embed. No YouTube script until the visitor asks for the video. |
+| GitHub (github.com, gists) | 256 | A repository card: description, language, stars, license, archived, last push, from the REST API with the Actions token (the Things I've built stars collector pattern). |
 | Medium | 261 | Many moved to custom domains; the redirect chain is the fact. Author as the entity. |
 | macstories.net, daringfireball.net, kottke.org, simonwillison.net, tbray.org, seths.blog, stratechery.com, scripting.com, lethain.com and the other personal sites in the top 50 | 50 to 240 each | These hosts are people. The host page names the author, the feed, and the span of years; together they are the blogroll (section "Ideas beyond the brief", OPML). |
 | nytimes.com, arstechnica.com, techcrunch.com, theverge.com, theguardian.com, theatlantic.com, wired.com, bloomberg.com, economist.com, hbr.org | 45 to 204 each | Author and published date from page metadata; nothing more. |
-| tuaw.com, gigaom.com, readwrite.com | 131, 115, 58 | Dead or changed hands. The host page says when the site closed and links go to the Wayback copy by default. TUAW's domain was reported in 2024 to have been bought and refilled with generated articles under former writers' names: the case for RDAP and for "now at". |
+| tuaw.com, gigaom.com, readwrite.com | 131, 115, 58 | Closed or changed hands. The host page says when the site closed; its records carry the Wayback link, as every record does. TUAW's domain was reported in 2024 to have been bought and refilled with generated articles under former writers' names: the case for RDAP. |
 | Amazon | 142 | Mostly books. ASIN or ISBN from the URL; title, author and cover from Open Library; a "book" kind. Old affiliate tags stripped from the display URL. |
 | Substack | 115 | A newsletter kind; feed discovery; author entity. |
 | Vimeo | 64 | Same facade as YouTube, via oEmbed. |
@@ -443,7 +449,7 @@ don't want us to be a Wayback Machine". So:
   become the "cites" graph. Facts are published; bodies are not.
 - No excerpts on pages and none in the search index. If the archive turns out to hold
   something that changes this, it is a new decision, not a drift.
-- The public copy of a dead page is the Wayback Machine, linked from every record.
+- The public copy of a page is the Wayback Machine, linked from every record.
 - The 70 GB stays on the Mac. A private S3 snapshot (Glacier class, hash-pinned like
   nnxyz's datasets) is a backup choice, not a publishing one.
 - First thing to check in it: whether folders are named by Pinboard's `cached/` id
@@ -545,12 +551,14 @@ the mirror is kept lossless and Pinboard-shaped, not merely sufficient for pages
   normaliser, `validate:data` (no private links, no unknown fields),
   `validate:site` (every page in the sitemap, every internal link resolves; every
   feed parses and holds the right records with Central dates; the dataset files match
-  `data/`; every site URL in a feed, data or llms file is built; one on-this-day page
-  per day; Tinylytics only in a production build), browser tests at three widths with
-  analytics blocked.
+  `data/`; every site URL in a feed, data or llms file is built; the year llms files
+  hold every record exactly once, each in its own Central year; `/newest/` lists the
+  newest 50; a public Kudos button on every record; Tinylytics only in a production
+  build), browser tests at three widths with analytics blocked.
 - **Analytics and kudos**: Tinylytics, one script in the layout with `?kudos=custom`,
-  production host only; a Like on every record (`class="tinylytics_kudos"`,
-  `data-private`, the POAP `Kudos.astro` pattern) keyed on `/links/<id>/`. QA never
+  production host only; a public Kudos button on every record
+  (`class="tinylytics_kudos"`, the POAP `Kudos.astro` pattern, never `data-private`)
+  keyed on `/links/<id>/`, the count written in by the embed. QA never
   sends a hit or a kudos, and the site check fails if a request reaches
   tinylytics.app. Built 2026-10-23 on site 3842: the script is in the build only when
   the deploy workflow sets `PUBLIC_TINYLYTICS_ENABLED=true`, and loads only on
@@ -587,8 +595,6 @@ marked. None is in a phase until Jamie says so.
 - **The blogroll as OPML.** Once feed discovery runs, `blogroll.opml` lists the feeds
   behind the hosts Jamie links most: subscribe to the sites behind twenty-one years of
   links. Pairs with a `/blogroll/` page.
-- **Save to your Pinboard.** A link on every record to Pinboard's add form with the URL
-  and title filled in. On brand for the people most likely to visit.
 - **Webmentions, forward only.** Sending a Webmention to each newly saved page that
   accepts them is the IndieWeb way to say "Jamie linked to you". Never for the
   back catalogue. A product call.
@@ -602,12 +608,8 @@ marked. None is in a phase until Jamie says so.
 - **Firsts.** The first link to each platform: first YouTube video, first GitHub
   repository, first Medium post, first Substack, first OpenAI page. A one-page history
   of adoption.
-- **Link rot, measured.** The share of links still alive by the year they were saved,
-  as a chart; "The Dead" page listing closed hosts with their closing year and the
-  Wayback route; domains that changed hands (RDAP). Costs the liveness pass, which
-  phase 2 runs anyway.
-- **Then and now.** The title Jamie saved beside the page's current title, and the
-  redirect chain: "this page has moved three times since 2011".
+- **Domains that changed hands.** RDAP shows a host's domain registered again after
+  Jamie's last link to it: the TUAW story, told per host.
 
 **The editing, made visible**
 
@@ -616,9 +618,9 @@ marked. None is in a phase until Jamie says so.
   ones; this is the other half of the week.
 - **Notes that are essays.** The longest notes (the longest is 23,492 characters) are
   posts in all but name. A page of the hundred longest, newest first.
-- **Surprise me, and on this day.** A random record from the home page, and the
-  on-this-day page across the years, which the Librarian can also answer from. On
-  this day is built (`/on-this-day/`, 2026-10-23).
+- **Surprise me.** A random record, one more way in on the home page. (On this day
+  was built and then removed on 2026-10-23: Jamie was "not sure on-this-day is
+  meaningful for this data set". The Librarian's `on_this_day` still answers it.)
 
 **People**
 
@@ -634,7 +636,7 @@ size, the build time and the page weight; produces screenshots. Ends with `AGENT
 for the repo.
 
 **1. Launch.** Infrastructure, DNS, CI deploy, feeds, JSON and Markdown twins,
-`llms.txt`, About in Jamie's words, Tinylytics, weekly sync, a Things I've built
+`llms.txt` and a file per year, About in Jamie's words, Tinylytics, weekly sync, a Things I've built
 entry. Connections from existing data only.
 
 **2. Depth.** Liveness and redirects, host DNS and open-web signals, RDAP for the
@@ -663,8 +665,14 @@ Jamie, 2026-10-23, with the design's response:
 | RDAP | "I don't know what that is", then "RDAP yes, for sure" | In, phase 2, for the 428 hosts with five or more links first, the rest after. |
 | Joins the sites strip | 99% yes | Planned from the start; one registry line when done. |
 | Where the weekly sync runs | Defer; consider the Librarian's timing | Deferred; the `links-published` dispatch settles the ordering either way. |
+| A private Like, or a public count | "The kudos button (let's use that name instead of like) is of course public. That is how that feature of tinylytics works." | Named Kudos everywhere. The count shows: the embed's `?kudos=custom` writes it into a button the site draws, and `validate:site` fails a private one. `design/tinylytics.md`. |
+| `llms-full.txt` at 36 MB | "Trim. Probably by year or even year month?" | By year: `/years/<yyyy>/llms.txt`, slim rows, 22 files and 10.5 MB together, the largest 0.8 MB, so no month split; `llms.txt` lists them with counts and sizes. A year past 4 MB fails validation and would split by month. |
+| On this day | "I'm not sure on-this-day is meaningful for this data set?" | Removed: the 366 day pages, the grid, their checks and their helpers. |
+| Checking that links still work | "You don't need to validate the links. They just are." | No page promises a check. The "Link rot, measured" and "Then and now" ideas are dropped; the liveness and "now at" parts of sections "Enrichment" and "Connections" and of phase 2 are still to be brought in line. |
+| "Find it on Pinboard" on the record | "get rid of 'find it on pinboard' nobody needs to know pinboard exists." | Gone from every page, twin, feed and llms file; Elsewhere is the Wayback copy and the twins. The "Save to your Pinboard" idea is dropped. Maintainer docs still name Pinboard, as the source. |
+| The front page | "very much like Google's front page, where it's just a search box. I think there should be topics, so if you don't know what you want to search, you could do topics. Should show how many pages are in the index. I probably at some point will add like a quote from me on how amazing the hyperlink is. Maybe we have a collection of some quotes like that." | Built: the wordmark, the box and the count above the fold at 500 and 1200 px; a row of ways in, with Topics to go first once topic pages exist; quotes in `content/quotes.md`, one a day, nothing shown while it is empty. The newest links moved to `/newest/`. |
 
-Earlier, same day: the Librarian ingests the site; Tinylytics with a Like per link;
+Earlier, same day: the Librarian ingests the site; Tinylytics with kudos per link;
 RSS and JSON Feed; model cost at build only, never at serving. The name is Linking
 Things.
 
@@ -711,12 +719,13 @@ note 3,601. It is a label, never an assertion.
 - **Pagefind at 17,000 records.** Measured in the spike: it holds, with the two
   behaviours above handled in the browser; `pf_meta` is the fixed cost that grows.
 - **The archive format** is unknown until it lands. The adapter contains it.
-- **Link rot** is the normal state: 7% of hosts gone, more pages. The record page is
-  designed to outlive its destination.
+- **Destinations change.** Links are not checked ("They just are", Jamie,
+  2026-10-23), so no page says whether a destination works; every record carries its
+  Wayback link.
 - **Voice.** Old notes are excerpts, new ones commentary; a heuristic (quote mark,
   era, first person) labels them, and will be wrong sometimes.
 - **Pinboard's API** allows `posts/all` once per five minutes and returns 11 MB; the
   sync calls `posts/update` first and pulls only when the stamp moved.
 - **Copyright** of cached pages: facts only, by design.
-- **Pinboard's web ids are private.** No link from a record to its exact Pinboard
-  page, and no "others saved this", unless the archive export carries the ids.
+- **Pinboard's web ids are private.** No "others saved this" unless the archive
+  export carries the ids. Records do not link to Pinboard in any case.
