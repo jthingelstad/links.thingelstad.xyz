@@ -1,0 +1,78 @@
+{
+ "0cd51fbc50ef": {
+  "checked": "2026-10-23T21:39:52Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.engadget.com/opera-is-making-a-dedicated-crypto-browser-112602524.html",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "4cbd6f39319f": {
+  "checked": "2026-10-23T21:39:53Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://mailchi.mp/74b699625b8c/when-we-share-our-fears-we-might-learn-how-much-were-alike?e=0354acacc9",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "6189c5d1e067": {
+  "checked": "2026-10-23T21:39:53Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.eff.org/deeplinks/2022/08/inside-fog-data-science-secretive-company-selling-mass-surveillance-local-police",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "99c6e6a1461f": {
+  "checked": "2026-10-23T21:39:53Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://kottke.org/22/05/announcement-im-going-to-miss-you-but-i-am-taking-a-sabbatical",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "e06fa03a4636": {
+  "checked": "2026-10-23T21:39:54Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://interconnected.org/home/2022/10/10/servers",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "f22b23d27380": {
+  "checked": "2026-10-23T21:39:54Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://lethain.com/twitter/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "fdfba8e475a6": {
+  "checked": "2026-10-23T21:39:53Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.macstories.net/news/watchos-9-the-macstories-overview/",
+  "redirects": [],
+  "content_type": "text/html",
+  "wayback": {
+   "first": "2022-06-07T19:33:15Z",
+   "last": "2026-04-26T08:57:43Z",
+   "count": 17,
+   "checked": "2026-10-23T21:42:29Z"
+  }
+ }
+}

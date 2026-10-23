@@ -1,0 +1,84 @@
+{
+ "0b2b56e49832": {
+  "checked": "2026-10-23T21:36:52Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.tbray.org/ongoing/When/202x/2021/10/26/URI-based-Integration",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "1c6b7e02f0ed": {
+  "checked": "2026-10-23T21:39:52Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": null,
+  "alive": false,
+  "final_url": "https://blog.goodaudience.com/understanding-zero-knowledge-proofs-through-simple-examples-df673f796d99",
+  "redirects": [],
+  "content_type": null,
+  "error": "timeout"
+ },
+ "296dc438e0da": {
+  "checked": "2026-10-23T21:36:49Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://harpers.org/archive/2021/04/lost-in-thought-psychological-risks-of-meditation/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "69376e3297cc": {
+  "checked": "2026-10-23T21:36:52Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.bloomberg.com/news/articles/2021-06-08/microstrategy-boosts-bitcoin-linked-junk-bond-to-500-million",
+  "redirects": [],
+  "content_type": "text/html",
+  "wayback": {
+   "first": "2021-06-08T17:24:04Z",
+   "last": "2026-02-26T15:28:39Z",
+   "count": 34,
+   "checked": "2026-10-23T21:42:23Z"
+  }
+ },
+ "b43dc1908bb2": {
+  "checked": "2026-10-23T21:36:50Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://app.uniswap.org/",
+  "redirects": [
+   {
+    "status": 302,
+    "url": "https://app.uniswap.org/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "c7aca8a0b955": {
+  "checked": "2026-10-23T21:36:52Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://world.hey.com/dhh/your-likes-hearts-and-flattering-comments-are-bad-for-my-brain-649e9010",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "f23b546dd9c3": {
+  "checked": "2026-10-23T21:36:49Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://archivy.github.io/",
+  "redirects": [],
+  "content_type": "text/html"
+ }
+}

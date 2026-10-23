@@ -1,0 +1,43 @@
+{
+ "readwrite.com": {
+  "checked": "2026-10-23T21:26:36Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.19.73",
+    "172.66.154.141"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:1349",
+    "2606:4700:10::ac42:9a8d"
+   ],
+   "cname": null,
+   "ns": [
+    "athena.ns.cloudflare.com",
+    "chip.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "readwrite.com",
+   "registrar": "NameCheap, Inc.",
+   "registered": "2001-04-15",
+   "expires": "2034-04-15",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "athena.ns.cloudflare.com",
+    "chip.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:26:36Z"
+  }
+ }
+}

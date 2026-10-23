@@ -1,0 +1,136 @@
+{
+ "1d589b6ab9d1": {
+  "checked": "2026-10-23T21:34:27Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": null,
+  "alive": false,
+  "final_url": "http://jasonschaeffer.net/2008/11/24/online-ad-revenue/",
+  "redirects": [],
+  "content_type": null,
+  "error": "dns: name does not resolve"
+ },
+ "74caad491a79": {
+  "checked": "2026-10-23T21:34:17Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "https://gigaom.com/blog/comcast-docsis3-0-wideband/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://portal.gigaom.com/blog/comcast-docsis3-0-wideband/"
+   },
+   {
+    "status": 308,
+    "url": "https://portal.gigaom.com/blog/comcast-docsis3-0-wideband"
+   },
+   {
+    "status": 301,
+    "url": "https://gigaom.com/blog/comcast-docsis3-0-wideband/"
+   }
+  ],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ },
+ "8740b2772e5a": {
+  "checked": "2026-10-23T21:34:12Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "https://developer.yahoo.com/blogs/ydn/conversation-matt-mullenweg-7302.html",
+  "redirects": [],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ },
+ "892cc3a97081": {
+  "checked": "2026-10-23T21:34:21Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://arstechnica.com:443/uncategorized/2008/06/metallica-to-bloggers-dont-review-our-music/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://arstechnica.com:443/uncategorized/2008/06/metallica-to-bloggers-dont-review-our-music/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "9498cad9331d": {
+  "checked": "2026-10-23T21:34:20Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "https://gigaom.com/blog/amazon-opensolaris-on-ec2/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://portal.gigaom.com/blog/amazon-opensolaris-on-ec2/"
+   },
+   {
+    "status": 308,
+    "url": "https://portal.gigaom.com/blog/amazon-opensolaris-on-ec2"
+   },
+   {
+    "status": 301,
+    "url": "https://gigaom.com/blog/amazon-opensolaris-on-ec2/"
+   }
+  ],
+  "content_type": "text/html",
+  "error": "HTTP 404",
+  "wayback": {
+   "first": "2008-05-08T15:27:26Z",
+   "last": "2026-07-08T03:19:55Z",
+   "count": 42,
+   "checked": "2026-10-23T21:41:10Z"
+  }
+ },
+ "bf80ee7efcd2": {
+  "checked": "2026-10-23T21:34:27Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.delicioussafari.com/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://delicioussafari.com/"
+   },
+   {
+    "status": 301,
+    "url": "https://www.delicioussafari.com/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "f7014ea32c2f": {
+  "checked": "2026-10-23T21:34:14Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "https://gigaom.com/blog/419-fox-business-loses-domain-name-battle-due-to-laziness/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://portal.gigaom.com/blog/419-fox-business-loses-domain-name-battle-due-to-laziness/"
+   },
+   {
+    "status": 308,
+    "url": "https://portal.gigaom.com/blog/419-fox-business-loses-domain-name-battle-due-to-laziness"
+   },
+   {
+    "status": 301,
+    "url": "https://gigaom.com/blog/419-fox-business-loses-domain-name-battle-due-to-laziness/"
+   }
+  ],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ }
+}

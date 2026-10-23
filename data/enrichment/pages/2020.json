@@ -1,0 +1,94 @@
+{
+ "280b551b8d6a": {
+  "checked": "2026-10-23T21:45:05Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 429,
+  "alive": false,
+  "final_url": "https://www.startribune.com/sid-hartman-star-tribune-legendary-columnist-dies-at-100/572788662/?om_rid=1572228553&om_mid=1813162441",
+  "redirects": [],
+  "content_type": "text/html",
+  "error": "HTTP 429 (Vercel challenge)"
+ },
+ "77cf080def80": {
+  "checked": "2026-10-23T21:36:31Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.justinobeirne.com/new-apple-maps-continental-united-states",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "7cc4617896e6": {
+  "checked": "2026-10-23T21:36:36Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://onezero.medium.com/how-to-destroy-surveillance-capitalism-8135e6744d59",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "a0b7aa8c5ef9": {
+  "checked": "2026-10-23T21:45:05Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 403,
+  "alive": false,
+  "final_url": "https://www.nytimes.com/interactive/2020/06/08/upshot/when-epidemiologists-will-do-everyday-things-coronavirus.html",
+  "redirects": [],
+  "content_type": "text/html",
+  "error": "HTTP 403 (DataDome)",
+  "wayback": {
+   "first": "2020-06-08T10:10:43Z",
+   "last": "2026-09-17T23:34:58Z",
+   "count": 485,
+   "checked": "2026-10-23T21:42:16Z"
+  }
+ },
+ "c7830da55518": {
+  "checked": "2026-10-23T21:36:48Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://ftrain.medium.com/web-conversations-with-the-year-2000-f0c40fb8b19c",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "d6ee53a09eb3": {
+  "checked": "2026-10-23T21:36:35Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://feelthebyrn.blog/2020/04/30/this-is-lockdown/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "http://feelthebyrn.blog/2020/04/30/this-is-lockdown/"
+   },
+   {
+    "status": 301,
+    "url": "https://feelthebyrn.blog/2020/04/30/this-is-lockdown/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "fc9220f9ab06": {
+  "checked": "2026-10-23T21:36:34Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.spscommerce.com/community/articles/think-like-a-programmer/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.spscommerce.com/community/articles/think-like-a-programmer/"
+   }
+  ],
+  "content_type": "text/html"
+ }
+}

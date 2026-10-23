@@ -1,0 +1,526 @@
+{
+ "tbray.org": {
+  "checked": "2026-10-23T21:26:42Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.36.148.106"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.liquidmatter.ca",
+    "ns2.liquidmatter.ca"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "tbray.org",
+   "registrar": "DomainSite, Inc.",
+   "registered": "2003-02-22",
+   "expires": "2029-02-22",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1.liquidmatter.ca",
+    "ns2.liquidmatter.ca"
+   ],
+   "checked": "2026-10-23T21:26:42Z"
+  }
+ },
+ "tcbmag.com": {
+  "checked": "2026-10-23T21:29:18Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.135.42"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns0.dnsmadeeasy.com",
+    "ns1.dnsmadeeasy.com",
+    "ns2.dnsmadeeasy.com",
+    "ns3.dnsmadeeasy.com",
+    "ns4.dnsmadeeasy.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "tcbmag.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2005-11-29",
+   "expires": "2029-11-29",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns0.dnsmadeeasy.com",
+    "ns1.dnsmadeeasy.com",
+    "ns2.dnsmadeeasy.com",
+    "ns3.dnsmadeeasy.com",
+    "ns4.dnsmadeeasy.com"
+   ],
+   "checked": "2026-10-23T21:29:18Z"
+  }
+ },
+ "tech.mn": {
+  "checked": "2026-10-23T21:30:54Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "174.129.6.29",
+    "184.196.180.154"
+   ],
+   "aaaa": [],
+   "cname": "park.io",
+   "ns": [],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'tech.mn'"
+  },
+  "rdap": null,
+  "rdap_error": "no RDAP service for .mn"
+ },
+ "techcrunch.com": {
+  "checked": "2026-10-23T21:25:28Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.16.5",
+    "104.18.17.5"
+   ],
+   "aaaa": [
+    "2606:4700::6812:1005",
+    "2606:4700::6812:1105"
+   ],
+   "cname": null,
+   "ns": [
+    "elly.ns.cloudflare.com",
+    "gordon.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "techcrunch.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2005-06-10",
+   "expires": "2027-06-10",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "elly.ns.cloudflare.com",
+    "gordon.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:25:28Z"
+  }
+ },
+ "ted.com": {
+  "checked": "2026-10-23T21:28:48Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.237.107.19",
+    "98.91.173.106"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1133.awsdns-13.org",
+    "ns-191.awsdns-23.com",
+    "ns-1975.awsdns-54.co.uk",
+    "ns-882.awsdns-46.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "ted.com",
+   "registrar": "Name.com, Inc.",
+   "registered": "1994-11-08",
+   "expires": "2027-11-07",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1133.awsdns-13.org",
+    "ns-191.awsdns-23.com",
+    "ns-1975.awsdns-54.co.uk",
+    "ns-882.awsdns-46.net"
+   ],
+   "checked": "2026-10-23T21:28:48Z"
+  }
+ },
+ "theatlantic.com": {
+  "checked": "2026-10-23T21:26:11Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.133",
+    "151.101.66.133",
+    "151.101.130.133",
+    "151.101.194.133"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1221.awsdns-24.org",
+    "ns-1930.awsdns-49.co.uk",
+    "ns-332.awsdns-41.com",
+    "ns-930.awsdns-52.net",
+    "ns-cloud-b1.googledomains.com",
+    "ns-cloud-b2.googledomains.com",
+    "ns-cloud-b3.googledomains.com",
+    "ns-cloud-b4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "theatlantic.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "1995-08-15",
+   "expires": "2027-08-14",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns-1221.awsdns-24.org",
+    "ns-1930.awsdns-49.co.uk",
+    "ns-332.awsdns-41.com",
+    "ns-930.awsdns-52.net",
+    "ns-cloud-b1.googledomains.com",
+    "ns-cloud-b2.googledomains.com",
+    "ns-cloud-b3.googledomains.com",
+    "ns-cloud-b4.googledomains.com"
+   ],
+   "checked": "2026-10-23T21:26:11Z"
+  }
+ },
+ "theguardian.com": {
+  "checked": "2026-10-23T21:26:08Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.111",
+    "151.101.65.111",
+    "151.101.129.111",
+    "151.101.193.111"
+   ],
+   "aaaa": [
+    "2a04:4e42::367",
+    "2a04:4e42:200::367",
+    "2a04:4e42:400::367",
+    "2a04:4e42:600::367"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.p04.nsone.net",
+    "dns2.p04.nsone.net",
+    "dns3.p04.nsone.net",
+    "dns4.p04.nsone.net",
+    "ns01.theguardiandns.com",
+    "ns02.theguardiandns.com",
+    "ns03.theguardiandns.com",
+    "ns04.theguardiandns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "theguardian.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "1994-07-06",
+   "expires": "2027-07-05",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "dns1.p04.nsone.net",
+    "dns2.p04.nsone.net",
+    "dns3.p04.nsone.net",
+    "dns4.p04.nsone.net",
+    "ns01.theguardiandns.com",
+    "ns02.theguardiandns.com",
+    "ns03.theguardiandns.com",
+    "ns04.theguardiandns.com"
+   ],
+   "checked": "2026-10-23T21:26:08Z"
+  }
+ },
+ "thesweetsetup.com": {
+  "checked": "2026-10-23T21:27:36Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.26.242",
+    "172.67.168.158"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:1af2",
+    "2606:4700:3030::ac43:a89e"
+   ],
+   "cname": null,
+   "ns": [
+    "derek.ns.cloudflare.com",
+    "jacqueline.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "thesweetsetup.com",
+   "registrar": "Wild West Domains, LLC",
+   "registered": "2013-10-15",
+   "expires": "2027-10-15",
+   "status": [
+    "active"
+   ],
+   "nameservers": [
+    "derek.ns.cloudflare.com",
+    "jacqueline.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:27:36Z"
+  }
+ },
+ "theverge.com": {
+  "checked": "2026-10-23T21:25:35Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.91",
+    "151.101.65.91",
+    "151.101.129.91",
+    "151.101.193.91"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-11.awsdns-01.com",
+    "ns-1312.awsdns-36.org",
+    "ns-1883.awsdns-43.co.uk",
+    "ns-637.awsdns-15.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "theverge.com",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "1998-11-11",
+   "expires": "2027-11-10",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-11.awsdns-01.com",
+    "ns-1312.awsdns-36.org",
+    "ns-1883.awsdns-43.co.uk",
+    "ns-637.awsdns-15.net"
+   ],
+   "checked": "2026-10-23T21:25:35Z"
+  }
+ },
+ "tidbits.com": {
+  "checked": "2026-10-23T21:28:36Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.50.97",
+    "172.67.159.240"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:9ff0",
+    "2606:4700:3037::6815:3261"
+   ],
+   "cname": null,
+   "ns": [
+    "duke.ns.cloudflare.com",
+    "lady.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "tidbits.com",
+   "registrar": "easyDNS Technologies Inc.",
+   "registered": "1992-05-04",
+   "expires": "2034-05-05",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "duke.ns.cloudflare.com",
+    "lady.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:28:36Z"
+  }
+ },
+ "toolsandtoys.net": {
+  "checked": "2026-10-23T21:28:30Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.50.101",
+    "172.67.204.183"
+   ],
+   "aaaa": [
+    "2606:4700:3035::ac43:ccb7",
+    "2606:4700:3037::6815:3265"
+   ],
+   "cname": null,
+   "ns": [
+    "derek.ns.cloudflare.com",
+    "jacqueline.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "toolsandtoys.net",
+   "registrar": "Wild West Domains, LLC",
+   "registered": "2011-07-09",
+   "expires": "2027-07-09",
+   "status": [
+    "active"
+   ],
+   "nameservers": [
+    "derek.ns.cloudflare.com",
+    "jacqueline.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:28:30Z"
+  }
+ },
+ "tuaw.com": {
+  "checked": "2026-10-23T21:25:33Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "51.81.149.184"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.tuaw.com",
+    "ns2.tuaw.com",
+    "ns3.tuaw.com",
+    "ns4.tuaw.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "tuaw.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2004-06-16",
+   "expires": "2027-06-16",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.tuaw.com",
+    "ns2.tuaw.com",
+    "ns3.tuaw.com",
+    "ns4.tuaw.com"
+   ],
+   "checked": "2026-10-23T21:25:33Z"
+  }
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "hbr.org": {
+  "checked": "2026-10-23T21:27:02Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.162.163.54",
+    "3.162.163.56",
+    "3.162.163.83",
+    "3.162.163.113"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1175.awsdns-18.org",
+    "ns-1877.awsdns-42.co.uk",
+    "ns-469.awsdns-58.com",
+    "ns-604.awsdns-11.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "hbr.org",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "1996-12-05",
+   "expires": "2027-12-04",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-1175.awsdns-18.org",
+    "ns-1877.awsdns-42.co.uk",
+    "ns-469.awsdns-58.com",
+    "ns-604.awsdns-11.net"
+   ],
+   "checked": "2026-10-23T21:27:02Z"
+  }
+ }
+}

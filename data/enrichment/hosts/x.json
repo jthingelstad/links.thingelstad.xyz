@@ -1,0 +1,54 @@
+{
+ "xkcd.com": {
+  "checked": "2026-10-23T21:28:51Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.0.67",
+    "151.101.64.67",
+    "151.101.128.67",
+    "151.101.192.67"
+   ],
+   "aaaa": [
+    "2a04:4e42::67",
+    "2a04:4e42:200::67",
+    "2a04:4e42:400::67",
+    "2a04:4e42:600::67"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-cloud-d1.googledomains.com",
+    "ns-cloud-d2.googledomains.com",
+    "ns-cloud-d3.googledomains.com",
+    "ns-cloud-d4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "xkcd.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2003-01-26",
+   "expires": "2028-01-26",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-cloud-d1.googledomains.com",
+    "ns-cloud-d2.googledomains.com",
+    "ns-cloud-d3.googledomains.com",
+    "ns-cloud-d4.googledomains.com"
+   ],
+   "checked": "2026-10-23T21:28:51Z"
+  }
+ }
+}

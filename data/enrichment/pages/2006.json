@@ -1,0 +1,79 @@
+{
+ "26ce4b460731": {
+  "checked": "2026-10-23T21:33:47Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.rc-cam.com/faq.htm",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.rc-cam.com/faq.htm"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "60521de59b98": {
+  "checked": "2026-10-23T21:33:46Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "http://virtualkarma.blogspot.com/2006/01/complete-list-of-web-20-applications.html",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "7486ecdc3a32": {
+  "checked": "2026-10-23T21:34:05Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "http://www.troelsbay.eu/software/reader",
+  "redirects": [
+   {
+    "status": 302,
+    "url": "http://www.troelsbay.eu/software/reader"
+   }
+  ],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ },
+ "8d6cc2b8ff13": {
+  "checked": "2026-10-23T21:33:49Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "http://www.adriennegraves.com/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "cb9151bbf807": {
+  "checked": "2026-10-23T21:33:48Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "http://www.watermeters.com/",
+  "redirects": [],
+  "content_type": "text/html",
+  "wayback": {
+   "first": "2001-03-01T19:08:41Z",
+   "last": "2026-07-13T08:50:00Z",
+   "count": 1550,
+   "checked": "2026-10-23T21:40:56Z"
+  }
+ },
+ "e70641f88dc5": {
+  "checked": "2026-10-23T21:33:48Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "http://www.carion.org/s3dav/index.html",
+  "redirects": [],
+  "content_type": "text/html"
+ }
+}

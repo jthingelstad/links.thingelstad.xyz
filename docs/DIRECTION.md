@@ -252,7 +252,7 @@ Three layers, three owners, the Things I've built shape.
 | Layer | Where | Nature | Who writes it | Cadence |
 | --- | --- | --- | --- | --- |
 | Mirror | `data/links/<yyyy>.json` | Pinboard's fields for public bookmarks, verbatim: id, href, title, note, time, tags, hash, meta | `npm run sync`, never a person | Weekly, and after Saturday's issue |
-| Enrichment | `data/enrichment/pages/<id>.json`, `data/enrichment/hosts/<host>.json`, `data/enrichment/wayback/` | Facts observed about the page and the host | `npm run enrich`, never a person | Weekly, incremental |
+| Enrichment | `data/enrichment/pages/<yyyy>.json`, `data/enrichment/hosts/<a-z0-9>.json` (shards, docs/DATA.md) | Facts observed about the page and the host | `tools/enrich_hosts.py`, `tools/enrich_pages.py`, never a person | Nightly slices, incremental |
 | Derived | `data/derived/issues.json`, `topics.json`, `neighbors.json`, `graph.json` | The joins and the model outputs, each stamped with its method and version | `npm run derive` | On every sync; topics and neighbours for new links only |
 
 Rules:
@@ -355,7 +355,10 @@ the vectors out of git; keep the top-10 neighbours per link in `neighbors.json`.
 
 What to collect, and from where. All of it is observation, none of it editorial.
 
-**Per link** (`data/enrichment/pages/<id>.json`):
+**Per link** (`data/enrichment/pages/<yyyy>.json`, keyed by id; the liveness and
+Wayback parts are built, sampled 2026-10-23 on 150 links: 114 alive, 36 dead, of
+which about 7 are bot walls; alive by era 59% for 2005 to 2009 rising to 90% for
+2020 on):
 
 - Liveness: status now, final URL after redirects, checked-at. Dead links rechecked
   monthly, live ones quarterly.
@@ -369,7 +372,10 @@ What to collect, and from where. All of it is observation, none of it editorial.
 - Pinboard archive: when Pinboard archived it and how large the copy is, from the
   archive manifest.
 
-**Per host** (`data/enrichment/hosts/<host>.json`):
+**Per host** (`data/enrichment/hosts/<a-z0-9>.json`, keyed by host; DNS, HTTPS and
+RDAP are built and were run on the 69 hosts with 25 or more links: all resolve, 66
+have RDAP, none was registered after Jamie's first link, and tech.mn is parked, which
+the CNAME showed and RDAP could not):
 
 - DNS: A/AAAA, CNAME target, NS, whether MX exists, resolves or not, checked-at.
 - HTTPS: reachable, redirects http to https.

@@ -1,0 +1,43 @@
+{
+ "zenhabits.net": {
+  "checked": "2026-10-23T21:28:24Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.2.192",
+    "172.67.129.148"
+   ],
+   "aaaa": [
+    "2606:4700:3034::ac43:8194",
+    "2606:4700:3035::6815:2c0"
+   ],
+   "cname": null,
+   "ns": [
+    "ian.ns.cloudflare.com",
+    "uma.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "zenhabits.net",
+   "registrar": "Cloudflare, Inc.",
+   "registered": "2007-04-14",
+   "expires": "2027-04-14",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ian.ns.cloudflare.com",
+    "uma.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:28:24Z"
+  }
+ }
+}

@@ -262,3 +262,198 @@ WHATWG `URL` class for the host, since it applies IDNA and drops default ports.
 Ids are never normalised: `id` is the first 12 hex characters of md5 of the URL's
 UTF-8 bytes exactly as saved, so `http://wheregoes.com/` (`5029bebcaf78`) and
 `https://wheregoes.com/` (`6d35b392e063`) are two links.
+
+## Enrichment: enrich_hosts.py and enrich_pages.py
+
+Two more commands observe the hosts and pages the links point at and write
+`data/enrichment/` (docs/DATA.md, "Enrichment (phase 2)"). Like the others they are
+standard library only and run under `python3 -I`; DNS needs `dig` (on macOS by
+default). Both are incremental and idempotent: each run picks what has never been
+observed, then what is due again, writes through `jsonio` (atomic, and a shard
+whose bytes would not change is left alone), and saves its progress every few
+records, so an interrupted run loses at most a handful of checks. Neither writes
+anywhere but `<data>/enrichment/`, and neither stores a response body.
+
+| Command | Reads | Writes |
+| --- | --- | --- |
+| `python3 -I tools/enrich_hosts.py` | `data/links/`, DNS, the hosts' home pages, RDAP | `data/enrichment/hosts/<a-z0-9>.json` |
+| `python3 -I tools/enrich_pages.py` | `data/links/`, the saved URLs, the Wayback CDX API | `data/enrichment/pages/<yyyy>.json` |
+
+Every run loads all existing shards first. A record whose host or id is no longer
+in the public links is dropped (a bookmark made private takes its observations
+with it), and a record in the wrong shard is moved. Both end with a one-line
+summary and exit 0 when the run finished, 1 on an error, an interrupt, or a
+Wayback refusal. `--dry-run` prints the selection, one line per host or link with
+the reason it was chosen, and makes no request and writes nothing. `--data DIR`
+works as for the other tools.
+
+### enrich_hosts.py
+
+```sh
+python3 -I tools/enrich_hosts.py --min-links 25        # the 69 hosts with 25+ links
+python3 -I tools/enrich_hosts.py --only tuaw.com,gigaom.com
+python3 -I tools/enrich_hosts.py --limit 500            # a nightly slice
+python3 -I tools/enrich_hosts.py --dry-run
+```
+
+The host set is the site's rule (`hostOf` in `src/lib/normalize.ts`): the URL's
+host, lower case, without user info, minus one leading `www.`. 7,064 hosts today.
+
+Selection: hosts with no record first, most links first; then hosts whose record
+is at least `--recheck-after DAYS` old (default 30), oldest first. `--min-links N`
+keeps hosts with at least N links, `--only HOST` (repeat or comma-separate) checks
+the named hosts whatever their state, `--limit N` caps the run.
+
+Per host:
+
+- **DNS**: one `dig +noall +answer +comments` with five queries (A, AAAA, CNAME, NS,
+  MX). That is the typed form of `dig +short`: the same answers with owner and
+  type kept, so a CNAME target is never read as a name server. `a` and `aaaa` are
+  every address after any CNAME chain, sorted; `cname` is the host's own target;
+  `ns` is the NS records owned by the host itself, so it is empty for a name that
+  is not a zone apex (`blog.example.com` under `example.com`); `mx` is whether a
+  mail server is named (a null MX, `0 .`, is not one). `resolves` is false when A
+  and AAAA are both empty, and `error` is added when the A query did not come back
+  NOERROR (`NXDOMAIN`, `SERVFAIL`, `TIMEOUT`). A host that is an IP address is
+  recorded without a lookup.
+- **HTTPS**: a GET of `https://<host>/`, redirects walked as for pages, no body
+  read. `reachable` is whether an HTTP response came back, `status` is that
+  response's status after redirects, and `error` says why when it is not
+  reachable (`tls: certificate has expired`, `timeout`). `redirects_http` is
+  whether `http://<host>/` redirects and its chain reaches an https URL. A host
+  that does not resolve gets no request.
+- **RDAP**, for hosts with at least `--rdap-min-links N` links (default 5,
+  DIRECTION.md's 428 hosts) and no answer younger than `--rdap-recheck-after DAYS`
+  (default 90): `https://rdap.org/domain/<domain>`, redirected to the registry.
+  The domain is the obvious one first (the last two labels, or three under a
+  two-level suffix such as `co.uk` in `TWO_LEVEL_SUFFIXES` in `linking/rdap.py`),
+  then longer names from the full host down, until the registry answers. Answers
+  are cached per domain for the run, so `blog.cloudflare.com` and `cloudflare.com`
+  cost one call, and a top-level domain without RDAP is asked once. `registrar` is
+  the vCard name of the entity with the registrar role, `registered` and `expires`
+  the dates of the registration and expiration events (UTC, `YYYY-MM-DD`),
+  `status` and `nameservers` lower case and sorted. When there is no answer,
+  `rdap` is `null` and `rdap_error` says why: `no RDAP service for .mn` (rdap.org
+  knows no server for the top-level domain), `refused: <server> answered HTTP 403`,
+  or `not found at <server>`. A `null` is asked again on the next check; a found
+  answer keeps its own `checked` and is reused until it is 90 days old.
+  `--no-rdap` skips RDAP and keeps whatever answer the record had.
+
+The summary counts hosts checked, alive (resolves and answers over https or
+http), dead, and RDAP answers found.
+
+### enrich_pages.py
+
+```sh
+python3 -I tools/enrich_pages.py --no-wayback --limit 2000    # liveness, a nightly slice
+python3 -I tools/enrich_pages.py --wayback-only --limit 400   # Wayback, 40 minutes at the pace
+python3 -I tools/enrich_pages.py --sample 150 --no-wayback    # a spread across every year
+python3 -I tools/enrich_pages.py --year 2009 --dry-run
+python3 -I tools/enrich_pages.py --ids 8b8dc6b42f12,5029bebcaf78
+```
+
+Selection: links never observed first, in saved order; then links due again by
+`checked`: a dead page after 30 days, a live one after 90 (`--recheck-after DAYS`
+replaces both). `--year YYYY` keeps one year, `--ids` (repeat or comma-separate)
+picks links whatever their state, `--sample N` takes N spread evenly across the
+years (an equal share per year, the remainder to the busiest years, evenly spaced
+within a year, the same picks every time for the same state), `--limit N` caps
+the run. `--wayback-only` selects links that already have a liveness record and no
+Wayback answer, then Wayback answers older than 90 days; `--no-wayback` skips
+Wayback. With neither, each selected link gets both.
+
+**Liveness** is one GET of the URL as saved, with a 15 second timeout. Redirects
+are walked by the tool, up to five, so the chain is recorded: `redirects` is a
+list of `{"status", "url"}`, one per hop, `url` being where that hop pointed.
+At most 256 KB of a 2xx body is read and then dropped; redirect and error bodies
+are not read. `alive` is true when the chain ends in a 2xx. Otherwise `error`
+says why: `HTTP 404`, `HTTP 403 (DataDome)`, `more than 5 redirects`,
+`redirect to a non-web URL`, `dns: name does not resolve`, `timeout`,
+`tls: ...`, `connection refused`. `status` is the last response's, `null` when
+none came back; `final_url` is the URL of the last request; `content_type` is the
+media type without parameters. Cookies set during a chain are kept for that
+chain only, as a browser would, so a cookie-check redirect does not loop. A 403,
+a 429 or a 999 (LinkedIn) is often a bot wall rather than a dead page. When the
+response says so in a header, the error names it: `(Cloudflare challenge)` for
+`cf-mitigated: challenge`, `(Vercel challenge)` for `x-vercel-mitigated:
+challenge`, `(DataDome)` for `x-datadome: protected` (`BOT_WALLS` in
+`linking/web.py`). Otherwise the record says what the server answered and the
+reader decides.
+
+Recorded URLs have the values of credential-looking query parameters blanked
+(`token`, `signature`, `session`, `X-Amz-*` and similar become `REDACTED`),
+because a redirect can land on a signed or session URL and `data/` is public.
+
+**Wayback** is one CDX request per link,
+`https://web.archive.org/cdx/search/cdx?url=<url>&output=json&fl=timestamp&limit=10000`:
+the capture timestamps oldest first, so `first`, `last` and `count` come from one
+answer. Only a URL with 10,000 captures or more (a busy home page) costs a second
+request (`limit=-1`) for the true latest, and then `count` is 10,000 with
+`count_capped: true`. `wayback` has its own `checked`. A link that has never been
+captured gets `{"first": null, "last": null, "count": 0}`. A 429 that survives the
+retry, or a refused or reset connection, ends Wayback lookups for the run (the
+archive blocks an IP that keeps going) and the run exits 1; liveness carries on.
+
+The summary counts links checked, alive, dead, and Wayback lookups made, with
+captures, and failed. A `--wayback-only` run says `liveness skipped` and how many
+links it selected.
+
+### Pacing and manners
+
+Every request is a GET with `User-Agent: LinkingThings/0.1 (+https://links.thingelstad.xyz)`
+and a 15 second timeout (30 for the CDX API). Requests to one host are at least
+one second apart, counted from the end of the previous one; DNS lookups are one a
+second; the Wayback Machine gets six seconds. A 429 or 5xx is retried once, after
+10 seconds (60 for the archive, or a longer `Retry-After` up to a minute), never
+more, and not at all when a named bot wall sent it, since a challenge answers the
+same way ten seconds later. A host that resolves to a private, loopback, link-local or otherwise
+non-public address is never fetched, including as a redirect target. The tools
+fetch nothing but the URL being checked and its redirects, the hosts' home pages,
+the RDAP endpoints, and the CDX API. These are floors: runs are sequential, so
+real spacing is longer.
+
+### What a missing record means
+
+Not yet observed, never dead. The same holds for a missing part: a host record
+without `rdap` was not asked (fewer links than `--rdap-min-links`), and a page
+record without `wayback` has not been looked up. `rdap: null` with `rdap_error`
+is an answer (no service, a refusal, not found), and a page with `alive: false`
+says why in `error`.
+
+### A full pass, and keeping it fresh
+
+Measured on 2026-10-23 from this Mac, sequential, at the pacing above:
+
+| Run | Sample | Time | Rate |
+| --- | --- | --- | --- |
+| `enrich_hosts.py --min-links 25` | 69 hosts, with RDAP | 287 s | 4.2 s a host |
+| `enrich_pages.py --sample 150 --no-wayback` | 150 links, 2005 to 2026 | 423 s | 2.8 s a link |
+| `enrich_pages.py --wayback-only --sample 20` | 20 links | 134 s | 6.7 s a link |
+
+So a first pass over everything takes roughly:
+
+| Pass | Count | Estimate |
+| --- | --- | --- |
+| Hosts, DNS and HTTPS | 7,064 hosts | 6 to 9 hours (about 3.2 s a host once RDAP is taken out; DNS pacing alone is 2 hours, and a dead host can spend 30 s in two timeouts) |
+| RDAP | 428 hosts with 5+ links | about 10 more minutes |
+| Page liveness | 16,524 links | 13 to 15 hours |
+| Wayback | 16,524 links | about 31 hours (the six second pace is the floor) |
+
+None of that needs to happen in one sitting. Every run saves as it goes and the
+next run picks up what is left, so the first pass fits in slices:
+
+```sh
+python3 -I tools/enrich_hosts.py --limit 1000                # about an hour; 8 nights
+python3 -I tools/enrich_pages.py --no-wayback --limit 2000   # about 95 minutes; 9 nights
+python3 -I tools/enrich_pages.py --wayback-only --limit 800  # about 90 minutes; 21 nights
+```
+
+Run the three one after another, not side by side: they would share a home IP,
+and the Wayback Machine in particular blocks an address that keeps going. A
+Wayback refusal stops that run with exit 1; leave it a day before the next.
+
+After the first pass the cadence is the recheck windows: hosts every 30 days
+(about 235 a day), RDAP every 90 days, dead pages every 30 days and live pages
+every 90 (about 270 a day at the sample's three quarters alive), Wayback every 90
+days (about 185 a day). The same three commands with the same limits then finish
+in well under an hour a night, most of it Wayback.

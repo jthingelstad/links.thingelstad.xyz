@@ -101,9 +101,14 @@ years and issues get pages from these; nothing of that is written back to `data/
 
 Observations about hosts and pages, sharded so git stays sane: hosts by the first
 character of the host name, pages by the year the link was saved. Each shard is a
-JSON object keyed by host or id with sorted keys, indent 1, trailing newline. Every
-record carries `checked` (UTC), `method` and `version`; a reader treats a missing
-record as "not yet observed", never as "dead".
+JSON object keyed by host or id, top-level keys sorted, fields inside a record in
+the order shown here, indent 1, trailing newline. Every record carries `checked`
+(UTC), `method` and `version`; a reader treats a missing record as "not yet
+observed", never as "dead". A record whose key is no longer a public link or a host
+of one is dropped on the next run, so a bookmark that turns private leaves no trace
+here. Hosts are keyed as saved; a host outside a-z0-9 (an internationalised name)
+would be keyed by its punycode form (none exist today). `tools/validate_data.py`
+does not check these shards yet.
 
 `data/enrichment/hosts/<a-z0-9>.json`, written by `tools/enrich_hosts.py`:
 
@@ -114,7 +119,7 @@ record as "not yet observed", never as "dead".
     "method": "enrich_hosts",
     "version": 1,
     "dns": { "resolves": true, "a": ["1.2.3.4"], "aaaa": [], "cname": null, "ns": ["ns1.example.net"], "mx": true },
-    "https": { "reachable": true, "redirects_http": true, "status": 200 },
+    "https": { "reachable": true, "redirects_http": true, "status": 200, "error": null },
     "rdap": {
       "domain": "macstories.net",
       "registrar": "Example Registrar",
@@ -128,13 +133,18 @@ record as "not yet observed", never as "dead".
 }
 ```
 
-DNS from `dig +short` (A, AAAA, CNAME, NS, MX; stdlib `socket` is only A/AAAA).
+DNS from `dig +noall +answer`, parsed by record type (`+short` loses the type), for
+A, AAAA, CNAME, NS and MX; stdlib `socket` is only A/AAAA. `ns` is empty for a host
+that is not a zone apex. `dns` and `https` carry `error` (a string, or absent) when
+the lookup or the request failed; `https.error` names a bot wall when the headers
+show one (`cf-mitigated`, `x-vercel-mitigated: challenge`, `x-datadome`).
 RDAP through the bootstrap redirector `https://rdap.org/domain/<domain>`, which
 302s to the registry; `domain` is the registrable domain of the host (strip labels
 from the left until RDAP answers, cache the answer per domain; a small list of
 two-level public suffixes such as `co.uk` avoids wasted calls). Pace one request a
 second per service with a User-Agent naming the site. `rdap` is `null` when the
-registry has no RDAP (some country codes) and the reason is recorded.
+registry has no RDAP (some country codes) and the reason is in `rdap_error`.
+Rechecks: DNS and HTTPS every 30 days, RDAP every 90, by `checked`.
 
 `data/enrichment/pages/<yyyy>.json`, written by `tools/enrich_pages.py`:
 
@@ -147,20 +157,32 @@ registry has no RDAP (some country codes) and the reason is recorded.
     "status": 200,
     "alive": true,
     "final_url": "https://www.amitgawande.com/blog/2026/the-fuzzy-mind/",
-    "redirects": [],
+    "redirects": [{ "status": 301, "url": "https://www.amitgawande.com/blog/2026/the-fuzzy-mind/" }],
     "content_type": "text/html",
-    "wayback": { "first": "2026-07-01T10:11:12Z", "last": "2026-10-01T00:00:00Z", "count": 4, "checked": "2026-10-24T02:00:00Z" }
+    "wayback": { "first": "2026-07-01T10:11:12Z", "last": "2026-10-01T00:00:00Z", "count": 4, "count_capped": false, "checked": "2026-10-24T02:00:00Z" }
   }
 }
 ```
 
 `alive` is true for a 2xx or 3xx that ends in a 2xx; a 4xx, 5xx, DNS failure or
-timeout is false with the reason in `error`. GET with a 15 second timeout, follow
-up to five redirects, never download more than 256 KB. Wayback from the CDX API
-(`https://web.archive.org/cdx/search/cdx?url=<url>&output=json&limit=1` and the
-same with `&limit=-1` for the latest) at a six-second pace, because bursts get the
-IP blocked (learned on thingelstad.xyz). Recheck dead pages monthly, live ones
-quarterly, by `checked`.
+timeout is false with the reason in `error` (`HTTP 404`, `dns: name does not
+resolve`, `timeout`, `tls: self-signed certificate`). A bot wall is named in the
+error (`HTTP 403 (DataDome)`, `HTTP 429 (Vercel challenge)`) and is not retried; the
+site treats a named wall as unknown, never as dead. Each `redirects` item is the
+hop's `status` and the `url` it pointed at. A redirect that lands on a 2xx counts as
+alive even when it reaches a home page or another host; the site decides at build
+time, from `final_url`, how to show that (open). GET with a 15 second timeout,
+redirects walked by hand up to five hops, never more than 256 KB downloaded, no
+response body stored, credential-looking query values blanked, non-public
+addresses refused. Wayback from the CDX API in one query
+(`https://web.archive.org/cdx/search/cdx?url=<url>&fl=timestamp&limit=10000`, and
+`limit=-1` only when that cap is hit, recorded as `count_capped`) at a six-second
+pace, because bursts get the IP blocked (learned on thingelstad.xyz); `count`
+covers every capture status and the http, https and www forms. Rechecks: dead
+pages every 30 days, live ones every 90, Wayback every 90, by `checked`. The host,
+page and Wayback runs go one after another, never in parallel, because they share
+one address. `tools/README.md` has the full-pass estimates (about 8 h, 14 h and
+31 h) and the nightly slices.
 
 Later derived files, each with `method` and `version`: `data/derived/topics.json`,
 `data/derived/neighbors.json`.

@@ -1,0 +1,362 @@
+{
+ "ma.tt": {
+  "checked": "2026-10-23T21:29:20Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "184.154.194.171"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.mobiusltd.com",
+    "ns2.mobiusltd.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": null,
+  "rdap_error": "no RDAP service for .tt"
+ },
+ "macdailynews.com": {
+  "checked": "2026-10-23T21:28:45Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.16.172.242",
+    "199.16.173.39"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.openhostingservice.com",
+    "ns2.openhostingservice.com",
+    "ns3.openhostingservice.com",
+    "ns4.openhostingservice.com",
+    "ns5.openhostingservice.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "macdailynews.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2002-06-28",
+   "expires": "2030-06-28",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.openhostingservice.com",
+    "ns2.openhostingservice.com",
+    "ns3.openhostingservice.com",
+    "ns4.openhostingservice.com",
+    "ns5.openhostingservice.com"
+   ],
+   "checked": "2026-10-23T21:28:45Z"
+  }
+ },
+ "macsparky.com": {
+  "checked": "2026-10-23T21:26:49Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.37.125",
+    "172.67.208.29"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:257d",
+    "2606:4700:3037::ac43:d01d"
+   ],
+   "cname": null,
+   "ns": [
+    "collins.ns.cloudflare.com",
+    "mario.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "macsparky.com",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "2007-04-22",
+   "expires": "2030-04-22",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "collins.ns.cloudflare.com",
+    "mario.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:26:49Z"
+  }
+ },
+ "macstories.net": {
+  "checked": "2026-10-23T21:25:21Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "45.55.54.134"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "raquel.ns.cloudflare.com",
+    "rustam.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "macstories.net",
+   "registrar": "NameCheap, Inc.",
+   "registered": "2009-04-27",
+   "expires": "2030-04-27",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "raquel.ns.cloudflare.com",
+    "rustam.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:25:21Z"
+  }
+ },
+ "marco.org": {
+  "checked": "2026-10-23T21:29:54Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.6.81",
+    "172.67.134.160"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:651",
+    "2606:4700:3031::ac43:86a0"
+   ],
+   "cname": null,
+   "ns": [
+    "dante.ns.cloudflare.com",
+    "rachel.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "marco.org",
+   "registrar": "Cloudflare, Inc.",
+   "registered": "2000-05-16",
+   "expires": "2030-05-16",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "dante.ns.cloudflare.com",
+    "rachel.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:29:54Z"
+  }
+ },
+ "martinfowler.com": {
+  "checked": "2026-10-23T21:29:16Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.198.71.201"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1254.awsdns-28.org",
+    "ns-1900.awsdns-45.co.uk",
+    "ns-292.awsdns-36.com",
+    "ns-907.awsdns-49.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "martinfowler.com",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "1999-09-29",
+   "expires": "2027-09-29",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-1254.awsdns-28.org",
+    "ns-1900.awsdns-45.co.uk",
+    "ns-292.awsdns-36.com",
+    "ns-907.awsdns-49.net"
+   ],
+   "checked": "2026-10-23T21:29:16Z"
+  }
+ },
+ "mediawiki.org": {
+  "checked": "2026-10-23T21:27:39Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "208.80.154.224"
+   ],
+   "aaaa": [
+    "2620:0:861:ed1a::1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns0.wikimedia.org",
+    "ns1.wikimedia.org",
+    "ns2.wikimedia.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "mediawiki.org",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2003-08-09",
+   "expires": "2027-08-09",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns0.wikimedia.org",
+    "ns1.wikimedia.org",
+    "ns2.wikimedia.org"
+   ],
+   "checked": "2026-10-23T21:27:39Z"
+  }
+ },
+ "medium.com": {
+  "checked": "2026-10-23T21:25:16Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.152.4",
+    "162.159.153.4"
+   ],
+   "aaaa": [
+    "2606:4700:7::a29f:9804",
+    "2606:4700:7::a29f:9904"
+   ],
+   "cname": null,
+   "ns": [
+    "alina.ns.cloudflare.com",
+    "kip.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "medium.com",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "1998-05-27",
+   "expires": "2027-05-26",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "alina.ns.cloudflare.com",
+    "kip.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:25:16Z"
+  }
+ },
+ "mjtsai.com": {
+  "checked": "2026-10-23T21:27:48Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "173.236.198.144"
+   ],
+   "aaaa": [
+    "2607:f298:5:118a::c34:dccf"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "mjtsai.com",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "2001-06-21",
+   "expires": "2031-06-21",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "checked": "2026-10-23T21:27:48Z"
+  }
+ }
+}

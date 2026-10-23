@@ -1,0 +1,100 @@
+{
+ "05014ca44e6c": {
+  "checked": "2026-10-23T21:35:45Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.youtube.com/watch?v=o_Sr96TFQQE",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.youtube.com/watch?v=o_Sr96TFQQE"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "2b9d439ac690": {
+  "checked": "2026-10-23T21:35:45Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.travis-ci.com/enterprise/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.travis-ci.com/enterprise/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "709f8a0fe243": {
+  "checked": "2026-10-23T21:35:46Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "http://www.cbsnews.com/news/mindfulness-anderson-cooper-60-minutes/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "94c58836fc7f": {
+  "checked": "2026-10-23T21:35:44Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://tosdr.org/en",
+  "redirects": [],
+  "content_type": "text/html",
+  "wayback": {
+   "first": "2022-11-11T16:52:23Z",
+   "last": "2026-10-17T19:35:45Z",
+   "count": 516,
+   "checked": "2026-10-23T21:41:36Z"
+  }
+ },
+ "a9217ed0f19b": {
+  "checked": "2026-10-23T21:35:43Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": null,
+  "alive": false,
+  "final_url": "http://map.ipviking.com/",
+  "redirects": [],
+  "content_type": null,
+  "error": "dns: name does not resolve"
+ },
+ "cb9c834c5339": {
+  "checked": "2026-10-23T21:35:42Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": null,
+  "alive": false,
+  "final_url": "https://appear.in/",
+  "redirects": [],
+  "content_type": null,
+  "error": "tls: self-signed certificate"
+ },
+ "f5a7ae3289a6": {
+  "checked": "2026-10-23T21:45:04Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 403,
+  "alive": false,
+  "final_url": "https://www.fastcompany.com/co-design",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.fastcodesign.com/3028471/google-ventures-your-design-team-needs-a-war-room-heres-how-to-set-one-up"
+   },
+   {
+    "status": 301,
+    "url": "https://www.fastcompany.com/co-design"
+   }
+  ],
+  "content_type": "text/html",
+  "error": "HTTP 403 (DataDome)"
+ }
+}

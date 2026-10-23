@@ -1,0 +1,53 @@
+{
+ "youtube.com": {
+  "checked": "2026-10-23T21:25:13Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.217.214.91",
+    "172.217.214.93",
+    "172.217.214.136",
+    "172.217.214.190"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:803::200e"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.google.com",
+    "ns2.google.com",
+    "ns3.google.com",
+    "ns4.google.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "youtube.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2005-02-15",
+   "expires": "2027-02-15",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns1.google.com",
+    "ns2.google.com",
+    "ns3.google.com",
+    "ns4.google.com"
+   ],
+   "checked": "2026-10-23T21:25:13Z"
+  }
+ }
+}

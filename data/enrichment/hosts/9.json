@@ -1,0 +1,42 @@
+{
+ "9to5mac.com": {
+  "checked": "2026-10-23T21:26:39Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.2"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "9to5mac.com",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "2007-01-05",
+   "expires": "2028-01-05",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "checked": "2026-10-23T21:26:39Z"
+  }
+ }
+}

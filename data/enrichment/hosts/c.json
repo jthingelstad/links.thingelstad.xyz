@@ -1,0 +1,46 @@
+{
+ "calnewport.com": {
+  "checked": "2026-10-23T21:27:43Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.16.150.108",
+    "104.16.151.108"
+   ],
+   "aaaa": [
+    "2606:4700::6810:966c",
+    "2606:4700::6810:976c"
+   ],
+   "cname": null,
+   "ns": [
+    "reza.ns.cloudflare.com",
+    "theo.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "calnewport.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2006-03-10",
+   "expires": "2028-03-10",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "reza.ns.cloudflare.com",
+    "theo.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:27:43Z"
+  }
+ }
+}

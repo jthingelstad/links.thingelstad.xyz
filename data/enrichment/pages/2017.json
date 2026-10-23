@@ -1,0 +1,99 @@
+{
+ "03ed47ba5a96": {
+  "checked": "2026-10-23T21:36:20Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://siliconangle.com/2017/12/11/digital-innovation-era-technologist-focuses-empathy-tech-topwomenincloud/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://siliconangle.com/2017/12/11/digital-innovation-era-technologist-focuses-empathy-tech-topwomenincloud/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "37c0faac5682": {
+  "checked": "2026-10-23T21:36:18Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "https://statico.github.io/vim3.html",
+  "redirects": [],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ },
+ "5ffd7e5f0fa2": {
+  "checked": "2026-10-23T21:36:14Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://alexkras.com/my-interview-at-uber/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://alexkras.com/my-interview-at-uber/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "96fd29b8ba79": {
+  "checked": "2026-10-23T21:36:14Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": null,
+  "alive": false,
+  "final_url": "https://blog.aptitive.com/your-dashboard-needs-a-waffle-chart-64ffaaa6930f?__s=bsgqbmfxusxefqxs6as6",
+  "redirects": [],
+  "content_type": null,
+  "error": "dns: name does not resolve"
+ },
+ "ca2a910a6333": {
+  "checked": "2026-10-23T21:36:14Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.linkedin.com/pulse/why-apples-new-in-store-experience-aims-fuel-everyone-angela-ahrendts",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "d507f2c93a20": {
+  "checked": "2026-10-23T21:36:15Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://medium.com/building-ulysses/why-were-switching-ulysses-to-subscription-47f80b07a9cd",
+  "redirects": [],
+  "content_type": "text/html",
+  "wayback": {
+   "first": "2017-08-10T18:38:10Z",
+   "last": "2026-09-18T01:27:42Z",
+   "count": 128,
+   "checked": "2026-10-23T21:41:56Z"
+  }
+ },
+ "e9dfdf5a5697": {
+  "checked": "2026-10-23T21:36:18Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://calnewport.com/spend-more-time-alone/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://calnewport.com/blog/2017/09/24/spend-more-time-alone/"
+   },
+   {
+    "status": 301,
+    "url": "https://calnewport.com/spend-more-time-alone/"
+   }
+  ],
+  "content_type": "text/html"
+ }
+}

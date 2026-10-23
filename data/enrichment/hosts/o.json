@@ -1,0 +1,114 @@
+{
+ "om.co": {
+  "checked": "2026-10-23T21:26:14Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.16.172.20",
+    "199.16.173.91"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns63.domaincontrol.com",
+    "ns64.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": null,
+  "rdap_error": "no RDAP service for .co"
+ },
+ "omnigroup.com": {
+  "checked": "2026-10-23T21:28:41Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "204.128.250.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.omnigroup.com",
+    "dns2.omnigroup.com",
+    "dns3.omnigroup.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "omnigroup.com",
+   "registrar": "Domain.com - Network Solutions, LLC",
+   "registered": "1992-09-09",
+   "expires": "2027-09-08",
+   "status": [
+    "active"
+   ],
+   "nameservers": [
+    "dns1.omnigroup.com",
+    "dns2.omnigroup.com",
+    "dns3.omnigroup.com"
+   ],
+   "checked": "2026-10-23T21:28:41Z"
+  }
+ },
+ "openai.com": {
+  "checked": "2026-10-23T21:26:54Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.33.45",
+    "172.64.154.211"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1-02.azure-dns.com",
+    "ns2-02.azure-dns.net",
+    "ns3-02.azure-dns.org",
+    "ns4-02.azure-dns.info"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "openai.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2007-01-19",
+   "expires": "2029-01-19",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns1-02.azure-dns.com",
+    "ns2-02.azure-dns.net",
+    "ns3-02.azure-dns.org",
+    "ns4-02.azure-dns.info"
+   ],
+   "checked": "2026-10-23T21:26:54Z"
+  }
+ }
+}

@@ -1,0 +1,88 @@
+{
+ "579589bab68c": {
+  "checked": "2026-10-23T21:45:21Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": null,
+  "alive": false,
+  "final_url": "https://www.npr.org/2026/05/19/nx-s1-5821265/minnesota-ban-prediction-markets",
+  "redirects": [],
+  "content_type": null,
+  "error": "timeout"
+ },
+ "8ae099269bc3": {
+  "checked": "2026-10-23T21:40:09Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://rushter.com/blog/zsh-shell/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "a82fc67920f1": {
+  "checked": "2026-10-23T21:40:29Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "ceea165005f4": {
+  "checked": "2026-10-23T21:40:13Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://atlas.flexport.com/",
+  "redirects": [
+   {
+    "status": 307,
+    "url": "https://atlas.flexport.com/api/v1/csrf?returnTo=%2F"
+   },
+   {
+    "status": 307,
+    "url": "https://atlas.flexport.com/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "d4eb583067fd": {
+  "checked": "2026-10-23T21:40:13Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://wiki-wise.com/",
+  "redirects": [],
+  "content_type": "text/html",
+  "wayback": {
+   "first": "2023-08-11T18:52:49Z",
+   "last": "2026-06-16T21:04:18Z",
+   "count": 9,
+   "checked": "2026-10-23T21:42:58Z"
+  }
+ },
+ "e1222467ccb0": {
+  "checked": "2026-10-23T21:40:10Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://brandon.wang/2026/clawdbot",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "eaa2aed99dca": {
+  "checked": "2026-10-23T21:40:28Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://terminalbytes.com/run-qwen-3-8-27b-locally/",
+  "redirects": [],
+  "content_type": "text/html"
+ }
+}

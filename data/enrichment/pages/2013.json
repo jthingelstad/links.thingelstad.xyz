@@ -1,0 +1,84 @@
+{
+ "06351eb623c7": {
+  "checked": "2026-10-23T21:35:22Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://orangedatamining.com/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://orange.biolab.si/"
+   },
+   {
+    "status": 301,
+    "url": "https://orangedatamining.com/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "46fb2607a039": {
+  "checked": "2026-10-23T21:35:26Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://medium.com/swlh/coffee-vs-beer-which-drink-makes-you-more-creative-f7fcb3b786b1",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://medium.com/swlh/coffee-vs-beer-which-drink-makes-you-more-creative-f7fcb3b786b1"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "533cc7326d45": {
+  "checked": "2026-10-23T21:35:26Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "http://www.leadertelegram.com/news/front_page/article_2c73aa72-ec31-11e2-994d-0019bb2963f4.html",
+  "redirects": [],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ },
+ "d3e9d41d99d7": {
+  "checked": "2026-10-23T21:35:23Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.eff.org/deeplinks/2013/04/disconcerting-details-how-facebook-teams-data-brokers-show-you-targeted-ads",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "e84c048b87d9": {
+  "checked": "2026-10-23T21:35:41Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": null,
+  "alive": false,
+  "final_url": "http://hackingdistributed.com/2013/11/04/bitcoin-is-broken/",
+  "redirects": [],
+  "content_type": null,
+  "error": "timeout"
+ },
+ "ff46f01f2844": {
+  "checked": "2026-10-23T21:35:20Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "https://www.smithsonianmag.com/ist/?next=/history-archaeology/For-40-Years-This-Russian-Family-Was-Cut-Off-From-Human-Contact-Unaware-of-World-War-II-188843001.html/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.smithsonianmag.com/ist/?next=/history-archaeology/For-40-Years-This-Russian-Family-Was-Cut-Off-From-Human-Contact-Unaware-of-World-War-II-188843001.html/"
+   }
+  ],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ }
+}

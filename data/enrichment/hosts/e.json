@@ -1,0 +1,125 @@
+{
+ "economist.com": {
+  "checked": "2026-10-23T21:27:12Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.42.19",
+    "172.64.145.237"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p02.nsone.net",
+    "dns2.p02.nsone.net",
+    "dns3.p02.nsone.net",
+    "dns4.p02.nsone.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "rdap": {
+   "domain": "economist.com",
+   "registrar": "Nom-iq Ltd. dba COM LAUDE",
+   "registered": "1994-11-28",
+   "expires": "2027-11-27",
+   "status": [
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "dns1.p01.nsone.net",
+    "dns2.p01.nsone.net",
+    "dns3.p01.nsone.net",
+    "dns4.p01.nsone.net"
+   ],
+   "checked": "2026-10-23T21:27:12Z"
+  }
+ },
+ "eff.org": {
+  "checked": "2026-10-23T21:25:39Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "173.239.79.200"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.eff.org",
+    "ns2.eff.org",
+    "ns4.eff.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "eff.org",
+   "registrar": "Gandi SAS",
+   "registered": "1990-10-10",
+   "expires": "2027-10-09",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1.eff.org",
+    "ns2.eff.org",
+    "ns4.eff.org"
+   ],
+   "checked": "2026-10-23T21:25:39Z"
+  }
+ },
+ "en.wikipedia.org": {
+  "checked": "2026-10-23T21:26:44Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "208.80.154.224"
+   ],
+   "aaaa": [
+    "2620:0:861:ed1a::1"
+   ],
+   "cname": "dyna.wikimedia.org",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "wikipedia.org",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2001-01-13",
+   "expires": "2027-01-13",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns0.wikimedia.org",
+    "ns1.wikimedia.org",
+    "ns2.wikimedia.org"
+   ],
+   "checked": "2026-10-23T21:26:44Z"
+  }
+ }
+}

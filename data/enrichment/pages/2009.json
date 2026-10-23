@@ -1,0 +1,99 @@
+{
+ "2aedb2c8a985": {
+  "checked": "2026-10-23T21:34:29Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://scottw.com/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://scottw.com/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "6b157dc78aed": {
+  "checked": "2026-10-23T21:34:30Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.roughtype.com/?p=1262",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.roughtype.com/?p=1262"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "7259886af57d": {
+  "checked": "2026-10-23T21:34:30Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://signalvnoise.com/posts/1768-i-dont-care-how-good-you-are-at-programming",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "785a7f26335d": {
+  "checked": "2026-10-23T21:34:36Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://readwrite.com/wikimedia_celebrates_hewlett_grant/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://readwrite.com/2009/08/20/wikimedia_celebrates_hewlett_grant"
+   },
+   {
+    "status": 301,
+    "url": "https://readwrite.com/2009/08/20/wikimedia_celebrates_hewlett_grant/"
+   },
+   {
+    "status": 301,
+    "url": "https://readwrite.com/wikimedia_celebrates_hewlett_grant/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "7df6b7546859": {
+  "checked": "2026-10-23T21:34:41Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://lifehacker.com/handbrake-updates-to-0-9-4-with-over-1-000-changes-64-5412874",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://lifehacker.com/5412874/handbrake-updates-to-094-with-over-1000-changes-64%2Bbit-support"
+   },
+   {
+    "status": 301,
+    "url": "https://lifehacker.com/handbrake-updates-to-0-9-4-with-over-1-000-changes-64-5412874"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "f02dc5f325a2": {
+  "checked": "2026-10-23T21:34:38Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.aphotoeditor.com/2009/10/14/a-couple-docs-shot-with-a-stills-camera/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.aphotoeditor.com/2009/10/14/a-couple-docs-shot-with-a-stills-camera/"
+   }
+  ],
+  "content_type": "text/html"
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "fastcompany.com": {
+  "checked": "2026-10-23T21:28:33Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.54",
+    "151.101.65.54",
+    "151.101.129.54",
+    "151.101.193.54"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1515.awsdns-61.org",
+    "ns-1872.awsdns-42.co.uk",
+    "ns-27.awsdns-03.com",
+    "ns-715.awsdns-25.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "rdap": {
+   "domain": "fastcompany.com",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "1995-06-02",
+   "expires": "2027-06-01",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1515.awsdns-61.org",
+    "ns-1872.awsdns-42.co.uk",
+    "ns-27.awsdns-03.com",
+    "ns-715.awsdns-25.net"
+   ],
+   "checked": "2026-10-23T21:28:33Z"
+  }
+ }
+}

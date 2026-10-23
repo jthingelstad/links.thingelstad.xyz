@@ -1,0 +1,99 @@
+{
+ "18aadf426f60": {
+  "checked": "2026-10-23T21:35:07Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": null,
+  "alive": false,
+  "final_url": "http://semantic-mediawiki.org/wiki/Semantic_MediaWiki",
+  "redirects": [],
+  "content_type": null,
+  "error": "connection refused"
+ },
+ "374de657e736": {
+  "checked": "2026-10-23T21:35:07Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.daytodisconnect.com/index.php",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "4515780e3b27": {
+  "checked": "2026-10-23T21:34:53Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "http://park.io/news/2011/01/14/minnedemo-winter-2011/",
+  "redirects": [
+   {
+    "status": 302,
+    "url": "http://park.io/news/2011/01/14/minnedemo-winter-2011/"
+   }
+  ],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ },
+ "4b9feef0fa53": {
+  "checked": "2026-10-23T21:35:06Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 500,
+  "alive": false,
+  "final_url": "http://www.niwadesign.com/",
+  "redirects": [],
+  "content_type": "text/html",
+  "error": "HTTP 500",
+  "wayback": {
+   "first": "2001-04-28T00:37:01Z",
+   "last": "2025-08-24T08:57:17Z",
+   "count": 174,
+   "checked": "2026-10-23T21:41:23Z"
+  }
+ },
+ "9c984fc74281": {
+  "checked": "2026-10-23T21:35:08Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://github.com/FRiCKLE/ngx_cache_purge/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "9e3d680bfcee": {
+  "checked": "2026-10-23T21:34:53Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "http://thebladpad.blogspot.com/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "ff9ee2e7bacf": {
+  "checked": "2026-10-23T21:34:56Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 203,
+  "alive": true,
+  "final_url": "https://pubmed.ncbi.nlm.nih.gov:443/20065160/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.ncbi.nlm.nih.gov:443/pubmed/20065160"
+   },
+   {
+    "status": 301,
+    "url": "https://pubmed.ncbi.nlm.nih.gov:443/20065160"
+   },
+   {
+    "status": 301,
+    "url": "https://pubmed.ncbi.nlm.nih.gov:443/20065160/"
+   }
+  ],
+  "content_type": "text/html"
+ }
+}

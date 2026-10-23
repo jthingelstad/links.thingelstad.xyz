@@ -1,0 +1,84 @@
+{
+ "0f977cc9b49e": {
+  "checked": "2026-10-23T21:45:06Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 403,
+  "alive": false,
+  "final_url": "https://www.fastcompany.com/91355910/perplexitys-new-ai-features-are-a-game-changer-heres-how-to-make-the-most-of-them",
+  "redirects": [],
+  "content_type": "text/html",
+  "error": "HTTP 403 (DataDome)",
+  "wayback": {
+   "first": "2025-06-22T11:21:37Z",
+   "last": "2025-12-09T10:31:14Z",
+   "count": 13,
+   "checked": "2026-10-23T21:42:51Z"
+  }
+ },
+ "62f47ab3fc95": {
+  "checked": "2026-10-23T21:40:08Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://cloud.google.com/blog/products/ai-machine-learning/agent2agent-protocol-is-getting-an-upgrade/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "942f38fd7739": {
+  "checked": "2026-10-23T21:40:08Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://calnewport.com/does-wifi-make-students-smarter/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "977c0569fca1": {
+  "checked": "2026-10-23T21:40:04Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://wattenberger.com/thoughts/our-interfaces-have-lost-their-senses/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://wattenberger.com/thoughts/our-interfaces-have-lost-their-senses/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "a72dccdb6b7a": {
+  "checked": "2026-10-23T21:40:08Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://openai.com/index/chatgpt-shopping-research/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "d28965582a40": {
+  "checked": "2026-10-23T21:40:04Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://hypercritical.co/2025/05/09/apple-turnover",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "fc9b07f86520": {
+  "checked": "2026-10-23T21:40:02Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://leadership.garden/calling-out-room-dynamics/",
+  "redirects": [],
+  "content_type": "text/html"
+ }
+}

@@ -1,0 +1,110 @@
+{
+ "44449786cfcd": {
+  "checked": "2026-10-23T21:34:07Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": null,
+  "alive": false,
+  "final_url": "http://www.blacktree.com/projects/itunes-lame.html",
+  "redirects": [],
+  "content_type": null,
+  "error": "dns: name does not resolve",
+  "wayback": {
+   "first": "2007-12-14T08:40:40Z",
+   "last": "2017-08-21T17:53:17Z",
+   "count": 121,
+   "checked": "2026-10-23T21:41:02Z"
+  }
+ },
+ "495c182fb102": {
+  "checked": "2026-10-23T21:34:11Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "http://kevinjennings.com/blog/2007/12/18/report-from-iowa-part-two-james-madison-rolls-over-in-his-grave/",
+  "redirects": [],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ },
+ "96e0437f48ea": {
+  "checked": "2026-10-23T21:34:05Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": null,
+  "alive": false,
+  "final_url": "http://www.transintl.com/",
+  "redirects": [],
+  "content_type": null,
+  "error": "dns: name does not resolve"
+ },
+ "bcd9db12f03b": {
+  "checked": "2026-10-23T21:34:09Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://blog.codinghorror.com/can-your-team-pass-the-elevator-test/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://blog.codinghorror.com/can-your-team-pass-the-elevator-test"
+   },
+   {
+    "status": 301,
+    "url": "https://blog.codinghorror.com/can-your-team-pass-the-elevator-test/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "c547e2bc980d": {
+  "checked": "2026-10-23T21:34:06Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "https://vimeo.com/3591259",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://vimeo.com/3591259"
+   }
+  ],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ },
+ "d808c7fe840a": {
+  "checked": "2026-10-23T21:34:07Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "http://codeintensity.blogspot.com/2007/05/twittervisionflickrvision-screen-saver.html",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "f3d6557a0944": {
+  "checked": "2026-10-23T21:34:11Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "https://gigaom.com/blog/419-allbusinesscom-acquired-by-dun-bradstreet-for-about-55-million/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://portal.gigaom.com/blog/419-allbusinesscom-acquired-by-dun-bradstreet-for-about-55-million/"
+   },
+   {
+    "status": 308,
+    "url": "https://portal.gigaom.com/blog/419-allbusinesscom-acquired-by-dun-bradstreet-for-about-55-million"
+   },
+   {
+    "status": 301,
+    "url": "https://gigaom.com/blog/419-allbusinesscom-acquired-by-dun-bradstreet-for-about-55-million/"
+   }
+  ],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ }
+}

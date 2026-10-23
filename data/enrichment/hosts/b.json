@@ -1,0 +1,257 @@
+{
+ "bizjournals.com": {
+  "checked": "2026-10-23T21:27:07Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.82.90.37",
+    "34.237.162.142"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1212.awsdns-23.org",
+    "ns-1940.awsdns-50.co.uk",
+    "ns-41.awsdns-05.com",
+    "ns-834.awsdns-40.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "bizjournals.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "2000-02-24",
+   "expires": "2028-02-24",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1212.awsdns-23.org",
+    "ns-1940.awsdns-50.co.uk",
+    "ns-41.awsdns-05.com",
+    "ns-834.awsdns-40.net"
+   ],
+   "checked": "2026-10-23T21:27:07Z"
+  }
+ },
+ "blog.cloudflare.com": {
+  "checked": "2026-10-23T21:26:52Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.28.7",
+    "104.18.29.7"
+   ],
+   "aaaa": [
+    "2606:4700::6812:1c07",
+    "2606:4700::6812:1d07"
+   ],
+   "cname": null,
+   "ns": [
+    "red.foundationdns.com",
+    "red.foundationdns.net",
+    "red.foundationdns.org"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "cloudflare.com",
+   "registrar": "Cloudflare, Inc.",
+   "registered": "2009-02-17",
+   "expires": "2033-02-17",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns3.cloudflare.com",
+    "ns4.cloudflare.com",
+    "ns5.cloudflare.com",
+    "ns6.cloudflare.com",
+    "ns7.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:26:52Z"
+  }
+ },
+ "blog.google": {
+  "checked": "2026-10-23T21:28:27Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.239.32.21",
+    "216.239.34.21",
+    "216.239.36.21",
+    "216.239.38.21"
+   ],
+   "aaaa": [
+    "2001:4860:4802:32::15",
+    "2001:4860:4802:34::15",
+    "2001:4860:4802:36::15",
+    "2001:4860:4802:38::15"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.zdns.google",
+    "ns2.zdns.google",
+    "ns3.zdns.google",
+    "ns4.zdns.google"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "blog.google",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2016-08-12",
+   "expires": "2027-08-12",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns1.zdns.google",
+    "ns2.zdns.google",
+    "ns3.zdns.google",
+    "ns4.zdns.google"
+   ],
+   "checked": "2026-10-23T21:28:27Z"
+  }
+ },
+ "bloomberg.com": {
+  "checked": "2026-10-23T21:26:57Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.146.110",
+    "15.197.146.156"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p01.nsone.net",
+    "dns2.p01.nsone.net",
+    "dns3.p01.nsone.net",
+    "dns4.p01.nsone.net",
+    "pdns1.ultradns.net",
+    "pdns3.ultradns.org",
+    "pdns5.ultradns.info"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "bloomberg.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "1993-09-29",
+   "expires": "2027-09-28",
+   "status": [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "dns1.p01.nsone.net",
+    "dns2.p01.nsone.net",
+    "dns3.p01.nsone.net",
+    "dns4.p01.nsone.net",
+    "ns51.ultradns2.com",
+    "ns51.ultradns2.org"
+   ],
+   "checked": "2026-10-23T21:26:57Z"
+  }
+ },
+ "businessinsider.com": {
+  "checked": "2026-10-23T21:26:18Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.171",
+    "151.101.65.171",
+    "151.101.129.171",
+    "151.101.193.171"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p03.nsone.net",
+    "dns2.p03.nsone.net",
+    "dns3.p03.nsone.net",
+    "dns4.p03.nsone.net",
+    "ns11.constellix.com",
+    "ns21.constellix.com",
+    "ns31.constellix.com",
+    "ns41.constellix.net",
+    "ns51.constellix.net",
+    "ns61.constellix.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "businessinsider.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "1998-03-06",
+   "expires": "2028-09-08",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "dns1.p03.nsone.net",
+    "dns2.p03.nsone.net",
+    "dns3.p03.nsone.net",
+    "dns4.p03.nsone.net",
+    "ns11.constellix.com",
+    "ns21.constellix.com",
+    "ns31.constellix.com",
+    "ns41.constellix.net",
+    "ns51.constellix.net",
+    "ns61.constellix.net"
+   ],
+   "checked": "2026-10-23T21:26:18Z"
+  }
+ }
+}

@@ -1,0 +1,233 @@
+{
+ "anthropic.com": {
+  "checked": "2026-10-23T21:28:44Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "160.79.104.10"
+   ],
+   "aaaa": [
+    "2607:6bc0::10"
+   ],
+   "cname": null,
+   "ns": [
+    "isla.ns.cloudflare.com",
+    "randy.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "anthropic.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2001-10-02",
+   "expires": "2033-10-02",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "isla.ns.cloudflare.com",
+    "randy.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:28:44Z"
+  }
+ },
+ "apple.com": {
+  "checked": "2026-10-23T21:28:26Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "17.253.144.10"
+   ],
+   "aaaa": [
+    "2620:149:af0::10"
+   ],
+   "cname": null,
+   "ns": [
+    "a.ns.apple.com",
+    "b.ns.apple.com",
+    "c.ns.apple.com",
+    "d.ns.apple.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "apple.com",
+   "registrar": "Nom-iq Ltd. dba COM LAUDE",
+   "registered": "1987-02-19",
+   "expires": "2027-02-20",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "a.ns.apple.com",
+    "b.ns.apple.com",
+    "c.ns.apple.com",
+    "d.ns.apple.com"
+   ],
+   "checked": "2026-10-23T21:28:26Z"
+  }
+ },
+ "arstechnica.com": {
+  "checked": "2026-10-23T21:25:25Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.119.153.14",
+    "18.119.211.17"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1285.awsdns-32.org",
+    "ns-2008.awsdns-59.co.uk",
+    "ns-493.awsdns-61.com",
+    "ns-783.awsdns-33.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "arstechnica.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "1998-12-30",
+   "expires": "2027-12-30",
+   "status": [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns-1285.awsdns-32.org",
+    "ns-2008.awsdns-59.co.uk",
+    "ns-493.awsdns-61.com",
+    "ns-783.awsdns-33.net"
+   ],
+   "checked": "2026-10-23T21:25:25Z"
+  }
+ },
+ "avc.com": {
+  "checked": "2026-10-23T21:27:09Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.4.171",
+    "104.26.5.171",
+    "172.67.70.244"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:4ab",
+    "2606:4700:20::681a:5ab",
+    "2606:4700:20::ac43:46f4"
+   ],
+   "cname": null,
+   "ns": [
+    "dan.ns.cloudflare.com",
+    "jean.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "avc.com",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "1995-04-29",
+   "expires": "2027-04-30",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "dan.ns.cloudflare.com",
+    "jean.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:27:09Z"
+  }
+ },
+ "aws.amazon.com": {
+  "checked": "2026-10-23T21:25:43Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.160.102.66",
+    "18.160.102.71",
+    "18.160.102.90",
+    "18.160.102.95"
+   ],
+   "aaaa": [
+    "2600:9000:212f:600:1c:a813:8500:93a1",
+    "2600:9000:212f:7600:1c:a813:8500:93a1",
+    "2600:9000:212f:ae00:1c:a813:8500:93a1",
+    "2600:9000:212f:b400:1c:a813:8500:93a1",
+    "2600:9000:212f:be00:1c:a813:8500:93a1",
+    "2600:9000:212f:c400:1c:a813:8500:93a1",
+    "2600:9000:212f:ee00:1c:a813:8500:93a1",
+    "2600:9000:212f:fa00:1c:a813:8500:93a1"
+   ],
+   "cname": "tp.8e49140c2-frontier.amazon.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "amazon.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "1994-11-01",
+   "expires": "2027-10-31",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns-1447.awsdns-52.org",
+    "ns-1707.awsdns-21.co.uk",
+    "ns-264.awsdns-33.com",
+    "ns-521.awsdns-01.net"
+   ],
+   "checked": "2026-10-23T21:25:43Z"
+  }
+ }
+}

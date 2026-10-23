@@ -1,0 +1,118 @@
+{
+ "1e2051994d6b": {
+  "checked": "2026-10-23T21:34:43Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "https://wiki.spheredev.org/Git_for_the_lazy",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://wiki.spheredev.org/Git_for_the_lazy"
+   }
+  ],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ },
+ "37d6e694c5d7": {
+  "checked": "2026-10-23T21:34:45Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://techcrunch.com/2010/10/11/formative-labs-funding/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://techcrunch.com/2010/10/11/formative-labs-funding/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "41e25f8942f9": {
+  "checked": "2026-10-23T21:34:51Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "http://www.insidefacebook.com/2010/12/03/year-in-facebook-powered-shopping/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "4487b216d282": {
+  "checked": "2026-10-23T21:34:42Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://gigaom.com",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://gigaom.com"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "878e3a20831b": {
+  "checked": "2026-10-23T21:34:48Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://lifehacker.com/vanilla-whitelists-your-cookies-in-google-chrome-5693011",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://lifehacker.com/5693011/vanilla-whitelists-your-cookies-in-google-chrome"
+   },
+   {
+    "status": 301,
+    "url": "https://lifehacker.com/vanilla-whitelists-your-cookies-in-google-chrome-5693011"
+   }
+  ],
+  "content_type": "text/html",
+  "wayback": {
+   "first": "2010-11-22T08:23:52Z",
+   "last": "2023-01-22T16:31:46Z",
+   "count": 51,
+   "checked": "2026-10-23T21:41:16Z"
+  }
+ },
+ "8866b67898c6": {
+  "checked": "2026-10-23T21:34:51Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.nybooks.com/articles/2010/12/23/glory-rails/?pagination=false",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.nybooks.com/articles/archives/2010/dec/23/glory-rails/?pagination=false"
+   },
+   {
+    "status": 301,
+    "url": "https://www.nybooks.com/articles/2010/12/23/glory-rails/?pagination=false"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "e5c9f676f14a": {
+  "checked": "2026-10-23T21:34:53Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "https://www.coldplay.com/newsdetail.php?id=688",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.coldplay.com/newsdetail.php?id=688"
+   }
+  ],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ }
+}

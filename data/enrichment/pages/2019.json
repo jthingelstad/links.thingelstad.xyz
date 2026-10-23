@@ -1,0 +1,107 @@
+{
+ "1f835519e823": {
+  "checked": "2026-10-23T21:36:29Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://boringtechnology.club/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://boringtechnology.club/"
+   }
+  ],
+  "content_type": "text/html",
+  "wayback": {
+   "first": "2018-01-23T21:16:22Z",
+   "last": "2026-10-19T20:46:02Z",
+   "count": 846,
+   "checked": "2026-10-23T21:42:10Z"
+  }
+ },
+ "307c28e5bc06": {
+  "checked": "2026-10-23T21:36:30Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://arstechnica.com/gaming/2019/10/minecraft-becomes-a-board-game-and-the-results-are-faithful-fantastic/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "5bb23c3c9534": {
+  "checked": "2026-10-23T21:36:31Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.profgalloway.com/twtr-enough-already/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.profgalloway.com/twtr-enough-already/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "6b7dc5ab6a68": {
+  "checked": "2026-10-23T21:36:29Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://galactanet.com/oneoff/theegg_mod.html",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://galactanet.com/oneoff/theegg_mod.html"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "81b38311e4c7": {
+  "checked": "2026-10-23T21:36:27Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://yuml.me/diagram/scruffy/class/draw",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "8e48d2eddaa3": {
+  "checked": "2026-10-23T21:36:27Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": null,
+  "alive": false,
+  "final_url": "https://www.usingomnifocus.com/2019/05/trouble-with-today-lists/",
+  "redirects": [],
+  "content_type": null,
+  "error": "tls: self-signed certificate"
+ },
+ "f37dd1bfaa8a": {
+  "checked": "2026-10-23T21:36:27Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://signalvnoise.com/svn3/leaders-doing-what-youre-good-at-hurts-your-team-30fd5c272186/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://m.signalvnoise.com/leaders-doing-what-youre-good-at-hurts-your-team/"
+   },
+   {
+    "status": 301,
+    "url": "https://signalvnoise.com/leaders-doing-what-youre-good-at-hurts-your-team/"
+   },
+   {
+    "status": 301,
+    "url": "https://signalvnoise.com/svn3/leaders-doing-what-youre-good-at-hurts-your-team-30fd5c272186/"
+   }
+  ],
+  "content_type": "text/html"
+ }
+}

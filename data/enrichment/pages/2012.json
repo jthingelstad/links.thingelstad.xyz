@@ -1,0 +1,121 @@
+{
+ "12045e3fd408": {
+  "checked": "2026-10-23T21:35:12Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://datamancer.com/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://datamancer.com/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "2b12fcbb5980": {
+  "checked": "2026-10-23T21:35:19Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://github.com/klbostee/dumbo/wiki",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "5c86a4528cc2": {
+  "checked": "2026-10-23T21:35:17Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.wired.com/2012/07/wiki-inventor/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.wired.com/2012/07/wiki-inventor/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "8ee84e066ff7": {
+  "checked": "2026-10-23T21:35:10Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis"
+   },
+   {
+    "status": 308,
+    "url": "https://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "c6579b2fc48b": {
+  "checked": "2026-10-23T21:35:15Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://highscalability.com/pinterest-architecture-update-18-million-visitors-10x-growth/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://highscalability.com/blog/2012/5/21/pinterest-architecture-update-18-million-visitors-10x-growth.html"
+   },
+   {
+    "status": 302,
+    "url": "https://highscalability.com/pinterest-architecture-update-18-million-visitors-10x-growth"
+   },
+   {
+    "status": 301,
+    "url": "https://highscalability.com/pinterest-architecture-update-18-million-visitors-10x-growth/"
+   }
+  ],
+  "content_type": "text/html",
+  "wayback": {
+   "first": "2012-05-23T10:19:39Z",
+   "last": "2026-10-10T06:04:11Z",
+   "count": 197,
+   "checked": "2026-10-23T21:41:29Z"
+  }
+ },
+ "d513e2fffea8": {
+  "checked": "2026-10-23T21:35:11Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "https://gawker.com/5891675/twitters-secret-history-as-the-worlds-worst-tech-or-media-business",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://gawker.com/5891675/twitters-secret-history-as-the-worlds-worst-tech-or-media-business"
+   }
+  ],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ },
+ "deb8846f27b3": {
+  "checked": "2026-10-23T21:35:18Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.quora.com/Database-Systems/Why-is-it-hard-to-scale-a-database-in-layman%E2%80%99s-terms",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.quora.com/Database-Systems/Why-is-it-hard-to-scale-a-database-in-layman%E2%80%99s-terms"
+   }
+  ],
+  "content_type": "text/html"
+ }
+}

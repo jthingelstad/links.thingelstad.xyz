@@ -1,0 +1,94 @@
+{
+ "01bdd6ebff3c": {
+  "checked": "2026-10-23T21:36:24Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 404,
+  "alive": false,
+  "final_url": "https://www.pagerduty.com/blog/slackbot-donut-cultural-impact/",
+  "redirects": [],
+  "content_type": "text/html",
+  "error": "HTTP 404"
+ },
+ "261c02550565": {
+  "checked": "2026-10-23T21:36:22Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.candlerblog.com/2018/03/30/iphone-photography/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.candlerblog.com/2018/03/30/iphone-photography/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "481f1bbf027d": {
+  "checked": "2026-10-23T21:36:25Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.plugshare.com/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "8d39ab9badb9": {
+  "checked": "2026-10-23T21:36:20Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://goteleport.com/blog/kubernetes-release-cycle/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://goteleport.com/blog/kubernetes-release-cycle/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "bbd1f822a146": {
+  "checked": "2026-10-23T21:36:22Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "http://reinertsenassociates.com/the-cult-of-the-root-cause/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "bf23894d7864": {
+  "checked": "2026-10-23T21:36:24Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://jvns.ca/blog/senior-engineer/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "fe40d9f43232": {
+  "checked": "2026-10-23T21:36:24Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.macsparky.com/blog/2018/7/new-podcast-automators/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.macsparky.com/blog/2018/7/new-podcast-automators/"
+   }
+  ],
+  "content_type": "text/html",
+  "wayback": {
+   "first": "2019-07-21T09:30:55Z",
+   "last": "2024-02-16T06:45:38Z",
+   "count": 5,
+   "checked": "2026-10-23T21:42:02Z"
+  }
+ }
+}

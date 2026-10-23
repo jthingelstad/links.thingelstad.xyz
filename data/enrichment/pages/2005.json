@@ -1,0 +1,89 @@
+{
+ "15599552e32a": {
+  "checked": "2026-10-23T21:33:42Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://morefro.com/match-9525/92091/125563455/1792791221/mf_6e014758-54d5-4960-9e78-64d71bd2303b/YXBpeDA3LXNpZW5uYWNsdWIub3JnfEhOSE9YMTA1SVoyMlI5RFIxWjIzU1pLUHwyMDk=/feed",
+  "redirects": [
+   {
+    "status": 302,
+    "url": "https://morefro.com/match-9525/92091/125563455/1792791221/mf_6e014758-54d5-4960-9e78-64d71bd2303b/YXBpeDA3LXNpZW5uYWNsdWIub3JnfEhOSE9YMTA1SVoyMlI5RFIxWjIzU1pLUHwyMDk=/feed"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "166bea3df0d6": {
+  "checked": "2026-10-23T21:45:03Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 403,
+  "alive": false,
+  "final_url": "http://www.maani.us/xml_charts/index.php",
+  "redirects": [],
+  "content_type": "text/html",
+  "error": "HTTP 403"
+ },
+ "46eb40abab26": {
+  "checked": "2026-10-23T21:33:45Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "http://www.vip-gallery.net/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "527a12c099d0": {
+  "checked": "2026-10-23T21:33:45Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www16.co.hennepin.mn.us/pins/addrsrch.jsp",
+  "redirects": [
+   {
+    "status": 302,
+    "url": "https://www16.co.hennepin.mn.us/pins/addrsrch.jsp"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "6bb393ff67cd": {
+  "checked": "2026-10-23T21:33:41Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.4guysfromrolla.com",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.4guysfromrolla.com/articles/102903-1.aspx"
+   },
+   {
+    "status": 301,
+    "url": "https://www.4guysfromrolla.com"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "fd94cb0f8abb": {
+  "checked": "2026-10-23T21:45:03Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 403,
+  "alive": false,
+  "final_url": "http://www.nytimes.com/2005/10/20/technology/circuits/20maps.html",
+  "redirects": [],
+  "content_type": "text/html",
+  "error": "HTTP 403 (DataDome)",
+  "wayback": {
+   "first": "2005-10-23T05:36:16Z",
+   "last": "2026-10-14T20:37:38Z",
+   "count": 78,
+   "checked": "2026-10-23T21:40:49Z"
+  }
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "newyorker.com": {
+  "checked": "2026-10-23T21:28:22Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.223.6.210",
+    "166.117.251.134"
+   ],
+   "aaaa": [
+    "2600:9000:a41b:ef95:eff:32b3:411c:f36c",
+    "2600:9000:a707:a46c:560f:b721:9702:d75e"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1116.awsdns-11.org",
+    "ns-1935.awsdns-49.co.uk",
+    "ns-28.awsdns-03.com",
+    "ns-836.awsdns-40.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "newyorker.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "1993-11-15",
+   "expires": "2027-11-14",
+   "status": [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns-1116.awsdns-11.org",
+    "ns-1935.awsdns-49.co.uk",
+    "ns-28.awsdns-03.com",
+    "ns-836.awsdns-40.net"
+   ],
+   "checked": "2026-10-23T21:28:22Z"
+  }
+ },
+ "npr.org": {
+  "checked": "2026-10-23T21:29:22Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.166.118.19",
+    "3.166.118.41",
+    "3.166.118.71",
+    "3.166.118.105"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1227.awsdns-25.org",
+    "ns-139.awsdns-17.com",
+    "ns-1580.awsdns-05.co.uk",
+    "ns-769.awsdns-32.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "timeout"
+  },
+  "rdap": {
+   "domain": "npr.org",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "1993-12-13",
+   "expires": "2027-12-12",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-1227.awsdns-25.org",
+    "ns-139.awsdns-17.com",
+    "ns-1580.awsdns-05.co.uk",
+    "ns-769.awsdns-32.net"
+   ],
+   "checked": "2026-10-23T21:29:22Z"
+  }
+ },
+ "nytimes.com": {
+  "checked": "2026-10-23T21:25:23Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.164",
+    "151.101.65.164",
+    "151.101.129.164",
+    "151.101.193.164"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p06.nsone.net",
+    "dns2.p06.nsone.net",
+    "dns3.p06.nsone.net",
+    "dns4.p06.nsone.net",
+    "ns-1328.awsdns-38.org",
+    "ns-1652.awsdns-14.co.uk",
+    "ns-244.awsdns-30.com",
+    "ns-635.awsdns-15.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "rdap": {
+   "domain": "nytimes.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "1994-01-18",
+   "expires": "2027-01-19",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "dns1.p06.nsone.net",
+    "dns2.p06.nsone.net",
+    "dns3.p06.nsone.net",
+    "dns4.p06.nsone.net",
+    "ns-1328.awsdns-38.org",
+    "ns-1652.awsdns-14.co.uk",
+    "ns-244.awsdns-30.com",
+    "ns-635.awsdns-15.net"
+   ],
+   "checked": "2026-10-23T21:25:23Z"
+  }
+ }
+}

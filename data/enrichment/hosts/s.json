@@ -1,0 +1,306 @@
+{
+ "scripting.com": {
+  "checked": "2026-10-23T21:30:56Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "16.15.164.114",
+    "16.15.212.22",
+    "16.15.246.37",
+    "16.15.255.205",
+    "16.182.34.29",
+    "52.217.165.13",
+    "52.217.165.53",
+    "52.217.232.181"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1286.awsdns-32.org",
+    "ns-1586.awsdns-06.co.uk",
+    "ns-492.awsdns-61.com",
+    "ns-722.awsdns-26.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "connection reset"
+  },
+  "rdap": {
+   "domain": "scripting.com",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "1995-03-14",
+   "expires": "2027-03-15",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-1286.awsdns-32.org",
+    "ns-1586.awsdns-06.co.uk",
+    "ns-492.awsdns-61.com",
+    "ns-722.awsdns-26.net"
+   ],
+   "checked": "2026-10-23T21:27:19Z"
+  }
+ },
+ "seths.blog": {
+  "checked": "2026-10-23T21:26:33Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.16.172.100",
+    "199.16.173.58"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "seths.blog",
+   "registrar": "Automattic Inc.",
+   "registered": "2016-11-21",
+   "expires": "2033-11-21",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "checked": "2026-10-23T21:26:33Z"
+  }
+ },
+ "simonwillison.net": {
+  "checked": "2026-10-23T21:26:25Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.56.206",
+    "172.67.136.172"
+   ],
+   "aaaa": [
+    "2606:4700:3035::6815:38ce",
+    "2606:4700:3036::ac43:88ac"
+   ],
+   "cname": null,
+   "ns": [
+    "nash.ns.cloudflare.com",
+    "zita.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "simonwillison.net",
+   "registrar": "123-Reg Limited",
+   "registered": "2005-03-09",
+   "expires": "2028-03-09",
+   "status": [
+    "active"
+   ],
+   "nameservers": [
+    "nash.ns.cloudflare.com",
+    "zita.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:26:25Z"
+  }
+ },
+ "sixcolors.com": {
+  "checked": "2026-10-23T21:27:05Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.16.172.73",
+    "199.16.173.247"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.linode.com",
+    "ns2.linode.com",
+    "ns3.linode.com",
+    "ns4.linode.com",
+    "ns5.linode.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "sixcolors.com",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "2008-10-13",
+   "expires": "2034-10-13",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.linode.com",
+    "ns2.linode.com",
+    "ns3.linode.com",
+    "ns4.linode.com",
+    "ns5.linode.com"
+   ],
+   "checked": "2026-10-23T21:27:05Z"
+  }
+ },
+ "slate.com": {
+  "checked": "2026-10-23T21:29:58Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.55",
+    "151.101.65.55",
+    "151.101.129.55",
+    "151.101.193.55"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1512.awsdns-61.org",
+    "ns-1786.awsdns-31.co.uk",
+    "ns-259.awsdns-32.com",
+    "ns-625.awsdns-14.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "slate.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "1995-02-21",
+   "expires": "2027-02-22",
+   "status": [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns-1512.awsdns-61.org",
+    "ns-1786.awsdns-31.co.uk",
+    "ns-259.awsdns-32.com",
+    "ns-625.awsdns-14.net"
+   ],
+   "checked": "2026-10-23T21:29:58Z"
+  }
+ },
+ "startribune.com": {
+  "checked": "2026-10-23T21:25:45Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1064.awsdns-05.org",
+    "ns-1554.awsdns-02.co.uk",
+    "ns-238.awsdns-29.com",
+    "ns-807.awsdns-36.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 429
+  },
+  "rdap": {
+   "domain": "startribune.com",
+   "registrar": "NameCheap, Inc.",
+   "registered": "1994-01-13",
+   "expires": "2028-01-12",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1064.awsdns-05.org",
+    "ns-1554.awsdns-02.co.uk",
+    "ns-238.awsdns-29.com",
+    "ns-807.awsdns-36.net"
+   ],
+   "checked": "2026-10-23T21:25:45Z"
+  }
+ },
+ "stratechery.com": {
+  "checked": "2026-10-23T21:26:30Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.16.172.88",
+    "199.16.173.162"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "a.dns.gandi.net",
+    "b.dns.gandi.net",
+    "c.dns.gandi.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "stratechery.com",
+   "registrar": "Gandi SAS",
+   "registered": "2012-11-20",
+   "expires": "2034-11-20",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "a.dns.gandi.net",
+    "b.dns.gandi.net",
+    "c.dns.gandi.net"
+   ],
+   "checked": "2026-10-23T21:26:30Z"
+  }
+ }
+}

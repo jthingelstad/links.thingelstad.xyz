@@ -1,0 +1,111 @@
+{
+ "063849ee855c": {
+  "checked": "2026-10-23T21:36:13Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://sixcolors.com/post/2016/09/sierra-review/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "4d68049ebd8b": {
+  "checked": "2026-10-23T21:45:05Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 403,
+  "alive": false,
+  "final_url": "https://www.etsy.com/codeascraft/code-slush-holidays/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.etsy.com/codeascraft/code-slush-holidays/"
+   }
+  ],
+  "content_type": "text/html",
+  "error": "HTTP 403 (DataDome)"
+ },
+ "67fda89d0e79": {
+  "checked": "2026-10-23T21:36:10Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://aws.amazon.com/blogs/aws/aws-database-migration-service/",
+  "redirects": [],
+  "content_type": "text/html"
+ },
+ "776ab9cba2f6": {
+  "checked": "2026-10-23T21:36:13Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://aws.amazon.com/blogs/security/new-whitepaper-now-available-the-security-perspective-of-the-aws-cloud-adoption-framework/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://blogs.aws.amazon.com/security/post/Tx1X3HU67FA1F2N/New-Whitepaper-Now-Available-The-Security-Perspective-of-the-AWS-Cloud-Adoption"
+   },
+   {
+    "status": 302,
+    "url": "https://blogs.aws.amazon.com/security/post/Tx1X3HU67FA1F2N/New-Whitepaper-Now-Available-The-Security-Perspective-of-the-AWS-Cloud-Adoption/"
+   },
+   {
+    "status": 301,
+    "url": "https://aws.amazon.com/blogs/security/new-whitepaper-now-available-the-security-perspective-of-the-aws-cloud-adoption-framework/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "bb03cd326028": {
+  "checked": "2026-10-23T21:36:09Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.independent.co.uk/voices/iceland-has-jailed-26-bankers-why-won-t-we-a6735411.html",
+  "redirects": [
+   {
+    "status": 308,
+    "url": "https://www.independent.co.uk/voices/iceland-has-jailed-26-bankers-why-wont-we-a6735411.html"
+   },
+   {
+    "status": 301,
+    "url": "https://www.independent.co.uk/voices/iceland-has-jailed-26-bankers-why-won-t-we-a6735411.html"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "ea1602ea2c0a": {
+  "checked": "2026-10-23T21:36:10Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://nickcraver.com/blog/2016/02/17/stack-overflow-the-architecture-2016-edition/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://nickcraver.com/blog/2016/02/17/stack-overflow-the-architecture-2016-edition/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "f871eaa12ccb": {
+  "checked": "2026-10-23T21:36:10Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "http://scripting.com/2016/04/24/1210.html",
+  "redirects": [],
+  "content_type": "text/html",
+  "wayback": {
+   "first": "2016-04-29T01:25:11Z",
+   "last": "2026-04-22T14:21:17Z",
+   "count": 11,
+   "checked": "2026-10-23T21:41:48Z"
+  }
+ }
+}

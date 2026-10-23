@@ -1,0 +1,45 @@
+{
+ "daringfireball.net": {
+  "checked": "2026-10-23T21:25:30Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.4.133",
+    "104.26.5.133",
+    "172.67.74.128"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:485",
+    "2606:4700:20::681a:585",
+    "2606:4700:20::ac43:4a80"
+   ],
+   "cname": null,
+   "ns": [
+    "doug.ns.cloudflare.com",
+    "robin.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "daringfireball.net",
+   "registrar": "pair Networks, Inc. d/b/a pair Domains",
+   "registered": "2002-03-18",
+   "expires": "2027-03-18",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "doug.ns.cloudflare.com",
+    "robin.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:25:30Z"
+  }
+ }
+}

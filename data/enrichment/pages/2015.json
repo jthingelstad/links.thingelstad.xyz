@@ -1,0 +1,121 @@
+{
+ "19bf4f51b926": {
+  "checked": "2026-10-23T21:36:01Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.theinformation.com/articles/apple-unifies-cloud-services-platform-amid-open-source-push",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.theinformation.com/articles/apple-unifies-cloud-services-platform-amid-open-source-push"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "4180991ea16e": {
+  "checked": "2026-10-23T21:35:57Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "5d291ecbac0b": {
+  "checked": "2026-10-23T21:35:49Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://arstechnica.com:443/science/2015/04/inside-apples-researchkit/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://arstechnica.com:443/science/2015/04/inside-apples-researchkit/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "64acc4f16aea": {
+  "checked": "2026-10-23T21:36:04Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://arstechnica.com/information-technology/2015/11/crypto-e-mail-service-pays-6000-ransom-gets-taken-out-by-ddos-anyway/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://arstechnica.com:443/security/2015/11/crypto-e-mail-service-pays-6000-ransom-gets-taken-out-by-ddos-anyway/"
+   },
+   {
+    "status": 301,
+    "url": "https://arstechnica.com/information-technology/2015/11/crypto-e-mail-service-pays-6000-ransom-gets-taken-out-by-ddos-anyway/"
+   }
+  ],
+  "content_type": "text/html"
+ },
+ "baac745e27bf": {
+  "checked": "2026-10-23T21:35:59Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://netflixtechblog.com/java-in-flames-e763b3d32166?gi=7616d1047365",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://netflixtechblog.com/java-in-flames-e763b3d32166"
+   },
+   {
+    "status": 307,
+    "url": "https://medium.com/m/global-identity-2?redirectUrl=https%3A%2F%2Fnetflixtechblog.com%2Fjava-in-flames-e763b3d32166"
+   },
+   {
+    "status": 307,
+    "url": "https://netflixtechblog.com/java-in-flames-e763b3d32166?gi=7616d1047365"
+   }
+  ],
+  "content_type": "text/html",
+  "wayback": {
+   "first": "2017-09-05T05:13:31Z",
+   "last": "2026-09-09T19:00:26Z",
+   "count": 91,
+   "checked": "2026-10-23T21:41:42Z"
+  }
+ },
+ "ee4f95754823": {
+  "checked": "2026-10-23T21:45:05Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 403,
+  "alive": false,
+  "final_url": "https://learngraphql.com",
+  "redirects": [],
+  "content_type": "text/html",
+  "error": "HTTP 403"
+ },
+ "eeaae5de5eab": {
+  "checked": "2026-10-23T21:35:48Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "status": 200,
+  "alive": true,
+  "final_url": "https://keepachangelog.com/",
+  "redirects": [
+   {
+    "status": 301,
+    "url": "https://keepachangelog.com/"
+   }
+  ],
+  "content_type": "text/html"
+ }
+}

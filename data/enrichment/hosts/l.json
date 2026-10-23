@@ -1,0 +1,188 @@
+{
+ "leadershipfreak.blog": {
+  "checked": "2026-10-23T21:27:45Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.145",
+    "192.0.78.239"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "leadershipfreak.blog",
+   "registrar": "Automattic Inc.",
+   "registered": "2016-12-02",
+   "expires": "2026-12-02",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "checked": "2026-10-23T21:27:45Z"
+  }
+ },
+ "lethain.com": {
+  "checked": "2026-10-23T21:27:13Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1328.awsdns-38.org",
+    "ns-1555.awsdns-02.co.uk",
+    "ns-298.awsdns-37.com",
+    "ns-516.awsdns-00.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "lethain.com",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "2007-06-22",
+   "expires": "2029-06-22",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1328.awsdns-38.org",
+    "ns-1555.awsdns-02.co.uk",
+    "ns-298.awsdns-37.com",
+    "ns-516.awsdns-00.net"
+   ],
+   "checked": "2026-10-23T21:27:13Z"
+  }
+ },
+ "lifehacker.com": {
+  "checked": "2026-10-23T21:27:00Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.34.146",
+    "172.64.153.110"
+   ],
+   "aaaa": [
+    "2606:4700:4408::ac40:996e",
+    "2a06:98c1:3100::6812:2292"
+   ],
+   "cname": null,
+   "ns": [
+    "aria.ns.cloudflare.com",
+    "owen.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "lifehacker.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "2004-09-08",
+   "expires": "2029-09-08",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "aria.ns.cloudflare.com",
+    "owen.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-23T21:27:00Z"
+  }
+ },
+ "linkedin.com": {
+  "checked": "2026-10-23T21:28:34Z",
+  "method": "enrich_hosts",
+  "version": 1,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "130.211.32.14"
+   ],
+   "aaaa": [
+    "2600:1901:0:d5ad::"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.p09.nsone.net",
+    "dns2.p09.nsone.net",
+    "dns3.p09.nsone.net",
+    "dns4.p09.nsone.net",
+    "ns1-42.azure-dns.com",
+    "ns2-42.azure-dns.net",
+    "ns3-42.azure-dns.org",
+    "ns4-42.azure-dns.info"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "rdap": {
+   "domain": "linkedin.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2002-11-02",
+   "expires": "2027-11-02",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "dns1.p09.nsone.net",
+    "dns2.p09.nsone.net",
+    "dns3.p09.nsone.net",
+    "dns4.p09.nsone.net",
+    "ns1-42.azure-dns.com",
+    "ns2-42.azure-dns.net",
+    "ns3-42.azure-dns.org",
+    "ns4-42.azure-dns.info"
+   ],
+   "checked": "2026-10-23T21:28:34Z"
+  }
+ }
+}
