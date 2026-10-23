@@ -90,7 +90,22 @@
               "AccessControlMaxAgeSec": 31536000,
               "Override": true
             }
-          }
+          },
+          "CorsConfig": {
+            "AccessControlAllowCredentials": false,
+            "AccessControlAllowHeaders": {
+              "Items": ["*"]
+            },
+            "AccessControlAllowMethods": {
+              "Items": ["GET", "HEAD"]
+            },
+            "AccessControlAllowOrigins": {
+              "Items": ["*"]
+            },
+            "AccessControlMaxAgeSec": 86400,
+            "OriginOverride": false
+          },
+          "Comment": "Security headers, and CORS so the public JSON and Markdown can be read from any origin"
         }
       }
     },

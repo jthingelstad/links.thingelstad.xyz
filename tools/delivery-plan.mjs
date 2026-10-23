@@ -55,8 +55,17 @@ export function isHashedAsset(key) {
 
 const documents = new Set(['.html', '.json', '.md', '.xml', '.txt']);
 
+// The feeds (src/lib/feeds.ts) are named feed.xml and feed.json wherever
+// they sit; readers and validators go by the feed types, not the generic ones.
+export const feedTypes = {
+  'feed.xml': 'application/rss+xml; charset=utf-8',
+  'feed.json': 'application/feed+json; charset=utf-8',
+};
+
 export function contentType(key) {
-  const type = contentTypes[path.posix.extname(key)];
+  const type =
+    feedTypes[path.posix.basename(key)] ??
+    contentTypes[path.posix.extname(key)];
   if (!type) throw new Error(`No Content-Type for ${key}`);
   return type;
 }

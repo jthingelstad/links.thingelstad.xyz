@@ -113,18 +113,21 @@ deploy can fail to load an old chunk until it is reloaded.
 
 ## Content types, caching and compression
 
-| Objects                                                                 | Content-Type                                                  | Cache-Control                                  |
-| ----------------------------------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------- |
-| Pages (`.html`)                                                         | `text/html; charset=utf-8`                                    | `public,max-age=0,s-maxage=60,must-revalidate` |
-| JSON twins and other `.json`                                            | `application/json`                                            | the same                                       |
-| Markdown twins (`.md`)                                                  | `text/markdown; charset=utf-8`                                | the same                                       |
-| Sitemaps and feeds (`.xml`), `robots.txt`, `llms.txt`                   | `application/xml; charset=utf-8`, `text/plain; charset=utf-8` | the same                                       |
-| Pagefind's entry file, scripts and wasm                                 | JSON, JavaScript, `application/octet-stream`                  | the same                                       |
-| `_astro/` bundles and fonts, Pagefind `.pf_*` chunks (named by content) | by extension                                                  | `public,max-age=31536000,immutable`            |
-| `favicon.svg`                                                           | `image/svg+xml`                                               | `public,max-age=3600`                          |
+| Objects                                                                 | Content-Type                                                                 | Cache-Control                                  |
+| ----------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------- |
+| Pages (`.html`)                                                         | `text/html; charset=utf-8`                                                   | `public,max-age=0,s-maxage=60,must-revalidate` |
+| JSON twins and other `.json`                                            | `application/json`                                                           | the same                                       |
+| Markdown twins (`.md`)                                                  | `text/markdown; charset=utf-8`                                               | the same                                       |
+| Feeds, `feed.xml` and `feed.json` wherever they sit                     | `application/rss+xml; charset=utf-8`, `application/feed+json; charset=utf-8` | the same                                       |
+| Sitemaps (`.xml`), `robots.txt`, `llms.txt`, `llms-full.txt`            | `application/xml; charset=utf-8`, `text/plain; charset=utf-8`                | the same                                       |
+| Pagefind's entry file, scripts and wasm                                 | JSON, JavaScript, `application/octet-stream`                                 | the same                                       |
+| `_astro/` bundles and fonts, Pagefind `.pf_*` chunks (named by content) | by extension                                                                 | `public,max-age=31536000,immutable`            |
+| `favicon.svg`                                                           | `image/svg+xml`                                                              | `public,max-age=3600`                          |
 
 A file with an extension not in `tools/delivery-plan.mjs` stops the deploy before
-anything is written. The edge function redirects `/hosts/<name>` to `/hosts/<name>/`
+anything is written. The response headers policy adds `Access-Control-Allow-Origin: *`
+for GET and HEAD, so the JSON and Markdown twins and the exports can be read from a page
+on any origin; everything here is public data. The edge function redirects `/hosts/<name>` to `/hosts/<name>/`
 (host names have dots, `/hosts/obsidian.md/`), so no file but `hosts/index.html` may sit
 directly under `hosts/`; the deploy refuses one.
 

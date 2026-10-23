@@ -64,6 +64,12 @@ test('each built file type has its Content-Type', () => {
     'application/xml; charset=utf-8',
   );
   assert.equal(contentType('robots.txt'), 'text/plain; charset=utf-8');
+  assert.equal(contentType('feed.xml'), 'application/rss+xml; charset=utf-8');
+  assert.equal(
+    contentType('hosts/obsidian.md/feed.json'),
+    'application/feed+json; charset=utf-8',
+  );
+  assert.equal(contentType('hosts.json'), 'application/json');
   assert.equal(contentType('_astro/font.abc123.woff2'), 'font/woff2');
   assert.equal(
     contentType('pagefind/pagefind.js'),
