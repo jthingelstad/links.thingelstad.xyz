@@ -1,0 +1,55 @@
+{
+  "simonwillison.net": {
+    "checked": "2026-10-23T21:26:25Z",
+    "method": "enrich_hosts",
+    "version": 2,
+    "dns": {
+      "resolves": true,
+      "a": [
+        "192.0.2.1"
+      ],
+      "aaaa": [],
+      "cname": null,
+      "ns": [
+        "ns1.example.net"
+      ],
+      "mx": true
+    },
+    "https": {
+      "reachable": true,
+      "redirects_http": true,
+      "status": 200
+    },
+    "rdap": {
+      "domain": "simonwillison.net",
+      "registrar": "123-Reg Limited",
+      "registered": "2005-03-09",
+      "expires": "2028-03-09",
+      "status": [
+        "active"
+      ],
+      "nameservers": [
+        "nash.ns.cloudflare.com"
+      ],
+      "checked": "2026-10-23T21:26:25Z"
+    },
+    "home": {
+      "checked": "2026-10-23T21:26:25Z",
+      "title": "Simon Willison’s Weblog",
+      "generator": null,
+      "feeds": [
+        {
+          "type": "atom",
+          "url": "https://simonwillison.net/atom/everything/",
+          "title": "Atom"
+        }
+      ],
+      "hcard": false,
+      "rel_me": [
+        "https://github.com/simonw",
+        "https://fedi.simonwillison.net/@simon"
+      ],
+      "webmention": "https://webmention.io/simonwillison.net/webmention"
+    }
+  }
+}

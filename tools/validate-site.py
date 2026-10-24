@@ -32,12 +32,31 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   split by month); every URL on this site inside the feeds, the JSON files
   and the llms files resolves to a built file;
 - /newest/ lists the newest 50 links, and the sitemap lists pages only (no
-  feeds, JSON or text files).
+  feeds, JSON or text files);
+- kinds (src/lib/kinds.ts): every JSON twin names a kind and its record page
+  files it under the same one for Pagefind; /kinds/ gives each kind's count;
+  each /kinds/<kind>/ lists that kind's newest links (at most 1,000), newest
+  first, and has its feed pair of the newest 50;
+- /about/ renders content/about.md (a title, its sections, links to
+  /links.db and /llms.txt, no word of Pinboard), and every page's footer
+  links it;
+- /links.db is SQLite with the tables tools/build_db.py writes, one row per
+  link, host, issue and appearance in data/, the enrichment rows the data
+  holds, and no column that says whether a link works;
+- no liveness reaches dist/ (Jamie, 2026-10-23: "You don't need to validate
+  the links. They just are."): no twin carries a key such as alive, status,
+  final_url, redirects, dns or https, and no file names final_url,
+  redirects_http or an error the enrichment recorded, unless a saved link's
+  own words do; every video player address waits in data-embed for a click
+  (youtube-nocookie.com or player.vimeo.com, no iframe in a built page); and
+  every image a twin's facts name is under /media/ and built. LINKS_ENRICHMENT
+  names the shards the build read, as it does for the build.
 """
 
 import json
 import os
 import re
+import sqlite3
 import sys
 import xml.etree.ElementTree as ET
 from datetime import datetime
@@ -59,6 +78,33 @@ LLMS_YEAR_LIMIT = 4_000_000
 CENTRAL = ZoneInfo("America/Chicago")
 # Pinboard's fields, in the mirror's order (docs/DATA.md).
 MIRROR_FIELDS = ["id", "hash", "url", "title", "note", "saved", "tags", "toread", "meta"]
+# The enrichment shards the build read (src/lib/enrichment.ts).
+ENRICHMENT = (
+    Path(os.environ["LINKS_ENRICHMENT"]).resolve()
+    if os.environ.get("LINKS_ENRICHMENT")
+    else ROOT / "data/enrichment"
+)
+KINDS = ["video", "repository", "book", "paper", "article", "newsletter", "podcast", "page"]
+KIND_PAGE_LIMIT = 1000
+# Keys that would say whether a link or a host works; never in a twin.
+LIVENESS_KEYS = {
+    "alive", "status", "final_url", "redirects", "redirects_http", "reachable", "resolves",
+    "dns", "https", "error", "rdap_error", "content_type",
+}
+# Words of the enrichment's liveness that no built file names.
+LIVENESS_WORDS = {"final_url", "redirects_http", "rdap_error"}
+PLAYERS = ("https://www.youtube-nocookie.com/embed/", "https://player.vimeo.com/video/")
+DB_TABLES = {
+    "links": ["id", "url", "title", "note", "saved", "tags", "meta", "year", "host"],
+    "hosts": ["host", "links", "first", "last"],
+    "issues": ["key", "number", "slug", "title", "date", "url"],
+    "appearances": ["issue_key", "position", "id", "url", "text", "section"],
+    "host_facts": ["host", "registered", "registrar", "expires", "home_title", "generator",
+                   "hcard", "webmention", "feeds"],
+    "wayback": ["id", "first", "last", "count", "count_capped"],
+    "facts": ["id", "method", "kind", "json"],
+    "meta": ["key", "value"],
+}
 # A URL on this site inside a feed, a JSON file or an llms file.
 SITE_URL = re.compile(re.escape(SITE) + r"(/[^\s\"'<>()\[\]\\&]*)")
 TEXT_SUFFIXES = {".html", ".js", ".css", ".json", ".xml", ".txt", ".md", ".svg"}
@@ -99,6 +145,13 @@ class Page(HTMLParser):
         self.inline_urls = []
         self.alternates = []
         self.kudos = []
+        self.kind = None  # the record's Pagefind kind filter
+        self.embeds = []
+        self.iframes = 0
+        self.kind_counts = {}  # /kinds/: data-kind to data-count
+        self.lede_count = None
+        self.h1 = 0
+        self.h2 = 0
         self._inline = None
 
     def handle_starttag(self, tag, attrs):
@@ -116,6 +169,17 @@ class Page(HTMLParser):
             self._inline = []
         if tag == "button" and "tinylytics_kudos" in data.get("class", "").split():
             self.kudos.append(data)
+        if data.get("data-pagefind-filter", "").startswith("kind["):
+            self.kind = data.get("data-kind")
+        if tag == "li" and "data-kind" in data and "data-count" in data:
+            self.kind_counts[data["data-kind"]] = data["data-count"]
+        if tag == "p" and "lede" in data.get("class", "").split() and "data-count" in data:
+            self.lede_count = data["data-count"]
+        if "data-embed" in data:
+            self.embeds.append(data["data-embed"])
+        self.iframes += tag == "iframe"
+        self.h1 += tag == "h1"
+        self.h2 += tag == "h2"
         for key in ("href", "src", "data"):
             if data.get(key) and not (tag == "object" and key != "data"):
                 self.refs.append(data[key])
@@ -461,6 +525,141 @@ def check_newest(newest, listed_records, problems):
         problems.append(f"/newest/: does not list the newest {FEED_SIZE} links, newest first")
 
 
+def walk_keys(value):
+    """Every key at any depth of a JSON value."""
+    if isinstance(value, dict):
+        for key, inner in value.items():
+            yield key
+            yield from walk_keys(inner)
+    elif isinstance(value, list):
+        for inner in value:
+            yield from walk_keys(inner)
+
+
+def liveness_words(data_links):
+    """The words no built file may hold: the enrichment's liveness field names
+    and every error it recorded, less any a saved link's own words use."""
+    words = set(LIVENESS_WORDS)
+    for folder in ("hosts", "pages", "facts"):
+        for shard in sorted((ENRICHMENT / folder).glob("*.json")):
+            for record in json.loads(shard.read_text()).values():
+                if not isinstance(record, dict):
+                    continue
+                home = record.get("home") if isinstance(record.get("home"), dict) else {}
+                for value in (record.get("error"), record.get("rdap_error"), home.get("error")):
+                    if isinstance(value, str) and len(value.strip()) >= 6:
+                        words.add(value.strip())
+    saved = "\n".join(
+        f"{link['url']} {link['title']} {link['note']} {' '.join(link['tags'])}" for link in data_links
+    )
+    return sorted(word for word in words if word not in saved)
+
+
+def check_kinds(twin_kinds, record_kinds, newest, kind_pages, alternates, listed_records, problems):
+    """Every record has one kind, the same on its page; /kinds/ counts each;
+    each kind page lists its newest links and has its feed pair."""
+    by_kind = {kind: [] for kind in KINDS}
+    for record in newest:
+        kind = twin_kinds.get(record)
+        if kind not in by_kind:
+            problems.append(f"links/{record}.json: kind {kind!r} is not one of the kinds")
+            continue
+        by_kind[kind].append(record)
+        if record_kinds.get(record) != kind:
+            problems.append(f"links/{record}/: its Pagefind kind is not its twin's, {kind}")
+    built = {p.name for p in (DIST / "kinds").iterdir() if p.is_dir()} if (DIST / "kinds").exists() else set()
+    if built != set(KINDS):
+        problems.append(f"kinds/: pages for {sorted(built)}, not {KINDS}")
+    index = kind_pages.get("/kinds/")
+    counts = index.kind_counts if index else {}
+    if list(counts) != KINDS:
+        problems.append(f"/kinds/: lists {list(counts)}, not every kind in order")
+    kinds_feeds = (("application/rss+xml", "feed.xml"), ("application/feed+json", "feed.json"))
+    for kind, records in by_kind.items():
+        url = f"/kinds/{kind}/"
+        page = kind_pages.get(url)
+        if counts.get(kind) != str(len(records)) or not page or page.lede_count != str(len(records)):
+            problems.append(f"{url}: does not count its {len(records)} links")
+        if listed_records.get(url) != records[:KIND_PAGE_LIMIT]:
+            problems.append(
+                f"{url}: does not list the newest {min(len(records), KIND_PAGE_LIMIT)} links"
+                " of the kind, newest first"
+            )
+        for type_, name in kinds_feeds:
+            if (type_, url + name) not in alternates.get(url, []):
+                problems.append(f"{url}: does not advertise its {name}")
+        check_feed_pair(DIST / "kinds" / kind, records[:FEED_SIZE], problems)
+    return {kind: len(records) for kind, records in by_kind.items()}
+
+
+def check_about(about, without_about, problems):
+    """/about/ renders content/about.md, and every page's footer links it."""
+    file = DIST / "about/index.html"
+    if about is None or not file.exists():
+        problems.append("/about/: not built")
+        return
+    if about.h1 != 1 or about.h2 < 1:
+        problems.append(f"/about/: {about.h1} titles and {about.h2} sections")
+    for target in ("/links.db", "/llms.txt"):
+        if target not in about.refs:
+            problems.append(f"/about/: does not link {target}")
+    words = re.sub(r"<[^>]+>", " ", file.read_text()).lower()
+    if "pinboard" in words:
+        problems.append("/about/: names Pinboard")
+    if without_about:
+        problems.append(
+            f"{len(without_about)} pages do not link /about/ from the footer"
+            f" (first {without_about[:3]})"
+        )
+
+
+def check_db(data_links, problems):
+    """/links.db: the tables tools/build_db.py writes, its rows those of data/
+    and the enrichment the build read, and no liveness column."""
+    path = DIST / "links.db"
+    if not path.exists():
+        problems.append("links.db: not built (npm run db)")
+        return {}
+    sys.path.insert(0, str(ROOT / "tools"))
+    import build_db  # noqa: PLC0415 - tools/build_db.py, the file's maker
+
+    expected = build_db.rows(build_db.load(ROOT, ENRICHMENT))
+    db = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
+    try:
+        tables = {
+            name: [column[1] for column in db.execute(f"PRAGMA table_info({name})")]
+            for (name,) in db.execute("SELECT name FROM sqlite_master WHERE type = 'table'")
+        }
+        if tables != DB_TABLES:
+            problems.append(f"links.db: tables {sorted(tables)} are not tools/build_db.py's")
+        for name, columns in tables.items():
+            if LIVENESS_KEYS & set(columns):
+                problems.append(f"links.db: {name} has a liveness column")
+        counts = {
+            name: db.execute(f"SELECT count(*) FROM {name}").fetchone()[0]
+            for name in DB_TABLES
+            if name in tables
+        }
+        ids = {row[0] for row in db.execute("SELECT id FROM links")} if "links" in tables else set()
+        meta = dict(db.execute("SELECT key, value FROM meta")) if "meta" in tables else {}
+    finally:
+        db.close()
+    derived = json.loads((ROOT / "data/derived/issues.json").read_text())["issues"]
+    independent = {
+        "links": len(data_links),
+        "issues": len(derived),
+        "appearances": sum(len(issue["links"]) for issue in derived),
+    }
+    for name, n in {**{k: len(v) for k, v in expected.items()}, **independent}.items():
+        if counts.get(name) != n:
+            problems.append(f"links.db: {counts.get(name)} rows in {name}, not {n}")
+        if name != "meta" and meta.get(f"count.{name}") != str(n):
+            problems.append(f"links.db: meta count.{name} is not {n}")
+    if ids != {link["id"] for link in data_links}:
+        problems.append("links.db: its links are not the saved links")
+    return counts
+
+
 def main():
     problems = []
     sites = json.loads((ROOT / "shared/sites.json").read_text())
@@ -487,6 +686,11 @@ def main():
     off_site_seen = set()
     alternates = {}  # page url to its <link rel="alternate"> (type, href)
     kudos = {}  # page url to its Kudos buttons
+    record_kinds = {}  # record id to its Pagefind kind
+    kind_pages = {}  # /kinds/ and each kind page, parsed
+    about = None
+    without_about = []
+    words = liveness_words(data_links)
     listed_records = {}  # host pages and /newest/ to the records they list, in order
     loaders = 0
     for page in pages:
@@ -498,10 +702,26 @@ def main():
         ids[url] = parser.ids
         alternates[url] = parser.alternates
         kudos[url] = parser.kudos
-        if url.startswith("/hosts/") or url == "/newest/":
+        if url.startswith(("/hosts/", "/kinds/")) or url == "/newest/":
             listed_records[url] = [
                 record_id(ref) for ref in parser.refs if record_id(ref)
             ]
+        if record_id(url):
+            record_kinds[record_id(url)] = parser.kind
+        if url.startswith("/kinds/"):
+            kind_pages[url] = parser
+        if url == "/about/":
+            about = parser
+        if "/about/" not in parser.refs:
+            without_about.append(url)
+        for embed in parser.embeds:
+            if not embed.startswith(PLAYERS):
+                problems.append(f"{rel}: a video player at {embed}")
+        if parser.iframes:
+            problems.append(f"{rel}: an iframe in the built page (players load on a click)")
+        for word in words:
+            if word in text:
+                problems.append(f"{rel}: names {word!r}, which says whether a link works")
         mentions = text.count("tinylytics.app")
         loaded = parser.inline_urls.count(TINYLYTICS)
         loaders += loaded
@@ -580,14 +800,33 @@ def main():
 
     # Records, twins and the data.
     records = sorted(p.parent.name for p in (DIST / "links").glob("*/index.html"))
+    twin_kinds = {}
+    images = 0
     for record in records:
         twin = DIST / "links" / f"{record}.json"
+        markdown = DIST / "links" / f"{record}.md"
         if not twin.exists():
             problems.append(f"links/{record}/: no JSON twin")
-        elif json.loads(twin.read_text()).get("id") != record:
+            continue
+        twin_text = twin.read_text()
+        doc = json.loads(twin_text)
+        if doc.get("id") != record:
             problems.append(f"links/{record}.json: names another id")
-        if not (DIST / "links" / f"{record}.md").exists():
+        twin_kinds[record] = doc.get("kind")
+        live = sorted(LIVENESS_KEYS & set(walk_keys(doc)))
+        if live:
+            problems.append(f"links/{record}.json: carries {live}")
+        image = (doc.get("facts") or {}).get("image")
+        if image:
+            images += 1
+            if not image.startswith(SITE + "/media/") or not target_file(image[len(SITE):]).exists():
+                problems.append(f"links/{record}.json: its image {image} is not built under /media/")
+        md_text = markdown.read_text() if markdown.exists() else None
+        if md_text is None:
             problems.append(f"links/{record}/: no Markdown twin")
+        for word in words:
+            if word in twin_text or (md_text and word in md_text):
+                problems.append(f"links/{record}: a twin names {word!r}")
     saved = [link["id"] for link in data_links]
     if sorted(saved) != records:
         missing = sorted(set(saved) - set(records))[:5]
@@ -625,6 +864,17 @@ def main():
     year_files = check_llms(data_links, problems)
     inside = check_site_urls(problems)
     check_newest(newest, listed_records, problems)
+    kind_counts = check_kinds(
+        twin_kinds, record_kinds, newest, kind_pages, alternates, listed_records, problems
+    )
+    check_about(about, without_about, problems)
+    db_counts = check_db(data_links, problems)
+    for file in [DIST / "llms.txt", *year_llms_files(), *sorted(DIST.rglob("feed.*"))]:
+        if file.exists():
+            body = file.read_text()
+            for word in words:
+                if word in body:
+                    problems.append(f"{file.relative_to(DIST)}: names {word!r}")
 
     if problems:
         sys.exit(
@@ -634,9 +884,12 @@ def main():
     print(
         f"{len(pages)} pages ({len(records)} records with twins), {len(links)} internal"
         f" links, {len(seen)} sitemap URLs; links, metadata and sitemap valid;"
-        f" {feeds} feeds, links.json, hosts.json, issues.json, llms.txt and"
+        f" {feeds + 2 * len(kind_counts)} feeds, links.json, hosts.json, issues.json, llms.txt and"
         f" {len(year_files)} year llms files valid ({len(inside)} site URLs inside resolve);"
         f" /newest/ lists the newest {FEED_SIZE};"
+        f" kinds {', '.join(f'{k} {n}' for k, n in kind_counts.items())};"
+        f" /about/ renders; links.db {', '.join(f'{n} {t}' for t, n in db_counts.items())};"
+        f" no liveness ({len(words)} words checked), {images} facts images built;"
         f" Tinylytics {'on (production build)' if PRODUCTION else 'absent'}"
         + (" (a saved link names it; only fetches checked)" if content_names_tinylytics else "")
         + f"; off-site fetches: {', '.join(sorted(off_site_seen)) or 'none'}"

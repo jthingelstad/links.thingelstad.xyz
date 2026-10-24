@@ -27,6 +27,8 @@ export const contentTypes = {
   '.jpg': 'image/jpeg',
   '.webp': 'image/webp',
   '.ico': 'image/x-icon',
+  // The SQLite file, /links.db (tools/build_db.py).
+  '.db': 'application/vnd.sqlite3',
   // Pagefind's index files are gzip inside and decoded by Pagefind's script.
   '.pagefind': 'application/octet-stream',
   '.pf_meta': 'application/octet-stream',
@@ -53,7 +55,9 @@ export function isHashedAsset(key) {
   );
 }
 
-const documents = new Set(['.html', '.json', '.md', '.xml', '.txt']);
+// links.db is a document too: a fixed name whose content changes with the
+// data, so it revalidates like links.json.
+const documents = new Set(['.html', '.json', '.md', '.xml', '.txt', '.db']);
 
 // The feeds (src/lib/feeds.ts) are named feed.xml and feed.json wherever
 // they sit; readers and validators go by the feed types, not the generic ones.
@@ -72,9 +76,9 @@ export function contentType(key) {
 
 export function cacheControl(key) {
   if (isHashedAsset(key)) return cachePolicies.immutable;
-  // Pages, their JSON and Markdown twins, feeds, sitemaps, robots.txt and
-  // revision.json; and Pagefind's entry file and scripts, which name the
-  // current index chunks.
+  // Pages, their JSON and Markdown twins, feeds, sitemaps, robots.txt,
+  // links.db and revision.json; and Pagefind's entry file and scripts, which
+  // name the current index chunks.
   if (documents.has(path.posix.extname(key)) || key.startsWith('pagefind/'))
     return cachePolicies.revalidate;
   return cachePolicies.hour;

@@ -10,3 +10,7 @@ __pycache__/
 .ruff_cache/
 test-results/
 playwright-report/
+
+# The SQLite file, built from data/ by npm run db (tools/build_db.py).
+public/links.db
+public/links.db.tmp

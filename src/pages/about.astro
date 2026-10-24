@@ -1,0 +1,13 @@
+---
+// About, in Jamie's words: content/about.md, rendered by src/lib/about.ts.
+import Layout from '../layouts/Layout.astro';
+import { about } from '../lib/about';
+---
+
+<Layout
+  title={`${about.title} · Linking Things`}
+  description="What Linking Things is, why links matter, and how it is made, in Jamie Thingelstad's words."
+>
+  <h1 class="page-title">{about.title}</h1>
+  <div class="prose about" set:html={about.html} />
+</Layout>

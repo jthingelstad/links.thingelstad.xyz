@@ -1,0 +1,25 @@
+{
+  "nytimes.com": {
+    "checked": "2026-10-23T21:27:00Z",
+    "method": "enrich_hosts",
+    "version": 2,
+    "dns": {
+      "resolves": false
+    },
+    "https": {
+      "reachable": false,
+      "redirects_http": false,
+      "status": null
+    },
+    "home": {
+      "checked": "2026-10-23T21:27:00Z",
+      "title": "Access Denied",
+      "generator": null,
+      "feeds": [],
+      "hcard": false,
+      "rel_me": [],
+      "webmention": null,
+      "error": "does not resolve"
+    }
+  }
+}

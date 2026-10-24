@@ -1,0 +1,19 @@
+{
+  "d4f3fa5ebc0b": {
+    "checked": "2026-10-23T21:45:24Z",
+    "method": "enrich_pages",
+    "version": 1,
+    "status": 200,
+    "alive": true,
+    "final_url": "https://example.com/moved",
+    "redirects": [
+      "https://example.com/a"
+    ],
+    "content_type": "text/html",
+    "wayback": {
+      "first": "2008-06-01T00:00:00Z",
+      "last": "2026-05-01T00:00:00Z",
+      "count": 214
+    }
+  }
+}

@@ -1,5 +1,5 @@
 // RSS 2.0 and JSON Feed 1.1 (DIRECTION.md, "Feeds"): the newest links for the
-// site, and the same pair for every host. An item is the record: its
+// site, and the same pair for every host and every kind. An item is the record: its
 // permalink is the item's link and id, the destination URL opens the content,
 // and the note follows, rendered as on the record page with record links made
 // absolute. Dates are Central with their real offset. Every feed path comes
@@ -7,18 +7,22 @@
 import {
   type FeedKind,
   type Host,
+  type Kind,
   type Link,
   absolute,
   feedPath,
   hostPath,
   hosts,
+  kindPath,
   linksByHost,
+  linksByKind,
   newest,
   noteHtml,
   rfc3339Central,
   rfc822Central,
   linkPath,
 } from './data.ts';
+import { kindWords } from './kinds.ts';
 import { prepare } from './markdown.ts';
 import { owner } from './sites.ts';
 
@@ -55,6 +59,17 @@ export function hostFeed(host: Host): Feed {
     links: [...(linksByHost.get(host.host) ?? [])]
       .reverse()
       .slice(0, FEED_SIZE),
+  };
+}
+
+// Every kind page has its pair too (/kinds/<kind>/feed.xml).
+export function kindFeed(kind: Kind): Feed {
+  const words = kindWords[kind];
+  return {
+    title: `${words.title} · ${SITE_NAME}`,
+    description: `${words.title} Jamie Thingelstad has saved, newest first. ${words.about}`,
+    page: kindPath(kind),
+    links: [...(linksByKind.get(kind) ?? [])].reverse().slice(0, FEED_SIZE),
   };
 }
 

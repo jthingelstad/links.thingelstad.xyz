@@ -1,0 +1,34 @@
+---
+// The kinds (src/lib/kinds.ts): what each link is, read from its host and
+// path alone, with how many links each holds. Every kind has a page.
+import Layout from '../../layouts/Layout.astro';
+import { kindPath, kinds, linksByKind, plural } from '../../lib/data';
+import { kindWords } from '../../lib/kinds';
+const rows = kinds.map((kind) => ({
+  kind,
+  count: linksByKind.get(kind)?.length ?? 0,
+  ...kindWords[kind],
+}));
+---
+
+<Layout
+  title="Kinds · Linking Things"
+  description="Every link Jamie Thingelstad has saved, by kind: videos, repositories, books, papers, articles, newsletters, podcasts and pages."
+>
+  <h1 class="page-title">Kinds</h1>
+  <p class="lede">
+    What each link is, read from its address alone: the host and the path. Every
+    link has one kind, and a link that is none of the others is a page.
+  </p>
+  <ul class="kind-list">
+    {rows.map((row) => (
+      <li data-kind={row.kind} data-count={String(row.count)}>
+        <a class="title" href={kindPath(row.kind)}>
+          {row.title}
+        </a>
+        <span class="n">{plural(row.count, 'link')}</span>
+        <span class="about">{row.about}</span>
+      </li>
+    ))}
+  </ul>
+</Layout>

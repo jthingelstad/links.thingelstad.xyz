@@ -1,7 +1,7 @@
 ---
 // Every page: the shared type (shared/tokens.css, vendored), the "Jamie's
 // sites" strip, the header (not on the front page, whose wordmark is its
-// title), and the footer with Jamie's h-card. The site's
+// title), and the footer with Jamie's h-card and the About link. The site's
 // feeds are advertised on every page, a page's own feeds before them. No
 // script runs here but Tinylytics, in the production build only
 // (Analytics.astro); the search page adds Pagefind's.
@@ -35,6 +35,7 @@ const sections = [
   ['/years/', 'Years'],
   ['/issues/', 'Issues'],
   ['/hosts/', 'Hosts'],
+  ['/kinds/', 'Kinds'],
   ['/stats/', 'Stats'],
 ];
 const current = (href: string) =>
@@ -152,7 +153,7 @@ const current = (href: string) =>
           <data class="p-note" value={owner.note}></data>
         </a>
         , as a database: one page per link, and what connects them. Times are US
-        Central.
+        Central. <a href="/about/">About</a>
       </p>
     </footer>
     <Analytics />
