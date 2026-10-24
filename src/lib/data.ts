@@ -1,6 +1,6 @@
-// The one module that reads data/ (docs/DATA.md) and the one place the site's
-// URLs are formed. Everything "derived at build" is derived here, in memory,
-// and nothing is written back to data/.
+// The one module that reads data/ (docs/DATA.md); the site's URLs are formed
+// in paths.ts and re-exported here. Everything "derived at build" is derived
+// here, in memory, and nothing is written back to data/.
 //
 // Data stays UTC; every date shown, and every year, month and week a link is
 // grouped by, is US Central (America/Chicago), the way Pinboard's own pages
@@ -11,12 +11,17 @@
 // directly.
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { noteLinks, plainNote, prepare, renderNote } from './markdown.ts';
+import { noteLinks, plainNote, renderNote } from './markdown.ts';
 import { type Kind, kindOf, kinds } from './kinds.ts';
 import { hostOf, normalizeUrl } from './normalize.ts';
+import { type Voice, voiceOf } from './voice.ts';
+import { absolute, issueKey, linkPath } from './paths.ts';
 
 export { hostOf, normalizeUrl };
 export { type Kind, kinds };
+export { type Voice, voiceOf };
+// The site's URLs are formed in paths.ts; the pages import them from here.
+export * from './paths.ts';
 
 // data/links/<yyyy>.json, as the sync writes it.
 export interface MirrorLink {
@@ -49,12 +54,6 @@ export interface Issue {
   url: string;
   links: IssueLink[];
 }
-
-// Who the note speaks for, by heuristic, never asserted (docs/DIRECTION.md,
-// "Voice"): "jamie" is Jamie's commentary; "mixed" is commentary around a
-// quotation; "excerpt" is most likely a passage from the page, which is what
-// the bookmarklet captured before the Weekly Thing years.
-export type Voice = 'jamie' | 'mixed' | 'excerpt';
 
 export interface Link extends MirrorLink {
   host: string;
@@ -172,22 +171,6 @@ export function weekOf(day: string) {
   return date.toISOString().slice(0, 10);
 }
 
-export function voiceOf(note: string, year: number): Voice | null {
-  const text = prepare(note);
-  if (!text) return null;
-  const blocks = text.split(/\n\s*\n/).filter((block) => block.trim());
-  const quoted = blocks.filter((block) => block.trimStart().startsWith('>'));
-  if (quoted.length === blocks.length) return 'excerpt';
-  // A quotation set inside other text is Jamie quoting something.
-  if (quoted.length) return 'mixed';
-  if (/^["“‘«„]/.test(text)) return blocks.length > 1 ? 'mixed' : 'excerpt';
-  // Before the Weekly Thing (2017) the bookmarklet saved the page's own words;
-  // the earliest years (2005 and 2006, from del.icio.us) are short
-  // descriptions in Jamie's words.
-  if (year >= 2007 && year <= 2016) return 'excerpt';
-  return 'jamie';
-}
-
 const byText = (a: string, b: string) => (a < b ? -1 : a > b ? 1 : 0);
 
 const mirror: MirrorLink[] = readdirSync(join(root, 'data/links'))
@@ -219,67 +202,9 @@ export const linkById = new Map(links.map((link) => [link.id, link]));
 export const issues: Issue[] = read<{ issues: Issue[] }>(
   'data/derived/issues.json',
 ).issues;
-// An issue's key is its segment on weekly.thingelstad.com (/archive/<key>/):
-// the number, or 140-special for the one special issue. /issues/<key>/ mirrors
-// it (DIRECTION.md, "Pages").
-export function issueKey(issue: Issue) {
-  const key = /^https:\/\/weekly\.thingelstad\.com\/archive\/([^/]+)\/$/.exec(
-    issue.url,
-  )?.[1];
-  if (!key || (issue.number !== null && key !== String(issue.number)))
-    throw new Error(`issue ${issue.slug}: url ${issue.url} has no archive key`);
-  return key;
-}
 export const issueByKey = new Map(
   issues.map((issue) => [issueKey(issue), issue]),
 );
-
-// Canonical paths. Permalinks and twins depend on these never changing.
-export const site = 'https://links.thingelstad.xyz';
-export const linkPath = (id: string) => `/links/${id}/`;
-export const linkJsonPath = (id: string) => `/links/${id}.json`;
-export const linkMarkdownPath = (id: string) => `/links/${id}.md`;
-export const hostPath = (host: string) => `/hosts/${host}/`;
-export const kindsPath = '/kinds/';
-export const kindPath = (kind: Kind) => `${kindsPath}${kind}/`;
-export const issuePath = (issue: Issue) => `/issues/${issueKey(issue)}/`;
-export const yearPath = (year: number | string) => `/years/${year}/`;
-export const monthAnchor = (year: number, month: number) =>
-  `${year}-${String(month).padStart(2, '0')}`;
-export const monthPath = (year: number, month: number) =>
-  `${yearPath(year)}#${monthAnchor(year, month)}`;
-export const absolute = (path: string) => new URL(path, site).href;
-// Feeds: the site's pair at the root, and every host's pair under its page
-// (DIRECTION.md, "Pages"). `under` is the path of the page a feed follows.
-export type FeedKind = 'rss' | 'json';
-export const feedPath = (kind: FeedKind, under = '/') =>
-  `${under}${kind === 'rss' ? 'feed.xml' : 'feed.json'}`;
-// The whole public dataset and the doorway for language models.
-export const datasetPath = {
-  links: '/links.json',
-  hosts: '/hosts.json',
-  issues: '/issues.json',
-  llms: '/llms.txt',
-  // The SQLite file, built by tools/build_db.py into public/ (npm run db).
-  db: '/links.db',
-} as const;
-export const aboutPath = '/about/';
-// Every record for language models, a file per year beside the year's page
-// (dataset.ts).
-export const yearLlmsPath = (year: number) => `${yearPath(year)}llms.txt`;
-// The newest links as a page, the site feed's links.
-export const newestPath = '/newest/';
-
-// Elsewhere: the Wayback Machine's copies of the destination.
-export const waybackUrl = (url: string) =>
-  `https://web.archive.org/web/*/${url}`;
-
-// Issues are named like WT350; the one special issue has no number.
-export const issueLabel = (issue: Issue) =>
-  issue.number === null ? 'Special' : `WT${issue.number}`;
-// The issue as it was titled when it went out: its subject line, from
-// "Weekly Thing for May 13, 2017" to "WT350 — Builders Puzzlers And Agents".
-export const issueTitle = (issue: Issue) => issue.subject || issue.title;
 
 // Lookups by URL: exactly as saved first, then by the normalised form.
 const byUrl = new Map(links.map((link) => [link.url, link.id]));

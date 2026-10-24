@@ -4,8 +4,9 @@
 Adapted from poap.thingelstad.xyz's validator. It checks:
 
 - every page has a title, a canonical link to its own URL, and a main landmark;
-- every internal href and src resolves to a built file, and every #fragment on
-  an internal link names an id on the target page;
+- every internal href and src resolves to a built file (or to /mcp, which
+  CloudFront sends to the MCP server), and every #fragment on an internal
+  link names an id on the target page;
 - nothing is fetched at serve time from another host (scripts, styles, fonts,
   images, frames, and URLs inside inline scripts), except owner.avatar from
   shared/sites.json, the photo the family's h-card contract names, and, in a
@@ -222,6 +223,17 @@ def target_file(path):
     if key == "" or key.endswith("/"):
         return DIST / key / "index.html"
     return DIST / key
+
+
+# Routes CloudFront sends to another origin, so no built file stands behind
+# them: /mcp is the MCP server (infra/site.json, src/mcp/).
+ROUTED_ELSEWHERE = {"/mcp"}
+
+
+def built(path):
+    """A path on this site that resolves: a built file, or a route served by
+    another origin."""
+    return path in ROUTED_ELSEWHERE or target_file(path).exists()
 
 
 def off_site(ref):
@@ -462,7 +474,7 @@ def check_llms(data_links, problems):
     targets = re.findall(r"\]\(([^)\s]+)\)", llms)
     for target in targets:
         path = target[len(SITE):] if target.startswith(SITE + "/") else None
-        if path is None or not target_file(unquote(urlsplit(path).path)).exists():
+        if path is None or not built(unquote(urlsplit(path).path)):
             problems.append(f"llms.txt: {target} is not a built file on this site")
     if (DIST / "llms-full.txt").exists():
         problems.append("llms-full.txt: replaced by the year files; it should not be built")
@@ -521,7 +533,7 @@ def check_site_urls(problems):
             # A sentence may end just after a URL; no path here ends in . or ,
             inside.update(path.rstrip(".,") for path in SITE_URL.findall(file.read_text()))
     for path in sorted(inside):
-        if not target_file(unquote(path)).exists():
+        if not built(unquote(path)):
             problems.append(f"{SITE}{path} is named in a feed or data file but not built")
     return inside
 
@@ -773,7 +785,7 @@ def main():
             links.append((rel, ref, path, unquote(parts.fragment)))
 
     for rel, ref, path, fragment in links:
-        if not target_file(path).exists():
+        if not built(path):
             problems.append(f"{rel}: broken link {ref}")
         elif fragment and path in ids and fragment not in ids[path]:
             problems.append(f"{rel}: {ref} names an id the page does not have")

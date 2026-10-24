@@ -1,5 +1,5 @@
 // The search grammar both searches share (src/lib/search-grammar.ts): the
-// site's /search/ page in the browser and, next, the MCP server's links_search.
+// site's /search/ page in the browser and the MCP server's links_search.
 // Run: npm test.
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -122,4 +122,6 @@ test('the browser search uses this grammar rather than its own', () => {
   const script = readFileSync('src/scripts/search.ts', 'utf8');
   assert.match(script, /from '\.\.\/lib\/search-grammar\.ts'/);
   assert.doesNotMatch(script, /function parse\(|function matcher\(/);
+  const server = readFileSync('src/mcp/search.ts', 'utf8');
+  assert.match(server, /from '\.\.\/lib\/search-grammar\.ts'/);
 });
