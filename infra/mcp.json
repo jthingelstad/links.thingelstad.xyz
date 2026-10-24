@@ -1,0 +1,384 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "links.thingelstad.xyz read-only MCP server on a Lambda Web Function behind the site distribution",
+  "Parameters": {
+    "CodeKey": {
+      "Type": "String",
+      "Default": "",
+      "AllowedPattern": "^$|^mcp/[0-9a-f]{64}\\.zip$",
+      "Description": "The packaged server in the code bucket (tools/package-mcp.mjs). Empty creates only the bucket, role and logs."
+    },
+    "CodeVersion": {
+      "Type": "String",
+      "Default": "",
+      "AllowedPattern": "^[A-Za-z0-9._-]*$",
+      "Description": "The S3 version of CodeKey, so a revision names immutable bytes"
+    }
+  },
+  "Conditions": {
+    "NativeWebActive": {
+      "Fn::And": [
+        {
+          "Fn::Not": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "CodeKey"
+                },
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Not": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "CodeVersion"
+                },
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "Resources": {
+    "CodeBucket": {
+      "Type": "AWS::S3::Bucket",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "BucketName": {
+          "Fn::Sub": "${AWS::StackName}-code-${AWS::AccountId}"
+        },
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        },
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "IgnorePublicAcls": true,
+          "BlockPublicPolicy": true,
+          "RestrictPublicBuckets": true
+        },
+        "OwnershipControls": {
+          "Rules": [
+            {
+              "ObjectOwnership": "BucketOwnerEnforced"
+            }
+          ]
+        },
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        },
+        "LifecycleConfiguration": {
+          "Rules": [
+            {
+              "Id": "AbortIncompleteUploads",
+              "Status": "Enabled",
+              "AbortIncompleteMultipartUpload": {
+                "DaysAfterInitiation": 7
+              }
+            },
+            {
+              "Id": "ExpireOldVersions",
+              "Status": "Enabled",
+              "NoncurrentVersionExpiration": {
+                "NoncurrentDays": 30
+              }
+            }
+          ]
+        }
+      }
+    },
+    "CodeBucketPolicy": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "CodeBucket"
+        },
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "LambdaReadsThisFunctionsRevisions",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              },
+              "Action": ["s3:GetObject", "s3:GetObjectVersion"],
+              "Resource": {
+                "Fn::Sub": "${CodeBucket.Arn}/mcp/*"
+              },
+              "Condition": {
+                "StringEquals": {
+                  "aws:SourceAccount": {
+                    "Ref": "AWS::AccountId"
+                  }
+                },
+                "ArnLike": {
+                  "aws:SourceArn": {
+                    "Fn::Sub": "arn:${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:web-function/${AWS::StackName}/*"
+                  }
+                }
+              }
+            },
+            {
+              "Sid": "TLSOnly",
+              "Effect": "Deny",
+              "Principal": "*",
+              "Action": "s3:*",
+              "Resource": [
+                {
+                  "Fn::GetAtt": ["CodeBucket", "Arn"]
+                },
+                {
+                  "Fn::Sub": "${CodeBucket.Arn}/*"
+                }
+              ],
+              "Condition": {
+                "Bool": {
+                  "aws:SecureTransport": "false"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "Logs": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Sub": "/aws/lambda-web/${AWS::StackName}"
+        },
+        "RetentionInDays": 30
+      }
+    },
+    "LocalLogs": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Sub": "/aws/lambda-web/${AWS::StackName}.local"
+        },
+        "RetentionInDays": 30
+      }
+    },
+    "ExecutionRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "Description": "links-mcp execution role: writes its own logs and nothing else",
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "OwnLogs",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": ["logs:CreateLogStream", "logs:PutLogEvents"],
+                  "Resource": [
+                    {
+                      "Fn::GetAtt": ["Logs", "Arn"]
+                    },
+                    {
+                      "Fn::GetAtt": ["LocalLogs", "Arn"]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "Function": {
+      "Type": "AWS::Lambda::WebFunction",
+      "Condition": "NativeWebActive",
+      "Properties": {
+        "FunctionName": {
+          "Fn::Sub": "${AWS::StackName}"
+        }
+      }
+    },
+    "Revision": {
+      "Type": "AWS::Lambda::WebFunctionRevision",
+      "Condition": "NativeWebActive",
+      "DependsOn": ["Function", "CodeBucketPolicy"],
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Fn::Sub": "${AWS::StackName}"
+        },
+        "Description": {
+          "Ref": "CodeKey"
+        },
+        "BuildConfig": {
+          "CodeConfig": {
+            "S3Object": {
+              "Bucket": {
+                "Ref": "CodeBucket"
+              },
+              "Key": {
+                "Ref": "CodeKey"
+              },
+              "VersionId": {
+                "Ref": "CodeVersion"
+              }
+            }
+          },
+          "RuntimeConfig": {
+            "Runtime": "nodejs24.x"
+          }
+        },
+        "ServiceConfig": {
+          "ExecutionRoleArn": {
+            "Fn::GetAtt": ["ExecutionRole", "Arn"]
+          },
+          "TimeoutSeconds": 28,
+          "MaxConcurrencyPerEnvironment": 8,
+          "EnvironmentVariables": {
+            "LINKS_SITE": "https://links.thingelstad.xyz",
+            "LINKS_MCP_CODE": {
+              "Ref": "CodeKey"
+            }
+          },
+          "TelemetryConfig": {
+            "LoggingConfig": {
+              "LogGroup": {
+                "Ref": "Logs"
+              },
+              "ApplicationLogLevel": "INFO",
+              "SystemLogLevel": "INFO"
+            }
+          }
+        }
+      }
+    },
+    "Endpoint": {
+      "Type": "AWS::Lambda::WebFunctionEndpoint",
+      "Condition": "NativeWebActive",
+      "DependsOn": "Function",
+      "Properties": {
+        "FunctionName": {
+          "Fn::Sub": "${AWS::StackName}"
+        },
+        "EndpointName": "live",
+        "EndpointType": "HomeRegion",
+        "AuthType": "IamAuth",
+        "RevisionWeights": [
+          {
+            "RevisionId": {
+              "Fn::GetAtt": ["Revision", "RevisionId"]
+            },
+            "Weight": 100
+          }
+        ],
+        "ScalingConfig": {
+          "MaxEnvironments": 2
+        },
+        "ThrottleConfig": {
+          "RateLimit": 100
+        }
+      }
+    },
+    "Endpoint5xxAlarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Condition": "NativeWebActive",
+      "Properties": {
+        "AlarmName": {
+          "Fn::Sub": "${AWS::StackName}-5xx"
+        },
+        "AlarmDescription": "The links MCP endpoint returned a server error.",
+        "Namespace": "AWS/Lambda/Web",
+        "MetricName": "HTTPResponseStatusClass5XX",
+        "Dimensions": [
+          {
+            "Name": "FunctionName",
+            "Value": {
+              "Fn::Sub": "${AWS::StackName}"
+            }
+          },
+          {
+            "Name": "EndpointName",
+            "Value": "live"
+          }
+        ],
+        "Statistic": "Sum",
+        "Period": 300,
+        "EvaluationPeriods": 1,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "notBreaching",
+        "AlarmActions": [
+          {
+            "Fn::Sub": "arn:${AWS::Partition}:sns:${AWS::Region}:${AWS::AccountId}:weekly-thing-librarian-alarms"
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "CodeBucket": {
+      "Value": {
+        "Ref": "CodeBucket"
+      },
+      "Description": "Private bucket for the packaged server"
+    },
+    "ExecutionRoleArn": {
+      "Value": {
+        "Fn::GetAtt": ["ExecutionRole", "Arn"]
+      },
+      "Description": "The role the deploy may pass to Lambda"
+    },
+    "FunctionArn": {
+      "Condition": "NativeWebActive",
+      "Value": {
+        "Fn::GetAtt": ["Endpoint", "FunctionArn"]
+      },
+      "Description": "The web function"
+    },
+    "EndpointArn": {
+      "Condition": "NativeWebActive",
+      "Value": {
+        "Fn::GetAtt": ["Endpoint", "EndpointArn"]
+      },
+      "Description": "The live endpoint, for its CloudFront grant"
+    },
+    "EndpointDomain": {
+      "Condition": "NativeWebActive",
+      "Value": {
+        "Fn::GetAtt": ["Endpoint", "DomainName"]
+      },
+      "Description": "The live endpoint, the site distribution's /mcp origin"
+    },
+    "RevisionId": {
+      "Condition": "NativeWebActive",
+      "Value": {
+        "Fn::GetAtt": ["Revision", "RevisionId"]
+      },
+      "Description": "The revision the live endpoint serves"
+    }
+  }
+}

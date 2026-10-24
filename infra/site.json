@@ -11,6 +11,12 @@
       "Type": "String",
       "AllowedPattern": "(^$|arn:aws:acm:us-east-1:[0-9]{12}:certificate/.*)",
       "Default": ""
+    },
+    "McpOriginDomain": {
+      "Type": "String",
+      "Default": "",
+      "AllowedPattern": "^$|^[a-z0-9.-]+$",
+      "Description": "The links-mcp stack's EndpointDomain. Empty serves no /mcp."
     }
   },
   "Conditions": {
@@ -20,6 +26,18 @@
           "Fn::Equals": [
             {
               "Ref": "CertificateArn"
+            },
+            ""
+          ]
+        }
+      ]
+    },
+    "HasMcp": {
+      "Fn::Not": [
+        {
+          "Fn::Equals": [
+            {
+              "Ref": "McpOriginDomain"
             },
             ""
           ]
@@ -37,6 +55,20 @@
           },
           "OriginAccessControlOriginType": "s3",
           "SigningBehavior": "always",
+          "SigningProtocol": "sigv4"
+        }
+      }
+    },
+    "McpOriginAccess": {
+      "Type": "AWS::CloudFront::OriginAccessControl",
+      "Condition": "HasMcp",
+      "Properties": {
+        "OriginAccessControlConfig": {
+          "Name": {
+            "Fn::Sub": "${AWS::StackName}-mcp"
+          },
+          "OriginAccessControlOriginType": "lambda",
+          "SigningBehavior": "always-amz-auth",
           "SigningProtocol": "sigv4"
         }
       }
@@ -63,6 +95,63 @@
             "QueryStringsConfig": {
               "QueryStringBehavior": "none"
             }
+          }
+        }
+      }
+    },
+    "McpCachePolicy": {
+      "Type": "AWS::CloudFront::CachePolicy",
+      "Condition": "HasMcp",
+      "Properties": {
+        "CachePolicyConfig": {
+          "Name": {
+            "Fn::Sub": "${AWS::StackName}-mcp"
+          },
+          "Comment": "Nothing from /mcp is kept past a second, and the edge compresses it",
+          "MinTTL": 0,
+          "DefaultTTL": 0,
+          "MaxTTL": 1,
+          "ParametersInCacheKeyAndForwardedToOrigin": {
+            "EnableAcceptEncodingGzip": true,
+            "EnableAcceptEncodingBrotli": true,
+            "CookiesConfig": {
+              "CookieBehavior": "none"
+            },
+            "HeadersConfig": {
+              "HeaderBehavior": "none"
+            },
+            "QueryStringsConfig": {
+              "QueryStringBehavior": "none"
+            }
+          }
+        }
+      }
+    },
+    "McpRequestPolicy": {
+      "Type": "AWS::CloudFront::OriginRequestPolicy",
+      "Condition": "HasMcp",
+      "Properties": {
+        "OriginRequestPolicyConfig": {
+          "Name": {
+            "Fn::Sub": "${AWS::StackName}-mcp"
+          },
+          "Comment": "The headers the MCP server reads; no cookies and no query string",
+          "HeadersConfig": {
+            "HeaderBehavior": "whitelist",
+            "Headers": [
+              "Origin",
+              "Content-Type",
+              "Accept",
+              "User-Agent",
+              "MCP-Protocol-Version",
+              "Mcp-Session-Id"
+            ]
+          },
+          "CookiesConfig": {
+            "CookieBehavior": "none"
+          },
+          "QueryStringsConfig": {
+            "QueryStringBehavior": "none"
           }
         }
       }
@@ -195,6 +284,29 @@
               "S3OriginConfig": {
                 "OriginAccessIdentity": ""
               }
+            },
+            {
+              "Fn::If": [
+                "HasMcp",
+                {
+                  "Id": "mcp",
+                  "DomainName": {
+                    "Ref": "McpOriginDomain"
+                  },
+                  "OriginAccessControlId": {
+                    "Ref": "McpOriginAccess"
+                  },
+                  "CustomOriginConfig": {
+                    "HTTPSPort": 443,
+                    "OriginProtocolPolicy": "https-only",
+                    "OriginSSLProtocols": ["TLSv1.2"],
+                    "OriginReadTimeout": 30
+                  }
+                },
+                {
+                  "Ref": "AWS::NoValue"
+                }
+              ]
             }
           ],
           "DefaultCacheBehavior": {
@@ -218,6 +330,38 @@
                     "FunctionMetadata.FunctionARN"
                   ]
                 }
+              }
+            ]
+          },
+          "CacheBehaviors": {
+            "Fn::If": [
+              "HasMcp",
+              [
+                {
+                  "PathPattern": "/mcp*",
+                  "TargetOriginId": "mcp",
+                  "ViewerProtocolPolicy": "redirect-to-https",
+                  "AllowedMethods": [
+                    "GET",
+                    "HEAD",
+                    "OPTIONS",
+                    "PUT",
+                    "PATCH",
+                    "POST",
+                    "DELETE"
+                  ],
+                  "CachedMethods": ["GET", "HEAD"],
+                  "Compress": true,
+                  "CachePolicyId": {
+                    "Ref": "McpCachePolicy"
+                  },
+                  "OriginRequestPolicyId": {
+                    "Ref": "McpRequestPolicy"
+                  }
+                }
+              ],
+              {
+                "Ref": "AWS::NoValue"
               }
             ]
           },
