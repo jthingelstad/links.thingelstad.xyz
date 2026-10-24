@@ -1,3 +1,6 @@
 User-agent: *
 Allow: /
+# Search answers are this site's own search results: the search page itself
+# is a page, a query is not.
+Disallow: /search/?
 Sitemap: https://links.thingelstad.xyz/sitemap-index.xml

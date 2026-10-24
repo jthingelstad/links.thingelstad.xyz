@@ -185,7 +185,13 @@ the destination link, the URL with its host in weight, and one saved line (weekd
 date and Central time, an "In WT350" chip per issue, Kudos). The note follows with
 no heading, because it is the body of the page; only an excerpt is labelled ("From
 the page", with the 2007 to 2016 caution and the host under the quote). A note of
-one paragraph under 280 characters is set larger, so a short remark is not lost.
+one paragraph under 280 characters is set larger, so a short remark is not lost
+(Jamie confirmed the 280, 2026-10-24). Pages and feeds show a title without the
+site's name on the end ("Social RSS | Seth's Blog" is "Social RSS"; rule in
+`src/lib/titles.ts`), and a saved time that is made up (on the hour exactly, or a
+second many links share, like the 67 an import stamped on 2010-12-05) is shown as
+the date alone; both were Jamie's yes on 2026-10-24. The twins, the data and the MCP
+server keep the title and time exactly as saved.
 "About this link" (`src/components/RecordFacts.astro`) is one card of rows, each
 shown only when it has something to say: Weekly Thing (the issue, its section, the
 link's place in it, the send date and how long after saving), Site (the host's

@@ -31,7 +31,7 @@ const {
     return (
       <li>
         <a class="title" href={linkPath(link.id)}>
-          {link.title}
+          {link.shown}
         </a>
         <span class="meta">
           {[host && link.host, date(link)].filter(Boolean).join(' · ')}

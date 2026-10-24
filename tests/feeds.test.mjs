@@ -136,6 +136,7 @@ test('feed text is escaped for XML', () => {
     ...data.links[0],
     id: 'aaaaaaaaaaaa',
     title: 'Fish & Chips <b>\u0007',
+    shown: 'Fish & Chips <b>\u0007',
     url: 'https://example.com/?a=1&b=2',
     note: '',
     hasNote: false,
