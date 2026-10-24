@@ -335,8 +335,11 @@ Proposal:
 1. **Propose a vocabulary.** A model reads a stratified 1,500-link sample (title,
    note, excerpt) and proposes topics; the proposals are clustered into about 80 to
    150 candidates with descriptions.
-2. **Jamie prunes it.** The vocabulary lives in `content/topics.yaml` (id, title,
-   description, parent), the Things I've built shape. Jamie owns the words.
+2. **The model's vocabulary stands.** Jamie, 2026-10-23: "it isn't realistic for me to
+   prune it. i think you should go with what the model comes back with." The
+   vocabulary is written to `content/topics.yaml` (id, title, description, parent),
+   the Things I've built shape, so a word can still be changed by hand later, but
+   nothing waits on that.
 3. **Classify every link** into one to three topics from the vocabulary, with a
    structured output so nothing outside it is written. Store in
    `data/derived/topics.json` with the vocabulary version. New links each week, same
@@ -353,9 +356,14 @@ One-time cost for the bulk pass, roughly 500 input tokens and 60 output tokens p
 | Claude Sonnet 5.5 | $27 |
 | Claude Opus 5.5 | $54 |
 
-The Batch API halves each. Jamie picks the model; the design does not depend on it.
+The Batch API halves each. Recommended: Sonnet 5.5 proposes the vocabulary (once, a
+few dollars) and Haiku 5.5 classifies; the design does not depend on the choice.
 Weekly reclassification of 30 or so new links costs cents on any of them. Jamie
 accepted model cost at ingestion and build on 2026-10-23; none of it reaches serving.
+The key is `ANTHROPIC_API_KEY` in the Mac's `.env`, next to the Pinboard token; the
+derive step runs on the Mac and CI never holds it. Until the archive export lands, the
+text per link is the title and the note; a rerun with the page excerpts costs the same
+bulk pass, and `topics.json` records which text it saw.
 
 Embedding-based "similar" uses the model the Librarian already uses
 (`cohere.embed-english-v3` on Bedrock) over the same text; 17,000 short documents is
