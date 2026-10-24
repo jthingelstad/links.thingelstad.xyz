@@ -87,3 +87,13 @@ test('a mixed-voice note reads as commentary, quotation, commentary', () => {
     "I read this with a smile; I've added this to every agentic workload I run. “Here’s a product feature the world needs: default hard budget caps. Let me say “after $X/month, cut this off”. These need to be hard limits.” By the way you can do this with the agentic loop having awareness.",
   );
 });
+
+test('raw HTML in a note is text, never markup, and no tag survives the strip', () => {
+  // The renderer escapes raw HTML, so a note's own tags come out as the words
+  // they are; the renderer's tags are stripped to the last one.
+  assert.equal(
+    plainNote('A **bold** claim, <scr<script>ipt>alert(1)</script> said.'),
+    'A bold claim, <scr<script>ipt>alert(1)</script> said.',
+  );
+  assert.equal(plainNote('> One\n>\n> > Two'), '“One “Two””');
+});

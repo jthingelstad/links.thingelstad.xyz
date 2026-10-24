@@ -87,8 +87,18 @@ const entities: Record<string, string> = {
 // the punctuation that follows it ("Dunbar's number, and", not "number , and").
 const blockTag =
   /<\/?(?:p|div|blockquote|ul|ol|li|dl|dt|dd|h[1-6]|pre|hr|br|table|thead|tbody|tfoot|tr|td|th)\b[^>]*>/g;
-const stripTags = (html: string) =>
-  html.replace(blockTag, ' ').replace(/<[^>]+>/g, '');
+// Tags are removed until none is left, so no tag can be left behind by a pass
+// (CodeQL's incomplete-multi-character-sanitization). Only the renderer's own
+// tags reach here: raw HTML in a note is escaped (html: false) and comes out as
+// text.
+const stripTags = (html: string) => {
+  let text = html.replace(blockTag, ' ');
+  for (let before = ''; before !== text;) {
+    before = text;
+    text = text.replace(/<[^>]*>/g, '');
+  }
+  return text;
+};
 // The innermost blockquote: one with no blockquote inside it.
 const innermostQuote =
   /<blockquote>((?:(?!<blockquote>)[\s\S])*?)<\/blockquote>/;
