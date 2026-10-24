@@ -204,6 +204,10 @@ npm run infra:apply                  # the grant, links-site (/mcp), links-deliv
 5. **links-site** with `McpOriginDomain`: the origin access control, the cache and
    origin request policies and the `/mcp*` behaviour.
 6. **links-delivery** with the code bucket and execution role: the `McpDelivery` policy.
+   It includes `iam:GetRole` on that one execution role: CloudFormation resolves the
+   revision's `ExecutionRoleArn` (a `GetAtt` on the role) with the deploy's own
+   credentials, and without it a revision swap fails at "Unable to retrieve Arn
+   attribute for AWS::IAM::Role" (seen 2026-10-24, rolled back cleanly).
 
 Then commit the rewritten `infra/deployment.json` (it gains `mcpExecutionRoleArn` and
 `mcpEndpointDomain`). Until that commit is on main, the deploy's MCP step prints a
@@ -221,10 +225,12 @@ mcp:deploy` (`tools/deploy-mcp.mjs`, its rules in `tools/mcp-plan.mjs`):
 
 1. **Package.** `src/mcp/main.ts` bundled by esbuild with no runtime dependencies,
    a `package.json` and Pagefind's `pagefind.js` from the verified build, in a zip with
-   sorted entries and fixed timestamps, so the same source gives the same bytes. Its
-   key is `mcp/<sha256>.zip`.
+   sorted entries and fixed timestamps. Its key, `mcp/<sha256>.zip`, is a hash of the
+   entries' names and contents, not of the zip's bytes: zlib's deflate output differs
+   between builds (a Mac and the GitHub runner zipped identical files to different
+   bytes on 2026-10-24), and the key must not.
 2. **Skip.** When the stack's `CodeKey` is already that key, the live revision runs
-   these bytes and the step ends. Most pushes (a nightly sync, a page template) end
+   these files and the step ends. Most pushes (a nightly sync, a page template) end
    here.
 3. **Upload** the zip with its SHA-256, which S3 checks; the response gives the object
    version.

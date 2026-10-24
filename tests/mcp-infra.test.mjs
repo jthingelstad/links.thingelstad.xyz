@@ -4,6 +4,10 @@
 // copy), the deploy's rules (tools/mcp-plan.mjs) and the package
 // (tools/package-mcp.mjs). Run: npm test.
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
 import { test } from 'node:test';
 import zlib from 'node:zlib';
 import {
@@ -12,7 +16,7 @@ import {
   deployParameters,
   unexpectedChanges,
 } from '../tools/mcp-plan.mjs';
-import { bundle, packageMcp, zip } from '../tools/package-mcp.mjs';
+import { bundle, contentKey, packageMcp, zip } from '../tools/package-mcp.mjs';
 import { readInfra, validate } from '../tools/validate-infra.mjs';
 
 const infra = await readInfra();
@@ -183,6 +187,12 @@ test("the deploy's MCP grants are exactly the listed ones", () => {
   });
   refused('pass the role to anything', (c) => {
     delete mcpDelivery(c)[5].Condition;
+  });
+  refused('read any role', (c) => {
+    mcpDelivery(c)[6].Resource = '*';
+  });
+  refused('do more than read the role', (c) => {
+    mcpDelivery(c)[6].Action.push('iam:UpdateAssumeRolePolicy');
   });
   refused('another statement', (c) => {
     mcpDelivery(c).push({ Effect: 'Allow', Action: 'lambda:*', Resource: '*' });
@@ -379,4 +389,64 @@ test('packaging without a site build says to build first and writes nothing', as
     packageMcp({ pagefind: 'no-such-dir/pagefind.js', out: 'no-such-dir/out' }),
     /run npm run build first/,
   );
+});
+
+test('the bundle key follows the contents, not the zip bytes', async () => {
+  const files = [
+    { name: 'index.js', data: Buffer.from('console.log(1);\n') },
+    { name: 'package.json', data: Buffer.from('{"type":"module"}\n') },
+    {
+      name: 'pagefind.js',
+      data: Buffer.from('export const createInstance = () => ({});\n'),
+    },
+  ];
+  const key = contentKey(files);
+  assert.ok(KEY.test(key));
+  assert.equal(
+    contentKey([...files].reverse()),
+    key,
+    'the order given does not matter',
+  );
+  const changed = (name, patch) =>
+    contentKey(files.map((f) => (f.name === name ? { ...f, ...patch } : f)));
+  assert.notEqual(
+    changed('index.js', { data: Buffer.from('console.log(2);\n') }),
+    key,
+    'one changed byte is another key',
+  );
+  assert.notEqual(
+    changed('index.js', { name: 'main.js' }),
+    key,
+    'a renamed entry is another key',
+  );
+  assert.notEqual(
+    key,
+    `mcp/${createHash('sha256').update(zip(files)).digest('hex')}.zip`,
+    'the zip bytes are not the key: zlib may deflate them differently',
+  );
+  // packageMcp writes that key, and the zip's own digest for S3's checksum.
+  const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'links-mcp-test-'));
+  try {
+    const pagefind = path.join(dir, 'pagefind.js');
+    await fs.writeFile(pagefind, files[2].data);
+    const out = path.join(dir, 'out');
+    const manifest = await packageMcp({ pagefind, out });
+    const archive = await fs.readFile(path.join(out, 'links-mcp.zip'));
+    assert.equal(manifest.key, contentKey(unzip(archive)));
+    assert.equal(
+      manifest.zipSha256,
+      createHash('sha256').update(archive).digest('hex'),
+    );
+    assert.equal(
+      manifest.checksumSha256,
+      createHash('sha256').update(archive).digest('base64'),
+    );
+    const written = JSON.parse(
+      await fs.readFile(path.join(out, 'manifest.json'), 'utf8'),
+    );
+    assert.equal(written.key, manifest.key);
+    assert.ok(!('sha256' in written), 'the old zip-hash field is gone');
+  } finally {
+    await fs.rm(dir, { recursive: true, force: true });
+  }
 });

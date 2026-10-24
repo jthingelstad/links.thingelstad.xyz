@@ -194,6 +194,14 @@
                           "iam:PassedToService": "lambda.amazonaws.com"
                         }
                       }
+                    },
+                    {
+                      "Sid": "ReadTheMcpExecutionRole",
+                      "Effect": "Allow",
+                      "Action": ["iam:GetRole"],
+                      "Resource": {
+                        "Ref": "McpExecutionRoleArn"
+                      }
                     }
                   ]
                 }

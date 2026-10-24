@@ -8,9 +8,10 @@
 // docs/deployment.md has the policy.
 // 1. Read the links-mcp stack (infra/mcp.json). Until the bootstrap has put a
 //    first revision in place (CodeKey set) there is nothing to deploy to.
-// 2. The bundle's key is mcp/<sha256>.zip. When the stack's CodeKey is that
-//    key the live revision already runs these bytes, so stop: a site-only
-//    change ends here.
+// 2. The bundle's key is mcp/<sha256>.zip, a hash of the entries' names and
+//    contents (tools/package-mcp.mjs), never of the zip's bytes. When the
+//    stack's CodeKey is that key the live revision already runs these files,
+//    so stop: a site-only change ends here.
 // 3. Upload the zip with its SHA-256, which S3 checks; the response names the
 //    object version the revision will bind.
 // 4. Make a change set on the reviewed template (UsePreviousTemplate) with
@@ -67,8 +68,8 @@ async function main() {
     await fs.readFile(path.join(OUT, 'manifest.json'), 'utf8'),
   );
   const Body = await fs.readFile(path.join(OUT, 'links-mcp.zip'));
-  const sha256 = createHash('sha256').update(Body).digest('hex');
-  if (!KEY.test(manifest.key) || manifest.key !== `mcp/${sha256}.zip`)
+  const zipSha256 = createHash('sha256').update(Body).digest('hex');
+  if (!KEY.test(manifest.key) || manifest.zipSha256 !== zipSha256)
     throw new Error(
       `${OUT}/links-mcp.zip does not match its manifest; run npm run mcp:package`,
     );
