@@ -25,7 +25,8 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   each item a record; the site pair holds the newest 50 links; every host page
   has its pair;
 - /links.json is every record exactly as data/links has it, plus its
-  permalink; /hosts.json and /issues.json match the pages and the join;
+  permalink and then its kind, the same as its JSON twin's; /hosts.json and
+  /issues.json match the pages and the join;
 - llms.txt follows llmstxt.org's shape and links every year's
   /years/<yyyy>/llms.txt; the year files hold every record exactly once, each
   in the file of its Central year, and none passes 4 MB (past that a year is
@@ -394,8 +395,9 @@ def load_json(name, problems):
         return {}
 
 
-def check_dataset(data_links, newest, host_pages, problems):
-    """links.json is lossless and Pinboard-shaped; hosts and issues match."""
+def check_dataset(data_links, newest, host_pages, twin_kinds, problems):
+    """links.json is lossless and Pinboard-shaped, then permalink and kind;
+    hosts and issues match."""
     by_id = {link["id"]: link for link in data_links}
     everything = load_json("links.json", problems)
     rows = everything.get("links", [])
@@ -406,10 +408,15 @@ def check_dataset(data_links, newest, host_pages, problems):
     for row in rows:
         link = by_id.get(row.get("id"))
         same = link is not None and all(row.get(f) == link[f] for f in MIRROR_FIELDS)
-        if not same or list(row) != MIRROR_FIELDS + ["permalink"] or (
+        if not same or list(row) != MIRROR_FIELDS + ["permalink", "kind"] or (
             row["permalink"] != f"{SITE}/links/{row['id']}/"
         ):
             problems.append(f"links.json: {row.get('id')} is not its record as data/links has it")
+        elif row["kind"] != twin_kinds.get(row["id"]):
+            problems.append(
+                f"links.json: {row['id']} has kind {row['kind']!r},"
+                f" its twin {twin_kinds.get(row['id'])!r}"
+            )
 
     hosts = load_json("hosts.json", problems).get("hosts", [])
     if len(hosts) != len(host_pages) or sum(h.get("count", 0) for h in hosts) != len(by_id):
@@ -860,7 +867,7 @@ def main():
     ]
     host_pages = sorted((DIST / "hosts").glob("*/index.html"))
     feeds = check_feeds(newest, host_pages, alternates, listed_records, problems)
-    check_dataset(data_links, newest, host_pages, problems)
+    check_dataset(data_links, newest, host_pages, twin_kinds, problems)
     year_files = check_llms(data_links, problems)
     inside = check_site_urls(problems)
     check_newest(newest, listed_records, problems)

@@ -6,7 +6,8 @@
 //
 // links.json keeps each record exactly as data/links/<yyyy>.json has it,
 // Pinboard's fields in Pinboard's order, plus its permalink, so the site is a
-// lossless, Pinboard-shaped copy of every public bookmark.
+// lossless, Pinboard-shaped copy of every public bookmark. Then its kind
+// (kinds.ts), for the Librarian, after the Pinboard fields so they never move.
 import {
   type Link,
   type MirrorLink,
@@ -80,6 +81,7 @@ export function linksDocument(generated = builtAt) {
   const rows = newest.map((link) => ({
     ...Object.fromEntries(mirrorFields.map((field) => [field, link[field]])),
     permalink: absolute(linkPath(link.id)),
+    kind: link.kind,
   }));
   return rowsDocument(envelope(generated, rows.length), 'links', rows);
 }
@@ -212,7 +214,7 @@ export function llmsTxt() {
     '',
     '## Data',
     '',
-    `- [Every link](${a(datasetPath.links)}): ${number(counts.links)} public links, newest first, with every field as saved (id, hash, url, title, note, saved, tags, toread, meta) and the permalink`,
+    `- [Every link](${a(datasetPath.links)}): ${number(counts.links)} public links, newest first, with every field as saved (id, hash, url, title, note, saved, tags, toread, meta), then the permalink and the kind`,
     `- [Hosts](${a(datasetPath.hosts)}): every host with its number of links, the first and latest saved, and its page`,
     `- [Weekly Thing issues](${a(datasetPath.issues)}): the links each of ${number(counts.issues)} issues of The Weekly Thing carried, joined to the saved links`,
     `- [JSON Feed](${a(feedPath('json'))}) and [RSS](${a(feedPath('rss'))}): the newest ${FEED_SIZE} links; every host page and every kind page has its own pair at \`feed.json\` and \`feed.xml\` under its path, as in \`/hosts/<host>/feed.json\` and \`/kinds/video/feed.json\``,

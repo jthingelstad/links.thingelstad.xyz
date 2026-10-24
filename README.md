@@ -21,8 +21,8 @@ Everything a page shows is also data, built with the pages:
   Dates are US Central with the real offset.
 - `/links.json`: every public record, newest first, with Pinboard's fields in
   Pinboard's order (`id, hash, url, title, note, saved, tags, toread, meta`) plus its
-  `permalink`. `/hosts.json` (host, count, first, last, url) and `/issues.json` (the
-  Weekly Thing join, with each issue's page here).
+  `permalink` and its `kind` (`src/lib/kinds.ts`). `/hosts.json` (host, count, first,
+  last, url) and `/issues.json` (the Weekly Thing join, with each issue's page here).
 - `/llms.txt` (llmstxt.org), which lists `/years/<yyyy>/llms.txt`: every record saved
   that year (Central), newest first, as a slim row with the note in full. The largest
   year is under 1 MB.

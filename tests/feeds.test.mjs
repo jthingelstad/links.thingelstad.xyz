@@ -7,6 +7,7 @@ import { test } from 'node:test';
 import * as data from '../src/lib/data.ts';
 import * as feeds from '../src/lib/feeds.ts';
 import * as dataset from '../src/lib/dataset.ts';
+import { kindOf } from '../src/lib/kinds.ts';
 
 const raw = readdirSync('data/links')
   .filter((name) => /^\d{4}\.json$/.test(name))
@@ -146,16 +147,21 @@ test('feed text is escaped for XML', () => {
   assert.ok(rss.includes('a=1&amp;amp;b=2'));
 });
 
-test('links.json is every record exactly as data/links has it', () => {
+test('links.json is every record exactly as data/links has it, then permalink and kind', () => {
   const doc = JSON.parse(dataset.linksDocument('2026-10-23T00:00:00.000Z'));
   assert.deepEqual(Object.keys(doc), ['site', 'generated', 'count', 'links']);
   assert.equal(doc.count, raw.length);
   const byId = new Map(raw.map((link) => [link.id, link]));
   for (const row of doc.links) {
-    const { permalink, ...mirror } = row;
+    const { permalink, kind, ...mirror } = row;
     assert.deepEqual(mirror, byId.get(row.id));
-    assert.deepEqual(Object.keys(mirror), Object.keys(byId.get(row.id)));
+    assert.deepEqual(Object.keys(row), [
+      ...Object.keys(byId.get(row.id)),
+      'permalink',
+      'kind',
+    ]);
     assert.equal(permalink, `https://links.thingelstad.xyz/links/${row.id}/`);
+    assert.equal(kind, kindOf(row.url));
   }
   assert.deepEqual(
     doc.links.map((row) => row.id),
