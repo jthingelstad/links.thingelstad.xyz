@@ -388,10 +388,12 @@ img {
   margin: 0 0 0 8px;
 }
 
-/* The record */
+/* The record: the title, its URL and one saved line; the note with "About
+   this link" beside it (or across the page when there is nothing to sit
+   beside); what connects it, quieter, below. */
 .record-hero {
-  max-width: 54rem;
-  margin: 8px 0 40px;
+  max-width: 52rem;
+  margin: 16px 0 44px;
 }
 .record-title {
   font-size: var(--jt-size-title);
@@ -404,10 +406,12 @@ img {
 .record-title a:hover {
   text-decoration-thickness: 3px;
 }
-.record-title .arrow {
-  font-family: var(--jt-font-body);
-  font-weight: 400;
-  font-size: 0.7em;
+.record-title .out {
+  display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
+  margin-left: 0.18em;
+  vertical-align: 0.06em;
 }
 .record-url {
   margin: 14px 0 0;
@@ -418,51 +422,60 @@ img {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.record-url b {
+  color: var(--text-soft);
+  font-weight: 600;
+}
+.record-byline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: var(--jt-size-small);
+}
+.record-byline .chip {
+  line-height: 26px;
+  padding: 0 9px;
+  border-radius: 5px;
+}
+.record-byline .kudos-row {
+  margin: 0;
+}
 .record-body {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 0 56px;
-}
-/* One column: the note, where it appeared, then the connections; the
-   utility links (Wayback, the twins) go last. */
-@media (max-width: 59.99rem) {
-  .record-side {
-    display: contents;
-  }
-  .record-facts,
-  .record-elsewhere {
-    order: 1;
-  }
+  gap: 36px 64px;
+  align-items: start;
 }
 @media (min-width: 60rem) {
   .record-body {
     grid-template-columns: minmax(0, var(--jt-measure)) minmax(0, 1fr);
   }
-  .record-card,
-  .record-note,
-  .connections {
-    grid-column: 1;
-  }
-  .record-side {
-    grid-column: 2;
-    grid-row: 1 / span 3;
-  }
+}
+.record-main > * + * {
+  margin-top: 36px;
 }
 .record-card > h2,
-.record-side .section > h2,
-.connections .section > h2 {
+.record-label,
+.record-related .section > h2 {
   font-family: var(--jt-font-body);
   font-size: var(--jt-size-label);
   font-weight: 600;
   letter-spacing: var(--jt-tracking-label);
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
-.connections .section > h2 .count {
+.record-related .section > h2 .count,
+.record-related .section > h2 .host {
   letter-spacing: 0;
   text-transform: none;
   font-weight: 400;
+}
+.record-related .section > h2 .host {
+  font-weight: 600;
 }
 .note {
   max-width: var(--jt-measure);
@@ -470,6 +483,9 @@ img {
 }
 .note > :first-child {
   margin-top: 0;
+}
+.note > :last-child {
+  margin-bottom: 0;
 }
 .note p,
 .note ul,
@@ -495,37 +511,153 @@ img {
 .note .record-link {
   text-decoration-style: double;
 }
+/* A short remark, one paragraph under 280 characters, set larger. */
+.note.short {
+  font-size: 1.5625rem;
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+}
 .note-label {
-  margin: -4px 0 12px;
+  margin: -4px 0 14px;
   color: var(--muted);
   font-size: var(--jt-size-small);
 }
 .note.excerpt {
-  padding-left: 18px;
+  padding-left: 20px;
   border-left: 3px solid var(--line);
   color: var(--text-soft);
 }
-.appear {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.appear li {
-  margin: 0 0 14px;
-  line-height: 1.45;
-}
-.appear .issue-title {
-  display: block;
-  font-weight: 600;
-}
-.elsewhere {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.note-cite {
+  margin: 10px 0 0;
+  padding-left: 23px;
+  color: var(--muted);
   font-size: var(--jt-size-small);
 }
-.elsewhere li {
-  margin: 0 0 6px;
+/* About this link (RecordFacts.astro). */
+.record-facts {
+  margin: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.record-facts.card {
+  padding: 6px 22px;
+}
+.record-facts.card > div {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+.record-facts.card > div:first-child {
+  border-top: 0;
+}
+/* The band: cells parted by the card's own hairline. */
+.record-facts.band {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: var(--line);
+}
+.record-facts.band > div {
+  padding: 16px 22px;
+  background: var(--card);
+}
+.record-facts dt {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: var(--jt-size-label);
+  font-weight: 600;
+  letter-spacing: var(--jt-tracking-label);
+  text-transform: uppercase;
+}
+.record-facts dd {
+  margin: 0;
+  font-size: var(--jt-size-small);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.record-facts .lead {
+  font-weight: 600;
+}
+.record-facts .sub {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: var(--jt-size-meta);
+}
+.record-facts .small {
+  font-size: var(--jt-size-meta);
+}
+/* The host's links per year: one bar a year, this link's year in link blue. */
+.host-years {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 34px;
+  margin: 10px 0 4px;
+}
+.host-years .bar {
+  flex: 1 1 0;
+  min-height: 2px;
+  border-radius: 1px;
+  background: var(--muted);
+  opacity: 0.45;
+}
+.host-years .bar.zero {
+  background: var(--line);
+  opacity: 1;
+}
+.host-years .bar.on {
+  background: var(--link);
+  opacity: 1;
+}
+.host-years-axis {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--jt-size-label);
+  font-variant-numeric: tabular-nums;
+}
+/* What connects it: two columns of compact lists, under a rule. */
+.record-related {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0 48px;
+  margin: 56px 0 0;
+  padding: 32px 0 0;
+  border-top: 1px solid var(--line);
+}
+.record-related:empty {
+  display: none;
+}
+@media (min-width: 60rem) {
+  .record-related {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.record-related .link-list li {
+  padding: 9px 0;
+  font-size: var(--jt-size-small);
+  line-height: 1.45;
+}
+.record-related .link-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.record-related .link-list li:last-child {
+  border-bottom: 0;
+}
+.record-related .link-list .title {
+  font-weight: 500;
+}
+.record-related .link-list.compact .meta {
+  display: block;
+  margin: 2px 0 0;
+  font-size: var(--jt-size-label);
+}
+.record-related .more {
+  font-size: var(--jt-size-meta);
 }
 /* Kudos (Kudos.astro): a heart, and beside it inside the button the public
    count, which Tinylytics writes into the empty button (?kudos=custom). The
@@ -1088,9 +1220,6 @@ img {
 .facts dd {
   margin: 0;
   overflow-wrap: anywhere;
-}
-.record-side .facts > div {
-  grid-template-columns: 4rem minmax(0, 1fr);
 }
 .host-facts {
   max-width: var(--jt-measure);
