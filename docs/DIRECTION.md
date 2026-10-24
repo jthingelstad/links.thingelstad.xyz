@@ -100,7 +100,7 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 | URL | What |
 | --- | --- |
 | `/` | Built as a search box, like Google's front page (Jamie, 2026-10-23): the wordmark, the box, how many links are in the index and the years they span, and a row of ways in (Newest, Years, Hosts, Kinds, Issues, Stats, Feed; Topics goes first once topic pages exist). A quote of the day from `content/quotes.md` when it holds any; nothing while it is empty. The site header is left off this page. The box suggests as `/search/`'s does and shows the first five links that match as you type (section "Search"); Enter with nothing chosen goes to `/search/` |
-| `/search/?q=` | Results: title, host, saved date, a snippet of the note, a WT chip; filters for topic, year, kind, in a Weekly Thing, has a note; sort by relevance or date. Built: `kind:video` keeps one kind and, with no other words, links that kind's page; the box suggests as an operator is typed (section "Search") |
+| `/search/?q=` | Results: title, host, saved date, a snippet of the note, a WT chip; filters for topic, year, kind, in a Weekly Thing, has a note; sort by relevance or date. Built: `kind:video` keeps one kind and, with no other words, links that kind's page; the box suggests as an operator is typed; on a wide screen the result moved to shows in a pane beside the list (section "Search") |
 | `/search/suggest.json` | What the search box suggests from: every host with its count and its links in each Central year, every issue with its title, Central date and saved links, each year's and kind's count. The search page's own file, shaped for it and free to change with it; not part of the dataset |
 | `/links/<id>/` | The record (below). `<id>` is the first 12 hex characters of md5 of the saved URL, which is Pinboard's API `hash`; anyone can compute it from the URL |
 | `/links/<id>.json`, `/links/<id>.md` | Machine twins of the record, the Things I've built pattern |
@@ -301,6 +301,21 @@ was. Pagefind loads on the first such search (`src/scripts/pagefind.ts`, shared 
 brings up every link that has it (199 for `xqzvjj`), none of them real matches; `/search/`
 checks them all, the home box only the closest 25, and says so to a screen reader ("No
 close matches") rather than "No links match".
+
+**Preview pane, built 2026-10-24** (Jamie: "Approved: build links.thingelstad.xyz search
+typeahead PR 3, result preview pane"). On a screen 60rem wide or more, `/search/` has a
+pane beside the results (`src/scripts/preview.ts`, deciding in `src/lib/preview.ts`). It
+shows the first result when results come, then the one moved to: the arrow keys, or a
+pointer resting on a result. The title, host and date are the search's own and show at
+once; the rest comes from the record's JSON twin (about 4 KB): its kind and a chip for
+each issue that carried it, the note as the record renders it ("From the page" for an
+excerpt), and what connects it in the record's order, three to a group, with the group's
+page (or the record) for the rest. The note is markdown-it's reading of it, the build's
+own set-up in `src/lib/markdown.ts`, built as elements and text (`noteTree`), never parsed
+as HTML; `tests/preview.test.mjs` checks every note comes out as its record renders it,
+record links included, and that every attribute it sets is one the pane lets through. The
+module and markdown-it with it (about 43 KB gzipped) load the first time a wide screen
+shows a result; a narrow screen has no pane and asks for none of it.
 
 Results open the record, not the destination. The destination is one click away on
 every record and marked on every result. The record is the product (the connections

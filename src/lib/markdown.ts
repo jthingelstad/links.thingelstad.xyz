@@ -2,8 +2,11 @@
 // plain page excerpts before that, and HTML blockquotes around 2012. They
 // render here, and nowhere else. Raw HTML is escaped (html: false), images are
 // off (nothing is fetched from another host when a page is served), and
-// headings sit below the record's own.
-import MarkdownIt from 'markdown-it';
+// headings sit below the record's own. noteTree is the same reading as a tree
+// of elements and text, for the search page's preview pane, which builds it
+// with createElement in the browser rather than parsing HTML; its HTML is
+// renderNote's for every note (tests/preview.test.mjs).
+import MarkdownIt, { type Token } from 'markdown-it';
 
 export interface Resolved {
   path: string;
@@ -14,10 +17,11 @@ type Resolver = (href: string) => Resolved | null;
 const md = new MarkdownIt({ html: false, linkify: true, typographer: false });
 md.disable(['image']);
 md.linkify.set({ fuzzyLink: false, fuzzyEmail: false });
+const headingLevel = (tag: string) =>
+  `h${Math.min(6, Number(tag.slice(1)) + 2)}`;
 
 md.renderer.rules.heading_open = (tokens, i, options, _env, self) => {
-  const level = Math.min(6, Number(tokens[i].tag.slice(1)) + 2);
-  tokens[i].tag = `h${level}`;
+  tokens[i].tag = headingLevel(tokens[i].tag);
   return self.renderToken(tokens, i, options);
 };
 md.renderer.rules.heading_close = (tokens, i, options, _env, self) => {
@@ -26,15 +30,16 @@ md.renderer.rules.heading_close = (tokens, i, options, _env, self) => {
 };
 
 // A link in a note that points at another saved link becomes a record link.
-md.renderer.rules.link_open = (tokens, i, options, env, self) => {
-  const token = tokens[i];
-  const resolve = (env as { resolve?: Resolver }).resolve;
+function recordLink(token: Token, resolve: Resolver | undefined) {
   const hit = resolve?.(String(token.attrGet('href') ?? ''));
   if (hit) {
     token.attrSet('href', hit.path);
     token.attrJoin('class', 'record-link');
     token.attrSet('title', `Also saved here: ${hit.title}`);
   }
+}
+md.renderer.rules.link_open = (tokens, i, options, env, self) => {
+  recordLink(tokens[i], (env as { resolve?: Resolver }).resolve);
   return self.renderToken(tokens, i, options);
 };
 
@@ -72,6 +77,92 @@ export function noteLinks(note: string): string[] {
 
 export function renderNote(note: string, resolve: Resolver) {
   return md.render(prepare(note), { resolve });
+}
+
+// An element of a note, or its text. Only these tags and attributes come out
+// of markdown-it as it is set up here (raw HTML and images are off).
+export interface NoteElement {
+  tag: string;
+  attrs: [string, string][];
+  children: NoteNode[];
+}
+export type NoteNode = NoteElement | string;
+export const noteTags = new Set([
+  'p',
+  'blockquote',
+  'ul',
+  'ol',
+  'li',
+  'h3',
+  'h4',
+  'h5',
+  'h6',
+  'a',
+  'em',
+  'strong',
+  's',
+  'code',
+  'pre',
+  'hr',
+  'br',
+  'table',
+  'thead',
+  'tbody',
+  'tr',
+  'th',
+  'td',
+]);
+
+export function noteTree(note: string, resolve?: Resolver): NoteNode[] {
+  const root: NoteElement = { tag: '', attrs: [], children: [] };
+  const open = [root];
+  const add = (node: NoteNode) => open[open.length - 1].children.push(node);
+  const element = (tag: string, attrs: [string, string][] = []) => ({
+    tag,
+    attrs,
+    children: [],
+  });
+  const walk = (tokens: Token[]) => {
+    for (const token of tokens) {
+      // A paragraph in a tight list is its text alone.
+      if (token.hidden) continue;
+      if (token.type === 'inline') walk(token.children ?? []);
+      else if (token.nesting === 1) {
+        if (token.type === 'link_open') recordLink(token, resolve);
+        const tag =
+          token.type === 'heading_open' ? headingLevel(token.tag) : token.tag;
+        const next: NoteElement = element(
+          tag,
+          (token.attrs ?? []).map(([name, value]) => [name, String(value)]),
+        );
+        add(next);
+        open.push(next);
+      } else if (token.nesting === -1) open.pop();
+      else if (token.type === 'text') add(token.content);
+      else if (token.type === 'softbreak') add('\n');
+      else if (token.type === 'hardbreak') add(element('br'));
+      else if (token.type === 'hr') add(element('hr'));
+      else if (token.type === 'code_inline')
+        add({ ...element('code'), children: [token.content] });
+      else if (token.type === 'code_block' || token.type === 'fence') {
+        const language = token.info.trim().split(/\s+/)[0];
+        add({
+          ...element('pre'),
+          children: [
+            {
+              ...element(
+                'code',
+                language ? [['class', `language-${language}`]] : [],
+              ),
+              children: [token.content],
+            },
+          ],
+        });
+      } else add(token.content);
+    }
+  };
+  walk(md.parse(prepare(note), {}));
+  return root.children;
 }
 
 const entities: Record<string, string> = {
