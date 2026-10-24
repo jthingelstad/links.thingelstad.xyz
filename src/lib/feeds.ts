@@ -82,7 +82,7 @@ export const feedAlternates = (feed: Feed) =>
   }));
 export const siteFeedAlternates = feedAlternates(siteFeed);
 
-const itemTitle = (link: Link) => link.title.trim() || link.url;
+const itemTitle = (link: Link) => link.shown.trim() || link.url;
 
 // XML 1.0 has no place for most control characters; drop them, then escape.
 const xmlText = (text: string) =>

@@ -67,7 +67,7 @@ const saved = rows.filter((row) => row.id && linkById.has(row.id)).length;
           return link ? (
             <li>
               <a class="title" href={linkPath(link.id)}>
-                {link.title}
+                {link.shown}
               </a>
               <span class="meta">
                 {link.host} · saved {shortDateLabel(link.saved)}

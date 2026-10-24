@@ -69,7 +69,7 @@ const description = link.hasNote
 ---
 
 <Layout
-  title={`${link.title} · Linking Things`}
+  title={`${link.shown} · Linking Things`}
   description={description}
   alternates={[
     { type: 'application/json', href: linkJsonPath(link.id) },
@@ -80,7 +80,7 @@ const description = link.hasNote
     <header class="record-hero">
       <h1 class="record-title p-name" data-pagefind-weight="10">
         <a class="u-bookmark-of" href={link.url}>
-          {link.title}
+          {link.shown}
           <svg
             class="out"
             viewBox="0 0 12 12"
@@ -101,7 +101,9 @@ const description = link.hasNote
         <span>
           Saved{' '}
           <time class="dt-published" datetime={link.saved}>
-            {weekdayDateLabel(link.saved)}, {timeLabel(link.saved)}
+            {link.clock
+              ? `${weekdayDateLabel(link.saved)}, ${timeLabel(link.saved)}`
+              : weekdayDateLabel(link.saved)}
           </time>
         </span>
         {appears.map((a) => (

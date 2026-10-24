@@ -15,6 +15,7 @@ import { noteLinks, plainNote, renderNote } from './markdown.ts';
 import { type Kind, kindOf, kinds } from './kinds.ts';
 import { hostOf, normalizeUrl } from './normalize.ts';
 import { type Voice, voiceOf } from './voice.ts';
+import { shownTitle, titleEndings } from './titles.ts';
 import { absolute, issueKey, linkPath } from './paths.ts';
 
 export { hostOf, normalizeUrl };
@@ -64,6 +65,8 @@ export interface Link extends MirrorLink {
   hasNote: boolean;
   voice: Voice | null;
   kind: Kind; // from host and path (kinds.ts)
+  shown: string; // the title as pages and feeds show it (titles.ts)
+  clock: boolean; // whether the time of day saved is real (below)
 }
 
 export interface Appearance {
@@ -188,14 +191,28 @@ const mirror: MirrorLink[] = readdirSync(join(root, 'data/links'))
   .sort()
   .flatMap((name) => read<MirrorLink[]>(`data/links/${name}`));
 
+// A saved time on the hour exactly, or one that many links share (67 were
+// stamped 2010-12-05 12:21:18 UTC by an import), is a made-up clock: those
+// records show the date alone (Jamie, 2026-10-24).
+const stamps = new Map<string, number>();
+for (const link of mirror)
+  stamps.set(link.saved, (stamps.get(link.saved) ?? 0) + 1);
+const realClock = (saved: string) =>
+  !/T\d\d:00:00/.test(saved) && (stamps.get(saved) ?? 0) < 10;
+
+const endings = titleEndings(
+  mirror.map((link) => ({ host: hostOf(link.url), title: link.title })),
+);
+
 // Every public link, oldest first.
 export const links: Link[] = mirror
   .map((link) => {
     const day = centralDay(link.saved);
+    const host = hostOf(link.url);
     const year = Number(day.slice(0, 4));
     return {
       ...link,
-      host: hostOf(link.url),
+      host,
       year,
       month: Number(day.slice(5, 7)),
       day,
@@ -203,6 +220,8 @@ export const links: Link[] = mirror
       hasNote: link.note.trim() !== '',
       voice: voiceOf(link.note, year),
       kind: kindOf(link.url),
+      shown: shownTitle(link.title, host, endings),
+      clock: realClock(link.saved),
     };
   })
   .sort((a, b) => byText(a.saved, b.saved) || byText(a.id, b.id));
