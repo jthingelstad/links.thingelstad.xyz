@@ -176,14 +176,19 @@ export function initSuggest(options: {
     render();
   }
 
-  function refresh(ask = false) {
-    asked = ask;
-    load();
+  // What the word at the cursor suggests now.
+  function compute(ask: boolean) {
     const at = token();
     suggestions =
       data && at && (at.text || ask)
         ? suggest(input.value, at, data, scope())
         : [];
+  }
+
+  function refresh(ask = false) {
+    asked = ask;
+    load();
+    compute(ask);
     show();
   }
 
@@ -203,6 +208,10 @@ export function initSuggest(options: {
     input.setSelectionRange(caret, caret);
     if (option.suggestion.insert.endsWith(':')) refresh(true);
     else {
+      // The cursor is past the word now, so when the live results reopen the
+      // list, what that word suggested is gone with it.
+      asked = false;
+      compute(false);
       close();
       taken();
     }

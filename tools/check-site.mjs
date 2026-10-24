@@ -2,8 +2,10 @@
 // errors at desktop and phone widths, with a main landmark, a title and no
 // horizontal scroll; a search finds records and kind: links its page; the
 // box suggests a site for site: and the keyboard takes it; the home page's
-// box shows live results and Enter opens one; a video facade asks nothing of YouTube or Vimeo until it is clicked, then
-// becomes the player; and no request reaches Tinylytics. SITE_TEST_URL defaults to the dev server; tools/test-built-site.mjs
+// box shows live results and Enter opens one, and a site taken there is not
+// offered again; a video facade asks nothing of YouTube or Vimeo until it is
+// clicked, then becomes the player; and no request reaches Tinylytics.
+// SITE_TEST_URL defaults to the dev server; tools/test-built-site.mjs
 // runs this against dist/ behind the edge function (SITE_TEST_EDGE=1), which
 // adds the redirect and 404 checks. Evidence goes to SITE_QA_DIR
 // (/tmp/links-site-qa by default).
@@ -210,6 +212,23 @@ for (const [name, viewport] of [
   await home.click();
   await home.pressSequentially(word);
   await Promise.all([page.waitForURL(/\/search\/\?q=/), home.press('Enter')]);
+  // A site taken in the home box: the list that reopens with its links
+  // starts with them, not with the suggestion just taken.
+  await page.goto(`${base}/`, { waitUntil: 'networkidle' });
+  await home.click();
+  await home.pressSequentially(`site:${host.slice(0, -1)}`);
+  await options
+    .first()
+    .locator('.suggest-insert', { hasText: `site:${host}` })
+    .waitFor({ timeout: 15000 });
+  await home.press('ArrowDown');
+  await home.press('Enter');
+  assert.equal(await home.inputValue(), `site:${host} `);
+  await links.first().waitFor({ timeout: 15000 });
+  assert.ok(
+    await options.first().evaluate((o) => o.classList.contains('suggest-link')),
+    'the taken site is not offered again',
+  );
 
   // The video facade: nothing from the player's host until the click.
   if (video) {
