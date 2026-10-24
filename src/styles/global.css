@@ -18,7 +18,6 @@
   --weekly: var(--jt-weekly-text);
   --weekly-soft: var(--jt-weekly-soft);
   font-family: var(--jt-font-body);
-  font-size: var(--jt-size-base);
   line-height: var(--jt-line-height);
   font-synthesis: none;
   color: var(--ink);
@@ -36,8 +35,11 @@
 * {
   box-sizing: border-box;
 }
+/* Body size goes on body, not :root: the --jt- sizes and the frame are rem,
+   so the root stays at the browser's 16px for 70rem to be the 1120px frame. */
 body {
   margin: 0;
+  font-size: var(--jt-size-base);
   background: var(--ground);
   -webkit-font-smoothing: antialiased;
 }
