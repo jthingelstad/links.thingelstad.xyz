@@ -1,7 +1,8 @@
 ---
 // Search over the record pages. Pagefind writes the index to /pagefind/ after
 // the build (npm run build); src/scripts/search.ts loads it. `npm run dev` has
-// no index, so search there says so. This is the only page with a script.
+// no index, so search there says so. On a wide screen the result moved to
+// shows in the pane beside the list (src/scripts/preview.ts).
 import Layout from '../layouts/Layout.astro';
 import { issues, suggestPath, years } from '../lib/data';
 // wt:N with no other words links to /issues/N/ when there is such an issue.
@@ -81,15 +82,25 @@ const numbers = issues.flatMap((issue) => issue.number ?? []);
       the box suggests the rest. Press <kbd>/</kbd> to search, arrow keys to
       move through suggestions and results.
     </p>
-    <p class="search-status" role="status" data-search-status>
-      Search needs JavaScript. Every link is also listed by{' '}
-      <a href="/years/">year</a>, <a href="/issues/">issue</a> and{' '}
-      <a href="/hosts/">host</a>.
-    </p>
-    <ul class="link-list search-results" data-search-results></ul>
-    <button type="button" class="search-more" data-search-more hidden>
-      Show more
-    </button>
+    <div class="search-layout">
+      <div class="search-main">
+        <p class="search-status" role="status" data-search-status>
+          Search needs JavaScript. Every link is also listed by{' '}
+          <a href="/years/">year</a>, <a href="/issues/">issue</a> and{' '}
+          <a href="/hosts/">host</a>.
+        </p>
+        <ul class="link-list search-results" data-search-results></ul>
+        <button type="button" class="search-more" data-search-more hidden>
+          Show more
+        </button>
+      </div>
+      <aside
+        class="search-preview"
+        aria-label="Preview"
+        hidden
+        data-search-preview
+      ></aside>
+    </div>
   </div>
   <script>
     import { initSearch } from '../scripts/search';

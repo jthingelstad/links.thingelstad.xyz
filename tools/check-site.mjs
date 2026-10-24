@@ -1,11 +1,13 @@
 // Browser checks: a route of each kind renders without console or page
 // errors at desktop and phone widths, with a main landmark, a title and no
-// horizontal scroll; a search finds records and kind: links its page;
-// Surprise me lands on a record and Back returns to the front page; the
-// box suggests a site for site: and the keyboard takes it; the home page's
-// box shows live results and Enter opens one, and a site taken there is not
-// offered again; a video facade asks nothing of YouTube or Vimeo until it is
-// clicked, then becomes the player; and no request reaches Tinylytics.
+// horizontal scroll; a search finds records, shows the one moved to in the
+// preview pane on the desktop (and asks for no twin on a phone), and kind:
+// links its page; Surprise me lands on a record and Back returns to the
+// front page; the box suggests a site for site: and the keyboard takes it;
+// the home page's box shows live results and Enter opens one, and a site
+// taken there is not offered again; a video facade asks nothing of YouTube
+// or Vimeo until it is clicked, then becomes the player; and no request
+// reaches Tinylytics.
 // SITE_TEST_URL defaults to the dev server; tools/test-built-site.mjs
 // runs this against dist/ behind the edge function (SITE_TEST_EDGE=1), which
 // adds the redirect and 404 checks. Evidence goes to SITE_QA_DIR
@@ -125,12 +127,48 @@ for (const [name, viewport] of [
     });
   }
 
-  // A search from the address: Pagefind loads and lists records.
+  // A search from the address: Pagefind loads and lists records. On the
+  // desktop the first one shows in the preview pane from its twin, and the
+  // pane follows the down arrow; the phone has no pane and asks for no twin.
+  const twins = [];
+  const twinRequest = (request) => {
+    if (/\/links\/[0-9a-f]{12}\.json$/.test(new URL(request.url()).pathname))
+      twins.push(request.url());
+  };
+  page.on('request', twinRequest);
   const query = `/search/?q=${encodeURIComponent('weekly')}`;
   await page.goto(base + query, { waitUntil: 'networkidle' });
   await page.waitForSelector('[data-search-results] li a[href*="/links/"]', {
     timeout: 15000,
   });
+  const titles = page.locator('[data-search-results] a.title');
+  const pane = page.locator('[data-search-preview]');
+  if (name === 'desktop') {
+    await pane.locator('.preview-facts').waitFor({ timeout: 15000 });
+    assert.equal(
+      await pane.locator('.preview-title').textContent(),
+      await titles.first().textContent(),
+      'the pane shows the first result',
+    );
+    assert.equal(await pane.getAttribute('aria-busy'), null);
+    await page.locator('[data-search-query]').focus();
+    await page.keyboard.press('ArrowDown');
+    await page.keyboard.press('ArrowDown');
+    const second = (await titles.nth(1).textContent()) ?? '';
+    await pane
+      .locator('.preview-title', { hasText: second })
+      .waitFor({ timeout: 15000 });
+    await pane.locator('.preview-facts').waitFor({ timeout: 15000 });
+    assert.equal(
+      await page.locator('[data-search-results] li.previewing').count(),
+      1,
+    );
+    assert.ok(twins.length >= 2, 'each result previewed asks for its twin');
+  } else {
+    assert.ok(await pane.isHidden(), 'no pane on a phone');
+    assert.deepEqual(twins, [], 'and no twin asked for');
+  }
+  page.off('request', twinRequest);
   await page.screenshot({ path: shot(name, query) });
 
   // kind: with no other words links the kind's page.
@@ -307,5 +345,5 @@ if (production)
   );
 else assert.deepEqual(analytics, [], 'no Tinylytics requests during QA');
 console.log(
-  `Checked ${routes.length} routes, a search, a kind: search, Surprise me, a site: suggestion and the home page's live results at desktop and phone widths${video ? ', the video facade' : ' (no video facts to check the facade on)'}${edge ? ', /links.db, the redirects and the 404' : ''}; evidence in ${output}`,
+  `Checked ${routes.length} routes, a search and its preview pane, a kind: search, Surprise me, a site: suggestion and the home page's live results at desktop and phone widths${video ? ', the video facade' : ' (no video facts to check the facade on)'}${edge ? ', /links.db, the redirects and the 404' : ''}; evidence in ${output}`,
 );

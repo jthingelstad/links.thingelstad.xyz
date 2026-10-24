@@ -407,16 +407,20 @@ export function connectionsOf(link: Link, limit = 5) {
   };
 }
 
-// `full` makes record links absolute, for feeds, where a reader has no page
-// to resolve a path against.
-export const noteHtml = (link: Link, full = false) =>
-  renderNote(link.note, (href) => {
+// A link in a note to another saved link, as its record. `full` makes record
+// links absolute, for feeds, where a reader has no page to resolve a path
+// against.
+export const noteResolver =
+  (link: Link, full = false) =>
+  (href: string) => {
     const id = resolveUrl(href, link.saved);
     const target = id && id !== link.id ? linkById.get(id) : undefined;
     if (!target) return null;
     const path = linkPath(target.id);
     return { path: full ? absolute(path) : path, title: target.title };
-  });
+  };
+export const noteHtml = (link: Link, full = false) =>
+  renderNote(link.note, noteResolver(link, full));
 export const noteText = (link: Link, max?: number) => plainNote(link.note, max);
 
 // The URL as a reader would type it: no scheme, no trailing slash.

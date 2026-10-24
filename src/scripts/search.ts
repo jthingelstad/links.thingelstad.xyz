@@ -12,6 +12,9 @@
 // A search with no words loads the whole index (143 chunks, 3.8 MB, found at
 // 16,524 records), so a year, an issue or a kind alone links to its page,
 // which lists exactly those links.
+//
+// On a wide screen the result moved to shows beside the list (preview.ts,
+// loaded then and only then).
 import { kindWords, kinds } from '../lib/kinds.ts';
 import {
   type Query,
@@ -58,8 +61,12 @@ function excerpt(text: string) {
   return p;
 }
 
+// The search's data for each result row, for the preview pane.
+const rows = new WeakMap<Element, Data>();
+
 function row(result: Data) {
   const item = document.createElement('li');
+  rows.set(item, result);
   const link = document.createElement('a');
   link.className = 'title';
   link.href = result.url;
@@ -100,6 +107,9 @@ export async function initSearch() {
   );
   const list = root.querySelector<HTMLUListElement>('[data-search-results]')!;
   const more = root.querySelector<HTMLButtonElement>('[data-search-more]')!;
+  const pane = root.querySelector<HTMLElement>('[data-search-preview]')!;
+  // The width the pane has room at (global.css).
+  const wide = matchMedia('(min-width: 60rem)');
   let typing: ReturnType<typeof setTimeout> | undefined;
   const suggestions = initSuggest({
     input,
@@ -132,6 +142,35 @@ export async function initSearch() {
   // The host page offered with a site: query. Its address is taken from a
   // matching result's host, which the build wrote, never from the typed text.
   let siteHost: string | undefined;
+
+  // The result in the pane, and a count so a slow twin does not replace a
+  // later one.
+  let previewed: Element | undefined;
+  let previews = 0;
+  async function preview(item: Element | null | undefined) {
+    if (!wide.matches || !item || item === previewed) return;
+    const data = rows.get(item);
+    if (!data) return;
+    previewed?.classList.remove('previewing');
+    previewed = item;
+    item.classList.add('previewing');
+    const current = ++previews;
+    let module: typeof import('./preview.ts');
+    try {
+      module = await import('./preview.ts');
+    } catch {
+      return;
+    }
+    if (current === previews)
+      await module.showPreview(pane, data, () => current === previews);
+  }
+  function clearPreview() {
+    previews++;
+    previewed?.classList.remove('previewing');
+    previewed = undefined;
+    pane.hidden = true;
+    pane.replaceChildren();
+  }
 
   function link(href: string, text: string) {
     const a = document.createElement('a');
@@ -176,6 +215,7 @@ export async function initSearch() {
     more.disabled = false;
     more.hidden = cursor >= candidates.length;
     describe();
+    if (!previewed) preview(list.firstElementChild);
   }
 
   async function update() {
@@ -186,6 +226,7 @@ export async function initSearch() {
     dropped = 0;
     siteHost = undefined;
     more.hidden = true;
+    clearPreview();
     const typed = input.value.trim();
     query = parse(typed);
     const year = query.year ?? yearSelect.value;
@@ -274,6 +315,22 @@ export async function initSearch() {
   for (const control of [yearSelect, wtBox, noteBox, sortSelect])
     control.addEventListener('change', update);
   more.addEventListener('click', () => showMore(run));
+
+  // The pane follows the arrow keys and a pointer that rests on a result.
+  list.addEventListener('focusin', (event) =>
+    preview((event.target as Element).closest('li')),
+  );
+  let resting: ReturnType<typeof setTimeout> | undefined;
+  list.addEventListener('pointerover', (event) => {
+    if (event.pointerType !== 'mouse') return;
+    clearTimeout(resting);
+    const item = (event.target as Element).closest('li');
+    resting = setTimeout(() => preview(item), 120);
+  });
+  list.addEventListener('pointerleave', () => clearTimeout(resting));
+  wide.addEventListener('change', () => {
+    if (wide.matches && !previewed) preview(list.firstElementChild);
+  });
 
   // "/" focuses the box; the arrow keys walk the results, unless the
   // suggestion list has taken them.
