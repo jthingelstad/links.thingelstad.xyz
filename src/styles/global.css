@@ -863,6 +863,42 @@ img {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+/* A site's links by year, 2005 on the left, as on the record page. On a
+   narrow screen the count comes first and the bars give way; their words
+   stay for a screen reader. */
+.suggest-years {
+  flex: none;
+  align-self: center;
+  margin-left: auto;
+}
+.suggest-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 1px;
+  height: 16px;
+  padding-bottom: 4px;
+}
+.suggest-bars .bar {
+  width: 3px;
+  border-radius: 1px;
+  background: var(--muted);
+  opacity: 0.7;
+}
+@media (max-width: 36rem) {
+  .suggest-bars {
+    display: none;
+  }
+}
+.suggest-bars .bar.zero {
+  background: var(--line);
+  opacity: 1;
+}
+/* The counted year, marked under its bar too, since one link is a short bar. */
+.suggest-bars .bar.on {
+  background: var(--link);
+  opacity: 1;
+  box-shadow: 0 4px 0 var(--link);
+}
 .search-options {
   display: flex;
   flex-wrap: wrap;

@@ -237,10 +237,9 @@ export const hostNamed = (value: string) =>
     .replace(/^www\./, '')
     .replace(/[/?#].*$/, '');
 
-// The host itself or a host under it (m.youtube.com is youtube.com), as the
-// search's site: check reads it.
-export const onHost = (host: string, site: string) =>
-  host === site || host.endsWith(`.${site}`);
+// The host itself or a host under it (m.youtube.com is youtube.com): the
+// grammar's rule, so a site: argument and a site: query agree.
+export { onHost } from '../lib/search-grammar.ts';
 
 // An issue as an argument: 351, "351", "WT351", "140-special" or "special".
 export function issueNamed(data: Dataset, value: string | number) {

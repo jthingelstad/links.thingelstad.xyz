@@ -29,7 +29,8 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   permalink and then its kind, the same as its JSON twin's; /hosts.json and
   /issues.json match the pages and the join;
 - /search/suggest.json, what the search box suggests from, holds every host
-  with its count as /hosts.json has them, every issue newest first with its
+  with its count as /hosts.json has them and its links in each Central year
+  as its twins have them, every issue newest first with its
   title, Central date and the saved links it carried, and each year's and
   kind's count;
 - llms.txt follows llmstxt.org's shape and links every year's
@@ -459,16 +460,32 @@ def check_dataset(data_links, newest, host_pages, twin_kinds, problems):
                 problems.append(f"issues.json: {source['slug']} link {row.get('position')}")
 
 
-def check_suggest(data_links, twin_kinds, problems):
+def central_year(saved):
+    return datetime.fromisoformat(saved.replace("Z", "+00:00")).astimezone(CENTRAL).year
+
+
+def check_suggest(data_links, twin_kinds, twin_hosts, problems):
     """/search/suggest.json agrees with /hosts.json, /issues.json, the
-    Central years and the kinds."""
+    Central years and the kinds; each host's years are its twins' Central
+    years, from its first to its last."""
     suggest = load_json("search/suggest.json", problems)
     if list(suggest) != ["hosts", "issues", "years", "kinds"]:
         problems.append("search/suggest.json: not hosts, issues, years, kinds")
         return
     hosts = load_json("hosts.json", problems).get("hosts", [])
-    if suggest["hosts"] != [[h["host"], h["count"]] for h in hosts]:
+    if [row[:2] for row in suggest["hosts"]] != [[h["host"], h["count"]] for h in hosts]:
         problems.append("search/suggest.json: hosts are not /hosts.json's, in its order")
+    by_host = {}
+    for link in data_links:
+        counts = by_host.setdefault(twin_hosts.get(link["id"]), {})
+        year = central_year(link["saved"])
+        counts[year] = counts.get(year, 0) + 1
+    for row in suggest["hosts"]:
+        counts = by_host.get(row[0], {})
+        first, last = (min(counts), max(counts)) if counts else (0, -1)
+        if len(row) != 3 or row[2] != [first] + [counts.get(y, 0) for y in range(first, last + 1)]:
+            problems.append(f"search/suggest.json: {row[0]}'s years are not its links' Central years")
+            break
     joined = sorted(
         load_json("issues.json", problems).get("issues", []),
         key=lambda issue: issue["date"],
@@ -486,7 +503,7 @@ def check_suggest(data_links, twin_kinds, problems):
         problems.append(f"search/suggest.json: issues differ from /issues.json (first {first})")
     years = {}
     for link in data_links:
-        year = datetime.fromisoformat(link["saved"].replace("Z", "+00:00")).astimezone(CENTRAL).year
+        year = central_year(link["saved"])
         years[year] = years.get(year, 0) + 1
     if suggest["years"] != [[y, years[y]] for y in sorted(years, reverse=True)]:
         problems.append("search/suggest.json: years are not each Central year's count, newest first")
@@ -861,6 +878,7 @@ def main():
     # Records, twins and the data.
     records = sorted(p.parent.name for p in (DIST / "links").glob("*/index.html"))
     twin_kinds = {}
+    twin_hosts = {}
     images = 0
     for record in records:
         twin = DIST / "links" / f"{record}.json"
@@ -873,6 +891,7 @@ def main():
         if doc.get("id") != record:
             problems.append(f"links/{record}.json: names another id")
         twin_kinds[record] = doc.get("kind")
+        twin_hosts[record] = doc.get("host")
         live = sorted(LIVENESS_KEYS & set(walk_keys(doc)))
         if live:
             problems.append(f"links/{record}.json: carries {live}")
@@ -921,7 +940,7 @@ def main():
     host_pages = sorted((DIST / "hosts").glob("*/index.html"))
     feeds = check_feeds(newest, host_pages, alternates, listed_records, problems)
     check_dataset(data_links, newest, host_pages, twin_kinds, problems)
-    suggested = check_suggest(data_links, twin_kinds, problems) or (0, 0)
+    suggested = check_suggest(data_links, twin_kinds, twin_hosts, problems) or (0, 0)
     year_files = check_llms(data_links, problems)
     inside = check_site_urls(problems)
     check_newest(newest, listed_records, problems)
