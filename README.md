@@ -1,7 +1,8 @@
 # Linking Things
 
 Every link Jamie Thingelstad has saved to Pinboard since 2005, as a database: one page
-per link, and what connects them. Astro, TypeScript and Pagefind, static.
+per link, and what connects them. Astro, TypeScript and Pagefind, static, with a
+small read-only MCP server at `/mcp` for agents.
 
 ```sh
 npm install
@@ -9,6 +10,7 @@ npm run dev            # http://127.0.0.1:4321 (no search index in dev)
 npm run build          # dist/, then the Pagefind index
 npm run validate:site  # checks dist/ (pages, links, sitemap, feeds, data files)
 npm run preview
+PAGEFIND_MODULE=dist/pagefind/pagefind.js npm run mcp:serve   # the MCP server, 127.0.0.1:8790
 ```
 
 ## For machines
@@ -27,6 +29,12 @@ Everything a page shows is also data, built with the pages:
   that year (Central), newest first, as a slim row with the note in full. The largest
   year is under 1 MB.
 - `/newest/` is the newest 50 as a page.
+- `/mcp` is a read-only MCP server with no authentication: add
+  `https://links.thingelstad.xyz/mcp` to a client as a remote (Streamable HTTP) server.
+  Its tools search with the site's own grammar and index, fetch a link by id or URL,
+  list a year, host, kind or tag, open a Weekly Thing issue, and give the collection's
+  shape. A browser visiting `/mcp` gets a page that lists them. The server's code is
+  `src/mcp/`; `docs/deployment.md` has how it is hosted.
 
 ## Analytics
 

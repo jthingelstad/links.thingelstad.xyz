@@ -4,16 +4,19 @@ The pattern is POAP's (`poap.thingelstad.xyz`): a private web bucket that only C
 reads, and pages deployed from main by GitHub Actions through an OIDC role that cannot
 change infrastructure. Linking Things has no media bucket and no archive bucket; every
 object is in `dist/`, the video thumbnails and book covers under `media/` included
-(`public/media/`, written only by `tools/enrich_facts.py`, about 6 MB).
+(`public/media/`, written only by `tools/enrich_facts.py`, about 6 MB). The one path
+that is not a file is `/mcp`, the MCP server: a Lambda Web Function behind the same
+distribution (section "The MCP server").
 
 ## Stacks (us-east-1, account 999153317627)
 
-| Stack               | Template                 | Holds                                                                                                                                                               |
-| ------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `links-certificate` | `infra/certificate.json` | ACM certificate for `links.thingelstad.xyz`, DNS validated                                                                                                          |
-| `links-storage`     | `infra/storage.json`     | `links-storage-web-999153317627`: private, SSE-S3, versioned (replaced and removed objects kept 30 days), retained if the stack goes                                |
-| `links-site`        | `infra/site.json`        | Distribution with origin access control, cache and header policies, the index function, a 14-day access log without client addresses, 5xx alarm to the family topic |
-| `links-delivery`    | `infra/delivery.json`    | GitHub OIDC deployment role, main only: list, read, write and remove site objects, invalidate this distribution                                                     |
+| Stack               | Template                 | Holds                                                                                                                                                                                                                                                                       |
+| ------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `links-certificate` | `infra/certificate.json` | ACM certificate for `links.thingelstad.xyz`, DNS validated                                                                                                                                                                                                                  |
+| `links-storage`     | `infra/storage.json`     | `links-storage-web-999153317627`: private, SSE-S3, versioned (replaced and removed objects kept 30 days), retained if the stack goes                                                                                                                                        |
+| `links-site`        | `infra/site.json`        | Distribution with origin access control, cache and header policies, the index function, a 14-day access log without client addresses, 5xx alarm to the family topic; once `links-mcp` exists, the `/mcp*` behaviour to its endpoint through a second origin access control  |
+| `links-delivery`    | `infra/delivery.json`    | GitHub OIDC deployment role, main only: list, read, write and remove site objects, invalidate this distribution; once `links-mcp` exists, upload the MCP package and change that stack's code, nothing else                                                                 |
+| `links-mcp`         | `infra/mcp.json`         | The MCP server: `links-mcp-code-999153317627` (private, versioned, the packaged server), an execution role that writes its own logs and nothing else, 30-day logs, the `links-mcp` web function, its revision and `live` endpoint (IAM auth), 5xx alarm to the family topic |
 
 Live ids and ARNs are in `infra/deployment.json`; `tools/bootstrap-infra.mjs` writes them.
 `npm run validate:infra` pins what the templates promise (one private bucket, HTTPS
@@ -35,10 +38,12 @@ Review the printed changes; `apply` runs only on Jamie's go.
 npm run infra:apply    # executes them in order and prints the DNS records
 ```
 
-The order is storage, site, storage again (the bucket policy names the distribution),
-delivery, certificate. The certificate stack waits until ACM sees its validation record,
-so `apply` prints both records as soon as they exist and keeps waiting (up to an hour)
-while Jamie adds them at Namecheap. If it is cut off, run it again: finished stacks
+Run `npm run build` first: `apply` packages the MCP server with the build's Pagefind
+client. The order is mcp, the distribution's grant on its endpoint, storage, site,
+storage again (the bucket policy names the distribution), delivery, certificate. The
+certificate stack waits until ACM sees its validation record, so `apply` prints both
+records as soon as they exist and keeps waiting (up to an hour) while Jamie adds them at
+Namecheap. If it is cut off, run it again: finished stacks
 report no changes and a stack still in progress is waited for. When ACM shows ISSUED:
 
 ```sh
@@ -140,6 +145,107 @@ and so would a single JSON file over 10 MB. The year llms files are under 1 MB e
 they are compressed. A client that sends no `Accept-Encoding`
 (Python's urllib, curl without `--compressed`) gets the plain bytes.
 
+## The MCP server
+
+`src/mcp/` is a read-only MCP server at `https://links.thingelstad.xyz/mcp` (Streamable
+HTTP with JSON responses, no sessions, no authentication; `docs/DIRECTION.md`, "Agents
+and the MCP"). It runs on a Lambda Web Function in the `links-mcp` stack. The site's
+distribution sends `/mcp*` to the function's `live` endpoint through origin access
+control: the endpoint takes IAM auth only, CloudFront signs every request (a POST body
+as `UNSIGNED-PAYLOAD`, so clients add nothing), and the function's resource policy lets
+this distribution, and nothing else, invoke it. Nothing from `/mcp` is cached at the
+edge; the cache key and the forwarded request carry no cookie and no query string, and
+the server sees only `Origin`, `Content-Type`, `Accept`, `User-Agent`,
+`MCP-Protocol-Version` and `Mcp-Session-Id`.
+
+| Request           | Answer                                                                                                    |
+| ----------------- | --------------------------------------------------------------------------------------------------------- |
+| `POST /mcp`       | JSON-RPC: `initialize`, `tools/list`, `tools/call`, `resources/*`, `ping`                                 |
+| `GET /mcp`        | a page for people that lists the tools; an event-stream GET gets 405                                      |
+| `GET /mcp/health` | the counts the server holds, the data's generated time and the package key; 503 until the data has loaded |
+| `OPTIONS /mcp`    | 204 with CORS for any origin                                                                              |
+
+The server keeps no data of its own. It reads `/links.json`, `/issues.json` and
+`/hosts.json` from the production host, revalidates them by ETag every ten minutes (a
+failed fetch keeps what it has and tries again a minute later), and searches the
+published Pagefind index with Pagefind's client, packaged beside it from the same build.
+It logs one line a request (method, tool, status, milliseconds), never argument values.
+The 5xx alarm `links-mcp-5xx` goes to the family topic.
+
+Locally, after `npm run build`:
+
+```sh
+PAGEFIND_MODULE=dist/pagefind/pagefind.js npm run mcp:serve   # 127.0.0.1:8790, reads the live site
+```
+
+### Adding it to the live site, once
+
+With the `cloud-engineer` identity, in two reviewed rounds, each `apply` on Jamie's go:
+
+```sh
+npm run build
+npm run infra:plan                   # the links-mcp stack's first half; nothing else changes yet
+npm run infra:apply -- --mcp-only    # links-mcp: bucket, roles, logs; upload; function, revision, endpoint
+npm run infra:plan                   # now shows the grant and the site and delivery change sets
+npm run infra:apply                  # the grant, links-site (/mcp), links-delivery (MCP actions)
+```
+
+1. **links-mcp, first half:** the code bucket, its policy (Lambda may read
+   `mcp/*` for this function only; TLS only), the execution role and the two log groups.
+2. **Upload:** `apply` packages the server (`npm run mcp:package`), puts the zip with
+   its SHA-256 and takes the object version.
+3. **links-mcp, second half:** the function, its first revision on that version, the
+   `live` endpoint and the 5xx alarm. `--mcp-only` stops here.
+4. **The distribution's grant:** CloudFormation has no resource for a web function's
+   resource policy, so the bootstrap sets it with `PutResourcePolicy`, one statement:
+   `cloudfront.amazonaws.com` may `lambda:InvokeWebFunctionEndpoint` on the `live`
+   endpoint when `aws:SourceArn` is this distribution. `plan` prints it; `apply` writes
+   it once, reads it back, and stops rather than replace a different policy it finds.
+5. **links-site** with `McpOriginDomain`: the origin access control, the cache and
+   origin request policies and the `/mcp*` behaviour.
+6. **links-delivery** with the code bucket and execution role: the `McpDelivery` policy.
+
+Then commit the rewritten `infra/deployment.json` (it gains `mcpExecutionRoleArn` and
+`mcpEndpointDomain`). Until that commit is on main, the deploy's MCP step prints a
+notice and does nothing. Check it with `curl https://links.thingelstad.xyz/mcp/health`.
+
+cfn-lint 1.57.2 does not know the Lambda Web Functions actions, so `DeploymentRole`
+ignores W3037 (unknown action) in its own metadata; `npm run validate:infra` pins those
+actions exactly instead. `tests/mcp-infra.test.mjs` edits copies of the templates and
+expects the validator to refuse each edit.
+
+### What an MCP deploy does
+
+After the site deploy, the deploy job runs `npm run mcp:package` and `npm run
+mcp:deploy` (`tools/deploy-mcp.mjs`, its rules in `tools/mcp-plan.mjs`):
+
+1. **Package.** `src/mcp/main.ts` bundled by esbuild with no runtime dependencies,
+   a `package.json` and Pagefind's `pagefind.js` from the verified build, in a zip with
+   sorted entries and fixed timestamps, so the same source gives the same bytes. Its
+   key is `mcp/<sha256>.zip`.
+2. **Skip.** When the stack's `CodeKey` is already that key, the live revision runs
+   these bytes and the step ends. Most pushes (a nightly sync, a page template) end
+   here.
+3. **Upload** the zip with its SHA-256, which S3 checks; the response gives the object
+   version.
+4. **Change set** on the reviewed template (`UsePreviousTemplate`) with `CodeKey` and
+   `CodeVersion` changed and every other value kept. It is executed only if it
+   replaces the revision and points the endpoint at it and does nothing else;
+   otherwise it is deleted and the deploy fails. The role cannot change the template
+   or anything outside the `links-mcp` stack, so infrastructure changes still go
+   through the bootstrap.
+5. **Verify** `/mcp/health` through CloudFront until it reports the new key, then
+   `initialize` once.
+
+To roll back, revert the commit: the next deploy builds the earlier bytes, whose key
+differs from the live one, and puts them live the same way. `npm run mcp:plan` prints
+what a deploy would do with any identity in the account and writes nothing.
+
+`CustomErrorResponses` on the distribution apply to every behaviour, so a 404 from the
+server (an unknown path under `/mcp`) and a 403 from the endpoint (a broken grant) both
+reach a client as the site's 404 page. A `/mcp` that suddenly answers with the 404 page
+is the grant to check first.
+
 ## The nightly job: sync and enrichment on the Mac, not in CI
 
 `PINBOARD_API_TOKEN` lives in `.env` on Jamie's Mac and the raw export
@@ -212,6 +318,14 @@ Markdown files, and 16,687 Pagefind files.
   delivers to CloudWatch Logs free, 14 days of storage a few cents at most; the 5xx alarm
   $0.10; the certificate free. About $0.15 to $0.50 a month, most of it the alarm and
   template-change deploys. No Route 53.
+- **The MCP server:** a web function is billed for requests, active CPU time and the
+  memory an environment holds while it is alive (about 290 MB once the three files are
+  loaded), not for time spent waiting on the network. At a handful of agent sessions a
+  month that is cents at most; the exact rates are on the Lambda pricing page, and the
+  family's other web functions show what this account pays. The code bucket keeps
+  about 90 KB a version, old versions gone after 30 days; logs are a line a request,
+  kept 30 days; the `links-mcp-5xx` alarm $0.10. About $0.10 to $0.20 a month more,
+  most of it the alarm.
 
 ## Later: the archive
 
