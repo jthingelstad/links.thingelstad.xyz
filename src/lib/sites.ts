@@ -24,9 +24,8 @@ const shared = JSON.parse(
   readFileSync(join(process.cwd(), 'shared/sites.json'), 'utf8'),
 ) as { owner: Owner; sites: SharedSite[] };
 
-// This site's id for refs. Linking Things is not in sites.json yet (Jamie,
-// 2026-10-23: it joins the strip when it is done); when its line lands with
-// this id, the strip marks it current with no change here.
+// This site's id for refs. Linking Things joined sites.json and the strip on
+// 2026-10-23 under this id, so the strip marks it current.
 export const currentSite = 'links';
 export const owner = shared.owner;
 
