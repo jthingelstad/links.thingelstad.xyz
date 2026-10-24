@@ -14,3 +14,6 @@ playwright-report/
 # The SQLite file, built from data/ by npm run db (tools/build_db.py).
 public/links.db
 public/links.db.tmp
+
+# The packaged MCP server (npm run mcp:package).
+.build/
