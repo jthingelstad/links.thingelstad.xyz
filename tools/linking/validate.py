@@ -8,6 +8,7 @@ from pathlib import Path
 
 from . import issues as issues_mod
 from . import jsonio
+from .check_enrichment import check_enrichment
 from .pinboard import RECORD_FIELDS, STATE_FIELDS
 from .urls import md5_hex
 
@@ -285,15 +286,20 @@ def scan_credentials(report, data_dir, token=None):
                     report.error(f"{path}:{number}", "contains the PINBOARD_API_TOKEN value")
 
 
-def validate(data_dir, raw_path=None, token=None):
-    """Run every check. Returns (report, summary dict)."""
+def validate(data_dir, raw_path=None, token=None, media_dir=None):
+    """Run every check. Returns (report, summary dict).
+
+    media_dir is public/media/ (default: beside data_dir, as in the repo).
+    """
     data_dir = Path(data_dir)
+    media_dir = Path(media_dir) if media_dir is not None else data_dir.parent / "public" / "media"
     report = Report()
     by_id = check_links(report, data_dir / "links")
     years = {record["saved"][:4] for record in by_id.values()}
     private_checked = check_private(report, by_id, raw_path) if raw_path else False
     counts = check_issues(report, data_dir / "derived" / "issues.json", by_id)
     check_state(report, data_dir / "sync.json", len(by_id))
+    enrichment = check_enrichment(report, data_dir / "enrichment", by_id, media_dir)
     scan_credentials(report, data_dir, token)
     issues, linked, unmatched = counts if counts else (0, 0, 0)
     summary = {
@@ -303,5 +309,6 @@ def validate(data_dir, raw_path=None, token=None):
         "linked_ids": linked,
         "unmatched": unmatched,
         "private_checked": private_checked,
+        **enrichment,
     }
     return report, summary

@@ -9,10 +9,14 @@ import re
 from pathlib import Path
 from urllib.parse import urlsplit
 
+from . import home as home_mod
 from . import jsonio
-from .shards import VERSION, age_days, stamp
+from .shards import age_days, stamp
+from .web import PAGE_CAP
 
 METHOD = "enrich_hosts"
+# 2 added the home object (2026-10-23); a record at a lower version is due.
+VERSION = 2
 SHARD_RE = r"[a-z0-9]\.json"
 DEFAULT_RECHECK_DAYS = 30
 DEFAULT_RDAP_MIN_LINKS = 5  # DIRECTION.md: RDAP for hosts with five or more links
@@ -70,8 +74,9 @@ def select(hosts, existing, now, *, min_links=1, only=None, limit=None, recheck_
 
     Hosts with at least min_links links qualify. Those with no record come
     first (most links first), then those whose record is at least
-    recheck_after days old (oldest checked first). only names hosts to check
-    whatever their state. limit applies last.
+    recheck_after days old or written at a lower VERSION (oldest checked
+    first). only names hosts to check whatever their state. limit applies
+    last.
     """
     unobserved, due = [], []
     for host, entry in hosts.items():
@@ -88,11 +93,18 @@ def select(hosts, existing, now, *, min_links=1, only=None, limit=None, recheck_
             due.append((host, entry, record.get("checked") or "", "named"))
         elif age is None or age >= recheck_after:
             due.append((host, entry, record.get("checked") or "", "due"))
+        elif _older_version(record):
+            due.append((host, entry, record.get("checked") or "", f"version {record.get('version')}"))
     unobserved.sort(key=lambda item: (-item[1]["count"], item[0]))
     due.sort(key=lambda item: (item[2], -item[1]["count"], item[0]))
     chosen = [(host, "unobserved") for host, _entry in unobserved]
     chosen += [(host, f"{reason}, checked {checked or 'never'}") for host, _entry, checked, reason in due]
     return chosen[:limit] if limit is not None else chosen
+
+
+def _older_version(record):
+    version = record.get("version")
+    return not isinstance(version, int) or isinstance(version, bool) or version < VERSION
 
 
 def wants_rdap(entry, record, now, *, min_links, recheck_after):
@@ -108,14 +120,18 @@ def wants_rdap(entry, record, now, *, min_links, recheck_after):
     return age is None or age >= recheck_after
 
 
-def check_https(web, name):
-    """(the https object, whether http://<name>/ answered at all).
+HOME_ACCEPT = "text/html,application/xhtml+xml;q=0.9,*/*;q=0.8"
+
+
+def check_https(web, name, checked):
+    """(the https object, the home object, whether http://<name>/ answered at all).
 
     reachable: an HTTP response came back from https://<name>/ after its
     redirects; status is that response's. redirects_http: http://<name>/
-    redirected, and its chain reached an https URL.
+    redirected, and its chain reached an https URL. The home object comes
+    from the same https response (at most 256 KB of it, parsed and dropped).
     """
-    secure, _ = web.follow(f"https://{name}/", cap=0)
+    secure, body, headers = web.fetch(f"https://{name}/", cap=PAGE_CAP, accept=HOME_ACCEPT)
     https = {
         "reachable": secure["status"] is not None,
         "redirects_http": False,
@@ -123,10 +139,11 @@ def check_https(web, name):
     }
     if secure["status"] is None:
         https["error"] = secure["error"]
+    home = home_mod.observe(checked, secure, body, headers)  # the body goes no further
     plain, _ = web.follow(f"http://{name}/", cap=0)
     hops = [plain["final_url"]] + [hop["url"] for hop in plain["redirects"]]
     https["redirects_http"] = bool(plain["redirects"]) and any(url.startswith("https://") for url in hops)
-    return https, plain["status"] is not None
+    return https, home, plain["status"] is not None
 
 
 def check(host, entry, record, now, *, resolver, web, rdap_client, rdap_wanted):
@@ -135,13 +152,15 @@ def check(host, entry, record, now, *, resolver, web, rdap_client, rdap_wanted):
     A previous RDAP answer is kept when RDAP is not asked again.
     """
     name = hostname(host)
+    checked = stamp(now)
     dns = resolver.lookup(name)
     answered_http = False
     if dns["resolves"]:
-        https, answered_http = check_https(web, name)
+        https, home, answered_http = check_https(web, name, checked)
     else:
         https = {"reachable": False, "redirects_http": False, "status": None, "error": "does not resolve"}
-    fresh = {"checked": stamp(now), "method": METHOD, "version": VERSION, "dns": dns, "https": https}
+        home = home_mod.empty(checked, "does not resolve")
+    fresh = {"checked": checked, "method": METHOD, "version": VERSION, "dns": dns, "https": https, "home": home}
     if rdap_wanted:
         found, reason = rdap_client.lookup(name)
         if found is not None:

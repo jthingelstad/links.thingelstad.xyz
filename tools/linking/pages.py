@@ -3,7 +3,10 @@
 docs/DATA.md, "data/enrichment/pages/<yyyy>.json". A record is filed by the
 year the link was saved. Liveness is rechecked monthly for a dead page and
 quarterly for a live one, by checked; Wayback has its own checked and is
-looked up again quarterly.
+looked up again quarterly. Liveness is never run for the site (Jamie,
+2026-10-23: "You don't need to validate the links. They just are."), so most
+records come from Wayback-only runs and hold checked, method, version and
+wayback alone.
 """
 
 from . import wayback as wb
@@ -14,16 +17,22 @@ SHARD_RE = r"\d{4}\.json"
 DEAD_RECHECK_DAYS = 30
 ALIVE_RECHECK_DAYS = 90
 WAYBACK_RECHECK_DAYS = 90
+# The fields a liveness check writes; a Wayback-only record has none of them.
+LIVENESS_FIELDS = ("status", "alive", "final_url", "redirects", "content_type", "error")
 
 
 def year_of(link):
     return link["saved"][:4]
 
 
+def has_liveness(record):
+    return record is not None and "alive" in record
+
+
 def liveness_due(record, now, recheck_after=None):
     """None when not due, else the reason it is."""
-    if record is None:
-        return "unobserved"
+    if not has_liveness(record):
+        return "unobserved"  # no record, or a Wayback-only one
     age = age_days(record.get("checked"), now)
     if age is None:
         return "no checked stamp"
@@ -36,9 +45,8 @@ def liveness_due(record, now, recheck_after=None):
 
 
 def wayback_due(record, now, recheck_after=None):
-    if record is None:
-        return None  # Wayback-only runs need a liveness record to attach to
-    archived = record.get("wayback")
+    """None when not due, else the reason. Liveness plays no part."""
+    archived = record.get("wayback") if record is not None else None
     if not archived:
         return "no wayback"
     age = age_days(archived.get("checked"), now)
@@ -83,9 +91,10 @@ def select(links, store, now, *, mode="liveness", year=None, ids=None, sample=No
     mode "liveness" (also the mode that adds Wayback): unobserved links first in
     saved order, then those due by the dead-monthly, alive-quarterly rule (or
     older than recheck_after days), oldest checked first. mode "wayback":
-    links with a liveness record and no Wayback answer first, then Wayback
-    answers older than the recheck. ids picks links whatever their state. year,
-    then sample (spread over years) or limit, narrow the result.
+    links with no Wayback answer first, in saved order, then Wayback answers
+    older than the recheck, oldest first, whether or not a link has a
+    liveness record. ids picks links whatever their state. year, then sample
+    (spread over years) or limit, narrow the result.
     """
     wanted_ids = set(ids) if ids else None
     fresh, due = [], []
@@ -135,9 +144,18 @@ def liveness_record(result, now, previous=None):
 
 
 def with_wayback(record, observed, now):
-    """record with a fresh wayback object (checked last, as in the contract)."""
+    """record with a fresh wayback object (checked last, as in the contract).
+
+    With no record, or a Wayback-only one, the result is a Wayback-only record:
+    checked (the time of this lookup), method, version and wayback, nothing
+    else. A record with liveness keeps its own checked, which dates the
+    liveness check.
+    """
+    wayback = {**observed, "checked": stamp(now)}
+    if not has_liveness(record):
+        return {"checked": stamp(now), "method": METHOD, "version": VERSION, "wayback": wayback}
     updated = dict(record)
-    updated["wayback"] = {**observed, "checked": stamp(now)}
+    updated["wayback"] = wayback
     return updated
 
 

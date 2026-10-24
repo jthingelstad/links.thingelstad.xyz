@@ -105,11 +105,19 @@ class FakeRdap:
         return None, "not found at rdap.example"
 
 
+HOME_PAGE = b"""<!doctype html><html><head><title>MacStories</title>
+<meta name="generator" content="WordPress 6.8">
+<link rel="alternate" type="application/rss+xml" title="MacStories" href="/feed/">
+<link rel="webmention" href="https://webmention.io/macstories.net/webmention">
+</head><body><div class="h-card"><a rel="me" href="https://mastodon.social/@viticci">M</a></div>
+<p>An article body that must never reach data/.</p></body></html>"""
+
+
 def host_web():
     clock = FakeClock()
     transport = FakeTransport(
         {
-            "https://macstories.net/": (200, {"Content-Type": "text/html"}, b"<html>"),
+            "https://macstories.net/": (200, {"Content-Type": "text/html; charset=utf-8"}, HOME_PAGE),
             "http://macstories.net/": (301, {"Location": "https://macstories.net/"}),
         }
     )
@@ -137,17 +145,28 @@ class HostsTest(Base):
                 "macstories.net": {
                     "checked": "2026-10-24T02:00:00Z",
                     "method": "enrich_hosts",
-                    "version": 1,
+                    "version": 2,
                     "dns": {"resolves": True, "a": ["9.9.9.9", "45.55.54.134", "104.16.9.10"], "aaaa": [], "cname": None,
                             "ns": ["raquel.ns.cloudflare.com", "rustam.ns.cloudflare.com"], "mx": True},
                     "https": {"reachable": True, "redirects_http": True, "status": 200},
+                    "home": {
+                        "checked": "2026-10-24T02:00:00Z",
+                        "title": "MacStories",
+                        "generator": "WordPress 6.8",
+                        "feeds": [{"type": "rss", "url": "https://macstories.net/feed/", "title": "MacStories"}],
+                        "hcard": True,
+                        "rel_me": ["https://mastodon.social/@viticci"],
+                        "webmention": "https://webmention.io/macstories.net/webmention",
+                    },
                     "rdap": {"domain": "macstories.net", "registrar": "Example Registrar", "registered": "2009-03-01",
                              "expires": "2027-03-01", "status": ["client transfer prohibited"],
                              "nameservers": ["ns1.example.net"], "checked": "2026-10-24T02:00:00Z"},
                 }
             },
         )
+        self.assertNotIn("never reach", (self.data / "enrichment" / "hosts" / "m.json").read_text())
         gone = jsonio.load(self.data / "enrichment" / "hosts" / "g.json")["gone.example"]
+        self.assertEqual(gone["home"]["error"], "does not resolve")
         self.assertEqual(gone["dns"]["error"], "NXDOMAIN")
         self.assertEqual(gone["https"], {"reachable": False, "redirects_http": False, "status": None, "error": "does not resolve"})
         self.assertNotIn("rdap", gone)  # one link: below the RDAP threshold, so not observed
@@ -190,6 +209,29 @@ class HostsTest(Base):
         code, out, _, _ = self.run_hosts("--only", "nowhere.example")
         self.assertEqual(code, 1)
         self.assertIn("not a host of any public link", out)
+
+    def test_one_request_reads_the_https_answer_and_the_home_page(self):
+        web_client, transport = host_web()
+        self.run_hosts("--only", "macstories.net", web_client=web_client)
+        # https://, then http:// and the https:// it redirects to: no extra request for the home page.
+        self.assertEqual(
+            [url for url, _, _ in transport.calls],
+            ["https://macstories.net/", "http://macstories.net/", "https://macstories.net/"],
+        )
+        self.assertEqual(transport.responses[0].bytes_read, len(HOME_PAGE))
+        self.assertEqual([r.read_sizes for r in transport.responses[1:]], [[], []])  # the http chain reads no body
+
+    def test_a_version_1_record_is_checked_again(self):
+        jsonio.write_json(
+            self.data / "enrichment" / "hosts" / "m.json",
+            {"macstories.net": {"checked": "2026-10-23T00:00:00Z", "method": "enrich_hosts", "version": 1,
+                                "dns": {}, "https": {}}},
+        )
+        code, out, resolver, _ = self.run_hosts("--dry-run")
+        self.assertIn("would check macstories.net (2 links; version 1, checked 2026-10-23T00:00:00Z)", out)
+        code, out, resolver, _ = self.run_hosts("--only", "macstories.net")
+        record = jsonio.load(self.data / "enrichment" / "hosts" / "m.json")["macstories.net"]
+        self.assertEqual((record["version"], record["home"]["title"]), (2, "MacStories"))
 
     def test_a_host_no_longer_linked_is_dropped(self):
         jsonio.write_json(self.data / "enrichment" / "hosts" / "p.json", {"private.example": {"checked": "2026-01-01T00:00:00Z"}})
@@ -259,6 +301,29 @@ class PagesTest(Base):
         page = jsonio.load(self.data / "enrichment" / "pages" / "2005.json")[ALIVE]
         self.assertEqual(page["checked"], "2027-02-01T02:05:00Z")
         self.assertEqual(page["wayback"]["count"], 2)
+
+    def test_wayback_only_needs_no_liveness_record(self):
+        code, out = self.run_pages("--wayback-only", "--dry-run")
+        self.assertIn(f"would observe {ALIVE} 2005 (no wayback)", out)
+        self.assertIn("would observe Wayback for 3 of 3 links", out)
+        web_client, transport = page_web()
+        code, out = self.run_pages("--wayback-only", "--limit", "2", web_client=web_client)
+        self.assertEqual(code, 0, out)
+        self.assertTrue(all(urlsplit(url).hostname == "web.archive.org" for url, _, _ in transport.calls))
+        y2005 = jsonio.load(self.data / "enrichment" / "pages" / "2005.json")
+        self.assertEqual(
+            y2005[ALIVE],
+            {"checked": "2026-10-24T02:00:00Z", "method": "enrich_pages", "version": 1,
+             "wayback": {"first": "2005-03-02T00:00:00Z", "last": "2026-10-01T00:00:00Z", "count": 2,
+                         "checked": "2026-10-24T02:00:00Z"}},
+        )
+        self.assertEqual(list(y2005[DEAD]), ["checked", "method", "version", "wayback"])
+        self.assertFalse((self.data / "enrichment" / "pages" / "2026.json").exists())  # past the limit
+        self.assertIn("liveness skipped (2 link(s) selected); wayback 2 looked up", out)
+        # The next slice picks up where this one stopped.
+        code, out = self.run_pages("--wayback-only", "--dry-run")
+        self.assertIn(f"would observe {NEW} 2026 (no wayback)", out)
+        self.assertIn("would observe Wayback for 1 of 3 links", out)
 
     def test_liveness_and_wayback_together(self):
         code, out = self.run_pages()

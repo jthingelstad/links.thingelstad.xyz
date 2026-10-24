@@ -4,9 +4,11 @@
 Incremental: links never observed come first, then dead ones checked a month
 ago and live ones checked a quarter ago. Liveness is one GET per link (15 s
 timeout, up to five redirects walked and recorded, at most 256 KB read and
-dropped), one request a second per host. Wayback is one CDX request per link
-at a six-second pace. Writes only under <data>/enrichment/pages/. See
-tools/README.md.
+dropped), one request a second per host; it stays in the tool and is not run
+for the site. Wayback is one CDX request per link at a six-second pace;
+--wayback-only picks links with no Wayback answer, then answers older than
+90 days, whatever their liveness. Writes only under <data>/enrichment/pages/.
+See tools/README.md.
 """
 
 import argparse
@@ -55,7 +57,9 @@ def parse_args(argv):
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--no-wayback", action="store_true", help="liveness only")
     mode.add_argument(
-        "--wayback-only", action="store_true", help="Wayback only, for links that already have a liveness record"
+        "--wayback-only",
+        action="store_true",
+        help="Wayback only: links with no Wayback answer first, in saved order, then answers older than 90 days",
     )
     parser.add_argument("--dry-run", action="store_true", help="print the selection; no network, no writes")
     args = parser.parse_args(argv)
@@ -116,7 +120,7 @@ def run(args, *, web_client=None, now=now_utc, clock=time.monotonic):
     web_client = web_client or web.Client()
     do_liveness = not args.wayback_only
     do_wayback = not args.no_wayback
-    counts = {"checked": 0, "alive": 0, "dead": 0, "wayback": 0, "archived": 0, "wayback_failed": 0, "skipped": 0}
+    counts = {"checked": 0, "alive": 0, "dead": 0, "wayback": 0, "archived": 0, "wayback_failed": 0}
     written = set()
     status = EXIT_OK
     blocked = None
@@ -132,10 +136,7 @@ def run(args, *, web_client=None, now=now_utc, clock=time.monotonic):
                 counts["alive" if record["alive"] else "dead"] += 1
                 parts.append(describe(record))
             if do_wayback and blocked is None:
-                if record is None:
-                    counts["skipped"] += 1
-                    parts.append("no liveness record, Wayback skipped")
-                elif args.wayback_only or args.ids or pg.wayback_due(record, now(), args.recheck_after):
+                if args.wayback_only or args.ids or pg.wayback_due(record, now(), args.recheck_after):
                     try:
                         observed = pg.observe_wayback(web_client, link)
                     except wb.Blocked as error:

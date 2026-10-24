@@ -3,9 +3,12 @@
 
 Checks every links record (fields and their order, id and hash against the
 URL, year file, sort order, types, uniqueness), issues.json (fields, ids that
-exist, positions, order), data/sync.json, and scans every data file for
-anything that looks like a credential. With the raw export at hand
-(pinboard/posts_all.json), also proves no record is a private bookmark.
+exist, positions, order), data/sync.json, the enrichment shards (keys that are
+public hosts or ids, filed in the right shard, only the contract's fields, no
+string over 2,000 characters, images that exist) and public/media/ (only images
+a facts record names), and scans every data file for anything that looks like
+a credential. With the raw export at hand (pinboard/posts_all.json), also
+proves no record is a private bookmark.
 """
 
 import argparse
@@ -31,9 +34,15 @@ def main(argv=None):
         help="the raw export for the private-bookmark check, skipped when absent "
         "(default: pinboard/posts_all.json)",
     )
+    parser.add_argument(
+        "--media",
+        type=Path,
+        default=None,
+        help="the images enrich_facts.py writes (default: public/media/ beside the data directory)",
+    )
     args = parser.parse_args(argv)
     token = os.environ.get("PINBOARD_API_TOKEN") or None
-    report, summary = validate(args.data, raw_path=args.raw, token=token)
+    report, summary = validate(args.data, raw_path=args.raw, token=token, media_dir=args.media)
     for line in report.errors[:MAX_LISTED]:
         print(f"validate_data: {line}", file=sys.stderr)
     if len(report.errors) > MAX_LISTED:
@@ -43,7 +52,9 @@ def main(argv=None):
     print(
         f"validate_data: {status}: {summary['links']:,} links, {summary['years']} years, "
         f"{summary['issues']:,} issues, {summary['linked_ids']:,} linked ids, "
-        f"{summary['unmatched']:,} unmatched rows; private bookmarks {private}"
+        f"{summary['unmatched']:,} unmatched rows; enrichment {summary['hosts']:,} hosts, "
+        f"{summary['pages']:,} pages, {summary['facts']:,} facts, {summary['images']:,} images; "
+        f"private bookmarks {private}"
     )
     return 0 if report.ok else 1
 

@@ -1,19 +1,26 @@
 # Data tools
 
-Three commands write and check everything under `data/`. They are Python 3 with the
-standard library only (no venv, no installs) and run under `python3 -I`. Run them from
-the repository root. `docs/DATA.md` is the contract they keep; this file covers how
+Three commands write and check `data/links/`, `data/derived/` and `data/sync.json`;
+three more write `data/enrichment/` (and `public/media/`), and `tools/nightly.sh` runs
+them all once a night. They are Python 3 with the standard library only (no venv, no
+installs) and run under `python3 -I`. Run them from the repository root. `docs/DATA.md` is the contract they keep; this file covers how
 to run them and the details a reimplementation needs.
 
 | Command | npm script | Reads | Writes |
 | --- | --- | --- | --- |
 | `python3 tools/sync.py` | `npm run sync` | Pinboard API, or a saved export | `data/links/<yyyy>.json`, `data/sync.json`, `pinboard/posts_all.json` |
 | `python3 tools/join_issues.py` | `npm run join` | Weekly Thing issue files, `data/links/` | `data/derived/issues.json` |
-| `python3 tools/validate_data.py` | `npm run validate:data` | `data/`, `pinboard/posts_all.json` | nothing |
+| `python3 tools/validate_data.py` | `npm run validate:data` | `data/`, `public/media/`, `pinboard/posts_all.json` | nothing |
+| `python3 -I tools/enrich_hosts.py` | | `data/links/`, DNS, the hosts' home pages, RDAP | `data/enrichment/hosts/` |
+| `python3 -I tools/enrich_pages.py` | | `data/links/`, the saved URLs, the Wayback CDX API | `data/enrichment/pages/` |
+| `python3 -I tools/enrich_facts.py` | | `data/links/`, the special hosts' APIs | `data/enrichment/facts/`, `public/media/` |
+| `tools/nightly.sh` | | all of the above, `.env`, `gh auth token` | a commit of `data/` and `public/media/`, pushed to main |
 
 The shared code is the `tools/linking/` package: `urls` (normalise, ids, md5),
 `pinboard` (API client and sharding), `frontmatter` (the YAML reader), `issues` (the
-join), `validate` (the checks) and `jsonio` (output format and atomic writes).
+join), `validate` and `check_enrichment` (the checks), `jsonio` (output format and
+atomic writes), and for the enrichment `shards`, `web`, `dns`, `rdap`, `wayback`,
+`hosts`, `home`, `pages`, `facts` and `adapters/` (one module per special host).
 
 Tests: `python3 -m unittest discover -s tests -v` (the `test_*.py` files; `npm test`
 runs them after the Node tests).
@@ -148,13 +155,13 @@ point at the bookmark it was made from.
 
 ```sh
 python3 -I tools/validate_data.py
-python3 -I tools/validate_data.py --data DIR --raw FILE
+python3 -I tools/validate_data.py --data DIR --raw FILE --media DIR
 ```
 
 Exit 0 and a summary line when everything holds:
 
 ```
-validate_data: ok: 16,524 links, 22 years, 354 issues, 6,456 linked ids, 45 unmatched rows; private bookmarks checked against the raw export
+validate_data: ok: 16,524 links, 22 years, 354 issues, 6,867 linked ids, 66 unmatched rows; enrichment 69 hosts, 155 pages, 616 facts, 292 images; private bookmarks checked against the raw export
 ```
 
 Exit 1 when anything fails, with each problem on stderr (the first 50, then a
@@ -175,6 +182,20 @@ count), and `FAILED with N problem(s)` in the summary line. It checks:
   0, 1, 2, ..., every non-null `id` a saved link.
 - sync.json (when present): exact fields, stamps well formed, `public` equal to the
   number of records, `total` at least that.
+- enrichment shards (`data/enrichment/hosts/`, `pages/`, `facts/`): only `<a-z0-9>.json`
+  or `<yyyy>.json` files, none empty, canonical, keys sorted; every key a host of a
+  public link (hosts) or a public link id (pages, facts), in the shard its key
+  belongs to (the host's first character, the year its link was saved); every
+  record exactly the contract's fields in order, with their types, at its method's
+  version or lower (`home` in version 2 host records only, and its `checked` the
+  record's); a page record either a full liveness record or Wayback-only, never a
+  liveness field without `alive`; a facts record from the adapter that applies to
+  its link, with its `kind` and one of its shapes or `error`; no string longer than
+  2,000 characters. Messages name the shard, key and field, never the value.
+- media (`--media`, default `public/media/` beside the data directory): every facts
+  `image` is `/media/<the adapter's directory>/<name>.jpg` and the file exists, and
+  every file there is an image a facts record names (`enrich_facts.py` is the only
+  writer and removes the rest).
 - credentials: every file under `data/` is scanned for `auth_token=`, a run of 20 or
   more hex characters after the word token, a Pinboard `user:HEX` token, and the
   `PINBOARD_API_TOKEN` value when it is set. Messages name the file, line and
@@ -266,27 +287,29 @@ Ids are never normalised: `id` is the first 12 hex characters of md5 of the URL'
 UTF-8 bytes exactly as saved, so `http://wheregoes.com/` (`5029bebcaf78`) and
 `https://wheregoes.com/` (`6d35b392e063`) are two links.
 
-## Enrichment: enrich_hosts.py and enrich_pages.py
+## Enrichment: enrich_hosts.py, enrich_pages.py and enrich_facts.py
 
-Two more commands observe the hosts and pages the links point at and write
-`data/enrichment/` (docs/DATA.md, "Enrichment (phase 2)"). Like the others they are
-standard library only and run under `python3 -I`; DNS needs `dig` (on macOS by
-default). Both are incremental and idempotent: each run picks what has never been
+Three more commands observe the hosts, pages and special-host facts the links point
+at and write `data/enrichment/` (docs/DATA.md, "Enrichment (phase 2)"). Like the
+others they are standard library only and run under `python3 -I`; DNS needs `dig`
+(on macOS by default). All three are incremental and idempotent: each run picks what has never been
 observed, then what is due again, writes through `jsonio` (atomic, and a shard
 whose bytes would not change is left alone), and saves its progress every few
-records, so an interrupted run loses at most a handful of checks. Neither writes
-anywhere but `<data>/enrichment/`, and neither stores a response body.
+records, so an interrupted run loses at most a handful of checks. None writes
+anywhere but `<data>/enrichment/`, except the images `enrich_facts.py` keeps in
+`public/media/`, and none stores a response body.
 
 | Command | Reads | Writes |
 | --- | --- | --- |
 | `python3 -I tools/enrich_hosts.py` | `data/links/`, DNS, the hosts' home pages, RDAP | `data/enrichment/hosts/<a-z0-9>.json` |
 | `python3 -I tools/enrich_pages.py` | `data/links/`, the saved URLs, the Wayback CDX API | `data/enrichment/pages/<yyyy>.json` |
+| `python3 -I tools/enrich_facts.py` | `data/links/`, YouTube and Vimeo oEmbed, the GitHub, Wikipedia and Open Library APIs | `data/enrichment/facts/<yyyy>.json`, `public/media/<youtube,vimeo,books>/` |
 
 Every run loads all existing shards first. A record whose host or id is no longer
 in the public links is dropped (a bookmark made private takes its observations
 with it), and a record in the wrong shard is moved. Both end with a one-line
-summary and exit 0 when the run finished, 1 on an error, an interrupt, or a
-Wayback refusal. `--dry-run` prints the selection, one line per host or link with
+summary and exit 0 when the run finished, 1 on an error, an interrupt, a
+Wayback refusal, or a facts method stopped by a rate limit. `--dry-run` prints the selection, one line per host or link with
 the reason it was chosen, and makes no request and writes nothing. `--data DIR`
 works as for the other tools.
 
@@ -303,7 +326,9 @@ The host set is the site's rule (`hostOf` in `src/lib/normalize.ts`): the URL's
 host, lower case, without user info, minus one leading `www.`. 7,064 hosts today.
 
 Selection: hosts with no record first, most links first; then hosts whose record
-is at least `--recheck-after DAYS` old (default 30), oldest first. `--min-links N`
+is at least `--recheck-after DAYS` old (default 30) or written at a lower version
+than the tool's (version 2 added `home`, so every version 1 record is due), oldest
+first. `--min-links N`
 keeps hosts with at least N links, `--only HOST` (repeat or comma-separate) checks
 the named hosts whatever their state, `--limit N` caps the run.
 
@@ -319,12 +344,24 @@ Per host:
   and AAAA are both empty, and `error` is added when the A query did not come back
   NOERROR (`NXDOMAIN`, `SERVFAIL`, `TIMEOUT`). A host that is an IP address is
   recorded without a lookup.
-- **HTTPS**: a GET of `https://<host>/`, redirects walked as for pages, no body
-  read. `reachable` is whether an HTTP response came back, `status` is that
+- **HTTPS**: a GET of `https://<host>/`, redirects walked as for pages, at most
+  256 KB of a 2xx HTML body read for `home` and then dropped. `reachable` is whether an HTTP response came back, `status` is that
   response's status after redirects, and `error` says why when it is not
   reachable (`tls: certificate has expired`, `timeout`). `redirects_http` is
-  whether `http://<host>/` redirects and its chain reaches an https URL. A host
-  that does not resolve gets no request.
+  whether `http://<host>/` redirects and its chain reaches an https URL (that
+  request reads no body). A host that does not resolve gets no request.
+- **Home**, from the same https response, parsed with `html.parser` (it never gives
+  up on broken HTML): the first `<title>` outside an `<svg>`, `<meta
+  name="generator">`, `<link rel="alternate">` feeds of the RSS, Atom and JSON Feed
+  types (not plain `application/json`, which WordPress uses for its REST API), an
+  `h-card` class anywhere, `rel="me"` on `<link>` and `<a>`, and the first
+  `rel="webmention"` endpoint, the `Link` header's before the HTML's. The charset is
+  the header's, else a `<meta charset>` in the first 2 KB, else UTF-8. URLs are
+  made absolute against `<base href>` or the final URL, http(s) only, redacted;
+  titles are cut at 300 characters, feeds at 20, `rel_me` at 50. `home` is always
+  present, with `error` (`not HTML (application/pdf)`, `empty body`, the request's
+  error, `does not resolve`) when nothing could be read. Example records are in
+  docs/DATA.md.
 - **RDAP**, for hosts with at least `--rdap-min-links N` links (default 5,
   DIRECTION.md's 428 hosts) and no answer younger than `--rdap-recheck-after DAYS`
   (default 90): `https://rdap.org/domain/<domain>`, redirected to the registry.
@@ -343,13 +380,14 @@ Per host:
   `--no-rdap` skips RDAP and keeps whatever answer the record had.
 
 The summary counts hosts checked, alive (resolves and answers over https or
-http), dead, and RDAP answers found.
+http), dead, and RDAP answers found. Each host's line ends with its home signals:
+`home 1 feed(s), h-card, webmention, 2 rel=me`, or `home not read (<error>)`.
 
 ### enrich_pages.py
 
 ```sh
 python3 -I tools/enrich_pages.py --no-wayback --limit 2000    # liveness, a nightly slice
-python3 -I tools/enrich_pages.py --wayback-only --limit 400   # Wayback, 40 minutes at the pace
+python3 -I tools/enrich_pages.py --wayback-only --limit 800   # Wayback, the nightly slice
 python3 -I tools/enrich_pages.py --sample 150 --no-wayback    # a spread across every year
 python3 -I tools/enrich_pages.py --year 2009 --dry-run
 python3 -I tools/enrich_pages.py --ids 8b8dc6b42f12,5029bebcaf78
@@ -361,9 +399,14 @@ replaces both). `--year YYYY` keeps one year, `--ids` (repeat or comma-separate)
 picks links whatever their state, `--sample N` takes N spread evenly across the
 years (an equal share per year, the remainder to the busiest years, evenly spaced
 within a year, the same picks every time for the same state), `--limit N` caps
-the run. `--wayback-only` selects links that already have a liveness record and no
-Wayback answer, then Wayback answers older than 90 days; `--no-wayback` skips
-Wayback. With neither, each selected link gets both.
+the run. `--wayback-only` selects links with no Wayback answer, in saved order,
+then Wayback answers older than 90 days (by `wayback.checked`, oldest first),
+whether or not the link has a liveness record; a link with no record gets a
+Wayback-only record: `checked`, `method`, `version` and `wayback`, nothing else. A
+record with liveness keeps its own `checked` and gains `wayback`. `--no-wayback`
+skips Wayback. With neither, each selected link gets both. Liveness stays in the
+tool but is not run for the site (Jamie, 2026-10-23: "You don't need to validate
+the links. They just are."); the nightly job runs `--wayback-only`.
 
 **Liveness** is one GET of the URL as saved, with a 15 second timeout. Redirects
 are walked by the tool, up to five, so the chain is recorded: `redirects` is a
@@ -401,6 +444,65 @@ The summary counts links checked, alive, dead, and Wayback lookups made, with
 captures, and failed. A `--wayback-only` run says `liveness skipped` and how many
 links it selected.
 
+### enrich_facts.py
+
+```sh
+python3 -I tools/enrich_facts.py --dry-run                     # what would be asked, and why
+export GITHUB_TOKEN="$(gh auth token)" && python3 -I tools/enrich_facts.py --limit 500
+python3 -I tools/enrich_facts.py --only-method youtube,vimeo
+python3 -I tools/enrich_facts.py --ids 02088718eb1b
+```
+
+Facts from the APIs of special hosts, one adapter per host in
+`tools/linking/adapters/<method>.py` (the contract is in `base.py`; `ADAPTERS` in
+`__init__.py` is the registry, and their hosts never overlap, so at most one applies
+to a link). The record fields are in docs/DATA.md. Today, 616 links have one:
+
+| Adapter | Links | Asks | Image |
+| --- | --- | --- | --- |
+| `youtube` | 283 | `https://www.youtube.com/oembed` for the canonical watch URL | `hqdefault.jpg`, 480x360, about 22 KB |
+| `vimeo` | 62 | `https://vimeo.com/api/oembed.json` | the oEmbed thumbnail, 295x166, about 15 KB |
+| `github` | 214 | `https://api.github.com/repos/<owner>/<repo>`, or `/gists/<id>` (5 gists) | none |
+| `wikipedia` | 54 | `https://<lang>.wikipedia.org/api/rest_v1/page/summary/<title>` | none (the thumbnail is not kept) |
+| `openlibrary` | 3 | `https://openlibrary.org/isbn/<isbn>.json`, then the work and authors | the `-M.jpg` cover |
+
+What does not apply, on purpose: YouTube playlists and channel pages, GitHub's own
+sections (`/blog/`, `/features/` and the rest in `RESERVED`) and deep paths
+(`blob/`, `tree/`, `wiki/`, `releases/`), Wikipedia's `test2` and `nostalgia`
+wikis, and Amazon URLs whose ASIN is not an ISBN-10 (Kindle `B0...` ids, and
+`aws.amazon.com`, which is most of the 142 "Amazon" links). Matching is host and
+path only, no network.
+
+Selection: links with no record first, in saved order; then records due again:
+after `--recheck-after DAYS` (default 90), an error after 30, and at once when the
+record's `method` or `version` is not the adapter's. `--only-method` (comma
+separated) keeps some adapters, `--ids` asks about named links whatever their
+state, `--limit N` caps the run. One adapter answer is cached per run, so a video
+saved twice costs one request.
+
+Errors: an HTTP error or an answer that is not what the adapter expects is the
+record's `error` (`HTTP 404`, `not a repository answer`). A timeout, a 429 or a 5xx
+keeps the earlier facts when the record has them. GitHub's rate limit (a 403 or 429
+with `x-ratelimit-remaining: 0` or a `Retry-After`) or a refused token (401) stops
+the `github` method for the run, records nothing for the links left, and the run
+exits 1 with `STOPPED github: ...` in the summary; the other methods carry on.
+`GITHUB_TOKEN` is read from the environment, sent only to `api.github.com` over
+https (never to a redirect elsewhere), and never printed; without it GitHub allows
+60 requests an hour, not enough for 214 repositories.
+
+Images: `save_image()` downloads a JPEG once to
+`public/media/<youtube|vimeo|books>/<id>.jpg` and never overwrites one that
+exists; an image that is not a JPEG, over 1 MB, or not an `image/*` answer leaves
+`image` `null`. After every run, a file there that no record names is removed (a
+link made private takes its thumbnail with it). `public/media/` is written by this
+tool only; the site build copies it to `/media/`.
+
+The first full run, 2026-10-23 (all 616, with the token): 940 requests in 528 s;
+youtube 247 ok, 36 errors (17 `HTTP 403`, 16 `HTTP 404`, 3 `HTTP 401`: private,
+removed or embedding-disabled videos); vimeo 45 ok, 17 `HTTP 404`; github 211 ok,
+3 `HTTP 404`; wikipedia 54 ok; openlibrary 3 ok. 292 images, 6.1 MB. No bot wall
+answered.
+
 ### Pacing and manners
 
 Every request is a GET with `User-Agent: LinkingThings/0.1 (+https://links.thingelstad.xyz)`
@@ -412,7 +514,7 @@ more, and not at all when a named bot wall sent it, since a challenge answers th
 same way ten seconds later. A host that resolves to a private, loopback, link-local or otherwise
 non-public address is never fetched, including as a redirect target. The tools
 fetch nothing but the URL being checked and its redirects, the hosts' home pages,
-the RDAP endpoints, and the CDX API. These are floors: runs are sequential, so
+the RDAP endpoints, the CDX API, and the special-host APIs and images above. These are floors: runs are sequential, so
 real spacing is longer.
 
 ### What a missing record means
@@ -432,6 +534,7 @@ Measured on 2026-10-23 from this Mac, sequential, at the pacing above:
 | `enrich_hosts.py --min-links 25` | 69 hosts, with RDAP | 287 s | 4.2 s a host |
 | `enrich_pages.py --sample 150 --no-wayback` | 150 links, 2005 to 2026 | 423 s | 2.8 s a link |
 | `enrich_pages.py --wayback-only --sample 20` | 20 links | 134 s | 6.7 s a link |
+| `enrich_facts.py` | all 616 links, 292 images | 528 s | 0.9 s a link |
 
 So a first pass over everything takes roughly:
 
@@ -441,22 +544,67 @@ So a first pass over everything takes roughly:
 | RDAP | 428 hosts with 5+ links | about 10 more minutes |
 | Page liveness | 16,524 links | 13 to 15 hours |
 | Wayback | 16,524 links | about 31 hours (the six second pace is the floor) |
+| Facts | 616 links | about 9 minutes |
 
 None of that needs to happen in one sitting. Every run saves as it goes and the
-next run picks up what is left, so the first pass fits in slices:
+next run picks up what is left, so the first pass fits in nightly slices, which
+`tools/nightly.sh` runs (below):
 
 ```sh
 python3 -I tools/enrich_hosts.py --limit 1000                # about an hour; 8 nights
-python3 -I tools/enrich_pages.py --no-wayback --limit 2000   # about 95 minutes; 9 nights
+python3 -I tools/enrich_facts.py --limit 500                 # minutes; new links and rechecks
 python3 -I tools/enrich_pages.py --wayback-only --limit 800  # about 90 minutes; 21 nights
 ```
 
-Run the three one after another, not side by side: they would share a home IP,
-and the Wayback Machine in particular blocks an address that keeps going. A
-Wayback refusal stops that run with exit 1; leave it a day before the next.
+Run them one after another, not side by side: they share a home IP, and the
+Wayback Machine in particular blocks an address that keeps going. A Wayback
+refusal stops that run with exit 1; the next night carries on. Page liveness
+(`--no-wayback`) is not part of it.
 
 After the first pass the cadence is the recheck windows: hosts every 30 days
-(about 235 a day), RDAP every 90 days, dead pages every 30 days and live pages
-every 90 (about 270 a day at the sample's three quarters alive), Wayback every 90
-days (about 185 a day). The same three commands with the same limits then finish
-in well under an hour a night, most of it Wayback.
+(about 235 a day), RDAP every 90 days, facts every 90 days (about 7 a day),
+Wayback every 90 days (about 185 a day). The same commands with the same limits
+then finish in well under an hour a night, most of it Wayback.
+
+## The nightly job: nightly.sh
+
+```sh
+tools/nightly.sh --dry-run                       # check the checkout, print the plan
+tools/nightly.sh --hosts 20 --facts 10 --wayback 5   # a bounded trial by hand
+tools/nightly.sh [--hosts N] [--facts N] [--wayback N] [repo]
+```
+
+`launchd/com.thingelstad.links-nightly.plist` runs it at 00:30 Mac time (US
+Central) against `/Users/otto/Projects/links.thingelstad.xyz`; docs/deployment.md
+has the install. In order, each step's output going to the log:
+
+1. **Preflight.** The checkout must be on `main` with a clean tree (no change, no
+   untracked file). `git fetch origin main`; an earlier run's unpushed commit is
+   pushed first; then `git merge --ff-only origin/main`. Any failure (another
+   branch, a dirty tree, a diverged main, a run already holding the lock) exits 2
+   before a file is touched.
+2. **Secrets.** `set -a; source .env` (for `PINBOARD_API_TOKEN`) and
+   `GITHUB_TOKEN` from `gh auth token`, into the environment only; never echoed.
+3. **Sync.** `sync.py` (exit 3, rate limited, is logged and the run goes on; any
+   other failure exits 1), then `join_issues.py`.
+4. **Enrichment**, one after another: `enrich_hosts.py --limit 1000`,
+   `enrich_facts.py --limit 500`, `enrich_pages.py --wayback-only --limit 800`
+   (`--hosts`, `--facts`, `--wayback` change the limits). A tool that stops early
+   (a Wayback refusal, a GitHub rate limit) has saved what it learned; the exit is
+   logged and the run goes on.
+5. **Validation.** `validate_data.py`. A failure exits 1 and leaves the tree as it
+   is for a look (the next night's preflight then refuses until it is cleaned up).
+6. **Commit and push.** `git add data public/media`, a commit as `Linking Things
+   nightly <links-nightly@thingelstad.com>` titled `Nightly: sync and enrichment,
+   <YYYY-MM-DD>` whose body is each step's summary line, and a push to main with
+   retries after 2, 4, 8 and 16 s. If main moved meanwhile, the commit is rebased
+   onto it once and validated again. Nothing changed means no commit. The push is
+   the deploy.
+
+The log is `~/Library/Logs/links/nightly.log`, every line stamped in US Central;
+the lock is `~/Library/Logs/links/nightly.lock` (with the holder's pid; a lock
+whose pid is gone is removed). `--dry-run` runs the preflight without fetching,
+runs the enrichment tools' own offline `--dry-run`s, prints the plan, and writes
+nothing (no log, no lock, no bytecode), reads no secret and makes no request.
+Exit codes: 0 done or nothing to commit, 1 a step failed, 2 the preflight refused,
+64 a bad argument.

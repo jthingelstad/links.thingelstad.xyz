@@ -302,8 +302,12 @@ class Client:
             total += len(chunk)
         return b"".join(chunks)
 
-    def get(self, url, *, cap=PAGE_CAP, accept="*/*", timeout=TIMEOUT_SECONDS, jar=None):
-        """One GET (and at most one retry). Returns a Response or raises FetchError."""
+    def get(self, url, *, cap=PAGE_CAP, accept="*/*", timeout=TIMEOUT_SECONDS, jar=None, extra_headers=None):
+        """One GET (and at most one retry). Returns a Response or raises FetchError.
+
+        extra_headers (an Authorization header, say) are sent as given; follow()
+        decides which hops get them.
+        """
         parts = urlsplit(url)
         if parts.scheme not in ("http", "https"):
             raise FetchError("not an http or https URL")
@@ -317,7 +321,7 @@ class Client:
         if self._resolve is not None:
             public_address_check(host, port, self._resolve)
         wire = iri_to_uri(url)
-        headers = {"User-Agent": self.user_agent, "Accept": accept}
+        headers = {**(extra_headers or {}), "User-Agent": self.user_agent, "Accept": accept}
         jar = jar if jar is not None else http.cookiejar.CookieJar()
         spacing = SLOW_HOSTS.get(host, SPACING_SECONDS)
         for attempt in (1, 2):
@@ -355,32 +359,67 @@ class Client:
         Recorded URLs pass through redact_url. body is the last response's
         body (empty unless it was a 2xx); callers that do not parse it drop it.
         """
+        result, body, _headers = self.fetch(
+            url, max_redirects=max_redirects, cap=cap, accept=accept, timeout=timeout
+        )
+        return result, body
+
+    def fetch(
+        self,
+        url,
+        *,
+        max_redirects=MAX_REDIRECTS,
+        cap=PAGE_CAP,
+        accept="*/*",
+        timeout=TIMEOUT_SECONDS,
+        extra_headers=None,
+    ):
+        """follow(), plus the last response's headers (lower-case names, {} when none came back).
+
+        extra_headers go only to https hops on the host of url itself, so a
+        token never follows a redirect to another host or onto plain http.
+        """
         redirects = []
         current = url
+        origin = (urlsplit(url).hostname or "").lower()
         jar = http.cookiejar.CookieJar()
         for hop in range(max_redirects + 1):
+            parts = urlsplit(current)
+            same_origin = parts.scheme == "https" and (parts.hostname or "").lower() == origin
             try:
-                response = self.get(current, cap=cap, accept=accept, timeout=timeout, jar=jar)
+                response = self.get(
+                    current, cap=cap, accept=accept, timeout=timeout, jar=jar,
+                    extra_headers=extra_headers if same_origin else None,
+                )
             except FetchError as error:
-                return _result(None, current, redirects, None, error.reason), b""
+                return _result(None, current, redirects, None, error.reason), b"", {}
             location = response.headers.get("location")
             if 300 <= response.status < 400 and location:
                 target = urljoin(current, location.strip())
                 redirects.append({"status": response.status, "url": redact_url(target)})
                 if urlsplit(target).scheme not in ("http", "https"):
-                    return _result(response.status, current, redirects, None, "redirect to a non-web URL"), b""
+                    return (
+                        _result(response.status, current, redirects, None, "redirect to a non-web URL"),
+                        b"",
+                        response.headers,
+                    )
                 if hop == max_redirects:
                     return (
                         _result(response.status, current, redirects, None, f"more than {max_redirects} redirects"),
                         b"",
+                        response.headers,
                     )
                 current = target
                 continue
             status = response.status
             kind = media_type(response.headers.get("content-type"))
             if 200 <= status < 300:
-                return _result(status, current, redirects, kind, None), response.body
-            return _result(status, current, redirects, kind, http_error(status, response.headers)), b""
+                return _result(status, current, redirects, kind, None), response.body, response.headers
+            return (
+                _result(status, current, redirects, kind, http_error(status, response.headers)),
+                b"",
+                response.headers,
+            )
         raise AssertionError("unreachable")
 
 
