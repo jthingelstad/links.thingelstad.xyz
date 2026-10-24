@@ -45,8 +45,9 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   `src/lib/paths.ts` is the one place they are formed; `src/lib/data.ts` re-exports
   it for the pages and the MCP server imports it directly.
 - **Search grammar** (`src/lib/search-grammar.ts`): parsing a query (words,
-  "phrases", -exclusions, `site:`, `year:`, `wt:`, `kind:`) and the rule that keeps
-  only real matches. The browser search and the MCP server's `links_search` both
+  "phrases", -exclusions, `site:`, `year:`, `wt:`, `kind:`), the rule that keeps
+  only real matches, and `onHost`, what `site:` takes in (the host and the hosts under
+  it), which the MCP server and the suggestions' counts use too. The browser search and the MCP server's `links_search` both
   import it, and both search the same Pagefind index, so the site and the MCP answer
   a query the same way. Change the grammar there, never in either caller. No Node
   imports. The box's suggestions (`src/lib/suggest.ts`, shown by

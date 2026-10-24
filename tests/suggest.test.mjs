@@ -8,15 +8,17 @@ import { parse, siteName, tokenAt } from '../src/lib/search-grammar.ts';
 import { complete, limit, settled, suggest } from '../src/lib/suggest.ts';
 
 const data = {
+  // Each host's links by year from its first: kottke.org has 10 in 2005,
+  // 30 in 2011 and 40 in 2012.
   hosts: [
-    ['youtube.com', 285],
-    ['kottke.org', 80],
-    ['theverge.com', 60],
-    ['m.youtube.com', 12],
-    ['bbc.co.uk', 9],
-    ['kottke.example.net', 3],
-    ['blog.kottke.org', 2],
-    ['once.com', 1],
+    ['youtube.com', 285, [2011, 100, 185]],
+    ['kottke.org', 80, [2005, 10, 0, 0, 0, 0, 0, 30, 40]],
+    ['theverge.com', 60, [2012, 60]],
+    ['m.youtube.com', 12, [2026, 12]],
+    ['bbc.co.uk', 9, [2012, 9]],
+    ['kottke.example.net', 3, [2011, 3]],
+    ['blog.kottke.org', 2, [2012, 2]],
+    ['once.com', 1, [2026, 1]],
   ],
   issues: [
     ['353', 'Release Notes for Every Day', 'Oct 10, 2026', 19],
@@ -40,9 +42,12 @@ const data = {
     ['page', 15690],
   ],
 };
-const at = (input, caret = input.length) =>
-  suggest(input, tokenAt(input, caret), data);
-const inserts = (input, caret) => at(input, caret).map((s) => s.insert);
+const at = (input, caret = input.length, scope) =>
+  suggest(input, tokenAt(input, caret), data, scope);
+const inserts = (input, caret, scope) =>
+  at(input, caret, scope).map((s) => s.insert);
+const notes = (input, caret, scope) =>
+  at(input, caret, scope).map((s) => s.note);
 
 test('tokenAt finds the word at the cursor and its operator', () => {
   assert.deepEqual(tokenAt('dns site:kot', 12), {
@@ -76,6 +81,7 @@ test('the grammar and the suggestions name the same operators', () => {
 });
 
 test('site: suggests the host, then hosts it starts, then parts, by count', () => {
+  // kottke.org's count takes in blog.kottke.org's two, as site: does.
   // kottke.org itself is what was typed, so it is left out.
   assert.deepEqual(inserts('site:kottke.org'), ['site:blog.kottke.org']);
   assert.deepEqual(inserts('site:kot'), [
@@ -94,7 +100,8 @@ test('site: suggests the host, then hosts it starts, then parts, by count', () =
   ]);
   assert.equal(at('site:').length, limit, 'the most-linked sites');
   assert.equal(at('site:')[0].insert, 'site:youtube.com');
-  assert.equal(at('site:kot')[0].note, '80 links');
+  assert.equal(at('site:kot')[0].note, '82 links');
+  assert.equal(at('site:youtub')[0].note, '297 links', 'm.youtube.com too');
   assert.equal(at('site:once')[0].note, '1 link');
   assert.deepEqual(inserts('site:zzzz'), []);
 });
@@ -134,15 +141,91 @@ test('year:, kind: and wt: suggest what there is, newest first', () => {
 });
 
 test('with other words in the box, the counts say they are totals', () => {
-  assert.equal(at('site:kot')[0].note, '80 links');
-  assert.equal(at('kubb site:kot')[0].note, '80 links in all');
-  assert.equal(at('site:kot kubb', 8)[0].note, '80 links in all');
+  assert.equal(at('site:kot')[0].note, '82 links');
+  assert.equal(at('kubb site:kot')[0].note, '82 links in all');
+  assert.equal(at('site:kot kubb', 8)[0].note, '82 links in all');
+  assert.equal(at('-kubb site:kot')[0].note, '82 links in all');
+  assert.equal(
+    at('site:kot', undefined, { narrowed: true })[0].note,
+    '82 links in all',
+    'the in-a-Weekly-Thing or has-a-note box',
+  );
   assert.equal(at('kubb year:201')[0].note, '1,500 links in all');
   assert.equal(at('kubb ki')[0].note, 'videos, books, papers and more');
   assert.equal(
     at('kubb wt:otto')[0].note,
     'Interviewing Otto for the Job · Oct 3, 2026 · 20 links in all',
   );
+});
+
+test('a site counts the year in the box, and a year the site', () => {
+  // Sites in 2012: kottke.example.net has none, so it is left out.
+  assert.deepEqual(inserts('year:2012 site:kot'), [
+    'site:kottke.org',
+    'site:blog.kottke.org',
+  ]);
+  assert.deepEqual(notes('year:2012 site:kot'), [
+    '42 links in 2012',
+    '2 links in 2012',
+  ]);
+  assert.deepEqual(inserts('site:kot year:2012', 8), [
+    'site:kottke.org',
+    'site:blog.kottke.org',
+  ]);
+  // The page's year menu counts too, and a typed year beats it.
+  assert.deepEqual(notes('site:kot', undefined, { year: '2011' }), [
+    '30 links in 2011',
+    '3 links in 2011',
+  ]);
+  assert.equal(
+    at('year:2012 site:kot', undefined, { year: '2011' })[0].note,
+    '42 links in 2012',
+  );
+  assert.deepEqual(inserts('year:1999 site:kot'), [], 'a year with none');
+  assert.equal(
+    at('kubb year:2012 site:kot')[0].note,
+    '42 links in 2012 in all',
+  );
+  // Years from one site: only those it has links in, newest first.
+  assert.deepEqual(inserts('site:kottke.org year:'), [
+    'year:2012',
+    'year:2011',
+    'year:2005',
+  ]);
+  assert.equal(at('site:kottke.org year:')[0].note, '42 links from kottke.org');
+  assert.deepEqual(notes('site:example.net year:'), [
+    '3 links from example.net',
+  ]);
+  assert.deepEqual(notes('site:theverge.com 2012'), [
+    '60 links from theverge.com',
+  ]);
+  assert.deepEqual(inserts('site:theverge.com 2011'), []);
+  assert.deepEqual(inserts('2011', undefined, { year: '2012' }), ['year:2011']);
+  // A count that takes in neither still says it is a total.
+  assert.equal(
+    at('site:kottke.org wt:otto')[0].note,
+    'Interviewing Otto for the Job · Oct 3, 2026 · 20 links in all',
+  );
+  assert.equal(at('site:kottke.org kind:b')[0].note, 'Books · 80 links in all');
+});
+
+test('a site carries its links by year for the bars', () => {
+  const [kottke] = at('site:kot');
+  assert.equal(kottke.years.counts.length, 22, '2005 to 2026');
+  assert.deepEqual(
+    [kottke.years.counts[0], kottke.years.counts[6], kottke.years.counts[7]],
+    [10, 30, 42],
+  );
+  assert.equal(kottke.years.on, -1);
+  assert.equal(kottke.years.label, '2005 to 2012, most in 2012');
+  assert.equal(at('year:2011 site:kot')[0].years.on, 6);
+  assert.equal(at('site:once')[0].years.label, 'all in 2026');
+  assert.equal(at('kottke')[0].years.counts[0], 10);
+  for (const other of ['year:', 'kind:', 'wt:3', 'si', ''])
+    assert.ok(
+      at(other).every((s) => !s.years),
+      `${other || 'an empty word'} has no bars`,
+    );
 });
 
 test('a plain word offers the operator it spells and what it names', () => {
@@ -214,6 +297,9 @@ test('the box is a combobox over the list, and the page names the file', () => {
   assert.match(page, /data-suggest=\{suggestPath\}/);
   const script = readFileSync('src/scripts/suggest.ts', 'utf8');
   assert.match(script, /from '\.\.\/lib\/suggest\.ts'/);
+  // The bars are drawn for the eye; their words are for a screen reader.
+  assert.match(script, /setAttribute\('aria-hidden', 'true'\)/);
+  assert.match(script, /className = 'sr-only'/);
   // Suggestions are text, never markup.
   assert.doesNotMatch(script, /innerHTML|insertAdjacentHTML/);
 });

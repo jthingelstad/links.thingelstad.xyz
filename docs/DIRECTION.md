@@ -98,7 +98,7 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 | --- | --- |
 | `/` | Built as a search box, like Google's front page (Jamie, 2026-10-23): the wordmark, the box, how many links are in the index and the years they span, and a row of ways in (Newest, Years, Hosts, Kinds, Issues, Stats, Feed; Topics goes first once topic pages exist). A quote of the day from `content/quotes.md` when it holds any; nothing while it is empty. The site header is left off this page |
 | `/search/?q=` | Results: title, host, saved date, a snippet of the note, a WT chip; filters for topic, year, kind, in a Weekly Thing, has a note; sort by relevance or date. Built: `kind:video` keeps one kind and, with no other words, links that kind's page; the box suggests as an operator is typed (section "Search") |
-| `/search/suggest.json` | What the search box suggests from: every host and its count, every issue with its title, Central date and saved links, each year's and kind's count. The search page's own file, shaped for it and free to change with it; not part of the dataset |
+| `/search/suggest.json` | What the search box suggests from: every host with its count and its links in each Central year, every issue with its title, Central date and saved links, each year's and kind's count. The search page's own file, shaped for it and free to change with it; not part of the dataset |
 | `/links/<id>/` | The record (below). `<id>` is the first 12 hex characters of md5 of the saved URL, which is Pinboard's API `hash`; anyone can compute it from the URL |
 | `/links/<id>.json`, `/links/<id>.md` | Machine twins of the record, the Things I've built pattern |
 | `/hosts/<host>/` | Every link from a host, newest first, with the host facts (section "Enrichment") |
@@ -269,10 +269,17 @@ open the arrow keys move through it, Enter or a click takes one, Escape closes i
 the arrows walk the results as before. A half-typed operator (`site:kot`, `year:20`) holds
 the results where they are until its value names something real; Enter searches anyway.
 
-The counts are the build's totals, from `/search/suggest.json` (fetched on the first
-keystroke, about 57 KB gzipped, every host included), and say "in all" when the box holds
-other words ("917 links in all" beside `kubb year:2019`). Counts scoped to the words
-already typed were measured and left out: Pagefind's filter counts, loaded with
+The counts are the build's, from `/search/suggest.json` (fetched on the first keystroke,
+about 71 KB gzipped, every host included). A site's count takes in the hosts under it, as
+`site:` does (youtube.com counts m.youtube.com), and the year in the box or the year menu
+("42 links in 2012"); a year's count takes in the site in the box ("45 links from
+kottke.org"); a site or a year with none there is left out. Each site's row carries small
+bars of its links by year, 2005 on the left, the counted year marked, and the same in words
+for a screen reader (built 2026-10-24; Jamie: "Approved: build links.thingelstad.xyz site:
+suggestion sparkline and per-year counts"). Anything else that narrows the search (words,
+`-word`, `wt:`, `kind:`, the in-a-Weekly-Thing and has-a-note boxes) makes a count say "in
+all" ("917 links in all" beside `kubb year:2019`). Counts scoped to the words already typed
+were measured and left out: Pagefind's filter counts, loaded with
 `filters()`, count a phrase as either word (`"open web"` claimed 21 links in 2008 where
 none match) and know nothing of `site:` or `-word`, so they disagree with the results on
 the same page.

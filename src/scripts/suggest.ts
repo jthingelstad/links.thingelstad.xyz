@@ -3,10 +3,12 @@
 // the word at the cursor, the arrow keys move through it, Enter or a click
 // takes one, and Escape closes it. While it is closed the arrow keys walk
 // the results as before (search.ts). An empty box shows the operators on a
-// click or the down arrow, never on its own. The list's data,
-// /search/suggest.json, loads on the first keystroke.
+// click or the down arrow, never on its own. A site's row carries small
+// bars of its links by year. The list's data, /search/suggest.json, loads on
+// the first keystroke.
 import { tokenAt } from '../lib/search-grammar.ts';
 import {
+  type Scope,
   type SuggestData,
   type Suggestion,
   complete,
@@ -14,14 +16,40 @@ import {
   suggest,
 } from '../lib/suggest.ts';
 
+// A site's links by year, the year counted marked: aria-hidden bars, with
+// the same in words for a screen reader.
+function bars(years: NonNullable<Suggestion['years']>) {
+  const box = document.createElement('span');
+  box.className = 'suggest-years';
+  const drawn = document.createElement('span');
+  drawn.className = 'suggest-bars';
+  drawn.setAttribute('aria-hidden', 'true');
+  const peak = Math.max(1, ...years.counts);
+  drawn.append(
+    ...years.counts.map((n, i) => {
+      const bar = document.createElement('span');
+      bar.className = `bar${n ? '' : ' zero'}${i === years.on ? ' on' : ''}`;
+      bar.style.height = `${n ? Math.max(2, Math.round((n / peak) * 16)) : 1}px`;
+      return bar;
+    }),
+  );
+  const words = document.createElement('span');
+  words.className = 'sr-only';
+  words.textContent = `, ${years.label}`;
+  box.append(drawn, words);
+  return box;
+}
+
 export function initSuggest(options: {
   input: HTMLInputElement;
   list: HTMLUListElement;
   url: string;
   // A suggestion was taken that completes a word: search now.
   taken: () => void;
+  // What else on the page narrows the search, for the counts.
+  scope?: () => Scope;
 }) {
-  const { input, list, url, taken } = options;
+  const { input, list, url, taken, scope = () => ({}) } = options;
   let data: SuggestData | undefined;
   let loading: Promise<void> | undefined;
   let shown: Suggestion[] = [];
@@ -70,6 +98,7 @@ export function initSuggest(options: {
         note.className = 'suggest-note';
         note.textContent = suggestion.note;
         option.append(insert, note);
+        if (suggestion.years) option.append(bars(suggestion.years));
         return option;
       }),
     );
@@ -84,7 +113,7 @@ export function initSuggest(options: {
     const at = token();
     if (!data || document.activeElement !== input || !at || (!at.text && !ask))
       return close();
-    shown = suggest(input.value, at, data);
+    shown = suggest(input.value, at, data, scope());
     if (!shown.length) return close();
     active = -1;
     list.hidden = false;

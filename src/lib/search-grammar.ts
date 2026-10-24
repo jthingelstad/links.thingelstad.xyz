@@ -32,6 +32,11 @@ export const siteName = (value: string) =>
     .replace(/^www\./, '')
     .replace(/\/.*$/, '');
 
+// The host itself or a host under it (m.youtube.com is youtube.com): what
+// site: keeps, here, in the MCP server and in the suggestions' counts.
+export const onHost = (host: string, site: string) =>
+  host === site || host.endsWith(`.${site}`);
+
 export interface Query {
   text: string;
   site?: string;
@@ -144,7 +149,7 @@ export function matcher(
     const text =
       `${data.meta.title ?? ''} ${host ?? ''} ${data.content}`.toLowerCase();
     return (
-      (!site || host === site || !!host?.endsWith(`.${site}`)) &&
+      (!site || (!!host && onHost(host, site))) &&
       starts.every((start) => start.test(text)) &&
       !exclude.some((word) => text.includes(word))
     );

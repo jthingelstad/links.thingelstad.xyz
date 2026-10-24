@@ -134,8 +134,9 @@ for (const [name, viewport] of [
     timeout: 15000,
   });
 
-  // The box suggests: site: and most of a host offers that host first; the
-  // down arrow and Enter take it, and the search runs on it.
+  // The box suggests: site: and most of a host offers that host first, with
+  // its links by year as bars; the down arrow and Enter take it, the search
+  // runs on it, and year: then counts that site's years.
   await page.goto(`${base}/search/`, { waitUntil: 'networkidle' });
   const box = page.locator('[data-search-query]');
   await box.click();
@@ -148,6 +149,15 @@ for (const [name, viewport] of [
     'site: suggests the host it starts',
   );
   assert.equal(await box.getAttribute('aria-expanded'), 'true');
+  assert.ok(
+    (await first.locator('.suggest-bars[aria-hidden="true"] .bar').count()) > 1,
+    'a site row has its bars',
+  );
+  assert.match(
+    (await first.locator('.suggest-years .sr-only').textContent()) ?? '',
+    /\b\d{4}\b/,
+    'and the same in words',
+  );
   await box.press('ArrowDown');
   assert.equal(
     await box.getAttribute('aria-activedescendant'),
@@ -160,6 +170,14 @@ for (const [name, viewport] of [
   await page.waitForSelector(`[data-search-status] a[href="/hosts/${host}/"]`, {
     timeout: 15000,
   });
+  await box.pressSequentially('year:');
+  assert.ok(
+    ((await first.locator('.suggest-note').textContent()) ?? '').endsWith(
+      ` from ${host}`,
+    ),
+    'year: counts the site in the box',
+  );
+  await box.press('Escape');
 
   // The video facade: nothing from the player's host until the click.
   if (video) {

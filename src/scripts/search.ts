@@ -126,6 +126,10 @@ export async function initSearch() {
       clearTimeout(typing);
       update();
     },
+    scope: () => ({
+      year: yearSelect.value,
+      narrowed: wtBox.checked || noteBox.checked,
+    }),
   });
 
   const params = new URLSearchParams(location.search);
