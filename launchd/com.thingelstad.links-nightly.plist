@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  The Linking Things nightly job (docs/deployment.md, "The nightly job"):
+  tools/nightly.sh at 00:30 Mac time (US Central). Install with
+  launchctl bootstrap gui/$(id -u) after copying this file to
+  ~/Library/LaunchAgents/. The script keeps its own log at
+  ~/Library/Logs/links/nightly.log; these two files catch anything else.
+  Umask 022: everything it writes is public data in a git checkout.
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.thingelstad.links-nightly</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/otto/Projects/links.thingelstad.xyz/tools/nightly.sh</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/otto/Projects/links.thingelstad.xyz</string>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>0</integer>
+    <key>Minute</key>
+    <integer>30</integer>
+  </dict>
+  <key>ProcessType</key>
+  <string>Background</string>
+  <key>LowPriorityIO</key>
+  <true/>
+  <key>Nice</key>
+  <integer>10</integer>
+  <key>Umask</key>
+  <integer>18</integer>
+  <key>StandardOutPath</key>
+  <string>/Users/otto/Library/Logs/links/nightly.out</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/otto/Library/Logs/links/nightly.err</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    <key>HOME</key>
+    <string>/Users/otto</string>
+    <key>PYTHONUNBUFFERED</key>
+    <string>1</string>
+  </dict>
+</dict>
+</plist>

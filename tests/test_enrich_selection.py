@@ -72,9 +72,9 @@ HOSTS = {
     "fresh.example": {"count": 40, "first": "2007-01-01T00:00:00Z"},
 }
 EXISTING = {
-    "old.example": {"checked": days_ago(40)},
-    "older.example": {"checked": days_ago(60)},
-    "fresh.example": {"checked": days_ago(2)},
+    "old.example": {"checked": days_ago(40), "version": hs.VERSION},
+    "older.example": {"checked": days_ago(60), "version": hs.VERSION},
+    "fresh.example": {"checked": days_ago(2), "version": hs.VERSION},
 }
 
 
@@ -94,6 +94,12 @@ class HostSelectTest(unittest.TestCase):
         chosen = [host for host, _ in hs.select(HOSTS, EXISTING, NOW, recheck_after=50)]
         self.assertNotIn("old.example", chosen)
         self.assertIn("older.example", chosen)
+
+    def test_a_record_at_a_lower_version_is_due(self):
+        existing = dict(EXISTING, **{"fresh.example": {"checked": days_ago(2), "version": 1}})
+        chosen = hs.select(HOSTS, existing, NOW)
+        self.assertEqual(chosen[-1], ("fresh.example", f"version 1, checked {days_ago(2)}"))
+        self.assertIn("fresh.example", [host for host, _ in hs.select(HOSTS, {"fresh.example": {"checked": days_ago(2)}}, NOW)])
 
     def test_only_checks_named_hosts_whatever_their_state(self):
         chosen = hs.select(HOSTS, EXISTING, NOW, only={"fresh.example", "mid.example"})
@@ -177,21 +183,52 @@ class PageSelectTest(unittest.TestCase):
         links = [link(f"https://e.example/{n}", f"2010-01-{n + 1:02d}T00:00:00Z") for n in range(10)]
         self.assertEqual([item["url"][-1] for item in pg.spread(links, 2)], ["2", "7"])
 
-    def test_wayback_mode_needs_a_liveness_record(self):
+    def test_wayback_mode_ignores_liveness(self):
         a = link("https://a.example/", "2005-01-01T00:00:00Z")
         b = link("https://b.example/", "2006-01-01T00:00:00Z")
         c = link("https://c.example/", "2007-01-01T00:00:00Z")
         d = link("https://d.example/", "2008-01-01T00:00:00Z")
+        e = link("https://e.example/", "2009-01-01T00:00:00Z")
+        f = link("https://f.example/", "2010-01-01T00:00:00Z")
         store = FakeStore(
             {
-                b["id"]: {"checked": days_ago(1), "alive": True},
-                c["id"]: {"checked": days_ago(1), "alive": True, "wayback": {"checked": days_ago(5)}},
+                b["id"]: {"checked": days_ago(1), "alive": True},  # liveness, no Wayback
+                c["id"]: {"checked": days_ago(5), "wayback": {"checked": days_ago(5)}},  # fresh
                 d["id"]: {"checked": days_ago(1), "alive": True, "wayback": {"checked": days_ago(120)}},
+                e["id"]: {"checked": days_ago(200), "wayback": {"checked": days_ago(200)}},  # Wayback-only, older
             }
         )
-        chosen = pg.select([a, b, c, d], store, NOW, mode="wayback")
-        self.assertEqual([(item["id"], reason.split(",")[0]) for item, reason in chosen],
-                         [(b["id"], "no wayback"), (d["id"], f"wayback checked {days_ago(120)}")])
+        chosen = pg.select([a, b, c, d, e, f], store, NOW, mode="wayback")
+        self.assertEqual(
+            [(item["id"], reason) for item, reason in chosen],
+            [
+                (a["id"], "no wayback"),  # never observed at all, in saved order
+                (b["id"], "no wayback"),
+                (f["id"], "no wayback"),
+                (e["id"], f"wayback checked {days_ago(200)}"),  # then the oldest answers
+                (d["id"], f"wayback checked {days_ago(120)}"),
+            ],
+        )
+        self.assertEqual(len(pg.select([a, b, c, d, e, f], store, NOW, mode="wayback", limit=2)), 2)
+
+    def test_a_wayback_only_record_is_unobserved_for_liveness(self):
+        a = link("https://a.example/", "2005-01-01T00:00:00Z")
+        store = FakeStore({a["id"]: {"checked": days_ago(1), "wayback": {"checked": days_ago(1)}}})
+        self.assertEqual(pg.select([a], store, NOW), [(a, "unobserved")])
+
+    def test_a_wayback_only_record_has_no_liveness_fields(self):
+        observed = {"first": None, "last": None, "count": 0}
+        record = pg.with_wayback(None, observed, NOW)
+        self.assertEqual(
+            record,
+            {"checked": "2026-10-23T12:00:00Z", "method": "enrich_pages", "version": 1,
+             "wayback": {"first": None, "last": None, "count": 0, "checked": "2026-10-23T12:00:00Z"}},
+        )
+        self.assertFalse(set(record) & set(pg.LIVENESS_FIELDS))
+        later = pg.with_wayback(record, {"first": None, "last": None, "count": 0}, datetime(2027, 2, 1, tzinfo=timezone.utc))
+        self.assertEqual(later["checked"], "2027-02-01T00:00:00Z")  # a Wayback-only record dates its lookup
+        live = {"checked": "2026-10-01T00:00:00Z", "method": "enrich_pages", "version": 1, "status": 200, "alive": True}
+        self.assertEqual(pg.with_wayback(live, observed, NOW)["checked"], "2026-10-01T00:00:00Z")
 
 
 if __name__ == "__main__":

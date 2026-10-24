@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Observe the hosts Jamie links to: DNS, HTTPS and RDAP, into data/enrichment/hosts/.
+"""Observe the hosts Jamie links to: DNS, HTTPS, the home page's open-web signals and RDAP, into data/enrichment/hosts/.
 
 Incremental: hosts never observed come first (most links first), then the
-oldest observations. DNS through dig, HTTPS with one GET each of
-https://<host>/ and http://<host>/, RDAP through rdap.org, one request a
-second per service. Writes only under <data>/enrichment/hosts/. See
-tools/README.md.
+oldest observations and records written at a lower version. DNS through dig,
+HTTPS with one GET each of https://<host>/ and http://<host>/ (the first
+also read up to 256 KB for the home object: title, generator, feeds, h-card,
+rel=me, Webmention; the body is never stored), RDAP through rdap.org, one
+request a second per service. Writes only under <data>/enrichment/hosts/.
+See tools/README.md.
 """
 
 import argparse
@@ -80,6 +82,15 @@ def describe(record):
     https_part = f"https {https['status']}" if https["reachable"] else f"https unreachable ({https.get('error')})"
     if https.get("redirects_http"):
         https_part += ", http→https"
+    home = record.get("home") or {}
+    if home.get("error"):
+        home_part = f"home not read ({home['error']})"
+    else:
+        signals = [f"{len(home.get('feeds') or [])} feed(s)"]
+        signals += [name for name, on in (("h-card", home.get("hcard")), ("webmention", home.get("webmention"))) if on]
+        if home.get("rel_me"):
+            signals.append(f"{len(home['rel_me'])} rel=me")
+        home_part = "home " + ", ".join(signals)
     if "rdap" not in record:
         rdap_part = "rdap not asked"
     elif record["rdap"] is None:
@@ -87,7 +98,7 @@ def describe(record):
     else:
         found = record["rdap"]
         rdap_part = f"rdap {found['domain']} registered {found['registered']}"
-    return f"{dns_part}; {https_part}; {rdap_part}"
+    return f"{dns_part}; {https_part}; {home_part}; {rdap_part}"
 
 
 def run(args, *, resolver=None, web_client=None, rdap_client=None, now=now_utc, clock=time.monotonic):

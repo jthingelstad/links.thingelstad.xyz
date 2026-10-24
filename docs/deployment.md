@@ -2,8 +2,9 @@
 
 The pattern is POAP's (`poap.thingelstad.xyz`): a private web bucket that only CloudFront
 reads, and pages deployed from main by GitHub Actions through an OIDC role that cannot
-change infrastructure. Linking Things has no media and no archive bucket; every object is
-in `dist/`.
+change infrastructure. Linking Things has no media bucket and no archive bucket; every
+object is in `dist/`, the video thumbnails and book covers under `media/` included
+(`public/media/`, written only by `tools/enrich_facts.py`, about 6 MB).
 
 ## Stacks (us-east-1, account 999153317627)
 
@@ -123,6 +124,7 @@ deploy can fail to load an old chunk until it is reloaded.
 | Pagefind's entry file, scripts and wasm                                 | JSON, JavaScript, `application/octet-stream`                                 | the same                                       |
 | `_astro/` bundles and fonts, Pagefind `.pf_*` chunks (named by content) | by extension                                                                 | `public,max-age=31536000,immutable`            |
 | `favicon.svg`                                                           | `image/svg+xml`                                                              | `public,max-age=3600`                          |
+| Thumbnails and covers, `media/<youtube,vimeo,books>/<id>.jpg`           | `image/jpeg`                                                                 | `public,max-age=3600`                          |
 
 A file with an extension not in `tools/delivery-plan.mjs` stops the deploy before
 anything is written. The response headers policy adds `Access-Control-Allow-Origin: *`
@@ -138,20 +140,59 @@ and so would a single JSON file over 10 MB. The year llms files are under 1 MB e
 they are compressed. A client that sends no `Accept-Encoding`
 (Python's urllib, curl without `--compressed`) gets the plain bytes.
 
-## The Pinboard sync runs on the Mac, not in CI
+## The nightly job: sync and enrichment on the Mac, not in CI
 
 `PINBOARD_API_TOKEN` lives in `.env` on Jamie's Mac and the raw export
-(`pinboard/posts_all.json`) holds the private bookmarks; neither is ever in GitHub. The
-sync (`tools/README.md`) writes `data/`, which is committed and pushed; that push is the
-deploy:
+(`pinboard/posts_all.json`) holds the private bookmarks; neither is ever in GitHub. CI
+never calls Pinboard and holds no Pinboard secret. Instead `tools/nightly.sh` runs on the
+Mac every night and commits what changed; its push to main is the deploy.
+
+**What it does** (`tools/README.md`, "The nightly job"): checks that the checkout is on
+`main` and clean, fetches and fast-forwards (pushing an earlier run's commit first);
+loads `.env` and `GITHUB_TOKEN` from `gh auth token` without echoing either; runs
+`sync.py` and `join_issues.py`; then, one after another, `enrich_hosts.py --limit 1000`,
+`enrich_facts.py --limit 500` and `enrich_pages.py --wayback-only --limit 800`;
+validates `data/`; commits `data/` and `public/media/` as `Linking Things nightly` with
+the message `Nightly: sync and enrichment, <YYYY-MM-DD>` and each step's summary in the
+body; and pushes to main with retries after 2, 4, 8 and 16 seconds. A Pinboard rate
+limit, a Wayback refusal or a GitHub rate limit is logged and the run goes on; a failed
+validation exits 1 and leaves the tree as it is for a look.
+
+**When:** 00:30 Mac time (US Central), from
+`launchd/com.thingelstad.links-nightly.plist` (`StartCalendarInterval`; a Mac asleep at
+00:30 runs it on waking). A first pass over the 7,064 hosts and 16,524 Wayback lookups
+takes about three weeks of nights; after that a night is well under an hour.
+
+**Logs:** `~/Library/Logs/links/nightly.log`, every line stamped in US Central, with each
+tool's full output; launchd's own `nightly.out` and `nightly.err` beside it. The lock is
+`~/Library/Logs/links/nightly.lock`.
+
+**The checkout must be left on `main` and clean.** Do other work in a separate worktree
+or clone. A checkout on another branch, with an uncommitted change or an untracked file,
+or diverged from origin, makes the job exit 2 without touching anything; the log says
+why, and the next night tries again.
+
+**Install**, once:
 
 ```sh
-set -a; source .env; set +a
-npm run sync && npm run join && npm run validate:data
-git add data && git commit -m "Sync Pinboard" && git push
+mkdir -p ~/Library/Logs/links
+cp launchd/com.thingelstad.links-nightly.plist ~/Library/LaunchAgents/
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.thingelstad.links-nightly.plist
+launchctl print gui/$(id -u)/com.thingelstad.links-nightly | head -20
 ```
 
-CI never calls Pinboard and holds no Pinboard secret.
+To change it, `launchctl bootout gui/$(id -u)/com.thingelstad.links-nightly`, edit,
+and bootstrap again. To run it now, `launchctl kickstart gui/$(id -u)/com.thingelstad.links-nightly`.
+
+**A bounded trial by hand**, from the checkout, on main and clean:
+
+```sh
+tools/nightly.sh --dry-run                           # the plan; no network, no writes
+tools/nightly.sh --hosts 20 --facts 10 --wayback 5   # a real run, a few minutes, then a push
+tail -40 ~/Library/Logs/links/nightly.log
+```
+
+The real trial commits and pushes like the nightly run, so it deploys.
 
 ## Cost
 
@@ -163,7 +204,8 @@ Markdown files, and 16,687 Pagefind files.
 - **A no-change push:** about six uploads (the few Pagefind files that differ from build
   to build, and `revision.json`) and two or three invalidation paths: nothing measurable.
 - **A sync or a template change:** a template change rewrites every page, about 24,000
-  PUTs, about $0.12; a weekly sync is hundreds to a few thousand PUTs, about a cent.
+  PUTs, about $0.12; a nightly sync and enrichment commit is hundreds to a few thousand
+  PUTs, about a cent (the first full facts run added 292 images, 6 MB).
 - **Monthly, at this site's traffic:** S3 storage under a cent (0.3 GB, plus 30 days of
   replaced versions); CloudFront within the always-free 1 TB, 10 million requests and 2
   million function invocations; the access log within the 750 bytes a request CloudFront
