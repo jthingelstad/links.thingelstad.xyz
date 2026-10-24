@@ -121,7 +121,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
   gap: 4px 24px;
   max-width: var(--jt-frame);
   min-height: 40px;
@@ -209,7 +208,6 @@ img {
 @media (max-width: 40rem) {
   .sites-strip__inner {
     flex-wrap: nowrap;
-    justify-content: flex-start;
     overflow-x: auto;
   }
   .sites-strip__label {
