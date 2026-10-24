@@ -148,7 +148,10 @@ export async function initSearch() {
   let previewed: Element | undefined;
   let previews = 0;
   async function preview(item: Element | null | undefined) {
-    if (!wide.matches || !item || item === previewed) return;
+    // A row the list no longer holds (a hover that rested as the results
+    // were replaced) is not shown.
+    if (!wide.matches || !item || item === previewed || !list.contains(item))
+      return;
     const data = rows.get(item);
     if (!data) return;
     previewed?.classList.remove('previewing');
@@ -300,6 +303,8 @@ export async function initSearch() {
       return matches(data);
     };
     list.replaceChildren();
+    // A result moved to while this search loaded belonged to the last one.
+    clearPreview();
     await showMore(current);
   }
 

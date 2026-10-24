@@ -164,6 +164,37 @@ for (const [name, viewport] of [
       1,
     );
     assert.ok(twins.length >= 2, 'each result previewed asks for its twin');
+    // A result rested on while the next search loads belongs to the last
+    // one: when the new results come, the pane shows their first.
+    await page.route('**/pagefind/**', (route) =>
+      setTimeout(() => route.continue(), 1500),
+    );
+    await page.locator('[data-search-query]').fill(word);
+    await page.locator('h1').click();
+    await page.waitForTimeout(400);
+    const old = await page
+      .locator('[data-search-results] li')
+      .nth(2)
+      .elementHandle();
+    await old.hover();
+    await page.waitForTimeout(300);
+    await page.mouse.move(0, 0);
+    await page.waitForFunction((row) => !row.isConnected, old, {
+      timeout: 15000,
+    });
+    await page.unrouteAll({ behavior: 'wait' });
+    const first = page.locator('[data-search-results] li').first();
+    await first.locator('a.title').waitFor({ timeout: 15000 });
+    await pane
+      .locator('.preview-title', {
+        hasText: (await first.locator('a.title').textContent()) ?? '',
+      })
+      .waitFor({ timeout: 15000 });
+    assert.match(
+      (await first.getAttribute('class')) ?? '',
+      /previewing/,
+      'a result rested on during a search gives way to the new first',
+    );
   } else {
     assert.ok(await pane.isHidden(), 'no pane on a phone');
     assert.deepEqual(twins, [], 'and no twin asked for');
