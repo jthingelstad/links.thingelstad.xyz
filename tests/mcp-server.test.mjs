@@ -1570,3 +1570,21 @@ test('links_search: whole-word matches first, "quoted" words exact, what to drop
     dropped.notes.join('\n'),
   );
 });
+
+// The read-later mark is cleared as each link is read, so the list is usually
+// empty; the answer says so rather than leaving an empty list to explain itself.
+test('links_list by toread says why it is empty, and links_stats counts the marks', async () => {
+  const unmarked = linkRows.map((row) => ({ ...row, toread: false }));
+  const own = await harness({ files: fixtureFiles(unmarked), index: unmarked });
+  const list = await own.call('links_list', { by: 'toread' });
+  assert.equal(list.total, 0);
+  assert.deepEqual(list.links, []);
+  assert.ok(
+    list.notes.some((n) => n.startsWith('No link is marked to read later')),
+  );
+  assert.equal((await own.call('links_stats')).totals.to_read, 0);
+  const marked = await main.call('links_list', { by: 'toread' });
+  assert.equal(marked.total, 1);
+  assert.ok(!marked.notes.some((n) => n.startsWith('No link is marked')));
+  assert.equal((await main.call('links_stats')).totals.to_read, 1);
+});

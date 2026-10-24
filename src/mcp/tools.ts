@@ -180,7 +180,7 @@ const searchTool: Tool = {
   name: 'links_search',
   title: 'Search the links',
   description:
-    'Search every public link Jamie Thingelstad has saved since 2005 (titles, notes and hosts), with the site\'s own search index and grammar. The query takes words, "quoted phrases", -word to exclude, and the operators site:host, year:yyyy, wt:351 (a Weekly Thing issue) and kind:video; the other arguments do the same and win over the query. A bare word matches by its first letters (EDI finds Editor too) and a "quoted" word only whole ("EDI" finds EDI alone); by relevance, whole-word matches come first. With no words (a host, a year or an issue alone) the answer is exact and newest first. Results are ranked by relevance unless sort says otherwise. Cite a link by its permalink.',
+    'Search every public link Jamie Thingelstad has saved since 2005 (titles, notes and hosts), with the site\'s own search index and grammar. The query takes words, "quoted phrases", -word to exclude, and the operators site:host, year:yyyy, wt:351 (a Weekly Thing issue) and kind:video; the other arguments do the same and win over the query. A bare word matches by its first letters (EDI finds Editor too) and a "quoted" word only whole ("EDI" finds EDI alone); by relevance, whole-word matches come first. With no words (a host, a year or an issue alone) the answer is exact and newest first. Results are ranked by relevance unless sort says otherwise. Cite a link by its permalink. Use this server for the whole saved collection since 2005, each link\'s note and where the Weekly Thing placed it; for what Jamie published about a link, the thingelstad.com archive server (Thingy) and its find_links read the newsletter, the blog and the podcast.',
   inputSchema: {
     type: 'object',
     additionalProperties: false,
@@ -204,7 +204,8 @@ const searchTool: Tool = {
       },
       toread: {
         type: 'boolean',
-        description: 'Only links marked to read later (true) or not (false).',
+        description:
+          'Only links marked to read later (true) or not (false); the mark is cleared as each is read, so true usually finds none.',
       },
       in_weekly_thing: {
         type: 'boolean',
@@ -368,7 +369,7 @@ const listTool: Tool = {
   name: 'links_list',
   title: 'List links',
   description:
-    'Every link of one kind of group, newest first, a page at a time: by newest (the whole collection), year (a Central calendar year), host (exactly that host, as its page on the site lists it), kind, tag, or toread. Exact counts; no index needed.',
+    'Every link of one kind of group, newest first, a page at a time: by newest (the whole collection), year (a Central calendar year), host (exactly that host, as its page on the site lists it), kind, tag, or toread (the read-later mark, cleared as each is read, so usually none). Exact counts; no index needed.',
   inputSchema: {
     type: 'object',
     additionalProperties: false,
@@ -415,8 +416,13 @@ const listTool: Tool = {
     if (by === 'newest') {
       list = data.newest;
       pagePath = newestPath;
-    } else if (by === 'toread') list = data.newest.filter((l) => l.toread);
-    else if (by === 'year') {
+    } else if (by === 'toread') {
+      list = data.newest.filter((l) => l.toread);
+      if (!list.length)
+        notes.push(
+          'No link is marked to read later just now: the mark is cleared as each is read, so this list is usually empty.',
+        );
+    } else if (by === 'year') {
       const y = Number(value);
       if (!Number.isInteger(y))
         throw new ToolError(
