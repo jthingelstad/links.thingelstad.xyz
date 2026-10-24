@@ -360,10 +360,13 @@ The Batch API halves each. Recommended: Sonnet 5.5 proposes the vocabulary (once
 few dollars) and Haiku 5.5 classifies; the design does not depend on the choice.
 Weekly reclassification of 30 or so new links costs cents on any of them. Jamie
 accepted model cost at ingestion and build on 2026-10-23; none of it reaches serving.
-The key is `ANTHROPIC_API_KEY` in the Mac's `.env`, next to the Pinboard token; the
-derive step runs on the Mac and CI never holds it. Until the archive export lands, the
-text per link is the title and the note; a rerun with the page excerpts costs the same
-bulk pass, and `topics.json` records which text it saw.
+The key is `CLAUDE_API_KEY` in the Mac's `.env`, next to the Pinboard token (an
+`OPENAI_API_KEY` sits beside it, unused for now); the derive step runs on the Mac and
+CI never holds it. Every bulk pass goes through the Message Batches API (Jamie,
+2026-10-23: "make sure to use the new bulk methods to get massively lower costs").
+Topics and neighbours wait for the archive export (Jamie, 2026-10-23: "If all we have
+is a title and a URL it is hard to do much with it"); if the export never comes, that
+is a decision to take then, not a title-only pass.
 
 Embedding-based "similar" uses the model the Librarian already uses
 (`cohere.embed-english-v3` on Bedrock) over the same text; 17,000 short documents is
