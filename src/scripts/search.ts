@@ -6,6 +6,9 @@
 // Pagefind and the exact check on each result live in
 // src/lib/search-grammar.ts, which the MCP server's links_search shares.
 // Year, issue, kind, in-a-Weekly-Thing and has-a-note are Pagefind filters.
+// The box suggests sites, years, issues and kinds as an operator is typed
+// (src/scripts/suggest.ts), and a half-typed operator waits for its value
+// before the results follow it.
 //
 // A search with no words loads the whole index (143 chunks, 3.8 MB, found at
 // 16,524 records), so a year, an issue or a kind alone links to its page,
@@ -18,6 +21,7 @@ import {
   parse,
   searchTerm,
 } from '../lib/search-grammar.ts';
+import { initSuggest } from './suggest.ts';
 
 interface Data {
   url: string;
@@ -113,6 +117,16 @@ export async function initSearch() {
   );
   const list = root.querySelector<HTMLUListElement>('[data-search-results]')!;
   const more = root.querySelector<HTMLButtonElement>('[data-search-more]')!;
+  let typing: ReturnType<typeof setTimeout> | undefined;
+  const suggestions = initSuggest({
+    input,
+    list: root.querySelector<HTMLUListElement>('[data-search-suggest]')!,
+    url: root.dataset.suggest!,
+    taken: () => {
+      clearTimeout(typing);
+      update();
+    },
+  });
 
   const params = new URLSearchParams(location.search);
   input.value = params.get('q') ?? '';
@@ -274,10 +288,9 @@ export async function initSearch() {
     await showMore(current);
   }
 
-  let typing: ReturnType<typeof setTimeout>;
   input.addEventListener('input', () => {
     clearTimeout(typing);
-    typing = setTimeout(update, 250);
+    if (suggestions.settled()) typing = setTimeout(update, 250);
   });
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -288,8 +301,10 @@ export async function initSearch() {
     control.addEventListener('change', update);
   more.addEventListener('click', () => showMore(run));
 
-  // "/" focuses the box; the arrow keys walk the results.
+  // "/" focuses the box; the arrow keys walk the results, unless the
+  // suggestion list has taken them.
   document.addEventListener('keydown', (event) => {
+    if (event.defaultPrevented) return;
     const active = document.activeElement as HTMLElement | null;
     if (
       event.key === '/' &&

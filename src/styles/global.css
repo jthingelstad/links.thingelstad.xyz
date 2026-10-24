@@ -794,6 +794,14 @@ img {
   display: flex;
   gap: 8px;
 }
+/* The box and its suggestion list (src/scripts/suggest.ts), which opens
+   under the box at the box's width. */
+.search-box {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-width: 0;
+}
 .search-form input[type='search'] {
   flex: 1;
   min-width: 0;
@@ -810,6 +818,50 @@ img {
   color: var(--ground);
   font-weight: 600;
   cursor: pointer;
+}
+.search-suggest {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 4px);
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--ground);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 14%);
+  font-size: var(--jt-size-small);
+}
+.search-suggest li {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.search-suggest li:hover,
+.search-suggest li[aria-selected='true'] {
+  background: var(--card);
+}
+.search-suggest li[aria-selected='true'] {
+  box-shadow: inset 3px 0 0 var(--link);
+}
+.suggest-insert {
+  flex: none;
+  max-width: 70%;
+  overflow-wrap: anywhere;
+  color: var(--ink);
+  font-family: var(--jt-font-mono);
+  font-weight: 600;
+}
+.suggest-note {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--muted);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .search-options {
   display: flex;

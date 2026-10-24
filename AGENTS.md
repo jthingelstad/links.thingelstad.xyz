@@ -49,7 +49,10 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   only real matches. The browser search and the MCP server's `links_search` both
   import it, and both search the same Pagefind index, so the site and the MCP answer
   a query the same way. Change the grammar there, never in either caller. No Node
-  imports.
+  imports. The box's suggestions (`src/lib/suggest.ts`, shown by
+  `src/scripts/suggest.ts`) read the word at the cursor with its `tokenAt` and suggest
+  from `/search/suggest.json`, the search page's own file (not a fixed URL, not part
+  of the dataset); `validate:site` checks it against `/hosts.json` and `/issues.json`.
 - **The MCP server** (`src/mcp/`; DIRECTION.md, "Agents and the MCP";
   `docs/deployment.md`, "The MCP server") is read-only, with no authentication, no
   model, no state and no keys. It reads only what the site publishes, over HTTPS: the

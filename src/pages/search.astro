@@ -3,7 +3,7 @@
 // the build (npm run build); src/scripts/search.ts loads it. `npm run dev` has
 // no index, so search there says so. This is the only page with a script.
 import Layout from '../layouts/Layout.astro';
-import { issues, years } from '../lib/data';
+import { issues, suggestPath, years } from '../lib/data';
 // wt:N with no other words links to /issues/N/ when there is such an issue.
 const numbers = issues.flatMap((issue) => issue.number ?? []);
 ---
@@ -12,21 +12,39 @@ const numbers = issues.flatMap((issue) => issue.number ?? []);
   title="Search · Linking Things"
   description="Search every link Jamie Thingelstad has saved since 2005, by title, note and host."
 >
-  <div data-search data-issues={JSON.stringify(numbers)}>
+  <div
+    data-search
+    data-issues={JSON.stringify(numbers)}
+    data-suggest={suggestPath}
+  >
     <h1 class="page-title">Search</h1>
     <form class="search-form" role="search" action="/search/" data-search-form>
       <label class="sr-only" for="search-query">
         Search the links
       </label>
-      <input
-        id="search-query"
-        name="q"
-        type="search"
-        autocomplete="off"
-        spellcheck="false"
-        placeholder="DNS, Stratechery, site:kottke.org, year:2012"
-        data-search-query
-      />
+      <div class="search-box">
+        <input
+          id="search-query"
+          name="q"
+          type="search"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-controls="search-suggest"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="DNS, Stratechery, site:kottke.org, year:2012"
+          data-search-query
+        />
+        <ul
+          id="search-suggest"
+          class="search-suggest"
+          role="listbox"
+          aria-label="Suggestions"
+          hidden
+          data-search-suggest
+        ></ul>
+      </div>
       <button type="submit">Search</button>
     </form>
     <div class="search-options" data-search-options>
@@ -58,9 +76,10 @@ const numbers = issues.flatMap((issue) => issue.number ?? []);
     </div>
     <p class="search-help">
       Also <code>site:macstories.net</code>, <code>year:2019</code>,{' '}
-      <code>wt:300</code>, <code>kind:video</code>, <code>"exact phrase"</code>
-      and <code>-word</code>. Press <kbd>/</kbd> to search, arrow keys to move
-      through results.
+      <code>wt:300</code>, <code>kind:video</code>, <code>"exact phrase"</code>{' '}
+      and <code>-word</code>; start one and the box suggests the rest. Press{' '}
+      <kbd>/</kbd> to search, arrow keys to move through suggestions and
+      results.
     </p>
     <p class="search-status" role="status" data-search-status>
       Search needs JavaScript. Every link is also listed by{' '}

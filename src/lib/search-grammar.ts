@@ -13,8 +13,24 @@
 // kept only when each typed word's first three letters start a word in its
 // title, host or text.
 //
+// The search box's suggestions (src/lib/suggest.ts) read the word at the
+// cursor with tokenAt, so they name the operators the same way.
+//
 // No DOM and no Node imports: both sides import this file.
 import { type Kind, kindWords, kinds } from './kinds.ts';
+
+// The operators, in the order the help line and the suggestions give them.
+export const operators = ['site', 'year', 'wt', 'kind'] as const;
+export type Operator = (typeof operators)[number];
+const operatorWord = new RegExp(`^(${operators.join('|')}):(.+)$`, 'i');
+
+// site:https://www.example.com/path is example.com.
+export const siteName = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/^https?:\/\//, '')
+    .replace(/^www\./, '')
+    .replace(/\/.*$/, '');
 
 export interface Query {
   text: string;
@@ -41,14 +57,10 @@ export function parse(input: string): Query {
   for (const [, neg, phrase, word] of input.matchAll(
     /(-?)(?:"([^"]*)"|(\S+))/g,
   )) {
-    const op = word && /^(site|year|wt|kind):(.+)$/i.exec(word);
+    const op = word && operatorWord.exec(word);
     if (op && !neg) {
       const value = op[2].toLowerCase();
-      if (op[1].toLowerCase() === 'site')
-        query.site = value
-          .replace(/^https?:\/\//, '')
-          .replace(/^www\./, '')
-          .replace(/\/.*$/, '');
+      if (op[1].toLowerCase() === 'site') query.site = siteName(value);
       else if (op[1].toLowerCase() === 'year' && /^\d{4}$/.test(value))
         query.year = value;
       else if (op[1].toLowerCase() === 'wt')
@@ -64,6 +76,34 @@ export function parse(input: string): Query {
   }
   query.text = kept.join(' ');
   return query;
+}
+
+// The word the cursor is in, for the suggestions: where it starts and ends
+// and, for site:kottke.org, the operator and its value. A word inside a
+// "phrase" or an -exclusion has none, since neither takes a suggestion.
+export interface Token {
+  start: number;
+  end: number;
+  text: string;
+  operator?: Operator;
+  value: string;
+}
+export function tokenAt(
+  input: string,
+  caret = input.length,
+): Token | undefined {
+  let start = caret;
+  while (start > 0 && !/\s/.test(input[start - 1])) start--;
+  let end = caret;
+  while (end < input.length && !/\s/.test(input[end])) end++;
+  const text = input.slice(start, end);
+  const quotes = input.slice(0, start).split('"').length - 1;
+  if (quotes % 2 || text.startsWith('-') || text.includes('"')) return;
+  const op = /^([a-z]+):(.*)$/i.exec(text);
+  const operator = operators.find((name) => name === op?.[1].toLowerCase());
+  return operator
+    ? { start, end, text, operator, value: op![2] }
+    : { start, end, text, value: text };
 }
 
 // What Pagefind is asked for. The host's words are searched too, so site:

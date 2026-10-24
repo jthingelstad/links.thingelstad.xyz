@@ -28,6 +28,10 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
 - /links.json is every record exactly as data/links has it, plus its
   permalink and then its kind, the same as its JSON twin's; /hosts.json and
   /issues.json match the pages and the join;
+- /search/suggest.json, what the search box suggests from, holds every host
+  with its count as /hosts.json has them, every issue newest first with its
+  title, Central date and the saved links it carried, and each year's and
+  kind's count;
 - llms.txt follows llmstxt.org's shape and links every year's
   /years/<yyyy>/llms.txt; the year files hold every record exactly once, each
   in the file of its Central year, and none passes 4 MB (past that a year is
@@ -455,6 +459,43 @@ def check_dataset(data_links, newest, host_pages, twin_kinds, problems):
                 problems.append(f"issues.json: {source['slug']} link {row.get('position')}")
 
 
+def check_suggest(data_links, twin_kinds, problems):
+    """/search/suggest.json agrees with /hosts.json, /issues.json, the
+    Central years and the kinds."""
+    suggest = load_json("search/suggest.json", problems)
+    if list(suggest) != ["hosts", "issues", "years", "kinds"]:
+        problems.append("search/suggest.json: not hosts, issues, years, kinds")
+        return
+    hosts = load_json("hosts.json", problems).get("hosts", [])
+    if suggest["hosts"] != [[h["host"], h["count"]] for h in hosts]:
+        problems.append("search/suggest.json: hosts are not /hosts.json's, in its order")
+    joined = sorted(
+        load_json("issues.json", problems).get("issues", []),
+        key=lambda issue: issue["date"],
+        reverse=True,
+    )
+    expected = []
+    for issue in joined:
+        day = datetime.fromisoformat(issue["date"].replace("Z", "+00:00")).astimezone(CENTRAL)
+        key = issue["page"].removeprefix(f"{SITE}/issues/").rstrip("/")
+        carried = len({row["id"] for row in issue["links"] if row.get("id")})
+        expected.append([key, issue["title"], f"{day:%b} {day.day}, {day.year}", carried])
+    if suggest["issues"] != expected:
+        rows = zip(suggest["issues"], expected)
+        first = next((a for a, b in rows if a != b), f"{len(suggest['issues'])} of {len(expected)}")
+        problems.append(f"search/suggest.json: issues differ from /issues.json (first {first})")
+    years = {}
+    for link in data_links:
+        year = datetime.fromisoformat(link["saved"].replace("Z", "+00:00")).astimezone(CENTRAL).year
+        years[year] = years.get(year, 0) + 1
+    if suggest["years"] != [[y, years[y]] for y in sorted(years, reverse=True)]:
+        problems.append("search/suggest.json: years are not each Central year's count, newest first")
+    kinds = [[kind, sum(1 for k in twin_kinds.values() if k == kind)] for kind in KINDS]
+    if suggest["kinds"] != kinds:
+        problems.append("search/suggest.json: kinds are not each kind's count, in order")
+    return len(suggest["hosts"]), len(suggest["issues"])
+
+
 RECORD_LINE = re.compile(r"^- Record: (\S+)$", re.M)
 
 
@@ -880,6 +921,7 @@ def main():
     host_pages = sorted((DIST / "hosts").glob("*/index.html"))
     feeds = check_feeds(newest, host_pages, alternates, listed_records, problems)
     check_dataset(data_links, newest, host_pages, twin_kinds, problems)
+    suggested = check_suggest(data_links, twin_kinds, problems) or (0, 0)
     year_files = check_llms(data_links, problems)
     inside = check_site_urls(problems)
     check_newest(newest, listed_records, problems)
@@ -903,7 +945,8 @@ def main():
     print(
         f"{len(pages)} pages ({len(records)} records with twins), {len(links)} internal"
         f" links, {len(seen)} sitemap URLs; links, metadata and sitemap valid;"
-        f" {feeds + 2 * len(kind_counts)} feeds, links.json, hosts.json, issues.json, llms.txt and"
+        f" {feeds + 2 * len(kind_counts)} feeds, links.json, hosts.json, issues.json,"
+        f" search/suggest.json ({suggested[0]} hosts, {suggested[1]} issues), llms.txt and"
         f" {len(year_files)} year llms files valid ({len(inside)} site URLs inside resolve);"
         f" /newest/ lists the newest {FEED_SIZE};"
         f" kinds {', '.join(f'{k} {n}' for k, n in kind_counts.items())};"

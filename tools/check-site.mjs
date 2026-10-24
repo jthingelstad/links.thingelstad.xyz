@@ -1,7 +1,7 @@
 // Browser checks: a route of each kind renders without console or page
 // errors at desktop and phone widths, with a main landmark, a title and no
-// horizontal scroll; a search finds records and kind: links its page; a
-// video facade asks nothing of YouTube or Vimeo until it is clicked, then
+// horizontal scroll; a search finds records and kind: links its page; the
+// box suggests a site for site: and the keyboard takes it; a video facade asks nothing of YouTube or Vimeo until it is clicked, then
 // becomes the player; and no request reaches Tinylytics. SITE_TEST_URL defaults to the dev server; tools/test-built-site.mjs
 // runs this against dist/ behind the edge function (SITE_TEST_EDGE=1), which
 // adds the redirect and 404 checks. Evidence goes to SITE_QA_DIR
@@ -134,6 +134,33 @@ for (const [name, viewport] of [
     timeout: 15000,
   });
 
+  // The box suggests: site: and most of a host offers that host first; the
+  // down arrow and Enter take it, and the search runs on it.
+  await page.goto(`${base}/search/`, { waitUntil: 'networkidle' });
+  const box = page.locator('[data-search-query]');
+  await box.click();
+  await box.pressSequentially(`site:${host.slice(0, -1)}`);
+  const first = page.locator('[data-search-suggest] [role="option"]').first();
+  await first.waitFor({ timeout: 15000 });
+  assert.equal(
+    await first.locator('.suggest-insert').textContent(),
+    `site:${host}`,
+    'site: suggests the host it starts',
+  );
+  assert.equal(await box.getAttribute('aria-expanded'), 'true');
+  await box.press('ArrowDown');
+  assert.equal(
+    await box.getAttribute('aria-activedescendant'),
+    await first.getAttribute('id'),
+  );
+  await page.screenshot({ path: shot(name, '/search/suggest') });
+  await box.press('Enter');
+  assert.equal(await box.inputValue(), `site:${host} `);
+  assert.equal(await box.getAttribute('aria-expanded'), 'false');
+  await page.waitForSelector(`[data-search-status] a[href="/hosts/${host}/"]`, {
+    timeout: 15000,
+  });
+
   // The video facade: nothing from the player's host until the click.
   if (video) {
     players.length = 0;
@@ -201,5 +228,5 @@ if (production)
   );
 else assert.deepEqual(analytics, [], 'no Tinylytics requests during QA');
 console.log(
-  `Checked ${routes.length} routes, a search and a kind: search at desktop and phone widths${video ? ', the video facade' : ' (no video facts to check the facade on)'}${edge ? ', /links.db, the redirects and the 404' : ''}; evidence in ${output}`,
+  `Checked ${routes.length} routes, a search, a kind: search and a site: suggestion at desktop and phone widths${video ? ', the video facade' : ' (no video facts to check the facade on)'}${edge ? ', /links.db, the redirects and the 404' : ''}; evidence in ${output}`,
 );
