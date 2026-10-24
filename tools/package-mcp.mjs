@@ -7,10 +7,14 @@
 // with no runtime dependencies), package.json (so Node reads index.js as an
 // ES module) and pagefind.js, Pagefind's client from the site build
 // (dist/pagefind/, so run npm run build first), which the server loads to
-// search the published index over HTTPS. The zip is deterministic (sorted
-// entries, fixed 1980 timestamps), so the same source gives the same bytes and
-// the same key, mcp/<sha256>.zip: a deploy whose key is already live has
-// nothing to do (tools/deploy-mcp.mjs).
+// search the published index over HTTPS. The zip has sorted entries and fixed
+// 1980 timestamps, but its bytes still depend on the zlib that deflated them
+// (a Mac and the GitHub runner made different zips of identical files on
+// 2026-10-24), so the key, mcp/<sha256>.zip, hashes the entries' names and
+// contents instead (contentKey). The same source gives the same key on any
+// machine, and a deploy whose key is already live has nothing to do
+// (tools/deploy-mcp.mjs). The zip's own SHA-256 goes to S3 as the upload
+// checksum.
 import { build } from 'esbuild';
 import { createHash } from 'node:crypto';
 import fs from 'node:fs/promises';
@@ -79,6 +83,19 @@ export function zip(entries) {
   return Buffer.concat([...local, directory, end]);
 }
 
+const sha256 = (data) => createHash('sha256').update(data).digest('hex');
+
+/** The bundle's key: a hash of the entries' names and contents, in name
+ * order, so it depends on what the zip holds and not on how it was deflated. */
+export function contentKey(entries) {
+  const hash = createHash('sha256');
+  for (const { name, data } of [...entries].sort((a, b) =>
+    a.name < b.name ? -1 : 1,
+  ))
+    hash.update(`${name}\n${sha256(data)}\n`);
+  return `mcp/${hash.digest('hex')}.zip`;
+}
+
 /** The server bundled into one ES module. */
 export async function bundle() {
   const { outputFiles } = await build({
@@ -118,14 +135,14 @@ export async function packageMcp({ pagefind = PAGEFIND, out = OUT } = {}) {
   const archive = zip(entries);
   const digest = createHash('sha256').update(archive).digest();
   const manifest = {
-    key: `mcp/${digest.toString('hex')}.zip`,
-    sha256: digest.toString('hex'),
+    key: contentKey(entries),
+    zipSha256: digest.toString('hex'),
     checksumSha256: digest.toString('base64'),
     size: archive.length,
     files: entries.map(({ name, data }) => ({
       name,
       size: data.length,
-      sha256: createHash('sha256').update(data).digest('hex'),
+      sha256: sha256(data),
     })),
   };
   await fs.mkdir(out, { recursive: true });

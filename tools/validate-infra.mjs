@@ -487,6 +487,11 @@ export function validateMcp({ site, delivery, deployment, mcp }) {
       { Ref: 'McpExecutionRoleArn' },
       { StringEquals: { 'iam:PassedToService': 'lambda.amazonaws.com' } },
     ],
+    // CloudFormation resolves the revision's ExecutionRoleArn (a GetAtt on the
+    // role) with the deploy's own credentials, so the deploy may read that
+    // one role. Without it a revision swap fails at "Unable to retrieve Arn
+    // attribute for AWS::IAM::Role" (2026-10-24).
+    [['iam:GetRole'], { Ref: 'McpExecutionRoleArn' }, undefined],
   ]);
   assert.ok(
     !JSON.stringify(policy).match(/DeleteObject|PutResourcePolicy|:\*"/),
