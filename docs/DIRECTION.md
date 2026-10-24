@@ -110,7 +110,7 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 | `/stats/` | Linking volume along its dimensions (section "Statistics") |
 | `/about/` | The homage, in Jamie's words: what this is, why links matter, how it is made. Built from `content/about.md` (a `# ` title, then `## ` sections; the build fails on any other shape), a first draft in Jamie's voice from the Librarian for Jamie to edit. Linked from every page's footer |
 | `/feed.xml`, `/feed.json` | The newest 50 links as RSS 2.0 and JSON Feed 1.1, the Link Thing feed reborn; every host, kind and topic page carries its own pair at `feed.xml` and `feed.json` under its path. Built for the site, all 7,064 host pages (the host's newest 50) and the eight kind pages (the kind's newest 50); topics with the topic pages. Each item is the record: its permalink as link and id, the destination and the note as content, Central dates with the real offset, tags as categories. Every page advertises the site pair; a host page advertises its own first |
-| `/links.json`, `/hosts.json`, `/issues.json`, `/topics.json` | The whole public dataset. Built: `links.json` (every record, newest first, Pinboard's fields plus `permalink`; section "If Pinboard went away"), `hosts.json` (host, count, first, last, url) and `issues.json` (the join, with each issue's `page` here and each saved link's `permalink`). `topics.json` comes with topics |
+| `/links.json`, `/hosts.json`, `/issues.json`, `/topics.json` | The whole public dataset. Built: `links.json` (every record, newest first, Pinboard's fields plus `permalink` and `kind`; section "If Pinboard went away"), `hosts.json` (host, count, first, last, url) and `issues.json` (the join, with each issue's `page` here and each saved link's `permalink`). `topics.json` comes with topics |
 | `/links.db` | The SQLite database the site is built from, public fields only. Built: `npm run db` (`tools/build_db.py`, first step of `npm run build`) writes `public/links.db`, never committed, from the same JSON the pages read. Tables: links, hosts, issues, appearances, host_facts, wayback, facts, and meta (built_at, method, version, row counts). Facts only, as on the pages: nothing that says whether a host or page works. Deterministic: the same `data/` makes the same bytes, and built_at is the newest moment in the data, not the clock. 13.4 MB on 2026-10-23, served as `application/vnd.sqlite3` |
 | `/llms.txt`, `/years/<yyyy>/llms.txt` | As on every other site of Jamie's. Built: `llms.txt` in llmstxt.org's shape (the data files, the record shape, the pages, and each year's file with its link count and size). A year's file holds every record saved in that Central year, newest first, as a slim row: title, URL, date saved and host, tags, the issues it appeared in, the permalink, then the note in full. 22 files, 10.6 MB together, the largest (2008) 0.8 MB; a year past about 4 MB would split by month, and `validate:site` fails one. They replaced `llms-full.txt` (every twin in one 36 MB file) on 2026-10-23 |
 
@@ -495,13 +495,15 @@ supplies the blog and podcast appearances for a record.
 For links:
 
 - **`links.json` is the ingestion surface**: `site`, `generated`, then `links` (id,
-  url, title, note, voice, saved, host, issues, topics, excerpt, page facts,
+  url, title, note, voice, saved, host, kind, issues, topics, excerpt, page facts,
   connections), `hosts`, `topics` and `issues`. The importer drops `generated` and
   sorts, so an unchanged corpus commits nothing, as with things. Phase 1 builds it as
   the Pinboard-shaped mirror (`site`, `generated`, `count`, then `links` with
-  Pinboard's fields and `permalink`), beside `hosts.json` and `issues.json`. Whether
-  phase 4 adds the richer fields to these rows or publishes them in a file of their
-  own, so the Pinboard shape never drifts, is open.
+  Pinboard's fields, `permalink` and `kind`), beside `hosts.json` and `issues.json`.
+  `kind` (`src/lib/kinds.ts`) joined the rows on 2026-10-23 for the Librarian to read
+  (Jamie: "add kind to the links.json rows"); it comes after the Pinboard fields, which
+  stay exactly as saved. Whether phase 4 adds the other richer fields to these rows or
+  publishes them in a file of their own, so the Pinboard shape never drifts, is open.
 - **One source per link**, `link-<id>`, `source_kind: "link"`, dated by the saved date.
   Things are undated; links are not, so the date-anchored tools (`on_this_day`,
   `archive_lens`, `compare_eras`) reach twenty-one years of links. The chunk text is
@@ -583,9 +585,9 @@ the mirror is kept lossless and Pinboard-shaped, not merely sufficient for pages
 - Every field Pinboard returns for a public bookmark is in `data/links/`, including
   `tags` (WT Builder's filing marks) and `meta`. Nothing is summarised away.
 - The site publishes that mirror as `/links.json`: every public record with Pinboard's
-  fields in Pinboard's order, plus its permalink, newest first as `posts/all` returns
-  them. `npm run validate:site` checks it against `data/links/` field by field, so the
-  published copy alone could restore the public bookmarks.
+  fields in Pinboard's order, plus its permalink and its kind, newest first as
+  `posts/all` returns them. `npm run validate:site` checks it against `data/links/`
+  field by field, so the published copy alone could restore the public bookmarks.
 - The 358 private bookmarks live only in the raw export on the Mac. That file is the
   one copy of them outside Pinboard; it belongs in the sysadmin critical-state backup
   bundle (a request for the Systems Administrator, not a change here).
