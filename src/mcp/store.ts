@@ -2,8 +2,9 @@
 // over HTTPS (the server never reads the site bucket or data/). Loaded on the
 // first request that needs it, then revalidated with If-None-Match at most
 // every ten minutes; a request that finds it stale waits for the (usually
-// 304) check. A failed load keeps the data already held and is tried again a
-// minute later. One check runs at a time, whoever asks.
+// 304) check. A failed load keeps the data already held, and nothing the
+// failed check fetched, and is tried again a minute later. One check runs at
+// a time, whoever asks.
 //
 // `reload()` is for a search that met a record the data does not have yet
 // (the site was deployed since the last check): it checks at once, at most
@@ -99,22 +100,34 @@ export class Store {
   async #load(): Promise<Snapshot> {
     try {
       const answers = await Promise.all(names.map((name) => this.#one(name)));
-      const changed = answers.some(Boolean);
+      const changed = answers.some((answer) => answer.changed);
       const now = this.#now();
-      this.#checked = now;
-      this.lastError = undefined;
       const at = new Date(now).toISOString();
       if (this.#snapshot && !changed) {
+        this.#checked = now;
+        this.lastError = undefined;
         this.#snapshot = { ...this.#snapshot, checkedAt: at };
         return this.#snapshot;
       }
+      // Nothing is kept until every file has answered and the dataset is
+      // built: a links.json fetched beside a failing issues.json once kept
+      // its ETag, so when issues.json recovered all three answered 304 and
+      // the old snapshot served on, reported fresh (Codex review, PR #2).
+      const held = new Map(this.#held);
+      for (const [index, name] of names.entries()) {
+        const fetched = answers[index].held;
+        if (fetched) held.set(name, fetched);
+      }
       const files = Object.fromEntries(
-        names.map((name) => [name, this.#held.get(name)!.body]),
+        names.map((name) => [name, held.get(name)!.body]),
       ) as unknown as Files;
       const data = buildDataset(files);
       const generation =
         (this.#snapshot?.generation ?? 0) +
-        (answers[0] || !this.#snapshot ? 1 : 0);
+        (answers[0].changed || !this.#snapshot ? 1 : 0);
+      this.#held = held;
+      this.#checked = now;
+      this.lastError = undefined;
       this.#snapshot = { data, generation, loadedAt: at, checkedAt: at };
       return this.#snapshot;
     } catch (error) {
@@ -125,8 +138,9 @@ export class Store {
     }
   }
 
-  // Fetches one file, conditionally once it is held. True when it changed.
-  async #one(name: Name): Promise<boolean> {
+  // Fetches one file, conditionally once it is held. What it fetched goes
+  // back for #load to keep once every file has answered; a 304 is no change.
+  async #one(name: Name): Promise<{ changed: boolean; held?: Held }> {
     const held = this.#held.get(name);
     const headers: Record<string, string> = { accept: 'application/json' };
     if (held?.etag) headers['if-none-match'] = held.etag;
@@ -134,7 +148,7 @@ export class Store {
       headers,
       signal: AbortSignal.timeout(this.#timeoutMs),
     });
-    if (response.status === 304 && held) return false;
+    if (response.status === 304 && held) return { changed: false };
     if (!response.ok)
       throw new Error(`/${name}.json answered ${response.status}`);
     const body = (await response.json()) as Record<string, unknown>;
@@ -152,8 +166,10 @@ export class Store {
         toread: row.toread,
         kind: row.kind,
       }));
-    this.#held.set(name, { etag: response.headers.get('etag'), body });
-    return true;
+    return {
+      changed: true,
+      held: { etag: response.headers.get('etag'), body },
+    };
   }
 
   // A file of the site as text (a record's Markdown twin, llms.txt), for the

@@ -190,12 +190,14 @@ function fakeSite(files = fixtureFiles()) {
     version: { links: 1, issues: 1, hosts: 1 },
     calls: [],
     fail: false,
+    failPaths: new Set(),
   };
   state.fetch = async (url, init = {}) => {
     const path = new URL(url).pathname;
     const inm = init.headers?.['if-none-match'];
     state.calls.push({ path, inm });
-    if (state.fail) throw new TypeError('fetch failed');
+    if (state.fail || state.failPaths.has(path))
+      throw new TypeError('fetch failed');
     const file = /^\/(links|issues|hosts)\.json$/.exec(path)?.[1];
     if (file) {
       const etag = `"${file}-${state.version[file]}"`;
@@ -464,6 +466,35 @@ test('a failed check keeps the data held and waits a minute to retry', async () 
   site.fail = false;
   clock.ms += 31_000;
   await store.get();
+  assert.equal(store.lastError, undefined);
+});
+
+test('a check that fails halfway keeps nothing of it, so the retry sees the change', async () => {
+  const site = fakeSite();
+  const clock = { ms: 0 };
+  const store = new Store({
+    site: SITE,
+    fetch: site.fetch,
+    now: () => clock.ms,
+  });
+  const first = await store.get();
+  // links.json changes, and issues.json is unreachable on the check that
+  // sees the change.
+  const files = fixtureFiles();
+  site.change('links', { ...files.links, links: linkRows.slice(1) });
+  site.failPaths.add('/issues.json');
+  clock.ms = 11 * 60_000;
+  assert.equal(await store.get(), first, 'the data held serves on');
+  assert.equal(store.lastError, 'fetch failed');
+  // issues.json is back. Had the new links.json and its ETag been kept,
+  // every file would answer 304 now and the old data would serve on.
+  site.failPaths.clear();
+  clock.ms += 61_000;
+  const recovered = await store.get();
+  const links = site.calls.filter((c) => c.path === '/links.json');
+  assert.equal(links.at(-1).inm, '"links-1"', 'the failed check kept no ETag');
+  assert.equal(recovered.generation, 2);
+  assert.equal(recovered.data.links.length, 5);
   assert.equal(store.lastError, undefined);
 });
 
