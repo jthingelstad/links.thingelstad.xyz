@@ -2,6 +2,7 @@
   "account": "999153317627",
   "region": "us-east-1",
   "stacks": {
+    "mcp": "links-mcp",
     "storage": "links-storage",
     "site": "links-site",
     "delivery": "links-delivery",
@@ -14,6 +15,9 @@
   "productionUrl": "https://links.thingelstad.xyz/",
   "certificateArn": "arn:aws:acm:us-east-1:999153317627:certificate/9861cfff-b8dd-4157-8935-8aff5a7decfe",
   "deploymentRoleArn": "arn:aws:iam::999153317627:role/links-delivery-DeploymentRole-38md8sad6OG8",
+  "mcpCodeBucket": "links-mcp-code-999153317627",
+  "mcpExecutionRoleArn": "arn:aws:iam::999153317627:role/links-mcp-ExecutionRole-THzxEC9L1D2M",
+  "mcpEndpointDomain": "mp1n04xcgd5gpg0p.btq.lambda-web.us-east-1.on.aws",
   "stackTags": {
     "Application": "Thingelstad",
     "Project": "links",

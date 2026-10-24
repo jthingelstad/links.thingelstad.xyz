@@ -25,8 +25,9 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   under `public/media/`, never hotlinked and never committed from here. A video is a
   click-to-play facade: no player request until the click.
 - **Kinds** (`src/lib/kinds.ts`): every link has one, from its host and path alone,
-  first rule wins, "page" is the rest. The browser search imports the same file, so
-  it takes no Node imports. Adding a kind adds a `/kinds/<kind>/` URL.
+  first rule wins, "page" is the rest. The browser search and the MCP server import
+  the same file, so it takes no Node imports. Adding a kind adds a `/kinds/<kind>/`
+  URL.
 - **The database.** `npm run db` (`tools/build_db.py`, stdlib only) writes
   `public/links.db` from the JSON; `npm run build` runs it first. It is gitignored,
   deterministic, and facts only like the pages. The site never reads it.
@@ -39,15 +40,34 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   Thing archive key, `140-special` for the special issue), `/years/<yyyy>/` with its
   `llms.txt`, `/newest/`, `/search/`, `/about/`, the feeds (`feed.xml` and
   `feed.json` at the root and under each host and kind page) and `/links.json`,
-  `/hosts.json`, `/issues.json`, `/links.db`, `/llms.txt`. Kudos,
-  feed readers, the Librarian and WT Builder depend on them. `src/lib/data.ts` is the
-  one place they are formed.
+  `/hosts.json`, `/issues.json`, `/links.db`, `/llms.txt`, and `/mcp`. Kudos,
+  feed readers, the Librarian, WT Builder and MCP clients depend on them.
+  `src/lib/paths.ts` is the one place they are formed; `src/lib/data.ts` re-exports
+  it for the pages and the MCP server imports it directly.
+- **Search grammar** (`src/lib/search-grammar.ts`): parsing a query (words,
+  "phrases", -exclusions, `site:`, `year:`, `wt:`, `kind:`) and the rule that keeps
+  only real matches. The browser search and the MCP server's `links_search` both
+  import it, and both search the same Pagefind index, so the site and the MCP answer
+  a query the same way. Change the grammar there, never in either caller. No Node
+  imports.
+- **The MCP server** (`src/mcp/`; DIRECTION.md, "Agents and the MCP";
+  `docs/deployment.md`, "The MCP server") is read-only, with no authentication, no
+  model, no state and no keys. It reads only the three published files over HTTPS
+  and the published Pagefind index: never `data/`, never enrichment, never a bucket.
+  Its answers carry what the JSON twins carry and nothing more (no `hash`, `meta` or
+  enrichment field, nothing about whether a link works), and its reader-facing text
+  (tool names and descriptions, notes, the `/mcp` page) follows the Pinboard rule
+  below; `tests/mcp-server.test.mjs` checks both on every answer. A change to a tool's
+  name, arguments or result shape bumps `SERVER_VERSION` in `src/mcp/tools.ts`.
+  `npm run mcp:package` writes `.build/mcp/` (ignored); main deploys it after the site
+  only when its bytes change.
 - **Times** are stored in UTC and shown in US Central, and years, months, weeks and
   the quote of the day turn over in Central too. Feed dates are Central with the real offset
   (RFC 822 in RSS, RFC 3339 in JSON Feed).
 - **Reader-facing text never names Pinboard** (Jamie, 2026-10-23: "nobody needs to
-  know pinboard exists"): pages, twins, feeds and llms files. Code comments and the
-  docs may. Nor does any page say whether a link still works; links are not checked.
+  know pinboard exists"): pages, twins, feeds, llms files and the MCP server's tools,
+  notes and page. Code comments and the docs may. Nor does any page say whether a
+  link still works; links are not checked.
 - **Prose is content.** The home page's quotes are `content/quotes.md` (format at the
   top of the file); a malformed entry fails the build with its line number. `/about/`
   is `content/about.md`, Jamie's words to edit: one `# ` title, then `## ` sections,
@@ -63,7 +83,8 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   `npm run sites:check`, `npm run validate:infra`, `npm run validate:data`,
   `npm run build`, `npm run validate:site` and `npm run test:ci-browser` before
   pushing. Chromium for screenshots: `npx playwright install chromium`.
-- **Hosting** is S3 and CloudFront in four stacks (`infra/`), deployed from main by
+- **Hosting** is S3 and CloudFront in four stacks plus `links-mcp`, the MCP server's
+  Lambda Web Function behind the same distribution (`infra/`), deployed from main by
   GitHub Actions through an OIDC role; `docs/deployment.md` has the stacks, the
   bootstrap, the DNS records and what a deploy uploads, removes and invalidates. A new
   file extension needs its Content-Type in `tools/delivery-plan.mjs` or the deploy

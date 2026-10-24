@@ -2,21 +2,22 @@
 // record pages only) is loaded from /pagefind/. The query and the options are
 // kept in the address so a search can be shared.
 //
-// The small grammar: site:host, year:yyyy, wt:n (an issue), kind:video (one
-// of src/lib/kinds.ts), "phrases" (passed to Pagefind) and -word (excluded
-// here). Year, issue, kind, in-a-Weekly-Thing and has-a-note are Pagefind
-// filters. Host is not a filter (7,000 values would
-// bloat the filter index); it is metadata that Pagefind matches loosely, so
-// site: is checked exactly here, and so is -word.
+// The grammar (site:, year:, wt:, kind:, "phrases", -word), the term sent to
+// Pagefind and the exact check on each result live in
+// src/lib/search-grammar.ts, which the MCP server's links_search shares.
+// Year, issue, kind, in-a-Weekly-Thing and has-a-note are Pagefind filters.
 //
-// Two Pagefind 1.5 behaviours shape this file, both found at 16,524 records:
-// - a word with no match falls back to a shorter prefix ("zxqvbnmw" finds the
-//   ZX Spectrum, "qqqqzzzz" finds "Q"), so a result is kept only when each
-//   typed word's first three letters start a word in its title, host or text;
-// - a search with no words loads the whole index (143 chunks, 3.8 MB), so a
-//   year, an issue or a kind alone links to its page, which lists exactly
-//   those links.
-import { type Kind, kindWords, kinds } from '../lib/kinds.ts';
+// A search with no words loads the whole index (143 chunks, 3.8 MB, found at
+// 16,524 records), so a year, an issue or a kind alone links to its page,
+// which lists exactly those links.
+import { kindWords, kinds } from '../lib/kinds.ts';
+import {
+  type Query,
+  isCandidate,
+  matcher,
+  parse,
+  searchTerm,
+} from '../lib/search-grammar.ts';
 
 interface Data {
   url: string;
@@ -43,56 +44,6 @@ interface Pagefind {
 
 const page = 20;
 const index = '/pagefind/pagefind.js';
-
-export interface Query {
-  text: string;
-  site?: string;
-  year?: string;
-  issue?: string;
-  kind?: Kind;
-  exclude: string[];
-}
-
-// kind:video or kind:videos. The kind kept is the list's own constant, so
-// what was typed never becomes part of an address.
-function kindNamed(value: string): Kind | undefined {
-  const at = kinds.findIndex(
-    (kind) => kind === value || kindWords[kind].title.toLowerCase() === value,
-  );
-  return at === -1 ? undefined : kinds[at];
-}
-
-// Splits the operators out of what was typed; the rest goes to Pagefind.
-export function parse(input: string): Query {
-  const query: Query = { text: '', exclude: [] };
-  const kept: string[] = [];
-  for (const [, neg, phrase, word] of input.matchAll(
-    /(-?)(?:"([^"]*)"|(\S+))/g,
-  )) {
-    const op = word && /^(site|year|wt|kind):(.+)$/i.exec(word);
-    if (op && !neg) {
-      const value = op[2].toLowerCase();
-      if (op[1].toLowerCase() === 'site')
-        query.site = value
-          .replace(/^https?:\/\//, '')
-          .replace(/^www\./, '')
-          .replace(/\/.*$/, '');
-      else if (op[1].toLowerCase() === 'year' && /^\d{4}$/.test(value))
-        query.year = value;
-      else if (op[1].toLowerCase() === 'wt')
-        query.issue = value.replace(/^wt/, '');
-      else if (op[1].toLowerCase() === 'kind') query.kind = kindNamed(value);
-    } else if (neg && (phrase || word)) {
-      query.exclude.push((phrase ?? word).toLowerCase());
-    } else if (phrase !== undefined) {
-      kept.push(`"${phrase}"`);
-    } else if (word) {
-      kept.push(word);
-    }
-  }
-  query.text = kept.join(' ');
-  return query;
-}
 
 // Excerpts are escaped text with <mark> around matches: rebuild them as text
 // and mark elements rather than parsing them as HTML.
@@ -269,10 +220,7 @@ export async function initSearch() {
         : sortSelect.value === 'old'
           ? { date: 'asc' }
           : undefined;
-    // The host's words are searched too, so site: alone finds its links.
-    const term = [query.text, query.site?.replace(/\./g, ' ')]
-      .filter(Boolean)
-      .join(' ');
+    const term = searchTerm(query);
     if (!term) {
       list.replaceChildren();
       // Page addresses are formed from numbers and from the kinds list, so no
@@ -315,37 +263,12 @@ export async function initSearch() {
       ...(sort ? { sort } : {}),
     });
     if (current !== run || !search) return;
-    // Pagefind also matches metadata, loosely (the nnxyz lesson): a word can
-    // match a date or an issue label. Keep matches in the text, the title or
-    // the host.
-    candidates = term
-      ? search.results.filter(
-          (result) =>
-            result.words.length > 0 ||
-            result.matchedMetaFields?.some(
-              (f) => f === 'title' || f === 'host',
-            ),
-        )
-      : search.results;
-    const { site, exclude } = query;
-    const starts = query.text
-      .replace(/"[^"]*"/g, ' ')
-      .toLowerCase()
-      .split(/[^\p{L}\p{N}]+/u)
-      .filter((word) => word.length >= 3)
-      .map(
-        (word) => new RegExp(`(?:^|[^\\p{L}\\p{N}])${word.slice(0, 3)}`, 'u'),
-      );
+    candidates = term ? search.results.filter(isCandidate) : search.results;
+    const { site } = query;
+    const matches = matcher(query);
     exact = (data) => {
-      const host = data.meta.host;
-      if (site && host === site) siteHost = host;
-      const text =
-        `${data.meta.title ?? ''} ${host ?? ''} ${data.content}`.toLowerCase();
-      return (
-        (!site || host === site || !!host?.endsWith(`.${site}`)) &&
-        starts.every((start) => start.test(text)) &&
-        !exclude.some((word) => text.includes(word))
-      );
+      if (site && data.meta.host === site) siteHost = data.meta.host;
+      return matches(data);
     };
     list.replaceChildren();
     await showMore(current);

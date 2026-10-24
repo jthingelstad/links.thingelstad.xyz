@@ -553,28 +553,57 @@ The walk is: read `llms.txt`, then a year file or `links.json`, then record twin
 What it lacks is a word index: Pagefind's index is static files too, but shaped for
 its own client. If agents turn out to struggle, a static term index (`/index/<two
 letters>.json`, words to ids, built with the site) is the next step and still no
-server. Not built until a real agent needs it.
+server. Not built until a real agent needs it; an agent that speaks MCP has
+`links_search` now.
 
-**The MCP, when it comes.** A small, stateless, read-only server with no
-authentication, on a Lambda Web Function behind its own hostname, the pattern of the
-thingelstad.com and Elixir servers. It reads the same built files the site publishes
-(`links.json`, `issues.json`, `hosts.json`, 12 MB, bundled with the function or read
-from the site bucket at cold start), so it is never ahead of or behind the site; the
-deploy workflow publishes it after the site. Tools, in the family's conventions (one
-id everywhere, `serverInfo.version` bumps on schema change, notes[] in every answer):
-`links_search` (the search grammar: words, site:, year:, wt:), `links_get` (id or
-URL), `links_host`, `links_issue`, `links_year`, `links_stats`, `links_random`. Search
-is an in-memory index over 16,524 records built at cold start, tens of milliseconds.
+**The MCP, built 2026-10-24.** Jamie: "Let's build it", with search on the site's own
+Pagefind index. A small, stateless, read-only server with no authentication at
+`https://links.thingelstad.xyz/mcp`, on a Lambda Web Function (stack `links-mcp`,
+`infra/mcp.json`). It was planned behind its own hostname, the pattern of the
+thingelstad.com and Elixir servers; it is a path of the site's distribution instead,
+which reaches the function through origin access control (the endpoint answers only
+requests CloudFront signs), so there is no new certificate, no Namecheap record and no
+second edge to watch. It reads the three files the site publishes (`links.json`,
+`issues.json`, `hosts.json`) over HTTPS and checks their ETags every ten minutes, so it
+is never ahead of the site and never reads `data/` or a bucket. The deploy workflow
+publishes it after the site, and a push that leaves the server's code alone leaves the
+live revision alone.
+
+Tools, in the family's conventions (one id everywhere, `server_version` and notes[] in
+every answer, a cut answer says how to get the rest): `links_search` (the site's
+grammar: words, "phrases", -exclusions, site:, year:, wt:, kind:), `links_get` (by id
+or URL, with the issues that carried it), `links_list` (a year, host, kind or tag, or
+the newest; it replaces the planned `links_host` and `links_year`), `links_issue`,
+`links_stats`, `links_on_this_day` and `links_random`. A GET of `/mcp` is a page that
+lists them, and `llms.txt` points agents at it. Results carry what the JSON twins carry
+and nothing more.
+
+Search is the site's own. The server loads Pagefind's client, packaged beside it from
+the build, and reads the published index over HTTPS, and the browser and the server
+parse a query with one grammar (`src/lib/search-grammar.ts`): one search, one ranking,
+one set of quirks, nothing to keep in step. That replaces the planned in-memory word
+index, which would have been a second search with its own ranking and its own answers
+to keep in agreement with the site's. A query with no words (a filter alone) is
+answered from the records in memory, as the site sends it to a year or issue page
+rather than load the whole index. Measured on this Mac against the live site: ready in
+about 50 ms from a cold start, the first call (loading the three files) about 240 ms, a
+first search 120 to 550 ms while Pagefind fetches its chunks and about 10 ms warm, a
+word as common as "the" about a second; every other tool answers in single-digit
+milliseconds.
+
 No model at serve time (Jamie's rule: "serving the site should be public and not
-having model cost"), no state, no keys; public data needs no auth, and the edge's
-rate limit is the only guard.
+having model cost"), no state, no keys; public data needs no auth, and the endpoint's
+own limit (100 requests a second and two environments, the smallest it takes) is the
+guard. `links_on_this_day` stands against the decision that removed the On this day
+pages ("I'm not sure on-this-day is meaningful for this data set?"): it is one tool
+with no page to maintain, and it goes if Jamie says so.
 
 **And the Librarian.** Once links are a source there (section "The Librarian"), its
 MCP answers "what did Jamie say about X" across everything at once. Both can be true:
 the Librarian for questions, the links MCP for the record, fast and plain, with no
-model in between. Order: the static layer (done), the Librarian ingestion (planned),
-the links MCP when there is a concrete consumer (a Claude connector, Otto, WT Builder
-asking "has this been linked before?").
+model in between. Order: the static layer (done), the links MCP (built 2026-10-24,
+ahead of a named consumer; the likely first ones are a Claude connector, Otto, and WT
+Builder asking "has this been linked before?"), the Librarian ingestion (planned).
 
 ## If Pinboard went away
 
@@ -605,12 +634,12 @@ the mirror is kept lossless and Pinboard-shaped, not merely sufficient for pages
   module. Roughly 17,000 record pages, 7,300 host pages, 330 issue pages, topic and
   year pages: about 25,000 pages, minutes to build.
 - **Pagefind** after the build, record pages only.
-- **Infrastructure** on the POAP pattern: four CloudFormation stacks (certificate,
-  storage, site, delivery), S3 and CloudFront, directory-index function, 5xx alarm on
-  the family topic, GitHub Actions deploying `main` through OIDC. `npm run infra:plan`
-  change sets with the `cloud-engineer` identity, applied on Jamie's go. Namecheap
-  records (the `links` CNAME and the ACM validation CNAME) are Jamie's step; the
-  handoff formats them for Namecheap.
+- **Infrastructure** on the POAP pattern: five CloudFormation stacks (certificate,
+  storage, site, delivery, and mcp for the MCP server at `/mcp`), S3 and CloudFront,
+  directory-index function, 5xx alarm on the family topic, GitHub Actions deploying
+  `main` through OIDC. `npm run infra:plan` change sets with the `cloud-engineer`
+  identity, applied on Jamie's go. Namecheap records (the `links` CNAME and the ACM
+  validation CNAME) are Jamie's step; the handoff formats them for Namecheap.
 - **Repository** `jthingelstad/links.thingelstad.xyz`, public like its siblings.
   `pinboard/`, `archive/` and `.env*` ignored; the Pinboard token lives only in `.env`
   on the Mac, and CI never holds it.
@@ -723,9 +752,9 @@ archive, kinds, and the first adapters (YouTube, GitHub, Wikipedia, Amazon books
 neighbours, "similar".
 
 **4. The Librarian.** The SQLite download, `links.json` in its final shape, and the
-Librarian ingesting it (section "The Librarian"), and a links MCP of its own once
-there is a consumer for it (section "Agents and the MCP"). The site itself stays
-static.
+Librarian ingesting it (section "The Librarian"), and a links MCP of its own (built
+ahead of the rest on 2026-10-24, section "Agents and the MCP"). The site itself stays
+static; `/mcp` is a separate server on one path of its distribution.
 
 ## Decisions
 
@@ -756,6 +785,9 @@ Things.
 Later the same day: RDAP yes; a statistics page (section "Statistics"); the bare-link
 treatment is left to the build to explore; build started with Opus 5.5 agents on
 2026-10-23, the repository initialised locally on `main`.
+
+Then the links MCP: "Let's build it", with search on the site's existing Pagefind
+index. Built 2026-10-24 (section "Agents and the MCP").
 
 Still open: which of the ideas beyond the brief earn a phase; creating the GitHub
 repository and the Tinylytics site, both Jamie's go.

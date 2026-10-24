@@ -57,9 +57,9 @@ tracking tags, would feel almost subversive now."
 Static pages, built with [Astro](https://astro.build/) and searched with
 [Pagefind](https://pagefind.app/). Every link's page has a JSON twin and a
 Markdown twin. There are feeds for the newest links and for every host and every
-kind, [llms.txt](/llms.txt) files for language models, every link in
-[links.json](/links.json), and the same public data as one SQLite file,
-[links.db](/links.db).
+kind, [llms.txt](/llms.txt) files for language models, an [MCP server](/mcp)
+for agents, every link in [links.json](/links.json), and the same public data as
+one SQLite file, [links.db](/links.db).
 
 The site, its tools and its data are open source at
 [github.com/jthingelstad/links.thingelstad.xyz](https://github.com/jthingelstad/links.thingelstad.xyz).

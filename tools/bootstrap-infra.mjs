@@ -2,19 +2,29 @@
 //
 //   node tools/bootstrap-infra.mjs plan    create change sets, print them, execute nothing
 //   node tools/bootstrap-infra.mjs apply   execute the change sets, in order
+//     --mcp-only                           stop once the links-mcp stack is in place
 //   node tools/bootstrap-infra.mjs attach  once the certificate is ISSUED: give the
 //                                          distribution its alias and certificate
 //
-// Run with the cloud-engineer identity in us-east-1 (AWS_PROFILE=cloud-engineer).
-// Order: storage, site, storage again (the bucket policy needs the distribution
-// id), delivery, certificate. The certificate goes last because its stack does
-// not finish until the ACM validation record is in DNS: apply prints that
-// record as soon as ACM has it, together with the site's record, so Jamie adds
-// both at Namecheap in one visit while apply waits. If apply is cut off, run it
-// again: finished stacks report no changes and a stack still in progress is
-// waited for. Each apply or attach rewrites infra/deployment.json from the live
-// stacks. Infrastructure changes after bootstrap go through reviewed change
-// sets, never through the GitHub deployment role.
+// Run with the cloud-engineer identity in us-east-1 (AWS_PROFILE=cloud-engineer),
+// after npm run build (apply packages the MCP server with the build's Pagefind
+// client). Order: mcp (the MCP server, whose endpoint the site's /mcp routes
+// to: first its code bucket and roles, then, once apply has uploaded the
+// packaged server, its function, revision and endpoint), the distribution's
+// grant on that endpoint, storage, site, storage again (the bucket policy
+// needs the distribution id), delivery (which gets the MCP deploy's actions
+// once the mcp stack exists), certificate. On the live site the MCP goes in
+// two reviewed rounds: plan, apply --mcp-only (the links-mcp stack alone),
+// then plan again, which now shows the grant and the site and delivery change
+// sets naming the new endpoint, and apply. The certificate goes last because
+// its stack does not finish until the ACM validation record is in DNS: apply
+// prints that record as soon as ACM has it, together with the site's record,
+// so Jamie adds both at Namecheap in one visit while apply waits. If apply is
+// cut off, run it again: finished stacks report no changes and a stack still
+// in progress is waited for. Each apply or attach rewrites
+// infra/deployment.json from the live stacks. Infrastructure changes after
+// bootstrap go through reviewed change sets, never through the GitHub
+// deployment role.
 import {
   CloudFormationClient,
   CreateChangeSetCommand,
@@ -27,12 +37,28 @@ import {
   waitUntilStackUpdateComplete,
 } from '@aws-sdk/client-cloudformation';
 import { ACMClient, DescribeCertificateCommand } from '@aws-sdk/client-acm';
+import {
+  GetResourcePolicyCommand,
+  LambdaWebClient,
+  PutResourcePolicyCommand,
+} from '@aws-sdk/client-lambda-web';
+import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3';
 import { GetCallerIdentityCommand, STSClient } from '@aws-sdk/client-sts';
 import fs from 'node:fs/promises';
+import { packageMcp } from './package-mcp.mjs';
 
 const mode = process.argv[2];
-if (!['plan', 'apply', 'attach'].includes(mode))
-  throw new Error('Usage: node tools/bootstrap-infra.mjs plan|apply|attach');
+// apply --mcp-only stops once the links-mcp stack is in place, so a second
+// plan can show the distribution's grant and the site and delivery change
+// sets, which name the new endpoint, before they run (docs/deployment.md).
+const mcpOnly = process.argv.includes('--mcp-only');
+if (
+  !['plan', 'apply', 'attach'].includes(mode) ||
+  (mcpOnly && mode !== 'apply')
+)
+  throw new Error(
+    'Usage: node tools/bootstrap-infra.mjs plan|apply [--mcp-only]|attach',
+  );
 const config = JSON.parse(await fs.readFile('infra/deployment.json', 'utf8'));
 const settings = { region: config.region, maxAttempts: 5 };
 const identity = await new STSClient(settings).send(
@@ -43,6 +69,8 @@ if (identity.Account !== config.account)
 console.log(`Identity ${identity.Arn}`);
 const cfn = new CloudFormationClient(settings);
 const acm = new ACMClient(settings);
+const web = new LambdaWebClient(settings);
+const s3 = new S3Client(settings);
 const Tags = Object.entries(config.stackTags).map(([Key, Value]) => ({
   Key,
   Value,
@@ -238,6 +266,128 @@ if (mode === 'attach') {
   certificateArn = certificateExisting.CertificateArn;
 }
 
+// The MCP server's stack first: its endpoint is the site's /mcp origin. Phase
+// one (no code yet) makes the code bucket, the execution role and the logs;
+// apply then packages the server, uploads it and runs phase two, which adds
+// the function, its first revision and the live endpoint. Later revisions are
+// the CI deploy's (tools/deploy-mcp.mjs), so the live CodeKey and CodeVersion
+// pass through unchanged here.
+const mcpExisting = await stack(stacks.mcp);
+let mcp = outputs(
+  await converge(
+    stacks.mcp,
+    'mcp',
+    {
+      CodeKey: parameter(mcpExisting, 'CodeKey'),
+      CodeVersion: parameter(mcpExisting, 'CodeVersion'),
+    },
+    ['CAPABILITY_IAM'],
+  ),
+);
+if (!mcp.EndpointDomain && mode === 'plan')
+  console.log(
+    `${stacks.mcp}: apply then packages the server, uploads it and adds the function, its revision and the live endpoint`,
+  );
+else if (!mcp.EndpointDomain && mcp.CodeBucket) {
+  const bundle = await packageMcp();
+  const put = await s3.send(
+    new PutObjectCommand({
+      Bucket: mcp.CodeBucket,
+      Key: bundle.key,
+      Body: await fs.readFile(bundle.path),
+      ContentType: 'application/zip',
+      ChecksumAlgorithm: 'SHA256',
+      ChecksumSHA256: bundle.checksumSha256,
+    }),
+  );
+  if (!put.VersionId) throw new Error(`${mcp.CodeBucket} is not versioned`);
+  console.log(`Uploaded ${bundle.key} (version ${put.VersionId})`);
+  mcp = outputs(
+    await converge(
+      stacks.mcp,
+      'mcp',
+      { CodeKey: bundle.key, CodeVersion: put.VersionId },
+      ['CAPABILITY_IAM'],
+    ),
+  );
+}
+if (mcpOnly) {
+  console.log(
+    `${stacks.mcp} is in place${mcp.EndpointDomain ? ` (endpoint ${mcp.EndpointDomain})` : ''}. Next: npm run infra:plan shows the distribution's grant and the site and delivery change sets; npm run infra:apply runs them on Jamie's go.`,
+  );
+  process.exit(0);
+}
+
+const canonical = (value) =>
+  Array.isArray(value)
+    ? `[${value.map(canonical).join(',')}]`
+    : value && typeof value === 'object'
+      ? `{${Object.keys(value)
+          .sort()
+          .map((key) => `${JSON.stringify(key)}:${canonical(value[key])}`)
+          .join(',')}}`
+      : JSON.stringify(value);
+
+// CloudFront reaches the endpoint only through this grant: the function's
+// resource policy lets the site's distribution, and nothing else, invoke the
+// live endpoint. CloudFormation cannot set a web function's resource policy,
+// so the bootstrap does, once; deploys never touch it. A policy other than
+// this one is left alone for a person to read.
+async function grantDistribution(distributionId) {
+  if (!mcp.EndpointArn || !mcp.FunctionArn || !distributionId) return;
+  const desired = {
+    Version: '2012-10-17',
+    Statement: [
+      {
+        Sid: 'SiteDistributionInvokesLive',
+        Effect: 'Allow',
+        Principal: { Service: 'cloudfront.amazonaws.com' },
+        Action: 'lambda:InvokeWebFunctionEndpoint',
+        Resource: mcp.EndpointArn,
+        Condition: {
+          StringEquals: {
+            'aws:SourceArn': `arn:aws:cloudfront::${config.account}:distribution/${distributionId}`,
+          },
+        },
+      },
+    ],
+  };
+  const read = async () => {
+    try {
+      const { policy } = await web.send(
+        new GetResourcePolicyCommand({ resourceArn: mcp.FunctionArn }),
+      );
+      return policy ? JSON.parse(policy) : undefined;
+    } catch (error) {
+      if (error.name === 'ResourceNotFoundException') return undefined;
+      throw error;
+    }
+  };
+  const current = await read();
+  if (current && canonical(current) === canonical(desired)) {
+    console.log(`${stacks.mcp}: the distribution's grant is in place`);
+    return;
+  }
+  if (current)
+    throw new Error(
+      `${mcp.FunctionArn} has another resource policy; read it before replacing it: ${JSON.stringify(current)}`,
+    );
+  console.log(
+    `${stacks.mcp}: grant ${distributionId} lambda:InvokeWebFunctionEndpoint on ${mcp.EndpointArn}`,
+  );
+  if (mode === 'plan') return;
+  await web.send(
+    new PutResourcePolicyCommand({
+      resourceArn: mcp.FunctionArn,
+      policy: JSON.stringify(desired),
+    }),
+  );
+  const installed = await read();
+  if (!installed || canonical(installed) !== canonical(desired))
+    throw new Error('The distribution grant did not read back as written');
+}
+await grantDistribution(outputs(siteExisting).DistributionId);
+
 // Keep the distribution's grant on the site bucket once it exists; an empty
 // DistributionId here would cut CloudFront off until the second storage pass.
 const storage = outputs(
@@ -250,8 +400,11 @@ const site = outputs(
   await converge(stacks.site, 'site', {
     SiteBucket: siteBucket,
     CertificateArn: certificateArn,
+    McpOriginDomain: mcp.EndpointDomain || '',
   }),
 );
+// A new distribution gets its grant now (the call is a no-op when it has it).
+await grantDistribution(site.DistributionId);
 if (site.DistributionId)
   await converge(stacks.storage, 'storage', {
     DistributionId: site.DistributionId,
@@ -263,6 +416,8 @@ const delivery = outputs(
     {
       SiteBucket: siteBucket,
       DistributionId: site.DistributionId || 'PENDING',
+      McpCodeBucket: mcp.CodeBucket || '',
+      McpExecutionRoleArn: mcp.ExecutionRoleArn || '',
     },
     ['CAPABILITY_IAM'],
   ),
@@ -275,6 +430,9 @@ await record({
     ? `https://${site.DistributionDomain}/`
     : null,
   deploymentRoleArn: delivery.DeploymentRoleArn || null,
+  mcpCodeBucket: mcp.CodeBucket || config.mcpCodeBucket,
+  mcpExecutionRoleArn: mcp.ExecutionRoleArn || null,
+  mcpEndpointDomain: mcp.EndpointDomain || null,
 });
 if (site.DistributionDomain)
   console.log(

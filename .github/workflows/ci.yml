@@ -35,7 +35,7 @@ jobs:
       - run: npm run sites:check
       - run: pipx run --spec ruff==0.17.0 ruff check tools tests
       - run: npm audit --audit-level=high
-      - run: pipx run --spec cfn-lint==1.57.2 cfn-lint infra/storage.json infra/certificate.json infra/site.json infra/delivery.json
+      - run: pipx run --spec cfn-lint==1.57.2 cfn-lint infra/storage.json infra/certificate.json infra/site.json infra/delivery.json infra/mcp.json
       - run: npm run validate:infra
       - run: npm run validate:data
   codeql:
@@ -145,3 +145,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           DEPLOY_ALLOW_REMOVALS: ${{ inputs.allow_removals }}
+      # The MCP server (src/mcp/, tools/deploy-mcp.mjs), packaged with the
+      # Pagefind client of the build just published. A bundle that is already
+      # live (most pushes: content changes leave it alone) ends the step.
+      - run: npm run mcp:package
+      - run: npm run mcp:deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
