@@ -165,9 +165,14 @@ for (const [name, viewport] of [
     );
     assert.ok(twins.length >= 2, 'each result previewed asks for its twin');
     // A result rested on while the next search loads belongs to the last
-    // one: when the new results come, the pane shows their first.
+    // one: when the new results come, the pane shows their first. Pagefind
+    // is slowed until the old results are gone; a request the page has
+    // given up on by then needs nothing more.
+    let hold = true;
     await page.route('**/pagefind/**', (route) =>
-      setTimeout(() => route.continue(), 1500),
+      new Promise((done) => setTimeout(done, hold ? 1500 : 0))
+        .then(() => route.continue())
+        .catch(() => {}),
     );
     await page.locator('[data-search-query]').fill(word);
     await page.locator('h1').click();
@@ -182,7 +187,7 @@ for (const [name, viewport] of [
     await page.waitForFunction((row) => !row.isConnected, old, {
       timeout: 15000,
     });
-    await page.unrouteAll({ behavior: 'wait' });
+    hold = false;
     const first = page.locator('[data-search-results] li').first();
     await first.locator('a.title').waitFor({ timeout: 15000 });
     await pane
@@ -195,6 +200,7 @@ for (const [name, viewport] of [
       /previewing/,
       'a result rested on during a search gives way to the new first',
     );
+    await page.unrouteAll({ behavior: 'ignoreErrors' });
   } else {
     assert.ok(await pane.isHidden(), 'no pane on a phone');
     assert.deepEqual(twins, [], 'and no twin asked for');
