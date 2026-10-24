@@ -67,8 +67,11 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   GitHub Actions through an OIDC role; `docs/deployment.md` has the stacks, the
   bootstrap, the DNS records and what a deploy uploads, removes and invalidates. A new
   file extension needs its Content-Type in `tools/delivery-plan.mjs` or the deploy
-  stops. The Pinboard sync runs on the Mac and commits `data/`; CI never holds the
-  token.
+  stops. The sync and the enrichment run on the Mac as the nightly launchd job
+  `com.thingelstad.links-nightly` (`tools/nightly.sh` at 00:30 Central; the plist is in
+  `launchd/`), which commits `data/` and `public/media` as "Linking Things nightly" and
+  pushes, and the push deploys. CI never holds the token. The job needs the main
+  checkout on `main` and clean, so work in a worktree.
 - Infrastructure changes go through reviewed CloudFormation change sets with the
   `cloud-engineer` identity, applied on Jamie's go, never through the deployment role.
   DNS changes (Namecheap) are made by Jamie.

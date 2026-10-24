@@ -81,8 +81,11 @@ test('facts: a video is a facade with the player written from its id', () => {
     video.embed,
     'https://www.youtube-nocookie.com/embed/1YLQPJd9OtU?autoplay=1',
   );
-  // The stored thumbnail is shown only when the file is in public/.
-  assert.equal(video.image, undefined);
+  // The stored thumbnail is shown only when the file is in public/; the
+  // tools' copies are committed under public/media, so this one is.
+  assert.equal(video.image, '/media/youtube/1YLQPJd9OtU.jpg');
+  // A path the tool recorded whose file is not in public/ is dropped.
+  assert.equal(e.factsOf('0e76bb91d44a').image, undefined);
   const vimeo = e.factsOf('8dcc2315482c');
   assert.equal(
     vimeo.embed,

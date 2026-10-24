@@ -419,7 +419,7 @@ together hold 7,263 of them (44%). Measured 2026-10-23, public links:
 | Host or kind | Links | Treatment |
 | --- | --- | --- |
 | YouTube (youtube.com, youtu.be) | 287 | The video id is the key, so one video saved under two URL forms is one record. Title and channel from oEmbed (no key). A thumbnail fetched at build and stored with the site, shown as a click-to-play facade; the click loads the `youtube-nocookie.com` embed. No YouTube script until the visitor asks for the video. |
-| GitHub (github.com, gists) | 256 | A repository card: description, language, stars, license, archived, last push, from the REST API with the Actions token (the Things I've built stars collector pattern). |
+| GitHub (github.com, gists) | 256 | A repository card: description, language, stars, license, archived, last push, from the REST API with the gh CLI's token on the Mac (`GITHUB_TOKEN`, exported by the nightly job). |
 | Medium | 261 | Many moved to custom domains; the saved URL stands as saved. Author as the entity. |
 | macstories.net, daringfireball.net, kottke.org, simonwillison.net, tbray.org, seths.blog, stratechery.com, scripting.com, lethain.com and the other personal sites in the top 50 | 50 to 240 each | These hosts are people. The host page names the author, the feed, and the span of years; together they are the blogroll (section "Ideas beyond the brief", OPML). |
 | nytimes.com, arstechnica.com, techcrunch.com, theverge.com, theguardian.com, theatlantic.com, wired.com, bloomberg.com, economist.com, hbr.org | 45 to 204 each | Author and published date from page metadata; nothing more. |
@@ -440,7 +440,7 @@ paper 64, article 56, newsletter 122, podcast 6, page 15,690. The record names i
 kind; when the facts tool has observed the page it shows a card (a video facade,
 a repository or gist, a book, a Wikipedia article), and a host page shows its RDAP
 and home-page facts. Each treatment is
-one adapter in `tools/adapters/<host>.py` with the same contract as the generic page
+one adapter in `tools/linking/adapters/<method>.py` with the same contract as the generic page
 facts, so a host earns an adapter when its count and its API justify one; nothing
 else in the build knows the host.
 
@@ -599,16 +599,17 @@ the mirror is kept lossless and Pinboard-shaped, not merely sufficient for pages
   records (the `links` CNAME and the ACM validation CNAME) are Jamie's step; the
   handoff formats them for Namecheap.
 - **Repository** `jthingelstad/links.thingelstad.xyz`, public like its siblings.
-  `pinboard/` and `.env*` ignored; the Pinboard token is a GitHub Actions secret if the
-  weekly sync runs there.
-- **Weekly sync**: where it runs is deferred (Jamie, 2026-10-23) until the site is
-  further along. The two shapes: the Things I've built collect pattern in GitHub
-  Actions (Monday morning after Saturday's issue, token as an Actions secret, a
-  self-merging pull request, deploy), or launchd on the Mac, where the archive and the
-  model steps already have to run. Either way the sync ends by dispatching
-  `links-published` to the Librarian, so the Librarian's own weekly sync never runs
-  ahead of this one. Topics, neighbours and archive-derived facts run on the Mac
-  when new links arrive and are committed from here.
+  `pinboard/`, `archive/` and `.env*` ignored; the Pinboard token lives only in `.env`
+  on the Mac, and CI never holds it.
+- **Nightly sync** (decided 2026-10-23): `tools/nightly.sh` runs on the Mac as the
+  launchd job `com.thingelstad.links-nightly` at 00:30 Central: the Pinboard sync, the
+  issues join, then bounded slices of the host, facts and Wayback enrichment. It
+  commits `data/` and `public/media` as "Linking Things nightly" and pushes, and the
+  push deploys. The GitHub Actions shape was not taken: the token stays on the Mac,
+  and the archive and model steps have to run here anyway. The sync does not dispatch
+  `links-published` to the Librarian for now (Jamie, 2026-10-23: everything except
+  sending links to the Librarian). Topics, neighbours and archive-derived facts wait
+  for the archive export and will run here too.
 - **Checks**: lint, format, types, unit tests on the data module and the URL
   normaliser, `validate:data` (no private links, no unknown fields),
   `validate:site` (every page in the sitemap, every internal link resolves; every
