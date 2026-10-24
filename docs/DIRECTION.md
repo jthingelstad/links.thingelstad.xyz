@@ -658,7 +658,9 @@ and nothing more.
 Search is the site's own. The server loads Pagefind's client, packaged beside it from
 the build, and reads the published index over HTTPS, and the browser and the server
 parse a query with one grammar (`src/lib/search-grammar.ts`): one search, one ranking,
-one set of quirks, nothing to keep in step. That replaces the planned in-memory word
+one set of quirks, nothing to keep in step (one step is the server's alone: by relevance
+it puts whole-word matches first, so a bare `EDI` finds EDI before Editor; a quoted word
+is exact on both sides, 2026-10-24). That replaces the planned in-memory word
 index, which would have been a second search with its own ranking and its own answers
 to keep in agreement with the site's. A query with no words (a filter alone) is
 answered from the records in memory, as the site sends it to a year or issue page

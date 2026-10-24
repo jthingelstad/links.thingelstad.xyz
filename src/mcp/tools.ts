@@ -180,7 +180,7 @@ const searchTool: Tool = {
   name: 'links_search',
   title: 'Search the links',
   description:
-    'Search every public link Jamie Thingelstad has saved since 2005 (titles, notes and hosts), with the site\'s own search index and grammar. The query takes words, "quoted phrases", -word to exclude, and the operators site:host, year:yyyy, wt:351 (a Weekly Thing issue) and kind:video; the other arguments do the same and win over the query. With no words (a host, a year or an issue alone) the answer is exact and newest first. Results are ranked by relevance unless sort says otherwise. Cite a link by its permalink.',
+    'Search every public link Jamie Thingelstad has saved since 2005 (titles, notes and hosts), with the site\'s own search index and grammar. The query takes words, "quoted phrases", -word to exclude, and the operators site:host, year:yyyy, wt:351 (a Weekly Thing issue) and kind:video; the other arguments do the same and win over the query. A bare word matches by its first letters (EDI finds Editor too) and a "quoted" word only whole ("EDI" finds EDI alone); by relevance, whole-word matches come first. With no words (a host, a year or an issue alone) the answer is exact and newest first. Results are ranked by relevance unless sort says otherwise. Cite a link by its permalink.',
   inputSchema: {
     type: 'object',
     additionalProperties: false,
@@ -189,7 +189,7 @@ const searchTool: Tool = {
         type: 'string',
         maxLength: 500,
         description:
-          'Words to find, with "phrases", -word, site:, year:, wt: and kind: as on the site\'s search page.',
+          'Words to find, with "phrases" (a "quoted" word is matched whole), -word, site:, year:, wt: and kind: as on the site\'s search page.',
       },
       year,
       host,
@@ -256,10 +256,6 @@ const searchTool: Tool = {
       throw error;
     }
     const notes = answer.notes;
-    if (!answer.total && answer.mode === 'index')
-      notes.push(
-        'Nothing matched. Each word must start a word in the title, the note or the host; try fewer words or another form of one.',
-      );
     return {
       total: answer.total,
       total_exact: answer.exact,

@@ -250,15 +250,28 @@ function fakePagefind(index) {
           state.failures--;
           throw new Error('index chunk failed');
         }
+        // A "phrase" is exact, each word whole, as Pagefind has it; a bare
+        // word matches on its first letter alone.
+        const phrases = [...term.matchAll(/"([^"]*)"/g)].map((m) =>
+          m[1].toLowerCase().split(/\s+/).filter(Boolean),
+        );
         const firsts = term
+          .replace(/"[^"]*"/g, ' ')
           .toLowerCase()
           .split(/\s+/)
           .filter(Boolean)
           .map((w) => w[0]);
-        const hits = state.index.filter((row) =>
-          firsts.some((letter) =>
-            new RegExp(`(^|[^a-z0-9])${letter}`).test(text(row)),
-          ),
+        const hits = state.index.filter(
+          (row) =>
+            phrases.every((words) =>
+              words.every((w) =>
+                new RegExp(`(^|[^a-z0-9])${w}($|[^a-z0-9])`).test(text(row)),
+              ),
+            ) &&
+            (firsts.length === 0 ||
+              firsts.some((letter) =>
+                new RegExp(`(^|[^a-z0-9])${letter}`).test(text(row)),
+              )),
         );
         return {
           results: hits.map((row) => ({
@@ -1449,4 +1462,111 @@ test('voice "agent" comes from the _agent tag, and every answer that shows one s
   assert.deepEqual(ids(search), [`link-${G.id}`]);
   assert.equal(search.links[0].voice, 'agent');
   assert.ok(search.notes.some((n) => /voice is "agent"/.test(n)));
+});
+
+// A short word: a bare EDI also finds Editor and Edina by its first letters,
+// so whole-word matches come first; a "quoted" word is whole or nothing; and
+// when every word together finds nothing, the note says which to drop.
+test('links_search: whole-word matches first, "quoted" words exact, what to drop', async () => {
+  const row = (path, title, note, saved) => ({
+    id: idOf(`https://example.net/${path}`),
+    url: `https://example.net/${path}`,
+    title,
+    note,
+    saved,
+    tags: [],
+    toread: false,
+  });
+  const E = [
+    row(
+      'editor',
+      'Editor.js',
+      'A block-styled editor for composing content.',
+      '2021-01-01T12:00:00Z',
+    ),
+    row(
+      'descript',
+      'Descript: Edit Videos Like a Doc',
+      'Editing by transcript.',
+      '2021-02-01T12:00:00Z',
+    ),
+    row(
+      'edina',
+      'City of Edina COVID-19 Cases',
+      'A map.',
+      '2021-03-01T12:00:00Z',
+    ),
+    row(
+      'edi-as2',
+      'EDI/AS2 Components',
+      'Components for EDI and AS2 in supply software.',
+      '2014-04-23T12:00:00Z',
+    ),
+    row(
+      'edi-reviews',
+      'Best EDI Software',
+      'Reviews of EDI software for supply networks.',
+      '2018-11-26T12:00:00Z',
+    ),
+  ];
+  const of = (...rows) => rows.map((r) => `link-${r.id}`);
+  const all = [...linkRows, ...E];
+  const own = await harness({ files: fixtureFiles(all), index: all });
+
+  const bare = await own.call('links_search', { query: 'EDI' });
+  assert.deepEqual(ids(bare), of(E[3], E[4], E[0], E[1], E[2]));
+  assert.equal(bare.total, 5);
+  assert.equal(bare.total_exact, true);
+  // The word was asked for as a whole word first, in Pagefind's quoted form.
+  assert.deepEqual(
+    own.pagefind.searches.slice(-2).map((s) => s.term),
+    ['"EDI"', 'EDI'],
+  );
+  // The second page continues the same order.
+  const page = await own.call('links_search', { query: 'EDI', limit: 2 });
+  assert.deepEqual(ids(page), of(E[3], E[4]));
+  assert.equal(page.next_offset, 2);
+  const next = await own.call('links_search', {
+    query: 'EDI',
+    limit: 2,
+    offset: 2,
+  });
+  assert.deepEqual(ids(next), of(E[0], E[1]));
+
+  const quoted = await own.call('links_search', { query: '"EDI"' });
+  assert.deepEqual(ids(quoted), of(E[3], E[4]));
+  assert.equal(quoted.total, 2);
+  assert.equal(own.pagefind.searches.at(-1).term, '"EDI"');
+
+  // Several words: whole-word matches first among the checked candidates.
+  const two = await own.call('links_search', { query: 'EDI components' });
+  assert.deepEqual(ids(two).slice(0, 2), of(E[3], E[0]));
+
+  // Sorted by date, the index's order stands and no second search is made.
+  const dated = await own.call('links_search', {
+    query: 'EDI',
+    sort: 'newest',
+  });
+  assert.deepEqual(ids(dated), of(...E));
+  assert.equal(own.pagefind.searches.at(-1).term, 'EDI');
+  assert.equal(own.pagefind.searches.at(-2).term, 'EDI components');
+
+  // Nothing has every word: the note says what dropping each word finds.
+  const none = await own.call('links_search', { query: 'EDI supply chain' });
+  assert.equal(none.total, 0);
+  assert.deepEqual(none.links, []);
+  const note = none.notes.find((n) => n.startsWith('Nothing has every word.'));
+  assert.ok(note, none.notes.join('\n'));
+  assert.match(note, /Without "chain": EDI supply matches 2 links/);
+  assert.ok(!/supply chain matches/.test(note), note);
+  // One word, or no word to drop that helps: the rule, as before.
+  const one = await own.call('links_search', { query: 'kuzzzz' });
+  assert.ok(one.notes.some((n) => n.startsWith('Nothing matched. Each word')));
+  const dropped = await own.call('links_search', { query: 'zzzq yyyq' });
+  assert.ok(
+    dropped.notes.some((n) =>
+      n.startsWith('Nothing matched, even with one word dropped.'),
+    ),
+    dropped.notes.join('\n'),
+  );
 });

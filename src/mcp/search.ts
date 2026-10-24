@@ -17,6 +17,8 @@ import {
   matcher,
   parse,
   searchTerm,
+  units,
+  wholeWords,
 } from '../lib/search-grammar.ts';
 import { type Kind, kinds } from '../lib/kinds.ts';
 import { plainNote } from '../lib/markdown.ts';
@@ -317,57 +319,114 @@ export async function searchLinks(
       : args.sort === 'oldest'
         ? { date: 'asc' }
         : undefined;
-  const term = searchTerm({ text: want.words.text, site: want.site });
-  const results = await engine.search(generation, term, filters, sort);
-  const candidates = results.filter(isCandidate);
+  const text = want.words.text;
+  const term = searchTerm({ text, site: want.site });
   const matches = matcher({
-    text: want.words.text,
+    text,
     site: want.site,
     exclude: want.words.exclude,
   });
+  const whole = wholeWords(text);
+  const ranking = sort === undefined;
+  let unknown = false;
+  const linkOf = (item: PagefindData) => {
+    const id = recordId(item.url);
+    const link = id ? data.byId.get(id) : undefined;
+    if (!link) unknown = true;
+    return link;
+  };
+  const exactUpTo = 120;
+
+  // By relevance, a single bare word is also asked for as a whole word
+  // (Pagefind's "quoted" form), and those matches come first, however many
+  // candidates merely start with its letters: EDI before Editor and Edina.
+  const first: Link[] = [];
+  const firstChecked = new Set<string>();
+  const typed = units(text);
+  if (ranking && typed.length === 1 && !typed[0].startsWith('"')) {
+    const exact = (
+      await engine.search(
+        generation,
+        searchTerm({ text: `"${typed[0]}"`, site: want.site }),
+        filters,
+        sort,
+      )
+    )
+      .filter(isCandidate)
+      .slice(0, exactUpTo);
+    for (let at = 0; at < exact.length; at += 40) {
+      const batch = exact.slice(at, at + 40);
+      const loaded = await Promise.all(
+        batch.map((result) => engine.data(result)),
+      );
+      for (const result of batch) firstChecked.add(result.id);
+      for (const item of loaded) {
+        const link = linkOf(item);
+        if (link && whole(item) && matches(item) && fit(link)) first.push(link);
+      }
+    }
+  }
+  const placed = new Set(first.map((link) => link.id));
+
+  const results = await engine.search(generation, term, filters, sort);
+  const candidates = results.filter(isCandidate);
 
   const need = offset + limit + 1;
   const budget = Math.min(2000, 200 + (offset + limit) * 3);
-  const exactUpTo = 120;
-  const found: Link[] = [];
+  const found: { link: Link; whole: boolean; at: number }[] = [];
   let checked = 0;
-  let unknown = false;
   // A short list is checked whole, so its total is exact.
   while (
     checked < candidates.length &&
     checked < budget &&
-    (found.length < need || checked < exactUpTo)
+    (first.length + found.length < need || checked < exactUpTo)
   ) {
     const batch = candidates.slice(checked, Math.min(checked + 40, budget));
     const loaded = await Promise.all(
       batch.map((result) => engine.data(result)),
     );
-    checked += batch.length;
-    for (const item of loaded) {
-      const id = recordId(item.url);
-      const link = id ? data.byId.get(id) : undefined;
-      if (!link) {
-        unknown = true;
-        continue;
-      }
-      if (matches(item) && fit(link)) found.push(link);
+    for (const [i, item] of loaded.entries()) {
+      const link = linkOf(item);
+      if (!link || placed.has(link.id)) continue;
+      if (matches(item) && fit(link))
+        found.push({ link, whole: whole(item), at: checked + i });
     }
+    checked += batch.length;
   }
   const complete = checked >= candidates.length;
-  const links = found.slice(offset, offset + limit);
+  // By relevance, whole-word matches come first among the candidates every
+  // page checks (the first exactUpTo), so pages agree; the rest keep the
+  // index's order.
+  const ordered = ranking
+    ? [
+        ...found.filter((f) => f.at < exactUpTo && f.whole),
+        ...found.filter((f) => f.at < exactUpTo && !f.whole),
+        ...found.filter((f) => f.at >= exactUpTo),
+      ]
+    : found;
+  const all = [...first, ...ordered.map((f) => f.link)];
+  // The candidates still unchecked, less those the whole-word pass checked.
+  const unchecked = candidates
+    .slice(checked)
+    .filter((result) => !firstChecked.has(result.id)).length;
+  const links = all.slice(offset, offset + limit);
   // An empty page from an unfinished walk means the check budget ran out
   // before the offset: asking again would return the same empty page.
-  const more = found.length > offset + limit || (!complete && links.length > 0);
+  const more = all.length > offset + limit || (!complete && links.length > 0);
   if (!complete && links.length > 0)
     notes.push(
-      `Up to ${found.length + candidates.length - checked} links match: ${checked} of ${candidates.length} candidates were checked, which is enough for this page. Ask with next_offset for more.`,
+      `Up to ${all.length + unchecked} links match: ${checked} of ${candidates.length} candidates were checked, which is enough for this page. Ask with next_offset for more.`,
     );
   else if (!complete)
     notes.push(
       `This search reads at most ${budget} candidates, and fewer than ${offset + 1} of them match. Narrow the words, or add a year, kind or site, to reach further.`,
     );
+  else if (all.length === 0)
+    notes.push(
+      await nothingNote(data, generation, engine, want, filters, sort, fit),
+    );
   return {
-    total: complete ? found.length : found.length + candidates.length - checked,
+    total: complete ? all.length : all.length + unchecked,
     exact: complete,
     links,
     nextOffset: more ? offset + links.length : null,
@@ -375,4 +434,61 @@ export async function searchLinks(
     mode: 'index',
     unknown,
   };
+}
+
+const rule =
+  'Each word must start a word in the title, the note or the host, and a "quoted" word must appear whole';
+
+// Why nothing matched. With two to five units (words and "phrases"), each
+// is dropped in turn and the rest searched, so the note can say which word
+// to drop and what the rest finds; a sample of each search is checked.
+async function nothingNote(
+  data: Dataset,
+  generation: number,
+  engine: Engine,
+  want: Wanted,
+  filters: Record<string, string>,
+  sort: Record<string, 'asc' | 'desc'> | undefined,
+  fit: (link: Link) => boolean,
+): Promise<string> {
+  const typed = units(want.words.text);
+  if (typed.length < 2 || typed.length > 5)
+    return `Nothing matched. ${rule}; try fewer words or another form of one.`;
+  const parts: string[] = [];
+  for (const [i, unit] of typed.entries()) {
+    const fewer = typed.filter((_, j) => j !== i).join(' ');
+    const results = (
+      await engine.search(
+        generation,
+        searchTerm({ text: fewer, site: want.site }),
+        filters,
+        sort,
+      )
+    ).filter(isCandidate);
+    const sample = results.slice(0, 40);
+    const loaded = await Promise.all(
+      sample.map((result) => engine.data(result)),
+    );
+    const match = matcher({
+      text: fewer,
+      site: want.site,
+      exclude: want.words.exclude,
+    });
+    let n = 0;
+    for (const item of loaded) {
+      const id = recordId(item.url);
+      const link = id ? data.byId.get(id) : undefined;
+      if (link && match(item) && fit(link)) n++;
+    }
+    if (n) {
+      const dropped = unit.startsWith('"') ? unit : `"${unit}"`;
+      const about = results.length > sample.length ? 'at least ' : '';
+      parts.push(
+        `${parts.length ? 'without' : 'Without'} ${dropped}: ${fewer} matches ${about}${n} link${n === 1 ? '' : 's'}`,
+      );
+    }
+  }
+  return parts.length
+    ? `Nothing has every word. ${parts.join('; ')}.`
+    : `Nothing matched, even with one word dropped. ${rule}.`;
 }

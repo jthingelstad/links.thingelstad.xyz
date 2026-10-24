@@ -51,11 +51,13 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   it for the pages and the MCP server imports it directly.
 - **Search grammar** (`src/lib/search-grammar.ts`): parsing a query (words,
   "phrases", -exclusions, `site:`, `year:`, `wt:`, `kind:`), the rule that keeps
-  only real matches, and `onHost`, what `site:` takes in (the host and the hosts under
-  it), which the MCP server and the suggestions' counts use too. The browser search and the MCP server's `links_search` both
-  import it, and both search the same Pagefind index, so the site and the MCP answer
-  a query the same way. Change the grammar there, never in either caller. No Node
-  imports. The box's suggestions (`src/lib/suggest.ts`, shown by
+  only real matches (a bare word by its first three letters, a "quoted" word whole),
+  and `onHost`, what `site:` takes in (the host and the hosts under it), which the MCP
+  server and the suggestions' counts use too. The browser search and the MCP server's
+  `links_search` both import it, and both search the same Pagefind index, so the site
+  and the MCP find the same links; the MCP alone puts whole-word matches first
+  (`wholeWords`), the browser shows the index's order. Change the grammar there, never
+  in either caller. No Node imports. The box's suggestions (`src/lib/suggest.ts`, shown by
   `src/scripts/suggest.ts`) read the word at the cursor with its `tokenAt` and suggest
   from `/search/suggest.json`, the search page's own file (not a fixed URL, not part
   of the dataset); `validate:site` checks it against `/hosts.json` and `/issues.json`.
