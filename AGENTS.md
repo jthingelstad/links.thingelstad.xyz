@@ -6,8 +6,9 @@ https://links.thingelstad.xyz/, the MCP server at `/mcp`. The design is `docs/DI
 is `docs/DATA.md`; read them before changing structure, URLs or data.
 
 - Built with Astro and TypeScript on the POAP pattern (`poap.thingelstad.xyz`): static
-  output, Pagefind over the record pages only, minimal JavaScript (search, the Kudos
-  status line on record pages, and turning the home page to today's quote), no
+  output, Pagefind over the record pages only, minimal JavaScript (search, the home page's live
+  results, the Kudos status line on record pages, and turning the home page to today's
+  quote), no
   frameworks, nothing fetched at serve time from another host. The exceptions are the
   footer photo, `owner.avatar` from `shared/sites.json`, and Tinylytics, one script in
   production builds only (`PUBLIC_TINYLYTICS_ENABLED=true`, set by the deploy

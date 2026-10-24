@@ -802,6 +802,15 @@ img {
   flex: 1;
   min-width: 0;
 }
+/* On a narrow screen the list runs under the button too. */
+@media (max-width: 36rem) {
+  .search-form {
+    position: relative;
+  }
+  .search-box {
+    position: static;
+  }
+}
 .search-form input[type='search'] {
   flex: 1;
   min-width: 0;
@@ -862,6 +871,36 @@ img {
   color: var(--muted);
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+/* The home page's live results (src/scripts/home.ts): up to five links
+   after the suggestions, title over host and date, then a row for all of
+   them on the search page. */
+.home-search .search-suggest {
+  text-align: left;
+}
+.search-suggest li.suggest-link {
+  flex-direction: column;
+  gap: 2px;
+  align-items: stretch;
+}
+.search-suggest li:not(.suggest-link) + li.suggest-link {
+  margin-top: 4px;
+  border-top: 1px solid var(--line);
+}
+.suggest-title {
+  overflow: hidden;
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.suggest-link .suggest-note {
+  font-size: var(--jt-size-small);
+}
+.suggest-all .suggest-insert {
+  color: var(--link);
+  font-family: inherit;
 }
 /* A site's links by year, 2005 on the left, as on the record page. On a
    narrow screen the count comes first and the bars give way; their words

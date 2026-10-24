@@ -303,3 +303,22 @@ test('the box is a combobox over the list, and the page names the file', () => {
   // Suggestions are text, never markup.
   assert.doesNotMatch(script, /innerHTML|insertAdjacentHTML/);
 });
+
+test('the home box is a combobox too, with live results', () => {
+  const page = readFileSync('src/pages/index.astro', 'utf8');
+  assert.match(page, /action="\/search\/"/, 'still a plain form');
+  assert.match(page, /role="combobox"/);
+  assert.match(page, /aria-controls="home-suggest"/);
+  assert.match(page, /id="home-suggest"[\s\S]*role="listbox"/);
+  assert.match(page, /data-suggest=\{suggestPath\}/);
+  assert.match(page, /aria-live="polite"[^>]*data-home-status/);
+  assert.match(page, /initHome\(\)/);
+  const script = readFileSync('src/scripts/home.ts', 'utf8');
+  assert.match(script, /from '\.\/pagefind\.ts'/, 'one Pagefind loader');
+  assert.match(script, /from '\.\.\/lib\/search-grammar\.ts'/);
+  assert.doesNotMatch(script, /innerHTML|insertAdjacentHTML/);
+  assert.match(
+    readFileSync('src/scripts/search.ts', 'utf8'),
+    /from '\.\/pagefind\.ts'/,
+  );
+});

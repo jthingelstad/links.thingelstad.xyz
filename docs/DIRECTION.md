@@ -96,7 +96,7 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 
 | URL | What |
 | --- | --- |
-| `/` | Built as a search box, like Google's front page (Jamie, 2026-10-23): the wordmark, the box, how many links are in the index and the years they span, and a row of ways in (Newest, Years, Hosts, Kinds, Issues, Stats, Feed; Topics goes first once topic pages exist). A quote of the day from `content/quotes.md` when it holds any; nothing while it is empty. The site header is left off this page |
+| `/` | Built as a search box, like Google's front page (Jamie, 2026-10-23): the wordmark, the box, how many links are in the index and the years they span, and a row of ways in (Newest, Years, Hosts, Kinds, Issues, Stats, Feed; Topics goes first once topic pages exist). A quote of the day from `content/quotes.md` when it holds any; nothing while it is empty. The site header is left off this page. The box suggests as `/search/`'s does and shows the first five links that match as you type (section "Search"); Enter with nothing chosen goes to `/search/` |
 | `/search/?q=` | Results: title, host, saved date, a snippet of the note, a WT chip; filters for topic, year, kind, in a Weekly Thing, has a note; sort by relevance or date. Built: `kind:video` keeps one kind and, with no other words, links that kind's page; the box suggests as an operator is typed (section "Search") |
 | `/search/suggest.json` | What the search box suggests from: every host with its count and its links in each Central year, every issue with its title, Central date and saved links, each year's and kind's count. The search page's own file, shaped for it and free to change with it; not part of the dataset |
 | `/links/<id>/` | The record (below). `<id>` is the first 12 hex characters of md5 of the saved URL, which is Pinboard's API `hash`; anyone can compute it from the URL |
@@ -283,6 +283,20 @@ were measured and left out: Pagefind's filter counts, loaded with
 `filters()`, count a phrase as either word (`"open web"` claimed 21 links in 2008 where
 none match) and know nothing of `site:` or `-word`, so they disagree with the results on
 the same page.
+
+**Live results on the home page, built 2026-10-24** (Jamie: "Approved: build
+links.thingelstad.xyz search typeahead PR 2, live results on the home page"). The home
+box is the same combobox (`src/scripts/home.ts`): its suggestions come first, then, once
+the box holds a word of three letters or a site and the word at the cursor is finished,
+the first five links that match (title over host and date, each a link to its record),
+then a row for all of them on the search page ("All 46 links", or "Up to" once the exact
+check has dropped one, as on `/search/`). Down and Enter open a link's record; Enter with
+nothing chosen searches on `/search/`, and without JavaScript the box is the plain form it
+was. Pagefind loads on the first such search (`src/scripts/pagefind.ts`, shared with
+`/search/`), never with the page. A word Pagefind does not know shrinks to a prefix and
+brings up every link that has it (199 for `xqzvjj`), none of them real matches; `/search/`
+checks them all, the home box only the closest 25, and says so to a screen reader ("No
+close matches") rather than "No links match".
 
 Results open the record, not the destination. The destination is one click away on
 every record and marked on every result. The record is the product (the connections
