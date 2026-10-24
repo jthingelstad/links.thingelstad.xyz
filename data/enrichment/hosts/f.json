@@ -42,5 +42,64 @@
    ],
    "checked": "2026-10-23T21:28:33Z"
   }
+ },
+ "feld.com": {
+  "checked": "2026-10-24T01:46:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.150.1.65",
+    "216.150.16.193"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.vercel-dns.com",
+    "ns2.vercel-dns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:46:31Z",
+   "title": "Feld Thoughts",
+   "generator": "Hugo 0.168.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://feld.com/index.xml",
+     "title": "rss"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://feld.com/subscribe/",
+    "https://feld.com/index.xml",
+    "https://x.com/bfeld",
+    "https://www.linkedin.com/in/bfeld",
+    "https://www.youtube.com/@BradFeld"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "feld.com",
+   "registrar": "Name.com, Inc.",
+   "registered": "1995-03-02",
+   "expires": "2028-05-17",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1.vercel-dns.com",
+    "ns2.vercel-dns.com"
+   ],
+   "checked": "2026-10-24T01:46:31Z"
+  }
  }
 }

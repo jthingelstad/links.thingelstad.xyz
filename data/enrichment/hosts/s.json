@@ -1,4 +1,62 @@
 {
+ "schneier.com": {
+  "checked": "2026-10-24T01:46:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.16.172.203",
+    "199.16.173.239"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns79.worldnic.com",
+    "ns80.worldnic.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:46:38Z",
+   "title": "Schneier on Security -",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.schneier.com/feed/",
+     "title": "Schneier on Security » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.schneier.com/comments/feed/",
+     "title": "Schneier on Security » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "schneier.com",
+   "registrar": "Network Solutions, LLC",
+   "registered": "1999-05-22",
+   "expires": "2029-05-22",
+   "status": [
+    "active"
+   ],
+   "nameservers": [
+    "ns79.worldnic.com",
+    "ns80.worldnic.com"
+   ],
+   "checked": "2026-10-24T01:46:38Z"
+  }
+ },
  "scripting.com": {
   "checked": "2026-10-23T21:30:56Z",
   "method": "enrich_hosts",
@@ -87,6 +145,53 @@
     "ns3.wordpress.com"
    ],
    "checked": "2026-10-23T21:26:33Z"
+  }
+ },
+ "signalvnoise.com": {
+  "checked": "2026-10-24T01:46:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.28.173",
+    "104.18.29.173"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "merlin.ns.cloudflare.com",
+    "serena.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:46:50Z",
+   "title": "Signal v. Noise is closed. | SvN",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "signalvnoise.com",
+   "registrar": "Cloudflare, Inc.",
+   "registered": "2014-01-16",
+   "expires": "2027-01-16",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "merlin.ns.cloudflare.com",
+    "serena.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T01:46:50Z"
   }
  },
  "simonwillison.net": {

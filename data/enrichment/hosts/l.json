@@ -1,4 +1,47 @@
 {
+ "larahogan.me": {
+  "checked": "2026-10-24T01:48:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:48:19Z",
+   "title": "Management Coach & Trainer for the Tech Industry | Lara Hogan",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://larahogan.me/feed.xml",
+     "title": "RSS Feed for Lara Hogan's Blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": null,
+  "rdap_error": "no RDAP service for .me"
+ },
  "leadershipfreak.blog": {
   "checked": "2026-10-23T21:27:45Z",
   "method": "enrich_hosts",

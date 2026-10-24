@@ -1,4 +1,67 @@
 {
+ "vanityfair.com": {
+  "checked": "2026-10-24T01:48:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.223.6.210",
+    "166.117.251.134"
+   ],
+   "aaaa": [
+    "2600:9000:a41b:ef95:eff:32b3:411c:f36c",
+    "2600:9000:a707:a46c:560f:b721:9702:d75e"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1116.awsdns-11.org",
+    "ns-1935.awsdns-49.co.uk",
+    "ns-28.awsdns-03.com",
+    "ns-836.awsdns-40.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:48:08Z",
+   "title": "Vanity Fair - Entertainment, Politics, and Fashion News | Vanity Fair",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.vanityfair.com/feed/rss",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "vanityfair.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "1996-03-09",
+   "expires": "2027-03-10",
+   "status": [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns-1116.awsdns-11.org",
+    "ns-1935.awsdns-49.co.uk",
+    "ns-28.awsdns-03.com",
+    "ns-836.awsdns-40.net"
+   ],
+   "checked": "2026-10-24T01:48:08Z"
+  }
+ },
  "venturebeat.com": {
   "checked": "2026-10-23T21:28:53Z",
   "method": "enrich_hosts",
@@ -85,6 +148,65 @@
     "ns-70.awsdns-08.com"
    ],
    "checked": "2026-10-23T21:26:22Z"
+  }
+ },
+ "vox.com": {
+  "checked": "2026-10-24T01:48:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.91",
+    "151.101.65.91",
+    "151.101.129.91",
+    "151.101.193.91"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1283.awsdns-32.org",
+    "ns-1679.awsdns-17.co.uk",
+    "ns-221.awsdns-27.com",
+    "ns-762.awsdns-31.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:48:33Z",
+   "title": "Vox",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.vox.com/rss/index.xml",
+     "title": "Vox"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "vox.com",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "1994-09-30",
+   "expires": "2027-09-29",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1283.awsdns-32.org",
+    "ns-1679.awsdns-17.co.uk",
+    "ns-221.awsdns-27.com",
+    "ns-762.awsdns-31.net"
+   ],
+   "checked": "2026-10-24T01:48:33Z"
   }
  }
 }

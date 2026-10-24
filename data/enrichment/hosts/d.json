@@ -1,4 +1,62 @@
 {
+ "dailykos.com": {
+  "checked": "2026-10-24T01:46:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.73"
+   ],
+   "aaaa": [
+    "2a04:fa87:fffd::c000:4249"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1254.awsdns-28.org",
+    "ns-1935.awsdns-49.co.uk",
+    "ns-389.awsdns-48.com",
+    "ns-845.awsdns-41.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:46:56Z",
+   "title": "Daily Kos - The Liberal Media",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.dailykos.com/blogs/main.rss",
+     "title": "Daily Kos » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "dailykos.com",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "2002-06-26",
+   "expires": "2027-09-12",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1254.awsdns-28.org",
+    "ns-1935.awsdns-49.co.uk",
+    "ns-389.awsdns-48.com",
+    "ns-845.awsdns-41.net"
+   ],
+   "checked": "2026-10-24T01:46:56Z"
+  }
+ },
  "daringfireball.net": {
   "checked": "2026-10-23T21:25:30Z",
   "method": "enrich_hosts",

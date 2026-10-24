@@ -145,5 +145,67 @@
    ],
    "checked": "2026-10-23T21:28:38Z"
   }
+ },
+ "wordpress.org": {
+  "checked": "2026-10-24T01:48:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "66.6.42.252"
+   ],
+   "aaaa": [
+    "2620:109:b00a::4206:2afc"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.org",
+    "ns2.wordpress.org",
+    "ns3.wordpress.org",
+    "ns4.wordpress.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:48:10Z",
+   "title": "Blog Tool, Publishing Platform, and CMS – WordPress.org",
+   "generator": "WordPress 7.2-beta1-64690",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "http://wordpress.org/news/feed/",
+     "title": "WordPress Blog RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.world/@WordPress"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "wordpress.org",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2003-03-28",
+   "expires": "2035-03-28",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.wordpress.org",
+    "ns2.wordpress.org",
+    "ns3.wordpress.org",
+    "ns4.wordpress.org"
+   ],
+   "checked": "2026-10-24T01:48:10Z"
+  }
  }
 }

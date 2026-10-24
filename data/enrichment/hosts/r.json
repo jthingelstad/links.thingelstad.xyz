@@ -1,4 +1,131 @@
 {
+ "rajiv.com": {
+  "checked": "2026-10-24T01:48:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.66.40.174",
+    "172.66.43.82"
+   ],
+   "aaaa": [
+    "2606:4700:3108::ac42:28ae",
+    "2606:4700:3108::ac42:2b52"
+   ],
+   "cname": null,
+   "ns": [
+    "jay.ns.cloudflare.com",
+    "vera.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:48:30Z",
+   "title": "Rajiv Pant",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://rajiv.com/feed.xml",
+     "title": "Rajiv Pant RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://rajiv.com",
+    "https://www.linkedin.com/in/rajivpant/",
+    "https://github.com/rajivpant"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "rajiv.com",
+   "registrar": "Cloudflare, Inc.",
+   "registered": "1996-04-10",
+   "expires": "2027-04-11",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "jay.ns.cloudflare.com",
+    "vera.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T01:48:30Z"
+  }
+ },
+ "randsinrepose.com": {
+  "checked": "2026-10-24T01:47:04Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.2.146",
+    "172.67.129.80"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:8150",
+    "2606:4700:3032::6815:292"
+   ],
+   "cname": null,
+   "ns": [
+    "jule.ns.cloudflare.com",
+    "roan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:47:04Z",
+   "title": "Rands in Repose – Stories about the humans who build software",
+   "generator": "NitroPack",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://randsinrepose.com/feed/",
+     "title": "Rands in Repose » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://randsinrepose.com/comments/feed/",
+     "title": "Rands in Repose » Comments Feed"
+    },
+    {
+     "type": "json",
+     "url": "https://randsinrepose.com/feed/json/",
+     "title": "Rands in Repose » JSON Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "randsinrepose.com",
+   "registrar": "easyDNS Technologies Inc.",
+   "registered": "2003-08-14",
+   "expires": "2031-08-14",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "jule.ns.cloudflare.com",
+    "roan.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T01:47:04Z"
+  }
+ },
  "readwrite.com": {
   "checked": "2026-10-23T21:26:36Z",
   "method": "enrich_hosts",

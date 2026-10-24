@@ -71,6 +71,61 @@
    "checked": "2026-10-23T21:28:45Z"
   }
  },
+ "macdrifter.com": {
+  "checked": "2026-10-24T01:46:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.108.108.219"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.us.opalstack.com",
+    "ns2.us.opalstack.com",
+    "ns3.us.opalstack.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:46:58Z",
+   "title": "Macdrifter",
+   "generator": "Hugo 0.88.1",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.macdrifter.com/feeds/rss.xml",
+     "title": "Macdrifter"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "macdrifter.com",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "2008-05-21",
+   "expires": "2027-05-21",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.us.opalstack.com",
+    "ns2.us.opalstack.com",
+    "ns3.us.opalstack.com"
+   ],
+   "checked": "2026-10-24T01:46:58Z"
+  }
+ },
  "macsparky.com": {
   "checked": "2026-10-23T21:26:49Z",
   "method": "enrich_hosts",
@@ -191,6 +246,63 @@
    "checked": "2026-10-23T21:29:54Z"
   }
  },
+ "marketwatch.com": {
+  "checked": "2026-10-24T01:46:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "99.86.77.35",
+    "99.86.77.47",
+    "99.86.77.54",
+    "99.86.77.63"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1291.awsdns-33.org",
+    "ns-1588.awsdns-06.co.uk",
+    "ns-450.awsdns-56.com",
+    "ns-705.awsdns-24.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 401
+  },
+  "home": {
+   "checked": "2026-10-24T01:46:22Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 401 (DataDome)"
+  },
+  "rdap": {
+   "domain": "marketwatch.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "1997-07-31",
+   "expires": "2027-07-30",
+   "status": [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns-1291.awsdns-33.org",
+    "ns-1588.awsdns-06.co.uk",
+    "ns-450.awsdns-56.com",
+    "ns-705.awsdns-24.net"
+   ],
+   "checked": "2026-10-24T01:46:22Z"
+  }
+ },
  "martinfowler.com": {
   "checked": "2026-10-23T21:29:16Z",
   "method": "enrich_hosts",
@@ -231,6 +343,122 @@
     "ns-907.awsdns-49.net"
    ],
    "checked": "2026-10-23T21:29:16Z"
+  }
+ },
+ "mashable.com": {
+  "checked": "2026-10-24T01:48:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.42.17",
+    "172.64.145.239"
+   ],
+   "aaaa": [
+    "2606:4700:440b::ac40:91ef",
+    "2a06:98c1:3108::6812:2a11"
+   ],
+   "cname": null,
+   "ns": [
+    "melinda.ns.cloudflare.com",
+    "stan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:48:21Z",
+   "title": "Mashable",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://mashable.com/feeds/rss/all",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "mashable.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "2005-07-19",
+   "expires": "2029-07-19",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "melinda.ns.cloudflare.com",
+    "stan.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T01:48:21Z"
+  }
+ },
+ "mattnorman.com": {
+  "checked": "2026-10-24T01:46:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.241.173.224"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.bluehost.com",
+    "ns2.bluehost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:46:34Z",
+   "title": "Home - Matt Norman",
+   "generator": "WordPress 7.0.7",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.mattnorman.com/feed/",
+     "title": "Matt Norman » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.mattnorman.com/comments/feed/",
+     "title": "Matt Norman » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "mattnorman.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2009-09-06",
+   "expires": "2027-09-06",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.bluehost.com",
+    "ns2.bluehost.com"
+   ],
+   "checked": "2026-10-24T01:46:34Z"
   }
  },
  "mediawiki.org": {

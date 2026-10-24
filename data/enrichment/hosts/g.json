@@ -90,5 +90,57 @@
    ],
    "checked": "2026-10-23T21:25:19Z"
   }
+ },
+ "googleblog.blogspot.com": {
+  "checked": "2026-10-24T01:46:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.250.189.97"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:813::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:46:20Z",
+   "title": "News from Google | Google Product and Technology News and Stories",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "blogspot.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2000-07-31",
+   "expires": "2027-07-31",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns1.google.com",
+    "ns2.google.com",
+    "ns3.google.com",
+    "ns4.google.com"
+   ],
+   "checked": "2026-10-24T01:46:20Z"
+  }
  }
 }

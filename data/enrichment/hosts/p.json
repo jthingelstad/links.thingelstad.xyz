@@ -1,0 +1,125 @@
+{
+ "pagerduty.com": {
+  "checked": "2026-10-24T01:46:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.163.146.4",
+    "44.237.102.140",
+    "52.36.64.228"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1285.awsdns-32.org",
+    "ns-1659.awsdns-15.co.uk",
+    "ns-474.awsdns-59.com",
+    "ns-963.awsdns-56.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:46:24Z",
+   "title": "PagerDuty: The AI-First Operations Platform",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "pagerduty.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2009-02-12",
+   "expires": "2027-01-31",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns-1285.awsdns-32.org",
+    "ns-1659.awsdns-15.co.uk",
+    "ns-474.awsdns-59.com",
+    "ns-963.awsdns-56.net"
+   ],
+   "checked": "2026-10-24T01:46:24Z"
+  }
+ },
+ "patrickrhone.net": {
+  "checked": "2026-10-24T01:48:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "69.163.180.155"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:48:26Z",
+   "title": "Rhoneisms – by Patrick Rhone, Master Generalist",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.patrickrhone.net/feed/",
+     "title": "Rhoneisms » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.patrickrhone.net/comments/feed/",
+     "title": "Rhoneisms » Comments Feed"
+    },
+    {
+     "type": "json",
+     "url": "https://www.patrickrhone.net/feed/json/",
+     "title": "Rhoneisms » JSON Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://micro.blog/patrickrhone"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "patrickrhone.net",
+   "registrar": "DreamHost, LLC",
+   "registered": "2009-05-19",
+   "expires": "2027-05-19",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "checked": "2026-10-24T01:48:26Z"
+  }
+ }
+}

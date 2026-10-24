@@ -42,5 +42,62 @@
    ],
    "checked": "2026-10-23T21:27:43Z"
   }
+ },
+ "cnbc.com": {
+  "checked": "2026-10-24T01:46:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.86.15.12",
+    "52.203.38.227",
+    "98.95.101.60"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p05.nsone.net",
+    "dns2.p05.nsone.net",
+    "dns3.p05.nsone.net",
+    "dns4.p05.nsone.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:46:30Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "cnbc.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "1997-09-30",
+   "expires": "2027-09-29",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "dns1.p05.nsone.net",
+    "dns2.p05.nsone.net",
+    "dns3.p05.nsone.net",
+    "dns4.p05.nsone.net"
+   ],
+   "checked": "2026-10-24T01:46:30Z"
+  }
  }
 }

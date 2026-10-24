@@ -110,5 +110,62 @@
    ],
    "checked": "2026-10-23T21:26:54Z"
   }
+ },
+ "oreilly.com": {
+  "checked": "2026-10-24T01:47:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.169.83.167"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "a1-225.akam.net",
+    "a13-64.akam.net",
+    "a16-65.akam.net",
+    "a20-66.akam.net",
+    "a3-67.akam.net",
+    "a4-64.akam.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:47:02Z",
+   "title": "O'Reilly Media - Technology and Business Training",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "oreilly.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "1997-05-27",
+   "expires": "2027-05-26",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "a1-225.akam.net",
+    "a13-64.akam.net",
+    "a16-65.akam.net",
+    "a20-66.akam.net",
+    "a3-67.akam.net",
+    "a4-64.akam.net"
+   ],
+   "checked": "2026-10-24T01:47:02Z"
+  }
  }
 }

@@ -152,6 +152,56 @@
    "checked": "2026-10-23T21:25:28Z"
   }
  },
+ "technologyreview.com": {
+  "checked": "2026-10-24T01:46:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.184"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1-01.azure-dns.com",
+    "ns2-01.azure-dns.net",
+    "ns3-01.azure-dns.org",
+    "ns4-01.azure-dns.info"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:46:41Z",
+   "title": "MIT Technology Review",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "technologyreview.com",
+   "registrar": "Network Solutions, LLC",
+   "registered": "1998-02-23",
+   "expires": "2032-02-22",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1-01.azure-dns.com",
+    "ns2-01.azure-dns.net",
+    "ns3-01.azure-dns.org",
+    "ns4-01.azure-dns.info"
+   ],
+   "checked": "2026-10-24T01:46:41Z"
+  }
+ },
  "ted.com": {
   "checked": "2026-10-23T21:28:48Z",
   "method": "enrich_hosts",
@@ -521,6 +571,67 @@
     "ns4.tuaw.com"
    ],
    "checked": "2026-10-23T21:25:33Z"
+  }
+ },
+ "twitter.com": {
+  "checked": "2026-10-24T01:47:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.66.0.227"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "a.r06.twtrdns.net",
+    "a.u06.twtrdns.net",
+    "b.r06.twtrdns.net",
+    "b.u06.twtrdns.net",
+    "c.r06.twtrdns.net",
+    "c.u06.twtrdns.net",
+    "d.r06.twtrdns.net",
+    "d.u06.twtrdns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T01:47:07Z",
+   "title": "X. It’s what’s happening / X",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "twitter.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "2000-01-21",
+   "expires": "2027-01-21",
+   "status": [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "a.r06.twtrdns.net",
+    "a.u06.twtrdns.net",
+    "b.r06.twtrdns.net",
+    "b.u06.twtrdns.net",
+    "c.r06.twtrdns.net",
+    "c.u06.twtrdns.net",
+    "d.r06.twtrdns.net",
+    "d.u06.twtrdns.net"
+   ],
+   "checked": "2026-10-24T01:47:07Z"
   }
  }
 }
