@@ -330,3 +330,24 @@ test('the pick of the day is the same all day, in Central', () => {
   );
   assert.deepEqual(differ, []);
 });
+
+test('thin pages are left out of search indexes, the rest are in', () => {
+  for (const link of data.links) {
+    const words = link.voice === 'jamie' || link.voice === 'mixed';
+    const sent = data.appearances.has(link.id);
+    assert.equal(data.indexedRecord(link), words || sent, link.id);
+    assert.equal(
+      data.unindexed.has(data.absolute(data.linkPath(link.id))),
+      !(words || sent),
+      link.id,
+    );
+  }
+  for (const host of data.hosts)
+    assert.equal(
+      data.unindexed.has(data.absolute(data.hostPath(host.host))),
+      host.count === 1,
+      host.host,
+    );
+  // A bare link and an excerpt alone are thin; Jamie's words are not.
+  assert.ok(data.unindexed.size > 10000 && data.unindexed.size < 16000);
+});

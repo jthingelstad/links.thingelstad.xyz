@@ -16,7 +16,7 @@ import { type Kind, kindOf, kinds } from './kinds.ts';
 import { hostOf, normalizeUrl } from './normalize.ts';
 import { type Voice, voiceOf } from './voice.ts';
 import { shownTitle, titleEndings } from './titles.ts';
-import { absolute, issueKey, linkPath } from './paths.ts';
+import { absolute, hostPath, issueKey, linkPath } from './paths.ts';
 
 export { hostOf, normalizeUrl };
 export { type Kind, kinds };
@@ -416,6 +416,23 @@ export const noteText = (link: Link, max?: number) => plainNote(link.note, max);
 // The URL as a reader would type it: no scheme, no trailing slash.
 export const displayUrl = (url: string) =>
   url.replace(/^[a-z][a-z0-9+.-]*:\/\//i, '').replace(/\/$/, '');
+
+// Pages search engines may index (Jamie, 2026-10-24: "there isn't enough for
+// a crawler to get any value" in the rest). A record is indexed when it holds
+// Jamie's own words or ran in a Weekly Thing; a host page when it lists more
+// than one link. The rest stay up for readers, marked noindex and left out of
+// the sitemap, and crawlers still follow their links.
+export const indexedRecord = (link: Link) =>
+  link.voice === 'jamie' || link.voice === 'mixed' || appearances.has(link.id);
+export const indexedHost = (host: Host) => host.count > 1;
+export const unindexed = new Set([
+  ...links
+    .filter((link) => !indexedRecord(link))
+    .map((link) => absolute(linkPath(link.id))),
+  ...hosts
+    .filter((host) => !indexedHost(host))
+    .map((host) => absolute(hostPath(host.host))),
+]);
 
 export const counts = {
   links: links.length,

@@ -9,6 +9,7 @@ import LinkList from '../../components/LinkList.astro';
 import {
   dateLabel,
   hosts,
+  indexedHost,
   linksByHost,
   plural,
   type Host,
@@ -52,6 +53,7 @@ const openWeb = facts
 
 <Layout
   title={`${host.host} · Linking Things`}
+  noindex={!indexedHost(host)}
   description={`${plural(host.count, 'link')} Jamie Thingelstad saved from ${host.host}, ${span}.`}
   alternates={feeds}
 >

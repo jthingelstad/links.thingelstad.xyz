@@ -192,6 +192,12 @@ site's name on the end ("Social RSS | Seth's Blog" is "Social RSS"; rule in
 second many links share, like the 67 an import stamped on 2010-12-05) is shown as
 the date alone; both were Jamie's yes on 2026-10-24. The twins, the data and the MCP
 server keep the title and time exactly as saved.
+Search engines index a record only when it holds Jamie's words (a note in his
+voice, or mixed) or ran in a Weekly Thing, and a host page only when it lists more
+than one link. The rest (about 8,100 records and 5,800 hosts) carry `noindex,
+follow` and stay out of the sitemap (`unindexed` in `data.ts`); readers, the site's
+search and the MCP still have every one. Jamie, 2026-10-24: "there isn't enough
+for a crawler to get any value".
 "About this link" (`src/components/RecordFacts.astro`) is one card of rows, each
 shown only when it has something to say: Weekly Thing (the issue, its section, the
 link's place in it, the send date and how long after saving), Site (the host's
