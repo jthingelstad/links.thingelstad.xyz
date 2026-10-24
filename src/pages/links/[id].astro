@@ -1,12 +1,15 @@
 ---
 // The record (DIRECTION.md, "The record page"): the link as the hero, then
-// only the rows that have something to say. A bare link is the same card with
-// fewer rows, never an empty heading. Pagefind indexes the title (weighted),
-// the note and the host; everything else is marked out of the index.
+// the note, "About this link" beside it, and what connects it below. A bare
+// link is the same page with fewer rows, never an empty heading: with no
+// note and no facts card, "About this link" runs across the page instead of
+// sitting beside nothing. Pagefind indexes the title (weighted), the note and
+// the host; everything else is marked out of the index.
 import Layout from '../../layouts/Layout.astro';
 import LinkList from '../../components/LinkList.astro';
 import Kudos from '../../components/Kudos.astro';
 import FactsCard from '../../components/FactsCard.astro';
+import RecordFacts from '../../components/RecordFacts.astro';
 import {
   type Link,
   appearances,
@@ -16,8 +19,6 @@ import {
   hostPath,
   issueLabel,
   issuePath,
-  issueTitle,
-  kindPath,
   linkJsonPath,
   linkMarkdownPath,
   linkPath,
@@ -29,16 +30,10 @@ import {
   plural,
   shortDateLabel,
   timeLabel,
-  waybackUrl,
+  weekdayDateLabel,
 } from '../../lib/data';
-import { siteRef } from '../../lib/sites';
-import { kindWords, withoutAffiliateTag } from '../../lib/kinds';
-import {
-  alsoSavedAs,
-  factsOf,
-  waybackLabel,
-  waybackOf,
-} from '../../lib/enrichment';
+import { withoutAffiliateTag } from '../../lib/kinds';
+import { alsoSavedAs, factsOf } from '../../lib/enrichment';
 
 export function getStaticPaths() {
   return links.map((link) => ({ params: { id: link.id }, props: { link } }));
@@ -52,7 +47,18 @@ const appears = appearances.get(link.id) ?? [];
 const excerpt = link.voice === 'excerpt';
 const era = link.year >= 2007 && link.year <= 2016;
 const facts = factsOf(link.id);
-const wayback = waybackLabel(waybackOf(link.id));
+// A note of one paragraph and a sentence or two is set larger, so a short
+// remark is not lost on the page; an excerpt never is.
+const short =
+  link.hasNote &&
+  !excerpt &&
+  !link.note.trim().includes('\n') &&
+  noteText(link).length < 280;
+// The URL as typed, its host in weight: the title already links there.
+const shown = displayUrl(withoutAffiliateTag(link.url));
+const cut = shown.indexOf('/');
+const shownHost = cut < 0 ? shown : shown.slice(0, cut);
+const shownPath = cut < 0 ? '' : shown.slice(cut);
 // One video saved under another address; "Saved twice" lists those that
 // normalise alike already.
 const twice = new Set(c.savedTwice.map((other) => other.id));
@@ -72,155 +78,128 @@ const description = link.hasNote
 >
   <article class="record h-entry" data-pagefind-body>
     <header class="record-hero">
-      <p class="meta" data-pagefind-ignore>
-        <a href={hostPath(link.host)}>{link.host}</a> · Saved{' '}
-        <time
-          class="dt-published"
-          datetime={link.saved}
-          title={`${timeLabel(link.saved)} Central`}
-        >
-          {dateLabel(link.saved)}
-        </time>
-      </p>
       <h1 class="record-title p-name" data-pagefind-weight="10">
         <a class="u-bookmark-of" href={link.url}>
           {link.title}
+          <svg
+            class="out"
+            viewBox="0 0 12 12"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <path d="M4 2h6v6M10 2 2.5 9.5" />
+          </svg>
         </a>
       </h1>
       <p class="record-url" data-pagefind-ignore title={link.url}>
-        {displayUrl(withoutAffiliateTag(link.url))}
+        <b>{shownHost}</b>
+        {shownPath}
       </p>
-      <Kudos path={linkPath(link.id)} />
+      <div class="record-byline" data-pagefind-ignore="all">
+        <span>
+          Saved{' '}
+          <time class="dt-published" datetime={link.saved}>
+            {weekdayDateLabel(link.saved)}, {timeLabel(link.saved)}
+          </time>
+        </span>
+        {appears.map((a) => (
+          <a class="chip" href={issuePath(a.issue)}>
+            In {issueLabel(a.issue)}
+          </a>
+        ))}
+        <Kudos path={linkPath(link.id)} />
+      </div>
     </header>
 
-    <div class="record-body">
-      {facts && <FactsCard facts={facts} />}
-      {link.hasNote && (
-        <section class="section record-note">
-          <h2 data-pagefind-ignore>
-            {excerpt ? 'From the page' : 'What Jamie wrote'}
-          </h2>
-          {excerpt && (
-            <p class="note-label" data-pagefind-ignore>
-              {era
-                ? `Saved with the link. Notes from 2007 to 2016 are mostly the page's own words, so this is probably an excerpt.`
-                : 'A quotation saved with the link.'}
-            </p>
+    {facts || link.hasNote ? (
+      <div class="record-body">
+        <div class="record-main">
+          {facts && <FactsCard facts={facts} />}
+          {link.hasNote && (
+            <section class="record-note">
+              {excerpt && (
+                <>
+                  <h2 class="record-label" data-pagefind-ignore>
+                    From the page
+                  </h2>
+                  <p class="note-label" data-pagefind-ignore>
+                    {era
+                      ? `Saved with the link. Notes from 2007 to 2016 are mostly the page's own words, so this is probably an excerpt.`
+                      : 'A quotation saved with the link.'}
+                  </p>
+                </>
+              )}
+              <div
+                class:list={['note', 'e-content', { excerpt, short }]}
+                set:html={noteHtml(link)}
+              />
+              {excerpt && (
+                <p class="note-cite" data-pagefind-ignore>
+                  {link.host}
+                </p>
+              )}
+            </section>
           )}
-          <div
-            class:list={['note', 'e-content', { excerpt }]}
-            set:html={noteHtml(link)}
-          />
+        </div>
+        <RecordFacts link={link} layout="card" />
+      </div>
+    ) : (
+      <RecordFacts link={link} layout="band" />
+    )}
+
+    <div class="record-related" data-pagefind-ignore="all">
+      {sameVideo.length > 0 && (
+        <section class="section">
+          <h2>Also saved as</h2>
+          <LinkList links={sameVideo} compact />
         </section>
       )}
-
-      <aside class="record-side" data-pagefind-ignore="all">
-        {appears.length > 0 && (
-          <section class="section">
-            <h2>Appears in</h2>
-            <ul class="appear">
-              {appears.map((a) => (
-                <li>
-                  <a class="issue-title" href={siteRef(a.issue.url, 'record')}>
-                    {issueTitle(a.issue)}
-                  </a>
-                  <span class="meta">
-                    {[a.section, shortDateLabel(a.issue.date)]
-                      .filter(Boolean)
-                      .join(' · ')}
-                    {' · '}
-                    <a href={issuePath(a.issue)}>
-                      {plural(a.issue.links.length, 'link')} in{' '}
-                      {issueLabel(a.issue)}
-                    </a>
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-        <section class="section record-facts">
-          <h2>Facts</h2>
-          <dl class="facts">
-            <div>
-              <dt>Kind</dt>
-              <dd>
-                <a href={kindPath(link.kind)}>{kindWords[link.kind].name}</a>
-              </dd>
-            </div>
-          </dl>
+      {c.savedTwice.length > 0 && (
+        <section class="section">
+          <h2>Saved twice</h2>
+          <LinkList links={c.savedTwice} compact />
         </section>
-        <section class="section record-elsewhere">
-          <h2>Elsewhere</h2>
-          <ul class="elsewhere">
-            <li>
-              <a href={waybackUrl(link.url)}>Wayback Machine copies</a>
-              {wayback && <span class="meta">, {wayback}</span>}
-            </li>
-            <li>
-              This record as <a href={linkJsonPath(link.id)}>JSON</a> or{' '}
-              <a href={linkMarkdownPath(link.id)}>Markdown</a>
-            </li>
-          </ul>
+      )}
+      {c.mentionedBy.length > 0 && (
+        <section class="section">
+          <h2>Mentioned by</h2>
+          <LinkList links={c.mentionedBy} compact />
         </section>
-      </aside>
-
-      <div class="connections" data-pagefind-ignore="all">
-        {sameVideo.length > 0 && (
-          <section class="section">
-            <h2>Also saved as</h2>
-            <LinkList links={sameVideo} compact />
-          </section>
-        )}
-        {c.savedTwice.length > 0 && (
-          <section class="section">
-            <h2>Saved twice</h2>
-            <LinkList links={c.savedTwice} compact />
-          </section>
-        )}
-        {c.mentionedBy.length > 0 && (
-          <section class="section">
-            <h2>Mentioned by</h2>
-            <LinkList links={c.mentionedBy} compact />
-          </section>
-        )}
-        {c.sameHost.total > 0 && (
-          <section class="section">
-            <h2>
-              Same host{' '}
-              <span class="count">
-                · {plural(c.sameHost.total + 1, 'link')} from {link.host}
-              </span>
-            </h2>
-            <LinkList links={c.sameHost.nearest} compact host={false} />
-            {c.sameHost.total > c.sameHost.nearest.length && (
-              <p class="more">
-                <a href={hostPath(link.host)}>
-                  All {plural(c.sameHost.total + 1, 'link')} from {link.host}
-                </a>
-              </p>
-            )}
-          </section>
-        )}
-        {c.sameWeek.total > 0 && (
-          <section class="section">
-            <h2>
-              Saved the same week{' '}
-              <span class="count">
-                · {plural(c.sameWeek.total + 1, 'link')} that week
-              </span>
-            </h2>
-            <LinkList links={c.sameWeek.nearest} compact />
-            {c.sameWeek.total > c.sameWeek.nearest.length && (
-              <p class="more">
-                <a href={monthPath(link.year, link.month)}>
-                  Everything saved in {monthNames[link.month - 1]} {link.year}
-                </a>
-              </p>
-            )}
-          </section>
-        )}
-      </div>
+      )}
+      {c.sameHost.total > 0 && (
+        <section class="section">
+          <h2>
+            More from <span class="host">{link.host}</span>{' '}
+            <span class="count">· {plural(c.sameHost.total + 1, 'link')}</span>
+          </h2>
+          <LinkList links={c.sameHost.nearest} compact host={false} />
+          {c.sameHost.total > c.sameHost.nearest.length && (
+            <p class="more">
+              <a href={hostPath(link.host)}>
+                All {plural(c.sameHost.total + 1, 'link')} from {link.host}
+              </a>
+            </p>
+          )}
+        </section>
+      )}
+      {c.sameWeek.total > 0 && (
+        <section class="section">
+          <h2>
+            Saved the same week{' '}
+            <span class="count">· {plural(c.sameWeek.total + 1, 'link')}</span>
+          </h2>
+          <LinkList links={c.sameWeek.nearest} compact />
+          {c.sameWeek.total > c.sameWeek.nearest.length && (
+            <p class="more">
+              <a href={monthPath(link.year, link.month)}>
+                Everything saved in {monthNames[link.month - 1]} {link.year}
+              </a>
+            </p>
+          )}
+        </section>
+      )}
     </div>
 
     <span

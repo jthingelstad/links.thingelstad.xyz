@@ -1,0 +1,231 @@
+---
+// "About this link" on the record (DIRECTION.md, "The record page"): one
+// card of rows, each shown only when it has something to say. Beside the
+// note it is a column ("card"); a link with no note and no facts card has
+// nothing beside it, so the rows run across the page instead ("band").
+//
+// The site row draws the host's links per Central year, from its first year
+// to the newest year in the collection, with this link's year marked.
+import {
+  type Link,
+  centralDay,
+  hostPath,
+  issueLabel,
+  issuePath,
+  issueTitle,
+  kindPath,
+  linkJsonPath,
+  linkMarkdownPath,
+  hostYears,
+  linksByHost,
+  number,
+  plural,
+  waybackUrl,
+  weekdayDateLabel,
+  appearances,
+} from '../lib/data';
+import { siteRef } from '../lib/sites';
+import { kindWords } from '../lib/kinds';
+import {
+  calendarMonthLabel,
+  hostFacts,
+  monthYearLabel,
+  waybackOf,
+} from '../lib/enrichment';
+
+interface Props {
+  link: Link;
+  layout: 'card' | 'band';
+}
+const { link, layout } = Astro.props;
+
+const words = [
+  'no',
+  'one',
+  'two',
+  'three',
+  'four',
+  'five',
+  'six',
+  'seven',
+  'eight',
+  'nine',
+  'ten',
+];
+const count = (n: number) => (n <= 10 ? words[n] : number(n));
+const ordinal = (n: number) => {
+  const tens = n % 100;
+  const suffix =
+    tens >= 11 && tens <= 13
+      ? 'th'
+      : (({ 1: 'st', 2: 'nd', 3: 'rd' } as Record<number, string>)[n % 10] ??
+        'th');
+  return `${number(n)}${suffix}`;
+};
+// Whole Central days from the day saved to another moment's Central day.
+const daysFromSaved = (iso: string) =>
+  Math.round(
+    (Date.parse(`${centralDay(iso)}T00:00:00Z`) -
+      Date.parse(`${link.day}T00:00:00Z`)) /
+      86_400_000,
+  );
+// "two days after it was saved", "the day before it was saved".
+const relative = (days: number) =>
+  days === 0
+    ? 'the day it was saved'
+    : days === 1
+      ? 'the day after it was saved'
+      : days === -1
+        ? 'the day before it was saved'
+        : `${count(Math.abs(days))} days ${days > 0 ? 'after' : 'before'} it was saved`;
+
+const appears = appearances.get(link.id) ?? [];
+const sent = appears.map((a) => {
+  const days = daysFromSaved(a.issue.date);
+  const place = `${ordinal(a.position + 1)} of ${plural(a.issue.links.length, 'link')}`;
+  return {
+    ...a,
+    where: a.section
+      ? `${a.section}, ${place}`
+      : `${place[0].toUpperCase()}${place.slice(1)}`,
+    when: `Sent ${weekdayDateLabel(a.issue.date)}${Math.abs(days) <= 60 ? `, ${relative(days)}` : ''}.`,
+  };
+});
+
+const hostLinks = linksByHost.get(link.host) ?? [link];
+const site = hostFacts(link.host);
+const years = hostYears(link.host);
+const firstYear = years[0]?.year ?? link.year;
+const lastYear = years[years.length - 1]?.year ?? link.year;
+const peak = Math.max(1, ...years.map((y) => y.count));
+const bars =
+  hostLinks.length > 1 && years.length > 1
+    ? years.map(({ year, count: n }) => ({
+        year,
+        n,
+        height: n ? Math.max(3, Math.round((n / peak) * 34)) : 2,
+      }))
+    : [];
+const feedNames = { rss: 'RSS feed', atom: 'Atom feed', json: 'JSON Feed' };
+const feed = site?.feeds[0];
+const registered =
+  site?.registered &&
+  `${site.domain && site.domain !== link.host ? site.domain : 'Domain'} registered ${calendarMonthLabel(site.registered)}`;
+
+const wayback = waybackOf(link.id);
+const captured = wayback && wayback.count > 0 ? wayback : undefined;
+const span =
+  captured?.first && captured.last
+    ? monthYearLabel(captured.first) === monthYearLabel(captured.last)
+      ? monthYearLabel(captured.first)
+      : `${monthYearLabel(captured.first)} to ${monthYearLabel(captured.last)}`
+    : undefined;
+const firstDays = captured?.first ? daysFromSaved(captured.first) : undefined;
+const firstCapture =
+  firstDays !== undefined && Math.abs(firstDays) <= 30
+    ? `The first was ${relative(firstDays)}.`
+    : undefined;
+---
+
+<dl
+  class:list={['record-facts', layout]}
+  aria-label="About this link"
+  data-pagefind-ignore="all"
+>
+  {sent.map((a) => (
+    <div>
+      <dt>Weekly Thing</dt>
+      <dd>
+        <a class="lead" href={siteRef(a.issue.url, 'record')}>
+          {issueTitle(a.issue)}
+        </a>
+        <span class="sub">
+          {a.where}. {a.when}
+        </span>
+        <a class="small" href={issuePath(a.issue)}>
+          All {plural(a.issue.links.length, 'link')} in {issueLabel(a.issue)}
+        </a>
+      </dd>
+    </div>
+  ))}
+  <div>
+    <dt>Site</dt>
+    <dd>
+      <a class="lead" href={hostPath(link.host)}>
+        {link.host}
+      </a>
+      {site?.homeTitle && <span class="sub">{site.homeTitle}</span>}
+      {hostLinks.length === 1 && (
+        <span class="sub">The only link from this site</span>
+      )}
+      {bars.length > 0 && (
+        <>
+          <div
+            class="host-years"
+            role="img"
+            aria-label={`${plural(hostLinks.length, 'link')} from ${link.host}, ${firstYear} to ${lastYear}; this one in ${link.year}`}
+          >
+            {bars.map((b) => (
+              <span
+                class:list={['bar', { zero: !b.n, on: b.year === link.year }]}
+                style={`height: ${b.height}px`}
+                title={`${b.year}: ${plural(b.n, 'link')}`}
+              />
+            ))}
+          </div>
+          <p class="host-years-axis" aria-hidden="true">
+            <span>{firstYear}</span>
+            <span>{plural(hostLinks.length, 'link')}</span>
+            <span>{lastYear}</span>
+          </p>
+        </>
+      )}
+      {hostLinks.length > 1 && bars.length === 0 && (
+        <span class="sub">
+          {plural(hostLinks.length, 'link')}, all in {firstYear}
+        </span>
+      )}
+      {(feed || registered) && (
+        <span class="sub">
+          {feed && <a href={feed.url}>{feedNames[feed.type]}</a>}
+          {feed && registered && ' · '}
+          {registered}
+        </span>
+      )}
+    </dd>
+  </div>
+  <div>
+    <dt>Kind</dt>
+    <dd>
+      <a href={kindPath(link.kind)}>{kindWords[link.kind].name}</a>
+    </dd>
+  </div>
+  <div>
+    <dt>Archive</dt>
+    <dd>
+      {captured ? (
+        <>
+          <a class="lead" href={waybackUrl(link.url)}>
+            {captured.capped
+              ? '10,000 or more Wayback Machine captures'
+              : `${plural(captured.count, 'Wayback Machine capture')}`}
+          </a>
+          {(span || firstCapture) && (
+            <span class="sub">
+              {[span && `${span}.`, firstCapture].filter(Boolean).join(' ')}
+            </span>
+          )}
+        </>
+      ) : (
+        <a href={waybackUrl(link.url)}>Wayback Machine copies</a>
+      )}
+    </dd>
+  </div>
+  <div>
+    <dt>This record</dt>
+    <dd>
+      <a href={linkJsonPath(link.id)}>JSON</a> ·{' '}
+      <a href={linkMarkdownPath(link.id)}>Markdown</a>
+    </dd>
+  </div>
+</dl>

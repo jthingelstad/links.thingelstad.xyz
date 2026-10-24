@@ -112,6 +112,17 @@ export function calendarLabel(value: string) {
   return value;
 }
 export const monthYearLabel = (iso: string) => monthYear.format(new Date(iso));
+// A bare calendar date's month (RDAP's registered): "November 2016".
+const utcMonthYear = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'UTC',
+  year: 'numeric',
+  month: 'long',
+});
+export const calendarMonthLabel = (value: string) =>
+  /^\d{4}-\d{2}-\d{2}/.test(value) &&
+  !Number.isNaN(Date.parse(value.slice(0, 10)))
+    ? utcMonthYear.format(new Date(`${value.slice(0, 10)}T00:00:00Z`))
+    : value;
 
 // Hosts: RDAP and the home page (docs/DATA.md; "home" is version 2). Nothing
 // from dns or https.

@@ -178,6 +178,24 @@ the date saved (US Central). Under it:
   Jamie, 2026-10-23: "The kudos button (let's use that name instead of like) is of
   course public. That is how that feature of tinylytics works."
 
+**The layout** (built 2026-10-24 from a design canvas Jamie approved: "the little
+graph is amazing.. love that. build this"). The hero is three lines: the title as
+the destination link, the URL with its host in weight, and one saved line (weekday,
+date and Central time, an "In WT350" chip per issue, Kudos). The note follows with
+no heading, because it is the body of the page; only an excerpt is labelled ("From
+the page", with the 2007 to 2016 caution and the host under the quote). A note of
+one paragraph under 280 characters is set larger, so a short remark is not lost.
+"About this link" (`src/components/RecordFacts.astro`) is one card of rows, each
+shown only when it has something to say: Weekly Thing (the issue, its section, the
+link's place in it, the send date and how long after saving), Site (the host's
+home page title, its links per year from the host's first year to the newest year
+with this link's year marked, from `hostYears` in `data.ts`, its first feed and when
+its domain was registered), Kind, Archive (the Wayback count and span, and when the
+first capture fell against the save if within a month), and the twins. Beside a
+note or a facts card it is a column; with neither it runs across the page as a band.
+What connects the link (also saved as, saved twice, mentioned by, more from the
+host, saved the same week) sits below a rule in two quieter columns.
+
 A record stands on its own: the title, the note, the page facts and the Wayback link
 are what was saved, whatever the destination does later. Links are not checked, and
 no page says whether a destination still works: "You don't need to validate the

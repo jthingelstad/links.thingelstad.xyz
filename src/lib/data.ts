@@ -97,6 +97,13 @@ const shortDate = new Intl.DateTimeFormat('en-US', {
   month: 'short',
   day: 'numeric',
 });
+const weekdayDate = new Intl.DateTimeFormat('en-US', {
+  timeZone: zone,
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
 const clock = new Intl.DateTimeFormat('en-US', {
   timeZone: zone,
   hour: 'numeric',
@@ -105,6 +112,9 @@ const clock = new Intl.DateTimeFormat('en-US', {
 export const dateLabel = (iso: string) => longDate.format(new Date(iso));
 export const shortDateLabel = (iso: string) => shortDate.format(new Date(iso));
 export const timeLabel = (iso: string) => clock.format(new Date(iso));
+// "Thursday, September 17, 2026": the record's saved line and an issue's send.
+export const weekdayDateLabel = (iso: string) =>
+  weekdayDate.format(new Date(iso));
 export const monthNames = [
   'January',
   'February',
@@ -299,6 +309,21 @@ export const hosts: Host[] = [...linksByHost]
   }))
   .sort((a, b) => b.count - a.count || byText(a.host, b.host));
 export const hostByName = new Map(hosts.map((host) => [host.host, host]));
+// A host's links per Central year, from the host's first year to the
+// collection's newest year, years with none included: the record's little
+// chart of a site.
+export function hostYears(host: string): { year: number; count: number }[] {
+  const list = linksByHost.get(host);
+  if (!list) return [];
+  const last = links[links.length - 1].year;
+  const counts = new Map<number, number>();
+  for (const link of list)
+    counts.set(link.year, (counts.get(link.year) ?? 0) + 1);
+  return Array.from({ length: last - list[0].year + 1 }, (_, i) => ({
+    year: list[0].year + i,
+    count: counts.get(list[0].year + i) ?? 0,
+  }));
+}
 
 // Years and weeks, in Central.
 export const linksByYear = new Map<number, Link[]>();
