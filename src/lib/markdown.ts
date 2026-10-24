@@ -82,11 +82,27 @@ const entities: Record<string, string> = {
   '&#39;': "'",
 };
 
-// The note as one line of text, for descriptions and result snippets.
+// A block-level tag's boundary becomes a space; every other tag is an inline
+// one (a link, bold, code) and is removed outright, so no space is left before
+// the punctuation that follows it ("Dunbar's number, and", not "number , and").
+const blockTag =
+  /<\/?(?:p|div|blockquote|ul|ol|li|dl|dt|dd|h[1-6]|pre|hr|br|table|thead|tbody|tfoot|tr|td|th)\b[^>]*>/g;
+const stripTags = (html: string) =>
+  html.replace(blockTag, ' ').replace(/<[^>]+>/g, '');
+// The innermost blockquote: one with no blockquote inside it.
+const innermostQuote =
+  /<blockquote>((?:(?!<blockquote>)[\s\S])*?)<\/blockquote>/;
+
+// The note as one line of text, for descriptions and result snippets. A
+// quotation keeps its boundary, set in curly quotes, so commentary and the
+// page's words do not run together.
 export function plainNote(note: string, max = 200) {
-  const text = md
-    .render(prepare(note))
-    .replace(/<[^>]+>/g, ' ')
+  let html = md.render(prepare(note));
+  for (let m = innermostQuote.exec(html); m; m = innermostQuote.exec(html)) {
+    const quoted = stripTags(m[1]).replace(/\s+/g, ' ').trim();
+    html = `${html.slice(0, m.index)} “${quoted}” ${html.slice(m.index + m[0].length)}`;
+  }
+  const text = stripTags(html)
     .replace(/&(amp|lt|gt|quot|#39);/g, (entity) => entities[entity])
     .replace(/\s+/g, ' ')
     .trim();
