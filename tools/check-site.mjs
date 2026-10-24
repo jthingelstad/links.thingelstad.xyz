@@ -171,9 +171,10 @@ for (const [name, viewport] of [
     timeout: 15000,
   });
   await box.pressSequentially('year:');
-  assert.match(
-    (await first.locator('.suggest-note').textContent()) ?? '',
-    new RegExp(`links? from ${host.replace(/\./g, '\\.')}$`),
+  assert.ok(
+    ((await first.locator('.suggest-note').textContent()) ?? '').endsWith(
+      ` from ${host}`,
+    ),
     'year: counts the site in the box',
   );
   await box.press('Escape');
