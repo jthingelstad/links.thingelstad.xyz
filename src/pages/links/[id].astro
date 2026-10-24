@@ -59,6 +59,9 @@ const shown = displayUrl(withoutAffiliateTag(link.url));
 const cut = shown.indexOf('/');
 const shownHost = cut < 0 ? shown : shown.slice(0, cut);
 const shownPath = cut < 0 ? '' : shown.slice(cut);
+// The site's name the title drops (titles.ts) stays in the index, so search
+// matches and excludes on the title as saved, the way the MCP server does.
+const dropped = link.title.trim().slice(link.shown.length).trim();
 // One video saved under another address; "Saved twice" lists those that
 // normalise alike already.
 const twice = new Set(c.savedTwice.map((other) => other.id));
@@ -93,6 +96,11 @@ const description = link.hasNote
           </svg>
         </a>
       </h1>
+      {dropped && (
+        <p hidden data-pagefind-weight="10">
+          {dropped}
+        </p>
+      )}
       <p class="record-url" data-pagefind-ignore title={link.url}>
         <b>{shownHost}</b>
         {shownPath}

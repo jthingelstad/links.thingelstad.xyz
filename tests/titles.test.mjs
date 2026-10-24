@@ -28,6 +28,10 @@ test("a site's name on the end of a title is dropped", () => {
     shown('The Mac needs Shortcuts – Six Colors', 'sixcolors.com'),
     'The Mac needs Shortcuts',
   );
+  assert.equal(
+    shown('Community Bank Boom - Videos from CNN.com', 'cnn.com'),
+    'Community Bank Boom',
+  );
   // Shared by two links from the host, though not its name.
   assert.equal(
     shown('Staff engineer archetypes | Irrational Exuberance', 'lethain.com'),
@@ -42,8 +46,17 @@ test('anything else is left as saved', () => {
     ['Apple | Apple', 'apple.com'],
     ['No separator here', 'seths.blog'],
     ['Mid-sentence hyphens-are-not-separators', 'sentence.com'],
+    // The site first and the article after (Codex on PR #8).
+    ['Panic Blog » Panic State of the Union', 'panic.com'],
+    ['Asciiflow - ASCII Flow Diagram Tool', 'asciiflow.com'],
+    ['Case Studies — CouchDB: The NoSQL Document Database', 'couch.io'],
   ])
     assert.equal(shown(title, host), title);
+  // A home page keeps its title.
+  assert.equal(
+    shownTitle("Social RSS | Seth's Blog", 'seths.blog', endings, true),
+    "Social RSS | Seth's Blog",
+  );
 });
 
 test('every link keeps its saved title, and a shown one', () => {

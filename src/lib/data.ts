@@ -200,6 +200,13 @@ for (const link of mirror)
 const realClock = (saved: string) =>
   !/T\d\d:00:00/.test(saved) && (stamps.get(saved) ?? 0) < 10;
 
+const isHome = (url: string) => {
+  try {
+    return new URL(url).pathname.replace(/\/+$/, '') === '';
+  } catch {
+    return false;
+  }
+};
 const endings = titleEndings(
   mirror.map((link) => ({ host: hostOf(link.url), title: link.title })),
 );
@@ -220,7 +227,7 @@ export const links: Link[] = mirror
       hasNote: link.note.trim() !== '',
       voice: voiceOf(link.note, year),
       kind: kindOf(link.url),
-      shown: shownTitle(link.title, host, endings),
+      shown: shownTitle(link.title, host, endings, isHome(link.url)),
       clock: realClock(link.saved),
     };
   })

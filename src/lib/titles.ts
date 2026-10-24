@@ -4,9 +4,13 @@
 // MCP server keep the title exactly as saved; only pages and feeds trim it.
 //
 // The last part after a separator is a site's name when its letters are in
-// the host's, or the host's in it ("Seth's Blog" on seths.blog), or when two
-// or more links from the host end the same way ("Irrational Exuberance" on
-// lethain.com). What is left must still read as a title. No Node imports.
+// the host's ("Seth's Blog" on seths.blog), or when two or more links from the
+// host end the same way ("Irrational Exuberance" on lethain.com). A part that
+// only contains the host's name ("Videos from CNN.com") counts when it is no
+// longer than the rest and the rest does not name the site too: "Panic Blog »
+// Panic State of the Union" is the site first and the article after. A home
+// page keeps its title, since there the site is the subject. What is left must
+// still read as a title. No Node imports.
 
 const separator = /\s+(?:\||-|–|—|·|::|»|•)\s+/g;
 const letters = (text: string) => text.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -36,15 +40,20 @@ export function shownTitle(
   title: string,
   host: string,
   endings: Map<string, Map<string, number>>,
+  home = false,
 ): string {
   const parts = split(title);
-  if (!parts) return title;
+  if (!parts || home) return title;
   const [head, tail] = parts;
   if (head.trim().length < 8) return title;
   const name = letters(tail);
   const site = letters(host.replace(/\.[^.]+$/, ''));
-  const named =
-    name !== '' && (letters(host).includes(name) || name.includes(site));
+  const named = name !== '' && letters(host).includes(name);
+  const contains =
+    site.length >= 3 &&
+    name.includes(site) &&
+    tail.length <= head.length &&
+    !letters(head).includes(site);
   const shared = (endings.get(host)?.get(tail) ?? 0) >= 2;
-  return named || shared ? head.trim() : title;
+  return named || contains || shared ? head.trim() : title;
 }
