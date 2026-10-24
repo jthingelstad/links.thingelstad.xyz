@@ -207,7 +207,7 @@
         "AutoPublish": true,
         "FunctionConfig": {
           "Runtime": "cloudfront-js-2.0",
-          "Comment": "Serve directory routes from index.html and redirect a route without its trailing slash"
+          "Comment": "Serve directory routes from index.html, and redirect a route without its trailing slash or with index.html to the route"
         },
         "FunctionCode": {
           "Fn::Join": [
@@ -216,22 +216,52 @@
               "function handler(event) {",
               "  var request = event.request;",
               "  var uri = request.uri;",
-              "  if (uri.endsWith('/')) {",
-              "    request.uri = uri + 'index.html';",
-              "    return request;",
-              "  }",
-              "  var parts = uri.split('/');",
-              "  var name = parts[parts.length - 1];",
-              "  var hostPage = parts.length === 3 && parts[1] === 'hosts' && name !== 'index.html';",
-              "  if (name.indexOf('.') !== -1 && !hostPage) return request;",
               "  var query = [];",
               "  for (var key in request.querystring) {",
               "    var field = request.querystring[key];",
               "    var values = field.multiValue || [field];",
               "    for (var i = 0; i < values.length; i++) query.push(key + '=' + values[i].value);",
               "  }",
-              "  var location = uri + '/' + (query.length ? '?' + query.join('&') : '');",
+              "  var search = query.length ? '?' + query.join('&') : '';",
+              "  if (uri.endsWith('/index.html')) {",
+              "    return { statusCode: 301, statusDescription: 'Moved Permanently', headers: { location: { value: uri.slice(0, -10) + search } } };",
+              "  }",
+              "  if (uri.endsWith('/')) {",
+              "    request.uri = uri + 'index.html';",
+              "    return request;",
+              "  }",
+              "  var parts = uri.split('/');",
+              "  var name = parts[parts.length - 1];",
+              "  var hostPage = parts.length === 3 && parts[1] === 'hosts';",
+              "  if (name.indexOf('.') !== -1 && !hostPage) return request;",
+              "  var location = uri + '/' + search;",
               "  return { statusCode: 301, statusDescription: 'Moved Permanently', headers: { location: { value: location } } };",
+              "}"
+            ]
+          ]
+        }
+      }
+    },
+    "CrawlerFunction": {
+      "Type": "AWS::CloudFront::Function",
+      "Properties": {
+        "Name": {
+          "Fn::Sub": "${AWS::StackName}-crawlers"
+        },
+        "AutoPublish": true,
+        "FunctionConfig": {
+          "Runtime": "cloudfront-js-2.0",
+          "Comment": "Keep everything but the HTML pages out of search indexes: the twins, feeds, exports and images"
+        },
+        "FunctionCode": {
+          "Fn::Join": [
+            "\n",
+            [
+              "function handler(event) {",
+              "  var response = event.response;",
+              "  var type = response.headers['content-type'];",
+              "  if (!type || type.value.indexOf('text/html') !== 0) response.headers['x-robots-tag'] = { value: 'noindex' };",
+              "  return response;",
               "}"
             ]
           ]
@@ -327,6 +357,15 @@
                 "FunctionARN": {
                   "Fn::GetAtt": [
                     "IndexFunction",
+                    "FunctionMetadata.FunctionARN"
+                  ]
+                }
+              },
+              {
+                "EventType": "viewer-response",
+                "FunctionARN": {
+                  "Fn::GetAtt": [
+                    "CrawlerFunction",
                     "FunctionMetadata.FunctionARN"
                   ]
                 }

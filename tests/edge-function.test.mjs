@@ -1,8 +1,14 @@
-// The viewer-request function in infra/site.json, run in Node exactly as
-// written for CloudFront (tools/edge-function.mjs). Run: npm test.
+// The viewer-request and viewer-response functions in infra/site.json, run
+// in Node exactly as written for CloudFront (tools/edge-function.mjs). Run:
+// npm test.
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { indexFunction, viewerRequest } from '../tools/edge-function.mjs';
+import {
+  crawlerFunction,
+  indexFunction,
+  viewerRequest,
+  viewerResponse,
+} from '../tools/edge-function.mjs';
 
 const handler = await indexFunction();
 const run = (target) => handler(viewerRequest(target));
@@ -33,7 +39,6 @@ test('files pass through', () => {
     '/links/0123456789ab.md',
     '/robots.txt',
     '/sitemap-index.xml',
-    '/hosts/index.html',
     '/years/2008/llms.txt',
     '/pagefind/pagefind-entry.json?ts=1761200000000',
     '/_astro/Layout.Bx3k.css',
@@ -56,9 +61,44 @@ test('a route without its trailing slash redirects, keeping the query', () => {
 test('a host name with a dot is a page, not a file', () => {
   assert.equal(redirected('/hosts/obsidian.md'), '/hosts/obsidian.md/');
   assert.equal(redirected('/hosts/kottke.org'), '/hosts/kottke.org/');
-  // Deeper paths with a dot are files.
+});
+
+test('a page asked for by its index.html redirects to its route', () => {
+  assert.equal(redirected('/index.html'), '/');
+  assert.equal(redirected('/hosts/index.html'), '/hosts/');
   assert.equal(
-    served('/hosts/kottke.org/index.html'),
-    '/hosts/kottke.org/index.html',
+    redirected('/hosts/kottke.org/index.html'),
+    '/hosts/kottke.org/',
   );
+  assert.equal(
+    redirected('/links/0123456789ab/index.html'),
+    '/links/0123456789ab/',
+  );
+  assert.equal(redirected('/search/index.html?q=x'), '/search/?q=x');
+  // A file that only ends like one is a file.
+  assert.equal(served('/years/2008/llms.txt'), '/years/2008/llms.txt');
+});
+
+const crawlers = await crawlerFunction();
+const robots = (uri, type) =>
+  crawlers(viewerResponse(uri, type)).headers['x-robots-tag']?.value;
+
+test('only HTML pages may be indexed', () => {
+  assert.equal(
+    robots('/links/0123456789ab/index.html', 'text/html; charset=utf-8'),
+    undefined,
+  );
+  assert.equal(robots('/404.html', 'text/html; charset=utf-8'), undefined);
+  for (const [uri, type] of [
+    ['/links/0123456789ab.json', 'application/json'],
+    ['/links/0123456789ab.md', 'text/markdown; charset=utf-8'],
+    ['/feed.xml', 'application/rss+xml; charset=utf-8'],
+    ['/feed.json', 'application/feed+json; charset=utf-8'],
+    ['/llms.txt', 'text/plain; charset=utf-8'],
+    ['/links.db', 'application/vnd.sqlite3'],
+    ['/media/youtube/abc.jpg', 'image/jpeg'],
+    ['/sitemap-index.xml', 'application/xml; charset=utf-8'],
+    ['/odd', undefined],
+  ])
+    assert.equal(robots(uri, type), 'noindex', uri);
 });
