@@ -55,6 +55,9 @@ export const datasetPath = {
   // The SQLite file, built by tools/build_db.py into public/ (npm run db).
   db: '/links.db',
 } as const;
+// The list the search box suggests from (src/lib/suggest.ts): the search
+// page's own file, shaped for it, not part of the dataset.
+export const suggestPath = '/search/suggest.json';
 // The MCP server, served by its own CloudFront behaviour (infra/site.json,
 // /mcp*) rather than from the site bucket.
 export const mcpPath = '/mcp';

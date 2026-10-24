@@ -97,7 +97,8 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 | URL | What |
 | --- | --- |
 | `/` | Built as a search box, like Google's front page (Jamie, 2026-10-23): the wordmark, the box, how many links are in the index and the years they span, and a row of ways in (Newest, Years, Hosts, Kinds, Issues, Stats, Feed; Topics goes first once topic pages exist). A quote of the day from `content/quotes.md` when it holds any; nothing while it is empty. The site header is left off this page |
-| `/search/?q=` | Results: title, host, saved date, a snippet of the note, a WT chip; filters for topic, year, kind, in a Weekly Thing, has a note; sort by relevance or date. Built: `kind:video` keeps one kind and, with no other words, links that kind's page |
+| `/search/?q=` | Results: title, host, saved date, a snippet of the note, a WT chip; filters for topic, year, kind, in a Weekly Thing, has a note; sort by relevance or date. Built: `kind:video` keeps one kind and, with no other words, links that kind's page; the box suggests as an operator is typed (section "Search") |
+| `/search/suggest.json` | What the search box suggests from: every host and its count, every issue with its title, Central date and saved links, each year's and kind's count. The search page's own file, shaped for it and free to change with it; not part of the dataset |
 | `/links/<id>/` | The record (below). `<id>` is the first 12 hex characters of md5 of the saved URL, which is Pinboard's API `hash`; anyone can compute it from the URL |
 | `/links/<id>.json`, `/links/<id>.md` | Machine twins of the record, the Things I've built pattern |
 | `/hosts/<host>/` | Every link from a host, newest first, with the host facts (section "Enrichment") |
@@ -241,6 +242,28 @@ client side.
 Google's grammar works: `site:macstories.net`, `year:2019`, `wt:300`, `topic:dns`,
 `kind:video`, quoted phrases, and `-` to exclude, parsed in a few lines of client
 code into Pagefind filters. `/` focuses the box; arrow keys walk the results.
+
+**Suggestions, built 2026-10-24** (Jamie: "Could we do anything fancy in the search box
+by detecting 'site:', 'year:' parameters and then offering typeahead?"). The box is an ARIA
+combobox (`src/scripts/suggest.ts`, deciding in `src/lib/suggest.ts`, the word at the
+cursor read by `tokenAt` in the grammar). `site:kot` suggests kottke.org with its count:
+the host itself, then hosts it starts, then any part of a host (`site:verge` finds
+theverge.com), most links first. `year:`, `kind:` (by kind or title, `kind:videos`) and
+`wt:` (by number or title words, `wt:otto`) suggest what there is. A plain word offers the
+operator it starts to spell (`si`), and the year, issue or site it names (`2012`, `WT352`,
+`kottke` for a site with more than one link), as an offer, never a rewrite. An empty box
+shows the four operators on a click or the down arrow, never on its own. While the list is
+open the arrow keys move through it, Enter or a click takes one, Escape closes it; closed,
+the arrows walk the results as before. A half-typed operator (`site:kot`, `year:20`) holds
+the results where they are until its value names something real; Enter searches anyway.
+
+The counts are the build's totals, from `/search/suggest.json` (fetched on the first
+keystroke, about 57 KB gzipped, every host included), and say "in all" when the box holds
+other words ("917 links in all" beside `kubb year:2019`). Counts scoped to the words
+already typed were measured and left out: Pagefind's filter counts, loaded with
+`filters()`, count a phrase as either word (`"open web"` claimed 21 links in 2008 where
+none match) and know nothing of `site:` or `-word`, so they disagree with the results on
+the same page.
 
 Results open the record, not the destination. The destination is one click away on
 every record and marked on every result. The record is the product (the connections
