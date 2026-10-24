@@ -16,7 +16,13 @@ import { type Kind, kindOf, kinds } from './kinds.ts';
 import { hostOf, normalizeUrl } from './normalize.ts';
 import { type Voice, voiceOf } from './voice.ts';
 import { shownTitle, titleEndings } from './titles.ts';
-import { absolute, hostPath, issueKey, linkPath } from './paths.ts';
+import {
+  absolute,
+  hostPath,
+  issueKey,
+  linkPath,
+  surprisePath,
+} from './paths.ts';
 
 export { hostOf, normalizeUrl };
 export { type Kind, kinds };
@@ -421,7 +427,8 @@ export const displayUrl = (url: string) =>
 // a crawler to get any value" in the rest). A record is indexed when it holds
 // Jamie's own words or ran in a Weekly Thing; a host page when it lists more
 // than one link. The rest stay up for readers, marked noindex and left out of
-// the sitemap, and crawlers still follow their links.
+// the sitemap, and crawlers still follow their links. /surprise/ is a door to
+// a random record, not a page, so it is left out too.
 export const indexedRecord = (link: Link) =>
   link.voice === 'jamie' || link.voice === 'mixed' || appearances.has(link.id);
 export const indexedHost = (host: Host) => host.count > 1;
@@ -432,6 +439,7 @@ export const unindexed = new Set([
   ...hosts
     .filter((host) => !indexedHost(host))
     .map((host) => absolute(hostPath(host.host))),
+  absolute(surprisePath),
 ]);
 
 export const counts = {

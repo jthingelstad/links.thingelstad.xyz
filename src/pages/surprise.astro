@@ -1,0 +1,37 @@
+---
+// Surprise me (Jamie, 2026-10-24: "a 'Surprise Me' button on the front page
+// to go to a (sort of?) random link"). The front page links here; the script
+// picks one link and replaces this page with its record, so Back returns to
+// where the reader came from. "Sort of" random: the pick is from the records
+// that hold Jamie's own words or ran in a Weekly Thing (data.ts,
+// indexedRecord), never a bare bookmark with nothing to read.
+//
+// The ids ride in the page as one string of 12-hex ids, about 100 KB (half
+// that compressed), and only a reader who asked for a surprise downloads it. The page is noindex, out of
+// the sitemap and disallowed in robots.txt: it is a door, not a page.
+import Layout from '../layouts/Layout.astro';
+import { indexedRecord, links, newestPath } from '../lib/data';
+const ids = links
+  .filter(indexedRecord)
+  .map((link) => link.id)
+  .join('');
+---
+
+<Layout title="Surprise me" noindex>
+  <h1 class="page-title">Surprise me</h1>
+  <p class="lede" data-surprise={ids}>
+    Picking a link at random. This needs JavaScript; without it, start from{' '}
+    <a href={newestPath}>the newest links</a>.
+  </p>
+</Layout>
+
+<script>
+  import { linkPath } from '../lib/paths';
+  const ids =
+    document.querySelector<HTMLElement>('[data-surprise]')?.dataset.surprise;
+  const count = ids ? Math.floor(ids.length / 12) : 0;
+  if (count) {
+    const at = Math.floor(Math.random() * count) * 12;
+    location.replace(linkPath(ids!.slice(at, at + 12)));
+  }
+</script>
