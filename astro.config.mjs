@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { unindexed } from './src/lib/data.ts';
 
 // Static pages only: nothing answers a visitor but files. Pagefind writes its
 // index into dist/pagefind/ after the build (npm run build).
@@ -19,6 +20,9 @@ export default defineConfig({
   },
   // The sitemap lists pages, /newest/ among them. The feeds, the .json and
   // .md twins, /links.json, /hosts.json, /issues.json and the llms files
-  // are not pages, and none of them ends in a slash.
-  integrations: [sitemap({ filter: (page) => page.endsWith('/') })],
+  // are not pages, and none of them ends in a slash. Pages marked noindex
+  // (data.ts, unindexed) are left out too.
+  integrations: [
+    sitemap({ filter: (page) => page.endsWith('/') && !unindexed.has(page) }),
+  ],
 });

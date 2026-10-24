@@ -17,7 +17,9 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   tinylytics.app nowhere else; every record has one Kudos button keyed on its
   permalink, with a public count (no data-private, Jamie's call 2026-10-23);
 - the sitemap index lists sitemaps that exist, every sitemap URL is a built
-  page, and every page but the 404 is in the sitemap, once;
+  page, and every page but the 404 and those marked noindex is in the
+  sitemap, once; a noindex page is never in it, and only records and host
+  pages are marked noindex;
 - every record page has its JSON and Markdown twins, the JSON names the same
   id, and there is one record per link in data/links (read, never written);
 - Pagefind indexed exactly the record pages;
@@ -147,6 +149,7 @@ class Page(HTMLParser):
         self.ids = set()
         self.title = False
         self.canonical = None
+        self.noindex = False
         self.main = False
         self.inline_urls = []
         self.alternates = []
@@ -169,6 +172,8 @@ class Page(HTMLParser):
         rels = set(data.get("rel", "").lower().split())
         if tag == "link" and "canonical" in rels:
             self.canonical = data.get("href")
+        if tag == "meta" and data.get("name", "").lower() == "robots":
+            self.noindex |= "noindex" in data.get("content", "").lower()
         if tag == "link" and "alternate" in rels:
             self.alternates.append((data.get("type", ""), data.get("href", "")))
         if tag == "script" and not data.get("src"):
@@ -753,6 +758,7 @@ def main():
     words = liveness_words(data_links)
     listed_records = {}  # host pages and /newest/ to the records they list, in order
     loaders = 0
+    noindex = set()  # pages marked noindex, by URL
     for page in pages:
         rel = page.relative_to(DIST).as_posix()
         url = page_url(rel)
@@ -760,6 +766,10 @@ def main():
         parser = Page()
         parser.feed(text)
         ids[url] = parser.ids
+        if parser.noindex and rel != "404.html":
+            noindex.add(url)
+            if not re.fullmatch(r"/(links|hosts)/[^/]+/", url):
+                problems.append(f"{rel}: marked noindex, but only records and host pages may be")
         alternates[url] = parser.alternates
         kudos[url] = parser.kudos
         if url.startswith(("/hosts/", "/kinds/")) or url == "/newest/":
@@ -855,7 +865,11 @@ def main():
             problems.append(f"sitemap URL {entry} is not built")
     for page in pages:
         url = page_url(page.relative_to(DIST).as_posix())
-        if url != "/404.html" and SITE + url not in seen:
+        if url == "/404.html":
+            continue
+        if url in noindex and SITE + url in seen:
+            problems.append(f"{url} is marked noindex but is in the sitemap")
+        elif url not in noindex and SITE + url not in seen:
             problems.append(f"{url} is not in the sitemap")
 
     # Records, twins and the data.
@@ -944,7 +958,8 @@ def main():
         )
     print(
         f"{len(pages)} pages ({len(records)} records with twins), {len(links)} internal"
-        f" links, {len(seen)} sitemap URLs; links, metadata and sitemap valid;"
+        f" links, {len(seen)} sitemap URLs ({len(noindex)} thin pages noindex);"
+        f" links, metadata and sitemap valid;"
         f" {feeds + 2 * len(kind_counts)} feeds, links.json, hosts.json, issues.json,"
         f" search/suggest.json ({suggested[0]} hosts, {suggested[1]} issues), llms.txt and"
         f" {len(year_files)} year llms files valid ({len(inside)} site URLs inside resolve);"

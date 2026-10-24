@@ -18,6 +18,9 @@ interface Props {
   alternates?: { type: string; href: string; title?: string }[];
   // The 404 page: served at any address, so it names none.
   notFound?: boolean;
+  // A page too thin for a search engine (data.ts, unindexed): readers keep
+  // it, crawlers follow its links but leave it out of their index.
+  noindex?: boolean;
   // The front page: the search box is the page, so no site header.
   home?: boolean;
 }
@@ -27,6 +30,7 @@ const {
   description = 'Every link Jamie Thingelstad has saved since 2005: a searchable, connected database of twenty-one years of curation.',
   alternates = [],
   notFound = false,
+  noindex = false,
   home = false,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
@@ -54,6 +58,7 @@ const current = (href: string) =>
     ) : (
       <link rel="canonical" href={canonical} />
     )}
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link
       rel="preload"
       href={inter}

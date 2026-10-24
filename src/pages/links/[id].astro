@@ -17,6 +17,7 @@ import {
   dateLabel,
   displayUrl,
   hostPath,
+  indexedRecord,
   issueLabel,
   issuePath,
   linkJsonPath,
@@ -73,6 +74,7 @@ const description = link.hasNote
 
 <Layout
   title={`${link.shown} · Linking Things`}
+  noindex={!indexedRecord(link)}
   description={description}
   alternates={[
     { type: 'application/json', href: linkJsonPath(link.id) },
