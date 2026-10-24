@@ -14,7 +14,7 @@ distribution (section "The MCP server").
 | ------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `links-certificate` | `infra/certificate.json` | ACM certificate for `links.thingelstad.xyz`, DNS validated                                                                                                                                                                                                                  |
 | `links-storage`     | `infra/storage.json`     | `links-storage-web-999153317627`: private, SSE-S3, versioned (replaced and removed objects kept 30 days), retained if the stack goes                                                                                                                                        |
-| `links-site`        | `infra/site.json`        | Distribution with origin access control, cache and header policies, the index function, a 14-day access log without client addresses, 5xx alarm to the family topic; the `/mcp*` behaviour to the `links-mcp` endpoint through a second origin access control               |
+| `links-site`        | `infra/site.json`        | Distribution with origin access control, cache and header policies, the index and crawler functions, a 14-day access log without client addresses, 5xx alarm to the family topic; the `/mcp*` behaviour to the `links-mcp` endpoint through a second origin access control  |
 | `links-delivery`    | `infra/delivery.json`    | GitHub OIDC deployment role, main only: list, read, write and remove site objects, invalidate this distribution; upload the MCP package, change that stack's code through a change set, and pass and read the MCP execution role; nothing else                              |
 | `links-mcp`         | `infra/mcp.json`         | The MCP server: `links-mcp-code-999153317627` (private, versioned, the packaged server), an execution role that writes its own logs and nothing else, 30-day logs, the `links-mcp` web function, its revision and `live` endpoint (IAM auth), 5xx alarm to the family topic |
 
@@ -147,7 +147,14 @@ anything is written. The response headers policy adds `Access-Control-Allow-Orig
 for GET and HEAD, so the JSON and Markdown twins and the exports can be read from a page
 on any origin; everything here is public data. The edge function redirects `/hosts/<name>` to `/hosts/<name>/`
 (host names have dots, `/hosts/obsidian.md/`), so no file but `hosts/index.html` may sit
-directly under `hosts/`; the deploy refuses one.
+directly under `hosts/`; the deploy refuses one. It also redirects any `.../index.html`
+to its route, so each page has one address.
+
+A second function, on the viewer response, adds `X-Robots-Tag: noindex` to everything
+that is not `text/html`: the twins, the feeds, the exports, the llms files, the sitemaps
+and the images. Search engines index the pages only, so 16,000 Markdown and JSON copies
+of the records never compete with them (Jamie, 2026-10-24: make sure crawlers are not
+"penalizing us"). The 404 page carries its own `noindex` meta tag.
 
 CloudFront compresses with Brotli or gzip for clients that ask, for the types on its list
 (HTML, JSON, XML, CSS, JavaScript, plain text, SVG) between 1 KB and 10 MB. Markdown

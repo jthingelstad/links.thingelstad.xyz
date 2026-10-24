@@ -1,17 +1,32 @@
-// The viewer-request function from infra/site.json, runnable in Node, so the
-// tests and the local browser check exercise the code CloudFront runs.
+// The viewer-request and viewer-response functions from infra/site.json,
+// runnable in Node, so the tests and the local browser check exercise the
+// code CloudFront runs.
 import fs from 'node:fs/promises';
 
-export function functionCode(template) {
-  const code = template.Resources.IndexFunction.Properties.FunctionCode;
+export function functionCode(template, name = 'IndexFunction') {
+  const code = template.Resources[name].Properties.FunctionCode;
   if (typeof code === 'string') return code;
   const [separator, lines] = code['Fn::Join'];
   return lines.join(separator);
 }
 
-export async function indexFunction(file = 'infra/site.json') {
+async function load(name, file) {
   const template = JSON.parse(await fs.readFile(file, 'utf8'));
-  return new Function(`${functionCode(template)}\nreturn handler;`)();
+  return new Function(`${functionCode(template, name)}\nreturn handler;`)();
+}
+export const indexFunction = (file = 'infra/site.json') =>
+  load('IndexFunction', file);
+export const crawlerFunction = (file = 'infra/site.json') =>
+  load('CrawlerFunction', file);
+
+// A viewer-response event: the response as the origin sent it, its headers
+// keyed in lower case.
+export function viewerResponse(uri, contentType) {
+  const headers = contentType ? { 'content-type': { value: contentType } } : {};
+  return {
+    request: { method: 'GET', uri, querystring: {}, headers: {} },
+    response: { statusCode: 200, headers },
+  };
 }
 
 // The event CloudFront passes for a request line such as /search?q=dns&x=1:

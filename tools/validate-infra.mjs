@@ -131,12 +131,16 @@ export function validate({
       f.EventType,
       f.FunctionARN['Fn::GetAtt'][0],
     ]),
-    [['viewer-request', 'IndexFunction']],
+    [
+      ['viewer-request', 'IndexFunction'],
+      ['viewer-response', 'CrawlerFunction'],
+    ],
   );
-  assert.equal(
-    site.Resources.IndexFunction.Properties.FunctionConfig.Runtime,
-    'cloudfront-js-2.0',
-  );
+  for (const name of ['IndexFunction', 'CrawlerFunction'])
+    assert.equal(
+      site.Resources[name].Properties.FunctionConfig.Runtime,
+      'cloudfront-js-2.0',
+    );
   for (const code of [403, 404]) {
     const page = dist.CustomErrorResponses.find((e) => e.ErrorCode === code);
     assert.equal(page.ResponseCode, 404);
