@@ -24,6 +24,7 @@ import {
   noteAttribute,
   recordId,
   sections,
+  voiceLabels,
 } from '../lib/preview.ts';
 import type { Data } from './pagefind.ts';
 
@@ -91,7 +92,11 @@ function facts(twin: Twin) {
 function note(twin: Twin) {
   const section = element('section', 'preview-note');
   const excerpt = twin.voice === 'excerpt';
-  if (excerpt) section.append(element('h3', 'record-label', 'From the page'));
+  const voice = Object.hasOwn(voiceLabels, twin.voice)
+    ? voiceLabels[twin.voice]
+    : undefined;
+  if (voice) section.append(element('h3', 'record-label', voice.heading));
+  if (voice?.label) section.append(element('p', 'note-label', voice.label));
   const body = element('div', excerpt ? 'note excerpt' : 'note');
   body.append(
     ...build(noteTree(twin.note, mentionResolver(twin.connections.mentions))),

@@ -38,6 +38,19 @@ export interface Twin {
   };
 }
 
+// Whose words a note is, labelled as its record labels them (the record page
+// writes the same words; tests/preview.test.mjs holds them together). A note
+// in Jamie's voice has no label.
+export const voiceLabels: Record<string, { heading: string; label?: string }> =
+  {
+    excerpt: { heading: 'From the page' },
+    agent: {
+      heading: 'From an agent',
+      label:
+        "A summary an agent wrote for Jamie's reading queue, not Jamie's words.",
+    },
+  };
+
 // A search result's address is its record's, /links/<id>/.
 export const recordId = (url: string) =>
   /^\/links\/([0-9a-f]{12})\/$/.exec(url)?.[1];

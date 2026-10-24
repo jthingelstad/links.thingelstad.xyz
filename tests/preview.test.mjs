@@ -12,6 +12,7 @@ import {
   noteAttribute,
   recordId,
   sections,
+  voiceLabels,
 } from '../src/lib/preview.ts';
 import { linkJson } from '../src/lib/twins.ts';
 
@@ -166,4 +167,16 @@ test('the search page loads the pane only on a wide screen, and builds it as tex
   for (const source of [search, pane])
     assert.doesNotMatch(source, /innerHTML|outerHTML|insertAdjacentHTML/);
   assert.match(pane, /noteAttribute\(/);
+});
+
+test("the pane labels a note's voice in the record's words", () => {
+  const record = readFileSync('src/pages/links/[id].astro', 'utf8').replace(
+    /\s+/g,
+    ' ',
+  );
+  for (const [voice, { heading, label }] of Object.entries(voiceLabels)) {
+    assert.ok(record.includes(`'${voice}'`), voice);
+    for (const words of [heading, label].filter(Boolean))
+      assert.ok(record.includes(words), words);
+  }
 });
