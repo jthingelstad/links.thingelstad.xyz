@@ -831,12 +831,14 @@ test('links_stats: the shape of the collection', async () => {
     links: 6,
     hosts: 5,
     with_note: 4,
+    to_read: 1,
     in_weekly_thing: 3,
     issues: 2,
     latest_issue: 351,
     first_saved: rows.F.saved,
     last_saved: rows.D.saved,
   });
+  assert.deepEqual(answer.voices, { jamie: 3, mixed: 0, excerpt: 1, agent: 0 });
   assert.deepEqual(
     answer.by_year.map((y) => [y.year, y.links]),
     [
@@ -1390,4 +1392,61 @@ test('llms.txt points agents at /mcp and names every tool', () => {
   assert.ok(agents.includes(`(${SITE}/mcp)`));
   for (const tool of tools)
     assert.ok(agents.includes(`\`${tool.name}\``), tool.name);
+});
+
+// The agent's voice is provenance, the tag it leaves on a bookmark whose note
+// it wrote, never a reading of the text; an empty note still has no voice.
+test('voice "agent" comes from the _agent tag, and every answer that shows one says so', async () => {
+  const G = {
+    id: idOf('https://example.net/open-data-mcp'),
+    url: 'https://example.net/open-data-mcp',
+    title: 'An MCP server for open data',
+    note: "A statistics office's MCP server. Low priority unless you follow open data.",
+    saved: '2026-02-19T18:36:08Z',
+    tags: ['_agent'],
+    toread: false,
+  };
+  const H = {
+    ...G,
+    id: idOf('https://example.net/quoted'),
+    url: 'https://example.net/quoted',
+    title: 'Quoted by the agent',
+    note: '> The page said this.',
+    saved: '2026-02-19T18:40:00Z',
+  };
+  const K = {
+    ...G,
+    id: idOf('https://example.net/bare'),
+    url: 'https://example.net/bare',
+    title: 'A bare save',
+    note: '',
+    saved: '2026-02-19T18:45:00Z',
+  };
+  const all = [...linkRows, G, H, K];
+  const own = await harness({ files: fixtureFiles(all), index: all });
+  const got = await own.call('links_get', { id: G.id });
+  assert.equal(got.link.voice, 'agent');
+  assert.equal(got.link.note_text, G.note);
+  assert.ok(got.notes.some((n) => /voice is "agent"/.test(n)));
+  assert.ok(!got.notes.some((n) => /voice is "excerpt"/.test(n)));
+  const quoted = await own.call('links_get', { id: H.id });
+  assert.equal(quoted.link.voice, 'agent', 'the tag wins over the heuristic');
+  assert.equal((await own.call('links_get', { id: K.id })).link.voice, null);
+  const list = await own.call('links_list', { by: 'year', value: 2026 });
+  assert.deepEqual(
+    list.links.map((l) => l.voice),
+    [null, 'agent', 'agent'],
+  );
+  assert.ok(list.notes.some((n) => /voice is "agent"/.test(n)));
+  const stats = await own.call('links_stats');
+  assert.deepEqual(stats.voices, { jamie: 3, mixed: 0, excerpt: 1, agent: 2 });
+  assert.deepEqual(stats.tags, [
+    { tag: '_agent', links: 3 },
+    { tag: '_brief', links: 1 },
+    { tag: '_feature', links: 1 },
+  ]);
+  const search = await own.call('links_search', { query: 'open data' });
+  assert.deepEqual(ids(search), [`link-${G.id}`]);
+  assert.equal(search.links[0].voice, 'agent');
+  assert.ok(search.notes.some((n) => /voice is "agent"/.test(n)));
 });

@@ -46,6 +46,7 @@ const { link } = Astro.props;
 const c = connectionsOf(link);
 const appears = appearances.get(link.id) ?? [];
 const excerpt = link.voice === 'excerpt';
+const agent = link.voice === 'agent';
 const era = link.year >= 2007 && link.year <= 2016;
 const facts = factsOf(link.id);
 // A note of one paragraph and a sentence or two is set larger, so a short
@@ -53,6 +54,7 @@ const facts = factsOf(link.id);
 const short =
   link.hasNote &&
   !excerpt &&
+  !agent &&
   !link.note.trim().includes('\n') &&
   noteText(link).length < 280;
 // The URL as typed, its host in weight: the title already links there.
@@ -140,6 +142,17 @@ const description = link.hasNote
                     {era
                       ? `Saved with the link. Notes from 2007 to 2016 are mostly the page's own words, so this is probably an excerpt.`
                       : 'A quotation saved with the link.'}
+                  </p>
+                </>
+              )}
+              {agent && (
+                <>
+                  <h2 class="record-label" data-pagefind-ignore>
+                    From an agent
+                  </h2>
+                  <p class="note-label" data-pagefind-ignore>
+                    A summary an agent wrote for Jamie's reading queue, not
+                    Jamie's words.
                   </p>
                 </>
               )}

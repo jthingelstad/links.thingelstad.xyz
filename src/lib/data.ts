@@ -14,13 +14,13 @@ import { join } from 'node:path';
 import { noteLinks, plainNote, renderNote } from './markdown.ts';
 import { type Kind, kindOf, kinds } from './kinds.ts';
 import { hostOf, normalizeUrl } from './normalize.ts';
-import { type Voice, voiceOf } from './voice.ts';
+import { AGENT_TAG, type Voice, voiceOf } from './voice.ts';
 import { shownTitle, titleEndings } from './titles.ts';
 import { absolute, hostPath, issueKey, linkPath } from './paths.ts';
 
 export { hostOf, normalizeUrl };
 export { type Kind, kinds };
-export { type Voice, voiceOf };
+export { AGENT_TAG, type Voice, voiceOf };
 // The site's URLs are formed in paths.ts; the pages import them from here.
 export * from './paths.ts';
 
@@ -225,7 +225,7 @@ export const links: Link[] = mirror
       day,
       week: weekOf(day),
       hasNote: link.note.trim() !== '',
-      voice: voiceOf(link.note, year),
+      voice: voiceOf(link.note, year, link.tags),
       kind: kindOf(link.url),
       shown: shownTitle(link.title, host, endings, isHome(link.url)),
       clock: realClock(link.saved),

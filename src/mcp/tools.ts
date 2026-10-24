@@ -9,6 +9,7 @@
 // says whether a link still works.
 import { type Kind, kindWords, kinds } from '../lib/kinds.ts';
 import { plainNote } from '../lib/markdown.ts';
+import type { Voice } from '../lib/voice.ts';
 import {
   absolute,
   hostPath,
@@ -43,7 +44,7 @@ import type { Snapshot, Store } from './store.ts';
 
 // Bumps with any change to a tool's name, arguments or result shape, so a
 // client that cached tools/list knows to fetch it again.
-export const SERVER_VERSION = '1.0.0';
+export const SERVER_VERSION = '1.1.0';
 
 export class ToolError extends Error {
   code: string;
@@ -84,6 +85,13 @@ const permalink = (id: string) => absolute(linkPath(id));
 const issueNumber = (issue: Issue) => issue.number ?? issue.key;
 const excerptNote =
   'A note whose voice is "excerpt" is most likely a passage from the linked page, not Jamie\'s words; "mixed" is commentary around a quotation.';
+const agentNote =
+  'A note whose voice is "agent" is a summary an agent wrote for Jamie\'s reading queue, not Jamie\'s words.';
+const voiceNotes = (links: Link[], notes: string[]) => {
+  if (links.some((link) => link.voice === 'excerpt' || link.voice === 'mixed'))
+    notes.push(excerptNote);
+  if (links.some((link) => link.voice === 'agent')) notes.push(agentNote);
+};
 
 // A link as every list shows it.
 export function record(data: Dataset, link: Link) {
@@ -106,8 +114,7 @@ export function record(data: Dataset, link: Link) {
 }
 
 function records(data: Dataset, links: Link[], notes: string[]) {
-  if (links.some((link) => link.voice === 'excerpt' || link.voice === 'mixed'))
-    notes.push(excerptNote);
+  voiceNotes(links, notes);
   return links.map((link) => record(data, link));
 }
 
@@ -322,8 +329,7 @@ const getTool: Tool = {
           : 'Call links_search with words from its title or site:<host> to look for it another way.',
       );
     const appears = data.appearances.get(link.id) ?? [];
-    if (link.voice === 'excerpt' || link.voice === 'mixed')
-      notes.push(excerptNote);
+    voiceNotes([link], notes);
     const twins = (data.savedTwice.get(link.id) ?? [])
       .map((id) => data.byId.get(id)!)
       .filter(Boolean)
@@ -569,12 +575,20 @@ const statsTool: Tool = {
       .map(([tag, list]) => ({ tag, links: list.length }))
       .sort((a, b) => b.links - a.links || (a.tag < b.tag ? -1 : 1));
     const numbered = data.issues.filter((i) => i.number !== null);
+    const voices: Record<Voice, number> = {
+      jamie: 0,
+      mixed: 0,
+      excerpt: 0,
+      agent: 0,
+    };
+    for (const link of data.links) if (link.voice) voices[link.voice]++;
     return {
       generated: data.generated,
       totals: {
         links: data.links.length,
         hosts: data.hosts.length,
         with_note: data.links.filter((l) => l.hasNote).length,
+        to_read: data.links.filter((l) => l.toread).length,
         in_weekly_thing: data.appearances.size,
         issues: data.issues.length,
         latest_issue: numbered.length
@@ -583,6 +597,7 @@ const statsTool: Tool = {
         first_saved: data.links[0]?.saved ?? null,
         last_saved: data.links[data.links.length - 1]?.saved ?? null,
       },
+      voices,
       by_year: [...data.byYear]
         .sort((a, b) => a[0] - b[0])
         .map(([y, list]) => ({
@@ -606,7 +621,8 @@ const statsTool: Tool = {
         page: absolute(hostPath(h.host)),
       })),
       notes: [
-        'Years and days are US Central time. Tags are filing marks from the newsletter, not topics.',
+        "Years and days are US Central time. Tags are filing marks, not topics: the newsletter's, and _agent on a note an agent wrote.",
+        "voices counts the notes by who wrote them: jamie (Jamie's words), mixed (commentary around a quotation), excerpt (most likely a passage from the page), agent (a summary an agent wrote for Jamie's reading queue).",
       ],
     };
   },

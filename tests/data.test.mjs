@@ -187,6 +187,12 @@ test('voice labels', () => {
   assert.equal(data.voiceOf('The page says this.', 2012), 'excerpt');
   assert.equal(data.voiceOf('I think this.', 2020), 'jamie');
   assert.equal(data.voiceOf('A del.icio.us description.', 2005), 'jamie');
+  // The agent's voice is the tag it leaves, never a reading of the text.
+  assert.equal(data.AGENT_TAG, '_agent');
+  assert.equal(data.voiceOf('A summary.', 2026, ['_agent']), 'agent');
+  assert.equal(data.voiceOf('> Quoted.', 2026, ['_agent']), 'agent');
+  assert.equal(data.voiceOf('A summary.', 2026, ['_brief']), 'jamie');
+  assert.equal(data.voiceOf('', 2026, ['_agent']), null);
 });
 
 test('hosts', () => {
