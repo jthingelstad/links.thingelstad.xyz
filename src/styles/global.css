@@ -752,6 +752,21 @@ img {
   color: var(--ink);
   font-weight: 600;
 }
+.home-surprise,
+.home-surprise:visited {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: var(--jt-size-ui);
+  font-weight: 600;
+  text-decoration: none;
+}
+.home-surprise:hover {
+  background: var(--ink);
+  color: var(--ground);
+}
 .home-entries ul {
   display: flex;
   flex-wrap: wrap;

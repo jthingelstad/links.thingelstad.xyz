@@ -1,6 +1,7 @@
 // Browser checks: a route of each kind renders without console or page
 // errors at desktop and phone widths, with a main landmark, a title and no
-// horizontal scroll; a search finds records and kind: links its page; the
+// horizontal scroll; a search finds records and kind: links its page;
+// Surprise me lands on a record and Back returns to the front page; the
 // box suggests a site for site: and the keyboard takes it; the home page's
 // box shows live results and Enter opens one, and a site taken there is not
 // offered again; a video facade asks nothing of YouTube or Vimeo until it is
@@ -139,6 +140,15 @@ for (const [name, viewport] of [
   await page.waitForSelector('[data-search-status] a[href="/kinds/video/"]', {
     timeout: 15000,
   });
+
+  // Surprise me: the front page's button lands on one record, and /surprise/
+  // replaces itself, so Back is the front page again.
+  await page.goto(`${base}/`, { waitUntil: 'networkidle' });
+  await page.click('a.home-surprise');
+  await page.waitForURL(/\/links\/[0-9a-f]{12}\/$/, { timeout: 15000 });
+  assert.ok(await page.locator('main').count(), 'the surprise is a record');
+  await page.goBack({ waitUntil: 'networkidle' });
+  assert.equal(new URL(page.url()).pathname, '/', 'Back is the front page');
 
   // The box suggests: site: and most of a host offers that host first, with
   // its links by year as bars; the down arrow and Enter take it, the search
@@ -297,5 +307,5 @@ if (production)
   );
 else assert.deepEqual(analytics, [], 'no Tinylytics requests during QA');
 console.log(
-  `Checked ${routes.length} routes, a search, a kind: search, a site: suggestion and the home page's live results at desktop and phone widths${video ? ', the video facade' : ' (no video facts to check the facade on)'}${edge ? ', /links.db, the redirects and the 404' : ''}; evidence in ${output}`,
+  `Checked ${routes.length} routes, a search, a kind: search, Surprise me, a site: suggestion and the home page's live results at desktop and phone widths${video ? ', the video facade' : ' (no video facts to check the facade on)'}${edge ? ', /links.db, the redirects and the 404' : ''}; evidence in ${output}`,
 );

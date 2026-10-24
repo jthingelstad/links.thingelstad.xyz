@@ -6,7 +6,8 @@
 // content/quotes.md when it has one. The box suggests as /search/'s does and
 // shows the first five links that match under it (src/scripts/home.ts);
 // Enter with nothing chosen searches on /search/, and without JavaScript it
-// is a plain form. The newest links are on /newest/.
+// is a plain form. The newest links are on /newest/. Surprise me, under the
+// count, goes to one record at random (surprise.astro).
 //
 // Every quote is in the page and the build shows the day it runs; the script
 // turns to today's (day.ts), since the page may be days old. With no quotes
@@ -18,6 +19,7 @@ import {
   newestPath,
   number,
   suggestPath,
+  surprisePath,
   years,
 } from '../lib/data';
 import { dayIndex } from '../lib/day';
@@ -76,6 +78,9 @@ const entries = [
       Searching <b>{number(counts.links)}</b> links saved from {years[0]} to{' '}
       {years[years.length - 1]}
     </p>
+    <a class="home-surprise" href={surprisePath} rel="nofollow">
+      Surprise me
+    </a>
     <nav class="home-entries" aria-label="Ways in">
       <ul>
         {/* Topics: a later phase (DIRECTION.md, "Topics"). When /topics/ is

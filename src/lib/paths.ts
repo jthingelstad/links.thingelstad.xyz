@@ -20,6 +20,9 @@ export const linkJsonPath = (id: string) => `/links/${id}.json`;
 export const linkMarkdownPath = (id: string) => `/links/${id}.md`;
 export const hostPath = (host: string) => `/hosts/${host}/`;
 export const kindsPath = '/kinds/';
+// Surprise me: a door that sends the reader to one record at random
+// (src/pages/surprise.astro). Never indexed.
+export const surprisePath = '/surprise/';
 export const kindPath = (kind: Kind) => `${kindsPath}${kind}/`;
 
 // An issue's key is its segment on weekly.thingelstad.com (/archive/<key>/):

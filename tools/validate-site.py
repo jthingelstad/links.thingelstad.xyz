@@ -18,8 +18,8 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   permalink, with a public count (no data-private, Jamie's call 2026-10-23);
 - the sitemap index lists sitemaps that exist, every sitemap URL is a built
   page, and every page but the 404 and those marked noindex is in the
-  sitemap, once; a noindex page is never in it, and only records and host
-  pages are marked noindex;
+  sitemap, once; a noindex page is never in it, and only records, host
+  pages and /surprise/ (a door to a random record) are marked noindex;
 - every record page has its JSON and Markdown twins, the JSON names the same
   id, and there is one record per link in data/links (read, never written);
 - Pagefind indexed exactly the record pages;
@@ -785,8 +785,8 @@ def main():
         ids[url] = parser.ids
         if parser.noindex and rel != "404.html":
             noindex.add(url)
-            if not re.fullmatch(r"/(links|hosts)/[^/]+/", url):
-                problems.append(f"{rel}: marked noindex, but only records and host pages may be")
+            if not re.fullmatch(r"/(links|hosts)/[^/]+/|/surprise/", url):
+                problems.append(f"{rel}: marked noindex, but only records, host pages and /surprise/ may be")
         alternates[url] = parser.alternates
         kudos[url] = parser.kudos
         if url.startswith(("/hosts/", "/kinds/")) or url == "/newest/":

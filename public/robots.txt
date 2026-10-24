@@ -3,4 +3,6 @@ Allow: /
 # Search answers are this site's own search results: the search page itself
 # is a page, a query is not.
 Disallow: /search/?
+# Surprise me sends a reader to a random record: a door, not a page.
+Disallow: /surprise/
 Sitemap: https://links.thingelstad.xyz/sitemap-index.xml

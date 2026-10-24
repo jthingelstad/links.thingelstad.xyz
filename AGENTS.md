@@ -39,7 +39,8 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
 - **URLs are fixed** (DIRECTION.md, "Pages"): `/links/<id>/` with its `.json` and `.md`
   twins, `/hosts/<host>/`, `/kinds/`, `/kinds/<kind>/`, `/issues/<n>/` (the Weekly
   Thing archive key, `140-special` for the special issue), `/years/<yyyy>/` with its
-  `llms.txt`, `/newest/`, `/search/`, `/about/`, the feeds (`feed.xml` and
+  `llms.txt`, `/newest/`, `/search/`, `/surprise/` (a noindex door to a random
+  record), `/about/`, the feeds (`feed.xml` and
   `feed.json` at the root and under each host and kind page) and `/links.json`,
   `/hosts.json`, `/issues.json`, `/links.db`, `/llms.txt`, `/mcp` and `/mcp/health`. Kudos,
   feed readers, the Librarian, WT Builder and MCP clients depend on them.
