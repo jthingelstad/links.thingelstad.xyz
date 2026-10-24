@@ -14,8 +14,8 @@ distribution (section "The MCP server").
 | ------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `links-certificate` | `infra/certificate.json` | ACM certificate for `links.thingelstad.xyz`, DNS validated                                                                                                                                                                                                                  |
 | `links-storage`     | `infra/storage.json`     | `links-storage-web-999153317627`: private, SSE-S3, versioned (replaced and removed objects kept 30 days), retained if the stack goes                                                                                                                                        |
-| `links-site`        | `infra/site.json`        | Distribution with origin access control, cache and header policies, the index function, a 14-day access log without client addresses, 5xx alarm to the family topic; once `links-mcp` exists, the `/mcp*` behaviour to its endpoint through a second origin access control  |
-| `links-delivery`    | `infra/delivery.json`    | GitHub OIDC deployment role, main only: list, read, write and remove site objects, invalidate this distribution; once `links-mcp` exists, upload the MCP package and change that stack's code, nothing else                                                                 |
+| `links-site`        | `infra/site.json`        | Distribution with origin access control, cache and header policies, the index function, a 14-day access log without client addresses, 5xx alarm to the family topic; the `/mcp*` behaviour to the `links-mcp` endpoint through a second origin access control               |
+| `links-delivery`    | `infra/delivery.json`    | GitHub OIDC deployment role, main only: list, read, write and remove site objects, invalidate this distribution; upload the MCP package, change that stack's code through a change set, and pass and read the MCP execution role; nothing else                              |
 | `links-mcp`         | `infra/mcp.json`         | The MCP server: `links-mcp-code-999153317627` (private, versioned, the packaged server), an execution role that writes its own logs and nothing else, 30-day logs, the `links-mcp` web function, its revision and `live` endpoint (IAM auth), 5xx alarm to the family topic |
 
 Live ids and ARNs are in `infra/deployment.json`; `tools/bootstrap-infra.mjs` writes them.
@@ -32,14 +32,22 @@ npm ci
 npm run infra:plan     # creates a change set for each stack and prints it; executes nothing
 ```
 
-Review the printed changes; `apply` runs only on Jamie's go.
+Review the printed changes; `apply` runs only on Jamie's go. `apply` does not execute the
+change sets `plan` made: it plans each stack afresh, prints the new change set and
+executes it at once, stack by stack. Executing one deletes the stack's other change sets,
+and a stack with nothing to change is left a FAILED "no changes" set until someone
+deletes it. Same template, same parameters, so the changes match `plan`'s unless the live
+stack moved in between; read what `apply` prints all the same.
 
 ```sh
-npm run infra:apply    # executes them in order and prints the DNS records
+npm run infra:apply    # plans each stack again, executes it, and prints the DNS records
 ```
 
-Run `npm run build` first: `apply` packages the MCP server with the build's Pagefind
-client. The order is mcp, the distribution's grant on its endpoint, storage, site,
+On the first run, `npm run build` first: `apply` packages the MCP server with the build's
+Pagefind client and uploads it (section "Adding it to the live site, once"). Once
+`links-mcp` has its endpoint, `apply` passes the live `CodeKey` and `CodeVersion` through
+unchanged, so a later `apply` never swaps the revision; that is the CI deploy's job. The
+order is mcp, the distribution's grant on its endpoint, storage, site,
 storage again (the bucket policy names the distribution), delivery, certificate. The
 certificate stack waits until ACM sees its validation record, so `apply` prints both
 records as soon as they exist and keeps waiting (up to an hour) while Jamie adds them at
@@ -76,7 +84,9 @@ and phone widths against `dist/` served behind the edge function
 (`npm run test:ci-browser`). On main the build turns Tinylytics on
 (`PUBLIC_TINYLYTICS_ENABLED=true`; the layout still loads it only on the production host)
 and keeps the verified `dist/` as an artifact, and the deployment job publishes exactly
-that artifact with `npm run deploy`.
+that artifact with `npm run deploy`, then runs `npm run mcp:package` and `npm run
+mcp:deploy` (section "What an MCP deploy does"), which swap the MCP's revision only when
+the package's contents changed.
 
 `npm run deploy:plan` prints what a deploy would do with any identity in the account and
 writes nothing.
@@ -99,8 +109,9 @@ writes nothing.
 3. **Remove** page keys the build no longer has, then invalidate, then remove stale
    content-addressed assets (so a cached page never names a missing stylesheet).
    Removal is the policy because a link made private at Pinboard must leave the site.
-   A link deleted at Pinboard will keep its page as a tombstone once tombstones are
-   built (`docs/DIRECTION.md`), so it is not removed. Versioning keeps every removed or
+   Tombstones for links deleted at Pinboard are decided but not built
+   (`docs/DIRECTION.md`); until they are, a deleted link's page is removed like any
+   other. Versioning keeps every removed or
    replaced object for 30 days; the deployment role cannot delete versions.
 4. **Guard.** A deploy that would remove more pages than the larger of 100 and 2% of the
    live pages stops before writing anything and prints the first few keys. If the
@@ -158,18 +169,19 @@ edge; the cache key and the forwarded request carry no cookie and no query strin
 the server sees only `Origin`, `Content-Type`, `Accept`, `User-Agent`,
 `MCP-Protocol-Version` and `Mcp-Session-Id`.
 
-| Request           | Answer                                                                                                    |
-| ----------------- | --------------------------------------------------------------------------------------------------------- |
-| `POST /mcp`       | JSON-RPC: `initialize`, `tools/list`, `tools/call`, `resources/*`, `ping`                                 |
-| `GET /mcp`        | a page for people that lists the tools; an event-stream GET gets 405                                      |
-| `GET /mcp/health` | the counts the server holds, the data's generated time and the package key; 503 until the data has loaded |
-| `OPTIONS /mcp`    | 204 with CORS for any origin                                                                              |
+| Request           | Answer                                                                                                                                                                                |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `POST /mcp`       | JSON-RPC: `initialize`, `tools/list`, `tools/call`, `resources/*`, `ping`                                                                                                             |
+| `GET /mcp`        | a page for people that lists the tools; an event-stream GET gets 405                                                                                                                  |
+| `GET /mcp/health` | `server_version`, the package key, the data's generated time, its counts, and when it was loaded and last checked; the request waits for the first load, so 503 means the load failed |
+| `OPTIONS /mcp`    | 204 with CORS for any origin                                                                                                                                                          |
 
 The server keeps no data of its own. It reads `/links.json`, `/issues.json` and
 `/hosts.json` from the production host, revalidates them by ETag every ten minutes (a
 failed fetch keeps what it has and tries again a minute later), and searches the
 published Pagefind index with Pagefind's client, packaged beside it from the same build.
-It logs one line a request (method, tool, status, milliseconds), never argument values.
+It logs one line a request (request id, HTTP method, path, JSON-RPC method, tool, status,
+milliseconds, and the error message if any), never argument values.
 The 5xx alarm `links-mcp-5xx` goes to the family topic.
 
 Locally, after `npm run build`:
@@ -178,9 +190,10 @@ Locally, after `npm run build`:
 PAGEFIND_MODULE=dist/pagefind/pagefind.js npm run mcp:serve   # 127.0.0.1:8790, reads the live site
 ```
 
-### Adding it to the live site, once
+### Adding it to the live site, once (done 2026-10-24)
 
-With the `cloud-engineer` identity, in two reviewed rounds, each `apply` on Jamie's go:
+This ran on 2026-10-24 with the `cloud-engineer` identity, in two reviewed rounds, each
+`apply` on Jamie's go. Kept as the record of what the bootstrap did:
 
 ```sh
 npm run build
@@ -209,9 +222,9 @@ npm run infra:apply                  # the grant, links-site (/mcp), links-deliv
    credentials, and without it a revision swap fails at "Unable to retrieve Arn
    attribute for AWS::IAM::Role" (seen 2026-10-24, rolled back cleanly).
 
-Then commit the rewritten `infra/deployment.json` (it gains `mcpExecutionRoleArn` and
-`mcpEndpointDomain`). Until that commit is on main, the deploy's MCP step prints a
-notice and does nothing. Check it with `curl https://links.thingelstad.xyz/mcp/health`.
+The rewritten `infra/deployment.json` (with `mcpExecutionRoleArn` and `mcpEndpointDomain`)
+was committed as 65644c5; without those two values the deploy's MCP step prints a notice
+and does nothing. `curl https://links.thingelstad.xyz/mcp/health` shows what is live.
 
 cfn-lint 1.57.2 does not know the Lambda Web Functions actions, so `DeploymentRole`
 ignores W3037 (unknown action) in its own metadata; `npm run validate:infra` pins those
@@ -239,13 +252,15 @@ mcp:deploy` (`tools/deploy-mcp.mjs`, its rules in `tools/mcp-plan.mjs`):
    replaces the revision and points the endpoint at it and does nothing else;
    otherwise it is deleted and the deploy fails. The role cannot change the template
    or anything outside the `links-mcp` stack, so infrastructure changes still go
-   through the bootstrap.
+   through the bootstrap. The change set runs with the role's own credentials, which is
+   why `McpDelivery` carries `iam:GetRole` on the execution role (bootstrap step 6).
 5. **Verify** `/mcp/health` through CloudFront until it reports the new key, then
    `initialize` once.
 
 To roll back, revert the commit: the next deploy builds the earlier bytes, whose key
-differs from the live one, and puts them live the same way. `npm run mcp:plan` prints
-what a deploy would do with any identity in the account and writes nothing.
+differs from the live one, and puts them live the same way. After `npm run build` and
+`npm run mcp:package`, `npm run mcp:plan` prints what a deploy of that package would do
+with any identity in the account and writes nothing.
 
 `CustomErrorResponses` on the distribution apply to every behaviour, so a 404 from the
 server (an unknown path under `/mcp`) and a 403 from the endpoint (a broken grant) both
@@ -273,7 +288,10 @@ validation exits 1 and leaves the tree as it is for a look.
 **When:** 00:30 Mac time (US Central), from
 `launchd/com.thingelstad.links-nightly.plist` (`StartCalendarInterval`; a Mac asleep at
 00:30 runs it on waking). A first pass over the 7,064 hosts and 16,524 Wayback lookups
-takes about three weeks of nights; after that a night is well under an hour.
+takes about three weeks of nights of about three hours each (2026-10-24: 1,000 hosts in
+75 minutes, 800 Wayback lookups in 97 minutes at the 6 s pace, committed at 03:21
+Central); after that a night is well under an hour. The per-night limits are set in
+`tools/nightly.sh`.
 
 **Logs:** `~/Library/Logs/links/nightly.log`, every line stamped in US Central, with each
 tool's full output; launchd's own `nightly.out` and `nightly.err` beside it. The lock is
