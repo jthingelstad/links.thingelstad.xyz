@@ -1,0 +1,80 @@
+{
+ "404media.co": {
+  "checked": "2026-10-24T05:41:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "178.128.137.126"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns65.domaincontrol.com",
+    "ns66.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:41:28Z",
+   "title": "404 Media",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.404media.co/rss/",
+     "title": "404 Media"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@404mediaco"
+   ],
+   "webmention": "https://www.404media.co/webmentions/receive/"
+  },
+  "rdap": null,
+  "rdap_error": "no RDAP service for .co"
+ },
+ "43folders.com": {
+  "checked": "2026-10-24T05:54:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.61.198",
+    "172.67.213.125"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:d57d",
+    "2606:4700:3037::6815:3dc6"
+   ],
+   "cname": null,
+   "ns": [
+    "marissa.ns.cloudflare.com",
+    "tosana.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:54:34Z",
+   "title": "Parked",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ }
+}

@@ -1,4 +1,72 @@
 {
+ "labs.spotify.com": {
+  "checked": "2026-10-24T06:08:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.186.224.24"
+   ],
+   "aaaa": [
+    "2600:1901:1:7c5::"
+   ],
+   "cname": "edge-web.dual-gslb.spotify.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:54Z",
+   "title": "Spotify Labs — the home to our newest ideas",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "lanyrd.com": {
+  "checked": "2026-10-24T06:39:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "99.84.203.24",
+    "99.84.203.35",
+    "99.84.203.108",
+    "99.84.203.119"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1020.awsdns-63.net",
+    "ns-1485.awsdns-57.org",
+    "ns-1715.awsdns-22.co.uk",
+    "ns-273.awsdns-34.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:39:33Z",
+   "title": "Eventbrite - Discover the Best Local Events & Things to Do",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "larahogan.me": {
   "checked": "2026-10-24T01:48:19Z",
   "method": "enrich_hosts",
@@ -42,6 +110,310 @@
   "rdap": null,
   "rdap_error": "no RDAP service for .me"
  },
+ "lastweekinaws.com": {
+  "checked": "2026-10-24T06:08:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.239.109.193",
+    "64.239.123.193"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "alexis.ns.cloudflare.com",
+    "marge.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:57Z",
+   "title": "Last Week in AWS - AWS News Sprinkled With a Side of Snark",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "latent.space": {
+  "checked": "2026-10-24T06:39:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.30.95",
+    "172.67.172.182"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:1e5f",
+    "2606:4700:3033::ac43:acb6"
+   ],
+   "cname": null,
+   "ns": [
+    "linda.ns.cloudflare.com",
+    "pablo.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:39:35Z",
+   "title": "Latent Space — The AI Engineer publication",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://latent.space/feeds/all.xml",
+     "title": "Latent Space"
+    },
+    {
+     "type": "rss",
+     "url": "https://podcast.latent.space/feed.xml",
+     "title": "Latent Space Podcast"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "latimes.com": {
+  "checked": "2026-10-24T05:57:42Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.248.222.133",
+    "76.223.88.230"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1295.awsdns-33.org",
+    "ns-1610.awsdns-09.co.uk",
+    "ns-452.awsdns-56.com",
+    "ns-926.awsdns-51.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:57:42Z",
+   "title": "News from California, across the nation and world - Los Angeles Times",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.latimes.com/index.rss",
+     "title": "News from California, across the nation and world - Los Angeles Times"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "laughingmeme.org": {
+  "checked": "2026-10-24T06:39:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-118-c.gandi.net",
+    "ns-72-b.gandi.net",
+    "ns-96-a.gandi.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:39:39Z",
+   "title": "Kellan Elliott-McCrea: Blog | A personal blog of Kellan Elliott-McCrea. I don’t really know what a “laughing meme” is. It sounded cool in 1999.",
+   "generator": "Jekyll v4.2.2",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://laughingmeme.org/feed.xml",
+     "title": "Kellan Elliott-McCrea: Blog"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "laughingsquid.com": {
+  "checked": "2026-10-24T06:39:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.2"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "gail.ns.cloudflare.com",
+    "rob.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:39:41Z",
+   "title": "Laughing Squid",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://laughingsquid.com/feed/",
+     "title": "Laughing Squid » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://laughingsquid.com/comments/feed/",
+     "title": "Laughing Squid » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@laughingsquid"
+   ],
+   "webmention": null
+  }
+ },
+ "laynekennedy.blogspot.com": {
+  "checked": "2026-10-24T05:57:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.250.189.129"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:803::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:57:43Z",
+   "title": "Layne Kennedy",
+   "generator": "blogger",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://laynekennedy.blogspot.com/feeds/posts/default",
+     "title": "Layne Kennedy - Atom"
+    },
+    {
+     "type": "rss",
+     "url": "https://laynekennedy.blogspot.com/feeds/posts/default?alt=rss",
+     "title": "Layne Kennedy - RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "leadership.garden": {
+  "checked": "2026-10-24T06:39:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.14.22",
+    "104.26.15.22",
+    "172.67.74.242"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:e16",
+    "2606:4700:20::681a:f16",
+    "2606:4700:20::ac43:4af2"
+   ],
+   "cname": null,
+   "ns": [
+    "jay.ns.cloudflare.com",
+    "sue.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:39:44Z",
+   "title": "Leadership Garden",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://leadership.garden/rss/",
+     "title": "Leadership Garden"
+    },
+    {
+     "type": "atom",
+     "url": "https://leadership.garden/atom/",
+     "title": "Leadership Garden"
+    },
+    {
+     "type": "json",
+     "url": "https://leadership.garden/feed.json",
+     "title": "Leadership Garden"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "leadershipfreak.blog": {
   "checked": "2026-10-23T21:27:45Z",
   "method": "enrich_hosts",
@@ -80,6 +452,330 @@
     "ns3.wordpress.com"
    ],
    "checked": "2026-10-23T21:27:45Z"
+  }
+ },
+ "leancrew.com": {
+  "checked": "2026-10-24T05:44:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.131.20.216"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.digitalocean.com",
+    "ns2.digitalocean.com",
+    "ns3.digitalocean.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:44:39Z",
+   "title": "And now it’s all this",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://leancrew.com/all-this/feed/",
+     "title": "RSS Feed for ANIAT"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://fosstodon.org/@drdrang"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "leancrew.com",
+   "registrar": "pair Networks, Inc. d/b/a pair Domains",
+   "registered": "2004-04-01",
+   "expires": "2029-04-01",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1.digitalocean.com",
+    "ns2.digitalocean.com",
+    "ns3.digitalocean.com"
+   ],
+   "checked": "2026-10-24T05:44:39Z"
+  }
+ },
+ "learnomnifocus.com": {
+  "checked": "2026-10-24T05:43:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.16.150.108",
+    "104.16.151.108"
+   ],
+   "aaaa": [
+    "2606:4700::6810:966c",
+    "2606:4700::6810:976c"
+   ],
+   "cname": null,
+   "ns": [
+    "mimi.ns.cloudflare.com",
+    "randall.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:43:14Z",
+   "title": "Learn OmniFocus | OmniFocus Video Tutorials, Articles & Webinars",
+   "generator": "Site Kit by Google 1.190.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://learnomnifocus.com/feed/",
+     "title": "Learn OmniFocus » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://learnomnifocus.com/comments/feed/",
+     "title": "Learn OmniFocus » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "learnomnifocus.com",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "2012-12-08",
+   "expires": "2026-12-08",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "mimi.ns.cloudflare.com",
+    "randall.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:43:14Z"
+  }
+ },
+ "leehanchung.github.io": {
+  "checked": "2026-10-24T06:39:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:39:47Z",
+   "title": "Han Lee on Machine Learning Systems and AI Evaluation",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://leehanchung.github.io/feed.xml",
+     "title": "Han, Not Solo"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "leezukor.com": {
+  "checked": "2026-10-24T05:57:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.24",
+    "192.0.78.25"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:57:45Z",
+   "title": "Lee Zukor",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://leezukor.com/feed/",
+     "title": "Lee Zukor » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://leezukor.com/comments/feed/",
+     "title": "Lee Zukor » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "lennysnewsletter.com": {
+  "checked": "2026-10-24T06:09:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.38.198",
+    "172.67.138.33"
+   ],
+   "aaaa": [
+    "2606:4700:3035::6815:26c6",
+    "2606:4700:3037::ac43:8a21"
+   ],
+   "cname": null,
+   "ns": [
+    "hunts.ns.cloudflare.com",
+    "riya.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:09:00Z",
+   "title": "Lenny's Newsletter | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.lennysnewsletter.com/feed",
+     "title": "Lenny's Newsletter"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "lessig.org": {
+  "checked": "2026-10-24T06:09:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.93.210",
+    "172.67.214.199"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:d6c7",
+    "2606:4700:3032::6815:5dd2"
+   ],
+   "cname": null,
+   "ns": [
+    "algin.ns.cloudflare.com",
+    "zelda.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:09:01Z",
+   "title": "Lawrence Lessig",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "lesswrong.com": {
+  "checked": "2026-10-24T06:09:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.150.1.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1077.awsdns-06.org",
+    "ns-1925.awsdns-48.co.uk",
+    "ns-478.awsdns-59.com",
+    "ns-923.awsdns-51.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:09:03Z",
+   "title": "LessWrong",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.lesswrong.com/feed.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "lethain.com": {
@@ -131,6 +827,147 @@
    "checked": "2026-10-23T21:27:13Z"
   }
  },
+ "letsencrypt.org": {
+  "checked": "2026-10-24T05:32:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [
+    "2600:1f18:16e:df01::258",
+    "2600:1f18:16e:df01::259"
+   ],
+   "cname": null,
+   "ns": [
+    "owen.ns.cloudflare.com",
+    "vera.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:32:05Z",
+   "title": "Let's Encrypt",
+   "generator": "Hugo 0.162.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://letsencrypt.org/feed.xml",
+     "title": "Let's Encrypt"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "letsencrypt.org",
+   "registrar": "Cloudflare, Inc.",
+   "registered": "2014-07-07",
+   "expires": "2027-07-07",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "owen.ns.cloudflare.com",
+    "vera.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:32:05Z"
+  }
+ },
+ "lettersofnote.com": {
+  "checked": "2026-10-24T06:09:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.16.172.26",
+    "199.16.173.211"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:09:06Z",
+   "title": "Letters of Note | Shaun Usher | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://news.lettersofnote.com/feed",
+     "title": "Letters of Note"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "lifehack.org": {
+  "checked": "2026-10-24T06:09:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.25.107.109",
+    "104.25.108.109",
+    "172.67.66.83"
+   ],
+   "aaaa": [
+    "2606:4700:20::6819:6b6d",
+    "2606:4700:20::6819:6c6d",
+    "2606:4700:20::ac43:4253"
+   ],
+   "cname": null,
+   "ns": [
+    "alla.ns.cloudflare.com",
+    "hans.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:09:09Z",
+   "title": "LifeHack - Make what you know finally stick.",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.lifehack.org/feed",
+     "title": "LifeHack » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "lifehacker.com": {
   "checked": "2026-10-23T21:27:00Z",
   "method": "enrich_hosts",
@@ -170,6 +1007,143 @@
     "owen.ns.cloudflare.com"
    ],
    "checked": "2026-10-23T21:27:00Z"
+  }
+ },
+ "lightroom-blog.com": {
+  "checked": "2026-10-24T06:39:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.43.232.221"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns5.dnsireland.com",
+    "ns6.dnsireland.com",
+    "ns7.dnsireland.ie"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:39:50Z",
+   "title": "Lightroom Blog - Tips, Tricks, Presets and Addons for Lightroom",
+   "generator": "All in One SEO (AIOSEO) 4.9.7.2",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://lightroom-blog.com/feed/",
+     "title": "Lightroom Blog » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://lightroom-blog.com/comments/feed/",
+     "title": "Lightroom Blog » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "lightroom-news.com": {
+  "checked": "2026-10-24T05:43:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "103.21.221.39"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns13.hawkhost.com",
+    "ns14.hawkhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:43:17Z",
+   "title": "Index of /",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "lightroom-news.com",
+   "registrar": "NameSilo, LLC",
+   "registered": "2006-01-09",
+   "expires": "2027-01-09",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns13.hawkhost.com",
+    "ns14.hawkhost.com"
+   ],
+   "checked": "2026-10-24T05:43:17Z"
+  }
+ },
+ "lightroomkillertips.com": {
+  "checked": "2026-10-24T06:39:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.61.171",
+    "172.67.212.97"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:d461",
+    "2606:4700:3037::6815:3dab"
+   ],
+   "cname": null,
+   "ns": [
+    "nora.ns.cloudflare.com",
+    "yisroel.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:39:53Z",
+   "title": "Lightroom Killer Tips - The Latest Lightroom Tips, Tricks & Techniques",
+   "generator": "Redux 4.5.16",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://lightroomkillertips.com/feed/",
+     "title": "Lightroom Killer Tips » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://lightroomkillertips.com/comments/feed/",
+     "title": "Lightroom Killer Tips » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "linkedin.com": {
@@ -226,6 +1200,810 @@
     "ns4-42.azure-dns.info"
    ],
    "checked": "2026-10-23T21:28:34Z"
+  }
+ },
+ "linode.com": {
+  "checked": "2026-10-24T06:39:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.59.169.42",
+    "23.59.169.58"
+   ],
+   "aaaa": [
+    "2600:1418:1000:5::17d9:3784",
+    "2600:1418:1000:5::17d9:3791"
+   ],
+   "cname": null,
+   "ns": [
+    "a1-249.akam.net",
+    "a12-65.akam.net",
+    "a16-64.akam.net",
+    "a3-67.akam.net",
+    "a4-64.akam.net",
+    "a7-65.akam.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:39:56Z",
+   "title": "The World's Most Distributed Cloud Computing Platform | Akamai",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "linux.com": {
+  "checked": "2026-10-24T06:40:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.185.0.3"
+   ],
+   "aaaa": [
+    "2620:12a:8000::3",
+    "2620:12a:8001::3"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple-edge.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple-edge.io",
+    "ns4.dnsimple-edge.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:40:06Z",
+   "title": "Linux.com - News For Open Source Professionals",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.linux.com/feed/",
+     "title": "Linux.com » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "litecoin.com": {
+  "checked": "2026-10-24T05:57:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.0.31",
+    "104.26.1.31",
+    "172.67.75.107"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:1f",
+    "2606:4700:20::681a:11f",
+    "2606:4700:20::ac43:4b6b"
+   ],
+   "cname": null,
+   "ns": [
+    "arvind.ns.cloudflare.com",
+    "bailey.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:57:48Z",
+   "title": "Litecoin - Buy, Hold, Pay & Learn LTC",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "littlebits.com": {
+  "checked": "2026-10-24T06:40:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.17.250.35",
+    "104.17.251.35"
+   ],
+   "aaaa": [
+    "2606:4700::6811:fa23",
+    "2606:4700::6811:fb23"
+   ],
+   "cname": null,
+   "ns": [
+    "gina.ns.cloudflare.com",
+    "jake.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:40:09Z",
+   "title": "The complete littleBits library of STEAM and Coding lessons",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "livestream.com": {
+  "checked": "2026-10-24T06:40:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.136.60",
+    "162.159.137.60"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1098.awsdns-09.org",
+    "ns-2025.awsdns-61.co.uk",
+    "ns-305.awsdns-38.com",
+    "ns-667.awsdns-19.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:40:12Z",
+   "title": "Online Live Streaming Platform: Broadcast Events with Vimeo",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "lmnt.me": {
+  "checked": "2026-10-24T06:40:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "108.160.156.139"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.mediatemple.net",
+    "ns2.mediatemple.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:40:13Z",
+   "title": "LMNT",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://lmnt.me/feed.xml",
+     "title": "LMNT"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://pdx.social/@louie"
+   ],
+   "webmention": "https://webmention.io/lmnt.me/webmention"
+  }
+ },
+ "locusmag.com": {
+  "checked": "2026-10-24T06:40:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.124.249.118"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns79.worldnic.com",
+    "ns80.worldnic.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:40:16Z",
+   "title": "Locus – The Magazine of the Science Fiction and Fantasy Field",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://locusmag.com/feed/",
+     "title": "Locus » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://locusmag.com/comments/feed/",
+     "title": "Locus » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "log.liminastudio.com": {
+  "checked": "2026-10-24T06:40:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.76.103",
+    "172.67.193.13"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:4c67",
+    "2606:4700:3037::ac43:c10d"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:40:22Z",
+   "title": "BALAKSIX: SLOT88 Link Situs Slot Gacor Hari Ini Terpercaya",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "logicmag.io": {
+  "checked": "2026-10-24T06:40:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.33.154",
+    "172.67.146.138"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:928a",
+    "2606:4700:3037::6815:219a"
+   ],
+   "cname": null,
+   "ns": [
+    "cecelia.ns.cloudflare.com",
+    "julian.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:40:27Z",
+   "title": "Home | Logic(s) Magazine",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://logicmag.io/rss.xml",
+     "title": "Logic(s) Magazine"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "logicmonitor.com": {
+  "checked": "2026-10-24T05:45:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.20",
+    "141.193.213.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1015.awsdns-62.net",
+    "ns-1267.awsdns-30.org",
+    "ns-1833.awsdns-37.co.uk",
+    "ns-70.awsdns-08.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:45:55Z",
+   "title": "LogicMonitor | Autonomous IT for Modern Enterprises",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.logicmonitor.com/feed",
+     "title": "LogicMonitor » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.logicmonitor.com/comments/feed",
+     "title": "LogicMonitor » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "logicmonitor.com",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "2007-09-17",
+   "expires": "2027-09-17",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1015.awsdns-62.net",
+    "ns-1267.awsdns-30.org",
+    "ns-1833.awsdns-37.co.uk",
+    "ns-70.awsdns-08.com"
+   ],
+   "checked": "2026-10-24T05:45:55Z"
+  }
+ },
+ "lorelle.wordpress.com": {
+  "checked": "2026-10-24T06:40:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.12",
+    "192.0.78.13"
+   ],
+   "aaaa": [],
+   "cname": "lb.wordpress.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:40:29Z",
+   "title": "Lorelle on WordPress",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://lorelle.wordpress.com/feed/",
+     "title": "Lorelle on WordPress » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://lorelle.wordpress.com/comments/feed/",
+     "title": "Lorelle on WordPress » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "loupventures.com": {
+  "checked": "2026-10-24T06:40:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.202.188.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns31.domaincontrol.com",
+    "ns32.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: certificate has expired"
+  },
+  "home": {
+   "checked": "2026-10-24T06:40:32Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: certificate has expired"
+  }
+ },
+ "lrb.co.uk": {
+  "checked": "2026-10-24T05:53:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.132",
+    "151.101.66.132",
+    "151.101.130.132",
+    "151.101.194.132"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1386.awsdns-45.org",
+    "ns-1607.awsdns-08.co.uk",
+    "ns-383.awsdns-47.com",
+    "ns-901.awsdns-48.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:03Z",
+   "title": "London Review of Books",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.lrb.co.uk/feeds/rss",
+     "title": "LRB feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "lrb.co.uk",
+   "registrar": "Gandi",
+   "registered": "1996-10-21",
+   "expires": "2027-10-21",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1386.awsdns-45.org",
+    "ns-1607.awsdns-08.co.uk",
+    "ns-383.awsdns-47.com",
+    "ns-901.awsdns-48.net"
+   ],
+   "checked": "2026-10-24T05:53:03Z"
+  }
+ },
+ "lucumr.pocoo.org": {
+  "checked": "2026-10-24T05:49:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": "mitsuhiko.github.io",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:49:53Z",
+   "title": "Blog | Armin Ronacher's Thoughts and Writings",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://lucumr.pocoo.org/feed.atom",
+     "title": "Armin Ronacher's Thoughts and Writings"
+    },
+    {
+     "type": "rss",
+     "url": "https://lucumr.pocoo.org/feed.xml",
+     "title": "Armin Ronacher's Thoughts and Writings"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://hachyderm.io/@mitsuhiko"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "pocoo.org",
+   "registrar": "Mesh Digital Limited",
+   "registered": "2005-10-11",
+   "expires": "2027-10-11",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns53.domaincontrol.com",
+    "ns54.domaincontrol.com"
+   ],
+   "checked": "2026-10-24T05:49:53Z"
+  }
+ },
+ "lux.camera": {
+  "checked": "2026-10-24T05:48:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "178.128.137.126"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1316.awsdns-36.org",
+    "ns-163.awsdns-20.com",
+    "ns-1703.awsdns-20.co.uk",
+    "ns-779.awsdns-33.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:48:11Z",
+   "title": "Lux — iPhone camera apps, camera reviews and more",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.lux.camera/rss/",
+     "title": "Lux — iPhone camera apps, camera reviews and more"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://www.lux.camera/webmentions/receive/"
+  },
+  "rdap": {
+   "domain": "lux.camera",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "2019-05-22",
+   "expires": "2035-05-22",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1316.awsdns-36.org",
+    "ns-163.awsdns-20.com",
+    "ns-1703.awsdns-20.co.uk",
+    "ns-779.awsdns-33.net"
+   ],
+   "checked": "2026-10-24T05:48:11Z"
+  }
+ },
+ "luxurydaily.com": {
+  "checked": "2026-10-24T06:40:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.10.53",
+    "104.26.11.53",
+    "172.67.74.77"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:a35",
+    "2606:4700:20::681a:b35",
+    "2606:4700:20::ac43:4a4d"
+   ],
+   "cname": null,
+   "ns": [
+    "braelyn.ns.cloudflare.com",
+    "sage.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:40:35Z",
+   "title": "Luxury Daily",
+   "generator": "WordPress 6.9.1",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "lwn.net": {
+  "checked": "2026-10-24T06:09:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "173.255.236.65"
+   ],
+   "aaaa": [
+    "2600:3c03::f03c:93ff:febd:80f5"
+   ],
+   "cname": null,
+   "ns": [
+    "mdns.lwn.net",
+    "static.lwn.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:09:10Z",
+   "title": "Welcome to LWN.net [LWN.net]",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://lwn.net/headlines/rss",
+     "title": "LWN.net headlines"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "lynalden.com": {
+  "checked": "2026-10-24T05:35:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.215.100.193"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.siteground.net",
+    "ns2.siteground.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:35:12Z",
+   "title": "Lyn Alden - Investment Strategy",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.lynalden.com/feed/",
+     "title": "Lyn Alden » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.lynalden.com/comments/feed/",
+     "title": "Lyn Alden » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "lynalden.com",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "2016-12-11",
+   "expires": "2026-12-11",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.siteground.net",
+    "ns2.siteground.net"
+   ],
+   "checked": "2026-10-24T05:35:12Z"
   }
  }
 }

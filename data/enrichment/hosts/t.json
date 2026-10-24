@@ -1,4 +1,65 @@
 {
+ "talkingpointsmemo.com": {
+  "checked": "2026-10-24T05:50:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.34.117",
+    "172.66.149.53"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:2275",
+    "2606:4700:10::ac42:9535"
+   ],
+   "cname": null,
+   "ns": [
+    "joan.ns.cloudflare.com",
+    "malcolm.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:50:25Z",
+   "title": "TPM: Talking Points Memo - Breaking News and Analysis",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://talkingpointsmemo.com/feed",
+     "title": null
+    },
+    {
+     "type": "rss",
+     "url": "https://talkingpointsmemo.com/edblog/feed",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "talkingpointsmemo.com",
+   "registrar": "Network Solutions, LLC",
+   "registered": "2001-01-12",
+   "expires": "2031-01-12",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "joan.ns.cloudflare.com",
+    "malcolm.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:50:25Z"
+  }
+ },
  "tbray.org": {
   "checked": "2026-10-23T21:26:42Z",
   "method": "enrich_hosts",
@@ -34,6 +95,39 @@
     "ns2.liquidmatter.ca"
    ],
    "checked": "2026-10-23T21:26:42Z"
+  }
+ },
+ "tcbmag.blogs.com": {
+  "checked": "2026-10-24T06:13:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.16.84.19",
+    "104.16.85.19",
+    "104.16.86.19",
+    "104.16.87.19",
+    "104.16.88.19"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:13:16Z",
+   "title": "Typepad | Network Solutions",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "tcbmag.com": {
@@ -106,6 +200,66 @@
   "rdap": null,
   "rdap_error": "no RDAP service for .mn"
  },
+ "tech.spscommerce.com": {
+  "checked": "2026-10-24T05:46:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.200.22.214"
+   ],
+   "aaaa": [
+    "2600:3c00:1::68c8:16d6"
+   ],
+   "cname": "spstech.micro.blog",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:46:24Z",
+   "title": "SPS Technology - SPS Technology",
+   "generator": "Hugo 0.54.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://tech.spscommerce.com/feed.xml",
+     "title": "SPS Technology"
+    },
+    {
+     "type": "rss",
+     "url": "https://tech.spscommerce.com/podcast.xml",
+     "title": "Podcast"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://micro.blog/spstech"
+   ],
+   "webmention": "https://micro.blog/webmention"
+  },
+  "rdap": {
+   "domain": "spscommerce.com",
+   "registrar": "NameCheap, Inc.",
+   "registered": "1998-03-23",
+   "expires": "2027-03-22",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1119.awsdns-11.org",
+    "ns-1868.awsdns-41.co.uk",
+    "ns-396.awsdns-49.com",
+    "ns-661.awsdns-18.net"
+   ],
+   "checked": "2026-10-24T05:46:24Z"
+  }
+ },
  "techcrunch.com": {
   "checked": "2026-10-23T21:25:28Z",
   "method": "enrich_hosts",
@@ -150,6 +304,69 @@
     "gordon.ns.cloudflare.com"
    ],
    "checked": "2026-10-23T21:25:28Z"
+  }
+ },
+ "techdirt.com": {
+  "checked": "2026-10-24T05:45:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.25.95.73",
+    "104.25.96.73",
+    "172.67.67.98"
+   ],
+   "aaaa": [
+    "2606:4700:20::6819:5f49",
+    "2606:4700:20::6819:6049",
+    "2606:4700:20::ac43:4362"
+   ],
+   "cname": null,
+   "ns": [
+    "jim.ns.cloudflare.com",
+    "kate.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:45:09Z",
+   "title": "Techdirt.",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.techdirt.com/feed/",
+     "title": "Techdirt » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.techdirt.com/comments/feed/",
+     "title": "Techdirt » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "techdirt.com",
+   "registrar": "NameCheap, Inc.",
+   "registered": "1998-02-16",
+   "expires": "2027-02-15",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "jim.ns.cloudflare.com",
+    "kate.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:45:09Z"
   }
  },
  "technologyreview.com": {
@@ -244,6 +461,138 @@
    "checked": "2026-10-23T21:28:48Z"
   }
  },
+ "tedium.co": {
+  "checked": "2026-10-24T05:50:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.79.13",
+    "172.67.168.176"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:4f0d",
+    "2606:4700:3030::ac43:a8b0"
+   ],
+   "cname": null,
+   "ns": [
+    "hank.ns.cloudflare.com",
+    "roxy.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:50:27Z",
+   "title": "Tedium | An Offbeat Digital Newsletter",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://writing.exchange/@ernie"
+   ],
+   "webmention": null
+  },
+  "rdap": null,
+  "rdap_error": "no RDAP service for .co"
+ },
+ "tesla.com": {
+  "checked": "2026-10-24T06:13:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "2.18.48.207",
+    "2.18.49.207",
+    "2.18.50.207",
+    "2.18.51.207",
+    "2.18.52.207",
+    "2.18.53.207",
+    "2.18.54.207",
+    "2.18.55.207",
+    "23.7.244.207",
+    "23.40.100.207"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "a1-12.akam.net",
+    "a10-67.akam.net",
+    "a12-64.akam.net",
+    "a28-65.akam.net",
+    "a7-66.akam.net",
+    "a9-67.akam.net",
+    "edns69.ultradns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T06:13:17Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "theagileadmin.com": {
+  "checked": "2026-10-24T06:13:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.24",
+    "192.0.78.25"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:13:19Z",
+   "title": "the agile admin | thoughts on agile web operations and devops by @ernestmueller, @wickett, @iteration1 and @bproverb",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://theagileadmin.com/feed/",
+     "title": "the agile admin » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://theagileadmin.com/comments/feed/",
+     "title": "the agile admin » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "theatlantic.com": {
   "checked": "2026-10-23T21:26:11Z",
   "method": "enrich_hosts",
@@ -299,6 +648,266 @@
     "ns-cloud-b4.googledomains.com"
    ],
    "checked": "2026-10-23T21:26:11Z"
+  }
+ },
+ "theawl.com": {
+  "checked": "2026-10-24T05:50:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "45.79.130.22"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.linode.com",
+    "ns2.linode.com",
+    "ns3.linode.com",
+    "ns4.linode.com",
+    "ns5.linode.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'theawl.com'"
+  },
+  "home": {
+   "checked": "2026-10-24T05:50:30Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'theawl.com'"
+  },
+  "rdap": {
+   "domain": "theawl.com",
+   "registrar": "1API GmbH",
+   "registered": "2006-03-04",
+   "expires": "2036-03-04",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1.linode.com",
+    "ns2.linode.com",
+    "ns3.linode.com",
+    "ns4.linode.com"
+   ],
+   "checked": "2026-10-24T05:50:30Z"
+  }
+ },
+ "thebignewsletter.com": {
+  "checked": "2026-10-24T06:13:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.38.153",
+    "172.67.168.36"
+   ],
+   "aaaa": [
+    "2606:4700:3035::6815:2699",
+    "2606:4700:3037::ac43:a824"
+   ],
+   "cname": null,
+   "ns": [
+    "hassan.ns.cloudflare.com",
+    "maeve.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:13:21Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "thechangelog.com": {
+  "checked": "2026-10-24T05:32:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "45.55.140.190"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hover.com",
+    "ns2.hover.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-24T05:32:46Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  },
+  "rdap": {
+   "domain": "thechangelog.com",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "2009-11-15",
+   "expires": "2026-11-15",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.hover.com",
+    "ns2.hover.com"
+   ],
+   "checked": "2026-10-24T05:32:46Z"
+  }
+ },
+ "theconversation.com": {
+  "checked": "2026-10-24T06:14:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.132",
+    "151.101.66.132",
+    "151.101.130.132",
+    "151.101.194.132"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple-edge.com",
+    "ns1.dnsunlimited.com",
+    "ns2.dnsimple-edge.net",
+    "ns2.dnsunlimited.com",
+    "ns3.dnsimple-edge.io",
+    "ns3.dnsunlimited.com",
+    "ns4.dnsimple-edge.org",
+    "ns4.dnsunlimited.com",
+    "ns5.dnsunlimited.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:25Z",
+   "title": "The Conversation U.S. - News written by researchers and scientists to help you understand",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "thecut.com": {
+  "checked": "2026-10-24T06:14:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.91",
+    "151.101.65.91",
+    "151.101.129.91",
+    "151.101.193.91"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1144.awsdns-15.org",
+    "ns-1588.awsdns-06.co.uk",
+    "ns-291.awsdns-36.com",
+    "ns-708.awsdns-24.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:30Z",
+   "title": "The Cut – Fashion, Beauty, Politics, Sex and Celebrity",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "thedeets.com": {
+  "checked": "2026-10-24T06:14:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "66.235.200.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.bluehost.com",
+    "ns2.bluehost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:32Z",
+   "title": "The Deets - You can't handle The Deets.",
+   "generator": "All in One SEO (AIOSEO) 5.0.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://thedeets.com/feed/",
+     "title": "The Deets » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://thedeets.com/comments/feed/",
+     "title": "The Deets » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "theguardian.com": {
@@ -361,6 +970,542 @@
    "checked": "2026-10-23T21:26:08Z"
   }
  },
+ "theinformation.com": {
+  "checked": "2026-10-24T06:14:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.22.184",
+    "104.18.23.184"
+   ],
+   "aaaa": [
+    "2606:4700::6812:16b8",
+    "2606:4700::6812:17b8"
+   ],
+   "cname": null,
+   "ns": [
+    "john.ns.cloudflare.com",
+    "nova.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:34Z",
+   "title": "The Information",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.theinformation.com/feed",
+     "title": "The Information"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "theintercept.com": {
+  "checked": "2026-10-24T05:41:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.199"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dora.ns.cloudflare.com",
+    "lamar.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:41:24Z",
+   "title": "The Intercept",
+   "generator": "Site Kit by Google 1.187.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://journa.host/@theintercept"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "theintercept.com",
+   "registrar": "Gandi SAS",
+   "registered": "2009-10-01",
+   "expires": "2027-10-01",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "dora.ns.cloudflare.com",
+    "lamar.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:41:24Z"
+  }
+ },
+ "thelinemedia.com": {
+  "checked": "2026-10-24T05:45:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "5.135.59.129"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.thelinemedia.com",
+    "ns2.thelinemedia.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:45:10Z",
+   "title": "The Line Homepage",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "thelinemedia.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2006-07-13",
+   "expires": "2027-07-13",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.thelinemedia.com",
+    "ns2.thelinemedia.com"
+   ],
+   "checked": "2026-10-24T05:45:10Z"
+  }
+ },
+ "themorningnews.org": {
+  "checked": "2026-10-24T06:14:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.3.7",
+    "151.101.67.7",
+    "151.101.131.7",
+    "151.101.195.7"
+   ],
+   "aaaa": [
+    "2a04:4e42::775",
+    "2a04:4e42:200::775",
+    "2a04:4e42:400::775",
+    "2a04:4e42:600::775"
+   ],
+   "cname": null,
+   "ns": [
+    "lloyd.ns.cloudflare.com",
+    "tani.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:37Z",
+   "title": "The Morning News",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://themorningnews.org/rss/",
+     "title": "The Morning News"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://bsky.app/profile/themorningnews.org",
+    "https://mastodon.social/@themorningnews"
+   ],
+   "webmention": "https://themorningnews.org/webmentions/receive/"
+  }
+ },
+ "thenewstack.io": {
+  "checked": "2026-10-24T05:43:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.0.71",
+    "104.26.1.71",
+    "172.67.70.57"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:47",
+    "2606:4700:20::681a:147",
+    "2606:4700:20::ac43:4639"
+   ],
+   "cname": null,
+   "ns": [
+    "ace.ns.cloudflare.com",
+    "deborah.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:43:37Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": null,
+  "rdap_error": "no RDAP service for .io"
+ },
+ "thenextweb.com": {
+  "checked": "2026-10-24T05:43:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.10.121",
+    "104.26.11.121",
+    "172.67.69.240"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:a79",
+    "2606:4700:20::681a:b79",
+    "2606:4700:20::ac43:45f0"
+   ],
+   "cname": null,
+   "ns": [
+    "evangeline.ns.cloudflare.com",
+    "sid.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:43:40Z",
+   "title": "TNW | The heart of tech™",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "thenextweb.com",
+   "registrar": "NameCheap, Inc.",
+   "registered": "2008-08-02",
+   "expires": "2031-08-02",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "evangeline.ns.cloudflare.com",
+    "sid.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:43:40Z"
+  }
+ },
+ "theoatmeal.com": {
+  "checked": "2026-10-24T05:45:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.193.18.112",
+    "204.236.131.105"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1232.awsdns-26.org",
+    "ns-1675.awsdns-17.co.uk",
+    "ns-429.awsdns-53.com",
+    "ns-569.awsdns-07.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:45:15Z",
+   "title": "The Oatmeal - Comics by Matthew Inman",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://theoatmeal.com/feed/rss",
+     "title": "RSS 2.0"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "theoatmeal.com",
+   "registrar": "NameCheap, Inc.",
+   "registered": "2009-04-04",
+   "expires": "2027-04-04",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1232.awsdns-26.org",
+    "ns-1675.awsdns-17.co.uk",
+    "ns-429.awsdns-53.com",
+    "ns-569.awsdns-07.net"
+   ],
+   "checked": "2026-10-24T05:45:15Z"
+  }
+ },
+ "theonion.com": {
+  "checked": "2026-10-24T05:50:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.48"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ha1.markmonitor.zone",
+    "ha2.markmonitor.zone",
+    "ha3.markmonitor.zone",
+    "ha4.markmonitor.zone"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:50:33Z",
+   "title": "Home - The Onion",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://theonion.com/feed/",
+     "title": "The Onion » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://theonion.com/comments/feed/",
+     "title": "The Onion » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "theonion.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "1995-03-21",
+   "expires": "2027-03-22",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ha1.markmonitor.zone",
+    "ha2.markmonitor.zone",
+    "ha3.markmonitor.zone",
+    "ha4.markmonitor.zone"
+   ],
+   "checked": "2026-10-24T05:50:33Z"
+  }
+ },
+ "thereader.mitpress.mit.edu": {
+  "checked": "2026-10-24T06:14:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.11.2.34"
+   ],
+   "aaaa": [
+    "2600:1418:1000:49a::255e",
+    "2600:1418:1000:49c::255e"
+   ],
+   "cname": "www.mit.edu.edgekey.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:39Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "theregister.co.uk": {
+  "checked": "2026-10-24T05:46:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.4.143",
+    "104.18.5.143"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dahlia.ns.cloudflare.com",
+    "gerald.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:46:27Z",
+   "title": "Technology news and analysis | The Register",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "theregister.co.uk",
+   "registrar": "CSC Corporate Domains, Inc",
+   "registered": "1996-03-14",
+   "expires": "2027-03-14",
+   "status": [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "dahlia.ns.cloudflare.com",
+    "gerald.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:46:27Z"
+  }
+ },
+ "theregister.com": {
+  "checked": "2026-10-24T05:45:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.166.206",
+    "15.197.188.249"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dahlia.ns.cloudflare.com",
+    "gerald.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:45:18Z",
+   "title": "Technology news and analysis | The Register",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "theregister.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "1996-07-01",
+   "expires": "2027-06-30",
+   "status": [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "dahlia.ns.cloudflare.com",
+    "gerald.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:45:18Z"
+  }
+ },
  "thesweetsetup.com": {
   "checked": "2026-10-23T21:27:36Z",
   "method": "enrich_hosts",
@@ -400,6 +1545,52 @@
     "jacqueline.ns.cloudflare.com"
    ],
    "checked": "2026-10-23T21:27:36Z"
+  }
+ },
+ "thesystemsthinker.com": {
+  "checked": "2026-10-24T06:14:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.10",
+    "141.193.213.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple-edge.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple-edge.io",
+    "ns4.dnsimple-edge.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:41Z",
+   "title": "The Systems Thinker – The Systems Thinker -",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://thesystemsthinker.com/feed/",
+     "title": "The Systems Thinker » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://thesystemsthinker.com/comments/feed/",
+     "title": "The Systems Thinker » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "theverge.com": {
@@ -446,6 +1637,168 @@
    "checked": "2026-10-23T21:25:35Z"
   }
  },
+ "thewirecutter.com": {
+  "checked": "2026-10-24T06:14:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "32.193.44.60",
+    "52.86.237.213",
+    "100.55.117.106"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p06.nsone.net",
+    "dns2.p06.nsone.net",
+    "dns3.p06.nsone.net",
+    "dns4.p06.nsone.net",
+    "ns-1328.awsdns-38.org",
+    "ns-1652.awsdns-14.co.uk",
+    "ns-244.awsdns-30.com",
+    "ns-635.awsdns-15.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:44Z",
+   "title": "Wirecutter: New Product Reviews, Deals, and Buying Advice",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "thoughtworks.com": {
+  "checked": "2026-10-24T05:54:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.154.110.52",
+    "18.154.110.61",
+    "18.154.110.108",
+    "18.154.110.119"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1386.awsdns-45.org",
+    "ns-1965.awsdns-53.co.uk",
+    "ns-428.awsdns-53.com",
+    "ns-704.awsdns-24.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:54:15Z",
+   "title": "Thoughtworks: A leading technology consultancy | Thoughtworks",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "thoughtworks.com",
+   "registrar": "Network Solutions, LLC",
+   "registered": "1995-01-20",
+   "expires": "2033-01-21",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1386.awsdns-45.org",
+    "ns-1965.awsdns-53.co.uk",
+    "ns-428.awsdns-53.com",
+    "ns-704.awsdns-24.net"
+   ],
+   "checked": "2026-10-24T05:54:15Z"
+  }
+ },
+ "threadreaderapp.com": {
+  "checked": "2026-10-24T06:14:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.50.47",
+    "172.67.156.173"
+   ],
+   "aaaa": [
+    "2606:4700:3036::6815:322f",
+    "2606:4700:3036::ac43:9cad"
+   ],
+   "cname": null,
+   "ns": [
+    "elma.ns.cloudflare.com",
+    "jeremy.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:45Z",
+   "title": "Home – Thread Reader App",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "threestarleadership.com": {
+  "checked": "2026-10-24T06:14:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.130.190",
+    "15.197.148.33"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns05.domaincontrol.com",
+    "ns06.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:48Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "tidbits.com": {
   "checked": "2026-10-23T21:28:36Z",
   "method": "enrich_hosts",
@@ -488,6 +1841,436 @@
    "checked": "2026-10-23T21:28:36Z"
   }
  },
+ "tim.blog": {
+  "checked": "2026-10-24T05:59:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.16.172.105",
+    "199.16.173.93"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dawn.ns.cloudflare.com",
+    "ram.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:56Z",
+   "title": "The Blog of Author Tim Ferriss - Tim Ferriss is the author of five #1 New York Times bestsellers and host of The Tim Ferriss Show podcast.",
+   "generator": "WP Rocket 3.23.5.1",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://tim.blog/feed/",
+     "title": "The Blog of Author Tim Ferriss » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://tim.blog/comments/feed/",
+     "title": "The Blog of Author Tim Ferriss » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "time.com": {
+  "checked": "2026-10-24T05:42:04Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.3.52",
+    "151.101.67.52",
+    "151.101.131.52",
+    "151.101.195.52"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p08.nsone.net",
+    "dns2.p08.nsone.net",
+    "dns3.p08.nsone.net",
+    "dns4.p08.nsone.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:42:04Z",
+   "title": "TIME | Current & Breaking News | National & World Updates",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "time.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "1993-11-19",
+   "expires": "2028-11-18",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "dns1.p08.nsone.net",
+    "dns2.p08.nsone.net",
+    "dns3.p08.nsone.net",
+    "dns4.p08.nsone.net"
+   ],
+   "checked": "2026-10-24T05:42:04Z"
+  }
+ },
+ "tinyprojects.dev": {
+  "checked": "2026-10-24T06:14:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.195"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-e1.googledomains.com",
+    "ns-cloud-e2.googledomains.com",
+    "ns-cloud-e3.googledomains.com",
+    "ns-cloud-e4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:50Z",
+   "title": "Tiny Projects",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://tinyprojects.dev/feed.xml",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "todayandtomorrow.net": {
+  "checked": "2026-10-24T05:45:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "85.13.142.141"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns5.kasserver.com",
+    "ns6.kasserver.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'todayandtomorrow.net'"
+  },
+  "home": {
+   "checked": "2026-10-24T05:45:21Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'todayandtomorrow.net'"
+  },
+  "rdap": {
+   "domain": "todayandtomorrow.net",
+   "registrar": "RegistryGate GmbH",
+   "registered": "2007-02-20",
+   "expires": "2027-02-20",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns5.kasserver.com",
+    "ns6.kasserver.com"
+   ],
+   "checked": "2026-10-24T05:45:21Z"
+  }
+ },
+ "toggl.com": {
+  "checked": "2026-10-24T05:46:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.244.178.179"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-d1.googledomains.com",
+    "ns-cloud-d2.googledomains.com",
+    "ns-cloud-d3.googledomains.com",
+    "ns-cloud-d4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:46:30Z",
+   "title": "Toggl: Time Tracking Software & Capacity Planning Tool",
+   "generator": "Webflow",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "toggl.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2006-04-10",
+   "expires": "2031-04-10",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-cloud-d1.googledomains.com",
+    "ns-cloud-d2.googledomains.com",
+    "ns-cloud-d3.googledomains.com",
+    "ns-cloud-d4.googledomains.com"
+   ],
+   "checked": "2026-10-24T05:46:30Z"
+  }
+ },
+ "toggl.wpengine.com": {
+  "checked": "2026-10-24T06:14:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "130.211.29.77"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:53Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "tomcritchlow.com": {
+  "checked": "2026-10-24T05:48:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.75.47",
+    "172.67.213.195"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:4b2f",
+    "2606:4700:3031::ac43:d5c3"
+   ],
+   "cname": null,
+   "ns": [
+    "gail.ns.cloudflare.com",
+    "tom.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:48:35Z",
+   "title": "Tom Critchlow. Move. Think. Create.",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://tomcritchlow.com/feed.xml",
+     "title": "RSS Feed for tomcritchlow.com"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://webmention.io/tomcritchlow.com/webmention"
+  },
+  "rdap": {
+   "domain": "tomcritchlow.com",
+   "registrar": "Squarespace Domains II LLC",
+   "registered": "2011-01-19",
+   "expires": "2027-01-19",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "gail.ns.cloudflare.com",
+    "tom.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:48:35Z"
+  }
+ },
+ "tomsguide.com": {
+  "checked": "2026-10-24T05:45:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.232.194.114",
+    "199.232.198.114"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1504.awsdns-60.org",
+    "ns-1785.awsdns-31.co.uk",
+    "ns-50.awsdns-06.com",
+    "ns-849.awsdns-42.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:45:24Z",
+   "title": "Tom's Guide | Tech Product Reviews, Top Picks and How To",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.tomsguide.com/feeds.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "tomsguide.com",
+   "registrar": "Lexsynergy Limited",
+   "registered": "2000-08-03",
+   "expires": "2027-08-03",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-1504.awsdns-60.org",
+    "ns-1785.awsdns-31.co.uk",
+    "ns-50.awsdns-06.com",
+    "ns-849.awsdns-42.net"
+   ],
+   "checked": "2026-10-24T05:45:24Z"
+  }
+ },
+ "tomshardware.com": {
+  "checked": "2026-10-24T06:14:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.232.194.114",
+    "199.232.198.114"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1533.awsdns-63.org",
+    "ns-1591.awsdns-06.co.uk",
+    "ns-185.awsdns-23.com",
+    "ns-840.awsdns-41.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:54Z",
+   "title": "Tom's Hardware: For The Hardcore PC Enthusiast",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.tomshardware.com/feeds.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "toolsandtoys.net": {
   "checked": "2026-10-23T21:28:30Z",
   "method": "enrich_hosts",
@@ -527,6 +2310,187 @@
     "jacqueline.ns.cloudflare.com"
    ],
    "checked": "2026-10-23T21:28:30Z"
+  }
+ },
+ "towardsdatascience.com": {
+  "checked": "2026-10-24T06:14:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.10.19",
+    "104.26.11.19",
+    "172.67.74.220"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:a13",
+    "2606:4700:20::681a:b13",
+    "2606:4700:20::ac43:4adc"
+   ],
+   "cname": null,
+   "ns": [
+    "dawn.ns.cloudflare.com",
+    "syeef.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:55Z",
+   "title": "Towards Data Science",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://towardsdatascience.com/feed/",
+     "title": "Towards Data Science » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "tpt.org": {
+  "checked": "2026-10-24T06:14:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.46.120",
+    "172.66.146.42"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:2e78",
+    "2606:4700:10::ac42:922a"
+   ],
+   "cname": null,
+   "ns": [
+    "dell.ns.cloudflare.com",
+    "owen.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:14:58Z",
+   "title": "Minnesota PBS – Watch Now",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "treehugger.com": {
+  "checked": "2026-10-24T06:15:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.141.224",
+    "172.66.1.220"
+   ],
+   "aaaa": [
+    "2606:4700:7::1d8",
+    "2a06:98c1:58::1d8"
+   ],
+   "cname": null,
+   "ns": [
+    "blue.foundationdns.com",
+    "blue.foundationdns.net",
+    "blue.foundationdns.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:15:02Z",
+   "title": "Treehugger | Sustainability for All",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://feeds-api.dotdashmeredith.com/v1/rss/google/c9053935-d1d7-49c7-b54c-11e651b69e28",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "troyhunt.com": {
+  "checked": "2026-10-24T05:48:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.24.41",
+    "104.18.25.41"
+   ],
+   "aaaa": [
+    "2606:4700::6812:1829",
+    "2606:4700::6812:1929"
+   ],
+   "cname": null,
+   "ns": [
+    "leah.ns.cloudflare.com",
+    "rob.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:48:38Z",
+   "title": "Troy Hunt: Troy Hunt",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.troyhunt.com/rss/",
+     "title": "Troy Hunt"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://infosec.exchange/@troyhunt"
+   ],
+   "webmention": "https://www.troyhunt.com/webmentions/receive/"
+  },
+  "rdap": {
+   "domain": "troyhunt.com",
+   "registrar": "1API GmbH",
+   "registered": "1999-11-15",
+   "expires": "2029-11-15",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "leah.ns.cloudflare.com",
+    "rob.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:48:38Z"
   }
  },
  "tuaw.com": {
@@ -571,6 +2535,87 @@
     "ns4.tuaw.com"
    ],
    "checked": "2026-10-23T21:25:33Z"
+  }
+ },
+ "twilio.com": {
+  "checked": "2026-10-24T06:15:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.168.222.240",
+    "44.199.52.48",
+    "52.6.206.82"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1188.awsdns-20.org",
+    "ns-1678.awsdns-17.co.uk",
+    "ns-85.awsdns-10.com",
+    "ns-960.awsdns-56.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:15:03Z",
+   "title": "Conversational AI and APIs for SMS, Email, Voice | Twilio",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "twincities.com": {
+  "checked": "2026-10-24T06:15:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.2"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1019.awsdns-63.net",
+    "ns-1220.awsdns-24.org",
+    "ns-1679.awsdns-17.co.uk",
+    "ns-503.awsdns-62.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:15:07Z",
+   "title": "St. Paul News, Sports and Things To Do | Pioneer Press",
+   "generator": "WordPress 6.9.10",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.twincities.com/feed/",
+     "title": "Twin Cities » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.twincities.com/comments/feed/",
+     "title": "Twin Cities » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "twitter.com": {
@@ -632,6 +2677,47 @@
     "d.u06.twtrdns.net"
    ],
    "checked": "2026-10-24T01:47:07Z"
+  }
+ },
+ "twobithistory.org": {
+  "checked": "2026-10-24T05:59:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:58Z",
+   "title": "Two-Bit History",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://twobithistory.org/feed.xml",
+     "title": "Two-Bit History"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  }
 }

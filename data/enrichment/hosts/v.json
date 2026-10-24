@@ -106,6 +106,110 @@
    "checked": "2026-10-23T21:28:53Z"
   }
  },
+ "vice.com": {
+  "checked": "2026-10-24T05:34:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.177"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1136.awsdns-14.org",
+    "ns-1767.awsdns-28.co.uk",
+    "ns-409.awsdns-51.com",
+    "ns-851.awsdns-42.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:34:52Z",
+   "title": "VICE - VICE is the definitive guide to enlightening information.",
+   "generator": "WordPress 7.0.7",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.vice.com/feed/",
+     "title": "VICE » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.vice.com/comments/feed/",
+     "title": "VICE » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "vice.com",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "1997-05-28",
+   "expires": "2029-05-14",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1136.awsdns-14.org",
+    "ns-1767.awsdns-28.co.uk",
+    "ns-409.awsdns-51.com",
+    "ns-851.awsdns-42.net"
+   ],
+   "checked": "2026-10-24T05:34:52Z"
+  }
+ },
+ "vickiboykis.com": {
+  "checked": "2026-10-24T06:15:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1424.awsdns-50.org",
+    "ns-1839.awsdns-37.co.uk",
+    "ns-497.awsdns-62.com",
+    "ns-979.awsdns-58.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:15:23Z",
+   "title": "Tech Blog | ✰Vicki Boykis✰",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://vickiboykis.com/index.xml",
+     "title": "✰Vicki Boykis✰"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "vimeo.com": {
   "checked": "2026-10-23T21:26:22Z",
   "method": "enrich_hosts",
@@ -148,6 +252,233 @@
     "ns-70.awsdns-08.com"
    ],
    "checked": "2026-10-23T21:26:22Z"
+  }
+ },
+ "visualcapitalist.com": {
+  "checked": "2026-10-24T06:00:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.2.225",
+    "104.26.3.225",
+    "172.67.72.43"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:2e1",
+    "2606:4700:20::681a:3e1",
+    "2606:4700:20::ac43:482b"
+   ],
+   "cname": null,
+   "ns": [
+    "ali.ns.cloudflare.com",
+    "beau.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:00:08Z",
+   "title": "Visual Capitalist",
+   "generator": "performance-lab 4.2.0; plugins: webp-uploads",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.visualcapitalist.com/feed/",
+     "title": "Visual Capitalist » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "vitalik.ca": {
+  "checked": "2026-10-24T05:42:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-24T05:42:38Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  },
+  "rdap": {
+   "domain": "vitalik.ca",
+   "registrar": "Go Get Canada Domain Registrar Ltd.",
+   "registered": "2013-11-22",
+   "expires": "2030-11-22",
+   "status": [
+    "active"
+   ],
+   "nameservers": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "checked": "2026-10-24T05:42:38Z"
+  }
+ },
+ "vitalik.eth.limo": {
+  "checked": "2026-10-24T05:34:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.135.72.151",
+    "3.140.119.203",
+    "18.219.255.217"
+   ],
+   "aaaa": [
+    "2600:1f16:502:7c01:26e1:a90b:4b3a:9fc7",
+    "2600:1f16:502:7c02:8d71:2c7d:1ecf:cded",
+    "2600:1f16:502:7c03:f998:2c76:b211:4c4e"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:34:15Z",
+   "title": "Vitalik Buterin's website",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://vitalik.eth.limo/feed.xml",
+     "title": "Vitalik Buterin's website"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "eth.limo",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "2021-06-08",
+   "expires": "2028-06-08",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-1382.awsdns-44.org",
+    "ns-1689.awsdns-19.co.uk",
+    "ns-48.awsdns-06.com",
+    "ns-814.awsdns-37.net"
+   ],
+   "checked": "2026-10-24T05:34:15Z"
+  }
+ },
+ "vitalsmarts.com": {
+  "checked": "2026-10-24T06:00:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.9.20",
+    "172.67.140.247"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:914",
+    "2606:4700:3033::ac43:8cf7"
+   ],
+   "cname": null,
+   "ns": [
+    "hugh.ns.cloudflare.com",
+    "iris.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:00:11Z",
+   "title": "Crucial Learning | The Human Side of High Performance",
+   "generator": "WordPress 7.0.7",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://cruciallearning.com/feed/",
+     "title": "Crucial Learning » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://cruciallearning.com/comments/feed/",
+     "title": "Crucial Learning » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "voices.washingtonpost.com": {
+  "checked": "2026-10-24T06:00:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.220.144.70",
+    "23.220.144.73"
+   ],
+   "aaaa": [],
+   "cname": "50237.edgekey.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-24T06:00:13Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
   }
  },
  "vox.com": {

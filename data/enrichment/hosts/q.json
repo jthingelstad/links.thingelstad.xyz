@@ -1,4 +1,142 @@
 {
+ "quantamagazine.org": {
+  "checked": "2026-10-24T05:59:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.71.21.243"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "gabe.ns.cloudflare.com",
+    "kim.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:24Z",
+   "title": "Science and Math News | Quanta Magazine",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.quantamagazine.org/quanta/feed/",
+     "title": "Quanta Magazine » Quanta Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "queue.acm.org": {
+  "checked": "2026-10-24T05:48:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.17.78.30",
+    "104.17.79.30"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T05:48:26Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403 (Cloudflare challenge)"
+  },
+  "rdap": {
+   "domain": "acm.org",
+   "registrar": "Network Solutions, LLC",
+   "registered": "1992-02-14",
+   "expires": "2028-02-15",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "olga.ns.cloudflare.com",
+    "skip.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:48:26Z"
+  }
+ },
+ "quora.com": {
+  "checked": "2026-10-24T05:43:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.23.119.86",
+    "98.90.59.145",
+    "100.55.108.229"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1143.awsdns-14.org",
+    "ns-1573.awsdns-04.co.uk",
+    "ns-344.awsdns-43.com",
+    "ns-673.awsdns-20.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:43:26Z",
+   "title": "Quora - A place to share knowledge and better understand the world",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "quora.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "2000-03-29",
+   "expires": "2027-03-29",
+   "status": [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns-1143.awsdns-14.org",
+    "ns-1573.awsdns-04.co.uk",
+    "ns-344.awsdns-43.com",
+    "ns-673.awsdns-20.net"
+   ],
+   "checked": "2026-10-24T05:43:26Z"
+  }
+ },
  "qz.com": {
   "checked": "2026-10-24T01:46:47Z",
   "method": "enrich_hosts",

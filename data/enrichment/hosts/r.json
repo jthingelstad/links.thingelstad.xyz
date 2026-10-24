@@ -1,4 +1,102 @@
 {
+ "rachelbythebay.com": {
+  "checked": "2026-10-24T05:59:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.218.228.215"
+   ],
+   "aaaa": [
+    "2001:470:1:954::215"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.he.net",
+    "ns2.he.net",
+    "ns3.he.net",
+    "ns4.he.net",
+    "ns5.he.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:26Z",
+   "title": "rachelbythebay",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "radar.oreilly.com": {
+  "checked": "2026-10-24T05:30:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.169.83.167"
+   ],
+   "aaaa": [],
+   "cname": "domain-redirects.corp.oreilly.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:30:25Z",
+   "title": "Radar – O’Reilly",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.oreilly.com/radar/feed/index.xml",
+     "title": "Radar All Posts Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.oreilly.com/radar/feed/podcast",
+     "title": "Podcast RSS feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "oreilly.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "1997-05-27",
+   "expires": "2027-05-26",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "a1-225.akam.net",
+    "a13-64.akam.net",
+    "a16-65.akam.net",
+    "a20-66.akam.net",
+    "a3-67.akam.net",
+    "a4-64.akam.net"
+   ],
+   "checked": "2026-10-24T05:30:25Z"
+  }
+ },
  "rajiv.com": {
   "checked": "2026-10-24T01:48:30Z",
   "method": "enrich_hosts",
@@ -126,6 +224,35 @@
    "checked": "2026-10-24T01:47:04Z"
   }
  },
+ "read.acloud.guru": {
+  "checked": "2026-10-24T06:11:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:09Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
  "readwrite.com": {
   "checked": "2026-10-23T21:26:36Z",
   "method": "enrich_hosts",
@@ -165,6 +292,1002 @@
     "chip.ns.cloudflare.com"
    ],
    "checked": "2026-10-23T21:26:36Z"
+  }
+ },
+ "readwriteweb.com": {
+  "checked": "2026-10-24T05:30:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.41.11",
+    "172.67.158.215"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:290b",
+    "2606:4700:3032::ac43:9ed7"
+   ],
+   "cname": null,
+   "ns": [
+    "athena.ns.cloudflare.com",
+    "chip.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:30:27Z",
+   "title": "ReadWrite - iGaming News, Reviews & Strategy Guides",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://readwrite.com/feed/",
+     "title": "ReadWrite » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://readwrite.com/comments/feed/",
+     "title": "ReadWrite » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "readwriteweb.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2003-04-18",
+   "expires": "2032-04-18",
+   "status": [
+    "active"
+   ],
+   "nameservers": [
+    "athena.ns.cloudflare.com",
+    "chip.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:30:27Z"
+  }
+ },
+ "realpython.com": {
+  "checked": "2026-10-24T05:53:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.21.64",
+    "172.66.152.40"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:1540",
+    "2606:4700:10::ac42:9828"
+   ],
+   "cname": null,
+   "ns": [
+    "curt.ns.cloudflare.com",
+    "joan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:50Z",
+   "title": "Real Python: Build Real-World Python Skills",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://realpython.com/atom.xml",
+     "title": "Real Python"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "realpython.com",
+   "registrar": "1API GmbH",
+   "registered": "2012-08-06",
+   "expires": "2027-08-06",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "curt.ns.cloudflare.com",
+    "joan.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:53:50Z"
+  }
+ },
+ "recode.net": {
+  "checked": "2026-10-24T05:32:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.232.193.246",
+    "199.232.197.246"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1085.awsdns-07.org",
+    "ns-1697.awsdns-20.co.uk",
+    "ns-17.awsdns-02.com",
+    "ns-674.awsdns-20.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 500
+  },
+  "home": {
+   "checked": "2026-10-24T05:32:17Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 500"
+  },
+  "rdap": {
+   "domain": "recode.net",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "2007-09-15",
+   "expires": "2027-09-15",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1085.awsdns-07.org",
+    "ns-1697.awsdns-20.co.uk",
+    "ns-17.awsdns-02.com",
+    "ns-674.awsdns-20.net"
+   ],
+   "checked": "2026-10-24T05:32:17Z"
+  }
+ },
+ "recursion.org": {
+  "checked": "2026-10-24T05:43:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "208.113.190.194"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: self-signed certificate"
+  },
+  "home": {
+   "checked": "2026-10-24T05:43:29Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: self-signed certificate"
+  },
+  "rdap": {
+   "domain": "recursion.org",
+   "registrar": "NameCheap, Inc.",
+   "registered": "2000-01-28",
+   "expires": "2027-01-28",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "checked": "2026-10-24T05:43:29Z"
+  }
+ },
+ "red-sweater.com": {
+  "checked": "2026-10-24T05:43:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "50.116.51.241"
+   ],
+   "aaaa": [
+    "2600:3c03:e000:558::"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.linode.com",
+    "ns2.linode.com",
+    "ns3.linode.com",
+    "ns4.linode.com",
+    "ns5.linode.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:43:31Z",
+   "title": "Red Sweater Software",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "red-sweater.com",
+   "registrar": "NameCheap, Inc.",
+   "registered": "1999-06-09",
+   "expires": "2027-06-09",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1.linode.com",
+    "ns2.linode.com",
+    "ns3.linode.com",
+    "ns4.linode.com"
+   ],
+   "checked": "2026-10-24T05:43:31Z"
+  }
+ },
+ "reddit.com": {
+  "checked": "2026-10-24T05:43:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.140",
+    "151.101.65.140",
+    "151.101.129.140",
+    "151.101.193.140"
+   ],
+   "aaaa": [
+    "2a04:4e42::396",
+    "2a04:4e42:200::396",
+    "2a04:4e42:400::396",
+    "2a04:4e42:600::396"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1029.awsdns-00.org",
+    "ns-1887.awsdns-43.co.uk",
+    "ns-378.awsdns-47.com",
+    "ns-557.awsdns-05.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:43:32Z",
+   "title": "Reddit",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "reddit.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2005-04-29",
+   "expires": "2028-04-29",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns-1029.awsdns-00.org",
+    "ns-1887.awsdns-43.co.uk",
+    "ns-378.awsdns-47.com",
+    "ns-557.awsdns-05.net"
+   ],
+   "checked": "2026-10-24T05:43:32Z"
+  }
+ },
+ "redmonk.com": {
+  "checked": "2026-10-24T05:42:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.66.40.240",
+    "172.66.43.16"
+   ],
+   "aaaa": [
+    "2606:4700:3108::ac42:28f0",
+    "2606:4700:3108::ac42:2b10"
+   ],
+   "cname": null,
+   "ns": [
+    "eric.ns.cloudflare.com",
+    "may.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:42:33Z",
+   "title": "RedMonk – The developer-focused analyst firm",
+   "generator": "Site Kit by Google 1.190.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "redmonk.com",
+   "registrar": "NameCheap, Inc.",
+   "registered": "2001-08-06",
+   "expires": "2027-08-06",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "eric.ns.cloudflare.com",
+    "may.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:42:33Z"
+  }
+ },
+ "refactoringenglish.com": {
+  "checked": "2026-10-24T06:11:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "159.203.159.100"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple-edge.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple-edge.io",
+    "ns4.dnsimple-edge.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:09Z",
+   "title": "Refactoring English",
+   "generator": "Hugo 0.147.5",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://refactoringenglish.com/index.xml",
+     "title": "Refactoring English"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "regex.info": {
+  "checked": "2026-10-24T05:59:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.165.206.106"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.easydns.com",
+    "dns2.easydns.net",
+    "dns3.easydns.ca"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:29Z",
+   "title": "Jeffrey Friedl's Web Sites",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "reuters.com": {
+  "checked": "2026-10-24T05:32:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "155.46.172.255"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-aws-1.thomsonreuters.com",
+    "ns-aws-2.thomsonreuters.net",
+    "ns-aws-3.thomsonreuters.org",
+    "ns-aws-4.thomsonreuters.co.uk"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 401
+  },
+  "home": {
+   "checked": "2026-10-24T05:32:39Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 401 (DataDome)"
+  },
+  "rdap": {
+   "domain": "reuters.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "1993-06-03",
+   "expires": "2027-06-02",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns-aws-1.thomsonreuters.com",
+    "ns-aws-2.thomsonreuters.net",
+    "ns-aws-3.thomsonreuters.org",
+    "ns-aws-4.thomsonreuters.co.uk"
+   ],
+   "checked": "2026-10-24T05:32:39Z"
+  }
+ },
+ "review.firstround.com": {
+  "checked": "2026-10-24T05:59:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.31.143",
+    "172.66.161.17"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:1f8f",
+    "2606:4700:10::ac42:a111"
+   ],
+   "cname": "review.firstround.com.cdn.cloudflare.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:33Z",
+   "title": "First Round Review",
+   "generator": "Ghost 6.52",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://review.firstround.com/glossary/rss/",
+     "title": "First Round"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://review.firstround.com/webmentions/receive/"
+  }
+ },
+ "ribbonfarm.com": {
+  "checked": "2026-10-24T05:53:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.38.179",
+    "172.67.137.30"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:891e",
+    "2606:4700:3035::6815:26b3"
+   ],
+   "cname": null,
+   "ns": [
+    "andronicus.ns.cloudflare.com",
+    "connie.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:53Z",
+   "title": "Ribbonfarm",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "ribbonfarm.com",
+   "registrar": "NameCheap, Inc.",
+   "registered": "2006-11-18",
+   "expires": "2027-11-18",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "andronicus.ns.cloudflare.com",
+    "connie.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:53:53Z"
+  }
+ },
+ "robinrendle.com": {
+  "checked": "2026-10-24T05:59:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p08.nsone.net",
+    "dns2.p08.nsone.net",
+    "dns3.p08.nsone.net",
+    "dns4.p08.nsone.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:36Z",
+   "title": "Photos • Robin Rendle",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://robinrendle.com/feed.xml",
+     "title": "Notes"
+    },
+    {
+     "type": "rss",
+     "url": "https://robinrendle.com/newsletterfeed.xml",
+     "title": "Personal newsletter"
+    },
+    {
+     "type": "rss",
+     "url": "https://robinrendle.com/essayfeed.xml",
+     "title": "Essays"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "robinsloan.com": {
+  "checked": "2026-10-24T05:59:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.14.215",
+    "104.26.15.215",
+    "172.67.75.79"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:ed7",
+    "2606:4700:20::681a:fd7",
+    "2606:4700:20::ac43:4b4f"
+   ],
+   "cname": null,
+   "ns": [
+    "alexis.ns.cloudflare.com",
+    "jean.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:39Z",
+   "title": "Robin Sloan",
+   "generator": "The very hands of Sloan",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.robinsloan.com/feed.xml",
+     "title": "Atom feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "rogerebert.com": {
+  "checked": "2026-10-24T06:11:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.135.42"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "clay.ns.cloudflare.com",
+    "kate.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:12Z",
+   "title": "Movie reviews and ratings by Film Critic Roger Ebert | Roger Ebert",
+   "generator": "dominant-color-images 1.2.1",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "rollingstone.com": {
+  "checked": "2026-10-24T05:33:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.114"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1426.awsdns-50.org",
+    "ns-2007.awsdns-58.co.uk",
+    "ns-416.awsdns-52.com",
+    "ns-718.awsdns-25.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:33:48Z",
+   "title": "Rolling Stone – Music, Film, TV and Political News Coverage",
+   "generator": "WordPress 6.9.10",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.rollingstone.com/feed/rss/",
+     "title": "Rolling Stone Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "rollingstone.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "1994-09-21",
+   "expires": "2027-09-20",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1426.awsdns-50.org",
+    "ns-2007.awsdns-58.co.uk",
+    "ns-416.awsdns-52.com",
+    "ns-718.awsdns-25.net"
+   ],
+   "checked": "2026-10-24T05:33:48Z"
+  }
+ },
+ "rosemaryorchard.com": {
+  "checked": "2026-10-24T06:11:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "95.216.154.176"
+   ],
+   "aaaa": [
+    "2a01:4f9:c010:ace::1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns.second-ns.com",
+    "ns1.your-server.de",
+    "ns3.second-ns.de"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:14Z",
+   "title": "Blog | Rosemary Orchard",
+   "generator": "Jekyll v4.3.4",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://rosemaryorchard.com/feed.xml",
+     "title": "Rosemary Orchard"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://snailedit.social/@rosemary",
+    "https://bsky.app/profile/rosemaryorchard.bsky.social",
+    "https://github.com/RosemaryOrchard",
+    "https://instagram.com/rosemary_orchard",
+    "https://micro.blog/rosemaryorchard",
+    "https://pixelfed.social/RosemaryOrchard",
+    "https://threads.net/@rosemary_orchard",
+    "https://www.tiktok.com/@rosemaryorchard"
+   ],
+   "webmention": null
+  }
+ },
+ "roughtype.com": {
+  "checked": "2026-10-24T05:53:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "173.236.139.111"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:56Z",
+   "title": "ROUGH TYPE | Nicholas Carr's blog",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.roughtype.com/?feed=rss2",
+     "title": "ROUGH TYPE » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.roughtype.com/?feed=comments-rss2",
+     "title": "ROUGH TYPE » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "http://www.nicholascarr.com/?page_id=16"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "roughtype.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2005-02-03",
+   "expires": "2027-02-03",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "checked": "2026-10-24T05:53:56Z"
+  }
+ },
+ "ryandlane.com": {
+  "checked": "2026-10-24T06:11:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1195.awsdns-21.org",
+    "ns-1846.awsdns-38.co.uk",
+    "ns-79.awsdns-09.com",
+    "ns-896.awsdns-48.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:16Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "ryanholiday.net": {
+  "checked": "2026-10-24T05:45:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "147.182.248.238"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "desi.ns.cloudflare.com",
+    "noah.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:45:00Z",
+   "title": "Home - RyanHoliday.net",
+   "generator": "Powered by Slider Revolution 5.4.3.1 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://ryanholiday.net/feed/atom/",
+     "title": "RyanHoliday.net Atom Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://ryanholiday.net/feed/",
+     "title": "RyanHoliday.net » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://ryanholiday.net/comments/feed/",
+     "title": "RyanHoliday.net » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "ryanholiday.net",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "2007-08-03",
+   "expires": "2027-01-23",
+   "status": [
+    "active"
+   ],
+   "nameservers": [
+    "desi.ns.cloudflare.com",
+    "noah.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:45:00Z"
   }
  }
 }

@@ -56,6 +56,274 @@
    "checked": "2026-10-24T01:46:24Z"
   }
  },
+ "paidcontent.org": {
+  "checked": "2026-10-24T06:10:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.80.34",
+    "172.67.173.171"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:adab",
+    "2606:4700:3033::6815:5022"
+   ],
+   "cname": null,
+   "ns": [
+    "sage.ns.cloudflare.com",
+    "vivienne.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:34Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "pando.com": {
+  "checked": "2026-10-24T05:53:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.202.211.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns53.domaincontrol.com",
+    "ns54.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:39Z",
+   "title": "Pando — Just-in-time career progression tool",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "pando.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "1997-10-31",
+   "expires": "2029-10-30",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns53.domaincontrol.com",
+    "ns54.domaincontrol.com"
+   ],
+   "checked": "2026-10-24T05:53:39Z"
+  }
+ },
+ "panic.com": {
+  "checked": "2026-10-24T05:58:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.2.172",
+    "104.26.3.172",
+    "172.67.68.104"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:2ac",
+    "2606:4700:20::681a:3ac",
+    "2606:4700:20::ac43:4468"
+   ],
+   "cname": null,
+   "ns": [
+    "kara.ns.cloudflare.com",
+    "lochlan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:58:49Z",
+   "title": "Panic - We code apps, publish games, and make Playdate.",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "http://www.panic.com/blog/feed/",
+     "title": "Panic Blog - Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://social.panic.com/@panic"
+   ],
+   "webmention": null
+  }
+ },
+ "papers.ssrn.com": {
+  "checked": "2026-10-24T05:58:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.16.39.248",
+    "104.16.40.248",
+    "104.16.41.248",
+    "104.16.42.248",
+    "104.16.43.248"
+   ],
+   "aaaa": [],
+   "cname": "papers.ssrn.com.cdn.cloudflare.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T05:58:52Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403 (Cloudflare challenge)"
+  }
+ },
+ "patch.com": {
+  "checked": "2026-10-24T05:48:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.133",
+    "151.101.66.133",
+    "151.101.130.133",
+    "151.101.194.133"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1124.awsdns-12.org",
+    "ns-157.awsdns-19.com",
+    "ns-1931.awsdns-49.co.uk",
+    "ns-815.awsdns-37.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:48:15Z",
+   "title": "Patch - Everything Local: Breaking News, Events, Discussions",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "patch.com",
+   "registrar": "Moniker Online Services LLC",
+   "registered": "1994-03-01",
+   "expires": "2028-03-02",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1124.awsdns-12.org",
+    "ns-157.awsdns-19.com",
+    "ns-1931.awsdns-49.co.uk",
+    "ns-815.awsdns-37.net"
+   ],
+   "checked": "2026-10-24T05:48:15Z"
+  }
+ },
+ "patrickrhone.com": {
+  "checked": "2026-10-24T05:58:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "69.163.180.155"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:58:59Z",
+   "title": "Patrick Rhone – Master Generalist",
+   "generator": "WordPress 6.9.10",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://patrickrhone.com/feed/",
+     "title": "Patrick Rhone » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://patrickrhone.com/comments/feed/",
+     "title": "Patrick Rhone » Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://patrickrhone.com/info/feed/",
+     "title": "Patrick Rhone » Who is Patrick Rhone? Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "patrickrhone.net": {
   "checked": "2026-10-24T01:48:26Z",
   "method": "enrich_hosts",
@@ -120,6 +388,1612 @@
     "ns3.dreamhost.com"
    ],
    "checked": "2026-10-24T01:48:26Z"
+  }
+ },
+ "paulgraham.com": {
+  "checked": "2026-10-24T05:31:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.4.160.184",
+    "52.204.244.237"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.turbify.com",
+    "ns2.turbify.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:31:45Z",
+   "title": "Paul Graham",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "http://www.aaronsw.com/2002/feeds/pgessays.rss",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "paulgraham.com",
+   "registrar": "easyDNS Technologies Inc.",
+   "registered": "1998-10-29",
+   "expires": "2027-10-28",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "yns1.yahoo.com",
+    "yns2.yahoo.com"
+   ],
+   "checked": "2026-10-24T05:31:45Z"
+  }
+ },
+ "paulstamatiou.com": {
+  "checked": "2026-10-24T05:59:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.14.223",
+    "104.26.15.223",
+    "172.67.72.166"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:edf",
+    "2606:4700:20::681a:fdf",
+    "2606:4700:20::ac43:48a6"
+   ],
+   "cname": null,
+   "ns": [
+    "dale.ns.cloudflare.com",
+    "gail.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:03Z",
+   "title": "Paul Stamatiou",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://paulstamatiou.com/posts.xml",
+     "title": "PaulStamatiou.com Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "pbs.org": {
+  "checked": "2026-10-24T05:32:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.225.198.196",
+    "54.225.206.152"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1230.awsdns-25.org",
+    "ns-1674.awsdns-17.co.uk",
+    "ns-193.awsdns-24.com",
+    "ns-806.awsdns-36.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:32:14Z",
+   "title": "PBS: Public Broadcasting Service",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "pbs.org",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "1995-04-19",
+   "expires": "2027-04-20",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1230.awsdns-25.org",
+    "ns-1674.awsdns-17.co.uk",
+    "ns-193.awsdns-24.com",
+    "ns-806.awsdns-36.net"
+   ],
+   "checked": "2026-10-24T05:32:14Z"
+  }
+ },
+ "pelobuddy.com": {
+  "checked": "2026-10-24T05:59:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.95.162",
+    "172.67.145.238"
+   ],
+   "aaaa": [
+    "2606:4700:3034::6815:5fa2",
+    "2606:4700:3036::ac43:91ee"
+   ],
+   "cname": null,
+   "ns": [
+    "dina.ns.cloudflare.com",
+    "pete.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:05Z",
+   "title": "Home - Peloton Buddy",
+   "generator": "Powered by WPBakery Page Builder - drag and drop page builder for WordPress.",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.pelobuddy.com/feed/",
+     "title": "Peloton Buddy » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.pelobuddy.com/comments/feed/",
+     "title": "Peloton Buddy » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "petapixel.com": {
+  "checked": "2026-10-24T05:50:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.2.180",
+    "104.26.3.180",
+    "172.67.72.79"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:2b4",
+    "2606:4700:20::681a:3b4",
+    "2606:4700:20::ac43:484f"
+   ],
+   "cname": null,
+   "ns": [
+    "nina.ns.cloudflare.com",
+    "tom.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:50:08Z",
+   "title": "PetaPixel | Photography and Camera News, Reviews, and Inspiration",
+   "generator": "Site Kit by Google 1.189.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "petapixel.com",
+   "registrar": "Squarespace Domains II LLC",
+   "registered": "2004-02-08",
+   "expires": "2035-02-08",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "nina.ns.cloudflare.com",
+    "tom.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:50:08Z"
+  }
+ },
+ "pewresearch.org": {
+  "checked": "2026-10-24T06:10:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.2"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1318.awsdns-36.org",
+    "ns-1841.awsdns-38.co.uk",
+    "ns-281.awsdns-35.com",
+    "ns-795.awsdns-35.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:35Z",
+   "title": "Pew Research Center | Nonpartisan, nonadvocacy, public opinion polling and data-driven social science research",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.pewresearch.org/feed/",
+     "title": "Pew Research Center » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.pewresearch.org/comments/feed/",
+     "title": "Pew Research Center » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "photoshopnews.com": {
+  "checked": "2026-10-24T06:10:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.41.174",
+    "172.67.165.234"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:29ae",
+    "2606:4700:3034::ac43:a5ea"
+   ],
+   "cname": null,
+   "ns": [
+    "abby.ns.cloudflare.com",
+    "walt.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:38Z",
+   "title": "PhotoshopNews: Photoshop News and Information",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "phys.org": {
+  "checked": "2026-10-24T05:53:42Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "72.251.236.55"
+   ],
+   "aaaa": [
+    "2001:48c8:17:1::55"
+   ],
+   "cname": null,
+   "ns": [
+    "gns1.cloudns.net",
+    "gns2.cloudns.net",
+    "gns3.cloudns.net",
+    "gns4.cloudns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:42Z",
+   "title": "Phys.org - News and Articles on Science and Technology",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://phys.org/rss-feed/",
+     "title": "All news stories"
+    },
+    {
+     "type": "rss",
+     "url": "https://phys.org/rss-feed/breaking/",
+     "title": "Spotlight news only"
+    },
+    {
+     "type": "rss",
+     "url": "https://phys.org/rss-feed/editorials/",
+     "title": "Feature stories"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "phys.org",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2002-04-26",
+   "expires": "2027-04-26",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "gns1.cloudns.net",
+    "gns2.cloudns.net",
+    "gns3.cloudns.net",
+    "gns4.cloudns.net"
+   ],
+   "checked": "2026-10-24T05:53:42Z"
+  }
+ },
+ "platformer.news": {
+  "checked": "2026-10-24T06:10:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "178.128.137.126"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-d1.googledomains.com",
+    "ns-cloud-d2.googledomains.com",
+    "ns-cloud-d3.googledomains.com",
+    "ns-cloud-d4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:41Z",
+   "title": "Platformer",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.platformer.news/rss/",
+     "title": "Platformer"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://www.platformer.news/webmentions/receive/"
+  }
+ },
+ "platformonomics.com": {
+  "checked": "2026-10-24T06:10:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.25.61",
+    "172.67.223.51"
+   ],
+   "aaaa": [
+    "2606:4700:3033::6815:193d",
+    "2606:4700:3035::ac43:df33"
+   ],
+   "cname": null,
+   "ns": [
+    "malavika.ns.cloudflare.com",
+    "miguel.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:44Z",
+   "title": "Platformonomics",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://platformonomics.com/feed/",
+     "title": "Platformonomics » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://platformonomics.com/comments/feed/",
+     "title": "Platformonomics » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "plausible.io": {
+  "checked": "2026-10-24T06:10:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "38.142.94.218"
+   ],
+   "aaaa": [
+    "2001:550:2:dc::5e:2"
+   ],
+   "cname": null,
+   "ns": [
+    "coco.bunny.net",
+    "kiki.bunny.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:47Z",
+   "title": "Plausible Analytics | Simple, privacy-friendly Google Analytics alternative",
+   "generator": "Jekyll v3.9.2",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://plausible.io/blog/feed.xml",
+     "title": "Plausible Analytics"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://fosstodon.org/@plausible"
+   ],
+   "webmention": null
+  }
+ },
+ "pluralistic.net": {
+  "checked": "2026-10-24T06:10:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "51.77.117.40",
+    "142.132.196.168",
+    "172.104.232.45"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "adns1.easydns.com",
+    "adns2.easydns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:49Z",
+   "title": "Pluralistic: Daily links from Cory Doctorow – No trackers, no ads. Black type, white background. Privacy policy: we don't collect or retain any data at all ever period.",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://pluralistic.net/feed/",
+     "title": "Pluralistic: Daily links from Cory Doctorow » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://pluralistic.net/comments/feed/",
+     "title": "Pluralistic: Daily links from Cory Doctorow » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "plus.google.com": {
+  "checked": "2026-10-24T05:50:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.250.189.142"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:802::200e"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:50:11Z",
+   "title": "Google Workspace Updates: New community features for Google Chat and an update on Currents",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "google.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "1997-09-15",
+   "expires": "2028-09-14",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns1.google.com",
+    "ns2.google.com",
+    "ns3.google.com",
+    "ns4.google.com"
+   ],
+   "checked": "2026-10-24T05:50:11Z"
+  }
+ },
+ "poap.news": {
+  "checked": "2026-10-24T06:10:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "178.128.137.126"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-112-c.gandi.net",
+    "ns-120-b.gandi.net",
+    "ns-196-a.gandi.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:54Z",
+   "title": "POAP University",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.poap.news/rss/",
+     "title": "POAP University"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://www.poap.news/webmentions/receive/"
+  }
+ },
+ "pokemongolive.com": {
+  "checked": "2026-10-24T05:59:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.239.32.21",
+    "216.239.34.21",
+    "216.239.36.21",
+    "216.239.38.21"
+   ],
+   "aaaa": [
+    "2001:4860:4802:32::15",
+    "2001:4860:4802:34::15",
+    "2001:4860:4802:36::15",
+    "2001:4860:4802:38::15"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-cloud-e1.googledomains.com",
+    "ns-cloud-e2.googledomains.com",
+    "ns-cloud-e3.googledomains.com",
+    "ns-cloud-e4.googledomains.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:07Z",
+   "title": "Pokémon GO",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "politico.com": {
+  "checked": "2026-10-24T05:42:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.92.247.217",
+    "50.19.107.101",
+    "184.194.197.65"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1470.awsdns-55.org",
+    "ns-2040.awsdns-63.co.uk",
+    "ns-493.awsdns-61.com",
+    "ns-630.awsdns-14.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:42:28Z",
+   "title": "Politics, Policy, Political News - POLITICO",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.politico.com/rss/politicopicks.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "politico.com",
+   "registrar": "Register.com - Network Solutions, LLC",
+   "registered": "1998-09-18",
+   "expires": "2027-09-17",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1470.awsdns-55.org",
+    "ns-2040.awsdns-63.co.uk",
+    "ns-493.awsdns-61.com",
+    "ns-630.awsdns-14.net"
+   ],
+   "checked": "2026-10-24T05:42:28Z"
+  }
+ },
+ "polygon.com": {
+  "checked": "2026-10-24T05:48:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.2.61.89"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns20.digicertdns.com",
+    "ns21.digicertdns.com",
+    "ns22.digicertdns.com",
+    "ns23.digicertdns.net",
+    "ns24.digicertdns.net",
+    "ns25.digicertdns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:48:18Z",
+   "title": "Polygon: Gaming and Entertainment News, Culture, Reviews, and More",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "polygon.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "1992-07-17",
+   "expires": "2031-07-16",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns20.digicertdns.com",
+    "ns21.digicertdns.com",
+    "ns23.digicertdns.net",
+    "ns24.digicertdns.net"
+   ],
+   "checked": "2026-10-24T05:48:18Z"
+  }
+ },
+ "poynter.org": {
+  "checked": "2026-10-24T05:34:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.10",
+    "141.193.213.11"
+   ],
+   "aaaa": [
+    "2001:4801:7901:0:c5ce:526c:0:1a"
+   ],
+   "cname": null,
+   "ns": [
+    "ns0.dnsmadeeasy.com",
+    "ns1.dnsmadeeasy.com",
+    "ns2.dnsmadeeasy.com",
+    "ns3.dnsmadeeasy.com",
+    "ns4.dnsmadeeasy.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:34:06Z",
+   "title": "Poynter - Poynter",
+   "generator": "Powered by WPBakery Page Builder - drag and drop page builder for WordPress.",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "poynter.org",
+   "registrar": "Network Solutions, LLC",
+   "registered": "1994-10-17",
+   "expires": "2031-10-16",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns0.dnsmadeeasy.com",
+    "ns1.dnsmadeeasy.com",
+    "ns2.dnsmadeeasy.com",
+    "ns3.dnsmadeeasy.com",
+    "ns4.dnsmadeeasy.com"
+   ],
+   "checked": "2026-10-24T05:34:06Z"
+  }
+ },
+ "practicallyefficient.com": {
+  "checked": "2026-10-24T06:10:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.30.252.153",
+    "192.30.252.154"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hover.com",
+    "ns2.hover.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'practicallyefficient.com'"
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:58Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'practicallyefficient.com'"
+  }
+ },
+ "practicaltypography.com": {
+  "checked": "2026-10-24T06:10:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.23.145.171"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:59Z",
+   "title": "Butterick’s Practical Typography",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "pragdave.blogs.pragprog.com": {
+  "checked": "2026-10-24T05:53:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:45Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  },
+  "rdap": {
+   "domain": "pragprog.com",
+   "registrar": "1API GmbH",
+   "registered": "1999-01-19",
+   "expires": "2027-01-19",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1266.awsdns-30.org",
+    "ns-1538.awsdns-00.co.uk",
+    "ns-275.awsdns-34.com",
+    "ns-960.awsdns-56.net"
+   ],
+   "checked": "2026-10-24T05:53:45Z"
+  }
+ },
+ "pressthink.org": {
+  "checked": "2026-10-24T05:46:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.14.44",
+    "104.26.15.44",
+    "172.67.74.210"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:e2c",
+    "2606:4700:20::681a:f2c",
+    "2606:4700:20::ac43:4ad2"
+   ],
+   "cname": null,
+   "ns": [
+    "jeff.ns.cloudflare.com",
+    "rita.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:46:12Z",
+   "title": "PressThink - PressThink, a project of the Arthur L. Carter Journalism Institute at New York University, is written by Jay Rosen.",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://pressthink.org/feed/",
+     "title": "PressThink"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "pressthink.org",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2003-09-08",
+   "expires": "2034-09-08",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "jeff.ns.cloudflare.com",
+    "rita.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:46:12Z"
+  }
+ },
+ "prnewswire.com": {
+  "checked": "2026-10-24T05:59:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.32.47",
+    "172.64.155.209"
+   ],
+   "aaaa": [
+    "2606:4700:4408::ac40:9bd1",
+    "2a06:98c1:3101::6812:202f"
+   ],
+   "cname": null,
+   "ns": [
+    "ara.ns.cloudflare.com",
+    "bart.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:12Z",
+   "title": "PR Newswire: press release distribution, targeting, monitoring and marketing | PR Newswire",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "problogger.net": {
+  "checked": "2026-10-24T05:53:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.12.211",
+    "172.67.196.90"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:c45a",
+    "2606:4700:3033::6815:cd3"
+   ],
+   "cname": null,
+   "ns": [
+    "abby.ns.cloudflare.com",
+    "seth.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:46Z",
+   "title": "ProBlogger - Blog Tips to Help You Make Money Blogging",
+   "generator": "Easy Digital Downloads v3.6.9.1",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "problogger.net",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2004-11-18",
+   "expires": "2028-11-18",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "abby.ns.cloudflare.com",
+    "seth.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:53:46Z"
+  }
+ },
+ "productblog.37signals.com": {
+  "checked": "2026-10-24T05:59:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.0.135",
+    "104.18.1.135"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:14Z",
+   "title": "37signals: Follow us on Twitter for news and offers",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "productblogarchive.37signals.com": {
+  "checked": "2026-10-24T06:11:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:02Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "producttalk.org": {
+  "checked": "2026-10-24T05:59:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "178.128.137.126"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1099.ui-dns.biz",
+    "ns1099.ui-dns.com",
+    "ns1099.ui-dns.de",
+    "ns1099.ui-dns.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:17Z",
+   "title": "Product Talk | Make better product decisions.",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.producttalk.org/rss/",
+     "title": "Product Talk"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://www.producttalk.org/webmentions/receive/"
+  }
+ },
+ "profgalloway.com": {
+  "checked": "2026-10-24T05:42:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.10",
+    "141.193.213.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1468.awsdns-55.org",
+    "ns-2002.awsdns-58.co.uk",
+    "ns-45.awsdns-05.com",
+    "ns-534.awsdns-02.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:42:30Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "profgalloway.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2018-08-15",
+   "expires": "2028-08-15",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-1468.awsdns-55.org",
+    "ns-2002.awsdns-58.co.uk",
+    "ns-45.awsdns-05.com",
+    "ns-534.awsdns-02.net"
+   ],
+   "checked": "2026-10-24T05:42:30Z"
+  }
+ },
+ "projectskyway.com": {
+  "checked": "2026-10-24T05:53:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.223.25.84",
+    "54.243.117.197"
+   ],
+   "aaaa": [
+    "2600:1f18:4ae:c605:dd5d:b838:5816:d7fb",
+    "2600:1f18:4ae:c606:78d4:4260:db4e:aeee"
+   ],
+   "cname": null,
+   "ns": [
+    "nsg1.namebrightdns.com",
+    "nsg2.namebrightdns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:48Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  },
+  "rdap": null,
+  "rdap_error": "refused: rdap.verisign.com: network: Broken pipe"
+ },
+ "propublica.org": {
+  "checked": "2026-10-24T05:44:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.227.31.102",
+    "13.223.201.18",
+    "32.199.122.131",
+    "54.211.228.17",
+    "184.196.121.54"
+   ],
+   "aaaa": [
+    "2600:1f18:12d2:f300:141d:10b8:e768:f596",
+    "2600:1f18:12d2:f301:edee:371e:3c42:2aeb",
+    "2600:1f18:12d2:f302:fe2f:6bfa:bea8:60a6",
+    "2600:1f18:12d2:f303:7abb:d3c9:5c6e:7209",
+    "2600:1f18:12d2:f304:5685:d24f:acd8:bebb"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1190.awsdns-20.org",
+    "ns-1885.awsdns-43.co.uk",
+    "ns-406.awsdns-50.com",
+    "ns-607.awsdns-11.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:44:57Z",
+   "title": "ProPublica — Investigative Journalism and News in the Public Interest",
+   "generator": "WordPress 7.0.7",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.propublica.org/feeds/propublica/main",
+     "title": "ProPublica"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://newsie.social/@ProPublica"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "propublica.org",
+   "registrar": "Register.com - Network Solutions, LLC",
+   "registered": "2007-10-20",
+   "expires": "2027-10-20",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1190.awsdns-20.org",
+    "ns-1885.awsdns-43.co.uk",
+    "ns-406.awsdns-50.com",
+    "ns-607.awsdns-11.net"
+   ],
+   "checked": "2026-10-24T05:44:57Z"
+  }
+ },
+ "protocol.com": {
+  "checked": "2026-10-24T06:11:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.20.84.62"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.atom.com",
+    "ns2.atom.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:02Z",
+   "title": "Protocol.com — Premium Domain For Sale | Atom",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "proton.me": {
+  "checked": "2026-10-24T05:48:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.70.42.45"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.proton.me",
+    "ns2.proton.me",
+    "ns3.proton.me"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:48:20Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": null,
+  "rdap_error": "no RDAP service for .me"
+ },
+ "protonmail.com": {
+  "checked": "2026-10-24T06:11:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.70.42.12"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.protonmail.com",
+    "ns2.protonmail.com",
+    "ns3.protonmail.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:05Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "pudding.cool": {
+  "checked": "2026-10-24T05:48:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.84.127.14",
+    "52.84.127.63",
+    "52.84.127.83",
+    "52.84.127.129"
+   ],
+   "aaaa": [
+    "2600:9000:24d2:0:7:93bc:c080:93a1",
+    "2600:9000:24d2:1a00:7:93bc:c080:93a1",
+    "2600:9000:24d2:2400:7:93bc:c080:93a1",
+    "2600:9000:24d2:4600:7:93bc:c080:93a1",
+    "2600:9000:24d2:6c00:7:93bc:c080:93a1",
+    "2600:9000:24d2:7000:7:93bc:c080:93a1",
+    "2600:9000:24d2:b200:7:93bc:c080:93a1",
+    "2600:9000:24d2:c000:7:93bc:c080:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1290.awsdns-33.org",
+    "ns-1849.awsdns-39.co.uk",
+    "ns-378.awsdns-47.com",
+    "ns-766.awsdns-31.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:48:24Z",
+   "title": "The Pudding",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "pudding.cool",
+   "registrar": "Squarespace Domains II LLC",
+   "registered": "2016-11-15",
+   "expires": "2026-11-15",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1290.awsdns-33.org",
+    "ns-1849.awsdns-39.co.uk",
+    "ns-378.awsdns-47.com",
+    "ns-766.awsdns-31.net"
+   ],
+   "checked": "2026-10-24T05:48:24Z"
+  }
+ },
+ "pxlnv.com": {
+  "checked": "2026-10-24T05:59:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "155.254.21.225"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "u1.core-dns.net",
+    "u2.core-dns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:21Z",
+   "title": "Pixel Envy",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://pxlnv.com/feed/",
+     "title": "Pixel Envy"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://c.im/@nickheer",
+    "https://mastodon.social/@pxlnv"
+   ],
+   "webmention": null
   }
  }
 }

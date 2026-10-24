@@ -1,0 +1,113 @@
+{
+ "12ft.io": {
+  "checked": "2026-10-24T06:16:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "5.161.99.118"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: self-signed certificate"
+  },
+  "home": {
+   "checked": "2026-10-24T06:16:06Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: self-signed certificate"
+  }
+ },
+ "1843magazine.com": {
+  "checked": "2026-10-24T05:54:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.32.55",
+    "172.64.155.201"
+   ],
+   "aaaa": [
+    "2606:4700:440d::6812:2037",
+    "2606:4700:440d::ac40:9bc9"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.p02.nsone.net",
+    "dns2.p02.nsone.net",
+    "dns3.p02.nsone.net",
+    "dns4.p02.nsone.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T05:54:33Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403 (DataDome)"
+  }
+ },
+ "1password.com": {
+  "checked": "2026-10-24T06:01:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.141.147",
+    "172.66.1.143"
+   ],
+   "aaaa": [
+    "2606:4700:7::18b",
+    "2a06:98c1:58::18b"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-109.awsdns-13.com",
+    "ns-1527.awsdns-62.org",
+    "ns-1850.awsdns-39.co.uk",
+    "ns-671.awsdns-19.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:01:34Z",
+   "title": "Password Manager, Secrets, and Access Management | 1Password",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ }
+}

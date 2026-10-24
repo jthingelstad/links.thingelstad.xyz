@@ -1,4 +1,1116 @@
 {
+ "nakedcapitalism.com": {
+  "checked": "2026-10-24T06:09:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.12.125",
+    "104.26.13.125",
+    "172.67.72.161"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:c7d",
+    "2606:4700:20::681a:d7d",
+    "2606:4700:20::ac43:48a1"
+   ],
+   "cname": null,
+   "ns": [
+    "josh.ns.cloudflare.com",
+    "lola.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:09:54Z",
+   "title": "naked capitalism: Finance, economics, politics, power",
+   "generator": "WordPress 6.4.13",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.nakedcapitalism.com/feed",
+     "title": "naked capitalism » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.nakedcapitalism.com/comments/feed",
+     "title": "naked capitalism » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "nakedwhiz.com": {
+  "checked": "2026-10-24T06:42:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "69.163.177.169"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:42:35Z",
+   "title": "Naked Whiz Publishing Empire",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "nasa.gov": {
+  "checked": "2026-10-24T05:53:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.108"
+   ],
+   "aaaa": [
+    "2a04:fa87:fffd::c000:426c"
+   ],
+   "cname": null,
+   "ns": [
+    "a1-32.akam.net",
+    "a12-64.akam.net",
+    "a14-67.akam.net",
+    "a5-66.akam.net",
+    "a8-66.akam.net",
+    "a9-64.akam.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:12Z",
+   "title": "NASA",
+   "generator": "WordPress 7.0.7",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.nasa.gov/feed/",
+     "title": "NASA » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "nasa.gov",
+   "registrar": "get.gov",
+   "registered": "1997-10-02",
+   "expires": "2027-07-31",
+   "status": [
+    "server transfer prohibited"
+   ],
+   "nameservers": [
+    "a1-32.akam.net",
+    "a12-64.akam.net",
+    "a14-67.akam.net",
+    "a5-66.akam.net",
+    "a8-66.akam.net",
+    "a9-64.akam.net"
+   ],
+   "checked": "2026-10-24T05:53:12Z"
+  }
+ },
+ "nature.com": {
+  "checked": "2026-10-24T05:42:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "146.75.80.95"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "pdns1.ultradns.net",
+    "pdns2.ultradns.net",
+    "pdns3.ultradns.org",
+    "pdns4.ultradns.org",
+    "pdns5.ultradns.info",
+    "pdns6.ultradns.co.uk"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:42:20Z",
+   "title": "Nature",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.nature.com/nature.rss",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "nature.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "1994-08-11",
+   "expires": "2028-08-10",
+   "status": [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "pdns1.ultradns.net",
+    "pdns2.ultradns.net",
+    "pdns3.ultradns.org",
+    "pdns4.ultradns.org",
+    "pdns5.ultradns.info",
+    "pdns6.ultradns.co.uk"
+   ],
+   "checked": "2026-10-24T05:42:20Z"
+  }
+ },
+ "nautil.us": {
+  "checked": "2026-10-24T06:42:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.223"
+   ],
+   "aaaa": [
+    "2a04:fa87:fffd::c000:42df"
+   ],
+   "cname": null,
+   "ns": [
+    "hope.ns.cloudflare.com",
+    "paul.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:42:39Z",
+   "title": "Nautilus | Science Connected",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://nautil.us/feed",
+     "title": "Nautilus | Home"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "nav.al": {
+  "checked": "2026-10-24T06:09:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.16.172.135",
+    "199.16.173.4"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:09:58Z",
+   "title": "Naval",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "nbcnews.com": {
+  "checked": "2026-10-24T05:53:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.206.62.195",
+    "44.219.25.60",
+    "52.37.236.218",
+    "54.69.127.167"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "nsa1.nbcnews.com",
+    "nsa2.nbcnews.com",
+    "nsa3.nbcnews.com",
+    "nsa4.nbcnews.com",
+    "nsa5.nbcnews.com",
+    "nsa6.nbcnews.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:14Z",
+   "title": "NBC News - Breaking Headlines and Video Reports on World, U.S. and Local Angles | NBC News",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "nbcnews.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "1997-06-26",
+   "expires": "2027-06-25",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "nsa1.nbcnews.com",
+    "nsa2.nbcnews.com",
+    "nsa3.nbcnews.com",
+    "nsa4.nbcnews.com",
+    "nsa5.nbcnews.com",
+    "nsa6.nbcnews.com"
+   ],
+   "checked": "2026-10-24T05:53:14Z"
+  }
+ },
+ "nber.org": {
+  "checked": "2026-10-24T06:42:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.185.0.2"
+   ],
+   "aaaa": [
+    "2620:12a:8000::2",
+    "2620:12a:8001::2"
+   ],
+   "cname": null,
+   "ns": [
+    "a1-251.akam.net",
+    "a12-64.akam.net",
+    "a13-67.akam.net",
+    "a14-65.akam.net",
+    "a20-66.akam.net",
+    "a9-64.akam.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:42:41Z",
+   "title": "National Bureau of Economic Research | NBER",
+   "generator": "Drupal 10 (https://www.drupal.org)",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "ncbi.nlm.nih.gov": {
+  "checked": "2026-10-24T06:10:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.107.134.59"
+   ],
+   "aaaa": [
+    "2600:1901:0:c831::"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1-ncbi.ncbi.nlm.nih.gov",
+    "dns2-ncbi.ncbi.nlm.nih.gov",
+    "lhcns1.nlm.nih.gov",
+    "lhcns2.nlm.nih.gov",
+    "ns.nih.gov",
+    "ns2.nih.gov",
+    "ns3.nih.gov"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:01Z",
+   "title": "National Center for Biotechnology Information",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "neal.fun": {
+  "checked": "2026-10-24T06:10:04Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.32.222",
+    "172.66.162.110"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:20de",
+    "2606:4700:10::ac42:a26e"
+   ],
+   "cname": null,
+   "ns": [
+    "henry.ns.cloudflare.com",
+    "phoenix.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:04Z",
+   "title": "Neal.fun",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "neatnik.net": {
+  "checked": "2026-10-24T06:42:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "167.235.29.89"
+   ],
+   "aaaa": [
+    "2a01:4f8:c2c:7dd7::1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.dns.kitchen",
+    "ns2.dns.kitchen",
+    "ns3.dns.kitchen"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:42:43Z",
+   "title": "Neatnik",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://neatnik.net/feed.xml",
+    "https://source.tube/neatnik",
+    "https://social.lol/@neatnik",
+    "https://signal.me/#eu/2PIh9aFcoazypxnqz2eIIrmElIbZ9PdUd1xb6I5A0adg1jgoBhVOIoDFUdprt5th"
+   ],
+   "webmention": null
+  }
+ },
+ "neo4j.com": {
+  "checked": "2026-10-24T06:42:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.12.16",
+    "104.18.13.16"
+   ],
+   "aaaa": [
+    "2606:4700::6812:c10",
+    "2606:4700::6812:d10"
+   ],
+   "cname": null,
+   "ns": [
+    "dean.ns.cloudflare.com",
+    "kimora.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:42:47Z",
+   "title": "Neo4j Graph Intelligence Platform",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "nest.com": {
+  "checked": "2026-10-24T06:42:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.241.20.76"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1217.awsdns-24.org",
+    "ns-2026.awsdns-61.co.uk",
+    "ns-81.awsdns-10.com",
+    "ns-854.awsdns-42.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:42:50Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "netlify.com": {
+  "checked": "2026-10-24T06:10:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.186.135",
+    "15.197.167.90"
+   ],
+   "aaaa": [
+    "2600:1f16:1a4:a001::1f5",
+    "2600:1f16:1a4:a001::1f6"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.p04.nsone.net",
+    "dns2.p04.nsone.net",
+    "dns3.p04.nsone.net",
+    "dns4.p04.nsone.net",
+    "ns01.netlifydns.com",
+    "ns02.netlifydns.com",
+    "ns03.netlifydns.com",
+    "ns04.netlifydns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:06Z",
+   "title": "Push your ideas to the web | Netlify",
+   "generator": "Astro v7.3.8",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.netlify.com/feed.xml",
+     "title": "Netlify Blog"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.netlify.com/changelog/feed.xml",
+     "title": "Netlify Changelog"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.netlify.com/knowledge-base/feed.xml",
+     "title": "Netlify Knowledge Base"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "netmeister.org": {
+  "checked": "2026-10-24T06:10:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "166.84.7.99"
+   ],
+   "aaaa": [
+    "2602:f977:800:0:e276:63ff:fe72:3900"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-143-b.gandi.net",
+    "ns-179-c.gandi.net",
+    "ns-181-a.gandi.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:09Z",
+   "title": "netmeister.org",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://mstdn.social/@jschauma"
+   ],
+   "webmention": null
+  }
+ },
+ "newatlas.com": {
+  "checked": "2026-10-24T06:42:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.30.112",
+    "104.18.31.112"
+   ],
+   "aaaa": [
+    "2606:4700::6812:1e70",
+    "2606:4700::6812:1f70"
+   ],
+   "cname": null,
+   "ns": [
+    "justin.ns.cloudflare.com",
+    "mimi.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:42:52Z",
+   "title": "New Atlas: Technology-Innovation-Outdoor News",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://newatlas.com/index.rss",
+     "title": "New Atlas: Technology-Innovation-Outdoor News"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "newconsumer.com": {
+  "checked": "2026-10-24T06:42:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.156",
+    "192.0.78.204"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:42:55Z",
+   "title": "The New Consumer",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "news.cnet.com": {
+  "checked": "2026-10-24T06:42:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.222.159.138"
+   ],
+   "aaaa": [],
+   "cname": "redirect.prod.cnet.tech",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: certificate has expired"
+  },
+  "home": {
+   "checked": "2026-10-24T06:42:57Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: certificate has expired"
+  }
+ },
+ "news.microsoft.com": {
+  "checked": "2026-10-24T06:43:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.20",
+    "141.193.213.21"
+   ],
+   "aaaa": [],
+   "cname": "m3l38343je5e.wpeproxy.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:43:14Z",
+   "title": "Microsoft Source",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://news.microsoft.com/source/feed/",
+     "title": "Source » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://news.microsoft.com/source/comments/feed/",
+     "title": "Source » Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://news.microsoft.com/source/sample-page/feed/",
+     "title": "Source » Homepage Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "news.mit.edu": {
+  "checked": "2026-10-24T06:43:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.185.0.4"
+   ],
+   "aaaa": [
+    "2620:12a:8000::4",
+    "2620:12a:8001::4"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:43:19Z",
+   "title": "MIT News | Massachusetts Institute of Technology",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "news.yahoo.com": {
+  "checked": "2026-10-24T06:10:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "69.147.65.251",
+    "69.147.65.252"
+   ],
+   "aaaa": [
+    "2001:4998:60:807::1",
+    "2001:4998:60:807::2"
+   ],
+   "cname": "me-ycpi-cf.news.g06.yahoodns.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:12Z",
+   "title": "Yahoo News: Latest and Breaking News, Headlines, Live Updates, and More",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "news.ycombinator.com": {
+  "checked": "2026-10-24T05:53:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "209.216.230.207"
+   ],
+   "aaaa": [
+    "2606:7100:1:67::26"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:16Z",
+   "title": "Hacker News",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://news.ycombinator.com/rss",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "ycombinator.com",
+   "registrar": "Gandi SAS",
+   "registered": "2005-03-20",
+   "expires": "2027-03-20",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1411.awsdns-48.org",
+    "ns-1914.awsdns-47.co.uk",
+    "ns-225.awsdns-28.com",
+    "ns-556.awsdns-05.net"
+   ],
+   "checked": "2026-10-24T05:53:16Z"
+  }
+ },
+ "newscientist.com": {
+  "checked": "2026-10-24T06:10:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.232.26.217"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.associated.co.uk",
+    "ns2.anlremote.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:10:15Z",
+   "title": "New Scientist | Science news, articles, and features",
+   "generator": "WordPress 7.0.7",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "newsletter.pragmaticengineer.com": {
+  "checked": "2026-10-24T05:53:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.36.24",
+    "172.64.151.232"
+   ],
+   "aaaa": [
+    "2606:4700:4401::6812:2418",
+    "2606:4700:4406::ac40:97e8"
+   ],
+   "cname": "target.substack-custom-domains.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:19Z",
+   "title": "The Pragmatic Engineer | Gergely Orosz | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://newsletter.pragmaticengineer.com/feed",
+     "title": "The Pragmatic Engineer"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "pragmaticengineer.com",
+   "registrar": "Squarespace Domains II LLC",
+   "registered": "2015-11-08",
+   "expires": "2026-11-08",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-cloud-d1.googledomains.com",
+    "ns-cloud-d2.googledomains.com",
+    "ns-cloud-d3.googledomains.com",
+    "ns-cloud-d4.googledomains.com"
+   ],
+   "checked": "2026-10-24T05:53:19Z"
+  }
+ },
+ "newsletters.theatlantic.com": {
+  "checked": "2026-10-24T06:43:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.232.194.133",
+    "199.232.198.133"
+   ],
+   "aaaa": [],
+   "cname": "na-eu.atlanticmedia.map.fastly.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:43:22Z",
+   "title": "Newsletters - The Atlantic",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.theatlantic.com/feed/all/",
+     "title": "The Atlantic"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.theatlantic.com/feed/best-of/",
+     "title": "Best of The Atlantic"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "newsshooter.com": {
+  "checked": "2026-10-24T05:58:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.52.218",
+    "172.67.204.91"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "clint.ns.cloudflare.com",
+    "nelly.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:58:32Z",
+   "title": "Newsshooter - A site for working professionals in the TV & Film industry",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.newsshooter.com/feed/",
+     "title": "Newsshooter » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.newsshooter.com/comments/feed/",
+     "title": "Newsshooter » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://twitter.com/thenewsshooter",
+    "https://www.facebook.com/thenewsshooter",
+    "https://www.instagram.com/thenewsshooter",
+    "https://www.youtube.com/newsshooter",
+    "https://vimeo.com/newsshooter"
+   ],
+   "webmention": null
+  }
+ },
  "newyorker.com": {
   "checked": "2026-10-23T21:28:22Z",
   "method": "enrich_hosts",
@@ -45,6 +1157,107 @@
     "ns-836.awsdns-40.net"
    ],
    "checked": "2026-10-23T21:28:22Z"
+  }
+ },
+ "next-action.co.uk": {
+  "checked": "2026-10-24T05:58:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.202.211.1"
+   ],
+   "aaaa": [
+    "2620:cb:2000::1"
+   ],
+   "cname": null,
+   "ns": [
+    "bob.ns.cloudflare.com",
+    "zariyah.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:58:35Z",
+   "title": "Discover GTD in the UK and Ireland - Next Action Associates",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "next-action.eu": {
+  "checked": "2026-10-24T05:32:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.251.168",
+    "15.197.225.128"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns75.domaincontrol.com",
+    "ns76.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:32:09Z",
+   "title": "Discover GTD in the UK and Ireland - Next Action Associates",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": null,
+  "rdap_error": "no RDAP service for .eu"
+ },
+ "nginx.com": {
+  "checked": "2026-10-24T06:43:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "159.60.134.0"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.f5clouddns.com",
+    "ns2.f5clouddns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:43:23Z",
+   "title": "NGINX | F5",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "niemanlab.org": {
@@ -105,6 +1318,293 @@
    "checked": "2026-10-24T01:48:23Z"
   }
  },
+ "niftytable.com": {
+  "checked": "2026-10-24T06:43:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.223.25.84",
+    "54.243.117.197"
+   ],
+   "aaaa": [
+    "2600:1f18:4ae:c605:dd5d:b838:5816:d7fb",
+    "2600:1f18:4ae:c606:78d4:4260:db4e:aeee"
+   ],
+   "cname": null,
+   "ns": [
+    "nsg1.namebrightdns.com",
+    "nsg2.namebrightdns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  },
+  "home": {
+   "checked": "2026-10-24T06:43:27Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  }
+ },
+ "nngroup.com": {
+  "checked": "2026-10-24T05:53:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.124.249.113"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple.com",
+    "ns2.dnsimple.com",
+    "ns3.dnsimple.com",
+    "ns4.dnsimple.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:22Z",
+   "title": "Nielsen Norman Group: UX Training, Consulting, & Research - NN/G",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "nngroup.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "1998-08-07",
+   "expires": "2029-01-09",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.dnsimple.com",
+    "ns2.dnsimple.com",
+    "ns3.dnsimple.com",
+    "ns4.dnsimple.com"
+   ],
+   "checked": "2026-10-24T05:53:22Z"
+  }
+ },
+ "noahpinion.blog": {
+  "checked": "2026-10-24T06:43:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.251.168",
+    "15.197.225.128"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns31.domaincontrol.com",
+    "ns32.domaincontrol.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:43:29Z",
+   "title": "Noahpinion | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.noahpinion.blog/feed",
+     "title": "Noahpinion"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "noahpinion.substack.com": {
+  "checked": "2026-10-24T05:58:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:58:38Z",
+   "title": "Noahpinion | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.noahpinion.blog/feed",
+     "title": "Noahpinion"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "notboring.co": {
+  "checked": "2026-10-24T05:33:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.251.168",
+    "15.197.225.128"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns29.domaincontrol.com",
+    "ns30.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:33:46Z",
+   "title": "Not Boring by Packy McCormick | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.notboring.co/feed",
+     "title": "Not Boring by Packy McCormick"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": null,
+  "rdap_error": "no RDAP service for .co"
+ },
+ "notes.eatonphil.com": {
+  "checked": "2026-10-24T06:43:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "148.113.140.131"
+   ],
+   "aaaa": [
+    "2607:5300:205:300::1e69"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:43:33Z",
+   "title": "Notes on software development | notes.eatonphil.com",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://notes.eatonphil.com/rss.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "notion.so": {
+  "checked": "2026-10-24T06:43:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "208.103.161.1",
+    "208.103.161.2",
+    "208.103.161.16",
+    "208.103.161.17"
+   ],
+   "aaaa": [
+    "2602:f79a::1",
+    "2602:f79a::2",
+    "2602:f79a:0:1::1",
+    "2602:f79a:0:1::2"
+   ],
+   "cname": null,
+   "ns": [
+    "dana.ns.cloudflare.com",
+    "woz.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:43:36Z",
+   "title": "The AI workspace that works for you. | Notion",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "npr.org": {
   "checked": "2026-10-23T21:29:22Z",
   "method": "enrich_hosts",
@@ -150,6 +1650,166 @@
     "ns-769.awsdns-32.net"
    ],
    "checked": "2026-10-23T21:29:22Z"
+  }
+ },
+ "nrf.com": {
+  "checked": "2026-10-24T06:43:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.2.60.5"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns10.dnsmadeeasy.com",
+    "ns11.dnsmadeeasy.com",
+    "ns12.dnsmadeeasy.com",
+    "ns13.dnsmadeeasy.com",
+    "ns14.dnsmadeeasy.com",
+    "ns15.dnsmadeeasy.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:43:38Z",
+   "title": "National Retail Federation | NRF",
+   "generator": "Storyblok",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "nvidianews.nvidia.com": {
+  "checked": "2026-10-24T06:43:42Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.190.66.32"
+   ],
+   "aaaa": [],
+   "cname": "nvidianews.iprsoftware.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:43:42Z",
+   "title": "Home | NVIDIA Newsroom",
+   "generator": "iPR Software",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://nvidianews.nvidia.com/rss.xml",
+     "title": "Main site feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "nvie.com": {
+  "checked": "2026-10-24T06:43:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple-edge.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple-edge.io",
+    "ns4.dnsimple-edge.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:43:45Z",
+   "title": "nvie.com",
+   "generator": "iron",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://feeds.feedburner.com/nvie",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "nybooks.com": {
+  "checked": "2026-10-24T05:58:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.176"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns0.dnsmadeeasy.com",
+    "ns1.dnsmadeeasy.com",
+    "ns2.dnsmadeeasy.com",
+    "ns3.dnsmadeeasy.com",
+    "ns4.dnsmadeeasy.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:58:41Z",
+   "title": "Home | The New York Review of Books",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "http://feeds.feedburner.com/nybooks",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "nymag.com": {

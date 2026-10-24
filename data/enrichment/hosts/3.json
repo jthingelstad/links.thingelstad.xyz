@@ -1,0 +1,107 @@
+{
+ "37signals.blogs.com": {
+  "checked": "2026-10-24T05:46:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.16.84.19",
+    "104.16.85.19",
+    "104.16.86.19",
+    "104.16.87.19",
+    "104.16.88.19"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:46:33Z",
+   "title": "Typepad | Network Solutions",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "blogs.com",
+   "registrar": "Domain.com - Network Solutions, LLC",
+   "registered": "1999-09-10",
+   "expires": "2027-09-10",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "noah.ns.cloudflare.com",
+    "roxy.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:46:33Z"
+  }
+ },
+ "37signals.com": {
+  "checked": "2026-10-24T05:33:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.0.135",
+    "104.18.1.135"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "merlin.ns.cloudflare.com",
+    "serena.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:33:18Z",
+   "title": "37signals",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://37signals.com/feed/jobs.xml",
+     "title": "37signals Jobs Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "37signals.com",
+   "registrar": "Cloudflare, Inc.",
+   "registered": "1999-06-13",
+   "expires": "2027-06-13",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "merlin.ns.cloudflare.com",
+    "serena.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:33:18Z"
+  }
+ }
+}

@@ -1,4 +1,108 @@
 {
+ "salon.com": {
+  "checked": "2026-10-24T05:42:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.8.27.55",
+    "65.8.27.59",
+    "65.8.27.95",
+    "65.8.27.111"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1103.awsdns-09.org",
+    "ns-1607.awsdns-08.co.uk",
+    "ns-34.awsdns-04.com",
+    "ns-517.awsdns-00.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:42:35Z",
+   "title": "Salon.com - News, Politics, Culture, Science & Food",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "salon.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "1995-04-18",
+   "expires": "2033-01-06",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-1103.awsdns-09.org",
+    "ns-1607.awsdns-08.co.uk",
+    "ns-34.awsdns-04.com",
+    "ns-517.awsdns-00.net"
+   ],
+   "checked": "2026-10-24T05:42:35Z"
+  }
+ },
+ "scaledagileframework.com": {
+  "checked": "2026-10-24T05:59:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.8.27.55",
+    "65.8.27.61",
+    "65.8.27.72",
+    "65.8.27.117"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1409.awsdns-48.org",
+    "ns-1718.awsdns-22.co.uk",
+    "ns-36.awsdns-04.com",
+    "ns-845.awsdns-41.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:41Z",
+   "title": "Framework - Scaled Agile Framework",
+   "generator": "Powered by LayerSlider 8.2.0 - Build Heros, Sliders, and Popups. Create Animations and Beautiful, Rich Web Content as Easy as Never Before on WordPress.",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://framework.scaledagile.com/feed",
+     "title": "Scaled Agile Framework » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://framework.scaledagile.com/comments/feed",
+     "title": "Scaled Agile Framework » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "schneier.com": {
   "checked": "2026-10-24T01:46:38Z",
   "method": "enrich_hosts",
@@ -57,6 +161,238 @@
    "checked": "2026-10-24T01:46:38Z"
   }
  },
+ "science.org": {
+  "checked": "2026-10-24T06:11:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.8.62.150",
+    "54.151.119.244"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns01.aaas.org",
+    "ns02.aaas.org",
+    "ns03.aaas.org"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:17Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403 (Cloudflare challenge)"
+  }
+ },
+ "sciencedirect.com": {
+  "checked": "2026-10-24T06:11:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "203.22.241.8",
+    "203.22.241.9",
+    "203.22.241.10",
+    "203.22.241.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "elmo.ns.cloudflare.com",
+    "sofia.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:20Z",
+   "title": "ScienceDirect.com | Science, health and medical journals, full text articles and books.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "scientificamerican.com": {
+  "checked": "2026-10-24T05:46:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.160.181.39",
+    "18.160.181.40",
+    "18.160.181.112",
+    "18.160.181.126"
+   ],
+   "aaaa": [
+    "2600:9000:27d7:600:12:7409:4340:93a1",
+    "2600:9000:27d7:a00:12:7409:4340:93a1",
+    "2600:9000:27d7:1400:12:7409:4340:93a1",
+    "2600:9000:27d7:2600:12:7409:4340:93a1",
+    "2600:9000:27d7:5600:12:7409:4340:93a1",
+    "2600:9000:27d7:a600:12:7409:4340:93a1",
+    "2600:9000:27d7:d000:12:7409:4340:93a1",
+    "2600:9000:27d7:de00:12:7409:4340:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1137.awsdns-14.org",
+    "ns-1733.awsdns-24.co.uk",
+    "ns-265.awsdns-33.com",
+    "ns-918.awsdns-50.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:46:16Z",
+   "title": "Scientific American",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.scientificamerican.com/platform/syndication/rss/",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "scientificamerican.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "1997-05-02",
+   "expires": "2028-05-03",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-1137.awsdns-14.org",
+    "ns-1733.awsdns-24.co.uk",
+    "ns-265.awsdns-33.com",
+    "ns-918.awsdns-50.net"
+   ],
+   "checked": "2026-10-24T05:46:16Z"
+  }
+ },
+ "scobleizer.com": {
+  "checked": "2026-10-24T05:48:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.24",
+    "192.0.78.25"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'scobleizer.com'"
+  },
+  "home": {
+   "checked": "2026-10-24T05:48:29Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'scobleizer.com'"
+  },
+  "rdap": {
+   "domain": "scobleizer.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2004-03-03",
+   "expires": "2028-03-03",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "checked": "2026-10-24T05:48:29Z"
+  }
+ },
+ "scribd.com": {
+  "checked": "2026-10-24T06:11:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.152",
+    "151.101.66.152",
+    "151.101.130.152",
+    "151.101.194.152"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1449.awsdns-53.org",
+    "ns-2000.awsdns-58.co.uk",
+    "ns-474.awsdns-59.com",
+    "ns-630.awsdns-14.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:27Z",
+   "title": "Scribd: Home to the world’s documents.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "scripting.com": {
   "checked": "2026-10-23T21:30:56Z",
   "method": "enrich_hosts",
@@ -107,6 +443,209 @@
    "checked": "2026-10-23T21:27:19Z"
   }
  },
+ "seattletimes.com": {
+  "checked": "2026-10-24T06:11:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.8.27.68",
+    "65.8.27.109",
+    "65.8.27.111",
+    "65.8.27.119"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1127.awsdns-12.org",
+    "ns-1952.awsdns-52.co.uk",
+    "ns-335.awsdns-41.com",
+    "ns-676.awsdns-20.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:30Z",
+   "title": "The Seattle Times | Local news, sports, business, politics, entertainment, travel, restaurants and opinion for Seattle and the Pacific Northwest.",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.seattletimes.com/feed/",
+     "title": "The Seattle Times » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.seattletimes.com/comments/feed/",
+     "title": "The Seattle Times » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "sec.gov": {
+  "checked": "2026-10-24T05:50:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.214.124.62"
+   ],
+   "aaaa": [
+    "2600:1418:1000:492::17b2",
+    "2600:1418:1000:498::17b2"
+   ],
+   "cname": null,
+   "ns": [
+    "a1-32.akam.net",
+    "a18-65.akam.net",
+    "a2-16-52-199.deploy.static.akamaitechnologies.com",
+    "a20-66.akam.net",
+    "a23-205-121-154.deploy.static.akamaitechnologies.com",
+    "a23-207-197-183.deploy.static.akamaitechnologies.com",
+    "a23-215-50-6.deploy.static.akamaitechnologies.com",
+    "a23-223-23-69.deploy.static.akamaitechnologies.com",
+    "a23-223-23-70.deploy.static.akamaitechnologies.com",
+    "a23-32-14-42.deploy.static.akamaitechnologies.com",
+    "a23-39-170-136.deploy.static.akamaitechnologies.com",
+    "a23-39-171-82.deploy.static.akamaitechnologies.com",
+    "a23-39-221-132.deploy.static.akamaitechnologies.com",
+    "a23-54-119-69.deploy.static.akamaitechnologies.com",
+    "a23-55-237-106.deploy.static.akamaitechnologies.com",
+    "a23-55-237-107.deploy.static.akamaitechnologies.com",
+    "a23-55-237-108.deploy.static.akamaitechnologies.com",
+    "a23-55-237-109.deploy.static.akamaitechnologies.com",
+    "a3-67.akam.net",
+    "a6-64.akam.net",
+    "a7-65.akam.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:50:12Z",
+   "title": "SEC.gov | Home",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "sec.gov",
+   "registrar": "get.gov",
+   "registered": "1997-10-02",
+   "expires": "2027-08-13",
+   "status": [
+    "server transfer prohibited"
+   ],
+   "nameservers": [
+    "a1-32.akam.net",
+    "a18-65.akam.net",
+    "a20-66.akam.net",
+    "a3-67.akam.net",
+    "a6-64.akam.net",
+    "a7-65.akam.net"
+   ],
+   "checked": "2026-10-24T05:50:12Z"
+  }
+ },
+ "semantic-mediawiki.org": {
+  "checked": "2026-10-24T05:43:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "116.203.61.64"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns.udag.de",
+    "ns.udag.net",
+    "ns.udag.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "connection refused"
+  },
+  "home": {
+   "checked": "2026-10-24T05:43:35Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "connection refused"
+  },
+  "rdap": {
+   "domain": "semantic-mediawiki.org",
+   "registrar": "united-domains GmbH",
+   "registered": "2007-08-24",
+   "expires": "2027-08-24",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns.udag.de",
+    "ns.udag.net",
+    "ns.udag.org"
+   ],
+   "checked": "2026-10-24T05:43:35Z"
+  }
+ },
+ "sethgodin.typepad.com": {
+  "checked": "2026-10-24T06:11:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.114.121",
+    "104.18.115.121",
+    "104.18.116.121",
+    "104.18.117.121",
+    "104.18.118.121"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:33Z",
+   "title": "Typepad | Network Solutions",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "seths.blog": {
   "checked": "2026-10-23T21:26:33Z",
   "method": "enrich_hosts",
@@ -145,6 +684,268 @@
     "ns3.wordpress.com"
    ],
    "checked": "2026-10-23T21:26:33Z"
+  }
+ },
+ "sfgate.com": {
+  "checked": "2026-10-24T06:11:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.197.233.251",
+    "34.198.86.45",
+    "34.204.119.243",
+    "34.235.224.231"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hearstnp.com",
+    "ns2.hearstnp.com",
+    "ns3.hearstnp.com",
+    "ns4.hearstnp.com",
+    "ns5.hearstnp.com",
+    "ns6.hearstnp.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:34Z",
+   "title": "SFGATE: San Francisco Bay Area News, Sports, Culture, Travel, Food, California Parks",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "shapeof.com": {
+  "checked": "2026-10-24T06:11:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.58.106.246"
+   ],
+   "aaaa": [
+    "2600:3c00::f03c:91ff:fe13:da62"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.linode.com",
+    "ns2.linode.com",
+    "ns3.linode.com",
+    "ns4.linode.com",
+    "ns5.linode.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:36Z",
+   "title": "The Shape of Everything",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://shapeof.com/rss.xml",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://micro.blog/ccgus",
+    "https://mastodon.social/@ccgus"
+   ],
+   "webmention": null
+  }
+ },
+ "shawnblanc.net": {
+  "checked": "2026-10-24T05:34:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.44.156",
+    "172.67.201.41"
+   ],
+   "aaaa": [
+    "2606:4700:3033::6815:2c9c",
+    "2606:4700:3033::ac43:c929"
+   ],
+   "cname": null,
+   "ns": [
+    "derek.ns.cloudflare.com",
+    "jacqueline.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:34:09Z",
+   "title": "Shawn Blanc",
+   "generator": "WordPress 6.6.10",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://shawnblanc.net/feed/",
+     "title": "shawnblanc.net RSS Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://shawnblanc.net/comments/feed/",
+     "title": "Shawn Blanc » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "shawnblanc.net",
+   "registrar": "eNom, LLC",
+   "registered": "2007-06-27",
+   "expires": "2027-06-27",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "derek.ns.cloudflare.com",
+    "jacqueline.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:34:09Z"
+  }
+ },
+ "shopify.com": {
+  "checked": "2026-10-24T05:53:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.227.38.33"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "gold.foundationdns.com",
+    "gold.foundationdns.net",
+    "gold.foundationdns.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:53:58Z",
+   "title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "shopify.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2005-03-11",
+   "expires": "2027-03-11",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "gold.foundationdns.com",
+    "gold.foundationdns.net",
+    "gold.foundationdns.org"
+   ],
+   "checked": "2026-10-24T05:53:58Z"
+  }
+ },
+ "signal.org": {
+  "checked": "2026-10-24T05:45:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.10.47",
+    "104.18.11.47"
+   ],
+   "aaaa": [
+    "2606:4700::6812:a2f",
+    "2606:4700::6812:b2f"
+   ],
+   "cname": null,
+   "ns": [
+    "casey.ns.cloudflare.com",
+    "zita.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:45:03Z",
+   "title": "Signal >> Home",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://signal.org/blog/rss.xml",
+     "title": "RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.world/@signalapp"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "signal.org",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2001-04-15",
+   "expires": "2028-04-15",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "casey.ns.cloudflare.com",
+    "zita.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:45:03Z"
   }
  },
  "signalvnoise.com": {
@@ -233,6 +1034,165 @@
     "zita.ns.cloudflare.com"
    ],
    "checked": "2026-10-23T21:26:25Z"
+  }
+ },
+ "simpable.com": {
+  "checked": "2026-10-24T05:54:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "86.105.245.69"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.eftydns.com",
+    "ns2.eftydns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: unable to get local issuer certificate"
+  },
+  "home": {
+   "checked": "2026-10-24T05:54:00Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: unable to get local issuer certificate"
+  },
+  "rdap": {
+   "domain": "simpable.com",
+   "registrar": "Dynadot Inc",
+   "registered": "2012-12-12",
+   "expires": "2026-12-12",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1.eftydns.com",
+    "ns2.eftydns.com"
+   ],
+   "checked": "2026-10-24T05:54:00Z"
+  }
+ },
+ "simplicitybliss.com": {
+  "checked": "2026-10-24T05:45:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.86.105",
+    "172.67.217.217"
+   ],
+   "aaaa": [
+    "2606:4700:3033::6815:5669",
+    "2606:4700:3035::ac43:d9d9"
+   ],
+   "cname": null,
+   "ns": [
+    "marlowe.ns.cloudflare.com",
+    "vick.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:45:06Z",
+   "title": "Simplicity Bliss | Home Decorating, Simple Living and Rug Design Inspirations",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://simplicitybliss.com/feed/",
+     "title": "Simplicity Bliss » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "simplicitybliss.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2012-08-19",
+   "expires": "2027-08-19",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "marlowe.ns.cloudflare.com",
+    "vick.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:45:06Z"
+  }
+ },
+ "sivers.org": {
+  "checked": "2026-10-24T05:46:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.207.153.241"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "pns71.cloudns.net",
+    "pns72.cloudns.com",
+    "pns73.cloudns.net",
+    "pns74.cloudns.uk"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:46:19Z",
+   "title": "Derek Sivers",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://sive.rs/d"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "sivers.org",
+   "registrar": "NETIM SAS",
+   "registered": "2002-10-30",
+   "expires": "2029-10-30",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "pns71.cloudns.net",
+    "pns72.cloudns.com",
+    "pns73.cloudns.net",
+    "pns74.cloudns.uk"
+   ],
+   "checked": "2026-10-24T05:46:19Z"
   }
  },
  "sixcolors.com": {
@@ -327,6 +1287,793 @@
    "checked": "2026-10-23T21:29:58Z"
   }
  },
+ "slicehost.com": {
+  "checked": "2026-10-24T05:46:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.227.192.229",
+    "52.1.14.221"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns.rackspace.com",
+    "ns2.rackspace.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'slicehost.com'"
+  },
+  "home": {
+   "checked": "2026-10-24T05:46:21Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'slicehost.com'"
+  },
+  "rdap": null,
+  "rdap_error": "refused: rdap.verisign.com: network: Broken pipe"
+ },
+ "slideshare.net": {
+  "checked": "2026-10-24T05:31:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.152",
+    "151.101.66.152",
+    "151.101.130.152",
+    "151.101.194.152"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1225.awsdns-25.org",
+    "ns-1650.awsdns-14.co.uk",
+    "ns-178.awsdns-22.com",
+    "ns-802.awsdns-36.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:31:48Z",
+   "title": "Share & Discover Presentations | Slideshare",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "slideshare.net",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "2006-04-04",
+   "expires": "2027-04-04",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1225.awsdns-25.org",
+    "ns-1650.awsdns-14.co.uk",
+    "ns-178.awsdns-22.com",
+    "ns-802.awsdns-36.net"
+   ],
+   "checked": "2026-10-24T05:31:48Z"
+  }
+ },
+ "smashingmagazine.com": {
+  "checked": "2026-10-24T05:41:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.186.135",
+    "15.197.167.90"
+   ],
+   "aaaa": [
+    "2600:1f16:1a4:a001::1f5",
+    "2600:1f16:1a4:a001::1f6"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.p06.nsone.net",
+    "dns2.p06.nsone.net",
+    "dns3.p06.nsone.net",
+    "dns4.p06.nsone.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:41:18Z",
+   "title": "Smashing Magazine — For Web Designers And Developers",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.smashingmagazine.com/feed/",
+     "title": "Smashing Magazine &raquo; Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@smashingmag"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "smashingmagazine.com",
+   "registrar": "eNom, LLC",
+   "registered": "2006-08-25",
+   "expires": "2027-08-25",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "dns1.p06.nsone.net",
+    "dns2.p06.nsone.net",
+    "dns3.p06.nsone.net",
+    "dns4.p06.nsone.net"
+   ],
+   "checked": "2026-10-24T05:41:18Z"
+  }
+ },
+ "snowflake.com": {
+  "checked": "2026-10-24T06:11:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.141.191",
+    "172.66.1.187"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1416.awsdns-49.org",
+    "ns-1608.awsdns-09.co.uk",
+    "ns-429.awsdns-53.com",
+    "ns-826.awsdns-39.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:38Z",
+   "title": "Snowflake AI Data Cloud",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "socialcommercetoday.com": {
+  "checked": "2026-10-24T06:11:42Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.47.135",
+    "172.67.148.11"
+   ],
+   "aaaa": [
+    "2606:4700:3034::ac43:940b",
+    "2606:4700:3036::6815:2f87"
+   ],
+   "cname": null,
+   "ns": [
+    "aarav.ns.cloudflare.com",
+    "karina.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 525
+  },
+  "home": {
+   "checked": "2026-10-24T06:11:42Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 525"
+  }
+ },
+ "sockpuppet.org": {
+  "checked": "2026-10-24T06:12:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.131.184.198"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hover.com",
+    "ns2.hover.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:12:54Z",
+   "title": "A Final Ward — A Final Ward",
+   "generator": "Hugo 0.154.0",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://sockpuppet.org/atom.xml",
+     "title": "A Final Ward"
+    },
+    {
+     "type": "rss",
+     "url": "https://sockpuppet.org/index.xml",
+     "title": "A Final Ward"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "soundcloud.com": {
+  "checked": "2026-10-24T05:50:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.84.150.35",
+    "52.84.150.39",
+    "52.84.150.52",
+    "52.84.150.57"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1445.awsdns-52.org",
+    "ns-1745.awsdns-26.co.uk",
+    "ns-56.awsdns-07.com",
+    "ns-799.awsdns-35.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:50:16Z",
+   "title": "Stream and listen to music online for free with SoundCloud",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "soundcloud.com",
+   "registrar": "Gandi SAS",
+   "registered": "2005-07-25",
+   "expires": "2027-06-08",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1445.awsdns-52.org",
+    "ns-1745.awsdns-26.co.uk",
+    "ns-56.awsdns-07.com",
+    "ns-799.awsdns-35.net"
+   ],
+   "checked": "2026-10-24T05:50:16Z"
+  }
+ },
+ "sourceforge.net": {
+  "checked": "2026-10-24T05:59:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.12.149",
+    "104.18.13.149"
+   ],
+   "aaaa": [
+    "2606:4700::6812:c95",
+    "2606:4700::6812:d95"
+   ],
+   "cname": null,
+   "ns": [
+    "ns11.constellix.com",
+    "ns21.constellix.com",
+    "ns31.constellix.com",
+    "ns41.constellix.net",
+    "ns51.constellix.net",
+    "ns61.constellix.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:44Z",
+   "title": "Compare B2B Software, Download, & Develop Open Source & Business Software - SourceForge",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "http://sourceforge.net/blog/feed/",
+     "title": "SourceForge.net Blog"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://fosstodon.org/@sourceforge",
+    "https://fosstodon.org/@sourceforgestatus",
+    "https://sourceforge.net/reviews"
+   ],
+   "webmention": null
+  }
+ },
+ "southwestjournal.com": {
+  "checked": "2026-10-24T05:48:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.12.196",
+    "172.67.195.162"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:c3a2",
+    "2606:4700:3035::6815:cc4"
+   ],
+   "cname": null,
+   "ns": [
+    "eleanor.ns.cloudflare.com",
+    "jason.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:48:31Z",
+   "title": "Southwest Journal - Popular Web Magazine, News, US, Sports",
+   "generator": "Elementor 4.3.4; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-disabled, font_display-swap",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.southwestjournal.com/feed/",
+     "title": "Southwest Journal » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.southwestjournal.com/comments/feed/",
+     "title": "Southwest Journal » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "southwestjournal.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "1997-12-22",
+   "expires": "2027-12-21",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "eleanor.ns.cloudflare.com",
+    "jason.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:48:31Z"
+  }
+ },
+ "southwestminneapolis.patch.com": {
+  "checked": "2026-10-24T05:50:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.133",
+    "151.101.66.133",
+    "151.101.130.133",
+    "151.101.194.133"
+   ],
+   "aaaa": [],
+   "cname": "d.sni.global.fastly.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:50:19Z",
+   "title": "Southwest Minneapolis News, Breaking News in Southwest Minneapolis, MN",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "patch.com",
+   "registrar": "Moniker Online Services LLC",
+   "registered": "1994-03-01",
+   "expires": "2028-03-02",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1124.awsdns-12.org",
+    "ns-157.awsdns-19.com",
+    "ns-1931.awsdns-49.co.uk",
+    "ns-815.awsdns-37.net"
+   ],
+   "checked": "2026-10-24T05:50:19Z"
+  }
+ },
+ "spectrum.ieee.org": {
+  "checked": "2026-10-24T05:32:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.91",
+    "151.101.65.91",
+    "151.101.129.91",
+    "151.101.193.91"
+   ],
+   "aaaa": [],
+   "cname": "spectrum.ieee.org.cdn.rebelmouse.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:32:40Z",
+   "title": "IEEE Spectrum - The world's leading engineering magazine",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://spectrum.ieee.org/feeds/feed.rss",
+     "title": "IEEE Spectrum"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@ieeespectrum"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "ieee.org",
+   "registrar": "Network Solutions, LLC",
+   "registered": "1989-12-01",
+   "expires": "2027-11-30",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1.ieee.org",
+    "ns2.ieee.org",
+    "ns3.ieee.org"
+   ],
+   "checked": "2026-10-24T05:32:40Z"
+  }
+ },
+ "speirs.org": {
+  "checked": "2026-10-24T05:59:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "x.ns.joker.com",
+    "y.ns.joker.com",
+    "z.ns.joker.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:47Z",
+   "title": "Fraser Speirs | Website of Fraser Speirs (not the harmonica guy).",
+   "generator": "Jekyll v3.8.5",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://speirs.org/feed.xml",
+     "title": "Fraser Speirs"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "spscommerce.com": {
+  "checked": "2026-10-24T05:34:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.185.0.1"
+   ],
+   "aaaa": [
+    "2620:12a:8000::1",
+    "2620:12a:8001::1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1119.awsdns-11.org",
+    "ns-1868.awsdns-41.co.uk",
+    "ns-396.awsdns-49.com",
+    "ns-661.awsdns-18.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:34:12Z",
+   "title": "SPS Commerce: Retail Solutions For You (EDI, Sales & Item Data)",
+   "generator": "SPS Commerce 2016 v.3.0.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.spscommerce.com/feed/",
+     "title": "SPS Commerce » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.spscommerce.com/comments/feed/",
+     "title": "SPS Commerce » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "spscommerce.com",
+   "registrar": "NameCheap, Inc.",
+   "registered": "1998-03-23",
+   "expires": "2027-03-22",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1119.awsdns-11.org",
+    "ns-1868.awsdns-41.co.uk",
+    "ns-396.awsdns-49.com",
+    "ns-661.awsdns-18.net"
+   ],
+   "checked": "2026-10-24T05:34:12Z"
+  }
+ },
+ "stackoverflow.blog": {
+  "checked": "2026-10-24T05:54:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.186.135",
+    "15.197.167.90"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p07.nsone.net",
+    "dns2.p07.nsone.net",
+    "dns3.p07.nsone.net",
+    "dns4.p07.nsone.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:54:05Z",
+   "title": "The Stack Overflow Blog - Stack Overflow",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://stackoverflow.blog/feed/",
+     "title": "Stack Overflow Blog Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "stackoverflow.blog",
+   "registrar": "CSC Corporate Domains Inc.",
+   "registered": "2016-09-29",
+   "expires": "2027-09-29",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "dns1.p02.nsone.net",
+    "dns2.p02.nsone.net",
+    "dns3.p02.nsone.net",
+    "dns4.p02.nsone.net"
+   ],
+   "checked": "2026-10-24T05:54:05Z"
+  }
+ },
+ "stackoverflow.com": {
+  "checked": "2026-10-24T05:54:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.252.206.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "damian.ns.cloudflare.com",
+    "sureena.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T05:54:08Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403 (Cloudflare challenge)"
+  },
+  "rdap": {
+   "domain": "stackoverflow.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "2003-12-26",
+   "expires": "2027-02-02",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "damian.ns.cloudflare.com",
+    "sureena.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:54:08Z"
+  }
+ },
+ "stallman.org": {
+  "checked": "2026-10-24T06:12:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.27.20.89"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns0.positive-internet.com",
+    "dns1.positive-internet.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:12:57Z",
+   "title": "Richard Stallman's Personal Page",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://stallman.org/rss/rss.xml",
+     "title": "RMS RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.xyz/@rms"
+   ],
+   "webmention": null
+  }
+ },
  "startribune.com": {
   "checked": "2026-10-23T21:25:45Z",
   "method": "enrich_hosts",
@@ -368,6 +2115,249 @@
    "checked": "2026-10-23T21:25:45Z"
   }
  },
+ "statnews.com": {
+  "checked": "2026-10-24T05:50:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.28.205",
+    "104.18.29.205"
+   ],
+   "aaaa": [
+    "2606:4700::6812:1ccd",
+    "2606:4700::6812:1dcd"
+   ],
+   "cname": null,
+   "ns": [
+    "carlos.ns.cloudflare.com",
+    "tegan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:50:23Z",
+   "title": "STAT | Reporting from the frontiers of health and medicine",
+   "generator": "WordPress 7.0.7",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.statnews.com/feed/",
+     "title": "STAT » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "statnews.com",
+   "registrar": "Moniker Online Services LLC",
+   "registered": "2003-06-14",
+   "expires": "2027-06-14",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "carlos.ns.cloudflare.com",
+    "tegan.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:50:23Z"
+  }
+ },
+ "steve-yegge.medium.com": {
+  "checked": "2026-10-24T05:59:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.152.4",
+    "162.159.153.4"
+   ],
+   "aaaa": [
+    "2606:4700:7::a29f:9804",
+    "2606:4700:7::a29f:9904"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:50Z",
+   "title": "Medium",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://medium.com/feed/@steve-yegge",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "steveblank.com": {
+  "checked": "2026-10-24T05:41:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.151",
+    "192.0.78.236"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:41:21Z",
+   "title": "Steve Blank Innovation and Entrepreneurship",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://steveblank.com/feed/",
+     "title": "Steve Blank » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://steveblank.com/comments/feed/",
+     "title": "Steve Blank » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "steveblank.com",
+   "registrar": "Network Solutions, LLC",
+   "registered": "2000-04-01",
+   "expires": "2028-04-01",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "checked": "2026-10-24T05:41:21Z"
+  }
+ },
+ "stevenpressfield.com": {
+  "checked": "2026-10-24T06:13:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.20.73",
+    "172.67.191.224"
+   ],
+   "aaaa": [
+    "2606:4700:3034::6815:1449",
+    "2606:4700:3036::ac43:bfe0"
+   ],
+   "cname": null,
+   "ns": [
+    "buck.ns.cloudflare.com",
+    "sima.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:13:00Z",
+   "title": "The Arcadian | Steven Pressfield",
+   "generator": "All in One SEO (AIOSEO) 4.8.5",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://stevenpressfield.com/feed/",
+     "title": "Steven Pressfield » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://stevenpressfield.com/comments/feed/",
+     "title": "Steven Pressfield » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "stitcher.io": {
+  "checked": "2026-10-24T06:13:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "159.89.8.71"
+   ],
+   "aaaa": [
+    "2a03:b0c0:3:d0::11f5:3001"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.ichtushosting.com",
+    "ns2.ichtushosting.com",
+    "ns3.ichtushosting.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:13:05Z",
+   "title": "Blog | stitcher.io",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://stitcher.io/rss",
+     "title": "Stitcher RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "stratechery.com": {
   "checked": "2026-10-23T21:26:30Z",
   "method": "enrich_hosts",
@@ -406,6 +2396,320 @@
     "c.dns.gandi.net"
    ],
    "checked": "2026-10-23T21:26:30Z"
+  }
+ },
+ "stripe.com": {
+  "checked": "2026-10-24T05:32:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.137.150.161",
+    "198.202.176.161"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1087.awsdns-07.org",
+    "ns-1882.awsdns-43.co.uk",
+    "ns-423.awsdns-52.com",
+    "ns-705.awsdns-24.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:32:43Z",
+   "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "stripe.com",
+   "registrar": "SafeNames Ltd.",
+   "registered": "1995-09-12",
+   "expires": "2027-09-11",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns-1087.awsdns-07.org",
+    "ns-1882.awsdns-43.co.uk",
+    "ns-423.awsdns-52.com",
+    "ns-705.awsdns-24.net"
+   ],
+   "checked": "2026-10-24T05:32:43Z"
+  }
+ },
+ "sublimetext.com": {
+  "checked": "2026-10-24T06:13:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "45.55.41.223"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns31.domaincontrol.com",
+    "ns32.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:13:10Z",
+   "title": "Sublime Text - Text Editing, Done Right",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.sublimetext.com/blog/feed",
+     "title": "RSS 2.0"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "subtraction.com": {
+  "checked": "2026-10-24T06:13:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.10",
+    "141.193.213.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: TLS_ALERT_HANDSHAKE_FAILURE"
+  },
+  "home": {
+   "checked": "2026-10-24T06:13:12Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: TLS_ALERT_HANDSHAKE_FAILURE"
+  }
+ },
+ "sumologic.com": {
+  "checked": "2026-10-24T05:54:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.2.16.224"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "beau.ns.cloudflare.com",
+    "nena.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:54:13Z",
+   "title": "Cloud log management, monitoring, SIEM tools Sumo Logic",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.sumologic.com/feed",
+     "title": "Sumo Logic » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.sumologic.com/comments/feed",
+     "title": "Sumo Logic » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "sumologic.com",
+   "registrar": "Moniker Online Services LLC",
+   "registered": "2010-03-10",
+   "expires": "2031-03-10",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "beau.ns.cloudflare.com",
+    "nena.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:54:13Z"
+  }
+ },
+ "support.apple.com": {
+  "checked": "2026-10-24T05:59:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.217.104.86",
+    "23.217.104.87"
+   ],
+   "aaaa": [
+    "2600:1407:3c00:1b2e::1701:fedb",
+    "2600:1407:3c00:1b2e::1701:fedd"
+   ],
+   "cname": "prod-support.apple-support.akadns.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:59:53Z",
+   "title": "Official Apple Support",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "surfingcomplexity.blog": {
+  "checked": "2026-10-24T06:13:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.24",
+    "192.0.78.25"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:13:13Z",
+   "title": "Surfing Complexity – Lorin Hochstein's ramblings about software, complex systems, and incidents.",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://surfingcomplexity.blog/feed/",
+     "title": "Surfing Complexity » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://surfingcomplexity.blog/comments/feed/",
+     "title": "Surfing Complexity » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "svpg.com": {
+  "checked": "2026-10-24T05:30:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.77.219",
+    "172.67.211.234"
+   ],
+   "aaaa": [
+    "2606:4700:3033::6815:4ddb",
+    "2606:4700:3036::ac43:d3ea"
+   ],
+   "cname": null,
+   "ns": [
+    "keenan.ns.cloudflare.com",
+    "romina.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:30:29Z",
+   "title": "SVPG: Learn the Product Operating Model : Silicon Valley Product Group",
+   "generator": "Site Kit by Google 1.190.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "svpg.com",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "2001-12-11",
+   "expires": "2026-12-11",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "keenan.ns.cloudflare.com",
+    "romina.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:30:29Z"
   }
  }
 }

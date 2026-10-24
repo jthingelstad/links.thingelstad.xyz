@@ -1,4 +1,309 @@
 {
+ "hackernoon.com": {
+  "checked": "2026-10-24T05:52:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.6.38",
+    "104.26.7.38",
+    "172.67.71.52"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:626",
+    "2606:4700:20::681a:726",
+    "2606:4700:20::ac43:4734"
+   ],
+   "cname": null,
+   "ns": [
+    "amber.ns.cloudflare.com",
+    "guy.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:52:36Z",
+   "title": "HackerNoon - read, write and learn about any technology",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "hackernoon.com",
+   "registrar": "NameCheap, Inc.",
+   "registered": "2016-04-03",
+   "expires": "2029-04-03",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "amber.ns.cloudflare.com",
+    "guy.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:52:36Z"
+  }
+ },
+ "hackingdistributed.com": {
+  "checked": "2026-10-24T06:29:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "128.253.3.148"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-24T06:29:37Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "hacks.mozilla.org": {
+  "checked": "2026-10-24T05:57:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.20",
+    "141.193.213.21"
+   ],
+   "aaaa": [],
+   "cname": "ofufnhwmek4j.wpeproxy.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:57:18Z",
+   "title": "Home - Mozilla Hacks - the Web developer blog",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://hacks.mozilla.org/feed/",
+     "title": "Mozilla Hacks - the Web developer blog » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://hacks.mozilla.org/comments/feed/",
+     "title": "Mozilla Hacks - the Web developer blog » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "hamberg.no": {
+  "checked": "2026-10-24T06:07:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.166.118.10",
+    "3.166.118.20",
+    "3.166.118.27",
+    "3.166.118.38"
+   ],
+   "aaaa": [
+    "2600:9000:279b:4e00:a:7f3f:1d40:93a1",
+    "2600:9000:279b:6000:a:7f3f:1d40:93a1",
+    "2600:9000:279b:7600:a:7f3f:1d40:93a1",
+    "2600:9000:279b:8200:a:7f3f:1d40:93a1",
+    "2600:9000:279b:8800:a:7f3f:1d40:93a1",
+    "2600:9000:279b:9a00:a:7f3f:1d40:93a1",
+    "2600:9000:279b:d000:a:7f3f:1d40:93a1",
+    "2600:9000:279b:d600:a:7f3f:1d40:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1271.awsdns-30.org",
+    "ns-1677.awsdns-17.co.uk",
+    "ns-368.awsdns-46.com",
+    "ns-625.awsdns-14.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:07:51Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "hanselman.com": {
+  "checked": "2026-10-24T05:49:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "150.171.110.194"
+   ],
+   "aaaa": [
+    "2603:1061:14:b1::1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple-edge.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple-edge.io",
+    "ns4.dnsimple-edge.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:49:44Z",
+   "title": "Scott Hanselman - Coder, Blogger, Teacher, Speaker, Author",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "http://feeds.hanselman.com/ScottHanselman",
+     "title": "Scott Hanselman's Blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://feeds.hanselman.com/ScottHanselman",
+    "https://twitter.com/shanselman",
+    "https://facebook.com/shanselman",
+    "https://hachyderm.io/@shanselman"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "hanselman.com",
+   "registrar": "1API GmbH",
+   "registered": "1998-08-08",
+   "expires": "2029-08-07",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1.dnsimple-edge.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple-edge.io",
+    "ns4.dnsimple-edge.org"
+   ],
+   "checked": "2026-10-24T05:49:44Z"
+  }
+ },
+ "hardmac.com": {
+  "checked": "2026-10-24T06:30:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "213.186.33.5"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns106.ovh.net",
+    "ns106.ovh.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "connection reset"
+  },
+  "home": {
+   "checked": "2026-10-24T06:30:09Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "connection reset"
+  }
+ },
+ "hashicorp.com": {
+  "checked": "2026-10-24T06:07:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1411.awsdns-48.org",
+    "ns-1753.awsdns-27.co.uk",
+    "ns-230.awsdns-28.com",
+    "ns-667.awsdns-19.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 429
+  },
+  "home": {
+   "checked": "2026-10-24T06:07:54Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 429 (Vercel challenge)"
+  }
+ },
  "hbr.org": {
   "checked": "2026-10-23T21:27:02Z",
   "method": "enrich_hosts",
@@ -43,6 +348,993 @@
     "ns-604.awsdns-11.net"
    ],
    "checked": "2026-10-23T21:27:02Z"
+  }
+ },
+ "heavytable.com": {
+  "checked": "2026-10-24T06:07:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.185.234.253"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1jlp.name.com",
+    "ns2gtx.name.com",
+    "ns3dgr.name.com",
+    "ns4bty.name.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:07:56Z",
+   "title": "Heavy Table – Minneapolis-St. Paul and Upper Midwest Food Magazine // Feasting on the Bounty of the Upper Midwest",
+   "generator": "Site Kit by Google 1.190.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://heavytable.com/feed/",
+     "title": "Heavy Table » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://heavytable.com/comments/feed/",
+     "title": "Heavy Table » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "help.ubuntu.com": {
+  "checked": "2026-10-24T06:30:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "91.189.91.48",
+    "91.189.91.49",
+    "185.125.190.17",
+    "185.125.190.18"
+   ],
+   "aaaa": [
+    "2001:67c:1562::23",
+    "2001:67c:1562::24",
+    "2620:2d:4000:1::2a",
+    "2620:2d:4000:1::2b"
+   ],
+   "cname": "is-content-cache.canonical.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 503
+  },
+  "home": {
+   "checked": "2026-10-24T06:30:12Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 503"
+  }
+ },
+ "henrikkarlsson.xyz": {
+  "checked": "2026-10-24T06:30:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "207.207.210.23",
+    "207.207.210.36",
+    "207.207.210.50"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:30:36Z",
+   "title": "Escaping Flatland | Henrik Karlsson | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.henrikkarlsson.xyz/feed",
+     "title": "Escaping Flatland"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "herman.bearblog.dev": {
+  "checked": "2026-10-24T06:08:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.12.56",
+    "104.26.13.56",
+    "172.67.71.181"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:c38",
+    "2606:4700:20::681a:d38",
+    "2606:4700:20::ac43:47b5"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:00Z",
+   "title": "Herman's blog",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://herman.bearblog.dev/feed/",
+     "title": "Herman's blog"
+    },
+    {
+     "type": "rss",
+     "url": "https://herman.bearblog.dev/feed/?type=rss",
+     "title": "Herman's blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "hexmode.com": {
+  "checked": "2026-10-24T06:30:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.157",
+    "192.0.78.197"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:30:38Z",
+   "title": "Hexmode's Weblog – MediaWiki stuff",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://hexmode.com/feed/",
+     "title": "Hexmode's Weblog » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://hexmode.com/comments/feed/",
+     "title": "Hexmode's Weblog » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "heydingus.net": {
+  "checked": "2026-10-24T06:30:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.191.179.131"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hover.com",
+    "ns2.hover.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:30:40Z",
+   "title": "HeyDingus",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://heydingus.net/feed.rss",
+     "title": "RSS Feed for HeyDingus"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://mas.to/@HeyDingus",
+    "https://micro.blog/jarrod",
+    "https://jarrod.micro.blog",
+    "http://jarrodblundy.com"
+   ],
+   "webmention": "https://tinylytics.app/webmention/DNKsLK-BvbqJGQ-KSsL3"
+  }
+ },
+ "highline.huffingtonpost.com": {
+  "checked": "2026-10-24T06:08:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.114",
+    "151.101.66.114",
+    "151.101.130.114",
+    "151.101.194.114"
+   ],
+   "aaaa": [],
+   "cname": "buzzfeed2.map.fastly.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:02Z",
+   "title": "HuffPost | Highline",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "highscalability.com": {
+  "checked": "2026-10-24T05:31:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.3.7",
+    "151.101.67.7",
+    "151.101.131.7",
+    "151.101.195.7"
+   ],
+   "aaaa": [
+    "2a04:4e42::775",
+    "2a04:4e42:200::775",
+    "2a04:4e42:400::775",
+    "2a04:4e42:600::775"
+   ],
+   "cname": null,
+   "ns": [
+    "deborah.ns.cloudflare.com",
+    "leland.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:31:57Z",
+   "title": "High Scalability",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://highscalability.com/rss/",
+     "title": "High Scalability"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://highscalability.com/webmentions/receive/"
+  },
+  "rdap": {
+   "domain": "highscalability.com",
+   "registrar": "Wild West Domains, LLC",
+   "registered": "2007-04-29",
+   "expires": "2028-04-29",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "deborah.ns.cloudflare.com",
+    "leland.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:31:57Z"
+  }
+ },
+ "hillelwayne.com": {
+  "checked": "2026-10-24T06:30:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "99.84.203.15",
+    "99.84.203.19",
+    "99.84.203.70",
+    "99.84.203.84"
+   ],
+   "aaaa": [
+    "2600:9000:20c5:2e00:11:cd0:93c0:93a1",
+    "2600:9000:20c5:3600:11:cd0:93c0:93a1",
+    "2600:9000:20c5:4e00:11:cd0:93c0:93a1",
+    "2600:9000:20c5:8200:11:cd0:93c0:93a1",
+    "2600:9000:20c5:9a00:11:cd0:93c0:93a1",
+    "2600:9000:20c5:ce00:11:cd0:93c0:93a1",
+    "2600:9000:20c5:d400:11:cd0:93c0:93a1",
+    "2600:9000:20c5:f000:11:cd0:93c0:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1246.awsdns-27.org",
+    "ns-2040.awsdns-63.co.uk",
+    "ns-408.awsdns-51.com",
+    "ns-971.awsdns-57.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:30:44Z",
+   "title": "Hillel Wayne",
+   "generator": "Hugo 0.37.1",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.hillelwayne.com/index.xml",
+     "title": "Hillel Wayne"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "hivelogic.com": {
+  "checked": "2026-10-24T05:52:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.33.166",
+    "172.67.165.7"
+   ],
+   "aaaa": [
+    "2606:4700:3033::6815:21a6",
+    "2606:4700:3037::ac43:a507"
+   ],
+   "cname": null,
+   "ns": [
+    "cory.ns.cloudflare.com",
+    "tess.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:52:38Z",
+   "title": "Dan Benjamin",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "hivelogic.com",
+   "registrar": "NameCheap, Inc.",
+   "registered": "2001-02-24",
+   "expires": "2027-02-24",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "cory.ns.cloudflare.com",
+    "tess.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:52:38Z"
+  }
+ },
+ "hodinkee.com": {
+  "checked": "2026-10-24T05:44:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.28.215",
+    "172.67.147.156"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:939c",
+    "2606:4700:3035::6815:1cd7"
+   ],
+   "cname": null,
+   "ns": [
+    "meilani.ns.cloudflare.com",
+    "viddy.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:44:25Z",
+   "title": "Hodinkee",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.hodinkee.com/articles/rss.xml",
+     "title": "RSS Feed for Hodinkee"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "hodinkee.com",
+   "registrar": "Cloudflare, Inc.",
+   "registered": "2008-05-12",
+   "expires": "2027-05-12",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "meilani.ns.cloudflare.com",
+    "viddy.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:44:25Z"
+  }
+ },
+ "hollywoodreporter.com": {
+  "checked": "2026-10-24T06:08:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.136"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1530.awsdns-63.org",
+    "ns-1584.awsdns-06.co.uk",
+    "ns-397.awsdns-49.com",
+    "ns-720.awsdns-26.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:05Z",
+   "title": "The Hollywood Reporter – Movie news, TV news, awards news, lifestyle news, business news and more from The Hollywood Reporter.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "homepage.mac.com": {
+  "checked": "2026-10-24T06:30:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "17.146.233.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-24T06:30:46Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "honeycomb.io": {
+  "checked": "2026-10-24T05:48:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "32.195.254.91",
+    "54.221.122.137",
+    "100.56.47.185"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-111.awsdns-13.com",
+    "ns-1378.awsdns-44.org",
+    "ns-2000.awsdns-58.co.uk",
+    "ns-588.awsdns-09.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:48:05Z",
+   "title": "Honeycomb: AI-Ready Observability Platform",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": null,
+  "rdap_error": "no RDAP service for .io"
+ },
+ "hostingfu.com": {
+  "checked": "2026-10-24T06:31:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.248.169.48",
+    "76.223.54.146"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns3.afternic.com",
+    "ns4.afternic.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:31:17Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "howsoftwareisbuilt.com": {
+  "checked": "2026-10-24T06:31:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.64.119.104"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-24T06:31:19Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "howtogeek.com": {
+  "checked": "2026-10-24T05:57:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.222.102.97"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns20.digicertdns.com",
+    "ns21.digicertdns.com",
+    "ns22.digicertdns.com",
+    "ns23.digicertdns.net",
+    "ns24.digicertdns.net",
+    "ns25.digicertdns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:57:20Z",
+   "title": "How-To Geek - We Explain Technology",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "huffingtonpost.com": {
+  "checked": "2026-10-24T05:43:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.160.102.14",
+    "18.160.102.16",
+    "18.160.102.78",
+    "18.160.102.87"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1205.awsdns-22.org",
+    "ns-2006.awsdns-58.co.uk",
+    "ns-287.awsdns-35.com",
+    "ns-559.awsdns-05.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:43:08Z",
+   "title": "HuffPost - Breaking News, Politics, Entertainment & Opinion",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "huffingtonpost.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2005-03-10",
+   "expires": "2028-03-10",
+   "status": [
+    "active"
+   ],
+   "nameservers": [
+    "ns-1205.awsdns-22.org",
+    "ns-2006.awsdns-58.co.uk",
+    "ns-287.awsdns-35.com",
+    "ns-559.awsdns-05.net"
+   ],
+   "checked": "2026-10-24T05:43:08Z"
+  }
+ },
+ "huffpost.com": {
+  "checked": "2026-10-24T06:31:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.114",
+    "151.101.66.114",
+    "151.101.130.114",
+    "151.101.194.114"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1081.awsdns-07.org",
+    "ns-1616.awsdns-10.co.uk",
+    "ns-247.awsdns-30.com",
+    "ns-843.awsdns-41.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:31:37Z",
+   "title": "HuffPost - Breaking News, Politics, Entertainment & Opinion",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "huggingface.co": {
+  "checked": "2026-10-24T06:08:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.160.102.4",
+    "18.160.102.86",
+    "18.160.102.96",
+    "18.160.102.110"
+   ],
+   "aaaa": [
+    "2600:9000:254b:800:17:b174:6d00:93a1",
+    "2600:9000:254b:2000:17:b174:6d00:93a1",
+    "2600:9000:254b:8c00:17:b174:6d00:93a1",
+    "2600:9000:254b:9e00:17:b174:6d00:93a1",
+    "2600:9000:254b:a800:17:b174:6d00:93a1",
+    "2600:9000:254b:d600:17:b174:6d00:93a1",
+    "2600:9000:254b:e800:17:b174:6d00:93a1",
+    "2600:9000:254b:f400:17:b174:6d00:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-137.awsdns-17.com",
+    "ns-1452.awsdns-53.org",
+    "ns-1955.awsdns-52.co.uk",
+    "ns-919.awsdns-50.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:07Z",
+   "title": "Hugging Face – The AI community building the future.",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://huggingface.co/blog/feed.xml",
+     "title": "Hugging Face Blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "hughrundle.net": {
+  "checked": "2026-10-24T06:31:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "103.1.184.185"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.digitalocean.com",
+    "ns2.digitalocean.com",
+    "ns3.digitalocean.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:31:38Z",
+   "title": "Information Flaneur",
+   "generator": "Zola",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.hughrundle.net/atom.xml",
+     "title": "Atom feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://ausglam.space/@hr_dot_net",
+    "https://ausglam.space/@hugh"
+   ],
+   "webmention": null
+  }
+ },
+ "humidityandhope.com": {
+  "checked": "2026-10-24T06:31:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "219.94.250.69"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns01.muumuu-domain.com",
+    "dns02.muumuu-domain.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T06:31:43Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "hypercritical.co": {
+  "checked": "2026-10-24T05:57:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.24.109",
+    "172.67.218.87"
+   ],
+   "aaaa": [
+    "2606:4700:3035::6815:186d",
+    "2606:4700:3036::ac43:da57"
+   ],
+   "cname": null,
+   "ns": [
+    "robin.ns.cloudflare.com",
+    "troy.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:57:22Z",
+   "title": "Hypercritical",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://hypercritical.co/feeds/main",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@siracusa",
+    "https://mastodon.social/@hypercritical",
+    "https://bsky.app/profile/siracusa.social",
+    "https://bsky.app/profile/hypercritical.co",
+    "https://zeppelin.flights/@siracusa",
+    "https://hachyderm.io/@siracusa",
+    "https://mastodon.cloud/@siracusa",
+    "https://mstdn.io/@siracusa",
+    "https://moth.social/@siracusa"
+   ],
+   "webmention": null
   }
  }
 }

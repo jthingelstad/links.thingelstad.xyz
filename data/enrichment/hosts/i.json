@@ -1,0 +1,1499 @@
+{
+ "i-programmer.info": {
+  "checked": "2026-10-24T06:31:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.89.74.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1019.awsdns-63.net",
+    "ns-1120.awsdns-12.org",
+    "ns-1801.awsdns-33.co.uk",
+    "ns-215.awsdns-26.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:31:47Z",
+   "title": "i-programmer.info",
+   "generator": "I Programmer CMS",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.i-programmer.info/index.php?format=feed&type=rss",
+     "title": "RSS 2.0"
+    },
+    {
+     "type": "atom",
+     "url": "https://www.i-programmer.info/index.php?format=feed&type=atom",
+     "title": "Atom 1.0"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.i-programmer.info/index.php?option=com_ninjarsssyndicator&feed_id=3&format=raw",
+     "title": "I Programmer - full contents"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "ia.net": {
+  "checked": "2026-10-24T05:44:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.8.110",
+    "104.26.9.110",
+    "172.67.69.109"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:86e",
+    "2606:4700:20::681a:96e",
+    "2606:4700:20::ac43:456d"
+   ],
+   "cname": null,
+   "ns": [
+    "jade.ns.cloudflare.com",
+    "justin.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:44:28Z",
+   "title": "Home - iA",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://ia.net/feed",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.online/@ia"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "ia.net",
+   "registrar": "NameCheap, Inc.",
+   "registered": "1994-05-13",
+   "expires": "2034-05-14",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "jade.ns.cloudflare.com",
+    "justin.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:44:28Z"
+  }
+ },
+ "ianbicking.org": {
+  "checked": "2026-10-24T06:31:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.33.253",
+    "172.67.194.112"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:21fd",
+    "2606:4700:3033::ac43:c270"
+   ],
+   "cname": null,
+   "ns": [
+    "armando.ns.cloudflare.com",
+    "zariyah.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:31:49Z",
+   "title": "Ian Bicking: a home page",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://ianbicking.org/feeds/atom.xml",
+     "title": "Ian Bicking: a blog Atom Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "iconfactory.com": {
+  "checked": "2026-10-24T06:08:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "45.33.2.205"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.linode.com",
+    "ns2.linode.com",
+    "ns3.linode.com",
+    "ns4.linode.com",
+    "ns5.linode.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:10Z",
+   "title": "The Iconfactory: Award-Winning App Design and Development",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://blog.iconfactory.com/feed/",
+     "title": "Iconfactory News"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@chockenberry",
+    "https://mastodon.social/@bigzaphod",
+    "https://mastodon.social/@gedeonm",
+    "https://mastodon.art/@piraino",
+    "https://mastodon.social/@talosman",
+    "https://mastodon.social/@cherylc",
+    "https://iconfactory.world/@Iconfactory",
+    "https://iconfactory.world/@support"
+   ],
+   "webmention": null
+  }
+ },
+ "iconnectdots.com": {
+  "checked": "2026-10-24T06:31:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "62.72.46.235"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.namecheaphosting.com",
+    "dns2.namecheaphosting.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "network: Network is unreachable"
+  },
+  "home": {
+   "checked": "2026-10-24T06:31:51Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "network: Network is unreachable"
+  }
+ },
+ "ideas.ted.com": {
+  "checked": "2026-10-24T06:32:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.44"
+   ],
+   "aaaa": [
+    "2a04:fa87:fffd::c000:422c"
+   ],
+   "cname": "ted.go-vip.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:03Z",
+   "title": null,
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://ideas.ted.com/feed/",
+     "title": "ideas.ted.com » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://ideas.ted.com/comments/feed/",
+     "title": "ideas.ted.com » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "idlewords.com": {
+  "checked": "2026-10-24T05:32:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "107.181.87.8"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns10.dnsmadeeasy.com",
+    "ns11.dnsmadeeasy.com",
+    "ns12.dnsmadeeasy.com",
+    "ns13.dnsmadeeasy.com",
+    "ns14.dnsmadeeasy.com",
+    "ns15.dnsmadeeasy.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:32:00Z",
+   "title": "Idle Words",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://idlewords.com/index.xml",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "idlewords.com",
+   "registrar": "Gandi SAS",
+   "registered": "2000-06-30",
+   "expires": "2027-06-30",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns10.dnsmadeeasy.com",
+    "ns11.dnsmadeeasy.com"
+   ],
+   "checked": "2026-10-24T05:32:00Z"
+  }
+ },
+ "ietf.org": {
+  "checked": "2026-10-24T06:32:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.16.44.99",
+    "104.16.45.99"
+   ],
+   "aaaa": [
+    "2606:4700::6810:2c63",
+    "2606:4700::6810:2d63"
+   ],
+   "cname": null,
+   "ns": [
+    "jill.ns.cloudflare.com",
+    "ken.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:06Z",
+   "title": "IETF | Internet Engineering Task Force",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://www.linkedin.com/company/internet-engineering-task-force/",
+    "https://www.facebook.com/ietf",
+    "https://bsky.app/profile/ietf.org",
+    "https://www.youtube.com/ietf",
+    "https://github.com/ietf/"
+   ],
+   "webmention": null
+  }
+ },
+ "imgur.com": {
+  "checked": "2026-10-24T05:52:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.232.192.193",
+    "199.232.196.193"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1198.awsdns-21.org",
+    "ns-1677.awsdns-17.co.uk",
+    "ns-457.awsdns-57.com",
+    "ns-577.awsdns-08.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:52:40Z",
+   "title": "Imgur: The magic of the Internet",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "imgur.com",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "2009-01-09",
+   "expires": "2028-01-09",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1198.awsdns-21.org",
+    "ns-1677.awsdns-17.co.uk",
+    "ns-457.awsdns-57.com",
+    "ns-577.awsdns-08.net"
+   ],
+   "checked": "2026-10-24T05:52:40Z"
+  }
+ },
+ "imore.com": {
+  "checked": "2026-10-24T05:32:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.232.194.114",
+    "199.232.198.114"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1232.awsdns-26.org",
+    "ns-1964.awsdns-53.co.uk",
+    "ns-504.awsdns-63.com",
+    "ns-781.awsdns-33.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:32:03Z",
+   "title": "iMore - Apple News, Reviews, Deals, & Help | Learn more. Be more.",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.imore.com/feeds.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "imore.com",
+   "registrar": "Lexsynergy Limited",
+   "registered": "1999-09-19",
+   "expires": "2027-09-19",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-1232.awsdns-26.org",
+    "ns-1964.awsdns-53.co.uk",
+    "ns-504.awsdns-63.com",
+    "ns-781.awsdns-33.net"
+   ],
+   "checked": "2026-10-24T05:32:03Z"
+  }
+ },
+ "imperialviolet.org": {
+  "checked": "2026-10-24T06:32:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "164.90.146.65"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1cny.name.com",
+    "ns3ghw.name.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:07Z",
+   "title": "ImperialViolet - ImperialViolet.org",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.imperialviolet.org/iv-rss.xml",
+     "title": "Atom Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://twitter.com/agl__"
+   ],
+   "webmention": null
+  }
+ },
+ "inc.com": {
+  "checked": "2026-10-24T05:49:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.54",
+    "151.101.65.54",
+    "151.101.129.54",
+    "151.101.193.54"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1109.awsdns-10.org",
+    "ns-1662.awsdns-15.co.uk",
+    "ns-346.awsdns-43.com",
+    "ns-762.awsdns-31.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T05:49:48Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403 (DataDome)"
+  },
+  "rdap": {
+   "domain": "inc.com",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "1996-03-06",
+   "expires": "2032-03-07",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1109.awsdns-10.org",
+    "ns-1662.awsdns-15.co.uk",
+    "ns-346.awsdns-43.com",
+    "ns-762.awsdns-31.net"
+   ],
+   "checked": "2026-10-24T05:49:48Z"
+  }
+ },
+ "incisive.nu": {
+  "checked": "2026-10-24T06:32:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.174.114.85"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.siteground.net",
+    "ns2.siteground.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:09Z",
+   "title": "Incisive.nu",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://incisive.nu/feed/",
+     "title": "Incisive.nu » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://incisive.nu/comments/feed/",
+     "title": "Incisive.nu » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "increment.com": {
+  "checked": "2026-10-24T05:52:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.160.102.31",
+    "18.160.102.55",
+    "18.160.102.100",
+    "18.160.102.117"
+   ],
+   "aaaa": [
+    "2600:9000:2123:400:18:d56c:e480:93a1",
+    "2600:9000:2123:1200:18:d56c:e480:93a1",
+    "2600:9000:2123:1a00:18:d56c:e480:93a1",
+    "2600:9000:2123:3a00:18:d56c:e480:93a1",
+    "2600:9000:2123:5000:18:d56c:e480:93a1",
+    "2600:9000:2123:a200:18:d56c:e480:93a1",
+    "2600:9000:2123:ae00:18:d56c:e480:93a1",
+    "2600:9000:2123:be00:18:d56c:e480:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1087.awsdns-07.org",
+    "ns-1882.awsdns-43.co.uk",
+    "ns-423.awsdns-52.com",
+    "ns-705.awsdns-24.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:52:43Z",
+   "title": "Increment: Planning",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://increment.com/feed.xml",
+     "title": "Increment"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "increment.com",
+   "registrar": "SafeNames Ltd.",
+   "registered": "1999-03-19",
+   "expires": "2028-03-19",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-1087.awsdns-07.org",
+    "ns-1882.awsdns-43.co.uk",
+    "ns-423.awsdns-52.com",
+    "ns-705.awsdns-24.net"
+   ],
+   "checked": "2026-10-24T05:52:43Z"
+  }
+ },
+ "independent.co.uk": {
+  "checked": "2026-10-24T06:32:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.184",
+    "151.101.65.184",
+    "151.101.129.184",
+    "151.101.193.184"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "lars.ns.cloudflare.com",
+    "rihana.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:11Z",
+   "title": "The Independent | Latest news and features from US, UK and worldwide",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.independent.co.uk/us/rss",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "indiegogo.com": {
+  "checked": "2026-10-24T06:32:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.4.169",
+    "104.18.5.169"
+   ],
+   "aaaa": [
+    "2606:4700::6812:4a9",
+    "2606:4700::6812:5a9"
+   ],
+   "cname": null,
+   "ns": [
+    "april.ns.cloudflare.com",
+    "boyd.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:15Z",
+   "title": "Indiegogo",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "inessential.com": {
+  "checked": "2026-10-24T05:44:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "143.198.231.242"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hover.com",
+    "ns2.hover.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:44:31Z",
+   "title": "inessential: weblog",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://inessential.com/xml/rss.xml",
+     "title": "inessential.com RSS feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "inessential.com",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "1999-04-23",
+   "expires": "2027-04-23",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns1.hover.com",
+    "ns2.hover.com"
+   ],
+   "checked": "2026-10-24T05:44:31Z"
+  }
+ },
+ "inflecthealth.medium.com": {
+  "checked": "2026-10-24T06:32:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.152.4",
+    "162.159.153.4"
+   ],
+   "aaaa": [
+    "2606:4700:7::a29f:9804",
+    "2606:4700:7::a29f:9904"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:19Z",
+   "title": "Medium",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://medium.com/feed/@inflecthealth",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://twitter.com/InflectHealth"
+   ],
+   "webmention": null
+  }
+ },
+ "info.org.il": {
+  "checked": "2026-10-24T06:32:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "69.163.185.147"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:24Z",
+   "title": "חנן כהן / מידע דיגיטאלי",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "infoq.com": {
+  "checked": "2026-10-24T05:45:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "32.188.117.183",
+    "32.189.142.140",
+    "44.245.60.233"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1373.awsdns-43.org",
+    "ns-160.awsdns-20.com",
+    "ns-1969.awsdns-54.co.uk",
+    "ns-514.awsdns-00.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:45:52Z",
+   "title": "InfoQ: Software Development News, Trends & Best Practices - InfoQ",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "infoq.com",
+   "registrar": "CSL Computer Service Langenbach GmbH d/b/a joker.com",
+   "registered": "1996-03-29",
+   "expires": "2027-03-30",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1373.awsdns-43.org",
+    "ns-160.awsdns-20.com",
+    "ns-1969.awsdns-54.co.uk",
+    "ns-514.awsdns-00.net"
+   ],
+   "checked": "2026-10-24T05:45:52Z"
+  }
+ },
+ "informationarbitrage.com": {
+  "checked": "2026-10-24T06:32:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "66.6.44.4"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns11.domaincontrol.com",
+    "ns12.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:26Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "infoworld.com": {
+  "checked": "2026-10-24T05:57:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.100"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "elle.ns.cloudflare.com",
+    "michael.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:57:23Z",
+   "title": "InfoWorld",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.infoworld.com/feed/",
+     "title": "InfoWorld » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.infoworld.com/comments/feed/",
+     "title": "InfoWorld » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "insidefacebook.com": {
+  "checked": "2026-10-24T05:44:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.53.179.130"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "mid113.ns1.sslparking.com",
+    "mid113.ns2.sslparking.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:44:34Z",
+   "title": "insidefacebook.com",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "insidefacebook.com",
+   "registrar": "Moniker Online Services LLC",
+   "registered": "2006-04-22",
+   "expires": "2027-04-22",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "mid113.ns1.sslparking.com",
+    "mid113.ns2.sslparking.com"
+   ],
+   "checked": "2026-10-24T05:44:34Z"
+  }
+ },
+ "insidetv.ew.com": {
+  "checked": "2026-10-24T06:32:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:29Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "insights.stackoverflow.com": {
+  "checked": "2026-10-24T06:32:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.252.206.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:29Z",
+   "title": "Stack Overflow Developer Survey",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "interconnected.org": {
+  "checked": "2026-10-24T05:43:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "clark.ns.cloudflare.com",
+    "paige.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:43:11Z",
+   "title": "Matt Webb",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "interconnected.org",
+   "registrar": "CSL Computer Service Langenbach GmbH d/b/a joker.com",
+   "registered": "1999-01-15",
+   "expires": "2029-01-15",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "clark.ns.cloudflare.com",
+    "paige.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:43:11Z"
+  }
+ },
+ "internetretailer.com": {
+  "checked": "2026-10-24T06:32:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.10",
+    "141.193.213.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "pdns01.domaincontrol.com",
+    "pdns02.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:31Z",
+   "title": "Retail News, Ecommerce Market Research I Digital Commerce 360",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "inventwithpython.com": {
+  "checked": "2026-10-24T06:32:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.89.232",
+    "172.67.165.193"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:59e8",
+    "2606:4700:3031::ac43:a5c1"
+   ],
+   "cname": null,
+   "ns": [
+    "duke.ns.cloudflare.com",
+    "isla.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:33Z",
+   "title": "Learn to program. For free. - Invent with Python",
+   "generator": "Pelican (VoidyBootstrap theme)",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "investors.spscommerce.com": {
+  "checked": "2026-10-24T05:49:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.200.156.23",
+    "23.200.156.24"
+   ],
+   "aaaa": [
+    "2600:1418:1000:5::17d9:37a9",
+    "2600:1418:1000:5::17d9:37b9"
+   ],
+   "cname": "abea-42kbbr.client.shareholder.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T05:49:49Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  },
+  "rdap": {
+   "domain": "spscommerce.com",
+   "registrar": "NameCheap, Inc.",
+   "registered": "1998-03-23",
+   "expires": "2027-03-22",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1119.awsdns-11.org",
+    "ns-1868.awsdns-41.co.uk",
+    "ns-396.awsdns-49.com",
+    "ns-661.awsdns-18.net"
+   ],
+   "checked": "2026-10-24T05:49:49Z"
+  }
+ },
+ "io9.com": {
+  "checked": "2026-10-24T06:32:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.32.57",
+    "172.67.183.242"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:b7f2",
+    "2606:4700:3037::6815:2039"
+   ],
+   "cname": null,
+   "ns": [
+    "agustin.ns.cloudflare.com",
+    "monika.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:36Z",
+   "title": "io9 | We Come From the Future",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://gizmodo.com/feed",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "ippawards.com": {
+  "checked": "2026-10-24T06:32:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.24.57.16",
+    "216.24.57.18"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns0.dnsmadeeasy.com",
+    "ns1.dnsmadeeasy.com",
+    "ns2.dnsmadeeasy.com",
+    "ns3.dnsmadeeasy.com",
+    "ns4.dnsmadeeasy.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:38Z",
+   "title": "IPPAWARDS",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "iterm2.com": {
+  "checked": "2026-10-24T06:08:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.68.5",
+    "172.67.184.27"
+   ],
+   "aaaa": [
+    "2606:4700:3035::6815:4405",
+    "2606:4700:3035::ac43:b81b"
+   ],
+   "cname": null,
+   "ns": [
+    "hayes.ns.cloudflare.com",
+    "vera.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:13Z",
+   "title": "iTerm2 - macOS Terminal Replacement",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "itsyourturnblog.com": {
+  "checked": "2026-10-24T06:32:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.0.16.118",
+    "52.1.119.170",
+    "52.1.147.205",
+    "52.1.173.203",
+    "52.4.38.70",
+    "52.4.145.119",
+    "52.4.175.111",
+    "52.4.225.124",
+    "52.4.240.221",
+    "52.5.181.79",
+    "52.6.3.192",
+    "52.6.46.142"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns71.domaincontrol.com",
+    "ns72.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-24T06:32:41Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "itunes.apple.com": {
+  "checked": "2026-10-24T05:57:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.14.140.29"
+   ],
+   "aaaa": [
+    "2600:1407:3c00:f83::2a1",
+    "2600:1407:3c00:f84::2a1",
+    "2600:1407:3c00:f9d::2a1",
+    "2600:1407:3c00:f9e::2a1",
+    "2600:1407:3c00:fa5::2a1"
+   ],
+   "cname": "itunes-cdn-itunes-apple-com.v.aaplimg.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:57:26Z",
+   "title": "iTunes - Apple",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ }
+}

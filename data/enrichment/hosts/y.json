@@ -1,4 +1,94 @@
 {
+ "ynab.com": {
+  "checked": "2026-10-24T06:01:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.12.9",
+    "104.26.13.9",
+    "172.67.68.99"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:c09",
+    "2606:4700:20::681a:d09",
+    "2606:4700:20::ac43:4463"
+   ],
+   "cname": null,
+   "ns": [
+    "ara.ns.cloudflare.com",
+    "art.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:01:26Z",
+   "title": "YNAB",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "youneedabudget.com": {
+  "checked": "2026-10-24T05:41:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.14.242",
+    "104.26.15.242",
+    "172.67.69.237"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:ef2",
+    "2606:4700:20::681a:ff2",
+    "2606:4700:20::ac43:45ed"
+   ],
+   "cname": null,
+   "ns": [
+    "ara.ns.cloudflare.com",
+    "art.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:41:26Z",
+   "title": "YNAB",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "youneedabudget.com",
+   "registrar": "Cloudflare, Inc.",
+   "registered": "2004-07-15",
+   "expires": "2027-02-04",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ara.ns.cloudflare.com",
+    "art.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:41:26Z"
+  }
+ },
  "youtube.com": {
   "checked": "2026-10-23T21:25:13Z",
   "method": "enrich_hosts",

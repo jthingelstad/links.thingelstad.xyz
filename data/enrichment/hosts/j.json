@@ -1,0 +1,1169 @@
+{
+ "jacobian.org": {
+  "checked": "2026-10-24T06:08:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.82.130",
+    "172.67.202.123"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:ca7b",
+    "2606:4700:3033::6815:5282"
+   ],
+   "cname": null,
+   "ns": [
+    "dora.ns.cloudflare.com",
+    "theo.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:15Z",
+   "title": "Jacob Kaplan-Moss",
+   "generator": "Hugo 0.147.8",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://jacobian.org/index.xml",
+     "title": "Jacob Kaplan-Moss"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "jacquesmattheij.com": {
+  "checked": "2026-10-24T06:08:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "5.79.86.24"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.box.modularcompany.com",
+    "ns3.mattheij.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:18Z",
+   "title": "Jacques Mattheij",
+   "generator": "Hugo (http://gohugo.io)",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://jacquesmattheij.com/rss.xml",
+     "title": "sshq"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "jalopnik.com": {
+  "checked": "2026-10-24T06:08:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.84.127.12",
+    "52.84.127.43",
+    "52.84.127.44",
+    "52.84.127.66"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1289.awsdns-33.org",
+    "ns-1572.awsdns-04.co.uk",
+    "ns-42.awsdns-05.com",
+    "ns-796.awsdns-35.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:23Z",
+   "title": "Jalopnik | Obsessed with the culture of cars",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.jalopnik.com/category/news/feed/",
+     "title": "News - Jalopnik"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.jalopnik.com/feed/",
+     "title": "RSS 2.0"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "jamesclear.com": {
+  "checked": "2026-10-24T06:08:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.66.135.75",
+    "172.66.140.27"
+   ],
+   "aaaa": [
+    "2606:4700:10::ac42:874b",
+    "2606:4700:10::ac42:8c1b"
+   ],
+   "cname": null,
+   "ns": [
+    "beth.ns.cloudflare.com",
+    "brad.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:26Z",
+   "title": "James Clear",
+   "generator": "WordPress 6.8.10",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://jamesclear.com/hi-im-james-clear/feed",
+     "title": "James Clear » Hi, I’m James Clear. Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "jamesg.blog": {
+  "checked": "2026-10-24T05:52:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.46.225",
+    "172.67.142.180"
+   ],
+   "aaaa": [
+    "2606:4700:3033::6815:2ee1",
+    "2606:4700:3037::ac43:8eb4"
+   ],
+   "cname": null,
+   "ns": [
+    "chelsea.ns.cloudflare.com",
+    "ignacio.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:52:46Z",
+   "title": "home ;; with words, wonder",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://jamesg.blog/feeds/posts.xml",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://github.com/capjamesg"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "jamesg.blog",
+   "registrar": "Cloudflare, Inc.",
+   "registered": "2020-09-05",
+   "expires": "2027-09-05",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "chelsea.ns.cloudflare.com",
+    "ignacio.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:52:46Z"
+  }
+ },
+ "jamesshelley.com": {
+  "checked": "2026-10-24T05:52:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.84.127.32",
+    "52.84.127.80",
+    "52.84.127.100",
+    "52.84.127.119"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1441.awsdns-52.org",
+    "ns-1674.awsdns-17.co.uk",
+    "ns-462.awsdns-57.com",
+    "ns-834.awsdns-40.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:52:49Z",
+   "title": "James Shelley",
+   "generator": "Publii Open-Source CMS for Static Site",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://jamesshelley.com/feed.xml",
+     "title": "James Shelley - RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "jamesshelley.com",
+   "registrar": "Amazon Registrar, Inc.",
+   "registered": "2012-01-27",
+   "expires": "2027-01-27",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1441.awsdns-52.org",
+    "ns-1674.awsdns-17.co.uk",
+    "ns-462.awsdns-57.com",
+    "ns-834.awsdns-40.net"
+   ],
+   "checked": "2026-10-24T05:52:49Z"
+  }
+ },
+ "jaxenter.com": {
+  "checked": "2026-10-24T06:38:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.8.7",
+    "104.26.9.7",
+    "172.67.68.10"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:807",
+    "2606:4700:20::681a:907",
+    "2606:4700:20::ac43:440a"
+   ],
+   "cname": null,
+   "ns": [
+    "carlos.ns.cloudflare.com",
+    "zainab.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:38:43Z",
+   "title": "blog - devmio - Software Know-How",
+   "generator": "WordPress 7.1.2",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://devm.io/feed/",
+     "title": "devmio - Software Know-How » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://devm.io/comments/feed/",
+     "title": "devmio - Software Know-How » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "jeffgeerling.com": {
+  "checked": "2026-10-24T06:38:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.68.207",
+    "172.67.198.119"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:c677",
+    "2606:4700:3037::6815:44cf"
+   ],
+   "cname": null,
+   "ns": [
+    "ishaan.ns.cloudflare.com",
+    "magali.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:38:45Z",
+   "title": "Jeff Geerling | Home",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.jeffgeerling.com/blog.xml",
+     "title": "Jeff Geerling"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://www.youtube.com/c/JeffGeerling",
+    "https://github.com/geerlingguy",
+    "https://www.jeffgeerling.com/sponsor/",
+    "https://twitter.com/geerlingguy/",
+    "https://www.instagram.com/geerlingguy"
+   ],
+   "webmention": null
+  }
+ },
+ "jeremy.zawodny.com": {
+  "checked": "2026-10-24T06:38:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "50.116.2.233"
+   ],
+   "aaaa": [],
+   "cname": "linode3.zawodny.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:38:47Z",
+   "title": "Jeremy D. Zawodny - Home Page",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "jezebel.com": {
+  "checked": "2026-10-24T06:38:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.8.156",
+    "104.18.9.156"
+   ],
+   "aaaa": [
+    "2606:4700::6812:89c",
+    "2606:4700::6812:99c"
+   ],
+   "cname": null,
+   "ns": [
+    "kehlani.ns.cloudflare.com",
+    "rodrigo.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:38:48Z",
+   "title": "Home",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.jezebel.com/rss.xml",
+     "title": "Jezebel"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "jimbernard.net": {
+  "checked": "2026-10-24T06:38:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.200.22.214"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:38:50Z",
+   "title": "Jim Bernard",
+   "generator": "Hugo 0.91.2",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.jimbernard.net/feed.xml",
+     "title": "Jim Bernard"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://micro.blog/Bricker"
+   ],
+   "webmention": "https://micro.blog/webmention"
+  }
+ },
+ "jimmymow.medium.com": {
+  "checked": "2026-10-24T05:57:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.152.4",
+    "162.159.153.4"
+   ],
+   "aaaa": [
+    "2606:4700:7::a29f:9804",
+    "2606:4700:7::a29f:9904"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:57:29Z",
+   "title": "Medium",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://medium.com/feed/@jimmymow",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://twitter.com/JackMallers"
+   ],
+   "webmention": null
+  }
+ },
+ "jmduke.com": {
+  "checked": "2026-10-24T06:08:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.198.79.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "joan.ns.cloudflare.com",
+    "moura.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:28Z",
+   "title": "Applied Cartography | Justin Duke",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.jmduke.com/feed.xml",
+     "title": "RSS Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.jmduke.com/essays.xml",
+     "title": "Essays Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "joanwestenberg.com": {
+  "checked": "2026-10-24T06:08:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.231.35.217"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.vercel-dns.com",
+    "ns2.vercel-dns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:31Z",
+   "title": "WESTENBERG | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.joanwestenberg.com/feed",
+     "title": "WESTENBERG"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "joebuhlig.com": {
+  "checked": "2026-10-24T06:08:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "161.35.253.159"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:34Z",
+   "title": "Joe Buhlig | an analog mind in a digital world",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://granary.io/url?input=html&output=atom&url=https%3A%2F%2Fjoebuhlig.com%2Factivitypub&hub=https://bridgy-fed.superfeedr.com/",
+     "title": "ActivityPub"
+    },
+    {
+     "type": "rss",
+     "url": "https://joebuhlig.com/feed.xml",
+     "title": "Joe Buhlig | an analog mind in a digital world"
+    },
+    {
+     "type": "atom",
+     "url": "https://joebuhlig.com/feed.atom",
+     "title": "Joe Buhlig | an analog mind in a digital world"
+    },
+    {
+     "type": "atom",
+     "url": "https://joebuhlig.com/articles/feed.atom",
+     "title": "Articles"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://micro.blog/joebuhlig",
+    "https://joebuhlig.com",
+    "https://joebuhlig.com/youtube",
+    "https://joebuhlig.com/twitter",
+    "https://joebuhlig.com/instagram",
+    "https://joebuhlig.com/github",
+    "https://joebuhlig.com/reddit",
+    "https://joebuhlig.com/mastodon",
+    "https://joebuhlig.com/microblog",
+    "https://joebuhlig.com/tumblr",
+    "https://joebuhlig.com/flickr/",
+    "https://joebuhlig.com/medium/",
+    "https://joebuhlig.com/truthsocial",
+    "https://youtube.com/joebuhlig",
+    "https://twitter.com/joebuhlig",
+    "https://instagram.com/joebuhlig",
+    "https://github.com/joebuhlig",
+    "https://reddit.com/u/joebuhlig",
+    "https://mastodon.joebuhlig.com/@joebuhlig",
+    "https://joebuhlig.tumblr.com",
+    "https://www.flickr.com/people/joebuhlig/",
+    "https://medium.com/@joebuhlig/",
+    "https://truthsocial.com/@joebuhlig",
+    "https://keybase.io/joebuhlig"
+   ],
+   "webmention": "https://webmention.io/joebuhlig.com/webmention"
+  }
+ },
+ "joelonsoftware.com": {
+  "checked": "2026-10-24T05:49:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.16.172.204",
+    "199.16.173.181"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1mtw.name.com",
+    "ns2nsw.name.com",
+    "ns3flt.name.com",
+    "ns4hmp.name.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:49:51Z",
+   "title": "Joel on Software",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.joelonsoftware.com/feed/",
+     "title": "Joel on Software » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.joelonsoftware.com/comments/feed/",
+     "title": "Joel on Software » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "joelonsoftware.com",
+   "registrar": "Name.com, Inc.",
+   "registered": "2000-07-29",
+   "expires": "2027-06-01",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns1mtw.name.com",
+    "ns2nsw.name.com",
+    "ns3flt.name.com",
+    "ns4hmp.name.com"
+   ],
+   "checked": "2026-10-24T05:49:51Z"
+  }
+ },
+ "johndcook.com": {
+  "checked": "2026-10-24T06:08:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.20",
+    "141.193.213.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ganz.ns.cloudflare.com",
+    "lovisa.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:08:38Z",
+   "title": "Expert consulting in applied mathematics & data privacy",
+   "generator": "All in One SEO (AIOSEO) 5.0.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.johndcook.com/blog/feed/",
+     "title": "John D. Cook » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.johndcook.com/blog/comments/feed/",
+     "title": "John D. Cook » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "jordanmerrick.com": {
+  "checked": "2026-10-24T05:57:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "iris.ns.cloudflare.com",
+    "luke.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-24T05:57:33Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "journals.plos.org": {
+  "checked": "2026-10-24T06:38:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.190.43.188"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:38:52Z",
+   "title": "Our journal portfolio - PLOS",
+   "generator": "WordPress 7.1.3",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "julian.com": {
+  "checked": "2026-10-24T06:38:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.18.180",
+    "172.67.183.25"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:b719",
+    "2606:4700:3037::6815:12b4"
+   ],
+   "cname": null,
+   "ns": [
+    "adel.ns.cloudflare.com",
+    "jake.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:38:57Z",
+   "title": "Julian Shapiro",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "julian.digital": {
+  "checked": "2026-10-24T06:39:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "85.13.162.6"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns5.kasserver.com",
+    "ns6.kasserver.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:39:00Z",
+   "title": "julian.digital",
+   "generator": "WordPress 6.7.10",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "justgetflux.com": {
+  "checked": "2026-10-24T06:39:04Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "67.207.164.4"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:39:04Z",
+   "title": "f.lux: software to make your life better",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "justice.gov": {
+  "checked": "2026-10-24T06:39:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.65.90.24",
+    "172.65.90.25",
+    "172.65.90.26",
+    "172.65.90.27"
+   ],
+   "aaaa": [
+    "2606:4700:78::90:0:180",
+    "2606:4700:78::90:0:181",
+    "2606:4700:78::90:0:182",
+    "2606:4700:78::90:0:183"
+   ],
+   "cname": null,
+   "ns": [
+    "jonah.ns.cloudflare.com",
+    "novalee.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:39:07Z",
+   "title": "Department of Justice | Homepage | United States Department of Justice",
+   "generator": "Drupal 11 (https://www.drupal.org)",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "justinobeirne.com": {
+  "checked": "2026-10-24T05:48:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.185.159.144"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:48:08Z",
+   "title": "justinobeirne.com",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "justinobeirne.com",
+   "registrar": "NameCheap, Inc.",
+   "registered": "2015-01-19",
+   "expires": "2027-01-19",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "checked": "2026-10-24T05:48:08Z"
+  }
+ },
+ "jvns.ca": {
+  "checked": "2026-10-24T05:30:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.2.60.5"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-185-a.gandi.net",
+    "ns-2-b.gandi.net",
+    "ns-203-c.gandi.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:30:22Z",
+   "title": "Julia Evans",
+   "generator": "Hugo 0.135.0",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://jvns.ca/atom.xml",
+     "title": "Julia Evans"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://social.jvns.ca/@b0rk"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "jvns.ca",
+   "registrar": "Gandi Services Inc., Gandi SAS",
+   "registered": "2011-03-16",
+   "expires": "2027-03-16",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-185-a.gandi.net",
+    "ns-2-b.gandi.net",
+    "ns-203-c.gandi.net"
+   ],
+   "checked": "2026-10-24T05:30:22Z"
+  }
+ },
+ "jwz.org": {
+  "checked": "2026-10-24T06:39:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.16.178.106"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns5.pairnic.com",
+    "ns6.pairnic.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:39:09Z",
+   "title": "jwz.org",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://www.jwz.org/",
+    "https://www.jwz.org/blog/",
+    "https://jwz.livejournal.com/",
+    "https://www.facebook.com/yesthatjwz",
+    "https://www.myspace.com/yes_that_jwz",
+    "https://slashdot.org/~Jamie+Zawinski/",
+    "https://en.wikipedia.org/wiki/User:Jwz",
+    "https://www.flickr.com/photos/jwz/",
+    "https://twitter.com/jwz",
+    "https://www.last.fm/user/yesthatjwz",
+    "https://jwz.yelp.com/",
+    "https://profile.typepad.com/jwz",
+    "https://jwz.dreamwidth.org/",
+    "https://en.gravatar.com/yesthatjwz",
+    "https://disqus.com/yesthatjwz/",
+    "https://disqus.com/jwzdna/",
+    "https://www.youtube.com/user/yesthatjwz",
+    "https://www.kickstarter.com/profile/jwz",
+    "https://bandcamp.com/jwz",
+    "https://ello.co/jwz",
+    "https://www.instagram.com/jwz/",
+    "https://yesthatjwz.tumblr.com/",
+    "https://keybase.io/jwz",
+    "https://counter.social/@jwz",
+    "https://mastodon.social/@jwz",
+    "https://pixey.org/jwz",
+    "https://loops.video/@jwz",
+    "https://www.shadertoy.com/user/jwz"
+   ],
+   "webmention": null
+  }
+ }
+}

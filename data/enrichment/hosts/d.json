@@ -1,4 +1,91 @@
 {
+ "daedtech.com": {
+  "checked": "2026-10-24T06:23:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.10",
+    "141.193.213.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "anderson.ns.cloudflare.com",
+    "desiree.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:23:28Z",
+   "title": "Stories about Software",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://daedtech.com/feed/",
+     "title": "DaedTech » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://daedtech.com/comments/feed/",
+     "title": "DaedTech » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "dailydad.com": {
+  "checked": "2026-10-24T06:23:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "147.182.248.238"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "desi.ns.cloudflare.com",
+    "noah.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:23:30Z",
+   "title": "Home - The Daily Dad",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://dailydad.com/feed/",
+     "title": "The Daily Dad » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://dailydad.com/comments/feed/",
+     "title": "The Daily Dad » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "dailykos.com": {
   "checked": "2026-10-24T01:46:56Z",
   "method": "enrich_hosts",
@@ -57,6 +144,325 @@
    "checked": "2026-10-24T01:46:56Z"
   }
  },
+ "danah.org": {
+  "checked": "2026-10-24T06:06:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.0.204",
+    "151.101.64.204"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.digitalocean.com",
+    "ns2.digitalocean.com",
+    "ns3.digitalocean.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "connection refused"
+  },
+  "home": {
+   "checked": "2026-10-24T06:06:23Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "connection refused"
+  }
+ },
+ "dancohen.org": {
+  "checked": "2026-10-24T06:23:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "51.81.12.122"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.reclaimhosting.com",
+    "ns2.reclaimhosting.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:23:33Z",
+   "title": "Dan Cohen – Vice Provost, Dean, and Professor at Northeastern University",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://dancohen.org/feed/",
+     "title": "» Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://dancohen.org/comments/feed/",
+     "title": "» Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "daniel.haxx.se": {
+  "checked": "2026-10-24T06:23:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.91",
+    "151.101.65.91",
+    "151.101.129.91",
+    "151.101.193.91"
+   ],
+   "aaaa": [
+    "2a04:4e42::347",
+    "2a04:4e42:200::347",
+    "2a04:4e42:400::347",
+    "2a04:4e42:600::347"
+   ],
+   "cname": "dualstack.n.sni.global.fastly.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:23:36Z",
+   "title": "Daniel Stenberg",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://csdb.dk/scener/?id=8084",
+    "https://www.facebook.com/stenberg.daniel",
+    "https://github.com/bagder/",
+    "https://stars.github.com/profiles/bagder/",
+    "https://www.internetmuseum.se/tidslinjen/curl-grundaren-daniel-stenberg-skapar-internets-budbarare/",
+    "https://keybase.io/bagder",
+    "https://www.linkedin.com/in/danielstenberg",
+    "https://mastodon.social/@bagder",
+    "https://mvp.microsoft.com/en-US/MVP/profile/8ec06c9e-b9d0-4bd8-a19c-0a3f819aa637",
+    "https://www.openhub.net/accounts/bagder",
+    "https://www.slideshare.net/bagder/presentations",
+    "https://stackoverflow.com/users/93747/daniel-stenberg",
+    "https://www.twitch.tv/curlhacker",
+    "https://en.wikipedia.org/wiki/Daniel_Stenberg",
+    "https://www.youtube.com/user/danielhaxxse/"
+   ],
+   "webmention": null
+  }
+ },
+ "danielbachhuber.com": {
+  "checked": "2026-10-24T06:23:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.0.239",
+    "172.67.128.120"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:ef",
+    "2606:4700:3033::ac43:8078"
+   ],
+   "cname": null,
+   "ns": [
+    "chuck.ns.cloudflare.com",
+    "may.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:23:39Z",
+   "title": "Daniel Bachhuber",
+   "generator": "Hugo 0.147.7",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://danielbachhuber.com//index.xml",
+     "title": "Daniel Bachhuber"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "danielmiessler.com": {
+  "checked": "2026-10-24T05:47:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.6.104",
+    "104.26.7.104",
+    "172.67.74.136"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:668",
+    "2606:4700:20::681a:768",
+    "2606:4700:20::ac43:4a88"
+   ],
+   "cname": null,
+   "ns": [
+    "elaine.ns.cloudflare.com",
+    "gordon.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:47:44Z",
+   "title": "Home | Daniel Miessler",
+   "generator": "VitePress v1.6.4",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "danielmiessler.com",
+   "registrar": "Cloudflare, Inc.",
+   "registered": "2009-06-14",
+   "expires": "2027-06-14",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "elaine.ns.cloudflare.com",
+    "gordon.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:47:44Z"
+  }
+ },
+ "danluu.com": {
+  "checked": "2026-10-24T05:47:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.34.43",
+    "172.67.197.156"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:c59c",
+    "2606:4700:3034::6815:222b"
+   ],
+   "cname": null,
+   "ns": [
+    "barbara.ns.cloudflare.com",
+    "brett.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:47:47Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "danluu.com",
+   "registrar": "Gandi SAS",
+   "registered": "2012-01-02",
+   "expires": "2027-01-02",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "barbara.ns.cloudflare.com",
+    "brett.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:47:47Z"
+  }
+ },
+ "danwang.co": {
+  "checked": "2026-10-24T06:23:42Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.241.244.22"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.bluehost.com",
+    "ns2.bluehost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:23:42Z",
+   "title": "Dan Wang | The secure transport of light",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://danwang.co/feed/",
+     "title": "Dan Wang » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://danwang.co/comments/feed/",
+     "title": "Dan Wang » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "daringfireball.net": {
   "checked": "2026-10-23T21:25:30Z",
   "method": "enrich_hosts",
@@ -98,6 +504,2474 @@
     "robin.ns.cloudflare.com"
    ],
    "checked": "2026-10-23T21:25:30Z"
+  }
+ },
+ "darioamodei.com": {
+  "checked": "2026-10-24T06:23:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.202.211.1"
+   ],
+   "aaaa": [
+    "2620:cb:2000::1"
+   ],
+   "cname": null,
+   "ns": [
+    "isla.ns.cloudflare.com",
+    "randy.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:23:45Z",
+   "title": "Dario Amodei",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "dashes.com": {
+  "checked": "2026-10-24T05:42:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p04.nsone.net",
+    "dns2.p04.nsone.net",
+    "dns3.p04.nsone.net",
+    "dns4.p04.nsone.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:42:13Z",
+   "title": "Home - Anil Dash",
+   "generator": "Eleventy v3.1.2",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://dashes.com/feed.xml",
+     "title": "Anil Dash RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://me.dm/@anildash",
+    "https://bsky.app/profile/anildash.com",
+    "https://www.threads.net/@anildash"
+   ],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "dashes.com",
+   "registrar": "Domain.com - Network Solutions, LLC",
+   "registered": "1998-08-30",
+   "expires": "2027-08-29",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "dns1.p04.nsone.net",
+    "dns2.p04.nsone.net",
+    "dns3.p04.nsone.net",
+    "dns4.p04.nsone.net"
+   ],
+   "checked": "2026-10-24T05:42:13Z"
+  }
+ },
+ "databricks.com": {
+  "checked": "2026-10-24T06:06:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.160.181.8",
+    "18.160.181.92",
+    "18.160.181.102",
+    "18.160.181.118"
+   ],
+   "aaaa": [
+    "2600:9000:289d:2000:8:7feb:d180:93a1",
+    "2600:9000:289d:4600:8:7feb:d180:93a1",
+    "2600:9000:289d:7c00:8:7feb:d180:93a1",
+    "2600:9000:289d:8600:8:7feb:d180:93a1",
+    "2600:9000:289d:9800:8:7feb:d180:93a1",
+    "2600:9000:289d:a600:8:7feb:d180:93a1",
+    "2600:9000:289d:a800:8:7feb:d180:93a1",
+    "2600:9000:289d:c200:8:7feb:d180:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.databricks.com",
+    "ns2.databricks.com",
+    "ns3.databricks.com",
+    "ns4.databricks.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:06:25Z",
+   "title": null,
+   "generator": "Gatsby 5.15.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "datadoghq.com": {
+  "checked": "2026-10-24T05:56:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.84.127.23",
+    "52.84.127.24",
+    "52.84.127.35",
+    "52.84.127.119"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1169.awsdns-18.org",
+    "ns-1602.awsdns-08.co.uk",
+    "ns-442.awsdns-55.com",
+    "ns-889.awsdns-47.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:56:23Z",
+   "title": "Cloud Monitoring as a Service | Datadog",
+   "generator": "Hugo 0.142.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.datadoghq.com/index.xml",
+     "title": "Modern monitoring & security"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "dataversity.net": {
+  "checked": "2026-10-24T06:23:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.20",
+    "141.193.213.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1036.awsdns-01.org",
+    "ns-1777.awsdns-30.co.uk",
+    "ns-408.awsdns-51.com",
+    "ns-825.awsdns-39.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:23:48Z",
+   "title": "Data Management Training & Certification | DATAVERSITY",
+   "generator": "WP Rocket 3.23.2.2",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "david-smith.org": {
+  "checked": "2026-10-24T06:23:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "50.116.17.43"
+   ],
+   "aaaa": [
+    "2600:3c00::f03c:91ff:feae:b264"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.linode.com",
+    "ns2.linode.com",
+    "ns3.linode.com",
+    "ns4.linode.com",
+    "ns5.linode.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:23:50Z",
+   "title": "David Smith, Independent iOS Developer",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://david-smith.org/atom.xml",
+     "title": "David Smith, Independent iOS Developer"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@_Davidsmith"
+   ],
+   "webmention": null
+  }
+ },
+ "david.heinemeierhansson.com": {
+  "checked": "2026-10-24T06:23:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-24T06:23:52Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "davoh.medium.com": {
+  "checked": "2026-10-24T06:06:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.152.4",
+    "162.159.153.4"
+   ],
+   "aaaa": [
+    "2606:4700:7::a29f:9804",
+    "2606:4700:7::a29f:9904"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:06:27Z",
+   "title": "Medium",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://medium.com/feed/@davoh",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://twitter.com/Davoh"
+   ],
+   "webmention": null
+  }
+ },
+ "davoh.org": {
+  "checked": "2026-10-24T06:23:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.200.22.214"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1crv.name.com",
+    "ns2cvx.name.com",
+    "ns3cjl.name.com",
+    "ns4hny.name.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:23:52Z",
+   "title": "David O'Hara",
+   "generator": "Hugo 0.91.2",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://davoh.org/feed.xml",
+     "title": "David O'Hara"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://micro.blog/davoh"
+   ],
+   "webmention": "https://micro.blog/webmention"
+  }
+ },
+ "dayoneapp.com": {
+  "checked": "2026-10-24T05:47:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.16.172.28",
+    "199.16.173.70"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1268.awsdns-30.org",
+    "ns-1724.awsdns-23.co.uk",
+    "ns-345.awsdns-43.com",
+    "ns-666.awsdns-19.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:47:48Z",
+   "title": "Day One Journal App | Your Journal For Life",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://dayoneapp.com/feed/",
+     "title": "Day One | Your Journal for Life » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://dayoneapp.com/comments/feed/",
+     "title": "Day One | Your Journal for Life » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "dayoneapp.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "2011-02-17",
+   "expires": "2027-02-17",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-1268.awsdns-30.org",
+    "ns-1724.awsdns-23.co.uk",
+    "ns-345.awsdns-43.com",
+    "ns-666.awsdns-19.net"
+   ],
+   "checked": "2026-10-24T05:47:48Z"
+  }
+ },
+ "db.tidbits.com": {
+  "checked": "2026-10-24T05:56:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.50.97",
+    "172.67.159.240"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:9ff0",
+    "2606:4700:3037::6815:3261"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:56:25Z",
+   "title": "TidBITS - Thoughtful, detailed coverage of everything Apple for 36 years",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://tidbits.com/feed/",
+     "title": "TidBITS » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://tidbits.com/comments/feed/",
+     "title": "TidBITS » Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://tidbits.com/feed/podcast/",
+     "title": "TidBITS Podcast"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "dbreunig.com": {
+  "checked": "2026-10-24T06:23:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hover.com",
+    "ns2.hover.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:23:56Z",
+   "title": "Drew Breunig: Writing on AI, Data, Geo, and Culture",
+   "generator": "Jekyll v4.3.4",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.dbreunig.com/feed.xml",
+     "title": "Drew Breunig"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://note.computer/@dbreunig"
+   ],
+   "webmention": null
+  }
+ },
+ "dcgross.com": {
+  "checked": "2026-10-24T06:23:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.61.120",
+    "172.67.210.70"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:3d78",
+    "2606:4700:3037::ac43:d246"
+   ],
+   "cname": null,
+   "ns": [
+    "bill.ns.cloudflare.com",
+    "kara.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:23:58Z",
+   "title": "Daniel Gross",
+   "generator": "Jekyll v3.9.3",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://dcgross.com/feed.xml",
+     "title": "Daniel Gross"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "dd-wrt.com": {
+  "checked": "2026-10-24T06:24:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.84.6.109"
+   ],
+   "aaaa": [
+    "2a05:a1c0:0:dd::109"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.nodesecure.com",
+    "ns2.nodesecure.de"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:01Z",
+   "title": "DD-WRT",
+   "generator": "WordPress 6.4.13",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "deadspin.com": {
+  "checked": "2026-10-24T06:06:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.66.135",
+    "172.67.160.101"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:4287",
+    "2606:4700:3030::ac43:a065"
+   ],
+   "cname": null,
+   "ns": [
+    "desi.ns.cloudflare.com",
+    "doug.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:06:32Z",
+   "title": "Deadspin | Sports News Without Fear, Favor or Compromise",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "dealbook.nytimes.com": {
+  "checked": "2026-10-24T06:24:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.164",
+    "151.101.65.164",
+    "151.101.129.164",
+    "151.101.193.164"
+   ],
+   "aaaa": [],
+   "cname": "nytimes.map.fastly.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:05Z",
+   "title": "DealBook - The New York Times",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/business/dealbook/rss.xml",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "debianhelp.co.uk": {
+  "checked": "2026-10-24T06:24:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.31.83",
+    "172.67.175.124"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:af7c",
+    "2606:4700:3035::6815:1f53"
+   ],
+   "cname": null,
+   "ns": [
+    "adel.ns.cloudflare.com",
+    "zod.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:08Z",
+   "title": "DebianHelp Update – Favicon Generator",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.favicon.co.uk/feed/",
+     "title": "Favicon Generator » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.favicon.co.uk/comments/feed/",
+     "title": "Favicon Generator » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "decrypt.co": {
+  "checked": "2026-10-24T05:49:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.2.215",
+    "104.18.3.215"
+   ],
+   "aaaa": [
+    "2606:4700::6812:2d7",
+    "2606:4700::6812:3d7"
+   ],
+   "cname": null,
+   "ns": [
+    "mimi.ns.cloudflare.com",
+    "wesley.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:49:25Z",
+   "title": "Decrypt: AI, Bitcoin, Culture, Gaming, and Crypto News - Decrypt",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": null,
+  "rdap_error": "no RDAP service for .co"
+ },
+ "deepmind.com": {
+  "checked": "2026-10-24T06:06:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.239.32.21",
+    "216.239.34.21",
+    "216.239.36.21",
+    "216.239.38.21"
+   ],
+   "aaaa": [
+    "2001:4860:4802:32::15",
+    "2001:4860:4802:34::15",
+    "2001:4860:4802:36::15",
+    "2001:4860:4802:38::15"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-cloud-b1.googledomains.com",
+    "ns-cloud-b2.googledomains.com",
+    "ns-cloud-b3.googledomains.com",
+    "ns-cloud-b4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:06:34Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "defiantbicycles.com": {
+  "checked": "2026-10-24T06:24:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "208.86.153.192"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns41.domaincontrol.com",
+    "ns42.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:12Z",
+   "title": "Home - Defiant",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://defiantbicycles.com/feed/",
+     "title": "Defiant » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://defiantbicycles.com/comments/feed/",
+     "title": "Defiant » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "dejal.com": {
+  "checked": "2026-10-24T06:24:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "143.95.106.252"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns.site5.com",
+    "dns2.site5.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:24Z",
+   "title": "Dejal",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://dejal.com/blog/feed",
+     "title": "Dejal blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://micro.blog/dejal",
+    "https://micro.blog/dejus",
+    "https://mastodon.social/@dejal",
+    "https://bsky.app/profile/dejal.com"
+   ],
+   "webmention": null
+  }
+ },
+ "den.dev": {
+  "checked": "2026-10-24T06:24:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.42.42",
+    "172.67.156.25"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:9c19",
+    "2606:4700:3036::6815:2a2a"
+   ],
+   "cname": null,
+   "ns": [
+    "aleena.ns.cloudflare.com",
+    "mark.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:27Z",
+   "title": "Den Delimarsky - Tinkerer, Nerd, Pixel Geek",
+   "generator": "Hugo 0.163.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://den.dev/index.xml",
+     "title": "Den Delimarsky"
+    },
+    {
+     "type": "json",
+     "url": "https://den.dev/feed.json",
+     "title": "Den Delimarsky"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://github.com/dend",
+    "https://www.linkedin.com/in/dendeli/",
+    "https://www.youtube.com/@DenDev",
+    "https://bsky.app/profile/den.dev",
+    "https://mastodon.social/@localden",
+    "https://den.dev/",
+    "https://www.youtube.com/channel/UCNHIUc6KE64sUe5G0eP70aQ?sub_confirmation=1",
+    "https://den.dev/index.xml"
+   ],
+   "webmention": "https://webmention.io/den.dev/webmention"
+  }
+ },
+ "derekthompson.org": {
+  "checked": "2026-10-24T06:24:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.231.35.217"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:30Z",
+   "title": "Derek Thompson | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.derekthompson.org/feed",
+     "title": "Derek Thompson"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "designyoutrust.com": {
+  "checked": "2026-10-24T05:56:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.6.147",
+    "104.26.7.147",
+    "172.67.71.2"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:693",
+    "2606:4700:20::681a:793",
+    "2606:4700:20::ac43:4702"
+   ],
+   "cname": null,
+   "ns": [
+    "alex.ns.cloudflare.com",
+    "lisa.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:56:28Z",
+   "title": "Design You Trust — Design Daily Since 2007",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://designyoutrust.com/feed/",
+     "title": "RSS 2.0"
+    },
+    {
+     "type": "atom",
+     "url": "https://designyoutrust.com/feed/atom/",
+     "title": "Atom 0.3"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "dev.to": {
+  "checked": "2026-10-24T05:56:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.217",
+    "151.101.66.217",
+    "151.101.130.217",
+    "151.101.194.217"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "jill.ns.cloudflare.com",
+    "josh.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:56:31Z",
+   "title": "DEV Community",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://dev.to/feed",
+     "title": "DEV Community RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://x.com/thepracticaldev",
+    "https://facebook.com/thepracticaldev",
+    "https://github.com/forem",
+    "https://instagram.com/thepracticaldev",
+    "https://twitch.com/thepracticaldev",
+    "https://fosstodon.org/@thepracticaldev",
+    "https://bsky.app/profile/dev.to"
+   ],
+   "webmention": null
+  }
+ },
+ "developer.apple.com": {
+  "checked": "2026-10-24T05:45:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "17.253.49.202"
+   ],
+   "aaaa": [
+    "2620:149:a28:f100::2"
+   ],
+   "cname": "developer-cdn.apple.com.akadns.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:45:43Z",
+   "title": "Apple Developer",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "apple.com",
+   "registrar": "Nom-iq Ltd. dba COM LAUDE",
+   "registered": "1987-02-19",
+   "expires": "2027-02-20",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "a.ns.apple.com",
+    "b.ns.apple.com",
+    "c.ns.apple.com",
+    "d.ns.apple.com"
+   ],
+   "checked": "2026-10-24T05:45:43Z"
+  }
+ },
+ "developer.ibm.com": {
+  "checked": "2026-10-24T06:24:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.197.193.223"
+   ],
+   "aaaa": [],
+   "cname": "developer.ibm.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:33Z",
+   "title": "IBM Developer",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "developer.yahoo.com": {
+  "checked": "2026-10-24T06:06:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "69.147.65.251",
+    "69.147.65.252"
+   ],
+   "aaaa": [
+    "2001:4998:60:807::1",
+    "2001:4998:60:807::2"
+   ],
+   "cname": "edge.gycpi.b.yahoodns.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:06:36Z",
+   "title": "Yahoo Developer Network",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "developers.facebook.com": {
+  "checked": "2026-10-24T05:33:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "57.144.172.141"
+   ],
+   "aaaa": [
+    "2a03:2880:f082:10d:face:b00c:0:2"
+   ],
+   "cname": "developers.c10r.facebook.com",
+   "ns": [],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:33:35Z",
+   "title": "Social technologies | Meta for Developers",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "facebook.com",
+   "registrar": "RegistrarSafe, LLC",
+   "registered": "1997-03-29",
+   "expires": "2034-03-30",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "a.ns.facebook.com",
+    "b.ns.facebook.com",
+    "c.ns.facebook.com",
+    "d.ns.facebook.com"
+   ],
+   "checked": "2026-10-24T05:33:35Z"
+  }
+ },
+ "developers.google.com": {
+  "checked": "2026-10-24T05:44:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.210.206"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:80d::200e"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:44:12Z",
+   "title": "Google for Developers | Build with Gemini",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "google.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "1997-09-15",
+   "expires": "2028-09-14",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns1.google.com",
+    "ns2.google.com",
+    "ns3.google.com",
+    "ns4.google.com"
+   ],
+   "checked": "2026-10-24T05:44:12Z"
+  }
+ },
+ "devour.com": {
+  "checked": "2026-10-24T06:06:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "86.105.245.69"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.eftydns.com",
+    "ns2.eftydns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: unable to get local issuer certificate"
+  },
+  "home": {
+   "checked": "2026-10-24T06:06:44Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: unable to get local issuer certificate"
+  }
+ },
+ "digg.com": {
+  "checked": "2026-10-24T06:24:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.150.1.193",
+    "216.150.16.193"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "katja.ns.cloudflare.com",
+    "zac.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:36Z",
+   "title": "Digg - News, before it trends",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "digiday.com": {
+  "checked": "2026-10-24T06:24:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.72"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1350.awsdns-40.org",
+    "ns-1946.awsdns-51.co.uk",
+    "ns-499.awsdns-62.com",
+    "ns-650.awsdns-17.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:39Z",
+   "title": "Digiday — The home of modern media and marketing",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://digiday.com/feed/",
+     "title": "Digiday » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "digitalintelligencetoday.com": {
+  "checked": "2026-10-24T06:24:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "SERVFAIL"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:41Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "digitalocean.com": {
+  "checked": "2026-10-24T06:06:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.19.173.68",
+    "104.19.174.68"
+   ],
+   "aaaa": [
+    "2606:4700::6813:ad44",
+    "2606:4700::6813:ae44"
+   ],
+   "cname": null,
+   "ns": [
+    "kim.ns.cloudflare.com",
+    "walt.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:06:50Z",
+   "title": "AI-Native Cloud | DigitalOcean",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://twitter.com/digitalocean",
+    "https://www.instagram.com/thedigitalocean/",
+    "https://www.facebook.com/DigitalOceanCloudHosting",
+    "https://discord.gg/digitalocean",
+    "https://www.youtube.com/DigitalOcean"
+   ],
+   "webmention": null
+  }
+ },
+ "dilbert.com": {
+  "checked": "2026-10-24T05:45:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.248.243.5",
+    "76.223.105.230"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns25.domaincontrol.com",
+    "ns26.domaincontrol.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:45:45Z",
+   "title": "Dilbert.com",
+   "generator": "Starfield Technologies; Go Daddy Website Builder 8.0.0000",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "dilbert.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "1997-01-21",
+   "expires": "2027-01-22",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns25.domaincontrol.com",
+    "ns26.domaincontrol.com"
+   ],
+   "checked": "2026-10-24T05:45:45Z"
+  }
+ },
+ "discord.com": {
+  "checked": "2026-10-24T06:24:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.128.233",
+    "162.159.135.232",
+    "162.159.136.232",
+    "162.159.137.232",
+    "162.159.138.232"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "gabe.ns.cloudflare.com",
+    "sima.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:43Z",
+   "title": "Discord - Group Chat That’s All Fun & Games",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "doc.searls.com": {
+  "checked": "2026-10-24T05:49:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.16.172.29",
+    "199.16.173.226"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:49:28Z",
+   "title": "Doc Searls Weblog – Just trying to make stuff happen",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://doc.searls.com/feed/",
+     "title": "Doc Searls Weblog » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://doc.searls.com/comments/feed/",
+     "title": "Doc Searls Weblog » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "searls.com",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "1995-07-10",
+   "expires": "2027-07-09",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "melinda.ns.cloudflare.com",
+    "rory.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:49:28Z"
+  }
+ },
+ "docs.anthropic.com": {
+  "checked": "2026-10-24T05:56:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "160.79.104.10"
+   ],
+   "aaaa": [
+    "2607:6bc0::10"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:56:33Z",
+   "title": "Documentation - Claude Platform Docs",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "docs.aws.amazon.com": {
+  "checked": "2026-10-24T05:56:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.8.27.19",
+    "65.8.27.25",
+    "65.8.27.28",
+    "65.8.27.29"
+   ],
+   "aaaa": [
+    "2600:9000:21f2:800:2:6c43:cbc0:93a1",
+    "2600:9000:21f2:1200:2:6c43:cbc0:93a1",
+    "2600:9000:21f2:1e00:2:6c43:cbc0:93a1",
+    "2600:9000:21f2:3800:2:6c43:cbc0:93a1",
+    "2600:9000:21f2:8800:2:6c43:cbc0:93a1",
+    "2600:9000:21f2:a800:2:6c43:cbc0:93a1",
+    "2600:9000:21f2:ac00:2:6c43:cbc0:93a1",
+    "2600:9000:21f2:bc00:2:6c43:cbc0:93a1"
+   ],
+   "cname": "docs.cname-proxy.amazon.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:56:40Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "docs.google.com": {
+  "checked": "2026-10-24T05:52:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.250.189.110"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:80c::200e"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:52:01Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "google.com",
+   "registrar": "MarkMonitor Inc.",
+   "registered": "1997-09-15",
+   "expires": "2028-09-14",
+   "status": [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns1.google.com",
+    "ns2.google.com",
+    "ns3.google.com",
+    "ns4.google.com"
+   ],
+   "checked": "2026-10-24T05:52:01Z"
+  }
+ },
+ "docs.python.org": {
+  "checked": "2026-10-24T06:24:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.0.223",
+    "151.101.64.223",
+    "151.101.128.223",
+    "151.101.192.223"
+   ],
+   "aaaa": [
+    "2a04:4e42::223",
+    "2a04:4e42:200::223",
+    "2a04:4e42:400::223",
+    "2a04:4e42:600::223"
+   ],
+   "cname": "dualstack.python.map.fastly.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:47Z",
+   "title": "3.15.1 Documentation",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "doctorow.medium.com": {
+  "checked": "2026-10-24T06:24:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.152.4",
+    "162.159.153.4"
+   ],
+   "aaaa": [
+    "2606:4700:7::a29f:9804",
+    "2606:4700:7::a29f:9904"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:52Z",
+   "title": "Medium",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://medium.com/feed/@doctorow",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://twitter.com/doctorow"
+   ],
+   "webmention": null
+  }
+ },
+ "doist.com": {
+  "checked": "2026-10-24T05:56:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "108.159.227.4",
+    "108.159.227.17",
+    "108.159.227.91",
+    "108.159.227.115"
+   ],
+   "aaaa": [
+    "2600:9000:233d:3200:15:c7b0:4480:93a1",
+    "2600:9000:233d:4000:15:c7b0:4480:93a1",
+    "2600:9000:233d:4200:15:c7b0:4480:93a1",
+    "2600:9000:233d:5c00:15:c7b0:4480:93a1",
+    "2600:9000:233d:9c00:15:c7b0:4480:93a1",
+    "2600:9000:233d:b400:15:c7b0:4480:93a1",
+    "2600:9000:233d:d200:15:c7b0:4480:93a1",
+    "2600:9000:233d:f800:15:c7b0:4480:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1189.awsdns-20.org",
+    "ns-1874.awsdns-42.co.uk",
+    "ns-400.awsdns-50.com",
+    "ns-613.awsdns-12.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:56:43Z",
+   "title": "About Us | Todoist",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "donotcall.gov": {
+  "checked": "2026-10-24T06:24:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "99.84.203.51",
+    "99.84.203.55",
+    "99.84.203.86",
+    "99.84.203.91"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1183.awsdns-19.org",
+    "ns-16.awsdns-02.com",
+    "ns-1986.awsdns-56.co.uk",
+    "ns-832.awsdns-40.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:56Z",
+   "title": "National Do Not Call Registry",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "dougscripts.com": {
+  "checked": "2026-10-24T06:24:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "67.205.23.221"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:24:59Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "dpreview.com": {
+  "checked": "2026-10-24T05:33:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.22.164",
+    "172.66.174.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "elliot.ns.cloudflare.com",
+    "tina.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:33:50Z",
+   "title": "Home | DPReview | Photography News, Gear Reviews & Community",
+   "generator": "dominant-color-images 1.2.1",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.dpreview.com/feed/",
+     "title": "DPReview » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.dpreview.com/comments/feed/",
+     "title": "DPReview » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "dpreview.com",
+   "registrar": "Cloudflare, Inc.",
+   "registered": "1999-08-11",
+   "expires": "2027-08-11",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "elliot.ns.cloudflare.com",
+    "tina.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:33:50Z"
+  }
+ },
+ "drewdevault.com": {
+  "checked": "2026-10-24T06:25:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "46.23.81.157"
+   ],
+   "aaaa": [
+    "2a03:6000:1813:1337::157"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.iwantmyname.com",
+    "dns2.iwantmyname.com",
+    "dns3.iwantmyname.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:02Z",
+   "title": "Drew DeVault's blog",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://drewdevault.com/blog/index.xml",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "dri.es": {
+  "checked": "2026-10-24T06:25:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.19.253.3",
+    "104.19.254.3"
+   ],
+   "aaaa": [
+    "2606:4700::6813:fd03",
+    "2606:4700::6813:fe03"
+   ],
+   "cname": null,
+   "ns": [
+    "damon.ns.cloudflare.com",
+    "tegan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:05Z",
+   "title": "On digital experiences, Open Source, Open Web, Drupal, and our digital future | Dries Buytaert",
+   "generator": "Drupal 11 (https://www.drupal.org)",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://dri.es/rss.xml",
+     "title": "Dries Buytaert's blog posts"
+    },
+    {
+     "type": "rss",
+     "url": "https://dri.es/photos.xml",
+     "title": "Dries Buytaert's photos"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "drive.google.com": {
+  "checked": "2026-10-24T06:25:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.210.238"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:815::200e"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:09Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "driveatank.com": {
+  "checked": "2026-10-24T06:25:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "107.178.108.61"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "corporate.vip61.noc40.com",
+    "corporate.vip62.noc40.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:13Z",
+   "title": "Drive A Tank - Tank Driving, Car Crushing, Machine Gun Shooting",
+   "generator": "WordPress 6.3.8",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.driveatank.com/feed/",
+     "title": "Drive A Tank » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.driveatank.com/comments/feed/",
+     "title": "Drive A Tank » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "dropbox.com": {
+  "checked": "2026-10-24T06:25:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.125.248.18"
+   ],
+   "aaaa": [
+    "2620:100:6040:18::a27d:f812"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1162.awsdns-17.org",
+    "ns-1949.awsdns-51.co.uk",
+    "ns-315.awsdns-39.com",
+    "ns-564.awsdns-06.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:19Z",
+   "title": "Dropbox: Secure cloud storage, file sharing, and more",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "drummerman.net": {
+  "checked": "2026-10-24T06:25:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.29.151.221"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.aplus.net",
+    "ns2.aplus.net",
+    "ns3.aplus.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: TLS_ALERT_HANDSHAKE_FAILURE"
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:22Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: TLS_ALERT_HANDSHAKE_FAILURE"
+  }
+ },
+ "dslrnewsshooter.com": {
+  "checked": "2026-10-24T06:25:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.21.13",
+    "172.67.195.171"
+   ],
+   "aaaa": [
+    "2606:4700:3034::6815:150d",
+    "2606:4700:3035::ac43:c3ab"
+   ],
+   "cname": null,
+   "ns": [
+    "anirban.ns.cloudflare.com",
+    "donna.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:23Z",
+   "title": "HOKITOTO: LINK LOGIN & DAFTAR RESMI HOKI TOTO SLOT 88 ONLINE",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "dtrace.org": {
+  "checked": "2026-10-24T05:52:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "164.92.106.9"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns49.domaincontrol.com",
+    "ns50.domaincontrol.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:52:06Z",
+   "title": "dtrace.org",
+   "generator": "Elementor 3.25.7; features: additional_custom_breakpoints, e_optimized_control_loading; settings: css_print_method-external, google_font-enabled, font_display-swap",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://dtrace.org/feed/",
+     "title": "dtrace.org » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://dtrace.org/comments/feed/",
+     "title": "dtrace.org » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "dtrace.org",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2010-06-18",
+   "expires": "2027-06-18",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns49.domaincontrol.com",
+    "ns50.domaincontrol.com"
+   ],
+   "checked": "2026-10-24T05:52:06Z"
+  }
+ },
+ "duckdb.org": {
+  "checked": "2026-10-24T06:25:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.14.99",
+    "104.26.15.99",
+    "172.67.72.239"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:e63",
+    "2606:4700:20::681a:f63",
+    "2606:4700:20::ac43:48ef"
+   ],
+   "cname": null,
+   "ns": [
+    "chance.ns.cloudflare.com",
+    "mallory.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:26Z",
+   "title": "An analytical SQL database management system – DuckDB",
+   "generator": "Jekyll v4.4.1",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "duncandavidson.com": {
+  "checked": "2026-10-24T05:43:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.32.46",
+    "172.67.183.21"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:b715",
+    "2606:4700:3037::6815:202e"
+   ],
+   "cname": null,
+   "ns": [
+    "bart.ns.cloudflare.com",
+    "dorthy.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:43:07Z",
+   "title": "Duncan Davidson — Notes on AI, craft, systems, and the web",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://duncandavidson.com/rss.xml",
+     "title": "Duncan Davidson"
+    },
+    {
+     "type": "json",
+     "url": "https://duncandavidson.com/feed.json",
+     "title": "Duncan Davidson"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "duncandavidson.com",
+   "registrar": "Cloudflare, Inc.",
+   "registered": "2005-12-10",
+   "expires": "2026-12-10",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "bart.ns.cloudflare.com",
+    "dorthy.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:43:07Z"
+  }
+ },
+ "durmonski.com": {
+  "checked": "2026-10-24T06:06:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.212.118.26"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.siteground.net",
+    "ns2.siteground.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:06:51Z",
+   "title": "Library of Unusually Good Ideas - Durmonski.com",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://durmonski.com/feed/",
+     "title": "Durmonski.com » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://durmonski.com/comments/feed/",
+     "title": "Durmonski.com » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  }
 }

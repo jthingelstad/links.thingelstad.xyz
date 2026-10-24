@@ -1,4 +1,102 @@
 {
+ "earendil.com": {
+  "checked": "2026-10-24T06:25:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "darl.ns.cloudflare.com",
+    "melody.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:28Z",
+   "title": "Earendil",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://earendil.com/posts/feed.atom",
+     "title": "Earendil Posts"
+    },
+    {
+     "type": "rss",
+     "url": "https://earendil.com/posts/feed.rss",
+     "title": "Earendil Posts"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "eclecticlight.co": {
+  "checked": "2026-10-24T05:49:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.24",
+    "192.0.78.25"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:49:31Z",
+   "title": "The Eclectic Light Company – Macs & painting – 🦉 No AI content",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://eclecticlight.co/feed/",
+     "title": "The Eclectic Light Company » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://eclecticlight.co/comments/feed/",
+     "title": "The Eclectic Light Company » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": null,
+  "rdap_error": "no RDAP service for .co"
+ },
  "economist.com": {
   "checked": "2026-10-23T21:27:12Z",
   "method": "enrich_hosts",
@@ -44,6 +142,160 @@
    "checked": "2026-10-23T21:27:12Z"
   }
  },
+ "economonitor.com": {
+  "checked": "2026-10-24T06:25:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.24.32",
+    "172.67.216.131"
+   ],
+   "aaaa": [
+    "2606:4700:3034::6815:1820",
+    "2606:4700:3037::ac43:d883"
+   ],
+   "cname": null,
+   "ns": [
+    "dawn.ns.cloudflare.com",
+    "yisroel.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:31Z",
+   "title": "EconoMonitor – Global financial data, structured",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://economonitor.com/feed/",
+     "title": "EconoMonitor » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://economonitor.com/comments/feed/",
+     "title": "EconoMonitor » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "edge.org": {
+  "checked": "2026-10-24T06:06:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "207.241.237.8"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "motorhead.easydns.org",
+    "nirvana.easydns.net",
+    "rush.easydns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: certificate has expired"
+  },
+  "home": {
+   "checked": "2026-10-24T06:06:54Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: certificate has expired"
+  }
+ },
+ "edwardsnowden.substack.com": {
+  "checked": "2026-10-24T06:25:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:34Z",
+   "title": "Continuing Ed — with Edward Snowden | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://edwardsnowden.substack.com/feed",
+     "title": "Continuing Ed — with Edward Snowden"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "edwardtufte.com": {
+  "checked": "2026-10-24T05:56:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.10",
+    "141.193.213.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns25.worldnic.com",
+    "ns26.worldnic.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:56:46Z",
+   "title": "The Work of Edward Tufte & Graphics Press",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "eff.org": {
   "checked": "2026-10-23T21:25:39Z",
   "method": "enrich_hosts",
@@ -83,6 +335,397 @@
    "checked": "2026-10-23T21:25:39Z"
   }
  },
+ "eggheadforum.com": {
+  "checked": "2026-10-24T06:25:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.128.79",
+    "162.159.138.78"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.stabletransit.com",
+    "dns2.stabletransit.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:37Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403 (Cloudflare challenge)"
+  }
+ },
+ "eieio.games": {
+  "checked": "2026-10-24T06:06:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.8.222",
+    "104.26.9.222",
+    "172.67.73.6"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:8de",
+    "2606:4700:20::681a:9de",
+    "2606:4700:20::ac43:4906"
+   ],
+   "cname": null,
+   "ns": [
+    "paloma.ns.cloudflare.com",
+    "watson.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:06:56Z",
+   "title": "eieio.games",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://eieio.games/feed.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "electrek.co": {
+  "checked": "2026-10-24T05:52:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.2"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:52:09Z",
+   "title": "Electrek | EV and Tesla News, Green Energy, Ebikes, and more",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://electrek.co/feed/",
+     "title": "Electrek » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://electrek.co/comments/feed/",
+     "title": "Electrek » Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://electrek.co/web-stories/feed/",
+     "title": "Electrek » Stories Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": null,
+  "rdap_error": "no RDAP service for .co"
+ },
+ "elemental.medium.com": {
+  "checked": "2026-10-24T06:25:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.152.4",
+    "162.159.153.4"
+   ],
+   "aaaa": [
+    "2606:4700:7::a29f:9804",
+    "2606:4700:7::a29f:9904"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:39Z",
+   "title": "Medium",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://elemental.medium.com/feed",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "elezea.com": {
+  "checked": "2026-10-24T05:33:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.12.41",
+    "104.18.13.41"
+   ],
+   "aaaa": [
+    "2606:4700::6812:c29",
+    "2606:4700::6812:d29"
+   ],
+   "cname": null,
+   "ns": [
+    "igor.ns.cloudflare.com",
+    "ivy.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:33:52Z",
+   "title": "Elezea — Rian van der Merwe",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://elezea.com/feed.xml",
+     "title": "Elezea feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://elezea.com/feed/standard.xml",
+     "title": "Elezea — essays only"
+    },
+    {
+     "type": "rss",
+     "url": "https://elezea.com/feed/link.xml",
+     "title": "Elezea — link posts"
+    },
+    {
+     "type": "rss",
+     "url": "https://elezea.com/feed/quote.xml",
+     "title": "Elezea — quotes"
+    },
+    {
+     "type": "rss",
+     "url": "https://elezea.com/feed/release.xml",
+     "title": "Elezea — releases"
+    },
+    {
+     "type": "rss",
+     "url": "https://elezea.com/feed/summary.xml",
+     "title": "Elezea — summary"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://github.com/rianvdm",
+    "https://mastodon.social/@rianvdm",
+    "https://bsky.app/profile/rianvdm.com"
+   ],
+   "webmention": "https://webmention.io/elezea.com/webmention"
+  },
+  "rdap": {
+   "domain": "elezea.com",
+   "registrar": "Cloudflare, Inc.",
+   "registered": "2009-07-04",
+   "expires": "2027-07-04",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "igor.ns.cloudflare.com",
+    "ivy.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:33:52Z"
+  }
+ },
+ "emarketer.com": {
+  "checked": "2026-10-24T06:25:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.210.63.196",
+    "18.211.152.42"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p06.nsone.net",
+    "dns2.p06.nsone.net",
+    "dns3.p06.nsone.net",
+    "dns4.p06.nsone.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:43Z",
+   "title": "Unlock digital opportunities with the world’s most trusted forecasts, analysis, and benchmarks. - EMARKETER",
+   "generator": "WordPress 7.1.3",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "eminnetonka.com": {
+  "checked": "2026-10-24T06:25:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "135.84.124.41"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.state.mn.us",
+    "ns2.state.mn.us",
+    "ns3.state.mn.us"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:45Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "en.blog.doodle.com": {
+  "checked": "2026-10-24T05:56:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.17.6.115",
+    "104.17.7.115"
+   ],
+   "aaaa": [
+    "2606:4700::6811:673",
+    "2606:4700::6811:773"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:56:50Z",
+   "title": "Free online meeting scheduling tool | Doodle",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "en.blog.wordpress.com": {
+  "checked": "2026-10-24T06:06:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.12",
+    "192.0.78.13"
+   ],
+   "aaaa": [],
+   "cname": "blog.wordpress.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:06:58Z",
+   "title": "WordPress.com Blog – News, Tips & Website Tutorials",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://wordpress.com/blog/feed/",
+     "title": "WordPress.com Blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "en.wikipedia.org": {
   "checked": "2026-10-23T21:26:44Z",
   "method": "enrich_hosts",
@@ -120,6 +763,815 @@
     "ns2.wikimedia.org"
    ],
    "checked": "2026-10-23T21:26:44Z"
+  }
+ },
+ "engadget.com": {
+  "checked": "2026-10-24T05:31:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.227.87.69",
+    "13.227.87.74",
+    "13.227.87.77",
+    "13.227.87.110"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1449.awsdns-53.org",
+    "ns-1799.awsdns-32.co.uk",
+    "ns-305.awsdns-38.com",
+    "ns-598.awsdns-10.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:31:37Z",
+   "title": "Engadget | Technology News & Expert Reviews",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.engadget.com/category/news/feed/",
+     "title": "News - Engadget"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.engadget.com/feed/",
+     "title": "RSS 2.0"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "engadget.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2004-01-23",
+   "expires": "2028-01-23",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns-1449.awsdns-53.org",
+    "ns-1799.awsdns-32.co.uk",
+    "ns-305.awsdns-38.com",
+    "ns-598.awsdns-10.net"
+   ],
+   "checked": "2026-10-24T05:31:37Z"
+  }
+ },
+ "engineering.foursquare.com": {
+  "checked": "2026-10-24T06:25:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.132",
+    "151.101.66.132",
+    "151.101.130.132",
+    "151.101.194.132"
+   ],
+   "aaaa": [],
+   "cname": "j.sni.global.fastly.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:46Z",
+   "title": "Location Intelligence Resources | Blog & Guides | Foursquare",
+   "generator": "WordPress 6.9.10",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://foursquare.com/feed/",
+     "title": "Foursquare » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://foursquare.com/comments/feed/",
+     "title": "Foursquare » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "engineering.linkedin.com": {
+  "checked": "2026-10-24T05:56:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.41.41",
+    "172.64.146.215"
+   ],
+   "aaaa": [
+    "2a06:98c1:3109::6812:2929",
+    "2a06:98c1:310b::ac40:92d7"
+   ],
+   "cname": "microsites-cn.linkedin.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:56:53Z",
+   "title": "LinkedIn Engineering",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "engineering.shopify.com": {
+  "checked": "2026-10-24T06:07:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.128.177.21"
+   ],
+   "aaaa": [],
+   "cname": "apps.tm.shopifysvc.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:07:01Z",
+   "title": "Work with us | Shopify Engineering - Shopify",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://shopify.engineering/blog.atom",
+     "title": "Shopify Engineering"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://shopify.engineering/",
+    "https://x.com/shopifyeng"
+   ],
+   "webmention": null
+  }
+ },
+ "ens.domains": {
+  "checked": "2026-10-24T05:42:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.20.234",
+    "104.18.21.234"
+   ],
+   "aaaa": [
+    "2606:4700::6812:14ea",
+    "2606:4700::6812:15ea"
+   ],
+   "cname": null,
+   "ns": [
+    "ben.ns.cloudflare.com",
+    "desiree.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:42:16Z",
+   "title": "ENS",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "ens.domains",
+   "registrar": "Tucows Domains Inc.",
+   "registered": "2016-05-27",
+   "expires": "2033-05-27",
+   "status": [
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ben.ns.cloudflare.com",
+    "desiree.ns.cloudflare.com"
+   ],
+   "checked": "2026-10-24T05:42:16Z"
+  }
+ },
+ "ens.mirror.xyz": {
+  "checked": "2026-10-24T06:07:04Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.12.13",
+    "104.26.13.13",
+    "172.67.72.185"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:c0d",
+    "2606:4700:20::681a:d0d",
+    "2606:4700:20::ac43:48b9"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:07:04Z",
+   "title": "ENS — Read ENS on Paragraph.",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://paragraph.com/@ens/rss.xml",
+     "title": "ENS — RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "entrepreneurshandbook.co": {
+  "checked": "2026-10-24T06:25:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.152.4",
+    "162.159.153.4"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns37.domaincontrol.com",
+    "ns38.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:51Z",
+   "title": "Medium",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://entrepreneurshandbook.co/feed",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "erikbern.com": {
+  "checked": "2026-10-24T05:56:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [
+    "2600:1f18:16e:df01::258",
+    "2600:1f18:16e:df01::259"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.p07.nsone.net",
+    "dns2.p07.nsone.net",
+    "dns3.p07.nsone.net",
+    "dns4.p07.nsone.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:56:56Z",
+   "title": "Erik Bernhardsson",
+   "generator": "Hugo 0.156.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://erikbern.com/index.xml",
+     "title": "Erik Bernhardsson"
+    },
+    {
+     "type": "atom",
+     "url": "https://erikbern.com/atom.xml",
+     "title": "Erik Bernhardsson"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "espn.com": {
+  "checked": "2026-10-24T05:52:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.84.127.71",
+    "52.84.127.101",
+    "52.84.127.113",
+    "52.84.127.127"
+   ],
+   "aaaa": [
+    "2600:9000:200e:2400:d:ac18:e2c0:93a1",
+    "2600:9000:200e:2e00:d:ac18:e2c0:93a1",
+    "2600:9000:200e:5a00:d:ac18:e2c0:93a1",
+    "2600:9000:200e:6a00:d:ac18:e2c0:93a1",
+    "2600:9000:200e:8400:d:ac18:e2c0:93a1",
+    "2600:9000:200e:8800:d:ac18:e2c0:93a1",
+    "2600:9000:200e:a400:d:ac18:e2c0:93a1",
+    "2600:9000:200e:d600:d:ac18:e2c0:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1045.awsdns-02.org",
+    "ns-122.awsdns-15.com",
+    "ns-1936.awsdns-50.co.uk",
+    "ns-846.awsdns-41.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:52:12Z",
+   "title": "ESPN - Serving Sports Fans. Anytime. Anywhere.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "espn.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "1994-10-04",
+   "expires": "2027-10-03",
+   "status": [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited"
+   ],
+   "nameservers": [
+    "ns-1045.awsdns-02.org",
+    "ns-122.awsdns-15.com",
+    "ns-1936.awsdns-50.co.uk",
+    "ns-846.awsdns-41.net"
+   ],
+   "checked": "2026-10-24T05:52:12Z"
+  }
+ },
+ "esquire.com": {
+  "checked": "2026-10-24T05:47:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.0.155",
+    "151.101.64.155",
+    "151.101.128.155",
+    "151.101.192.155"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1157.awsdns-16.org",
+    "ns-1562.awsdns-03.co.uk",
+    "ns-488.awsdns-61.com",
+    "ns-809.awsdns-37.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T05:47:51Z",
+   "title": "Esquire - Men's Fashion, Cocktails, Politics, Interviews, and Women",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
+  "rdap": {
+   "domain": "esquire.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "1994-12-21",
+   "expires": "2026-12-20",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns-1157.awsdns-16.org",
+    "ns-1562.awsdns-03.co.uk",
+    "ns-488.awsdns-61.com",
+    "ns-809.awsdns-37.net"
+   ],
+   "checked": "2026-10-24T05:47:51Z"
+  }
+ },
+ "etsy.com": {
+  "checked": "2026-10-24T06:07:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.224",
+    "151.101.65.224",
+    "151.101.129.224",
+    "151.101.193.224"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p03.nsone.net",
+    "dns3.p03.nsone.net",
+    "ns-1264.awsdns-30.org",
+    "ns-162.awsdns-20.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-24T06:07:07Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403 (DataDome)"
+  }
+ },
+ "euronews.com": {
+  "checked": "2026-10-24T06:25:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.228.172.88",
+    "63.32.41.101",
+    "108.132.114.174"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1077.awsdns-06.org",
+    "ns-124.awsdns-15.com",
+    "ns-1609.awsdns-09.co.uk",
+    "ns-963.awsdns-56.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:25:58Z",
+   "title": "Latest breaking news available as free video on demand | Euronews",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "evanhahn.com": {
+  "checked": "2026-10-24T06:26:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "38.142.94.218"
+   ],
+   "aaaa": [
+    "2001:550:2:dc::5e:2",
+    "2400:52e0:1a04::925:1"
+   ],
+   "cname": null,
+   "ns": [
+    "coco.bunny.net",
+    "kiki.bunny.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:26:00Z",
+   "title": "Evan Hahn (dot com)",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://evanhahn.com/blog/index.xml",
+     "title": "Evan Hahn (dot com)"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://bigshoulders.city/@EvanHahn"
+   ],
+   "webmention": null
+  }
+ },
+ "eventburn.com": {
+  "checked": "2026-10-24T06:26:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "86.105.245.69"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.eftydns.com",
+    "ns2.eftydns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: unable to get local issuer certificate"
+  },
+  "home": {
+   "checked": "2026-10-24T06:26:02Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: unable to get local issuer certificate"
+  }
+ },
+ "events.umn.edu": {
+  "checked": "2026-10-24T06:26:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-24T06:26:06Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "every.to": {
+  "checked": "2026-10-24T06:26:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.10.196",
+    "104.26.11.196",
+    "172.67.74.119"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:ac4",
+    "2606:4700:20::681a:bc4",
+    "2606:4700:20::ac43:4a77"
+   ],
+   "cname": null,
+   "ns": [
+    "emily.ns.cloudflare.com",
+    "ned.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:26:06Z",
+   "title": "Every",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "everythingisaremix.info": {
+  "checked": "2026-10-24T06:26:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.49.23.144",
+    "198.49.23.145",
+    "198.185.159.144",
+    "198.185.159.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns31.domaincontrol.com",
+    "ns32.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:26:10Z",
+   "title": "Everything is a Remix",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "evidence.dev": {
+  "checked": "2026-10-24T06:26:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-e1.googledomains.com",
+    "ns-cloud-e2.googledomains.com",
+    "ns-cloud-e3.googledomains.com",
+    "ns-cloud-e4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:26:12Z",
+   "title": "Evidence - Business Intelligence as Code",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "extremetech.com": {
+  "checked": "2026-10-24T06:26:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.40.64",
+    "172.64.147.192"
+   ],
+   "aaaa": [
+    "2606:4700:4403::6812:2840",
+    "2a06:98c1:3100::ac40:93c0"
+   ],
+   "cname": null,
+   "ns": [
+    "aria.ns.cloudflare.com",
+    "owen.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-24T06:26:15Z",
+   "title": "ExtremeTech",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.extremetech.com/feed",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  }
 }
