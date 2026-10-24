@@ -1,8 +1,8 @@
 # links.thingelstad.xyz
 
 **Linking Things.** Every link Jamie Thingelstad has saved to Pinboard since 2005, as a
-database: one page per link, and what connects them. It will live at
-https://links.thingelstad.xyz/. The design is `docs/DIRECTION.md` and the data contract
+database: one page per link, and what connects them. It lives at
+https://links.thingelstad.xyz/, the MCP server at `/mcp`. The design is `docs/DIRECTION.md` and the data contract
 is `docs/DATA.md`; read them before changing structure, URLs or data.
 
 - Built with Astro and TypeScript on the POAP pattern (`poap.thingelstad.xyz`): static
@@ -40,7 +40,7 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   Thing archive key, `140-special` for the special issue), `/years/<yyyy>/` with its
   `llms.txt`, `/newest/`, `/search/`, `/about/`, the feeds (`feed.xml` and
   `feed.json` at the root and under each host and kind page) and `/links.json`,
-  `/hosts.json`, `/issues.json`, `/links.db`, `/llms.txt`, and `/mcp`. Kudos,
+  `/hosts.json`, `/issues.json`, `/links.db`, `/llms.txt`, `/mcp` and `/mcp/health`. Kudos,
   feed readers, the Librarian, WT Builder and MCP clients depend on them.
   `src/lib/paths.ts` is the one place they are formed; `src/lib/data.ts` re-exports
   it for the pages and the MCP server imports it directly.
@@ -52,15 +52,21 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   imports.
 - **The MCP server** (`src/mcp/`; DIRECTION.md, "Agents and the MCP";
   `docs/deployment.md`, "The MCP server") is read-only, with no authentication, no
-  model, no state and no keys. It reads only the three published files over HTTPS
-  and the published Pagefind index: never `data/`, never enrichment, never a bucket.
+  model, no state and no keys. It reads only what the site publishes, over HTTPS: the
+  three data files (`/links.json`, `/issues.json`, `/hosts.json`, revalidated by ETag
+  every ten minutes), the Pagefind index, and for `resources/read` a link's Markdown
+  twin or `/llms.txt`: never `data/`, never enrichment, never a bucket.
   Its answers carry what the JSON twins carry and nothing more (no `hash`, `meta` or
   enrichment field, nothing about whether a link works), and its reader-facing text
   (tool names and descriptions, notes, the `/mcp` page) follows the Pinboard rule
   below; `tests/mcp-server.test.mjs` checks both on every answer. A change to a tool's
   name, arguments or result shape bumps `SERVER_VERSION` in `src/mcp/tools.ts`.
   `npm run mcp:package` writes `.build/mcp/` (ignored); main deploys it after the site
-  only when its bytes change.
+  only when the bundle's contents change (the key hashes the entries' names and
+  contents, so the same files key the same on any machine; `npm run mcp:plan` shows
+  what a deploy would do). That deploy swaps the revision and nothing else: a change to
+  `infra/mcp.json`, or to any `infra/*.json`, never goes live from a merge. It needs
+  `npm run infra:plan`, a review, and `npm run infra:apply` on Jamie's go (below).
 - **Times** are stored in UTC and shown in US Central, and years, months, weeks and
   the quote of the day turn over in Central too. Feed dates are Central with the real offset
   (RFC 822 in RSS, RFC 3339 in JSON Feed).
@@ -90,9 +96,14 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   file extension needs its Content-Type in `tools/delivery-plan.mjs` or the deploy
   stops. The sync and the enrichment run on the Mac as the nightly launchd job
   `com.thingelstad.links-nightly` (`tools/nightly.sh` at 00:30 Central; the plist is in
-  `launchd/`), which commits `data/` and `public/media` as "Linking Things nightly" and
-  pushes, and the push deploys. CI never holds the token. The job needs the main
-  checkout on `main` and clean, so work in a worktree.
+  `launchd/`), which commits `data/` and `public/media` as "Nightly: sync and
+  enrichment, <date>" and pushes, and the push deploys. CI never holds the token. The
+  job needs the main checkout on `main` and clean, so work in a worktree. While the
+  first enrichment pass runs (about three weeks of nights) a night takes about three
+  hours (2026-10-24: 1,000 hosts in 75 minutes, 800 Wayback lookups in 97 minutes), so
+  the main checkout is busy from 00:30 to about 03:30 Central.
 - Infrastructure changes go through reviewed CloudFormation change sets with the
-  `cloud-engineer` identity, applied on Jamie's go, never through the deployment role.
-  DNS changes (Namecheap) are made by Jamie.
+  `cloud-engineer` identity (`npm run infra:plan` to review, `npm run infra:apply` on
+  Jamie's go, `npm run infra:attach` once for the certificate), never through the
+  deployment role. `apply` plans each stack afresh and executes it at once, so read what
+  it prints too. DNS changes (Namecheap) are made by Jamie.

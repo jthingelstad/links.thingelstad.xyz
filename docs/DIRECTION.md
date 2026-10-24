@@ -261,9 +261,9 @@ Three layers, three owners, the Things I've built shape.
 
 | Layer | Where | Nature | Who writes it | Cadence |
 | --- | --- | --- | --- | --- |
-| Mirror | `data/links/<yyyy>.json` | Pinboard's fields for public bookmarks, verbatim: id, href, title, note, time, tags, hash, meta | `npm run sync`, never a person | Weekly, and after Saturday's issue |
+| Mirror | `data/links/<yyyy>.json` | Pinboard's fields for public bookmarks, verbatim: id, href, title, note, time, tags, hash, meta | `npm run sync`, never a person | Nightly, 00:30 Central on the Mac (`tools/nightly.sh`) |
 | Enrichment | `data/enrichment/pages/<yyyy>.json`, `data/enrichment/hosts/<a-z0-9>.json` (shards, docs/DATA.md) | Facts observed about the page and the host | `tools/enrich_hosts.py`, `tools/enrich_pages.py`, never a person | Nightly slices, incremental |
-| Derived | `data/derived/issues.json`, `topics.json`, `neighbors.json`, `graph.json` | The joins and the model outputs, each stamped with its method and version | `npm run derive` | On every sync; topics and neighbours for new links only |
+| Derived | `data/derived/issues.json`, `topics.json`, `neighbors.json`, `graph.json` | The joins and the model outputs, each stamped with its method and version | `npm run join` (the issues join); topics and neighbours when built | On every sync; topics and neighbours for new links only |
 
 Rules:
 
@@ -556,7 +556,7 @@ letters>.json`, words to ids, built with the site) is the next step and still no
 server. Not built until a real agent needs it; an agent that speaks MCP has
 `links_search` now.
 
-**The MCP, built 2026-10-24.** Jamie: "Let's build it", with search on the site's own
+**The MCP, built and live 2026-10-24.** Jamie: "Let's build it", with search on the site's own
 Pagefind index. A small, stateless, read-only server with no authentication at
 `https://links.thingelstad.xyz/mcp`, on a Lambda Web Function (stack `links-mcp`,
 `infra/mcp.json`). It was planned behind its own hostname, the pattern of the
@@ -674,8 +674,8 @@ the mirror is kept lossless and Pinboard-shaped, not merely sufficient for pages
   its own pair. Measured 2026-10-23: 14,128 host feed files for 7,064 hosts, 41 MB,
   about 1.5 s of build, so every host keeps its pair (the fallback was the 428 hosts
   with five or more links).
-- **The sites strip**: Linking Things joins `sites.json` and the strip when it is
-  done (Jamie, 2026-10-23: "99% sure"). The layout vendors `tokens.css` and carries the
+- **The sites strip**: Linking Things is in `sites.json` and the strip (Jamie,
+  2026-10-23: "99% sure"). The layout vendors `tokens.css` and carries the
   shared h-card and `rel=me` from the start, so joining is one registry line.
 
 ## Ideas beyond the brief
@@ -741,7 +741,7 @@ size, the build time and the page weight; produces screenshots. Ends with `AGENT
 for the repo.
 
 **1. Launch.** Infrastructure, DNS, CI deploy, feeds, JSON and Markdown twins,
-`llms.txt` and a file per year, About in Jamie's words, Tinylytics, weekly sync, a Things I've built
+`llms.txt` and a file per year, About in Jamie's words, Tinylytics, nightly sync, a Things I've built
 entry. Connections from existing data only.
 
 **2. Depth.** Host DNS and open-web signals, RDAP for the
@@ -767,10 +767,10 @@ Jamie, 2026-10-23, with the design's response:
 | Which model classifies topics | Defer until the archive is in hand | Phase 3; the design does not depend on it. |
 | Archived pages: facts plus an excerpt | Not even that; data only; "I don't want us to be a Wayback Machine" | Facts and the cites graph only; no excerpts anywhere. Section "The archive". |
 | `_exclude` links and links with no text | Include them, but no landing page for a bare link; later, "I'm good with you exploring what works best" | The card that scales with what is known, explored in the spike with screenshots of both the rich and the bare case. Section "Links that are nothing but a link". |
-| Deleted bookmarks | Tombstone, "that could be fun" | Done. |
+| Deleted bookmarks | Tombstone, "that could be fun" | Decided; not built yet. A deleted link's page is removed until it is. |
 | RDAP | "I don't know what that is", then "RDAP yes, for sure" | In, phase 2, for the 428 hosts with five or more links first, the rest after. |
-| Joins the sites strip | 99% yes | Planned from the start; one registry line when done. |
-| Where the weekly sync runs | Defer; consider the Librarian's timing | Deferred; the `links-published` dispatch settles the ordering either way. |
+| Joins the sites strip | 99% yes | Done: one registry line in `shared/sites.json`. |
+| Where the weekly sync runs | Defer; consider the Librarian's timing | Decided 2026-10-23: nightly on the Mac at 00:30 Central (`tools/nightly.sh`, launchd); the `links-published` dispatch settles the ordering with the Librarian either way. |
 | A private Like, or a public count | "The kudos button (let's use that name instead of like) is of course public. That is how that feature of tinylytics works." | Named Kudos everywhere. The count shows: the embed's `?kudos=custom` writes it into a button the site draws, and `validate:site` fails a private one. `design/tinylytics.md`. |
 | `llms-full.txt` at 36 MB | "Trim. Probably by year or even year month?" | By year: `/years/<yyyy>/llms.txt`, slim rows, 22 files and 10.6 MB together, the largest 0.8 MB, so no month split; `llms.txt` lists them with counts and sizes. A year past 4 MB fails validation and would split by month. |
 | On this day | "I'm not sure on-this-day is meaningful for this data set?" | Removed: the 366 day pages, the grid, their checks and their helpers. |
@@ -789,8 +789,8 @@ treatment is left to the build to explore; build started with Opus 5.5 agents on
 Then the links MCP: "Let's build it", with search on the site's existing Pagefind
 index. Built 2026-10-24 (section "Agents and the MCP").
 
-Still open: which of the ideas beyond the brief earn a phase; creating the GitHub
-repository and the Tinylytics site, both Jamie's go.
+Still open: which of the ideas beyond the brief earn a phase. The GitHub repository and
+the Tinylytics site exist.
 
 ## Spike results (2026-10-23)
 

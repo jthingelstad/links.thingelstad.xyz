@@ -10,8 +10,13 @@ npm run dev            # http://127.0.0.1:4321 (no search index in dev)
 npm run build          # dist/, then the Pagefind index
 npm run validate:site  # checks dist/ (pages, links, sitemap, feeds, data files)
 npm run preview
-PAGEFIND_MODULE=dist/pagefind/pagefind.js npm run mcp:serve   # the MCP server, 127.0.0.1:8790
+PAGEFIND_MODULE=dist/pagefind/pagefind.js npm run mcp:serve   # the MCP server, 127.0.0.1:8790, reads the live site's data
+npm run mcp:package    # .build/mcp/: the server zipped for Lambda, keyed by its contents
+npm run mcp:plan       # what a deploy of that package would do; needs AWS credentials, writes nothing
 ```
+
+`npm run infra:plan`, `infra:apply` and `infra:attach` manage the CloudFormation stacks
+(`docs/deployment.md`).
 
 ## For machines
 
@@ -25,16 +30,21 @@ Everything a page shows is also data, built with the pages:
   Pinboard's order (`id, hash, url, title, note, saved, tags, toread, meta`) plus its
   `permalink` and its `kind` (`src/lib/kinds.ts`). `/hosts.json` (host, count, first,
   last, url) and `/issues.json` (the Weekly Thing join, with each issue's page here).
+- `/links.db`: the same public data as one SQLite file (`tools/build_db.py`).
 - `/llms.txt` (llmstxt.org), which lists `/years/<yyyy>/llms.txt`: every record saved
   that year (Central), newest first, as a slim row with the note in full. The largest
   year is under 1 MB.
 - `/newest/` is the newest 50 as a page.
 - `/mcp` is a read-only MCP server with no authentication: add
   `https://links.thingelstad.xyz/mcp` to a client as a remote (Streamable HTTP) server.
-  Its tools search with the site's own grammar and index, fetch a link by id or URL,
-  list a year, host, kind or tag, open a Weekly Thing issue, and give the collection's
-  shape. A browser visiting `/mcp` gets a page that lists them. The server's code is
-  `src/mcp/`; `docs/deployment.md` has how it is hosted.
+  Seven tools: `links_search` (the site's own grammar and index: words, `site:`,
+  `year:`, `wt:`, `kind:`), `links_get` (one link by id or URL), `links_list` (a year,
+  host, kind or tag), `links_issue` (the links a Weekly Thing issue carried),
+  `links_stats` (the collection's shape), `links_on_this_day` and `links_random`. Two
+  resources: `links://llms.txt` and `links://link/{id}`, a record as Markdown.
+  `/mcp/health` reports what the server holds. A browser visiting `/mcp` gets a page
+  that lists the tools. The server's code is `src/mcp/`; `docs/deployment.md` has how
+  it is hosted and deployed.
 
 ## Analytics
 
