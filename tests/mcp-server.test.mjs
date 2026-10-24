@@ -250,15 +250,28 @@ function fakePagefind(index) {
           state.failures--;
           throw new Error('index chunk failed');
         }
+        // A "phrase" is exact, each word whole, as Pagefind has it; a bare
+        // word matches on its first letter alone.
+        const phrases = [...term.matchAll(/"([^"]*)"/g)].map((m) =>
+          m[1].toLowerCase().split(/\s+/).filter(Boolean),
+        );
         const firsts = term
+          .replace(/"[^"]*"/g, ' ')
           .toLowerCase()
           .split(/\s+/)
           .filter(Boolean)
           .map((w) => w[0]);
-        const hits = state.index.filter((row) =>
-          firsts.some((letter) =>
-            new RegExp(`(^|[^a-z0-9])${letter}`).test(text(row)),
-          ),
+        const hits = state.index.filter(
+          (row) =>
+            phrases.every((words) =>
+              words.every((w) =>
+                new RegExp(`(^|[^a-z0-9])${w}($|[^a-z0-9])`).test(text(row)),
+              ),
+            ) &&
+            (firsts.length === 0 ||
+              firsts.some((letter) =>
+                new RegExp(`(^|[^a-z0-9])${letter}`).test(text(row)),
+              )),
         );
         return {
           results: hits.map((row) => ({
@@ -831,12 +844,14 @@ test('links_stats: the shape of the collection', async () => {
     links: 6,
     hosts: 5,
     with_note: 4,
+    to_read: 1,
     in_weekly_thing: 3,
     issues: 2,
     latest_issue: 351,
     first_saved: rows.F.saved,
     last_saved: rows.D.saved,
   });
+  assert.deepEqual(answer.voices, { jamie: 3, mixed: 0, excerpt: 1, agent: 0 });
   assert.deepEqual(
     answer.by_year.map((y) => [y.year, y.links]),
     [
@@ -1390,4 +1405,186 @@ test('llms.txt points agents at /mcp and names every tool', () => {
   assert.ok(agents.includes(`(${SITE}/mcp)`));
   for (const tool of tools)
     assert.ok(agents.includes(`\`${tool.name}\``), tool.name);
+});
+
+// The agent's voice is provenance, the tag it leaves on a bookmark whose note
+// it wrote, never a reading of the text; an empty note still has no voice.
+test('voice "agent" comes from the _agent tag, and every answer that shows one says so', async () => {
+  const G = {
+    id: idOf('https://example.net/open-data-mcp'),
+    url: 'https://example.net/open-data-mcp',
+    title: 'An MCP server for open data',
+    note: "A statistics office's MCP server. Low priority unless you follow open data.",
+    saved: '2026-02-19T18:36:08Z',
+    tags: ['_agent'],
+    toread: false,
+  };
+  const H = {
+    ...G,
+    id: idOf('https://example.net/quoted'),
+    url: 'https://example.net/quoted',
+    title: 'Quoted by the agent',
+    note: '> The page said this.',
+    saved: '2026-02-19T18:40:00Z',
+  };
+  const K = {
+    ...G,
+    id: idOf('https://example.net/bare'),
+    url: 'https://example.net/bare',
+    title: 'A bare save',
+    note: '',
+    saved: '2026-02-19T18:45:00Z',
+  };
+  const all = [...linkRows, G, H, K];
+  const own = await harness({ files: fixtureFiles(all), index: all });
+  const got = await own.call('links_get', { id: G.id });
+  assert.equal(got.link.voice, 'agent');
+  assert.equal(got.link.note_text, G.note);
+  assert.ok(got.notes.some((n) => /voice is "agent"/.test(n)));
+  assert.ok(!got.notes.some((n) => /voice is "excerpt"/.test(n)));
+  const quoted = await own.call('links_get', { id: H.id });
+  assert.equal(quoted.link.voice, 'agent', 'the tag wins over the heuristic');
+  assert.equal((await own.call('links_get', { id: K.id })).link.voice, null);
+  const list = await own.call('links_list', { by: 'year', value: 2026 });
+  assert.deepEqual(
+    list.links.map((l) => l.voice),
+    [null, 'agent', 'agent'],
+  );
+  assert.ok(list.notes.some((n) => /voice is "agent"/.test(n)));
+  const stats = await own.call('links_stats');
+  assert.deepEqual(stats.voices, { jamie: 3, mixed: 0, excerpt: 1, agent: 2 });
+  assert.deepEqual(stats.tags, [
+    { tag: '_agent', links: 3 },
+    { tag: '_brief', links: 1 },
+    { tag: '_feature', links: 1 },
+  ]);
+  const search = await own.call('links_search', { query: 'open data' });
+  assert.deepEqual(ids(search), [`link-${G.id}`]);
+  assert.equal(search.links[0].voice, 'agent');
+  assert.ok(search.notes.some((n) => /voice is "agent"/.test(n)));
+});
+
+// A short word: a bare EDI also finds Editor and Edina by its first letters,
+// so whole-word matches come first; a "quoted" word is whole or nothing; and
+// when every word together finds nothing, the note says which to drop.
+test('links_search: whole-word matches first, "quoted" words exact, what to drop', async () => {
+  const row = (path, title, note, saved) => ({
+    id: idOf(`https://example.net/${path}`),
+    url: `https://example.net/${path}`,
+    title,
+    note,
+    saved,
+    tags: [],
+    toread: false,
+  });
+  const E = [
+    row(
+      'editor',
+      'Editor.js',
+      'A block-styled editor for composing content.',
+      '2021-01-01T12:00:00Z',
+    ),
+    row(
+      'descript',
+      'Descript: Edit Videos Like a Doc',
+      'Editing by transcript.',
+      '2021-02-01T12:00:00Z',
+    ),
+    row(
+      'edina',
+      'City of Edina COVID-19 Cases',
+      'A map.',
+      '2021-03-01T12:00:00Z',
+    ),
+    row(
+      'edi-as2',
+      'EDI/AS2 Components',
+      'Components for EDI and AS2 in supply software.',
+      '2014-04-23T12:00:00Z',
+    ),
+    row(
+      'edi-reviews',
+      'Best EDI Software',
+      'Reviews of EDI software for supply networks.',
+      '2018-11-26T12:00:00Z',
+    ),
+  ];
+  const of = (...rows) => rows.map((r) => `link-${r.id}`);
+  const all = [...linkRows, ...E];
+  const own = await harness({ files: fixtureFiles(all), index: all });
+
+  const bare = await own.call('links_search', { query: 'EDI' });
+  assert.deepEqual(ids(bare), of(E[3], E[4], E[0], E[1], E[2]));
+  assert.equal(bare.total, 5);
+  assert.equal(bare.total_exact, true);
+  // The word was asked for as a whole word first, in Pagefind's quoted form.
+  assert.deepEqual(
+    own.pagefind.searches.slice(-2).map((s) => s.term),
+    ['"EDI"', 'EDI'],
+  );
+  // The second page continues the same order.
+  const page = await own.call('links_search', { query: 'EDI', limit: 2 });
+  assert.deepEqual(ids(page), of(E[3], E[4]));
+  assert.equal(page.next_offset, 2);
+  const next = await own.call('links_search', {
+    query: 'EDI',
+    limit: 2,
+    offset: 2,
+  });
+  assert.deepEqual(ids(next), of(E[0], E[1]));
+
+  const quoted = await own.call('links_search', { query: '"EDI"' });
+  assert.deepEqual(ids(quoted), of(E[3], E[4]));
+  assert.equal(quoted.total, 2);
+  assert.equal(own.pagefind.searches.at(-1).term, '"EDI"');
+
+  // Several words: whole-word matches first among the checked candidates.
+  const two = await own.call('links_search', { query: 'EDI components' });
+  assert.deepEqual(ids(two).slice(0, 2), of(E[3], E[0]));
+
+  // Sorted by date, the index's order stands and no second search is made.
+  const dated = await own.call('links_search', {
+    query: 'EDI',
+    sort: 'newest',
+  });
+  assert.deepEqual(ids(dated), of(...E));
+  assert.equal(own.pagefind.searches.at(-1).term, 'EDI');
+  assert.equal(own.pagefind.searches.at(-2).term, 'EDI components');
+
+  // Nothing has every word: the note says what dropping each word finds.
+  const none = await own.call('links_search', { query: 'EDI supply chain' });
+  assert.equal(none.total, 0);
+  assert.deepEqual(none.links, []);
+  const note = none.notes.find((n) => n.startsWith('Nothing has every word.'));
+  assert.ok(note, none.notes.join('\n'));
+  assert.match(note, /Without "chain": EDI supply matches 2 links/);
+  assert.ok(!/supply chain matches/.test(note), note);
+  // One word, or no word to drop that helps: the rule, as before.
+  const one = await own.call('links_search', { query: 'kuzzzz' });
+  assert.ok(one.notes.some((n) => n.startsWith('Nothing matched. Each word')));
+  const dropped = await own.call('links_search', { query: 'zzzq yyyq' });
+  assert.ok(
+    dropped.notes.some((n) =>
+      n.startsWith('Nothing matched, even with one word dropped.'),
+    ),
+    dropped.notes.join('\n'),
+  );
+});
+
+// The read-later mark is cleared as each link is read, so the list is usually
+// empty; the answer says so rather than leaving an empty list to explain itself.
+test('links_list by toread says why it is empty, and links_stats counts the marks', async () => {
+  const unmarked = linkRows.map((row) => ({ ...row, toread: false }));
+  const own = await harness({ files: fixtureFiles(unmarked), index: unmarked });
+  const list = await own.call('links_list', { by: 'toread' });
+  assert.equal(list.total, 0);
+  assert.deepEqual(list.links, []);
+  assert.ok(
+    list.notes.some((n) => n.startsWith('No link is marked to read later')),
+  );
+  assert.equal((await own.call('links_stats')).totals.to_read, 0);
+  const marked = await main.call('links_list', { by: 'toread' });
+  assert.equal(marked.total, 1);
+  assert.ok(!marked.notes.some((n) => n.startsWith('No link is marked')));
+  assert.equal((await main.call('links_stats')).totals.to_read, 1);
 });

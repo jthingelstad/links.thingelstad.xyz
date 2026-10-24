@@ -145,6 +145,8 @@ export interface LlmsYear {
 }
 
 const EXCERPT = "From the page (probably an excerpt, not Jamie's words):";
+const AGENT =
+  "From an agent that works Jamie's reading queue (a summary, not Jamie's words):";
 
 export function llmsRecord(link: Link) {
   const lines = [
@@ -162,6 +164,7 @@ export function llmsRecord(link: Link) {
   if (link.hasNote) {
     lines.push('');
     if (link.voice === 'excerpt') lines.push(EXCERPT, '');
+    else if (link.voice === 'agent') lines.push(AGENT, '');
     lines.push(link.note.trim());
   }
   return `${lines.join('\n')}\n`;
@@ -211,7 +214,7 @@ export function llmsTxt() {
     '',
     `> Every public link Jamie Thingelstad has saved since 2005, as a static database: ${number(counts.links)} links from ${number(counts.hosts)} hosts, ${span()}, one page per link and what connects them. Times are US Central.`,
     '',
-    "Each link's record is at `/links/<id>/`, where `<id>` is the first 12 hex characters of the md5 of the URL exactly as saved, so anyone can compute it from a URL; a 404 means the link was never saved or is not public. Every record has a JSON twin at `/links/<id>.json` and a Markdown twin at `/links/<id>.md`. Notes from 2007 to 2016 are mostly excerpts from the page, not Jamie's words; the JSON twin carries that label as `voice`, and the files below mark each such note.",
+    "Each link's record is at `/links/<id>/`, where `<id>` is the first 12 hex characters of the md5 of the URL exactly as saved, so anyone can compute it from a URL; a 404 means the link was never saved or is not public. Every record has a JSON twin at `/links/<id>.json` and a Markdown twin at `/links/<id>.md`. Notes from 2007 to 2016 are mostly excerpts from the page, not Jamie's words; the JSON twin carries that label as `voice`, and the files below mark each such note. A note an agent wrote for Jamie's reading queue is labelled `agent` the same way.",
     '',
     '## Data',
     '',

@@ -10,6 +10,8 @@ import {
   matcher,
   parse,
   searchTerm,
+  units,
+  wholeWords,
 } from '../src/lib/search-grammar.ts';
 
 const found = (title, host, content = '') => ({
@@ -90,8 +92,8 @@ test("each typed word's first three letters must start a word", () => {
   assert.ok(!matcher({ text: 'zxqvbnmw', exclude: [] })(kubb));
   // Inside a word does not count.
   assert.ok(!matcher({ text: 'ubb', exclude: [] })(kubb));
-  // Two-letter words and phrases are Pagefind's to match.
-  assert.ok(matcher({ text: 'kubb of "never seen"', exclude: [] })(kubb));
+  // A "phrase" must appear whole, every word of it.
+  assert.ok(!matcher({ text: 'kubb of "never seen"', exclude: [] })(kubb));
   // The host counts as text.
   assert.ok(matcher({ text: 'youtube', exclude: [] })(kubb));
   // Letters beyond ASCII.
@@ -124,4 +126,49 @@ test('the browser search uses this grammar rather than its own', () => {
   assert.doesNotMatch(script, /function parse\(|function matcher\(/);
   const server = readFileSync('src/mcp/search.ts', 'utf8');
   assert.match(server, /from '\.\.\/lib\/search-grammar\.ts'/);
+});
+
+test('a "quoted" word must appear whole; a bare word by its first three letters', () => {
+  const editor = found('Editor.js', 'editorjs.io', 'A block-styled editor.');
+  const edi = found('EDI/AS2 Components', 'nsoftware.com', 'For EDI and AS2.');
+  assert.ok(matcher({ text: 'edi', exclude: [] })(editor));
+  assert.ok(matcher({ text: 'edi', exclude: [] })(edi));
+  assert.ok(!matcher({ text: '"edi"', exclude: [] })(editor));
+  assert.ok(matcher({ text: '"EDI"', exclude: [] })(edi));
+  // Every word of a phrase, whole; a mixed query needs both rules.
+  const chain = found('Supply chains', 'x.com', 'The supply chain.');
+  assert.ok(matcher({ text: '"supply chain"', exclude: [] })(chain));
+  assert.ok(
+    !matcher({ text: '"supply chains"', exclude: [] })(
+      found('Supply chain', 'x.com'),
+    ),
+  );
+  assert.ok(
+    !matcher({ text: '"edi" supply', exclude: [] })(
+      found('Editor supply', 'x.com'),
+    ),
+  );
+  assert.ok(
+    matcher({ text: '"edi" supply', exclude: [] })(
+      found('EDI supply', 'x.com'),
+    ),
+  );
+});
+
+test('wholeWords: every typed word whole, bare or quoted; units as typed', () => {
+  const whole = wholeWords('EDI components');
+  assert.ok(whole(found('EDI/AS2 Components', 'nsoftware.com')));
+  assert.ok(!whole(found('Editor components', 'x.com')));
+  assert.ok(!whole(found('EDI', 'x.com', 'component')));
+  assert.ok(wholeWords('go')(found('Go by example', 'x.com')));
+  assert.ok(!wholeWords('go')(found('Google', 'x.com')));
+  assert.ok(
+    wholeWords('"supply chain" edi')(found('EDI supply chain', 'x.com')),
+  );
+  assert.deepEqual(units('EDI "supply chain" as2'), [
+    'EDI',
+    '"supply chain"',
+    'as2',
+  ]);
+  assert.deepEqual(units(''), []);
 });

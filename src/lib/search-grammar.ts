@@ -11,7 +11,10 @@
 // Pagefind 1.5 falls back to a shorter prefix when a word has no match
 // ("zxqvbnmw" finds the ZX Spectrum, "qqqqzzzz" finds "Q"), so a result is
 // kept only when each typed word's first three letters start a word in its
-// title, host or text.
+// title, host or text. A "quoted" word must appear whole, every word of a
+// phrase (Pagefind's own phrase matching lapses when a phrase is mixed with
+// bare words), so "EDI" finds EDI and never Editor. wholeWords says whether
+// every typed word, quoted or not, appears whole: the MCP server ranks by it.
 //
 // The search box's suggestions (src/lib/suggest.ts) read the word at the
 // cursor with tokenAt, so they name the operators the same way.
@@ -132,26 +135,59 @@ export interface Found {
   meta: { title?: string; host?: string };
 }
 
+// The units of a query's text as typed: bare words and "phrases".
+export const units = (text: string): string[] =>
+  [...text.matchAll(/"[^"]*"|\S+/g)].map((m) => m[0]);
+
+// The words of a text, lower-cased: letters and digits only, so each is
+// safe inside a regular expression.
+const wordsOf = (text: string) =>
+  text
+    .toLowerCase()
+    .split(/[^\p{L}\p{N}]+/u)
+    .filter(Boolean);
+const typed = (text: string) => ({
+  bare: wordsOf(text.replace(/"[^"]*"/g, ' ')),
+  quoted: wordsOf([...text.matchAll(/"([^"]*)"/g)].map((m) => m[1]).join(' ')),
+});
+// A word's first three letters start a word; a word appears whole.
+const starts = (word: string) =>
+  new RegExp(`(?:^|[^\\p{L}\\p{N}])${word.slice(0, 3)}`, 'u');
+const whole = (word: string) =>
+  new RegExp(`(?:^|[^\\p{L}\\p{N}])${word}(?:$|[^\\p{L}\\p{N}])`, 'u');
+const textOf = (data: Found) =>
+  `${data.meta.title ?? ''} ${data.meta.host ?? ''} ${data.content}`.toLowerCase();
+
 // The check run on each candidate's data: site: exactly (the host or under
-// it), the first three letters of each typed word, and no -word.
+// it), the first three letters of each bare word, each "quoted" word whole,
+// and no -word.
 export function matcher(
   query: Pick<Query, 'text' | 'site' | 'exclude'>,
 ): (data: Found) => boolean {
   const { site, exclude } = query;
-  const starts = query.text
-    .replace(/"[^"]*"/g, ' ')
-    .toLowerCase()
-    .split(/[^\p{L}\p{N}]+/u)
-    .filter((word) => word.length >= 3)
-    .map((word) => new RegExp(`(?:^|[^\\p{L}\\p{N}])${word.slice(0, 3)}`, 'u'));
+  const words = typed(query.text);
+  const tests = [
+    ...words.bare.filter((word) => word.length >= 3).map(starts),
+    ...words.quoted.map(whole),
+  ];
   return (data) => {
     const host = data.meta.host;
-    const text =
-      `${data.meta.title ?? ''} ${host ?? ''} ${data.content}`.toLowerCase();
+    const text = textOf(data);
     return (
       (!site || (!!host && onHost(host, site))) &&
-      starts.every((start) => start.test(text)) &&
+      tests.every((test) => test.test(text)) &&
       !exclude.some((word) => text.includes(word))
     );
+  };
+}
+
+// Whether every typed word, bare or quoted, appears whole: what ranks a
+// result above one its first letters matched (EDI above Editor).
+export function wholeWords(text: string): (data: Found) => boolean {
+  const words = typed(text);
+  const tests = [...words.bare, ...words.quoted].map(whole);
+  return (data) => {
+    const text = textOf(data);
+    return tests.every((test) => test.test(text));
   };
 }

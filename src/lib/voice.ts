@@ -1,18 +1,30 @@
-// Who the note speaks for, by heuristic, never asserted (docs/DIRECTION.md,
-// "Voice"): "jamie" is Jamie's commentary; "mixed" is commentary around a
-// quotation; "excerpt" is most likely a passage from the page, which is what
-// the bookmarklet captured before the Weekly Thing years.
+// Who the note speaks for (docs/DIRECTION.md, "Voice"): "jamie" is Jamie's
+// commentary; "mixed" is commentary around a quotation; "excerpt" is most
+// likely a passage from the page, which is what the bookmarklet captured
+// before the Weekly Thing years; "agent" is a summary an agent wrote for
+// Jamie's reading queue. The first three are heuristics, never asserted. The
+// fourth is provenance: the agent tags a bookmark whose note it writes
+// (~/.openclaw/workspace/skills/pinboard-enrichment), and the label is read
+// from that tag alone, never from the text.
 //
 // data.ts labels every link with it at build; the MCP server (src/mcp/)
 // labels the rows of /links.json the same way, since links.json does not
 // carry it.
 import { prepare } from './markdown.ts';
 
-export type Voice = 'jamie' | 'mixed' | 'excerpt';
+export type Voice = 'jamie' | 'mixed' | 'excerpt' | 'agent';
 
-export function voiceOf(note: string, year: number): Voice | null {
+// The tag the agent leaves on a bookmark whose note it wrote.
+export const AGENT_TAG = '_agent';
+
+export function voiceOf(
+  note: string,
+  year: number,
+  tags: readonly string[] = [],
+): Voice | null {
   const text = prepare(note);
   if (!text) return null;
+  if (tags.includes(AGENT_TAG)) return 'agent';
   const blocks = text.split(/\n\s*\n/).filter((block) => block.trim());
   const quoted = blocks.filter((block) => block.trimStart().startsWith('>'));
   if (quoted.length === blocks.length) return 'excerpt';

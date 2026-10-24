@@ -29,6 +29,10 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   first rule wins, "page" is the rest. The browser search and the MCP server import
   the same file, so it takes no Node imports. Adding a kind adds a `/kinds/<kind>/`
   URL.
+- **Voice** (`src/lib/voice.ts`): who a note speaks for. `jamie`, `mixed` and `excerpt`
+  are heuristics from the text and the year; `agent` is provenance, read from the
+  `_agent` tag the OpenClaw `pinboard-enrichment` skill adds to every note it writes,
+  never from the text. The site, the twins, the llms files and the MCP label with it.
 - **The database.** `npm run db` (`tools/build_db.py`, stdlib only) writes
   `public/links.db` from the JSON; `npm run build` runs it first. It is gitignored,
   deterministic, and facts only like the pages. The site never reads it.
@@ -48,11 +52,13 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   it for the pages and the MCP server imports it directly.
 - **Search grammar** (`src/lib/search-grammar.ts`): parsing a query (words,
   "phrases", -exclusions, `site:`, `year:`, `wt:`, `kind:`), the rule that keeps
-  only real matches, and `onHost`, what `site:` takes in (the host and the hosts under
-  it), which the MCP server and the suggestions' counts use too. The browser search and the MCP server's `links_search` both
-  import it, and both search the same Pagefind index, so the site and the MCP answer
-  a query the same way. Change the grammar there, never in either caller. No Node
-  imports. The box's suggestions (`src/lib/suggest.ts`, shown by
+  only real matches (a bare word by its first three letters, a "quoted" word whole),
+  and `onHost`, what `site:` takes in (the host and the hosts under it), which the MCP
+  server and the suggestions' counts use too. The browser search and the MCP server's
+  `links_search` both import it, and both search the same Pagefind index, so the site
+  and the MCP find the same links; the MCP alone puts whole-word matches first
+  (`wholeWords`), the browser shows the index's order. Change the grammar there, never
+  in either caller. No Node imports. The box's suggestions (`src/lib/suggest.ts`, shown by
   `src/scripts/suggest.ts`) read the word at the cursor with its `tokenAt` and suggest
   from `/search/suggest.json`, the search page's own file (not a fixed URL, not part
   of the dataset); `validate:site` checks it against `/hosts.json` and `/issues.json`.

@@ -9,6 +9,7 @@
 // says whether a link still works.
 import { type Kind, kindWords, kinds } from '../lib/kinds.ts';
 import { plainNote } from '../lib/markdown.ts';
+import type { Voice } from '../lib/voice.ts';
 import {
   absolute,
   hostPath,
@@ -43,7 +44,7 @@ import type { Snapshot, Store } from './store.ts';
 
 // Bumps with any change to a tool's name, arguments or result shape, so a
 // client that cached tools/list knows to fetch it again.
-export const SERVER_VERSION = '1.0.0';
+export const SERVER_VERSION = '1.1.0';
 
 export class ToolError extends Error {
   code: string;
@@ -84,6 +85,13 @@ const permalink = (id: string) => absolute(linkPath(id));
 const issueNumber = (issue: Issue) => issue.number ?? issue.key;
 const excerptNote =
   'A note whose voice is "excerpt" is most likely a passage from the linked page, not Jamie\'s words; "mixed" is commentary around a quotation.';
+const agentNote =
+  'A note whose voice is "agent" is a summary an agent wrote for Jamie\'s reading queue, not Jamie\'s words.';
+const voiceNotes = (links: Link[], notes: string[]) => {
+  if (links.some((link) => link.voice === 'excerpt' || link.voice === 'mixed'))
+    notes.push(excerptNote);
+  if (links.some((link) => link.voice === 'agent')) notes.push(agentNote);
+};
 
 // A link as every list shows it.
 export function record(data: Dataset, link: Link) {
@@ -106,8 +114,7 @@ export function record(data: Dataset, link: Link) {
 }
 
 function records(data: Dataset, links: Link[], notes: string[]) {
-  if (links.some((link) => link.voice === 'excerpt' || link.voice === 'mixed'))
-    notes.push(excerptNote);
+  voiceNotes(links, notes);
   return links.map((link) => record(data, link));
 }
 
@@ -173,7 +180,7 @@ const searchTool: Tool = {
   name: 'links_search',
   title: 'Search the links',
   description:
-    'Search every public link Jamie Thingelstad has saved since 2005 (titles, notes and hosts), with the site\'s own search index and grammar. The query takes words, "quoted phrases", -word to exclude, and the operators site:host, year:yyyy, wt:351 (a Weekly Thing issue) and kind:video; the other arguments do the same and win over the query. With no words (a host, a year or an issue alone) the answer is exact and newest first. Results are ranked by relevance unless sort says otherwise. Cite a link by its permalink.',
+    'Search every public link Jamie Thingelstad has saved since 2005 (titles, notes and hosts), with the site\'s own search index and grammar. The query takes words, "quoted phrases", -word to exclude, and the operators site:host, year:yyyy, wt:351 (a Weekly Thing issue) and kind:video; the other arguments do the same and win over the query. A bare word matches by its first letters (EDI finds Editor too) and a "quoted" word only whole ("EDI" finds EDI alone); by relevance, whole-word matches come first. With no words (a host, a year or an issue alone) the answer is exact and newest first. Results are ranked by relevance unless sort says otherwise. Cite a link by its permalink. Use this server for the whole saved collection since 2005, each link\'s note and where the Weekly Thing placed it; for what Jamie published about a link, the thingelstad.com archive server (Thingy) and its find_links read the newsletter, the blog and the podcast.',
   inputSchema: {
     type: 'object',
     additionalProperties: false,
@@ -182,7 +189,7 @@ const searchTool: Tool = {
         type: 'string',
         maxLength: 500,
         description:
-          'Words to find, with "phrases", -word, site:, year:, wt: and kind: as on the site\'s search page.',
+          'Words to find, with "phrases" (a "quoted" word is matched whole), -word, site:, year:, wt: and kind: as on the site\'s search page.',
       },
       year,
       host,
@@ -197,7 +204,8 @@ const searchTool: Tool = {
       },
       toread: {
         type: 'boolean',
-        description: 'Only links marked to read later (true) or not (false).',
+        description:
+          'Only links marked to read later (true) or not (false); the mark is cleared as each is read, so true usually finds none.',
       },
       in_weekly_thing: {
         type: 'boolean',
@@ -249,10 +257,6 @@ const searchTool: Tool = {
       throw error;
     }
     const notes = answer.notes;
-    if (!answer.total && answer.mode === 'index')
-      notes.push(
-        'Nothing matched. Each word must start a word in the title, the note or the host; try fewer words or another form of one.',
-      );
     return {
       total: answer.total,
       total_exact: answer.exact,
@@ -322,8 +326,7 @@ const getTool: Tool = {
           : 'Call links_search with words from its title or site:<host> to look for it another way.',
       );
     const appears = data.appearances.get(link.id) ?? [];
-    if (link.voice === 'excerpt' || link.voice === 'mixed')
-      notes.push(excerptNote);
+    voiceNotes([link], notes);
     const twins = (data.savedTwice.get(link.id) ?? [])
       .map((id) => data.byId.get(id)!)
       .filter(Boolean)
@@ -366,7 +369,7 @@ const listTool: Tool = {
   name: 'links_list',
   title: 'List links',
   description:
-    'Every link of one kind of group, newest first, a page at a time: by newest (the whole collection), year (a Central calendar year), host (exactly that host, as its page on the site lists it), kind, tag, or toread. Exact counts; no index needed.',
+    'Every link of one kind of group, newest first, a page at a time: by newest (the whole collection), year (a Central calendar year), host (exactly that host, as its page on the site lists it), kind, tag, or toread (the read-later mark, cleared as each is read, so usually none). Exact counts; no index needed.',
   inputSchema: {
     type: 'object',
     additionalProperties: false,
@@ -413,8 +416,13 @@ const listTool: Tool = {
     if (by === 'newest') {
       list = data.newest;
       pagePath = newestPath;
-    } else if (by === 'toread') list = data.newest.filter((l) => l.toread);
-    else if (by === 'year') {
+    } else if (by === 'toread') {
+      list = data.newest.filter((l) => l.toread);
+      if (!list.length)
+        notes.push(
+          'No link is marked to read later just now: the mark is cleared as each is read, so this list is usually empty.',
+        );
+    } else if (by === 'year') {
       const y = Number(value);
       if (!Number.isInteger(y))
         throw new ToolError(
@@ -569,12 +577,20 @@ const statsTool: Tool = {
       .map(([tag, list]) => ({ tag, links: list.length }))
       .sort((a, b) => b.links - a.links || (a.tag < b.tag ? -1 : 1));
     const numbered = data.issues.filter((i) => i.number !== null);
+    const voices: Record<Voice, number> = {
+      jamie: 0,
+      mixed: 0,
+      excerpt: 0,
+      agent: 0,
+    };
+    for (const link of data.links) if (link.voice) voices[link.voice]++;
     return {
       generated: data.generated,
       totals: {
         links: data.links.length,
         hosts: data.hosts.length,
         with_note: data.links.filter((l) => l.hasNote).length,
+        to_read: data.links.filter((l) => l.toread).length,
         in_weekly_thing: data.appearances.size,
         issues: data.issues.length,
         latest_issue: numbered.length
@@ -583,6 +599,7 @@ const statsTool: Tool = {
         first_saved: data.links[0]?.saved ?? null,
         last_saved: data.links[data.links.length - 1]?.saved ?? null,
       },
+      voices,
       by_year: [...data.byYear]
         .sort((a, b) => a[0] - b[0])
         .map(([y, list]) => ({
@@ -606,7 +623,8 @@ const statsTool: Tool = {
         page: absolute(hostPath(h.host)),
       })),
       notes: [
-        'Years and days are US Central time. Tags are filing marks from the newsletter, not topics.',
+        "Years and days are US Central time. Tags are filing marks, not topics: the newsletter's, and _agent on a note an agent wrote.",
+        "voices counts the notes by who wrote them: jamie (Jamie's words), mixed (commentary around a quotation), excerpt (most likely a passage from the page), agent (a summary an agent wrote for Jamie's reading queue).",
       ],
     };
   },

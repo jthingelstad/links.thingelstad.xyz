@@ -76,7 +76,10 @@ Two things in the data shape the design:
    page excerpts captured by the bookmarklet (3,874 notes open with a quote mark;
    the 2008 median note is 593 characters). From 2017 on they are Jamie's
    commentary, often with a quoted excerpt in a Markdown blockquote. The record page
-   should show both and not label an excerpt as Jamie's words.
+   should show both and not label an excerpt as Jamie's words. Since 2026 a few notes
+   are summaries an agent wrote for Jamie's reading queue: the `_agent` tag records
+   that at the source, and the `agent` label is read from the tag, never from the text
+   (2026-10-24).
 
 ### The join to the Weekly Thing is clean
 
@@ -656,7 +659,9 @@ and nothing more.
 Search is the site's own. The server loads Pagefind's client, packaged beside it from
 the build, and reads the published index over HTTPS, and the browser and the server
 parse a query with one grammar (`src/lib/search-grammar.ts`): one search, one ranking,
-one set of quirks, nothing to keep in step. That replaces the planned in-memory word
+one set of quirks, nothing to keep in step (one step is the server's alone: by relevance
+it puts whole-word matches first, so a bare `EDI` finds EDI before Editor; a quoted word
+is exact on both sides, 2026-10-24). That replaces the planned in-memory word
 index, which would have been a second search with its own ranking and its own answers
 to keep in agreement with the site's. A query with no words (a filter alone) is
 answered from the records in memory, as the site sends it to a year or issue page
@@ -896,7 +901,9 @@ bare records first.
 
 **Voice label:** the excerpt era is 2007 to 2016 after sampling, wider than the 2007
 to 2011 first estimated. Counts: Jamie's words 6,084, mixed 2,270, excerpt 4,569, no
-note 3,601. It is a label, never an assertion.
+note 3,601. It is a label, never an assertion. The fourth label, `agent`, is provenance
+rather than a reading: the reading-queue agent tags every bookmark whose note it writes
+`_agent` (2026-10-24), and the label follows the tag.
 
 ## Risks and unknowns
 
