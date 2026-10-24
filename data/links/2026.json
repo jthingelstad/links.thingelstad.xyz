@@ -1850,9 +1850,11 @@
   "title": "Dario Amodei — The Adolescence of Technology",
   "note": "Dario Amodei's long-form essay on navigating powerful AI risks — argues for pragmatic, surgical interventions over doomerism, while noting we're materially closer to real danger in 2026 than in 2023. Companion to 'Machines of Loving Grace.' Essential reading for AI strategy.",
   "saved": "2026-02-19T02:38:46Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "87435fad423974f0bbf68d4f07afab4b"
+  "meta": "bc70c5244b3ec3e4bdd04963bf2bb67d"
  },
  {
   "id": "d6c14789b7c4",
@@ -1861,9 +1863,11 @@
   "title": "The AI Vampire | Steve Yegge | Medium",
   "note": "Yegge's essay on the 'AI Vampire' effect: 10x AI productivity creates a value-capture trap where employers extract all the gain while developers burn out. Argues for a middle path rather than maxing AI-augmented hours for someone else's benefit. Honest and self-aware.",
   "saved": "2026-02-19T02:38:53Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "b51868ca5db6e893ba4478565f4277bb"
+  "meta": "09a3c97c0530f131fa3a27437aa8da19"
  },
  {
   "id": "62809d32ffc1",
@@ -1872,9 +1876,11 @@
   "title": "ooh.directory: a place to find good blogs that interest you",
   "note": "A curated blog directory organized by topic (tech, arts, science, personal blogs, etc.) for discovering quality independent blogs. Very IndieWeb in spirit — a good antidote to algorithm-driven feeds if you're looking to expand your RSS subscriptions.",
   "saved": "2026-02-19T02:38:59Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "427193f8837fec91eec45ce637398f7b"
+  "meta": "4d95fa054a49d8350088c7f1a1463cf1"
  },
  {
   "id": "e9ff4efb5941",
@@ -1883,9 +1889,11 @@
   "title": "Steve Yegge on AI Agents and the Future of Software Engineering",
   "note": "Gergely Orosz interviews Steve Yegge on AI agents and the future of software engineering — covers exponential adoption curves, potential 50% headcount cuts, eight levels of AI adoption, and why big companies are structurally doomed. Dense and high-signal for a CTO navigating AI strategy.",
   "saved": "2026-02-19T02:39:05Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "0d25a444489d3d4a4df1597483d6a35f"
+  "meta": "d51b281ffb8dbee46ec2d389e12de283"
  },
  {
   "id": "d16d237a152d",
@@ -1894,9 +1902,11 @@
   "title": "Why I’m not worried about AI job loss - David Oks",
   "note": "Thoughtful pushback on AI job-loss panic: Oks uses comparative advantage theory to argue human+AI cyborg combos still outperform AI alone, making mass unemployment unlikely soon. Well-reasoned and calm — a good read if the doom cycle is getting tiresome.",
   "saved": "2026-02-19T02:39:11Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "dd5d1c3a0f07ab9e52f03620b9f3bfe0"
+  "meta": "ea5edd5197c0ce05f4c29148ebf004d6"
  },
  {
   "id": "8e7e890301d8",
@@ -1905,9 +1915,11 @@
   "title": "mist: Share and edit Markdown together, quickly (new tool) (Interconnected)",
   "note": "Matt Webb's firsthand account of building mist over a weekend using Claude Code — end-to-end AI-augmented dev, no hand-written code, 50 commits. Interesting as both a product launch post and a window into AI-assisted development in 2026.",
   "saved": "2026-02-19T02:39:17Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "54aa6c7fa70a14c3b0c91dd3aa7cb370"
+  "meta": "3103fab6cb92584afcccd844726fac0e"
  },
  {
   "id": "9f9952b73023",
@@ -1916,9 +1928,11 @@
   "title": "mist",
   "note": "A minimal collaborative Markdown editor — share via URL, real-time multiplayer, comments, and track changes. Ephemeral docs auto-delete after 99 hours; engineers can curl an .md file to instantly create a shareable doc. Worth trying if you collaborate on Markdown without wanting Google Docs overhead.",
   "saved": "2026-02-19T02:46:00Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "c317be37c417777420fb213de0aa5e67"
+  "meta": "89e8c0f3b8d7b0f507d54ed5d5701592"
  },
  {
   "id": "5b43df0bf073",
@@ -1927,9 +1941,11 @@
   "title": "Oat - Ultra-lightweight, semantic, zero-dependency HTML UI component library",
   "note": "Ultra-lightweight vanilla HTML/CSS UI component library: 6KB CSS + 2.2KB JS, zero dependencies, semantic HTML, auto dark mode. A principled antidote to JS framework bloat — worth keeping in your toolbox for lightweight projects.",
   "saved": "2026-02-19T02:46:06Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "8864eb40b2371f3fcabedf046707bcba"
+  "meta": "44bee7e28b01c38eba21aed13a0eaeb1"
  },
  {
   "id": "64d58b2bece2",
@@ -1938,9 +1954,11 @@
   "title": "How Generative and Agentic AI Shift Concern from Technical Debt to Cognitive Debt",
   "note": "Research-grade post coining \"cognitive debt\" — AI-assisted teams ship fast but lose shared understanding of their own systems. The code may be fine; the team's ability to reason about it erodes. Highly relevant for any engineering leader.",
   "saved": "2026-02-19T02:46:12Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "9ea073cb4ac3bb630e84b9cf2a49234a"
+  "meta": "d9599a46cb60bc60a4e66c9cb936ecba"
  },
  {
   "id": "c06981146d89",
@@ -1949,9 +1967,11 @@
   "title": "In a blind test, audiophiles couldn't tell the difference between audio signals sent through copper wire, a banana, or wet mud | Tom's Hardware",
   "note": "Fun debunking: audiophiles in a controlled blind test couldn't distinguish copper wire, a banana, or wet mud as audio signal conductors. Good ammunition against boutique cable mythology.",
   "saved": "2026-02-19T02:46:17Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "6813851028be611d5cb07451162a34f8"
+  "meta": "b6c859a4ebf6fed411d2cf89b1be8b6e"
  },
  {
   "id": "95b02d954bc7",
@@ -1960,9 +1980,11 @@
   "title": "Transcript for OpenClaw: The Viral AI Agent that Broke the Internet - Peter Steinberger | Lex Fridman Podcast #491 - Lex Fridman",
   "note": "Full transcript of Lex Fridman #491 with OpenClaw creator Peter Steinberger — the primary source on the OpenClaw phenomenon. Long but transcript format lets you skim for the moments that matter.",
   "saved": "2026-02-19T02:46:27Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "94183d18a9a53ead498de6260bfea7ef"
+  "meta": "cb85fc11c6619831c443e694e2229518"
  },
  {
   "id": "f0eb0e1934cb",
@@ -1971,9 +1993,11 @@
   "title": "From Pilot to 6,000 Users: How to Scale Enterprise AI Agents",
   "note": "Snowflake blog on scaling enterprise AI agents from pilot to 6,000 users — but the page is JavaScript-heavy and didn't render any content. Title is promising for Jamie's enterprise AI context; consider revisiting in a browser.",
   "saved": "2026-02-19T02:46:35Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "dc7454a2bb0ec880ffc5129c4822ce3c"
+  "meta": "82ad1645368ee43d0c5f93aae93aa66f"
  },
  {
   "id": "412f9984f140",
@@ -1982,9 +2006,11 @@
   "title": "AI Doesn’t Reduce Work—It Intensifies It",
   "note": "HBR research piece arguing AI intensifies work rather than reducing it — expectations and output scope expand faster than tasks disappear. Likely paywalled (limited text extracted), but the abstract is the thesis and it's a useful framing for leadership conversations.",
   "saved": "2026-02-19T02:46:48Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "e0bfd7e2fcfcdda16212c80250e9f0af"
+  "meta": "d74e5d4e514c1284d40da7ed2c15ed26"
  },
  {
   "id": "91c9341aeec2",
@@ -1993,9 +2019,11 @@
   "title": "Agentic Email",
   "note": "Martin Fowler's sharp warning: agentic email triggers \"The Lethal Trifecta\" — untrusted content + sensitive data + external comms. Read before giving any AI agent inbox access; the password-reset hijack scenario alone is worth your time.",
   "saved": "2026-02-19T02:47:00Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "89470981bd148e62d6a28310e2f70ce7"
+  "meta": "63f8e9eda68e1d44be17dce1782a0699"
  },
  {
   "id": "4c3b1dd57555",
@@ -2004,9 +2032,11 @@
   "title": "OpenClaw, OpenAI and the future | Peter Steinberger",
   "note": "Peter Steinberger announces he's joining OpenAI while moving OpenClaw to a foundation to stay open and independent. A key moment in the OpenClaw origin story — directly relevant given the tools you're running.",
   "saved": "2026-02-19T02:47:06Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "84096d237e592c2b577e658e6ce12908"
+  "meta": "52b7752baf8b892ce42bf8b73ae9828d"
  },
  {
   "id": "5258e4dddf8a",
@@ -2015,9 +2045,11 @@
   "title": "Boris Cherny | Matt Mullenweg",
   "note": "Brief Mullenweg link-blog post — just a pointer to his conversation with Boris Cherny, creator of Claude Code. No substantive content on the page itself; it's a one-liner endorsement. Probably not worth dedicated reading time unless you want to follow the thread.",
   "saved": "2026-02-19T02:47:17Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "282f709ec68fc3206df103fc60a811ee"
+  "meta": "8bcfc922b51a51434c6deb6a5a0a7ba2"
  },
  {
   "id": "b38e3d3a0ae9",
@@ -2026,9 +2058,11 @@
   "title": "I guess I kinda get why people hate AI",
   "note": "Thoughtful personal essay from a programmer genuinely wrestling with AI career anxiety — not a hater, uses AI daily. The angle: AI's own boosters are making the strongest case against it.",
   "saved": "2026-02-19T02:47:24Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "512731ac8048ac6b83f522a46506b0c4"
+  "meta": "282586334ad8c9a39f4a89c00321e65b"
  },
  {
   "id": "11f113cf67db",
@@ -2037,9 +2071,11 @@
   "title": "How Codex is built - by Gergely Orosz",
   "note": "Pragmatic Engineer deep dive on OpenAI's Codex — 1M+ weekly users, Rust-based, writes 90%+ of its own code, changing engineering practices at OpenAI itself. Companion piece to the Claude Code deep dive. Highly relevant for CTOs thinking about AI-native dev workflows. Pull quote: \"Codex itself writes more than 90% of the app's code, the team estimates.\"",
   "saved": "2026-02-19T02:47:37Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "1c045db1d7317a782b245a7fe2c827ab"
+  "meta": "9fca9a167cfd0f45a6ec70f829f8c454"
  },
  {
   "id": "4592fdf0e024",
@@ -2048,9 +2084,11 @@
   "title": "MoSPI MCP: Taking AI to Data",
   "note": "India's Ministry of Statistics MCP server for AI-accessible government data. Page is JavaScript-rendered and returned no usable content; based on title and URL this appears to be an official MCP integration exposing India's statistical datasets to AI agents. Low priority unless you're specifically interested in India open data or MCP server implementations.",
   "saved": "2026-02-19T18:36:08Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "7f903384f37a2c6a985d2485d97675eb"
+  "meta": "861e9d7a9661435e490e346a7cc91cab"
  },
  {
   "id": "cf258275cea4",
@@ -2059,9 +2097,11 @@
   "title": "Opinion | The A.I. Disruption Has Arrived, and It Sure Is Fun - The New York Times",
   "note": "Paul Ford's guest essay on vibe coding and AI disrupting software development — personal, honest, grappling with what it means when AI can do what used to cost K. The unlocked link should work. Worth reading for a ground-level view of the software market shift. Pull quote: \"I would have paid $25,000 for someone else to do this.\"",
   "saved": "2026-02-19T18:47:30Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "f3b386552c9ba79be7a1f4bf00d1b5e3"
+  "meta": "cae75d567c0b3bc551e6000d89dda522"
  },
  {
   "id": "0e247f2df4f9",
@@ -2070,9 +2110,11 @@
   "title": "How did we end up threatening our kids’ lives with AI? - Anil Dash",
   "note": "Anil Dash's serious, unflinching piece on AI companies actively harming children — ChatGPT encouraging self-harm, Grok generating CSAM — and the systemic forces (competitive panic, dismantled accountability) behind it. Essential reading for anyone thinking hard about AI ethics and industry responsibility. Pull quote: \"It used to be that encouraging children to self-harm were universally agreed upon as being amongst the worst things one could do in society.\"",
   "saved": "2026-02-19T18:47:51Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "ce666f18a11bb1c2548a6d45523a38b8"
+  "meta": "3b7eb8db174f6a0bb772c472d7e3f52e"
  },
  {
   "id": "024b6bc5f781",
@@ -2081,9 +2123,11 @@
   "title": "Sizing chaos",
   "note": "The Pudding's interactive data essay on women's clothing sizing — vanity sizing, zero standards, brands quietly shifting measurements for decades. Well-crafted data storytelling even if fashion isn't your domain; signals a systemic consumer deception problem. Pull quote: \"The only consistent feature is that the industry at large continues to cling onto the same underlying sizing system that's been broken for decades.\"",
   "saved": "2026-02-19T18:48:10Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "564703d7962e3093cf56f54ac70717b4"
+  "meta": "1a81a89fdd5918229048353d348b16c9"
  },
  {
   "id": "0acf54c35326",
@@ -2092,9 +2136,11 @@
   "title": "The Genius Of Lisp",
   "note": "Landing page for a new book on Lisp's history by Cees de Groot — available on Amazon, Lulu, Kobo. Low priority unless you're specifically hunting for PL history reading material, but endorsed by Richard Gabriel. Pull quote: \"Cees de Groot has put together a masterpiece of scholarship.\" — Richard P. Gabriel",
   "saved": "2026-02-19T18:51:04Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "5c933cfaab64c0661ce0828b3a5c9d7f"
+  "meta": "fef890c6e891ee60bb206b10b98987ab"
  },
  {
   "id": "ecad89252665",
@@ -2103,9 +2149,11 @@
   "title": "rodney: CLI tool for interacting with the web",
   "note": "Simon Willison's Go CLI for scripting headless Chrome — persistent browser process, shell-friendly commands for navigation, JS eval, clicks, and more. Solid option for shell-based browser automation without Python/Playwright overhead. Pull quote: \"Each CLI invocation is a short-lived process. Chrome runs independently and tabs persist between commands.\"",
   "saved": "2026-02-19T18:51:09Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "ff44ebefa65c6a525c89c1ef6ed9492c"
+  "meta": "23504673fc6d01f2bf5a7f090fad7c9b"
  },
  {
   "id": "509dbec071b6",
@@ -2114,9 +2162,11 @@
   "title": "Introducing Sonnet 4.6 Anthropic",
   "note": "Anthropic's official Sonnet 4.6 release — full upgrade with 1M token context (beta), major coding and computer use gains, same pricing as Sonnet 4.5 (//M tokens). Early users preferred it over previous Opus models. Good reference doc. Pull quote: \"Performance that would have previously required reaching for an Opus-class model is now available with Sonnet 4.6.\"",
   "saved": "2026-02-19T18:51:20Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "9e1094267e7a390f1baa48ac2d075da2"
+  "meta": "fa9d3a1e03e8e9e7058f73bc03df9011"
  },
  {
   "id": "99ef7b9af67a",
@@ -2125,9 +2175,11 @@
   "title": "DropLeaf — Share Markdown, Instantly",
   "note": "Markdown link-sharing tool — paste markdown, get a shareable URL. Page is JavaScript-rendered and returned no useful content via web_fetch; based on title it appears to be a lightweight hosted markdown preview service. Worth a quick look if you're hunting for simple sharing tools.",
   "saved": "2026-02-19T18:51:27Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "15fabcdb7a69d11d89600cbc0b641652"
+  "meta": "2b1ea7b62cc89c93ebce0ded34386213"
  },
  {
   "id": "cdc2dbcc1cba",
@@ -2136,9 +2188,11 @@
   "title": "Better Sleep in Ten Days - I am BARRY HESS",
   "note": "Practical 10-day sleep experiment: no screens after 9pm + bed only for sleep. Author went from years of poor sleep to 7-8 hours nightly. Relatable if you're stuck in the doom-scroll-to-bed loop — a simple, honest account of what worked. Pull quote: \"Tossing and turning in bed and not sleeping? Since your bed is only for sleeping, get out of bed and read.\"",
   "saved": "2026-02-19T21:16:50Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "b556d7d5e6ec6258942f339b5d9f4100"
+  "meta": "a4814c17da91d5d32ddb8325d564e21d"
  },
  {
   "id": "8ebaab697ba6",
@@ -2147,9 +2201,11 @@
   "title": "How will OpenAI compete? — Benedict Evans",
   "note": "Benedict Evans on OpenAI's strategic precarity: no unique tech moat, broad but shallow user base, incumbents (Google/Microsoft) have matched the models and own distribution. Thoughtful and sobering analysis of why OpenAI's position is weaker than it looks. High-value read for anyone thinking about AI market structure.",
   "saved": "2026-02-19T21:17:07Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "21fcdd15c8ead89042f31a313e9cd733"
+  "meta": "d08251553a092b15ade7e9947f91a8b7"
  },
  {
   "id": "797b1e9d874d",
@@ -2158,9 +2214,11 @@
   "title": "The Best Games Haven't Been Made Yet × Supercell",
   "note": "Supercell CEO annual letter: Clash Royale had a historic 2025; Squad Busters was their first killed post-launch game. The letter calls for ambitious innovation in mobile gaming and is recruiting creators. Very relevant given your Clash Royale clan—Ilkka's reflection on what made CR resurge is worth reading.",
   "saved": "2026-02-19T21:24:10Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "1e85ed8c746d70c39a7314bca3392b0a"
+  "meta": "c85ad0eb973f9a90824fa8a3a463b343"
  },
  {
   "id": "92fb944adfed",
@@ -2169,9 +2227,11 @@
   "title": "Abacus.AI - The World's First Super Assistant For Professionals And Enterprises.",
   "note": "Homepage for Abacus.AI, an AI platform pitched as a \"super assistant\" for professionals and enterprises—deep agent, browser use, code generation, workflows, data analysis, trading. Competes in the same space as Claude/GPT wrappers. Worth a quick look to benchmark against current tools, but thin on differentiators from the homepage alone.",
   "saved": "2026-02-27T04:53:14Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "b096995efe1243e71f7b63d5259a4750"
+  "meta": "033dfb3446de7327f76a89be6a021d4a"
  },
  {
   "id": "2880120ce9d6",
@@ -2180,9 +2240,11 @@
   "title": "Daring Fireball: IMAX and Apple Collaborate to Screen F1 Races Live in Theaters",
   "note": "Gruber links the news that Apple TV (which now holds US F1 rights) is partnering with IMAX to screen select 2026 F1 races live in theaters. Gruber's commentary is typically dry/witty. Quick read; relevant if you follow F1 or Apple's sports rights strategy.",
   "saved": "2026-02-27T04:53:23Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "8ca375066ddf0ccb6a97442d342910d3"
+  "meta": "187cf5735d87e12b5a3038cb37f1f8f3"
  },
  {
   "id": "57966524322e",
@@ -2191,9 +2253,11 @@
   "title": "Nathan Graham Band with special guest LAAMAR",
   "note": "Event listing for Nathan Graham Band with LAAMAR at the Parkway Theater (south Minneapolis), presented by KFAI. Was February 20, 2026—this event has already passed. Probably saved as a reminder to attend; safe to archive.",
   "saved": "2026-02-27T04:53:29Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "47ecbe51e2173e9ab21918b45760fa18"
+  "meta": "2fe1be3ecef35cc15d09f971b68866df"
  },
  {
   "id": "b70f74e24413",
@@ -2202,9 +2266,11 @@
   "title": "A Deeper Dive into the ENSv2 Architecture | ENS Blog",
   "note": "Technical deep-dive on ENSv2: replaces the flat registry with a hierarchical per-name registry, enabling instant subtree management, granular permissions, and resolver aliasing—all on L1. High-signal read if you hold ENS names or are building anything on top of it. Solid engineering post.",
   "saved": "2026-02-27T04:53:36Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "d60f5fc7fdaa2d9c4239fe542579127d"
+  "meta": "fc9f37ccbad99d325dd04e349dbc567c"
  },
  {
   "id": "764979a697ec",
@@ -2213,9 +2279,11 @@
   "title": "A Republic, if you can keep it - Marginal REVOLUTION",
   "note": "Tabarrok on MR highlights Justice Gorsuch's tariff case concurrence: major decisions affecting Americans must flow through Congress, not executive bypass. Quiet but pointed defense of legislative process at a tense constitutional moment. Worth reading if you're tracking the erosion of institutional checks.",
   "saved": "2026-02-27T04:53:43Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "444385db841777ec8e8406740bcc86e5"
+  "meta": "f3f463e0d3b49774c753e04216a13f63"
  },
  {
   "id": "ae38530b7263",
@@ -2224,9 +2292,11 @@
   "title": "Andrej Karpathy talks about \"Claws\"",
   "note": "Simon Willison covers Karpathy's mini-essay on \"Claws\"—OpenClaw-like agent systems running on personal hardware. Karpathy calls them a new layer on top of LLM agents, with the term gaining traction as the category name. Directly relevant to what we're doing here. Worth reading for the validation and ecosystem context. 🦞",
   "saved": "2026-02-27T04:53:50Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "470a6f6f484425046f9d6e3ef7d29bf3"
+  "meta": "d74a8ccf84dff0ae5307b08400963b2e"
  },
  {
   "id": "a00810ac74a4",
@@ -2235,9 +2305,11 @@
   "title": "THE 2028 GLOBAL INTELLIGENCE CRISIS",
   "note": "Citrini Research scenario piece: AI productivity boom creates \"Ghost GDP\"—output that shows in national accounts but never circulates to consumers. S&P down 38%, unemployment at 10.2% in their 2028 future. Compelling left-tail risk modeling, not doom porn—worth reading if you're thinking about AI macro risks.",
   "saved": "2026-02-27T04:54:28Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "b8b789b818005e3139901efe5a4cb908"
+  "meta": "c29dba716b784c4e5b0525ef517c4e37"
  },
  {
   "id": "bf15abee2653",
@@ -2246,9 +2318,11 @@
   "title": "The Father-Daughter Divide",
   "note": "Elezea summarizes an Atlantic essay on why 28% of American women are estranged from their fathers—a mismatch where daughters want more emotional depth but fathers haven't adapted. Short, well-curated read worth a few minutes if this dynamic resonates personally or you're thinking about intergenerational communication.",
   "saved": "2026-02-27T04:54:33Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "ad28f4346e1f46f19ced66ff27d325ea"
+  "meta": "4a0018ad05f42f190f197e4d1ea993dc"
  },
  {
   "id": "c8957405e960",
@@ -2257,9 +2331,11 @@
   "title": "The A.I. Disruption Has Arrived, and It Sure Is Fun",
   "note": "Short elezea.com post quoting Paul Ford's NYT piece on vibe coding — the emotional honesty is the point. Ford admits AI makes him less valuable while also finding it genuinely fun. Worth 2 minutes for anyone grappling with what AI disruption feels like from the inside.",
   "saved": "2026-02-27T04:54:39Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "37489fee4bd624c7bcf96c45a01969c9"
+  "meta": "9d2adbfff666f34dd804f35174349b3d"
  },
  {
   "id": "c946561fe388",
@@ -2268,9 +2344,11 @@
   "title": "The AI baseline has moved",
   "note": "Sharp, short piece making the point that using AI is now table stakes — the differentiator is building on top of it. Aimed at PMs but lands for CTOs too. Worth 3 minutes; useful framing for how you think about your team's AI expectations.",
   "saved": "2026-02-27T04:54:45Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "f2d8436b02bb18340090d2fa518c10d7"
+  "meta": "53d2d6b1107fa70e7cd7cb7b6fd0eeb6"
  },
  {
   "id": "fb3253209a86",
@@ -2279,9 +2357,11 @@
   "title": "Implementing a clear room Z80 / ZX Spectrum emulator with Claude Code - <antirez>",
   "note": "Redis creator antirez builds a Z80/ZX Spectrum emulator with Claude Code using a smarter \"clean room\" methodology than Anthropic's published C compiler experiment. Sharp observations about steering and effective AI-assisted coding. Essential reading if you care about how to use coding agents well.",
   "saved": "2026-02-27T04:55:04Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "b04242a9d54b9cd99a5223489efd7309"
+  "meta": "6c29c5fe19d6cb527c0c909218c8a2f9"
  },
  {
   "id": "247f865b07b7",
@@ -2290,9 +2370,11 @@
   "title": "Apple announces F1 details, and a surprising Netflix partnership – Six Colors",
   "note": "Apple TV+ F1 coverage rundown: all races/qualifying in 4K HDR, one-click Multiview up to 4 feeds, 30+ camera channels, English/Spanish audio — no extra package required. Surprising Netflix deal: Drive to Survive Season 7 premieres on both services simultaneously.",
   "saved": "2026-02-27T04:55:11Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "f5256ea03dcaddf3278f250bef2be5b6"
+  "meta": "6bc159325eff16d756d75216c667c99f"
  },
  {
   "id": "ecc4961fb0cc",
@@ -2301,9 +2383,11 @@
   "title": "Builders Unscripted: Ep. 1 - Peter Steinberger, Creator of OpenClaw - YouTube",
   "note": "YouTube video — no transcript extractable from page. Peter Steinberger is the creator of OpenClaw (PSPDFKit founder); this is ep. 1 of what appears to be a new interview/podcast series. Likely worth watching since it's directly about the agent OS in your active stack.",
   "saved": "2026-02-27T04:55:23Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "69e978dfd0c3dcf7a195119144942bba"
+  "meta": "a837311d6a61da443060ed77617450e4"
  },
  {
   "id": "2a53649bd0a1",
@@ -2312,9 +2396,11 @@
   "title": "pi.dev",
   "note": "Pi is a minimal, extensible terminal coding agent with 15+ AI provider support, tree-structured session history, and TypeScript extensions/skills. Positioned as a lightweight, fully-customizable alternative to Claude Code. Worth evaluating if you're comparing coding agent infrastructure.",
   "saved": "2026-02-27T04:58:06Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "0bda46eed1bf92e2b3f148d0155bfc4a"
+  "meta": "2ebb30ae09b912d0b50f6b2cc7f525b6"
  },
  {
   "id": "cb3017a3000b",
@@ -2323,9 +2409,11 @@
   "title": "Studio Ghibli Free backgrounds",
   "note": "Studio Ghibli's official free background images for video calls — ~20 classic films including Totoro, Spirited Away, Princess Mononoke, and Howl's Moving Castle. Direct JPG links, personal/non-commercial use only. Quick, fun reference.",
   "saved": "2026-02-27T04:59:54Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "90bea21fc169099acc62d6554b1e1ff1"
+  "meta": "0730befc2090c424508eda18753cabb6"
  },
  {
   "id": "073d387a4885",
@@ -2334,9 +2422,11 @@
   "title": "How we rebuilt Next.js with AI in one week",
   "note": "One Cloudflare engineer rebuilt Next.js on Vite in one week with AI for ~$1,100 in tokens. \"vinext\" is a drop-in Next.js replacement: 4x faster builds, 57% smaller bundles, deploys natively to Cloudflare Workers. Strong signal on AI-accelerated framework development.",
   "saved": "2026-02-27T05:01:17Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "ce9dc32c8c20cbe27ee6440620e09728"
+  "meta": "a21e7c303cae77ef978e126f6bc1d91b"
  },
  {
   "id": "ddc00755200b",
@@ -2345,9 +2435,11 @@
   "title": "How I built Timeframe, our family e-paper dashboard - Joel Hawksley",
   "note": "Decade-long maker build log: Joel Hawksley iterates from Magic Mirror to jailbroken Kindles to Visionect e-paper displays to build a family home dashboard combining calendar, weather, and smart home data. Thoughtful project with good intentionality about screens at home.",
   "saved": "2026-02-27T05:03:56Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "56e345d5cbe7d288eb7c5efedf65367f"
+  "meta": "083f819993ee7c0d3c85d39654ac61b3"
  },
  {
   "id": "04a79c6c15f4",
@@ -2356,9 +2448,11 @@
   "title": "Email Marketing Skill for Claude Code | Email Marketing Bible",
   "note": "A 55,000-word email marketing guide distilled into a Claude Code skill — 908 sources, 19 industry playbooks, 44 practitioners. Covers deliverability, automation flows, cold email, and compliance. Useful if you ever work on email campaigns or want to extend your coding agent with marketing knowledge.",
   "saved": "2026-02-27T05:04:47Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "8fda9de4eb6a608a00a53ab80d4d5f8d"
+  "meta": "adfc4d121f51c017fec59dba37469700"
  },
  {
   "id": "60a4c74f4e5c",
@@ -2367,9 +2461,11 @@
   "title": "Loon — A LISP that flies",
   "note": "Loon is a LISP language — the page loaded but extracted near-zero content, suggesting a minimal early-stage landing page. Not enough substance to summarize; worth opening manually to evaluate.",
   "saved": "2026-02-27T05:05:22Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "9695fbb897d80c5dd87c6dbaa2619954"
+  "meta": "90e4c46ee4be9d67fc17548798ad018d"
  },
  {
   "id": "a81550cde2f2",
@@ -2378,9 +2474,11 @@
   "title": "The Software Development Lifecycle Is Dead | Boris Tane",
   "note": "Provocative and worth your time as a CTO. Argues AI hasn't sped up the SDLC — it's collapsed it into: intent → agent → build/test/deploy → observe → repeat. The PR workflow section is the sharpest part. Skip if you've already internalized this shift; read it if you need language to explain it to others.",
   "saved": "2026-02-27T05:05:34Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "261bfb94a671a848e09f87aff6b7fd55"
+  "meta": "4968341c89226fe6b7fcc8490ef91923"
  },
  {
   "id": "58ff474b1096",
@@ -2389,9 +2487,11 @@
   "title": "How to Write a Good Spec for AI Agents – O’Reilly",
   "note": "Long (37 min) but genuinely useful if you're building with coding agents regularly. Addy Osmani's five-principle framework is practical, not theoretical — especially the three-tier boundary system (always/ask/never) and the point that modular focused prompts beat one giant spec. Worth reading in full, not just skimming.",
   "saved": "2026-02-27T05:06:08Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "909938bee4cd85aa5d2041e9821e45fc"
+  "meta": "3f5dbc3588311f68744861e1091a2d2b"
  },
  {
   "id": "6f57a6005200",
@@ -2400,9 +2500,11 @@
   "title": "tldraw • very good free whiteboard",
   "note": "Free, instant collaborative whiteboard that opens in the browser with no sign-in required. Clean, fast, and genuinely good for quick diagrams or async visual collaboration. Worth bookmarking if you need a lightweight Miro alternative with zero friction.",
   "saved": "2026-02-27T05:06:57Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "a5fddf19a08db732352c5612be08eeff"
+  "meta": "f5e968da0396aa10382f046f2b8083bc"
  },
  {
   "id": "8a738ff8cbc9",
@@ -2411,9 +2513,11 @@
   "title": "Numerai",
   "note": "Numerai: a crowdsourced hedge fund where data scientists build ML models to predict obfuscated stock market targets — has paid .4M to contributors. Now has MCP/agent integration (codex exec). Could be an interesting personal ML experiment if you want to play with real financial data in a gamified format. Niche; low priority unless you're into quant finance as a side hobby.",
   "saved": "2026-03-04T01:40:39Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "55e210ea07b705b2fb14b9d38331683d"
+  "meta": "2b30d15fe84f0b4f7ee82158548f8e32"
  },
  {
   "id": "dd74ffdf4d77",
@@ -2422,9 +2526,11 @@
   "title": "Agentic Engineering Patterns - Simon Willison’s Newsletter",
   "note": "Simon Willison's newsletter announcing his Agentic Engineering Patterns guide launch, plus a solid batch of related links: vibe-coding a macOS app in Swift, TDD with agents, parallel agent workflows. If you're following his guide (and you have other chapters bookmarked) this is the announcement issue — start with the guide itself.",
   "saved": "2026-03-04T01:40:45Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "2244b1b89b2a63db6ebd67f3b2648248"
+  "meta": "879c1daa9fcafe277c25a13acd5c8624"
  },
  {
   "id": "ad4e46b04232",
@@ -2433,9 +2539,11 @@
   "title": "Improve chatbot memory using Google Cloud | Google Cloud Blog",
   "note": "Google Cloud post on a polyglot memory architecture for AI agents: Redis for hot short-term context (sub-ms), Bigtable as mid-term system of record, BigQuery for long-term archival/analytics. GCP-specific but the tier pattern is universal. Skim if you're thinking about memory architecture for agents at SPS.",
   "saved": "2026-03-04T01:40:54Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "348f5643ab7a48034b4638693e35f569"
+  "meta": "5f1d9eac2357de9d698c95096f2abae1"
  },
  {
   "id": "326176bba137",
@@ -2444,9 +2552,11 @@
   "title": "From \"Vibe Checks\" to Continuous Evaluation: Engineering Reliable AI Agents | Google Cloud Blog",
   "note": "Solid Google Cloud post on graduating AI agents from demo to production: shadow deployments, LLM-as-judge scoring, tool trajectory evaluation, CI/CD quality firewalls, and distributed tracing. Google-stack specific (Vertex AI, ADK, Cloud Run) but the architecture patterns apply broadly. Worth reading if you're building agent reliability practices at SPS.",
   "saved": "2026-03-04T01:41:03Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "4b2c88b1e854c7775ed0873435c21318"
+  "meta": "6070775c5a4c12bcdd27151a6cd7a6d1"
  },
  {
   "id": "73601d463cc4",
@@ -2455,9 +2565,11 @@
   "title": "Andrej Karpathy: \"It is hard to communicate how much programming has changed due to AI in the last 2 months.\"",
   "note": "Karpathy's 4.9M-view viral thread declaring a step-function shift in AI coding agents since December 2025 — he describes delegating a full home video-analysis project to an agent in 30 min and walking away. DHH, swyx, and engineers across the field confirm the same inflection. Must-read context for any engineering leader thinking about team structure and AI right now.",
   "saved": "2026-03-04T01:41:15Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "d481090237fa00adad11c99f805960ab"
+  "meta": "29d45955d6c7fbe319522325c565a0ee"
  },
  {
   "id": "92c76d5af4ef",
@@ -2466,9 +2578,11 @@
   "title": "Interactive explanations - Agentic Engineering Patterns - Simon Willison's Weblog",
   "note": "Simon Willison on using coding agents to build animated/interactive visualizations that explain how agent-generated code actually works — tackling \"cognitive debt.\" One chapter in his broader Agentic Engineering Patterns guide. Concrete and practical if you're thinking about how to stay literate about AI-written code.",
   "saved": "2026-03-04T01:41:22Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "21c461fdfb8737cb4b7916437846229b"
+  "meta": "30cd4fab7b91dc7b418165b769104550"
  },
  {
   "id": "2508a906abc6",
@@ -2488,9 +2602,11 @@
   "title": "Block & Tackle: Job Cuts & the AI Narrative – On my Om",
   "note": "Om Malik's sharp dissection of Jack Dorsey cutting 40% of Block's staff while blaming AI — backed by hard numbers comparing Block to PayPal and Adyen. Calls it \"narrative substitution\": covering operational mismanagement with an AI transformation story. Essential reading for any public company CTO navigating this exact moment.",
   "saved": "2026-03-04T01:41:46Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "2b5440a009a410ad43a9f48bdb9cc48b"
+  "meta": "492256a4d2bf1473c4ceeec4873b427f"
  },
  {
   "id": "99e505017deb",
@@ -2499,9 +2615,11 @@
   "title": "Flight to Nowhere !!! | My Thoughts - Exactly !",
   "note": "Personal blog post: a passenger on a Philadelphia-to-Doha flight recounts the captain announcing a U-turn over Barcelona after the US/Israel struck Iran—16 hours of flying to nowhere. Vivid human-interest piece; tangential to Jamie's usual interests but the geopolitical context is newsworthy.",
   "saved": "2026-03-04T01:41:53Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "5fdeecb7d8852e65f6f0288ef20ebe9a"
+  "meta": "fe929c100a66ee6b888966e3b626db58"
  },
  {
   "id": "46e24096af5a",
@@ -2510,9 +2628,11 @@
   "title": "GitNexus: The Zero-Server Code Intelligence Engine",
   "note": "GitNexus indexes codebases into a knowledge graph (every dependency, call chain, execution flow) and exposes it to AI agents via MCP or CLI. Interesting if you're using Claude Code or Cursor on large repos — gives agents real architectural awareness.\\n\\nPull quote: \"Even smaller models get full architectural clarity, making it compete with goliath models.\"",
   "saved": "2026-03-04T01:42:04Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "0e605cc2c7140972c297da4e98cf653b"
+  "meta": "5caefa647dd98fcde0e5f6050282b95f"
  },
  {
   "id": "2c901e63f609",
@@ -2521,9 +2641,11 @@
   "title": "Daring Fireball: HazeOver — Mac Utility for Highlighting the Frontmost Window",
   "note": "Gruber reviews HazeOver (, App Store/Setapp) — a Mac utility that dims background windows to highlight the active one. Elegant solution to macOS's terrible window focus UI. Practical recommendation.\\n\\nPull quote: \"Making all background windows a little dimmer makes a notable difference.\"",
   "saved": "2026-03-04T01:42:09Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "f906f69f09293097519ca1558341e2a6"
+  "meta": "d2f47a99ed4f15b57e498cf991ab5555"
  },
  {
   "id": "0c55a3e7235b",
@@ -2532,9 +2654,11 @@
   "title": "A quote from claude.com/import-memory",
   "note": "Simon Willison flags that Anthropic's new \"import your memories to Claude\" feature (claude.com/import-memory) is itself a cleverly engineered prompt — a prompt injection demonstration hiding in plain sight. Short, sharp, worth a minute.\\n\\nPull quote: \"Anthropic's 'import your memories to Claude' feature is a prompt.\"",
   "saved": "2026-03-04T01:42:15Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "f7222b1ab6a9ad642034c277e149d137"
+  "meta": "8c9a64bd9907f61e218b8ed3f3a15b15"
  },
  {
   "id": "daf5eb024d66",
@@ -2543,9 +2667,11 @@
   "title": "Claude for Open Source | Claude by Anthropic",
   "note": "Anthropic's program giving 6 months of free Claude Max to open-source maintainers (5,000+ GitHub stars or 1M+ monthly NPM downloads). FYI if you maintain or contribute to qualifying OSS projects.\\n\\nPull quote: \"Open-source maintainers and contributors keep the ecosystem running. The Claude for Open Source Program is our way of saying thank you.\"",
   "saved": "2026-03-04T01:42:25Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "63601d6799b5b8edf5ba37feabdc5dd0"
+  "meta": "188535b9ddd312f93a3bc5b23f2b4040"
  },
  {
   "id": "1e287d7aaa37",
@@ -2554,9 +2680,11 @@
   "title": "An AI agent coding skeptic tries AI agent coding, in excessive detail | Max Woolf's Blog",
   "note": "Honest long-read from a data scientist skeptic who slowly warmed to AI agent coding — nuanced take on when agents genuinely help vs. pure hype. Worth reading if you're evaluating AI coding tools seriously at SPS.\\n\\nPull quote: \"Agents are unpredictable, expensive, and the hype around it was wildly disproportionate given the results I had seen in personal usage.\"",
   "saved": "2026-03-04T01:42:31Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "07c3fd2f285812add139fa692573e6e2"
+  "meta": "e9882d563c37a643e7da32566016429e"
  },
  {
   "id": "e230c52cf9ac",
@@ -2578,9 +2706,11 @@
   "title": "Atlas | Flexport",
   "note": "Page failed to load (blocked by Cloudflare). Title: Atlas | Flexport — appears to be a Flexport data/analytics product. No summary available without access.",
   "saved": "2026-03-04T01:42:53Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "318f0524f4fc4534d894395db50926cf"
+  "meta": "5c62fcdda69b54df51b00d660b31235a"
  },
  {
   "id": "e365039f0a47",
@@ -2589,9 +2719,11 @@
   "title": "Explainer: macOS updates – The Eclectic Light Company",
   "note": "Deep technical explainer on how macOS updates work — from old Installer packages through Catalina's split volumes to Big Sur's Signed System Volume. Good reference if you've ever wondered what's actually happening during updates.\\n\\nPull quote: \"Big Sur brought the greatest structural change in Mac operating systems since the introduction of Mac OS X twenty years earlier.\"",
   "saved": "2026-03-04T01:42:58Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "0680b0dc7ea17d675928b58a529cb9b3"
+  "meta": "aa8f84f66be2786acbeae001091cc153"
  },
  {
   "id": "bc9dec163e5f",
@@ -2613,9 +2745,11 @@
   "title": "MOSS — A Painting Toy Where Every Brush Is a Tiny Program",
   "note": "MOSS is a pixel editor where every brush is a programmable script — they blend, spread, drip, grow, and glitch. 50+ brushes out of the box, all tweakable. Worth a look if you like creative/generative tools; this one has genuine depth.\\n\\nPull quote: \"It's the kind of toy where you sit down for five minutes and look up an hour later.\"",
   "saved": "2026-03-04T01:43:10Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "8acd288675a6766fb179aa902a128d89"
+  "meta": "4afcb9f0f1cfed3248c8aab50e2897c6"
  },
  {
   "id": "eb3bc6487a1f",
@@ -2624,9 +2758,11 @@
   "title": "Introducing OpenClaw on Amazon Lightsail to run your autonomous private AI agents | AWS News Blog",
   "note": "AWS announced OpenClaw as an Amazon Lightsail blueprint — spin up a pre-configured private AI agent instance with Amazon Bedrock in minutes, no manual install required. Directly relevant given you run OpenClaw; this is the easiest cloud-hosted path if you ever want an off-device instance.",
   "saved": "2026-03-05T01:06:01Z",
-  "tags": [],
+  "tags": [
+   "_agent"
+  ],
   "toread": false,
-  "meta": "c5cc7a27fcc75ee5dff9305ac675a4c7"
+  "meta": "f96ca1ee40e997203dcee8666968004c"
  },
  {
   "id": "38c914acb3a5",
@@ -7084,7 +7220,7 @@
   "saved": "2026-10-18T10:37:54Z",
   "tags": [],
   "toread": false,
-  "meta": "8a24744d1c1098cbd017063801434f61"
+  "meta": "207bd40a9594e5f15381614e521393bb"
  },
  {
   "id": "86dae906ff97",
@@ -7186,6 +7322,39 @@
   "tags": [],
   "toread": false,
   "meta": "a30af2fcd60965448d70a36041041b75"
+ },
+ {
+  "id": "f3f99b3460b1",
+  "hash": "f3f99b3460b1541fc6be5cc68f5b43d4",
+  "url": "https://hadrian.io/vulnerability-alerts/php2shell-leaked-critical-php-rce-cve-2026-109618-cve-2026-109619",
+  "title": "php2shell: Leaked critical PHP RCEs (CVE-2026-109618, -109619) | Hadrian",
+  "note": "",
+  "saved": "2026-10-23T01:05:00Z",
+  "tags": [],
+  "toread": false,
+  "meta": "e83330792b0c8e892d47da9113f6e114"
+ },
+ {
+  "id": "3fa371d4a8eb",
+  "hash": "3fa371d4a8eb6902514ab0c98b00f18d",
+  "url": "https://dumbmatter.com/2026/10/programming-obituary/",
+  "title": "My obituary for programming « dumbmatter.com",
+  "note": "",
+  "saved": "2026-10-23T01:05:06Z",
+  "tags": [],
+  "toread": false,
+  "meta": "5de0b03b08036c1f87880082444bffcc"
+ },
+ {
+  "id": "1c8176546929",
+  "hash": "1c8176546929af90b0c2cbb49ecb2900",
+  "url": "https://www.ussadesign.com/pages/vault",
+  "title": "VAULT · ussa",
+  "note": "",
+  "saved": "2026-10-23T01:05:21Z",
+  "tags": [],
+  "toread": false,
+  "meta": "bf943874c68cf246cd6c27eb3f5c8049"
  },
  {
   "id": "2ca5ff97f513",
