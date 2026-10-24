@@ -1,11 +1,10 @@
-// Search on /search/. Pagefind's index (written after the build over the
-// record pages only) is loaded from /pagefind/. The query and the options are
-// kept in the address so a search can be shared.
+// Search on /search/. Pagefind's index is loaded by pagefind.ts, which the
+// home page's live results share. The query and the options are kept in the
+// address so a search can be shared.
 //
 // The grammar (site:, year:, wt:, kind:, "phrases", -word), the term sent to
 // Pagefind and the exact check on each result live in
 // src/lib/search-grammar.ts, which the MCP server's links_search shares.
-// Year, issue, kind, in-a-Weekly-Thing and has-a-note are Pagefind filters.
 // The box suggests sites, years, issues and kinds as an operator is typed
 // (src/scripts/suggest.ts), and a half-typed operator waits for its value
 // before the results follow it.
@@ -21,33 +20,17 @@ import {
   parse,
   searchTerm,
 } from '../lib/search-grammar.ts';
+import {
+  type Data,
+  type Match,
+  type Pagefind,
+  filtersFor,
+  pagefind,
+  pagefindStarted,
+} from './pagefind.ts';
 import { initSuggest } from './suggest.ts';
 
-interface Data {
-  url: string;
-  excerpt: string;
-  content: string;
-  meta: { title?: string; host?: string; date?: string; issue?: string };
-}
-interface Match {
-  words: number[];
-  matchedMetaFields?: string[];
-  data(): Promise<Data>;
-}
-interface Pagefind {
-  options(options: Record<string, unknown>): Promise<void>;
-  init(): void;
-  search(
-    term: string | null,
-    options: {
-      filters?: Record<string, string>;
-      sort?: Record<string, 'asc' | 'desc'>;
-    },
-  ): Promise<{ results: Match[] } | null>;
-}
-
 const page = 20;
-const index = '/pagefind/pagefind.js';
 
 // Excerpts are escaped text with <mark> around matches: rebuild them as text
 // and mark elements rather than parsing them as HTML.
@@ -139,17 +122,6 @@ export async function initSearch() {
   noteBox.checked = params.get('note') === 'yes';
   sortSelect.value = params.get('sort') ?? '';
 
-  // Pagefind (about 300 kB before the first result) loads on the first
-  // search with words, not with the page.
-  let loading: Promise<Pagefind> | undefined;
-  const pagefind = () =>
-    (loading ??= (async () => {
-      const module = (await import(/* @vite-ignore */ index)) as Pagefind;
-      await module.options({ excerptLength: 26 });
-      module.init();
-      return module;
-    })());
-
   let candidates: Match[] = [];
   let cursor = 0;
   let shown = 0;
@@ -226,12 +198,11 @@ export async function initSearch() {
     const address = next.toString();
     history.replaceState(null, '', address ? `?${address}` : location.pathname);
 
-    const filters: Record<string, string> = {};
-    if (year) filters.year = year;
-    if (query.issue) filters.issue = query.issue;
-    if (query.kind) filters.kind = query.kind;
-    if (wtBox.checked) filters.wt = 'yes';
-    if (noteBox.checked) filters.note = 'yes';
+    const filters = filtersFor(query, {
+      year: yearSelect.value,
+      wt: wtBox.checked,
+      note: noteBox.checked,
+    });
     const sort: Record<string, 'asc' | 'desc'> | undefined =
       sortSelect.value === 'new'
         ? { date: 'desc' }
@@ -267,10 +238,9 @@ export async function initSearch() {
     }
     let engine: Pagefind;
     try {
-      if (!loading) status.textContent = 'Loading the search…';
+      if (!pagefindStarted()) status.textContent = 'Loading the search…';
       engine = await pagefind();
     } catch {
-      loading = undefined;
       status.textContent =
         'Search could not load. Every link is also listed by year, issue and host.';
       return;
