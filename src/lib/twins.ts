@@ -161,7 +161,9 @@ export function linkMarkdown(link: Link) {
       '',
       link.voice === 'excerpt'
         ? "## From the page (probably an excerpt, not Jamie's words)"
-        : '## What Jamie wrote',
+        : link.voice === 'agent'
+          ? "## From an agent (a summary for Jamie's reading queue, not Jamie's words)"
+          : '## What Jamie wrote',
       '',
       link.note.trim(),
     );

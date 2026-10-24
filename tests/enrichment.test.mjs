@@ -141,6 +141,22 @@ test('twins carry the kind, the Wayback captures and the facts, no liveness', ()
     /- Kind: \[Video\]\(https:\/\/links\.thingelstad\.xyz\/kinds\/video\/\)/,
   );
   assert.match(md, /- Wayback Machine: first captured March 2026, 3 captures/);
+  // The Markdown twin names the note's voice like the page and the JSON do.
+  const base = linkById.get('2ee60e58343d');
+  const heading = (voice) =>
+    linkMarkdown({ ...base, hasNote: true, voice, note: 'A note.' })
+      .split('\n')
+      .find((line) => line.startsWith('## ') && line !== '## Facts');
+  assert.equal(heading('jamie'), '## What Jamie wrote');
+  assert.equal(heading('mixed'), '## What Jamie wrote');
+  assert.equal(
+    heading('excerpt'),
+    "## From the page (probably an excerpt, not Jamie's words)",
+  );
+  assert.equal(
+    heading('agent'),
+    "## From an agent (a summary for Jamie's reading queue, not Jamie's words)",
+  );
   for (const id of [
     '2ee60e58343d',
     '3ace28dd12ad',
