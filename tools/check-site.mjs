@@ -1,7 +1,8 @@
 // Browser checks: a route of each kind renders without console or page
 // errors at desktop and phone widths, with a main landmark, a title and no
-// horizontal scroll; a search finds records; and no request reaches
-// Tinylytics. SITE_TEST_URL defaults to the dev server; tools/test-built-site.mjs
+// horizontal scroll; a search finds records and kind: links its page; a
+// video facade asks nothing of YouTube or Vimeo until it is clicked, then
+// becomes the player; and no request reaches Tinylytics. SITE_TEST_URL defaults to the dev server; tools/test-built-site.mjs
 // runs this against dist/ behind the edge function (SITE_TEST_EDGE=1), which
 // adds the redirect and 404 checks. Evidence goes to SITE_QA_DIR
 // (/tmp/links-site-qa by default).
@@ -25,9 +26,14 @@ const twins = (await fs.readdir('dist/links'))
   .filter((name) => name.endsWith('.json'))
   .sort();
 let record;
+// A record with a video card (src/lib/enrichment.ts), when the facts tool
+// has observed one.
+let video;
 for (const name of twins) {
-  record = JSON.parse(await fs.readFile(`dist/links/${name}`, 'utf8'));
-  if (record.issues.length) break;
+  const twin = JSON.parse(await fs.readFile(`dist/links/${name}`, 'utf8'));
+  if (!record && twin.issues.length) record = twin;
+  if (!video && twin.facts?.kind === 'video') video = twin;
+  if (record && video) break;
 }
 const path = (url) => new URL(url).pathname;
 const routes = [
@@ -37,10 +43,14 @@ const routes = [
   '/hosts/',
   '/issues/',
   '/years/',
+  '/kinds/',
+  '/kinds/video/',
+  '/about/',
   path(record.record),
   path(record.connections.same_host?.page ?? `${base}/hosts/`),
   `/years/${record.saved.slice(0, 4)}/`,
   ...record.issues.slice(0, 1).map((issue) => path(issue.page)),
+  ...(video ? [path(video.record)] : []),
 ];
 const host = record.host;
 
@@ -50,6 +60,8 @@ const browser = await chromium.launch({
 });
 const errors = [];
 const analytics = [];
+// Requests for a video player or its pieces, answered here with nothing.
+const players = [];
 const shot = (name, route) =>
   `${output}/${name}${route.replace(/[/?=&]+/g, '_') || '_'}.png`;
 for (const [name, viewport] of [
@@ -66,6 +78,13 @@ for (const [name, viewport] of [
         contentType: 'text/javascript',
         body: '',
       });
+    },
+  );
+  await context.route(
+    /^https:\/\/([a-z0-9-]+\.)*(youtube-nocookie\.com|youtube\.com|ytimg\.com|vimeo\.com|vimeocdn\.com)\//,
+    (route) => {
+      players.push(route.request().url());
+      return route.fulfill({ status: 200, contentType: 'text/html', body: '' });
     },
   );
   const page = await context.newPage();
@@ -107,6 +126,32 @@ for (const [name, viewport] of [
   });
   await page.screenshot({ path: shot(name, query) });
 
+  // kind: with no other words links the kind's page.
+  await page.goto(`${base}/search/?q=kind%3Avideo`, {
+    waitUntil: 'networkidle',
+  });
+  await page.waitForSelector('[data-search-status] a[href="/kinds/video/"]', {
+    timeout: 15000,
+  });
+
+  // The video facade: nothing from the player's host until the click.
+  if (video) {
+    players.length = 0;
+    await page.goto(base + path(video.record), { waitUntil: 'networkidle' });
+    assert.deepEqual(players, [], 'no player request before the click');
+    await page.click('[data-video] button[data-embed]');
+    const src = await page
+      .locator('[data-video] iframe')
+      .getAttribute('src', { timeout: 5000 });
+    assert.match(
+      src ?? '',
+      /^https:\/\/(www\.youtube-nocookie\.com\/embed|player\.vimeo\.com\/video)\//,
+      'the click puts the player in place',
+    );
+    await page.waitForTimeout(500);
+    assert.ok(players.length > 0, 'the player is requested after the click');
+  }
+
   if (edge) {
     const missing = await page.goto(`${base}/links/not-a-link/`);
     assert.equal(missing?.status(), 404, 'a missing page is a 404');
@@ -115,6 +160,18 @@ for (const [name, viewport] of [
   await context.close();
 }
 await browser.close();
+
+if (edge) {
+  // The SQLite file, as the deploy stores it.
+  const db = await fetch(`${base}/links.db`);
+  assert.equal(db.status, 200, '/links.db responds 200');
+  assert.equal(db.headers.get('content-type'), 'application/vnd.sqlite3');
+  assert.equal(
+    new TextDecoder().decode((await db.arrayBuffer()).slice(0, 15)),
+    'SQLite format 3',
+    '/links.db is SQLite',
+  );
+}
 
 if (edge)
   for (const [from, to] of [
@@ -144,5 +201,5 @@ if (production)
   );
 else assert.deepEqual(analytics, [], 'no Tinylytics requests during QA');
 console.log(
-  `Checked ${routes.length} routes and a search at desktop and phone widths${edge ? ', the redirects and the 404' : ''}; evidence in ${output}`,
+  `Checked ${routes.length} routes, a search and a kind: search at desktop and phone widths${video ? ', the video facade' : ' (no video facts to check the facade on)'}${edge ? ', /links.db, the redirects and the 404' : ''}; evidence in ${output}`,
 );

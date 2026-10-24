@@ -257,6 +257,20 @@ test('a year llms file is plain text that revalidates', () => {
   ]);
 });
 
+test('links.db is SQLite that revalidates, published before the pages', () => {
+  // tools/build_db.py writes public/links.db; Astro copies it to dist/.
+  assert.equal(contentType('links.db'), 'application/vnd.sqlite3');
+  assert.equal(cacheControl('links.db'), cachePolicies.revalidate);
+  assert.ok(!isHashedAsset('links.db'));
+  assert.deepEqual(publicationGroups(['links.db', 'about/index.html']), [
+    [],
+    ['links.db'],
+    ['about/index.html'],
+    [],
+  ]);
+  assert.deepEqual(invalidationPaths(['links.db']), ['/links.db']);
+});
+
 test('only the hosts index may sit directly under hosts/', () => {
   assert.ok(!shadowedByRedirect('hosts/index.html'));
   assert.ok(!shadowedByRedirect('hosts/obsidian.md/index.html'));

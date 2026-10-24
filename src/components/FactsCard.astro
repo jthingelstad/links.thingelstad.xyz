@@ -1,0 +1,162 @@
+---
+// The card a record carries when the facts tool has observed its page
+// (src/lib/enrichment.ts; DIRECTION.md, "Special hosts and kinds"): a video,
+// a repository, a book or a Wikipedia article. Facts only, never whether the
+// page still works.
+//
+// A video is a facade: the thumbnail stored with this site and a play
+// button. Nothing is requested from YouTube or Vimeo until a visitor clicks;
+// the click puts the player (youtube-nocookie.com or player.vimeo.com, its
+// address written at build from the stored video id) in the button's place.
+//
+// The description a repository or an article gives of itself is in the
+// search index (DIRECTION.md, "Search": the page's own description); the
+// rest of the card is not.
+import { dateLabel, number } from '../lib/data';
+import { type Facts, calendarLabel, providerName } from '../lib/enrichment';
+interface Props {
+  facts: Facts;
+}
+const { facts } = Astro.props;
+const join = (parts: (string | false | undefined)[]) =>
+  parts.filter(Boolean).join(' · ');
+const authors = (names: string[]) =>
+  names.length < 3
+    ? names.join(' and ')
+    : `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`;
+---
+
+{facts.kind === 'video' && (
+  <section
+    class="section record-card video-card"
+    data-pagefind-ignore="all"
+    data-video
+  >
+    <h2>Video</h2>
+    <div class="video-frame">
+      <button
+        type="button"
+        class:list={['video-facade', { bare: !facts.image }]}
+        data-embed={facts.embed}
+        data-title={facts.title ?? 'Video'}
+        aria-label={`Play ${facts.title ? `“${facts.title}”` : 'the video'} on ${providerName[facts.provider]}`}
+      >
+        {facts.image && <img src={facts.image} alt="" decoding="async" />}
+        <span class="video-play" aria-hidden="true" />
+      </button>
+    </div>
+    <p class="card-caption">
+      {facts.title && <b>{facts.title}</b>}
+      {facts.author && (
+        <span class="meta">
+          {' '}
+          by{' '}
+          {facts.authorUrl ? (
+            <a href={facts.authorUrl}>{facts.author}</a>
+          ) : (
+            facts.author
+          )}
+        </span>
+      )}
+      <span class="meta">
+        {' '}
+        · {providerName[facts.provider]}. Playing loads the{' '}
+        {providerName[facts.provider]} player.
+      </span>
+    </p>
+  </section>
+)}
+{facts.kind === 'repository' && (
+  <section class="section record-card repo-card">
+    <h2 data-pagefind-ignore>{facts.gist ? 'Gist' : 'Repository'}</h2>
+    <p class="card-name" data-pagefind-ignore>
+      <span class="card-title">
+        {facts.gist ? `Gist ${facts.fullName.slice(5)}` : facts.fullName}
+      </span>
+      {facts.archived && <span class="flag">Archived</span>}
+      {facts.fork && <span class="flag">Fork</span>}
+    </p>
+    {facts.description && <p class="card-text">{facts.description}</p>}
+    <p class="meta" data-pagefind-ignore>
+      {join([
+        facts.language,
+        facts.stars !== undefined &&
+          `${number(facts.stars)} ${facts.stars === 1 ? 'star' : 'stars'}`,
+        facts.license,
+        facts.gist &&
+          facts.fileCount !== undefined &&
+          `${number(facts.fileCount)} ${facts.fileCount === 1 ? 'file' : 'files'}`,
+        facts.pushed && `last push ${dateLabel(facts.pushed)}`,
+      ])}
+      {facts.homepage && (
+        <>
+          {' · '}
+          <a href={facts.homepage}>Homepage</a>
+        </>
+      )}
+    </p>
+  </section>
+)}
+{facts.kind === 'book' && (
+  <section class="section record-card book-card" data-pagefind-ignore="all">
+    <h2>Book</h2>
+    <div class="book">
+      {facts.image && (
+        <img class="book-cover" src={facts.image} alt="" decoding="async" />
+      )}
+      <div>
+        <p class="card-name">
+          <span class="card-title">{facts.title}</span>
+        </p>
+        {facts.authors.length > 0 && (
+          <p class="card-text">{authors(facts.authors)}</p>
+        )}
+        <p class="meta">
+          {join([
+            facts.published && `Published ${calendarLabel(facts.published)}`,
+            facts.isbn && `ISBN ${facts.isbn}`,
+          ])}
+        </p>
+        {facts.openLibrary && (
+          <p class="meta">
+            <a href={facts.openLibrary}>Open Library</a>
+          </p>
+        )}
+      </div>
+    </div>
+  </section>
+)}
+{facts.kind === 'article' && (
+  <section class="section record-card article-card">
+    <h2 data-pagefind-ignore>Article</h2>
+    {facts.title && (
+      <p class="card-name" data-pagefind-ignore>
+        <span class="card-title">{facts.title}</span>
+      </p>
+    )}
+    {facts.description && <p class="card-text">{facts.description}</p>}
+    <p class="meta" data-pagefind-ignore>
+      {facts.url ? <a href={facts.url}>From Wikipedia</a> : 'From Wikipedia'}
+    </p>
+  </section>
+)}
+
+<script>
+  // The click is the visitor asking for the video: only then does the
+  // player's address, written into data-embed at build, become an iframe.
+  for (const button of document.querySelectorAll<HTMLButtonElement>(
+    '[data-video] button[data-embed]',
+  )) {
+    button.addEventListener('click', () => {
+      const frame = document.createElement('iframe');
+      frame.src = button.dataset.embed!;
+      frame.title = button.dataset.title!;
+      frame.allow =
+        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      frame.allowFullscreen = true;
+      frame.referrerPolicy = 'strict-origin-when-cross-origin';
+      button.replaceWith(frame);
+      frame.focus();
+    });
+  }
+</script>

@@ -13,18 +13,33 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   production builds only (`PUBLIC_TINYLYTICS_ENABLED=true`, set by the deploy
   workflow; `design/tinylytics.md`). Never send a hit or a kudos from QA.
 - **Data.** `data/` is written only by the Python tools (`tools/sync.py`,
-  `tools/join_issues.py`; `tools/README.md`). Never edit it by hand.
-  `src/lib/data.ts` is the only module that reads it, and everything derived (hosts,
-  years, weeks, appearances, mentions, saved twice) is derived there, in memory.
+  `tools/join_issues.py`, `tools/enrich_*.py`; `tools/README.md`). Never edit it by
+  hand. `src/lib/data.ts` is the only module that reads `data/links` and
+  `data/derived`, and everything derived (hosts, years, weeks, appearances, mentions,
+  saved twice, kinds) is derived there, in memory.
+- **Enrichment.** `src/lib/enrichment.ts` is the only module that reads
+  `data/enrichment` (`LINKS_ENRICHMENT` points it at `tests/fixtures/enrichment`
+  for tests and screenshots). It keeps facts and drops every liveness field (dns,
+  https, status, alive, final_url, redirects, errors) before a page, twin or feed
+  sees it; `validate:site` fails if one gets through. Images are the tools' copies
+  under `public/media/`, never hotlinked and never committed from here. A video is a
+  click-to-play facade: no player request until the click.
+- **Kinds** (`src/lib/kinds.ts`): every link has one, from its host and path alone,
+  first rule wins, "page" is the rest. The browser search imports the same file, so
+  it takes no Node imports. Adding a kind adds a `/kinds/<kind>/` URL.
+- **The database.** `npm run db` (`tools/build_db.py`, stdlib only) writes
+  `public/links.db` from the JSON; `npm run build` runs it first. It is gitignored,
+  deterministic, and facts only like the pages. The site never reads it.
 - **The id** is the first 12 hex characters of md5 of the URL exactly as saved, and it
   comes from the data. Never recompute an id from a normalised URL. Normalisation is
   for joins only; `src/lib/normalize.ts` must agree with `tools/linking/urls.py`, and
   `npm test` checks that on every URL.
 - **URLs are fixed** (DIRECTION.md, "Pages"): `/links/<id>/` with its `.json` and `.md`
-  twins, `/hosts/<host>/`, `/issues/<n>/` (the Weekly Thing archive key, `140-special`
-  for the special issue), `/years/<yyyy>/` with its `llms.txt`, `/newest/`, `/search/`,
-  the feeds (`feed.xml` and `feed.json` at the root and under each host page) and
-  `/links.json`, `/hosts.json`, `/issues.json`, `/llms.txt`. Kudos,
+  twins, `/hosts/<host>/`, `/kinds/`, `/kinds/<kind>/`, `/issues/<n>/` (the Weekly
+  Thing archive key, `140-special` for the special issue), `/years/<yyyy>/` with its
+  `llms.txt`, `/newest/`, `/search/`, `/about/`, the feeds (`feed.xml` and
+  `feed.json` at the root and under each host and kind page) and `/links.json`,
+  `/hosts.json`, `/issues.json`, `/links.db`, `/llms.txt`. Kudos,
   feed readers, the Librarian and WT Builder depend on them. `src/lib/data.ts` is the
   one place they are formed.
 - **Times** are stored in UTC and shown in US Central, and years, months, weeks and
@@ -34,7 +49,9 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   know pinboard exists"): pages, twins, feeds and llms files. Code comments and the
   docs may. Nor does any page say whether a link still works; links are not checked.
 - **Prose is content.** The home page's quotes are `content/quotes.md` (format at the
-  top of the file); a malformed entry fails the build with its line number.
+  top of the file); a malformed entry fails the build with its line number. `/about/`
+  is `content/about.md`, Jamie's words to edit: one `# ` title, then `## ` sections,
+  or the build fails with the line.
 - **Jamie's sites.** The strip, the footer h-card, the rel=me links and the shared type
   (`shared/sites.json`, `shared/tokens.css`, `shared/fonts/`) are vendored from
   `../thingelstad.com/shared/` by `npm run sites:sync`; `npm run sites:check` fails on

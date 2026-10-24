@@ -96,20 +96,22 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 
 | URL | What |
 | --- | --- |
-| `/` | Built as a search box, like Google's front page (Jamie, 2026-10-23): the wordmark, the box, how many links are in the index and the years they span, and a row of ways in (Newest, Years, Hosts, Issues, Stats, Feed; Topics goes first once topic pages exist). A quote of the day from `content/quotes.md` when it holds any; nothing while it is empty. The site header is left off this page |
-| `/search/?q=` | Results: title, host, saved date, a snippet of the note, a WT chip; filters for topic, year, in a Weekly Thing, has a note; sort by relevance or date |
+| `/` | Built as a search box, like Google's front page (Jamie, 2026-10-23): the wordmark, the box, how many links are in the index and the years they span, and a row of ways in (Newest, Years, Hosts, Kinds, Issues, Stats, Feed; Topics goes first once topic pages exist). A quote of the day from `content/quotes.md` when it holds any; nothing while it is empty. The site header is left off this page |
+| `/search/?q=` | Results: title, host, saved date, a snippet of the note, a WT chip; filters for topic, year, kind, in a Weekly Thing, has a note; sort by relevance or date. Built: `kind:video` keeps one kind and, with no other words, links that kind's page |
 | `/links/<id>/` | The record (below). `<id>` is the first 12 hex characters of md5 of the saved URL, which is Pinboard's API `hash`; anyone can compute it from the URL |
 | `/links/<id>.json`, `/links/<id>.md` | Machine twins of the record, the Things I've built pattern |
 | `/hosts/<host>/` | Every link from a host, newest first, with the host facts (section "Enrichment") |
+| `/kinds/` | Built: the eight kinds (section "Special hosts and kinds"), each with its count and a line on what it holds. Linked from the site header and the front page |
+| `/kinds/<kind>/` | Built: a kind's links by year, newest first, with its feed pair. A page lists at most the newest 1,000 and says so when it stops; only "page" (15,690 links) is that large, and every link is on its year's page |
 | `/issues/<n>/` | The links that appeared in Weekly Thing n, in issue order, pointing at weekly.thingelstad.com/archive/n/ |
 | `/topics/<slug>/` | Links in a topic, co-topics, the hosts and issues most present in it (phase 3) |
 | `/years/<yyyy>/` | The year's links by month |
 | `/newest/` | Built: the newest 50 links, the site feed's links, as a page |
 | `/stats/` | Linking volume along its dimensions (section "Statistics") |
-| `/about/` | The homage, in Jamie's words: what this is, why links matter, how it is made |
-| `/feed.xml`, `/feed.json` | The newest 50 links as RSS 2.0 and JSON Feed 1.1, the Link Thing feed reborn; every host and topic page carries its own pair at `feed.xml` and `feed.json` under its path. Built for the site and all 7,064 host pages (the host's newest 50); topics with the topic pages. Each item is the record: its permalink as link and id, the destination and the note as content, Central dates with the real offset, tags as categories. Every page advertises the site pair; a host page advertises its own first |
+| `/about/` | The homage, in Jamie's words: what this is, why links matter, how it is made. Built from `content/about.md` (a `# ` title, then `## ` sections; the build fails on any other shape), a first draft in Jamie's voice from the Librarian for Jamie to edit. Linked from every page's footer |
+| `/feed.xml`, `/feed.json` | The newest 50 links as RSS 2.0 and JSON Feed 1.1, the Link Thing feed reborn; every host, kind and topic page carries its own pair at `feed.xml` and `feed.json` under its path. Built for the site, all 7,064 host pages (the host's newest 50) and the eight kind pages (the kind's newest 50); topics with the topic pages. Each item is the record: its permalink as link and id, the destination and the note as content, Central dates with the real offset, tags as categories. Every page advertises the site pair; a host page advertises its own first |
 | `/links.json`, `/hosts.json`, `/issues.json`, `/topics.json` | The whole public dataset. Built: `links.json` (every record, newest first, Pinboard's fields plus `permalink`; section "If Pinboard went away"), `hosts.json` (host, count, first, last, url) and `issues.json` (the join, with each issue's `page` here and each saved link's `permalink`). `topics.json` comes with topics |
-| `/links.db` | The SQLite database the site is built from, public fields only |
+| `/links.db` | The SQLite database the site is built from, public fields only. Built: `npm run db` (`tools/build_db.py`, first step of `npm run build`) writes `public/links.db`, never committed, from the same JSON the pages read. Tables: links, hosts, issues, appearances, host_facts, wayback, facts, and meta (built_at, method, version, row counts). Facts only, as on the pages: nothing that says whether a host or page works. Deterministic: the same `data/` makes the same bytes, and built_at is the newest moment in the data, not the clock. 13.4 MB on 2026-10-23, served as `application/vnd.sqlite3` |
 | `/llms.txt`, `/years/<yyyy>/llms.txt` | As on every other site of Jamie's. Built: `llms.txt` in llmstxt.org's shape (the data files, the record shape, the pages, and each year's file with its link count and size). A year's file holds every record saved in that Central year, newest first, as a slim row: title, URL, date saved and host, tags, the issues it appeared in, the permalink, then the note in full. 22 files, 10.6 MB together, the largest (2008) 0.8 MB; a year past about 4 MB would split by month, and `validate:site` fails one. They replaced `llms-full.txt` (every twin in one 36 MB file) on 2026-10-23 |
 
 ### The id
@@ -211,7 +213,7 @@ the Astro build over the record pages only. Indexed text: title (weighted highes
 note, and the page's own description (its meta description, a fact it publishes
 about itself). Nothing from an archived page body, pending what the archive holds
 (Jamie, 2026-10-23). Metadata per result: host, date, issue, topics, kind.
-Filters: topic, year, in-WT, has-note. Sort attribute: date. Pagefind documents under
+Filters: topic, year, in-WT, has-note, kind. Sort attribute: date. Pagefind documents under
 300 KB of network per search on a 10,000-page site and a goal of tens of thousands of
 pages; 16,882 records is inside that, and the spike measures it. Host is a search
 term, not a filter (7,259 filter values would bloat the filter index). The nnxyz
@@ -277,10 +279,12 @@ Rules:
   Pinboard's own: everything the site publishes is already public at
   pinboard.in/u:jthingelstad.
 - **`links.db` is a view, not the truth.** `npm run db` builds a SQLite file
-  (tables: links, hosts, issues, appearances, topics, link_topics, edges, page_facts,
-  host_facts) from the JSON. The Astro build reads it through one module,
-  `src/lib/data.ts`, the only place URLs are formed. The same file is published for
-  download.
+  from the JSON (built: links, hosts, issues, appearances, host_facts, wayback, facts
+  and meta; topics, link_topics and edges join it with phase 3) and publishes it for
+  download. The Astro build reads the JSON itself, not the file: `data/links` and
+  `data/derived` through `src/lib/data.ts`, the only place URLs are formed, and
+  `data/enrichment` through `src/lib/enrichment.ts`, which keeps the facts and drops
+  every liveness field before a page sees it.
 - **Every derived value names its method.** `topics.json` records the vocabulary
   version, model and prompt hash; `neighbors.json` the embedding model; `graph.json`
   the edge types and their sources. Re-deriving is cheap; silently mixing methods is
@@ -420,7 +424,7 @@ together hold 7,263 of them (44%). Measured 2026-10-23, public links:
 | macstories.net, daringfireball.net, kottke.org, simonwillison.net, tbray.org, seths.blog, stratechery.com, scripting.com, lethain.com and the other personal sites in the top 50 | 50 to 240 each | These hosts are people. The host page names the author, the feed, and the span of years; together they are the blogroll (section "Ideas beyond the brief", OPML). |
 | nytimes.com, arstechnica.com, techcrunch.com, theverge.com, theguardian.com, theatlantic.com, wired.com, bloomberg.com, economist.com, hbr.org | 45 to 204 each | Author and published date from page metadata; nothing more. |
 | tuaw.com, gigaom.com, readwrite.com | 131, 115, 58 | Closed or changed hands. The host page says when the site closed; its records carry the Wayback link, as every record does. TUAW's domain was reported in 2024 to have been bought and refilled with generated articles under former writers' names: the case for RDAP. |
-| Amazon | 142 | Mostly books. ASIN or ISBN from the URL; title, author and cover from Open Library; a "book" kind. Old affiliate tags stripped from the display URL. |
+| Amazon | 142 | Mostly AWS pages (aws.amazon.com); only 3 are book pages with an ISBN-10 in the path (built, 2026-10-23). ASIN or ISBN from the URL; title, author and cover from Open Library; a "book" kind. Old affiliate tags stripped from the display URL. |
 | Substack | 115 | A newsletter kind; feed discovery; author entity. |
 | Vimeo | 64 | Same facade as YouTube, via oEmbed. |
 | PDFs, arXiv | 57, 7 | A "paper" kind: page count and title from the file's metadata. |
@@ -429,7 +433,13 @@ together hold 7,263 of them (44%). Measured 2026-10-23, public links:
 | Jamie's own sites | 226 note links, plus direct links | Resolve to the Librarian source or the Thing, and link there. |
 
 "Kind" (video, repository, book, paper, article, newsletter, podcast, page) is derived
-from host and path and becomes a search filter and a browse page. Each treatment is
+from host and path and becomes a search filter and a browse page. Built in
+`src/lib/kinds.ts`, first rule wins and "page" is everything else; on 2026-10-23:
+video 351, repository 232 (GitHub's own sections such as /blog/ are pages), book 3,
+paper 64, article 56, newsletter 122, podcast 6, page 15,690. The record names its
+kind; when the facts tool has observed the page it shows a card (a video facade,
+a repository or gist, a book, a Wikipedia article), and a host page shows its RDAP
+and home-page facts. Each treatment is
 one adapter in `tools/adapters/<host>.py` with the same contract as the generic page
 facts, so a host earns an adapter when its count and its API justify one; nothing
 else in the build knows the host.

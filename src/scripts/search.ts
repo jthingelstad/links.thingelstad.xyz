@@ -2,9 +2,10 @@
 // record pages only) is loaded from /pagefind/. The query and the options are
 // kept in the address so a search can be shared.
 //
-// The small grammar: site:host, year:yyyy, wt:n (an issue), "phrases" (passed
-// to Pagefind) and -word (excluded here). Year, issue, in-a-Weekly-Thing and
-// has-a-note are Pagefind filters. Host is not a filter (7,000 values would
+// The small grammar: site:host, year:yyyy, wt:n (an issue), kind:video (one
+// of src/lib/kinds.ts), "phrases" (passed to Pagefind) and -word (excluded
+// here). Year, issue, kind, in-a-Weekly-Thing and has-a-note are Pagefind
+// filters. Host is not a filter (7,000 values would
 // bloat the filter index); it is metadata that Pagefind matches loosely, so
 // site: is checked exactly here, and so is -word.
 //
@@ -13,7 +14,10 @@
 //   ZX Spectrum, "qqqqzzzz" finds "Q"), so a result is kept only when each
 //   typed word's first three letters start a word in its title, host or text;
 // - a search with no words loads the whole index (143 chunks, 3.8 MB), so a
-//   year or an issue alone links to its page, which lists exactly those links.
+//   year, an issue or a kind alone links to its page, which lists exactly
+//   those links.
+import { type Kind, kindWords, kinds } from '../lib/kinds.ts';
+
 interface Data {
   url: string;
   excerpt: string;
@@ -45,7 +49,17 @@ export interface Query {
   site?: string;
   year?: string;
   issue?: string;
+  kind?: Kind;
   exclude: string[];
+}
+
+// kind:video or kind:videos. The kind kept is the list's own constant, so
+// what was typed never becomes part of an address.
+function kindNamed(value: string): Kind | undefined {
+  const at = kinds.findIndex(
+    (kind) => kind === value || kindWords[kind].title.toLowerCase() === value,
+  );
+  return at === -1 ? undefined : kinds[at];
 }
 
 // Splits the operators out of what was typed; the rest goes to Pagefind.
@@ -55,7 +69,7 @@ export function parse(input: string): Query {
   for (const [, neg, phrase, word] of input.matchAll(
     /(-?)(?:"([^"]*)"|(\S+))/g,
   )) {
-    const op = word && /^(site|year|wt):(.+)$/i.exec(word);
+    const op = word && /^(site|year|wt|kind):(.+)$/i.exec(word);
     if (op && !neg) {
       const value = op[2].toLowerCase();
       if (op[1].toLowerCase() === 'site')
@@ -67,6 +81,7 @@ export function parse(input: string): Query {
         query.year = value;
       else if (op[1].toLowerCase() === 'wt')
         query.issue = value.replace(/^wt/, '');
+      else if (op[1].toLowerCase() === 'kind') query.kind = kindNamed(value);
     } else if (neg && (phrase || word)) {
       query.exclude.push((phrase ?? word).toLowerCase());
     } else if (phrase !== undefined) {
@@ -188,9 +203,10 @@ export async function initSearch() {
   function describe() {
     const complete = cursor >= candidates.length;
     const n = complete ? shown : candidates.length;
-    const { site, exclude } = query;
+    const { site, kind, exclude } = query;
     status.textContent = n
       ? `${!complete && dropped ? 'Up to ' : ''}${n.toLocaleString('en-US')} ${n === 1 ? 'link' : 'links'}` +
+        `${kind ? ` of the kind ${kindWords[kind].name.toLowerCase()}` : ''}` +
         `${site ? ` from ${site}` : ''}${exclude.length ? ` without ${exclude.join(', ')}` : ''}.`
       : 'No links match.';
     if (siteHost)
@@ -244,6 +260,7 @@ export async function initSearch() {
     const filters: Record<string, string> = {};
     if (year) filters.year = year;
     if (query.issue) filters.issue = query.issue;
+    if (query.kind) filters.kind = query.kind;
     if (wtBox.checked) filters.wt = 'yes';
     if (noteBox.checked) filters.note = 'yes';
     const sort: Record<string, 'asc' | 'desc'> | undefined =
@@ -258,14 +275,21 @@ export async function initSearch() {
       .join(' ');
     if (!term) {
       list.replaceChildren();
-      // Page addresses are formed from numbers, so no typed text reaches an href.
+      // Page addresses are formed from numbers and from the kinds list, so no
+      // typed text reaches an href.
       const issue = Number(query.issue);
       const yearPage = Number(year);
+      const kindPage = query.kind && kinds[kinds.indexOf(query.kind)];
       const pages = [
         issueNumbers.has(issue) &&
           link(`/issues/${issue}/`, `Every link in WT${issue}`),
         yearPage > 0 &&
           link(`/years/${yearPage}/`, `Every link from ${yearPage}`),
+        kindPage &&
+          link(
+            `/kinds/${kindPage}/`,
+            `All ${kindWords[kindPage].title.toLowerCase()}`,
+          ),
       ].filter((a): a is HTMLAnchorElement => !!a);
       status.replaceChildren(
         pages.length

@@ -1,0 +1,50 @@
+{
+  "2ee60e58343d": {
+    "checked": "2026-10-23T21:45:21Z",
+    "method": "enrich_pages",
+    "version": 1,
+    "status": 200,
+    "alive": true,
+    "final_url": "https://example.com/moved",
+    "redirects": [
+      "https://example.com/a"
+    ],
+    "content_type": "text/html",
+    "wayback": {
+      "first": "2026-03-14T18:02:11Z",
+      "last": "2026-09-01T04:00:00Z",
+      "count": 3
+    }
+  },
+  "3ace28dd12ad": {
+    "checked": "2026-10-23T21:45:22Z",
+    "method": "enrich_pages",
+    "version": 1,
+    "status": 200,
+    "alive": true,
+    "final_url": "https://example.com/moved",
+    "redirects": [
+      "https://example.com/a"
+    ],
+    "content_type": "text/html",
+    "wayback": {
+      "first": "2026-01-02T05:30:00Z",
+      "last": "2026-10-20T12:00:00Z",
+      "count": 10000,
+      "count_capped": true
+    }
+  },
+  "9207883516b6": {
+    "checked": "2026-10-23T21:45:23Z",
+    "method": "enrich_pages",
+    "version": 1,
+    "status": null,
+    "alive": false,
+    "error": "timeout",
+    "wayback": {
+      "first": null,
+      "last": null,
+      "count": 0
+    }
+  }
+}

@@ -1,6 +1,9 @@
 ---
 // Every link from one host, newest first, with the host's facts, and the
-// host's own RSS and JSON Feed pair (src/lib/feeds.ts).
+// host's own RSS and JSON Feed pair (src/lib/feeds.ts). The facts are what
+// RDAP and the host's home page say (src/lib/enrichment.ts): when the domain
+// was registered, the feeds and open-web signals the home page advertises.
+// Never whether the host still answers.
 import Layout from '../../layouts/Layout.astro';
 import LinkList from '../../components/LinkList.astro';
 import {
@@ -11,6 +14,7 @@ import {
   type Host,
 } from '../../lib/data';
 import { feedAlternates, hasHostFeed, hostFeed } from '../../lib/feeds';
+import { calendarLabel, feedLabel, hostFacts } from '../../lib/enrichment';
 
 export function getStaticPaths() {
   return hosts.map((host) => ({
@@ -28,6 +32,22 @@ const span =
     ? `saved on ${dateLabel(host.first)}`
     : `first saved ${dateLabel(host.first)}, latest ${dateLabel(host.last)}`;
 const feeds = hasHostFeed(host.host) ? feedAlternates(hostFeed(host)) : [];
+const facts = hostFacts(host.host);
+// "March 1, 2009 (example.com) with Example Registrar; expires March 1,
+// 2027": the domain is named when RDAP answered for a parent of the host.
+const registered =
+  facts?.registered &&
+  `${calendarLabel(facts.registered)}` +
+    (facts.domain && facts.domain !== host.host ? ` (${facts.domain})` : '') +
+    (facts.registrar ? ` with ${facts.registrar}` : '') +
+    (facts.expires ? `; expires ${calendarLabel(facts.expires)}` : '');
+const openWeb = facts
+  ? [
+      facts.hcard && 'has an h-card',
+      facts.relMe && 'rel=me links',
+      facts.webmention && 'accepts Webmentions',
+    ].filter((s): s is string => !!s)
+  : [];
 ---
 
 <Layout
@@ -40,5 +60,49 @@ const feeds = hasHostFeed(host.host) ? feedAlternates(hostFeed(host)) : [];
   <p class="lede">
     {plural(host.count, 'link')}, {span}.
   </p>
+  {facts && (
+    <section class="host-facts" aria-labelledby="host-facts">
+      <h2 id="host-facts">About the host</h2>
+      <dl class="facts">
+        {registered && (
+          <div>
+            <dt>Registered</dt>
+            <dd>{registered}</dd>
+          </div>
+        )}
+        {facts.homeTitle && (
+          <div>
+            <dt>Home page</dt>
+            <dd>{facts.homeTitle}</dd>
+          </div>
+        )}
+        {facts.generator && (
+          <div>
+            <dt>Generator</dt>
+            <dd>{facts.generator}</dd>
+          </div>
+        )}
+        {facts.feeds.length > 0 && (
+          <div>
+            <dt>{facts.feeds.length === 1 ? 'Feed' : 'Feeds'}</dt>
+            <dd>
+              {facts.feeds.map((feed, i) => (
+                <>
+                  {i > 0 && ', '}
+                  <a href={feed.url}>{feedLabel(feed)}</a>
+                </>
+              ))}
+            </dd>
+          </div>
+        )}
+        {openWeb.length > 0 && (
+          <div>
+            <dt>Open web</dt>
+            <dd>{openWeb.join(', ')}</dd>
+          </div>
+        )}
+      </dl>
+    </section>
+  )}
   <LinkList links={list} host={false} snippet />
 </Layout>

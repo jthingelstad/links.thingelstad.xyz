@@ -429,6 +429,7 @@ img {
   .record-side {
     display: contents;
   }
+  .record-facts,
   .record-elsewhere {
     order: 1;
   }
@@ -437,15 +438,17 @@ img {
   .record-body {
     grid-template-columns: minmax(0, var(--jt-measure)) minmax(0, 1fr);
   }
+  .record-card,
   .record-note,
   .connections {
     grid-column: 1;
   }
   .record-side {
     grid-column: 2;
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 3;
   }
 }
+.record-card > h2,
 .record-side .section > h2,
 .connections .section > h2 {
   font-family: var(--jt-font-body);
@@ -1060,4 +1063,200 @@ img {
 }
 .records li {
   padding: 3px 0;
+}
+
+/* Facts (src/lib/enrichment.ts): short rows of what was observed, on host
+   pages and in the record's side column. */
+.facts {
+  margin: 0;
+  font-size: var(--jt-size-small);
+}
+.facts > div {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 0 12px;
+  padding: 6px 0;
+  border-top: 1px solid var(--line);
+}
+.facts > div:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.facts dt {
+  color: var(--muted);
+  font-weight: 600;
+}
+.facts dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.record-side .facts > div {
+  grid-template-columns: 4rem minmax(0, 1fr);
+}
+.host-facts {
+  max-width: var(--jt-measure);
+  margin: 0 0 40px;
+}
+.host-facts > h2 {
+  font-size: var(--jt-size-h3);
+  margin-bottom: 12px;
+}
+
+/* The record's card (FactsCard.astro): a video, a repository, a book or an
+   article, from the facts. */
+.record-card {
+  max-width: var(--jt-measure);
+}
+.record-card p {
+  margin: 0 0 6px;
+}
+.record-card p:last-child {
+  margin-bottom: 0;
+}
+.card-name {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.card-text {
+  color: var(--text-soft);
+}
+.flag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 0 7px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: var(--jt-size-label);
+  font-weight: 600;
+  line-height: 1.6;
+  vertical-align: 1px;
+}
+/* The video facade: the stored thumbnail and a play button. The player
+   replaces the button on click. */
+.video-frame {
+  aspect-ratio: 16 / 9;
+  margin: 0 0 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--card);
+}
+.video-facade,
+.video-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.video-facade {
+  position: relative;
+  background: #000;
+  cursor: pointer;
+}
+.video-facade.bare {
+  background: var(--card);
+}
+.video-facade img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 68px;
+  height: 48px;
+  margin: -24px 0 0 -34px;
+  border-radius: 12px;
+  background: rgb(0 0 0 / 0.72);
+}
+.video-play::after {
+  content: '';
+  position: absolute;
+  left: 27px;
+  top: 14px;
+  border-style: solid;
+  border-width: 10px 0 10px 17px;
+  border-color: transparent transparent transparent #fff;
+}
+.video-facade:hover .video-play {
+  background: rgb(0 0 0 / 0.9);
+}
+.video-facade:focus-visible {
+  outline: 3px solid var(--link);
+  outline-offset: -3px;
+}
+.book {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.book-cover {
+  flex: none;
+  width: 96px;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+/* Kinds (/kinds/) */
+.kind-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: var(--jt-measure);
+}
+.kind-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2px 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+.kind-list li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.kind-list .title {
+  font-weight: 600;
+}
+.kind-list .n {
+  color: var(--muted);
+  font-size: var(--jt-size-meta);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.kind-list .about {
+  grid-column: 1 / -1;
+  color: var(--text-soft);
+  font-size: var(--jt-size-small);
+}
+
+/* About (content/about.md) */
+.prose {
+  max-width: var(--jt-measure);
+  overflow-wrap: anywhere;
+}
+.prose h2 {
+  font-size: var(--jt-size-h3);
+  margin: 36px 0 12px;
+}
+.prose > h2:first-child {
+  margin-top: 28px;
+}
+.prose p,
+.prose ul,
+.prose ol {
+  margin: 0 0 16px;
+}
+.prose blockquote {
+  margin: 0 0 16px;
+  padding: 2px 0 2px 18px;
+  border-left: 3px solid var(--line);
+  color: var(--text-soft);
+}
+.prose blockquote p:last-child {
+  margin-bottom: 0;
 }

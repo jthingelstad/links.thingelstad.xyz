@@ -10,6 +10,7 @@
 import {
   type Link,
   type MirrorLink,
+  aboutPath,
   absolute,
   appearances,
   counts,
@@ -22,10 +23,14 @@ import {
   issuePath,
   issues,
   issueTitle,
+  kindPath,
+  kinds,
+  kindsPath,
   linkJsonPath,
   linkMarkdownPath,
   linkPath,
   links,
+  linksByKind,
   newest,
   newestPath,
   number,
@@ -35,6 +40,7 @@ import {
   years,
 } from './data.ts';
 import { FEED_SIZE } from './feeds.ts';
+import { kindWords } from './kinds.ts';
 
 // Pinboard's fields, in the order the mirror writes them (docs/DATA.md).
 const mirrorFields: (keyof MirrorLink)[] = [
@@ -209,7 +215,8 @@ export function llmsTxt() {
     `- [Every link](${a(datasetPath.links)}): ${number(counts.links)} public links, newest first, with every field as saved (id, hash, url, title, note, saved, tags, toread, meta) and the permalink`,
     `- [Hosts](${a(datasetPath.hosts)}): every host with its number of links, the first and latest saved, and its page`,
     `- [Weekly Thing issues](${a(datasetPath.issues)}): the links each of ${number(counts.issues)} issues of The Weekly Thing carried, joined to the saved links`,
-    `- [JSON Feed](${a(feedPath('json'))}) and [RSS](${a(feedPath('rss'))}): the newest ${FEED_SIZE} links; every host page has its own pair at \`feed.json\` and \`feed.xml\` under its path, as in \`/hosts/<host>/feed.json\``,
+    `- [JSON Feed](${a(feedPath('json'))}) and [RSS](${a(feedPath('rss'))}): the newest ${FEED_SIZE} links; every host page and every kind page has its own pair at \`feed.json\` and \`feed.xml\` under its path, as in \`/hosts/<host>/feed.json\` and \`/kinds/video/feed.json\``,
+    `- [SQLite database](${a(datasetPath.db)}): the same public data in one file, with tables \`links\`, \`hosts\`, \`issues\`, \`appearances\`, \`host_facts\`, \`wayback\`, \`facts\` and \`meta\``,
     '',
     '## Every record, by year',
     '',
@@ -224,12 +231,14 @@ export function llmsTxt() {
     '## Pages',
     '',
     `- [Home](${a('/')}): a search box and the number of links in the index`,
-    `- [Search](${a('/search/')}): full-text search over titles, notes and hosts, with \`site:\`, \`year:\` and \`wt:\``,
+    `- [Search](${a('/search/')}): full-text search over titles, notes and hosts, with \`site:\`, \`year:\`, \`wt:\` and \`kind:\``,
     `- [Newest](${a(newestPath)}): the ${FEED_SIZE} links saved most recently`,
     `- [Years](${a('/years/')}): the links saved each year, by month`,
     `- [Issues](${a('/issues/')}): every Weekly Thing issue and the links it carried`,
     `- [Hosts](${a('/hosts/')}): the sites linked most; every host has a page at \`/hosts/<host>/\``,
+    `- [Kinds](${a(kindsPath)}): what each link is, read from its address: ${kinds.map((kind) => `[${kindWords[kind].title.toLowerCase()}](${a(kindPath(kind))}) (${number(linksByKind.get(kind)?.length ?? 0)})`).join(', ')}`,
     `- [Stats](${a('/stats/')}): linking volume by year, month, weekday and hour, notes, hosts and the Weekly Thing`,
+    `- [About](${a(aboutPath)}): what this is, why links matter, and how it is made, in Jamie's words`,
     '',
     '## Optional',
     '',

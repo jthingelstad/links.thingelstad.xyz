@@ -1,0 +1,50 @@
+{
+  "kottke.org": {
+    "checked": "2026-10-23T21:26:19Z",
+    "method": "enrich_hosts",
+    "version": 2,
+    "dns": {
+      "resolves": true,
+      "a": [
+        "192.0.2.1"
+      ],
+      "aaaa": [],
+      "cname": null,
+      "ns": [
+        "ns1.example.net"
+      ],
+      "mx": true
+    },
+    "https": {
+      "reachable": true,
+      "redirects_http": true,
+      "status": 200
+    },
+    "rdap": {
+      "domain": "kottke.org",
+      "registrar": "Domain.com - Network Solutions, LLC",
+      "registered": "1998-12-26",
+      "expires": "2027-12-26",
+      "checked": "2026-10-23T21:26:19Z"
+    },
+    "home": {
+      "checked": "2026-10-23T21:26:19Z",
+      "title": "kottke.org",
+      "generator": "WordPress 7.1",
+      "feeds": [
+        {
+          "type": "rss",
+          "url": "https://kottke.org/feed",
+          "title": null
+        },
+        {
+          "type": "json",
+          "url": "https://kottke.org/feed.json"
+        }
+      ],
+      "hcard": true,
+      "rel_me": [],
+      "webmention": null
+    }
+  }
+}

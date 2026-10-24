@@ -12,9 +12,11 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { noteLinks, plainNote, prepare, renderNote } from './markdown.ts';
+import { type Kind, kindOf, kinds } from './kinds.ts';
 import { hostOf, normalizeUrl } from './normalize.ts';
 
 export { hostOf, normalizeUrl };
+export { type Kind, kinds };
 
 // data/links/<yyyy>.json, as the sync writes it.
 export interface MirrorLink {
@@ -62,6 +64,7 @@ export interface Link extends MirrorLink {
   week: string; // the Monday of the Central week, YYYY-MM-DD
   hasNote: boolean;
   voice: Voice | null;
+  kind: Kind; // from host and path (kinds.ts)
 }
 
 export interface Appearance {
@@ -206,6 +209,7 @@ export const links: Link[] = mirror
       week: weekOf(day),
       hasNote: link.note.trim() !== '',
       voice: voiceOf(link.note, year),
+      kind: kindOf(link.url),
     };
   })
   .sort((a, b) => byText(a.saved, b.saved) || byText(a.id, b.id));
@@ -236,6 +240,8 @@ export const linkPath = (id: string) => `/links/${id}/`;
 export const linkJsonPath = (id: string) => `/links/${id}.json`;
 export const linkMarkdownPath = (id: string) => `/links/${id}.md`;
 export const hostPath = (host: string) => `/hosts/${host}/`;
+export const kindsPath = '/kinds/';
+export const kindPath = (kind: Kind) => `${kindsPath}${kind}/`;
 export const issuePath = (issue: Issue) => `/issues/${issueKey(issue)}/`;
 export const yearPath = (year: number | string) => `/years/${year}/`;
 export const monthAnchor = (year: number, month: number) =>
@@ -254,7 +260,10 @@ export const datasetPath = {
   hosts: '/hosts.json',
   issues: '/issues.json',
   llms: '/llms.txt',
+  // The SQLite file, built by tools/build_db.py into public/ (npm run db).
+  db: '/links.db',
 } as const;
+export const aboutPath = '/about/';
 // Every record for language models, a file per year beside the year's page
 // (dataset.ts).
 export const yearLlmsPath = (year: number) => `${yearPath(year)}llms.txt`;
@@ -378,6 +387,13 @@ for (const link of links) {
   linksByWeek.set(link.week, week);
 }
 export const years = [...linksByYear.keys()].sort((a, b) => a - b);
+
+// Kinds, each with its links oldest first; every kind is listed, even one
+// with no links (it has a page saying so).
+export const linksByKind = new Map<Kind, Link[]>(
+  kinds.map((kind) => [kind, []]),
+);
+for (const link of links) linksByKind.get(link.kind)!.push(link);
 
 // The others nearest in time to a link, from a list it belongs to.
 function nearest(link: Link, list: Link[], limit: number) {
