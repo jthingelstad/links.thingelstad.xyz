@@ -14,7 +14,7 @@ bookmarks only (`shared: yes` at Pinboard); private ones never enter the reposit
 | `hash` | string, 32 hex | `hash` | md5 of `url`. |
 | `url` | string | `href` | Exactly as saved. Never normalised here. |
 | `title` | string | `description` | May equal the URL for a handful of old saves. |
-| `note` | string | `extended` | Markdown-ish text, may be empty. From 2007 to 2011 mostly a page excerpt, later Jamie's commentary. |
+| `note` | string | `extended` | Markdown-ish text, may be empty. Jamie's commentary; a passage from the page is a `>` blockquote (the pre-2017 bookmarklet excerpts were quoted at the source on 2026-10-24). |
 | `saved` | string | `time` | ISO 8601 UTC, `YYYY-MM-DDTHH:MM:SSZ`. Display in US Central. |
 | `tags` | string[] | `tags` split on spaces | Today only WT Builder's filing marks: `_brief`, `_feature`, `_local`, `_exclude`. |
 | `toread` | boolean | `toread` | |

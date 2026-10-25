@@ -1,6 +1,7 @@
-// Notes are Pinboard's `extended` field: Markdown from WT Builder since 2017,
-// plain page excerpts before that, and HTML blockquotes around 2012. They
-// render here, and nowhere else. Raw HTML is escaped (html: false), images are
+// Notes are Pinboard's `extended` field: Markdown from WT Builder since 2017
+// and, since the 2026-10-24 cleanup at the source, Markdown blockquotes for
+// the page excerpts the bookmarklet saved before that (a few HTML blockquotes
+// from 2012 remain and read the same). They render here, and nowhere else. Raw HTML is escaped (html: false), images are
 // off (nothing is fetched from another host when a page is served), and
 // headings sit below the record's own. noteTree is the same reading as a tree
 // of elements and text, for the search page's preview pane, which builds it

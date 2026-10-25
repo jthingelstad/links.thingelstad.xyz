@@ -47,7 +47,6 @@ const c = connectionsOf(link);
 const appears = appearances.get(link.id) ?? [];
 const excerpt = link.voice === 'excerpt';
 const agent = link.voice === 'agent';
-const era = link.year >= 2007 && link.year <= 2016;
 const facts = factsOf(link.id);
 // A note of one paragraph and a sentence or two is set larger, so a short
 // remark is not lost on the page; an excerpt never is.
@@ -139,9 +138,7 @@ const description = link.hasNote
                     From the page
                   </h2>
                   <p class="note-label" data-pagefind-ignore>
-                    {era
-                      ? `Saved with the link. Notes from 2007 to 2016 are mostly the page's own words, so this is probably an excerpt.`
-                      : 'A quotation saved with the link.'}
+                    A quotation saved with the link.
                   </p>
                 </>
               )}

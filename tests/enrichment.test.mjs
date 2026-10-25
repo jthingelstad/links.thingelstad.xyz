@@ -151,7 +151,7 @@ test('twins carry the kind, the Wayback captures and the facts, no liveness', ()
   assert.equal(heading('mixed'), '## What Jamie wrote');
   assert.equal(
     heading('excerpt'),
-    "## From the page (probably an excerpt, not Jamie's words)",
+    "## From the page (quoted, not Jamie's words)",
   );
   assert.equal(
     heading('agent'),

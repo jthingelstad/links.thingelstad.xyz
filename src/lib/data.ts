@@ -231,7 +231,7 @@ export const links: Link[] = mirror
       day,
       week: weekOf(day),
       hasNote: link.note.trim() !== '',
-      voice: voiceOf(link.note, year, link.tags),
+      voice: voiceOf(link.note, link.tags),
       kind: kindOf(link.url),
       shown: shownTitle(link.title, host, endings, isHome(link.url)),
       clock: realClock(link.saved),

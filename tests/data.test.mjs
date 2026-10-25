@@ -180,19 +180,22 @@ test('a mention resolves by the join rule', () => {
 test('voice labels', () => {
   for (const link of data.links)
     assert.equal(link.voice === null, !link.hasNote, link.id);
-  assert.equal(data.voiceOf('', 2020), null);
-  assert.equal(data.voiceOf('> A quotation.', 2020), 'excerpt');
-  assert.equal(data.voiceOf('Mine.\n\n> Theirs.', 2020), 'mixed');
-  assert.equal(data.voiceOf('“A quotation.”', 2020), 'excerpt');
-  assert.equal(data.voiceOf('The page says this.', 2012), 'excerpt');
-  assert.equal(data.voiceOf('I think this.', 2020), 'jamie');
-  assert.equal(data.voiceOf('A del.icio.us description.', 2005), 'jamie');
+  assert.equal(data.voiceOf(''), null);
+  assert.equal(data.voiceOf('> A quotation.'), 'excerpt');
+  assert.equal(data.voiceOf('Mine.\n\n> Theirs.'), 'mixed');
+  assert.equal(data.voiceOf('“A quotation.”'), 'excerpt');
+  assert.equal(data.voiceOf('“A quotation.”\n\nMine.'), 'mixed');
+  // No year rule: a bare note from the bookmarklet years is Jamie's too, since
+  // the page's words in those notes were quoted at the source (2026-10-24).
+  assert.equal(data.voiceOf('I saved this in 2012.'), 'jamie');
+  assert.equal(data.voiceOf('I think this.'), 'jamie');
+  assert.equal(data.voiceOf('A del.icio.us description.'), 'jamie');
   // The agent's voice is the tag it leaves, never a reading of the text.
   assert.equal(data.AGENT_TAG, '_agent');
-  assert.equal(data.voiceOf('A summary.', 2026, ['_agent']), 'agent');
-  assert.equal(data.voiceOf('> Quoted.', 2026, ['_agent']), 'agent');
-  assert.equal(data.voiceOf('A summary.', 2026, ['_brief']), 'jamie');
-  assert.equal(data.voiceOf('', 2026, ['_agent']), null);
+  assert.equal(data.voiceOf('A summary.', ['_agent']), 'agent');
+  assert.equal(data.voiceOf('> Quoted.', ['_agent']), 'agent');
+  assert.equal(data.voiceOf('A summary.', ['_brief']), 'jamie');
+  assert.equal(data.voiceOf('', ['_agent']), null);
 });
 
 test('hosts', () => {

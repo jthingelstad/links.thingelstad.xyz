@@ -72,14 +72,17 @@ Two things in the data shape the design:
 1. **There are no topic tags.** Jamie used to tag by topic and stopped; the four
    tags left are WT Builder's filing marks. Topics have to be derived (section
    "Topics").
-2. **The note is not always Jamie's voice.** From 2007 to 2011 most notes are
-   page excerpts captured by the bookmarklet (3,874 notes open with a quote mark;
-   the 2008 median note is 593 characters). From 2017 on they are Jamie's
-   commentary, often with a quoted excerpt in a Markdown blockquote. The record page
-   should show both and not label an excerpt as Jamie's words. Since 2026 a few notes
-   are summaries an agent wrote for Jamie's reading queue: the `_agent` tag records
-   that at the source, and the `agent` label is read from the tag, never from the text
-   (2026-10-24).
+2. **The note is not always Jamie's voice.** From 2007 to 2016 most notes were
+   page excerpts captured by the bookmarklet as bare text (3,874 notes opened with a
+   quote mark; the 2008 median note was 593 characters). From 2017 on they are Jamie's
+   commentary, often with a quoted excerpt in a Markdown blockquote. On 2026-10-24 the
+   old notes were cleaned at the source to the same form: the page's words became
+   blockquotes, tool text was dropped, Jamie's own words stayed bare. So one rule
+   covers every year: bare text is Jamie's, a blockquote is the page's. The record
+   page shows both and never labels an excerpt as Jamie's words. Since 2026 a few
+   notes are summaries an agent wrote for Jamie's reading queue: the `_agent` tag
+   records that at the source, and the `agent` label is read from the tag, never from
+   the text (2026-10-24).
 
 ### The join to the Weekly Thing is clean
 
@@ -914,10 +917,12 @@ list hold two kinds of row and lost the twin, the Librarian unit and the connect
 The bare example still had twelve links saved the same week. Enrichment rows go to
 bare records first.
 
-**Voice label:** the excerpt era is 2007 to 2016 after sampling, wider than the 2007
-to 2011 first estimated. Counts: Jamie's words 6,084, mixed 2,270, excerpt 4,569, no
-note 3,601. It is a label, never an assertion. The fourth label, `agent`, is provenance
-rather than a reading: the reading-queue agent tags every bookmark whose note it writes
+**Voice label:** the excerpt era was 2007 to 2016 after sampling, wider than the 2007
+to 2011 first estimated, and the label leaned on the year until the notes of those
+years were cleaned at the source (2026-10-24: the page's words quoted, tool text
+dropped, Jamie's words kept bare). Since then the label is read from the note's form
+alone and the year plays no part. The fourth label, `agent`, is provenance rather
+than a reading: the reading-queue agent tags every bookmark whose note it writes
 `_agent` (2026-10-24), and the label follows the tag.
 
 ## Risks and unknowns
@@ -928,8 +933,9 @@ rather than a reading: the reading-queue agent tags every bookmark whose note it
 - **Destinations change.** Links are not checked ("They just are", Jamie,
   2026-10-23), so no page says whether a destination works; every record carries its
   Wayback link.
-- **Voice.** Old notes are excerpts, new ones commentary; a heuristic (quote mark,
-  era, first person) labels them, and will be wrong sometimes.
+- **Voice.** The label follows the note's form (a blockquote is the page's words,
+  bare text Jamie's). The one reading left is a single paragraph opening with a quote
+  mark, taken as a quotation; it will be wrong sometimes.
 - **Pinboard's API** allows `posts/all` once per five minutes and returns 11 MB; the
   sync calls `posts/update` first and pulls only when the stamp moved.
 - **Copyright** of cached pages: facts only, by design.
