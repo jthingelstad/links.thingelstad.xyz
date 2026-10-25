@@ -31,7 +31,22 @@ class Client:
         text = str(text).replace(self.token, "[redacted]")
         return re.sub(r"auth_token=[^&\s'\"]*", "auth_token=[redacted]", text)
 
-    def _call(self, endpoint, params):
+    def _call(self, endpoint, params, attempts=4):
+        """One call, retried on a transient failure (HTTP 5xx, timeout). posts/add with
+        replace=yes is idempotent, so repeating a write that may have landed is safe."""
+        for attempt in range(1, attempts + 1):
+            try:
+                return self._once(endpoint, params)
+            except PinboardWriteError as error:
+                text = str(error)
+                transient = "HTTP 5" in text or "Timeout" in text or "URLError" in text or "RemoteDisconnected" in text
+                if not transient or attempt == attempts:
+                    raise
+                wait = (10, 30, 60)[attempt - 1]
+                print(f"{endpoint}: {text}; retry {attempt} in {wait}s", flush=True)
+                time.sleep(wait)
+
+    def _once(self, endpoint, params):
         if self.last is not None:
             wait = SPACING - (time.monotonic() - self.last)
             if wait > 0:
@@ -39,7 +54,7 @@ class Client:
         query = urlencode({**params, "format": "json", "auth_token": self.token})
         request = urllib.request.Request(f"{API}{endpoint}?{query}", headers={"User-Agent": UA, "Accept": "application/json"})
         try:
-            with urllib.request.urlopen(request, timeout=30) as response:
+            with urllib.request.urlopen(request, timeout=180 if endpoint == "posts/all" else 30) as response:
                 body = response.read()
         except urllib.error.HTTPError as error:
             code = error.code
