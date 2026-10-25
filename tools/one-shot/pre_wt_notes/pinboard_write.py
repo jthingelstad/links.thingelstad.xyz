@@ -34,11 +34,18 @@ class Client:
     def _call(self, endpoint, params, attempts=4):
         """One call, retried on a transient failure (HTTP 5xx, timeout). posts/add with
         replace=yes is idempotent, so repeating a write that may have landed is safe."""
+        post = False
         for attempt in range(1, attempts + 1):
             try:
-                return self._once(endpoint, params)
+                return self._once(endpoint, params, post=post)
             except PinboardWriteError as error:
                 text = str(error)
+                # A note of 8,000 characters or more overflows the GET query
+                # (HTTP 414); the same parameters go once more as a POST body.
+                if "HTTP 414" in text and not post:
+                    post = True
+                    print(f"{endpoint}: HTTP 414 on GET; sending the same call as POST", flush=True)
+                    continue
                 transient = "HTTP 5" in text or "Timeout" in text or "URLError" in text or "RemoteDisconnected" in text
                 if not transient or attempt == attempts:
                     raise
@@ -46,13 +53,18 @@ class Client:
                 print(f"{endpoint}: {text}; retry {attempt} in {wait}s", flush=True)
                 time.sleep(wait)
 
-    def _once(self, endpoint, params):
+    def _once(self, endpoint, params, post=False):
         if self.last is not None:
             wait = SPACING - (time.monotonic() - self.last)
             if wait > 0:
                 time.sleep(wait)
         query = urlencode({**params, "format": "json", "auth_token": self.token})
-        request = urllib.request.Request(f"{API}{endpoint}?{query}", headers={"User-Agent": UA, "Accept": "application/json"})
+        headers = {"User-Agent": UA, "Accept": "application/json"}
+        if post:
+            headers["Content-Type"] = "application/x-www-form-urlencoded"
+            request = urllib.request.Request(f"{API}{endpoint}", data=query.encode("utf-8"), headers=headers)
+        else:
+            request = urllib.request.Request(f"{API}{endpoint}?{query}", headers=headers)
         try:
             with urllib.request.urlopen(request, timeout=180 if endpoint == "posts/all" else 30) as response:
                 body = response.read()
