@@ -26,6 +26,12 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   read its noindex);
 - every page's footer h-card names owner.url from shared/sites.json as
   its u-url (its u-photo stops the parser implying one from the link);
+- microformats: a record is one h-entry whose u-url is its permalink (its
+  u-bookmark-of is the saved link), with no h-feed or h-entry inside it; a
+  page that lists records (/newest/, a host, kind, year or issue page) is an
+  h-feed on its main, with the page as its u-url, of one h-entry per record
+  row (p-name, u-url the record, dt-published its saved time); an issue
+  with no saved link, and every other page, carries neither;
 - every record page has its JSON and Markdown twins, the JSON names the same
   id, and there is one record per link in data/links (read, never written);
 - Pagefind indexed exactly the record pages;
@@ -174,6 +180,15 @@ class Page(HTMLParser):
         self.h1 = 0
         self.h2 = 0
         self._inline = None
+        # Microformats (check_microformats): the tags that are an h-feed,
+        # each h-entry with what it carries, the u-url values in main outside
+        # any entry (the feed's), and the record each list row's title opens.
+        self.feeds = []
+        self.entries = []
+        self.feed_urls = []
+        self.row_records = []
+        self._entry_depth = 0
+        self._in_main = False
 
     def handle_starttag(self, tag, attrs):
         data = {key: value or "" for key, value in attrs}
@@ -202,6 +217,7 @@ class Page(HTMLParser):
             self.lede_count = data["data-count"]
         if "data-embed" in data:
             self.embeds.append(data["data-embed"])
+        self.microformats(tag, data)
         self.iframes += tag == "iframe"
         self.h1 += tag == "h1"
         self.h2 += tag == "h2"
@@ -220,11 +236,42 @@ class Page(HTMLParser):
                 if candidate.strip():
                     self.fetched.append(candidate.split()[0])
 
+    def microformats(self, tag, data):
+        classes = set(data.get("class", "").split())
+        self._in_main |= tag == "main"
+        if self._entry_depth and tag == self.entries[-1]["tag"]:
+            self._entry_depth += 1
+        if "h-feed" in classes:
+            self.feeds.append(tag)
+        if "h-entry" in classes:
+            if self._entry_depth:
+                self.entries[-1]["nested"] += 1
+            else:
+                self.entries.append(
+                    {"tag": tag, "urls": [], "names": 0, "published": [], "nested": 0}
+                )
+                self._entry_depth = 1
+        if self._entry_depth:
+            entry = self.entries[-1]
+            if "u-url" in classes:
+                entry["urls"].append(data.get("value" if tag == "data" else "href"))
+            entry["names"] += "p-name" in classes
+            if "dt-published" in classes:
+                entry["published"].append(data.get("datetime"))
+        elif self._in_main and tag == "data" and "u-url" in classes:
+            self.feed_urls.append(data.get("value"))
+        if tag == "a" and "title" in classes and record_id(data.get("href", "")):
+            self.row_records.append(record_id(data["href"]))
+
     def handle_data(self, data):
         if self._inline is not None:
             self._inline.append(data)
 
     def handle_endtag(self, tag):
+        if tag == "main":
+            self._in_main = False
+        if self._entry_depth and tag == self.entries[-1]["tag"]:
+            self._entry_depth -= 1
         # A URL written into an inline script is fetched as surely as a src.
         if tag == "script" and self._inline is not None:
             text = "".join(self._inline)
@@ -276,6 +323,36 @@ def record_id(url):
     path = url[len(SITE):] if url.startswith(SITE + "/") else url
     match = RECORD_PATH.match(path)
     return match and match.group(1)
+
+
+# The pages that list records, and so are an h-feed of them.
+FEED_PAGE = re.compile(r"/newest/|/(hosts|kinds|years|issues)/[^/]+/")
+
+
+def check_microformats(rel, url, parser, saved, problems):
+    """A record is one h-entry with its permalink as u-url; a page listing
+    records is an h-feed (its main) of one h-entry per record row; no other
+    page has either. saved maps a record id to its saved time."""
+    if any(entry["nested"] for entry in parser.entries):
+        problems.append(f"{rel}: an h-entry inside an h-entry")
+    if record_id(url):
+        if parser.feeds or [e["urls"] for e in parser.entries] != [[SITE + url]]:
+            problems.append(f"{rel}: the record is not one h-entry with its permalink as u-url")
+        return
+    rows = parser.row_records
+    if not (FEED_PAGE.fullmatch(url) and rows):
+        if parser.feeds or parser.entries:
+            problems.append(f"{rel}: an h-feed or h-entry on a page that lists no records")
+        return
+    if parser.feeds != ["main"] or parser.feed_urls != [SITE + url]:
+        problems.append(f"{rel}: main is not its one h-feed, with the page as u-url")
+    entries = [(e["urls"], e["names"], e["published"]) for e in parser.entries]
+    expected = [([f"/links/{record}/"], 1, [saved.get(record)]) for record in rows]
+    if entries != expected:
+        problems.append(
+            f"{rel}: not one h-entry per listed record"
+            " (p-name, u-url the record, dt-published its saved time)"
+        )
 
 
 def central_moment(moment):
@@ -803,6 +880,8 @@ def main():
         "tinylytics.app" in (link["url"] + link["title"] + link["note"]).lower()
         for link in data_links
     )
+    saved_at = {link["id"]: link["saved"] for link in data_links}
+    feed_pages = 0
 
     ids = {}
     links = []  # (page, ref, target url path, fragment)
@@ -845,6 +924,8 @@ def main():
         card = re.search(r'<a class="h-card".*?</a>', text, re.S)
         if not card or owner_u_url not in card.group():
             problems.append(f"{rel}: the footer h-card does not carry owner.url as its u-url")
+        check_microformats(rel, url, parser, saved_at, problems)
+        feed_pages += parser.feeds == ["main"]
         for embed in parser.embeds:
             if not embed.startswith(PLAYERS):
                 problems.append(f"{rel}: a video player at {embed}")
@@ -1033,7 +1114,8 @@ def main():
     print(
         f"{len(pages)} pages ({len(records)} records with twins), {len(links)} internal"
         f" links, {len(seen)} sitemap URLs ({len(noindex)} thin pages noindex);"
-        f" links, metadata and sitemap valid;"
+        f" links, metadata and sitemap valid; {len(records)} record h-entries and"
+        f" {feed_pages} list h-feeds;"
         f" {feeds + 2 * len(kind_counts)} feeds, links.json, hosts.json, issues.json,"
         f" search/suggest.json ({suggested[0]} hosts, {suggested[1]} issues), llms.txt and"
         f" {len(year_files)} year llms files valid ({len(inside)} site URLs inside resolve);"

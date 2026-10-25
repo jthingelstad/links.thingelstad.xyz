@@ -26,6 +26,10 @@ interface Props {
   // A record's own share card (lib/card.ts); every other page shares the
   // front page.
   image?: { url: string; alt: string };
+  // A page that lists records (newest, a host, a kind, a year, an issue):
+  // main is an h-feed, named by the title, whose rows are h-entries
+  // (LinkList's `entries`). Never on a record, which is an h-entry itself.
+  feed?: boolean;
 }
 const SITE_NAME = 'Linking Things';
 const {
@@ -35,6 +39,7 @@ const {
   notFound = false,
   noindex = false,
   home = false,
+  feed = false,
   image = {
     url: new URL('/share.jpg', Astro.site).href,
     alt: 'The Linking Things front page: its search box over every link Jamie Thingelstad has saved since 2005',
@@ -153,8 +158,14 @@ const current = (href: string) =>
         </nav>
       </header>
     )}
-    <main id="main" class="site-main">
+    <main id="main" class:list={['site-main', { 'h-feed': feed }]}>
       <slot />
+      {feed && (
+        <>
+          <data class="p-name" value={title}></data>
+          <data class="u-url" value={canonical}></data>
+        </>
+      )}
     </main>
     <footer class="site-footer">
       <p>

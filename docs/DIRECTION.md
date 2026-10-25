@@ -756,8 +756,9 @@ the mirror is kept lossless and Pinboard-shaped, not merely sufficient for pages
   feed parses and holds the right records with Central dates; the dataset files match
   `data/`; every site URL in a feed, data or llms file is built; the year llms files
   hold every record exactly once, each in its own Central year; `/newest/` lists the
-  newest 50; a public Kudos button on every record; Tinylytics only in a production
-  build), browser tests at three widths with analytics blocked.
+  newest 50; a public Kudos button on every record; each record an h-entry with its
+  permalink as `u-url`, each list of records an h-feed of h-entry rows; Tinylytics
+  only in a production build), browser tests at three widths with analytics blocked.
 - **Analytics and kudos**: Tinylytics, one script in the layout with `?kudos=custom`,
   production host only; a public Kudos button on every record
   (`class="tinylytics_kudos"`, the POAP `Kudos.astro` pattern, never `data-private`)
@@ -775,6 +776,16 @@ the mirror is kept lossless and Pinboard-shaped, not merely sufficient for pages
 - **The sites strip**: Linking Things is in `sites.json` and the strip (Jamie,
   2026-10-23: "99% sure"). The layout vendors `tokens.css` and carries the
   shared h-card and `rel=me` from the start, so joining is one registry line.
+- **Microformats** (open-web audit, 2026-10-25, G14 and G15). A record is an h-entry:
+  `p-name` the title, `u-bookmark-of` the saved link, `u-url` its own permalink (an
+  invisible `<data>`; the `u-bookmark-of` stops a parser implying one), `dt-published`,
+  `p-host`, `p-voice`, a `p-issue` on each issue chip and `e-content` the note, which
+  the share card reads. The pages that list records (`/newest/`, host, kind, year and
+  issue pages) are an h-feed on their `<main>`, named by the page title, of one
+  h-entry per record row (`p-name` and `u-url` the record, `dt-published` the time
+  saved); an issue with no saved link is no feed. LinkList writes the rows only when
+  asked (`entries`), because the record page lists links inside its own h-entry.
+  Nothing a reader sees changes. `validate:site` checks both.
 
 ## Ideas beyond the brief
 
