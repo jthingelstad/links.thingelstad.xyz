@@ -1,4 +1,40 @@
 {
+ "500friends.com": {
+  "checked": "2026-10-25T05:41:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.210.57.168"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns10.dnsmadeeasy.com",
+    "ns11.dnsmadeeasy.com",
+    "ns12.dnsmadeeasy.com",
+    "ns13.dnsmadeeasy.com",
+    "ns14.dnsmadeeasy.com",
+    "ns15.dnsmadeeasy.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:41:44Z",
+   "title": "Merkle - We Power the Experience Economy",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "500ish.com": {
   "checked": "2026-10-24T05:50:40Z",
   "method": "enrich_hosts",
@@ -55,6 +91,80 @@
     "ns-cloud-a4.googledomains.com"
    ],
    "checked": "2026-10-24T05:50:40Z"
+  }
+ },
+ "500px.com": {
+  "checked": "2026-10-25T05:41:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.8.27.3",
+    "65.8.27.11",
+    "65.8.27.31",
+    "65.8.27.58"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1489.awsdns-58.org",
+    "ns-1537.awsdns-00.co.uk",
+    "ns-46.awsdns-05.com",
+    "ns-557.awsdns-05.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:41:47Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "512kb.club": {
+  "checked": "2026-10-25T05:41:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "208.94.116.120"
+   ],
+   "aaaa": [
+    "2607:ff18:80::8877"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.he.net",
+    "ns2.he.net",
+    "ns3.he.net",
+    "ns4.he.net",
+    "ns5.he.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:41:50Z",
+   "title": "512KB Club | A showcase of lightweight websites.",
+   "generator": "Jekyll v4.4.1",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "512pixels.net": {
@@ -116,6 +226,73 @@
    "checked": "2026-10-24T05:43:49Z"
   }
  },
+ "52cups.tumblr.com": {
+  "checked": "2026-10-25T05:41:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "74.114.154.18",
+    "74.114.154.22"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-25T05:41:52Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "52tiger.net": {
+  "checked": "2026-10-25T05:41:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.8.77",
+    "172.67.156.239"
+   ],
+   "aaaa": [
+    "2606:4700:3035::6815:84d",
+    "2606:4700:3036::ac43:9cef"
+   ],
+   "cname": null,
+   "ns": [
+    "daniella.ns.cloudflare.com",
+    "lamar.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:41:54Z",
+   "title": "Why Intellectual Exploration Thrives in the United States | 52 Tiger",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "5by5.tv": {
   "checked": "2026-10-24T06:01:36Z",
   "method": "enrich_hosts",
@@ -145,6 +322,42 @@
   "home": {
    "checked": "2026-10-24T06:01:36Z",
    "title": "5by5",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "5minutesformom.com": {
+  "checked": "2026-10-25T05:41:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.75.229",
+    "172.67.182.231"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:b6e7",
+    "2606:4700:3037::6815:4be5"
+   ],
+   "cname": null,
+   "ns": [
+    "lily.ns.cloudflare.com",
+    "miles.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:41:57Z",
+   "title": "Home - 5 Minutes for Mom",
    "generator": null,
    "feeds": [],
    "hcard": false,

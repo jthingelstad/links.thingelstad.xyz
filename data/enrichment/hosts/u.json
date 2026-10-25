@@ -1,4 +1,41 @@
 {
+ "ulysses.app": {
+  "checked": "2026-10-25T05:37:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "195.201.31.247"
+   ],
+   "aaaa": [
+    "2a01:4f8:c2c:18bf::2"
+   ],
+   "cname": null,
+   "ns": [
+    "ns.second-ns.com",
+    "ns1.your-server.de",
+    "ns3.second-ns.de"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:44Z",
+   "title": "Ulysses",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://social.ulysses.app/@ulyssesapp"
+   ],
+   "webmention": null
+  }
+ },
  "uncomfortableprofit.com": {
   "checked": "2026-10-24T06:00:01Z",
   "method": "enrich_hosts",
@@ -31,6 +68,53 @@
      "type": "rss",
      "url": "https://www.thedeload.com/feed",
      "title": "The Deload"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "unixgame.io": {
+  "checked": "2026-10-25T05:37:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.48.96",
+    "172.67.183.192"
+   ],
+   "aaaa": [
+    "2606:4700:3034::6815:3060",
+    "2606:4700:3037::ac43:b7c0"
+   ],
+   "cname": null,
+   "ns": [
+    "hunts.ns.cloudflare.com",
+    "wren.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:48Z",
+   "title": "FUN88 Unixgame - ลิงค์เข้าสู่หน้าแรก FUN88.COM อย่างเป็นทางการ 2026",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://unixgame.io/feed/",
+     "title": "FUN88 » ฟีด"
+    },
+    {
+     "type": "rss",
+     "url": "https://unixgame.io/comments/feed/",
+     "title": "FUN88 » ฟีดความเห็น"
     }
    ],
    "hcard": false,
@@ -71,6 +155,42 @@
   },
   "rdap": null,
   "rdap_error": "refused: rdap.verisign.com: network: Broken pipe"
+ },
+ "updown.io": {
+  "checked": "2026-10-25T05:37:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "178.63.21.176"
+   ],
+   "aaaa": [
+    "2a01:4f8:141:441a::2"
+   ],
+   "cname": null,
+   "ns": [
+    "pns71.cloudns.net",
+    "pns72.cloudns.com",
+    "pns73.cloudns.net",
+    "pns74.cloudns.uk"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:53Z",
+   "title": "updown.io – Website monitoring, simple and inexpensive",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
  },
  "usatoday.com": {
   "checked": "2026-10-24T05:54:18Z",
@@ -209,6 +329,48 @@
    "webmention": null
   }
  },
+ "usesthis.com": {
+  "checked": "2026-10-25T05:37:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "46.62.130.5"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:57Z",
+   "title": "Uses This",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://usesthis.com/feed.atom",
+     "title": "Uses This"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://wafer.baby/@d"
+   ],
+   "webmention": null
+  }
+ },
  "usingomnifocus.com": {
   "checked": "2026-10-24T05:34:48Z",
   "method": "enrich_hosts",
@@ -289,6 +451,43 @@
    "checked": "2026-10-24T06:15:15Z",
    "title": "Union Square Ventures",
    "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "uto.asu.edu": {
+  "checked": "2026-10-25T05:38:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "72.11.158.5",
+    "72.11.158.6"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "a1-63.akam.net",
+    "a10-64.akam.net",
+    "a11-65.akam.net",
+    "a22-66.akam.net",
+    "a4-67.akam.net",
+    "a7-64.akam.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:38:01Z",
+   "title": "ASU Enterprise Technology | ASU Enterprise Technology",
+   "generator": "Drupal 10 (https://www.drupal.org)",
    "feeds": [],
    "hcard": false,
    "rel_me": [],

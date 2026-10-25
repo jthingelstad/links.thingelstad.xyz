@@ -1,4 +1,40 @@
 {
+ "t37.net": {
+  "checked": "2026-10-25T05:35:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "146.59.231.150"
+   ],
+   "aaaa": [
+    "2001:41d0:304:200::e14"
+   ],
+   "cname": null,
+   "ns": [
+    "blair.ns.cloudflare.com",
+    "norman.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "network: No route to host"
+  },
+  "home": {
+   "checked": "2026-10-25T05:35:39Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "network: No route to host"
+  }
+ },
  "talkingpointsmemo.com": {
   "checked": "2026-10-24T05:50:25Z",
   "method": "enrich_hosts",
@@ -260,6 +296,78 @@
    "checked": "2026-10-24T05:46:24Z"
   }
  },
+ "tech.wayfair.com": {
+  "checked": "2026-10-25T05:35:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.157.108.158",
+    "98.83.184.133",
+    "100.28.104.175"
+   ],
+   "aaaa": [
+    "2600:1f18:297:ba0e:7900:f622:48a8:f266",
+    "2600:1f18:297:ba18:6ddc:5d8f:6053:f003",
+    "2600:1f18:297:ba24:b508:76de:f4a:df34"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:35:41Z",
+   "title": "About Wayfair | Wayfair Tech Blog",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.aboutwayfair.com/careers/tech-blog.rss",
+     "title": "Wayfair Tech Blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "techcommunity.microsoft.com": {
+  "checked": "2026-10-25T05:35:42Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "150.171.109.183"
+   ],
+   "aaaa": [
+    "2603:1061:14:b6::1"
+   ],
+   "cname": "gxcuf89792.lithium.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:35:42Z",
+   "title": "Home | Microsoft Community Hub",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "techcrunch.com": {
   "checked": "2026-10-23T21:25:28Z",
   "method": "enrich_hosts",
@@ -369,6 +477,53 @@
    "checked": "2026-10-24T05:45:09Z"
   }
  },
+ "techmeme.com": {
+  "checked": "2026-10-25T05:35:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.95.216",
+    "172.67.148.168"
+   ],
+   "aaaa": [
+    "2606:4700:3035::ac43:94a8",
+    "2606:4700:3037::6815:5fd8"
+   ],
+   "cname": null,
+   "ns": [
+    "guss.ns.cloudflare.com",
+    "kira.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:35:55Z",
+   "title": "Techmeme",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.techmeme.com/feed.xml",
+     "title": "Techmeme"
+    },
+    {
+     "type": "rss",
+     "url": "https://feeds.feedburner.com/TechmemeRideHome",
+     "title": "Techmeme Ride Home podcast"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "technologyreview.com": {
   "checked": "2026-10-24T01:46:41Z",
   "method": "enrich_hosts",
@@ -419,6 +574,47 @@
    "checked": "2026-10-24T01:46:41Z"
   }
  },
+ "techradar.com": {
+  "checked": "2026-10-25T05:35:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.232.194.114",
+    "199.232.198.114"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1308.awsdns-35.org",
+    "ns-1896.awsdns-45.co.uk",
+    "ns-565.awsdns-06.net",
+    "ns-68.awsdns-08.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:35:57Z",
+   "title": "TechRadar | the technology experts",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.techradar.com/feeds.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "ted.com": {
   "checked": "2026-10-23T21:28:48Z",
   "method": "enrich_hosts",
@@ -461,6 +657,38 @@
    "checked": "2026-10-23T21:28:48Z"
   }
  },
+ "teddziuba.com": {
+  "checked": "2026-10-25T05:35:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-25T05:35:58Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
  "tedium.co": {
   "checked": "2026-10-24T05:50:27Z",
   "method": "enrich_hosts",
@@ -500,6 +728,40 @@
   },
   "rdap": null,
   "rdap_error": "no RDAP service for .co"
+ },
+ "tent.io": {
+  "checked": "2026-10-25T05:35:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1160.awsdns-17.org",
+    "ns-1701.awsdns-20.co.uk",
+    "ns-198.awsdns-24.com",
+    "ns-930.awsdns-52.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-25T05:35:58Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
  },
  "tesla.com": {
   "checked": "2026-10-24T06:13:17Z",
@@ -546,6 +808,116 @@
    "rel_me": [],
    "webmention": null,
    "error": "HTTP 403"
+  }
+ },
+ "teslamotors.com": {
+  "checked": "2026-10-25T05:35:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "209.11.133.106"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "a1-12.akam.net",
+    "a10-67.akam.net",
+    "a12-64.akam.net",
+    "a28-65.akam.net",
+    "a7-66.akam.net",
+    "a9-67.akam.net",
+    "edns69.ultradns.biz",
+    "edns69.ultradns.com",
+    "edns69.ultradns.net",
+    "edns69.ultradns.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "connection refused"
+  },
+  "home": {
+   "checked": "2026-10-25T05:35:59Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "connection refused"
+  }
+ },
+ "tex.stackexchange.com": {
+  "checked": "2026-10-25T05:36:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.252.206.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:02Z",
+   "title": "TeX - LaTeX Stack Exchange",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://tex.stackexchange.com/feeds",
+     "title": "Feed of recent questions"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "texasmonthly.com": {
+  "checked": "2026-10-25T05:36:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.10",
+    "141.193.213.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "jamie.ns.cloudflare.com",
+    "kip.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:05Z",
+   "title": "Texas Monthly – The National Magazine of Texas",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "theagileadmin.com": {
@@ -739,6 +1111,48 @@
    "webmention": null
   }
  },
+ "theblock.co": {
+  "checked": "2026-10-25T05:36:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.14.116",
+    "104.18.15.116"
+   ],
+   "aaaa": [
+    "2606:4700::6812:e74",
+    "2606:4700::6812:f74"
+   ],
+   "cname": null,
+   "ns": [
+    "etta.ns.cloudflare.com",
+    "lakas.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:08Z",
+   "title": "The Block: Bitcoin, Ethereum & Crypto News | Live Prices, Data & Indices",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.theblock.co/rss.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "thechangelog.com": {
   "checked": "2026-10-24T05:32:46Z",
   "method": "enrich_hosts",
@@ -867,6 +1281,77 @@
    "webmention": null
   }
  },
+ "thedailybeast.com": {
+  "checked": "2026-10-25T05:36:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.21.55",
+    "172.66.170.43"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:1537",
+    "2606:4700:10::ac42:aa2b"
+   ],
+   "cname": null,
+   "ns": [
+    "damian.ns.cloudflare.com",
+    "lovisa.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:10Z",
+   "title": "The Daily Beast: The Latest in Politics, Media & Entertainment News",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "thedailyshow.cc.com": {
+  "checked": "2026-10-25T05:36:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.157.108.158",
+    "98.83.184.133",
+    "100.28.104.175"
+   ],
+   "aaaa": [
+    "2600:1f18:297:ba0e:7900:f622:48a8:f266",
+    "2600:1f18:297:ba18:6ddc:5d8f:6053:f003",
+    "2600:1f18:297:ba24:b508:76de:f4a:df34"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:12Z",
+   "title": "Comedy Central The Daily Show Fan Page",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "thedeets.com": {
   "checked": "2026-10-24T06:14:32Z",
   "method": "enrich_hosts",
@@ -908,6 +1393,44 @@
    "hcard": false,
    "rel_me": [],
    "webmention": null
+  }
+ },
+ "thediff.co": {
+  "checked": "2026-10-25T05:36:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "178.128.137.126"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns19.domaincontrol.com",
+    "ns20.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:16Z",
+   "title": "The Diff - Inflections in finance and tech",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.thediff.co/archive/rss/",
+     "title": "The Diff"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://www.thediff.co/webmentions/receive/"
   }
  },
  "theguardian.com": {
@@ -968,6 +1491,122 @@
     "ns04.theguardiandns.com"
    ],
    "checked": "2026-10-23T21:26:08Z"
+  }
+ },
+ "thehill.com": {
+  "checked": "2026-10-25T05:36:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.91",
+    "151.101.65.91",
+    "151.101.129.91",
+    "151.101.193.91"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.cscdns.net",
+    "dns2.cscdns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:19Z",
+   "title": "The Hill - covering Congress, Politics, Political Campaigns and Capitol Hill",
+   "generator": "WordPress 6.9.10",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://thehill.com/feed/",
+     "title": "The Hill » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://thehill.com/comments/feed/",
+     "title": "The Hill » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "thehistoryoftheweb.com": {
+  "checked": "2026-10-25T05:36:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "45.151.82.8"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "one.nswhitelabel.com",
+    "two.nswhitelabel.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:24Z",
+   "title": "Unraveling the Web's Story - The History of the Web",
+   "generator": "WordPress 6.8.11",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@Jayhoffmann"
+   ],
+   "webmention": null
+  }
+ },
+ "thehustle.co": {
+  "checked": "2026-10-25T05:36:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.39.24",
+    "172.64.148.232"
+   ],
+   "aaaa": [
+    "2606:4700:440d::6812:2718",
+    "2a06:98c1:3102::ac40:94e8"
+   ],
+   "cname": null,
+   "ns": [
+    "archer.ns.cloudflare.com",
+    "rosalyn.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:28Z",
+   "title": "Subscribe to The Hustle Daily Newsletter - The Hustle",
+   "generator": "HubSpot",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "theinformation.com": {
@@ -1109,6 +1748,53 @@
    "checked": "2026-10-24T05:45:10Z"
   }
  },
+ "themarkup.org": {
+  "checked": "2026-10-25T05:36:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.210.61.95",
+    "34.206.117.241",
+    "34.206.240.118",
+    "54.175.10.39",
+    "98.95.77.77",
+    "184.196.53.57"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1130.awsdns-13.org",
+    "ns-1917.awsdns-47.co.uk",
+    "ns-351.awsdns-43.com",
+    "ns-989.awsdns-59.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:31Z",
+   "title": "The Markup",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://themarkup.org/feeds/rss.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.themarkup.org/@themarkup"
+   ],
+   "webmention": null
+  }
+ },
  "themorningnews.org": {
   "checked": "2026-10-24T06:14:37Z",
   "method": "enrich_hosts",
@@ -1156,6 +1842,42 @@
     "https://mastodon.social/@themorningnews"
    ],
    "webmention": "https://themorningnews.org/webmentions/receive/"
+  }
+ },
+ "themplsegotist.com": {
+  "checked": "2026-10-25T05:36:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.93.63",
+    "172.67.206.38"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:ce26",
+    "2606:4700:3037::6815:5d3f"
+   ],
+   "cname": null,
+   "ns": [
+    "meg.ns.cloudflare.com",
+    "woz.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:35Z",
+   "title": "The MPLS Egotist - The MPLS Egotist",
+   "generator": "WordPress 7.1.3",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "thenewstack.io": {
@@ -1305,6 +2027,35 @@
     "ns-569.awsdns-07.net"
    ],
    "checked": "2026-10-24T05:45:15Z"
+  }
+ },
+ "theomnishow.omnigroup.com": {
+  "checked": "2026-10-25T05:36:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "165.227.28.6"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:37Z",
+   "title": "The Omni Show",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "theonion.com": {
@@ -1506,6 +2257,39 @@
    "checked": "2026-10-24T05:45:18Z"
   }
  },
+ "thesample.ai": {
+  "checked": "2026-10-25T05:36:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "166.70.42.212"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.digitalocean.com",
+    "ns2.digitalocean.com",
+    "ns3.digitalocean.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:40Z",
+   "title": "Yakread",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "thesweetsetup.com": {
   "checked": "2026-10-23T21:27:36Z",
   "method": "enrich_hosts",
@@ -1672,6 +2456,144 @@
    "title": "Wirecutter: New Product Reviews, Deals, and Buying Advice",
    "generator": null,
    "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "thisamericanlife.org": {
+  "checked": "2026-10-25T05:36:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.66.134.147",
+    "172.66.138.241"
+   ],
+   "aaaa": [
+    "2606:4700:10::ac42:8693",
+    "2606:4700:10::ac42:8af1"
+   ],
+   "cname": null,
+   "ns": [
+    "ivy.ns.cloudflare.com",
+    "john.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:44Z",
+   "title": "This American Life",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.thisamericanlife.org/podcast/rss.xml",
+     "title": "Podcast"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "thisiscolossal.com": {
+  "checked": "2026-10-25T05:36:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.2.72",
+    "104.26.3.72",
+    "172.67.69.120"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:248",
+    "2606:4700:20::681a:348",
+    "2606:4700:20::ac43:4578"
+   ],
+   "cname": null,
+   "ns": [
+    "bruce.ns.cloudflare.com",
+    "chloe.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:46Z",
+   "title": "Colossal: Explore contemporary art, craft, photography, and the natural world.",
+   "generator": "WordPress 7.1",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.thisiscolossal.com/feed/",
+     "title": "Colossal » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.thisiscolossal.com/comments/feed/",
+     "title": "Colossal » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.art/@colossal"
+   ],
+   "webmention": null
+  }
+ },
+ "thomashawk.com": {
+  "checked": "2026-10-25T05:36:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.150",
+    "192.0.78.202"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:49Z",
+   "title": "Thomas Hawk Digital Connection",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://thomashawk.com/feed",
+     "title": "Thomas Hawk Digital Connection » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://thomashawk.com/comments/feed",
+     "title": "Thomas Hawk Digital Connection » Comments Feed"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -1943,6 +2865,39 @@
    "checked": "2026-10-24T05:42:04Z"
   }
  },
+ "timesofindia.indiatimes.com": {
+  "checked": "2026-10-25T05:36:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.217.55.173",
+    "23.217.55.176"
+   ],
+   "aaaa": [
+    "2600:1418:1000:4::173b:a91d",
+    "2600:1418:1000:4::173b:a920"
+   ],
+   "cname": "timesofindia.indiatimes.com-v1.edgekey.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:51Z",
+   "title": "US News: US News, Top News in India, US election news, Business news, Sports & International News | Times of India",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "tinyprojects.dev": {
   "checked": "2026-10-24T06:14:50Z",
   "method": "enrich_hosts",
@@ -1978,6 +2933,77 @@
      "title": "RSS"
     }
    ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "tldraw.com": {
+  "checked": "2026-10-25T05:36:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.29.17.66",
+    "216.198.79.66"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.vercel-dns.com",
+    "ns2.vercel-dns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:56Z",
+   "title": "tldraw • very good free whiteboard",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "tobyord.com": {
+  "checked": "2026-10-25T05:36:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.49.23.144",
+    "198.49.23.145",
+    "198.185.159.144",
+    "198.185.159.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.name-services.com",
+    "dns2.name-services.com",
+    "dns3.name-services.com",
+    "dns4.name-services.com",
+    "dns5.name-services.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:36:59Z",
+   "title": "Toby Ord",
+   "generator": null,
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -2029,6 +3055,44 @@
     "ns6.kasserver.com"
    ],
    "checked": "2026-10-24T05:45:21Z"
+  }
+ },
+ "todogroup.org": {
+  "checked": "2026-10-25T05:37:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.186.135",
+    "15.197.167.90"
+   ],
+   "aaaa": [
+    "2600:1f16:1a4:a001::1f5",
+    "2600:1f16:1a4:a001::1f6"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.p02.nsone.net",
+    "dns2.p02.nsone.net",
+    "dns3.p02.nsone.net",
+    "dns4.p02.nsone.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:01Z",
+   "title": "TODO Group // Talk openly, develop openly",
+   "generator": "Hugo 0.126.1",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "toggl.com": {
@@ -2171,6 +3235,84 @@
    "checked": "2026-10-24T05:48:35Z"
   }
  },
+ "tomforb.es": {
+  "checked": "2026-10-25T05:37:04Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.53.223",
+    "172.67.219.90"
+   ],
+   "aaaa": [
+    "2606:4700:3034::6815:35df",
+    "2606:4700:3036::ac43:db5a"
+   ],
+   "cname": null,
+   "ns": [
+    "amy.ns.cloudflare.com",
+    "lee.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:04Z",
+   "title": "Tom Forbes",
+   "generator": "Astro v4.16.6",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://tomforb.es/feed.xml",
+     "title": "RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "tompeters.com": {
+  "checked": "2026-10-25T05:37:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "161.35.181.231"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns10.digicertdns.com",
+    "ns11.digicertdns.com",
+    "ns12.digicertdns.com",
+    "ns13.digicertdns.net",
+    "ns14.digicertdns.net",
+    "ns15.digicertdns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:07Z",
+   "title": "Home - Tom Peters",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "tomsguide.com": {
   "checked": "2026-10-24T05:45:24Z",
   "method": "enrich_hosts",
@@ -2266,6 +3408,40 @@
      "title": null
     }
    ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "tomtunguz.com": {
+  "checked": "2026-10-25T05:37:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.24.57.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-a1.googledomains.com",
+    "ns-cloud-a2.googledomains.com",
+    "ns-cloud-a3.googledomains.com",
+    "ns-cloud-a4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:10Z",
+   "title": "Tomasz Tunguz",
+   "generator": "Hugo 0.167.0",
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -2392,6 +3568,86 @@
    "webmention": null
   }
  },
+ "tracydurnell.com": {
+  "checked": "2026-10-25T05:37:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "108.160.156.139"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:13Z",
+   "title": "Tracy Durnell's Mind Garden – Thinking and Learning In Public",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://tracydurnell.com/feed/",
+     "title": "Tracy Durnell's Mind Garden » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://tracydurnell.com/comments/feed/",
+     "title": "Tracy Durnell's Mind Garden » Comments Feed"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://micro.blog/tracydurnell",
+    "https://micro.blog/tracydurnell?remote_follow=1"
+   ],
+   "webmention": "https://tracydurnell.com/wp-json/webmention/1.0/endpoint"
+  }
+ },
+ "tratt.net": {
+  "checked": "2026-10-25T05:37:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "176.126.243.250"
+   ],
+   "aaaa": [
+    "2a00:1098:84:289::1"
+   ],
+   "cname": null,
+   "ns": [
+    "aria.ns.cloudflare.com",
+    "beau.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:16Z",
+   "title": "tratt.net",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "treehugger.com": {
   "checked": "2026-10-24T06:15:02Z",
   "method": "enrich_hosts",
@@ -2430,6 +3686,38 @@
      "title": null
     }
    ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "tripmode.ch": {
+  "checked": "2026-10-25T05:37:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.236.47.42"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns200.anycast.me",
+    "ns200.anycast.me"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:19Z",
+   "title": "TripMode - Save data, browse faster",
+   "generator": null,
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -2491,6 +3779,45 @@
     "rob.ns.cloudflare.com"
    ],
    "checked": "2026-10-24T05:48:38Z"
+  }
+ },
+ "truewealth.substack.com": {
+  "checked": "2026-10-25T05:37:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:22Z",
+   "title": "True Wealth | Gordo Byrn | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://truewealth.substack.com/feed",
+     "title": "True Wealth"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "tuaw.com": {
@@ -2715,6 +4042,216 @@
      "title": "Two-Bit History"
     }
    ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "txt.fyi": {
+  "checked": "2026-10-25T05:37:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.21.153",
+    "172.67.199.82"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:1599",
+    "2606:4700:3033::ac43:c752"
+   ],
+   "cname": null,
+   "ns": [
+    "barbara.ns.cloudflare.com",
+    "yoxall.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:24Z",
+   "title": "txt.fyi",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "tyler.io": {
+  "checked": "2026-10-25T05:37:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.45.152",
+    "172.67.216.45"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:d82d",
+    "2606:4700:3037::6815:2d98"
+   ],
+   "cname": null,
+   "ns": [
+    "chip.ns.cloudflare.com",
+    "zita.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:27Z",
+   "title": "tyler.io – mostly nonsense",
+   "generator": "Hugo 0.166.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://tyler.io/feed/",
+     "title": "tyler.io"
+    },
+    {
+     "type": "json",
+     "url": "https://tyler.io/feed/json/",
+     "title": "tyler.io » JSON Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "tympanus.net": {
+  "checked": "2026-10-25T05:37:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.6.150",
+    "104.26.7.150",
+    "172.67.73.17"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:696",
+    "2606:4700:20::681a:796",
+    "2606:4700:20::ac43:4911"
+   ],
+   "cname": null,
+   "ns": [
+    "amber.ns.cloudflare.com",
+    "justin.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:30Z",
+   "title": "Codrops | Fueling web creativity since 2009",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://tympanus.net/codrops/feed/",
+     "title": "Codrops"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "tynan.com": {
+  "checked": "2026-10-25T05:37:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.37.212",
+    "172.67.213.118"
+   ],
+   "aaaa": [
+    "2606:4700:3033::6815:25d4",
+    "2606:4700:3034::ac43:d576"
+   ],
+   "cname": null,
+   "ns": [
+    "lady.ns.cloudflare.com",
+    "noah.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:38Z",
+   "title": "Life outside the box · Tynan",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://tynan.com/feed",
+     "title": "Tynan RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://x.com/tynan",
+    "https://www.instagram.com/tynancom/"
+   ],
+   "webmention": null
+  }
+ },
+ "typora.io": {
+  "checked": "2026-10-25T05:37:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.24.156.12",
+    "104.24.157.12",
+    "172.67.97.82"
+   ],
+   "aaaa": [
+    "2606:4700:20::6818:9c0c",
+    "2606:4700:20::6818:9d0c",
+    "2606:4700:20::ac43:6152"
+   ],
+   "cname": null,
+   "ns": [
+    "dave.ns.cloudflare.com",
+    "lina.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:37:41Z",
+   "title": "Typora — simple yet powerful Markdown reader.",
+   "generator": null,
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null

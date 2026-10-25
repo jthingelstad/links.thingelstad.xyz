@@ -1,0 +1,103 @@
+{
+ "721.am": {
+  "checked": "2026-10-25T05:41:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-25T05:41:59Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "750words.com": {
+  "checked": "2026-10-25T05:41:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.10.251",
+    "104.26.11.251",
+    "172.67.70.66"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:afb",
+    "2606:4700:20::681a:bfb",
+    "2606:4700:20::ac43:4642"
+   ],
+   "cname": null,
+   "ns": [
+    "dora.ns.cloudflare.com",
+    "ivan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:41:59Z",
+   "title": "750 Words - Practice Writing Every Day",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "7pace.com": {
+  "checked": "2026-10-25T05:42:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "161.35.60.237"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "arya.ns.cloudflare.com",
+    "dane.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 429
+  },
+  "home": {
+   "checked": "2026-10-25T05:42:03Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 429 (Vercel challenge)"
+  }
+ }
+}

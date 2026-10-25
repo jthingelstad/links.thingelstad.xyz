@@ -1,4 +1,38 @@
 {
+ "raanan.com": {
+  "checked": "2026-10-25T05:32:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.24",
+    "192.0.78.25"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:17Z",
+   "title": "Private Site",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "rachelbythebay.com": {
   "checked": "2026-10-24T05:59:26Z",
   "method": "enrich_hosts",
@@ -97,6 +131,73 @@
    "checked": "2026-10-24T05:30:25Z"
   }
  },
+ "radiosilenceapp.com": {
+  "checked": "2026-10-25T05:32:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "139.162.163.152"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.linode.com",
+    "ns2.linode.com",
+    "ns3.linode.com",
+    "ns4.linode.com",
+    "ns5.linode.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:20Z",
+   "title": "Radio Silence | Network monitor and firewall for Mac",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "railspikes.com": {
+  "checked": "2026-10-25T05:32:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.98.192.100"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.rentondc.com",
+    "ns2.rentondc.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:24Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "rajiv.com": {
   "checked": "2026-10-24T01:48:30Z",
   "method": "enrich_hosts",
@@ -155,6 +256,51 @@
     "vera.ns.cloudflare.com"
    ],
    "checked": "2026-10-24T01:48:30Z"
+  }
+ },
+ "randomfoo.net": {
+  "checked": "2026-10-25T05:32:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.32.121.98"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1422.awsdns-49.org",
+    "ns-1672.awsdns-17.co.uk",
+    "ns-462.awsdns-57.com",
+    "ns-851.awsdns-42.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:26Z",
+   "title": "random($foo)",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://randomfoo.net/feed",
+     "title": "random($foo) » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://randomfoo.net/comments/feed",
+     "title": "random($foo) » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "randsinrepose.com": {
@@ -222,6 +368,120 @@
     "roan.ns.cloudflare.com"
    ],
    "checked": "2026-10-24T01:47:04Z"
+  }
+ },
+ "raptitude.com": {
+  "checked": "2026-10-25T05:32:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.31.74",
+    "172.67.175.68"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:af44",
+    "2606:4700:3036::6815:1f4a"
+   ],
+   "cname": null,
+   "ns": [
+    "aurora.ns.cloudflare.com",
+    "piotr.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:29Z",
+   "title": "Raptitude.com – Getting Better at Being Human",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.raptitude.com/feed/",
+     "title": "Raptitude.com RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "raspberrypi.com": {
+  "checked": "2026-10-25T05:32:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.88.234",
+    "172.67.154.53"
+   ],
+   "aaaa": [
+    "2606:4700:3035::6815:58ea",
+    "2606:4700:3036::ac43:9a35"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.mythic-beasts.com",
+    "ns2.mythic-beasts.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:31Z",
+   "title": "Raspberry Pi",
+   "generator": "Gatsby 5.16.1",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "raspberrypi.org": {
+  "checked": "2026-10-25T05:32:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.23.243",
+    "172.66.149.158"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:17f3",
+    "2606:4700:10::ac42:959e"
+   ],
+   "cname": null,
+   "ns": [
+    "april.ns.cloudflare.com",
+    "tony.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:33Z",
+   "title": "Teach, learn, and make with the Raspberry Pi Foundation",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "read.acloud.guru": {
@@ -752,6 +1012,90 @@
    "webmention": null
   }
  },
+ "relay.fm": {
+  "checked": "2026-10-25T05:32:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.10.63",
+    "104.26.11.63",
+    "172.67.69.198"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:a3f",
+    "2606:4700:20::681a:b3f",
+    "2606:4700:20::ac43:45c6"
+   ],
+   "cname": null,
+   "ns": [
+    "jasmine.ns.cloudflare.com",
+    "marty.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:34Z",
+   "title": "Relay",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "http://relay.fm/master/feed",
+     "title": "Relay All-Network Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://bsky.app/profile/relay.fm",
+    "https://relayfm.social/@relay",
+    "https://www.threads.net/@relaypodcasts"
+   ],
+   "webmention": null
+  }
+ },
+ "retailmenot.com": {
+  "checked": "2026-10-25T05:32:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.36.156",
+    "172.64.151.100"
+   ],
+   "aaaa": [
+    "2606:4700:4402::ac40:9764",
+    "2606:4700:440c::6812:249c"
+   ],
+   "cname": null,
+   "ns": [
+    "melinda.ns.cloudflare.com",
+    "stan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:37Z",
+   "title": "RetailMeNot: Save with Coupons & Promo Codes for October 2026",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "reuters.com": {
   "checked": "2026-10-24T05:32:39Z",
   "method": "enrich_hosts",
@@ -897,6 +1241,188 @@
    "checked": "2026-10-24T05:53:53Z"
   }
  },
+ "ricksegal.typepad.com": {
+  "checked": "2026-10-25T05:32:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.114.121",
+    "104.18.115.121",
+    "104.18.116.121",
+    "104.18.117.121",
+    "104.18.118.121"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:38Z",
+   "title": "Typepad | Network Solutions",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "risnews.edgl.com": {
+  "checked": "2026-10-25T05:32:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.10.231",
+    "104.26.11.231",
+    "172.67.75.143"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:ae7",
+    "2606:4700:20::681a:be7",
+    "2606:4700:20::ac43:4b8f"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:40Z",
+   "title": "Chain Store Age: Retail News | Chain Store Age",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "riverfold.com": {
+  "checked": "2026-10-25T05:32:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "69.163.179.25"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple.com",
+    "ns4.dnsimple-edge.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: self-signed certificate"
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:44Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: self-signed certificate"
+  }
+ },
+ "robertglazer.com": {
+  "checked": "2026-10-25T05:32:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.80.112",
+    "172.67.179.106"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:b36a",
+    "2606:4700:3037::6815:5070"
+   ],
+   "cname": null,
+   "ns": [
+    "felipe.ns.cloudflare.com",
+    "paris.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:46Z",
+   "title": "Robert Glazer | Entrepreneur, Author, and Leadership Speaker",
+   "generator": "Site Kit by Google 1.190.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://robertglazer.com/feed/",
+     "title": "Robert Glazer » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "robertheaton.com": {
+  "checked": "2026-10-25T05:32:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.35.141",
+    "172.67.175.97"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:238d",
+    "2606:4700:3036::ac43:af61"
+   ],
+   "cname": null,
+   "ns": [
+    "dane.ns.cloudflare.com",
+    "jocelyn.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:48Z",
+   "title": "Robert Heaton",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "robinrendle.com": {
   "checked": "2026-10-24T05:59:36Z",
   "method": "enrich_hosts",
@@ -987,6 +1513,131 @@
      "title": "Atom feed"
     }
    ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "robm.me.uk": {
+  "checked": "2026-10-25T05:32:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "46.235.225.113"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.mythic-beasts.com",
+    "ns2.mythic-beasts.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:51Z",
+   "title": "Roblog, the blog of Rob Miller",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://roblog.co.uk/feed.xml",
+     "title": "Roblog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@robmil"
+   ],
+   "webmention": null
+  }
+ },
+ "robservatory.com": {
+  "checked": "2026-10-25T05:32:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.40.101",
+    "172.67.184.88"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:2865",
+    "2606:4700:3033::ac43:b858"
+   ],
+   "cname": null,
+   "ns": [
+    "carter.ns.cloudflare.com",
+    "gail.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:55Z",
+   "title": "The Robservatory – Robservations on everything…",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://robservatory.com/feed/",
+     "title": "The Robservatory » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://robservatory.com/comments/feed/",
+     "title": "The Robservatory » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mstdn.social/@rgriff"
+   ],
+   "webmention": null
+  }
+ },
+ "rocksbarbque.com": {
+  "checked": "2026-10-25T05:33:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.44.30",
+    "172.67.194.85"
+   ],
+   "aaaa": [
+    "2606:4700:3034::ac43:c255",
+    "2606:4700:3037::6815:2c1e"
+   ],
+   "cname": null,
+   "ns": [
+    "pam.ns.cloudflare.com",
+    "rick.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:33:01Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -1194,6 +1845,162 @@
    "checked": "2026-10-24T05:53:56Z"
   }
  },
+ "rowansimpson.com": {
+  "checked": "2026-10-25T05:33:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p06.nsone.net",
+    "dns2.p06.nsone.net",
+    "dns3.p06.nsone.net",
+    "dns4.p06.nsone.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:33:02Z",
+   "title": "Rowan Simpson",
+   "generator": "Hugo 0.166.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://rowansimpson.com/index.xml",
+     "title": "Rowan Simpson RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "royal.pingdom.com": {
+  "checked": "2026-10-25T05:33:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "150.171.109.183"
+   ],
+   "aaaa": [
+    "2603:1061:14:b6::1"
+   ],
+   "cname": "webredirect.solarwinds.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:33:05Z",
+   "title": "Blog Posts Archive - Pingdom",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.pingdom.com/blog/feed/",
+     "title": "pingdom.com » Blog Posts Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "rstephens.blogspot.com": {
+  "checked": "2026-10-25T05:33:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.210.97"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:81e::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:33:09Z",
+   "title": "Robert Stephens",
+   "generator": "blogger",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://rstephens.blogspot.com/feeds/posts/default",
+     "title": "Robert Stephens - Atom"
+    },
+    {
+     "type": "rss",
+     "url": "https://rstephens.blogspot.com/feeds/posts/default?alt=rss",
+     "title": "Robert Stephens - RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://www.blogger.com/profile/07364150179250703297"
+   ],
+   "webmention": null
+  }
+ },
+ "rsync.net": {
+  "checked": "2026-10-25T05:33:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.218.240.148"
+   ],
+   "aaaa": [
+    "2001:470:1:9a6::101"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.rsync.net",
+    "ns2.rsync.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:33:10Z",
+   "title": "Cloud Storage for Offsite Backup",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "ryandlane.com": {
   "checked": "2026-10-24T06:11:16Z",
   "method": "enrich_hosts",
@@ -1226,6 +2033,49 @@
    "rel_me": [],
    "webmention": null,
    "error": "does not resolve"
+  }
+ },
+ "ryanfrantz.com": {
+  "checked": "2026-10-25T05:33:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:33:12Z",
+   "title": "ryanfrantz.com",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://ryanfrantz.com/rss.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://hachyderm.io/@frantz"
+   ],
+   "webmention": null
   }
  },
  "ryanholiday.net": {

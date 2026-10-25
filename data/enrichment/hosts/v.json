@@ -62,6 +62,40 @@
    "checked": "2026-10-24T01:48:08Z"
   }
  },
+ "variety.com": {
+  "checked": "2026-10-25T05:38:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.176"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1155.awsdns-16.org",
+    "ns-1716.awsdns-22.co.uk",
+    "ns-534.awsdns-02.net",
+    "ns-74.awsdns-09.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:38:03Z",
+   "title": "Variety - Entertainment news, film reviews, awards, film festivals, box office, entertainment industry conferences",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "venturebeat.com": {
   "checked": "2026-10-23T21:28:53Z",
   "method": "enrich_hosts",
@@ -538,6 +572,43 @@
     "ns-762.awsdns-31.net"
    ],
    "checked": "2026-10-24T01:48:33Z"
+  }
+ },
+ "vulture.com": {
+  "checked": "2026-10-25T05:38:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.91",
+    "151.101.65.91",
+    "151.101.129.91",
+    "151.101.193.91"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1330.awsdns-38.org",
+    "ns-163.awsdns-20.com",
+    "ns-1928.awsdns-49.co.uk",
+    "ns-988.awsdns-59.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:38:06Z",
+   "title": "Vulture - Entertainment News - TV, Movies, Music, Books, Theater, Art",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  }
 }

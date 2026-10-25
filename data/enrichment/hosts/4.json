@@ -76,5 +76,48 @@
    "rel_me": [],
    "webmention": null
   }
+ },
+ "4guysfromrolla.com": {
+  "checked": "2026-10-25T05:41:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "51.81.205.63"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "pdns07.domaincontrol.com",
+    "pdns08.domaincontrol.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:41:40Z",
+   "title": "ᐈ eSports News & Tricks (2026) 🥇 ENEWS.GG",
+   "generator": "WordPress 7.0.6",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.4guysfromrolla.com/feed/",
+     "title": "4GuysFromRolla » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.4guysfromrolla.com/comments/feed/",
+     "title": "4GuysFromRolla » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
  }
 }

@@ -188,6 +188,87 @@
    "webmention": null
   }
  },
+ "panteracapital.com": {
+  "checked": "2026-10-25T05:30:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.185.0.2"
+   ],
+   "aaaa": [
+    "2620:12a:8000::2",
+    "2620:12a:8001::2"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1445.awsdns-52.org",
+    "ns-1735.awsdns-24.co.uk",
+    "ns-337.awsdns-42.com",
+    "ns-634.awsdns-15.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:30:26Z",
+   "title": "Home | Pantera",
+   "generator": "WordPress 7.1.3",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "paperplanes.de": {
+  "checked": "2026-10-25T05:30:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [
+    "2600:1f18:16e:df01::258",
+    "2600:1f18:16e:df01::259"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple-edge.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple-edge.io",
+    "ns4.dnsimple-edge.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:30:29Z",
+   "title": "Mathias Meyer | Executive Leadership Coach, Author",
+   "generator": "Jekyll v4.2.0",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.paperplanes.de/feed.xml",
+     "title": "Mathias Meyer"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "papers.ssrn.com": {
   "checked": "2026-10-24T05:58:52Z",
   "method": "enrich_hosts",
@@ -390,6 +471,44 @@
    "checked": "2026-10-24T01:48:26Z"
   }
  },
+ "paul.af": {
+  "checked": "2026-10-25T05:30:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.191.179.131"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "aria.ns.cloudflare.com",
+    "clint.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:30:32Z",
+   "title": "Howdy - Paul's Weblog",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://paul.af/feed.rss",
+     "title": "RSS Feed for Paul's Weblog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "paulgraham.com": {
   "checked": "2026-10-24T05:31:45Z",
   "method": "enrich_hosts",
@@ -539,6 +658,95 @@
    "checked": "2026-10-24T05:32:14Z"
   }
  },
+ "pcmag.com": {
+  "checked": "2026-10-25T05:30:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.16.20.118",
+    "104.16.21.118"
+   ],
+   "aaaa": [
+    "2606:4700::6810:1476",
+    "2606:4700::6810:1576"
+   ],
+   "cname": null,
+   "ns": [
+    "melinda.ns.cloudflare.com",
+    "stan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:30:36Z",
+   "title": "The Latest Technology Product Reviews, News, Tips, and Deals | PCMag",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.pcmag.com/feeds/rss/latest",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "pcworld.com": {
+  "checked": "2026-10-25T05:30:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.20.152",
+    "104.18.21.152"
+   ],
+   "aaaa": [
+    "2606:4700::6812:1498",
+    "2606:4700::6812:1598"
+   ],
+   "cname": null,
+   "ns": [
+    "elle.ns.cloudflare.com",
+    "michael.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:30:37Z",
+   "title": "PCWorld",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.pcworld.com/feed",
+     "title": "PCWorld » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.pcworld.com/comments/feed",
+     "title": "PCWorld » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "pelobuddy.com": {
   "checked": "2026-10-24T05:59:05Z",
   "method": "enrich_hosts",
@@ -579,6 +787,84 @@
      "type": "rss",
      "url": "https://www.pelobuddy.com/comments/feed/",
      "title": "Peloton Buddy » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "performancing.com": {
+  "checked": "2026-10-25T05:30:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.29.36",
+    "172.67.171.76"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:ab4c",
+    "2606:4700:3035::6815:1d24"
+   ],
+   "cname": null,
+   "ns": [
+    "fiona.ns.cloudflare.com",
+    "igor.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-25T05:30:40Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "perspectives.mvdirona.com": {
+  "checked": "2026-10-25T05:31:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "50.112.183.93"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:13Z",
+   "title": "Perspectives – James Hamilton's Blog",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://perspectives.mvdirona.com/feed/",
+     "title": "Perspectives » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://perspectives.mvdirona.com/comments/feed/",
+     "title": "Perspectives » Comments Feed"
     }
    ],
    "hcard": false,
@@ -639,6 +925,43 @@
    "checked": "2026-10-24T05:50:08Z"
   }
  },
+ "petersens.ws": {
+  "checked": "2026-10-25T05:31:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.38.235",
+    "172.67.140.199"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:26eb",
+    "2606:4700:3034::ac43:8cc7"
+   ],
+   "cname": null,
+   "ns": [
+    "lovisa.ns.cloudflare.com",
+    "sonny.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:16Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
  "pewresearch.org": {
   "checked": "2026-10-24T06:10:35Z",
   "method": "enrich_hosts",
@@ -684,6 +1007,39 @@
    "webmention": null
   }
  },
+ "philschmid.de": {
+  "checked": "2026-10-25T05:31:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.251.168",
+    "15.197.225.128"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns81.domaincontrol.com",
+    "ns82.domaincontrol.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:18Z",
+   "title": "Philschmid",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "photoshopnews.com": {
   "checked": "2026-10-24T06:10:38Z",
   "method": "enrich_hosts",
@@ -718,6 +1074,41 @@
    "hcard": false,
    "rel_me": [],
    "webmention": null
+  }
+ },
+ "phx.corporate-ir.net": {
+  "checked": "2026-10-25T05:31:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.217.104.121",
+    "23.217.104.122"
+   ],
+   "aaaa": [
+    "2600:1418:1000:d::17d9:6879",
+    "2600:1418:1000:d::17d9:687a"
+   ],
+   "cname": "phx-wdc.corporate-ir.net.edgesuite.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'phx.corporate-ir.net'"
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:20Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'phx.corporate-ir.net'"
   }
  },
  "phys.org": {
@@ -789,6 +1180,251 @@
     "gns4.cloudns.net"
    ],
    "checked": "2026-10-24T05:53:42Z"
+  }
+ },
+ "pi-hole.net": {
+  "checked": "2026-10-25T05:31:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.244.93.14"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.pi-hole.net",
+    "ns2.pi-hole.net",
+    "ns3.pi-hole.net",
+    "ns4.pi-hole.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:22Z",
+   "title": "Pi-hole – Network-wide Ad Blocking",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://pi-hole.net/feed/",
+     "title": "Pi-hole » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://pi-hole.net/comments/feed/",
+     "title": "Pi-hole » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "pinboard.in": {
+  "checked": "2026-10-25T05:31:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.62.134.190"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-128-a.gandi.net",
+    "ns-84-b.gandi.net",
+    "ns-98-c.gandi.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:25Z",
+   "title": "Welcome to Pinboard—Social bookmarking for introverts!",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "pitchfork.com": {
+  "checked": "2026-10-25T05:31:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.84.127.12",
+    "52.84.127.55",
+    "52.84.127.64",
+    "52.84.127.119"
+   ],
+   "aaaa": [
+    "2600:9000:2203:600:1a:1603:8940:93a1",
+    "2600:9000:2203:a00:1a:1603:8940:93a1",
+    "2600:9000:2203:4200:1a:1603:8940:93a1",
+    "2600:9000:2203:7400:1a:1603:8940:93a1",
+    "2600:9000:2203:9a00:1a:1603:8940:93a1",
+    "2600:9000:2203:e400:1a:1603:8940:93a1",
+    "2600:9000:2203:e800:1a:1603:8940:93a1",
+    "2600:9000:2203:ee00:1a:1603:8940:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1116.awsdns-11.org",
+    "ns-1935.awsdns-49.co.uk",
+    "ns-28.awsdns-03.com",
+    "ns-836.awsdns-40.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:26Z",
+   "title": "Pitchfork | The Most Trusted Voice in Music. | Pitchfork",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://pitchfork.com/feed/rss",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "piwik.org": {
+  "checked": "2026-10-25T05:31:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.31.40.177"
+   ],
+   "aaaa": [
+    "2a00:b6e0:1:200:177::1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1450.awsdns-53.org",
+    "ns-1912.awsdns-47.co.uk",
+    "ns-76.awsdns-09.com",
+    "ns-939.awsdns-53.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:29Z",
+   "title": "Privacy-first analytics you can trust - Analytics Platform - Matomo",
+   "generator": "WPML ver:5.1.0 stt:1,4;",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "plainlanguage.gov": {
+  "checked": "2026-10-25T05:31:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.8.27.58",
+    "65.8.27.76",
+    "65.8.27.99",
+    "65.8.27.109"
+   ],
+   "aaaa": [
+    "2600:9000:2123:3800:6:9122:3280:93a1",
+    "2600:9000:2123:4e00:6:9122:3280:93a1",
+    "2600:9000:2123:5800:6:9122:3280:93a1",
+    "2600:9000:2123:9200:6:9122:3280:93a1",
+    "2600:9000:2123:9c00:6:9122:3280:93a1",
+    "2600:9000:2123:b600:6:9122:3280:93a1",
+    "2600:9000:2123:be00:6:9122:3280:93a1",
+    "2600:9000:2123:ea00:6:9122:3280:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1450.awsdns-53.org",
+    "ns-1881.awsdns-43.co.uk",
+    "ns-25.awsdns-03.com",
+    "ns-991.awsdns-59.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:31Z",
+   "title": "Plain language guide series | Digital.gov",
+   "generator": "Drupal 10 (https://www.drupal.org)",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "planetary.social": {
+  "checked": "2026-10-25T05:31:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.2.70.75",
+    "99.83.190.102"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "angelina.ns.cloudflare.com",
+    "marty.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:34Z",
+   "title": "Planetary - Social media for humans, not algorithms.",
+   "generator": "Webflow",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "platformer.news": {
@@ -878,6 +1514,40 @@
    "webmention": null
   }
  },
+ "platonphoto.com": {
+  "checked": "2026-10-25T05:31:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.185.159.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-e1.googledomains.com",
+    "ns-cloud-e2.googledomains.com",
+    "ns-cloud-e3.googledomains.com",
+    "ns-cloud-e4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:37Z",
+   "title": "Platon - Photographer, Storyteller, Public Speaker",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "plausible.io": {
   "checked": "2026-10-24T06:10:47Z",
   "method": "enrich_hosts",
@@ -916,6 +1586,97 @@
    "hcard": false,
    "rel_me": [
     "https://fosstodon.org/@plausible"
+   ],
+   "webmention": null
+  }
+ },
+ "play.date": {
+  "checked": "2026-10-25T05:31:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.47.109",
+    "172.66.148.240"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:2f6d",
+    "2606:4700:10::ac42:94f0"
+   ],
+   "cname": null,
+   "ns": [
+    "adrian.ns.cloudflare.com",
+    "dilbert.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:38Z",
+   "title": "Playdate",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://social.panic.com/@playdate"
+   ],
+   "webmention": null
+  }
+ },
+ "ploum.net": {
+  "checked": "2026-10-25T05:31:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "46.23.81.157"
+   ],
+   "aaaa": [
+    "2a03:6000:1813:1337::157"
+   ],
+   "cname": null,
+   "ns": [
+    "nsa.bookmyname.com",
+    "nsb.bookmyname.com",
+    "nsc.bookmyname.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:41Z",
+   "title": "Ploum.net",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://ploum.net/atom.xml",
+     "title": "Ploum.net complet (FR + EN)"
+    },
+    {
+     "type": "atom",
+     "url": "https://ploum.net/atom_en.xml",
+     "title": "Ploum.net English only (EN)"
+    },
+    {
+     "type": "atom",
+     "url": "https://ploum.net/atom_fr.xml",
+     "title": "Ploum.net en français (FR)"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mamot.fr/@ploum"
    ],
    "webmention": null
   }
@@ -960,6 +1721,48 @@
      "title": "Pluralistic: Daily links from Cory Doctorow » Comments Feed"
     }
    ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "plus.codes": {
+  "checked": "2026-10-25T05:31:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.239.32.21",
+    "216.239.34.21",
+    "216.239.36.21",
+    "216.239.38.21"
+   ],
+   "aaaa": [
+    "2001:4860:4802:32::15",
+    "2001:4860:4802:34::15",
+    "2001:4860:4802:36::15",
+    "2001:4860:4802:38::15"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.googledomains.com",
+    "ns2.googledomains.com",
+    "ns3.googledomains.com",
+    "ns4.googledomains.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:45Z",
+   "title": "Redirecting...",
+   "generator": null,
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -1209,6 +2012,85 @@
     "ns24.digicertdns.net"
    ],
    "checked": "2026-10-24T05:48:18Z"
+  }
+ },
+ "popsci.com": {
+  "checked": "2026-10-25T05:31:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.194"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "melinda.ns.cloudflare.com",
+    "stan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:49Z",
+   "title": "Popular Science | Science and Technology Stories Since 1872",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.popsci.com/feed/",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "powazek.com": {
+  "checked": "2026-10-25T05:31:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "69.163.182.226"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:51Z",
+   "title": "Derek Powazek - It's pronounced poe-WAH-zek.",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://powazek.com/feed",
+     "title": "Derek Powazek RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://xoxo.zone/@fraying"
+   ],
+   "webmention": null
   }
  },
  "poynter.org": {
@@ -1684,6 +2566,92 @@
    "checked": "2026-10-24T05:42:30Z"
   }
  },
+ "programmableweb.com": {
+  "checked": "2026-10-25T05:31:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.157.108.158",
+    "98.83.184.133",
+    "100.28.104.175"
+   ],
+   "aaaa": [
+    "2600:1f18:297:ba0e:7900:f622:48a8:f266",
+    "2600:1f18:297:ba18:6ddc:5d8f:6053:f003",
+    "2600:1f18:297:ba24:b508:76de:f4a:df34"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.p01.nsone.net",
+    "dns2.p01.nsone.net",
+    "dns3.p01.nsone.net",
+    "dns4.p01.nsone.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:54Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
+  }
+ },
+ "projects.propublica.org": {
+  "checked": "2026-10-25T05:31:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.16.251.51",
+    "104.16.252.51"
+   ],
+   "aaaa": [
+    "2606:4700::6810:fb33",
+    "2606:4700::6810:fc33"
+   ],
+   "cname": "projects.propublica.org.cdn.cloudflare.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:31:56Z",
+   "title": "News App Archives — ProPublica",
+   "generator": "WordPress 7.0.7",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.propublica.org/feeds/propublica/main",
+     "title": "ProPublica"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.propublica.org/newsapps/feed",
+     "title": "ProPublica — News App Display On Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "projectskyway.com": {
   "checked": "2026-10-24T05:53:48Z",
   "method": "enrich_hosts",
@@ -1723,6 +2691,44 @@
   },
   "rdap": null,
   "rdap_error": "refused: rdap.verisign.com: network: Broken pipe"
+ },
+ "prolost.com": {
+  "checked": "2026-10-25T05:32:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.185.159.135"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hover.com",
+    "ns2.hover.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:00Z",
+   "title": "Prolost",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://prolost.com/blog?format=rss",
+     "title": "RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
  },
  "propublica.org": {
   "checked": "2026-10-24T05:44:57Z",
@@ -1892,6 +2898,92 @@
    "webmention": null
   }
  },
+ "psyche.co": {
+  "checked": "2026-10-25T05:32:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.150.1.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1284.awsdns-32.org",
+    "ns-1639.awsdns-12.co.uk",
+    "ns-214.awsdns-26.com",
+    "ns-696.awsdns-23.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:03Z",
+   "title": "Psyche | Know Your Self",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://psyche.co/feed.rss",
+     "title": null
+    },
+    {
+     "type": "atom",
+     "url": "https://psyche.co/feed.atom",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "psychologytoday.com": {
+  "checked": "2026-10-25T05:32:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.169.129.115",
+    "100.29.92.208"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1135.awsdns-13.org",
+    "ns-1884.awsdns-43.co.uk",
+    "ns-442.awsdns-55.com",
+    "ns-672.awsdns-20.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:06Z",
+   "title": "Psychology Today: Health, Help, Happiness + Find a Therapist",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.psychologytoday.com/us/front/feed",
+     "title": "The Latest"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "pudding.cool": {
   "checked": "2026-10-24T05:48:24Z",
   "method": "enrich_hosts",
@@ -1993,6 +3085,96 @@
     "https://c.im/@nickheer",
     "https://mastodon.social/@pxlnv"
    ],
+   "webmention": null
+  }
+ },
+ "pypi.python.org": {
+  "checked": "2026-10-25T05:32:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.0.223",
+    "151.101.64.223",
+    "151.101.128.223",
+    "151.101.192.223"
+   ],
+   "aaaa": [
+    "2a04:4e42::223",
+    "2a04:4e42:200::223",
+    "2a04:4e42:400::223",
+    "2a04:4e42:600::223"
+   ],
+   "cname": "dualstack.python.map.fastly.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:12Z",
+   "title": "PyPI · The Python Package Index",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://pypi.org/rss/updates.xml",
+     "title": "RSS: 40 latest updates"
+    },
+    {
+     "type": "rss",
+     "url": "https://pypi.org/rss/packages.xml",
+     "title": "RSS: 40 newest packages"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "pythonhosted.org": {
+  "checked": "2026-10-25T05:32:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.0.223",
+    "151.101.64.223",
+    "151.101.128.223",
+    "151.101.192.223"
+   ],
+   "aaaa": [
+    "2a04:4e42::223",
+    "2a04:4e42:200::223",
+    "2a04:4e42:400::223",
+    "2a04:4e42:600::223"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1264.awsdns-30.org",
+    "ns-1702.awsdns-20.co.uk",
+    "ns-897.awsdns-48.net",
+    "ns-96.awsdns-12.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:32:15Z",
+   "title": "PyPI Package and Documentation Storage",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
    "webmention": null
   }
  }

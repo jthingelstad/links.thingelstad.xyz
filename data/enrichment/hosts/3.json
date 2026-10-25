@@ -1,4 +1,36 @@
 {
+ "30daysofbiking.com": {
+  "checked": "2026-10-25T05:41:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.248.120.25"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:41:31Z",
+   "title": "30 Days of Biking",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "37signals.blogs.com": {
   "checked": "2026-10-24T05:46:33Z",
   "method": "enrich_hosts",
@@ -102,6 +134,85 @@
     "serena.ns.cloudflare.com"
    ],
    "checked": "2026-10-24T05:33:18Z"
+  }
+ },
+ "3hubapp.com": {
+  "checked": "2026-10-25T05:41:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "16.15.183.1",
+    "16.15.212.22",
+    "16.15.212.149",
+    "16.15.228.27",
+    "52.216.205.34",
+    "52.216.250.235",
+    "54.231.172.229",
+    "54.231.226.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1238.awsdns-26.org",
+    "ns-1651.awsdns-14.co.uk",
+    "ns-422.awsdns-52.com",
+    "ns-546.awsdns-04.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "connection reset"
+  },
+  "home": {
+   "checked": "2026-10-25T05:41:34Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "connection reset"
+  }
+ },
+ "3scale.net": {
+  "checked": "2026-10-25T05:41:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.210.217.83",
+    "18.232.237.200",
+    "98.87.133.170"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1265.awsdns-30.org",
+    "ns-1957.awsdns-52.co.uk",
+    "ns-657.awsdns-18.net",
+    "ns-80.awsdns-10.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:41:37Z",
+   "title": "Red Hat 3scale API Management",
+   "generator": "Drupal 10 (https://www.drupal.org)",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  }
 }

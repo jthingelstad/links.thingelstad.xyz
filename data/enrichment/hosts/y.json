@@ -1,4 +1,34 @@
 {
+ "ykatkov.name": {
+  "checked": "2026-10-25T05:39:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:45Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
  "ynab.com": {
   "checked": "2026-10-24T06:01:26Z",
   "method": "enrich_hosts",
@@ -87,6 +117,37 @@
     "art.ns.cloudflare.com"
    ],
    "checked": "2026-10-24T05:41:26Z"
+  }
+ },
+ "youtube-global.blogspot.com": {
+  "checked": "2026-10-25T05:39:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.214.65"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:81e::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:45Z",
+   "title": "Official YouTube Blog for Latest YouTube News & Insights",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "youtube.com": {

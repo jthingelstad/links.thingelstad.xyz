@@ -1,0 +1,166 @@
+{
+ "0x74696d.com": {
+  "checked": "2026-10-25T05:40:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.198.14.52"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:40:03Z",
+   "title": "0x74696d",
+   "generator": "Hugo 0.117.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://blog.0x74696d.com/rss.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "0xadada.pub": {
+  "checked": "2026-10-25T05:40:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.95.198",
+    "172.67.147.177"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:5fc6",
+    "2606:4700:3032::ac43:93b1"
+   ],
+   "cname": null,
+   "ns": [
+    "deb.ns.cloudflare.com",
+    "glen.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:40:07Z",
+   "title": "0xADADA produces code, essays, and films that explore idleness, time, and lived experience",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://0xadada.pub/rss.xml",
+     "title": null
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://warpcast.com/0xadada",
+    "https://mastodon.cloud/@0xADADA",
+    "https://bsky.app/profile/0xadada.bsky.social",
+    "https://twitter.com/0xadada",
+    "https://github.com/0xadada",
+    "https://www.goodreads.com/review/list/60524683-0xadada?shelf=wanted"
+   ],
+   "webmention": null
+  }
+ },
+ "0xerr0r.github.io": {
+  "checked": "2026-10-25T05:40:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-25T05:40:09Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "0xkato.xyz": {
+  "checked": "2026-10-25T05:40:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.150.1.193",
+    "216.150.16.193"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.vercel-dns.com",
+    "ns2.vercel-dns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:40:11Z",
+   "title": "Home | 0xkato",
+   "generator": "Jekyll v3.10.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://0xkato.xyz/feed.xml",
+     "title": "0xkato"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ }
+}

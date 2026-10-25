@@ -1,0 +1,106 @@
+{
+ "80000hours.org": {
+  "checked": "2026-10-25T05:42:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.66.40.155",
+    "172.66.43.101"
+   ],
+   "aaaa": [
+    "2606:4700:3108::ac42:289b",
+    "2606:4700:3108::ac42:2b65"
+   ],
+   "cname": null,
+   "ns": [
+    "aria.ns.cloudflare.com",
+    "lou.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:42:06Z",
+   "title": "80,000 Hours: How to make a difference with your career",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://80000hours.org/feed/",
+     "title": "80,000 Hours Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "8bitalpha.com": {
+  "checked": "2026-10-25T05:42:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-25T05:42:08Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "8cantwait.org": {
+  "checked": "2026-10-25T05:42:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.2.60.5"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "chin.ns.cloudflare.com",
+    "ivan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:42:08Z",
+   "title": "8 Can't Wait",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ }
+}

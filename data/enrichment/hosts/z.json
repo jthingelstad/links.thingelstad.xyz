@@ -1,4 +1,79 @@
 {
+ "zachholman.com": {
+  "checked": "2026-10-25T05:39:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.0.173",
+    "172.67.128.37"
+   ],
+   "aaaa": [
+    "2606:4700:3033::6815:ad",
+    "2606:4700:3036::ac43:8025"
+   ],
+   "cname": null,
+   "ns": [
+    "dave.ns.cloudflare.com",
+    "mona.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:51Z",
+   "title": "Zach Holman",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://zachholman.com/atom.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zachstronaut.com": {
+  "checked": "2026-10-25T05:39:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "69.163.177.131"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:54Z",
+   "title": "zachstronaut - creative developer zachary johnson",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "zdnet.com": {
   "checked": "2026-10-24T05:43:46Z",
   "method": "enrich_hosts",
@@ -240,6 +315,112 @@
    "rel_me": [],
    "webmention": null,
    "error": "connection refused"
+  }
+ },
+ "zerohedge.com": {
+  "checked": "2026-10-25T05:39:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "136.69.118.149"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.easydns.com",
+    "dns2.easydns.net",
+    "dns3.easydns.org",
+    "dns4.easydns.info"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:57Z",
+   "title": "ZeroHedge",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zerotier.com": {
+  "checked": "2026-10-25T05:39:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.120.5.57"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-b1.googledomains.com",
+    "ns-cloud-b2.googledomains.com",
+    "ns-cloud-b3.googledomains.com",
+    "ns-cloud-b4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:59Z",
+   "title": "ZeroTier | Software-Defined and Post-Quantum Networking",
+   "generator": "Site Kit by Google 1.190.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zurb.com": {
+  "checked": "2026-10-25T05:40:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.4.165",
+    "104.26.5.165",
+    "172.67.71.221"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:4a5",
+    "2606:4700:20::681a:5a5",
+    "2606:4700:20::ac43:47dd"
+   ],
+   "cname": null,
+   "ns": [
+    "josh.ns.cloudflare.com",
+    "zara.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:40:00Z",
+   "title": "ZURB - Product Design Company",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  }
 }

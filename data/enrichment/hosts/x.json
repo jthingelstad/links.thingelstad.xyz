@@ -1,4 +1,40 @@
 {
+ "xda-developers.com": {
+  "checked": "2026-10-25T05:39:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.5.96.96"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns20.digicertdns.com",
+    "ns21.digicertdns.com",
+    "ns22.digicertdns.com",
+    "ns23.digicertdns.net",
+    "ns24.digicertdns.net",
+    "ns25.digicertdns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:40Z",
+   "title": "XDA",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "xkcd.com": {
   "checked": "2026-10-23T21:28:51Z",
   "method": "enrich_hosts",
@@ -49,6 +85,59 @@
     "ns-cloud-d4.googledomains.com"
    ],
    "checked": "2026-10-23T21:28:51Z"
+  }
+ },
+ "xon.sh": {
+  "checked": "2026-10-25T05:39:42Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:42Z",
+   "title": "Xonsh — Python-powered shell for Linux, macOS, Windows, Android. Alternative to PowerShell, cmd, Fish, Nushell, Zsh, Bash",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://github.com/xonsh/xonsh/releases.atom",
+     "title": "Xonsh releases"
+    },
+    {
+     "type": "atom",
+     "url": "https://github.com/xonsh/xonsh/commits/main.atom",
+     "title": "Xonsh commits"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  }
 }

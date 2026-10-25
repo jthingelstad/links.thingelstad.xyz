@@ -274,6 +274,47 @@
    "checked": "2026-10-23T21:27:50Z"
   }
  },
+ "watabou.itch.io": {
+  "checked": "2026-10-25T05:38:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.8.198",
+    "104.26.9.198",
+    "172.67.69.99"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:8c6",
+    "2606:4700:20::681a:9c6",
+    "2606:4700:20::ac43:4563"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:38:09Z",
+   "title": "watabou - itch.io",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://itch.io/profile/watabou",
+    "https://www.patreon.com/watawatabou",
+    "https://twitter.com/watawatabou",
+    "https://mastodon.gamedev.place/@watawatabou",
+    "https://bsky.app/profile/watabou.bsky.social"
+   ],
+   "webmention": null
+  }
+ },
  "waxy.org": {
   "checked": "2026-10-24T05:48:41Z",
   "method": "enrich_hosts",
@@ -330,6 +371,76 @@
     "fred.ns.cloudflare.com"
    ],
    "checked": "2026-10-24T05:48:41Z"
+  }
+ },
+ "web.stanford.edu": {
+  "checked": "2026-10-25T05:38:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "171.67.215.200"
+   ],
+   "aaaa": [
+    "2607:f6d0:0:925a::ab43:d7c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:38:12Z",
+   "title": "Stanford University",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "webfoundation.org": {
+  "checked": "2026-10-25T05:38:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.8.27.30",
+    "65.8.27.49",
+    "65.8.27.61",
+    "65.8.27.65"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1111.awsdns-10.org",
+    "ns-1707.awsdns-21.co.uk",
+    "ns-50.awsdns-06.com",
+    "ns-625.awsdns-14.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-25T05:38:16Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
   }
  },
  "webkit.org": {
@@ -399,6 +510,51 @@
    "checked": "2026-10-24T05:43:43Z"
   }
  },
+ "weblog.rogueamoeba.com": {
+  "checked": "2026-10-25T05:38:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.129",
+    "192.0.78.207"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:38:49Z",
+   "title": "Rogue Amoeba - Under the Microscope",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://weblog.rogueamoeba.com/feed/",
+     "title": "Under the Microscope RSS Feed"
+    },
+    {
+     "type": "json",
+     "url": "https://weblog.rogueamoeba.com/feed/json/",
+     "title": "Under the Microscope » JSON Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "weblog.rubyonrails.org": {
   "checked": "2026-10-24T05:48:44Z",
   "method": "enrich_hosts",
@@ -441,6 +597,41 @@
     "mario.ns.cloudflare.com"
    ],
    "checked": "2026-10-24T05:48:44Z"
+  }
+ },
+ "weblogs.asp.net": {
+  "checked": "2026-10-25T05:38:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "168.62.20.37"
+   ],
+   "aaaa": [],
+   "cname": "prod-static-asp-blogs.azurewebsites.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:38:52Z",
+   "title": "ASP.NET Community Blogs | The ASP.NET Site",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.asp.net/rss/content",
+     "title": "Latest ASP.NET Content"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "weblogtoolscollection.com": {
@@ -534,6 +725,120 @@
    "error": "HTTP 503"
   }
  },
+ "weburbanist.com": {
+  "checked": "2026-10-25T05:38:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.32.55",
+    "172.67.183.240"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:2037",
+    "2606:4700:3035::ac43:b7f0"
+   ],
+   "cname": null,
+   "ns": [
+    "brad.ns.cloudflare.com",
+    "gail.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:38:55Z",
+   "title": "Web Urbanist | Urban Architecture, Art, Design, Technology & Travel",
+   "generator": "WordPress 7.1.3",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wely.com": {
+  "checked": "2026-10-25T05:38:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "SERVFAIL"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-25T05:38:58Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "werd.io": {
+  "checked": "2026-10-25T05:38:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.6.23",
+    "104.26.7.23",
+    "172.67.74.56"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:617",
+    "2606:4700:20::681a:717",
+    "2606:4700:20::ac43:4a38"
+   ],
+   "cname": null,
+   "ns": [
+    "ben.ns.cloudflare.com",
+    "lara.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:38:59Z",
+   "title": "Ben Werdmuller",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://werd.io/rss/",
+     "title": "Ben Werdmuller"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://werd.social/@ben",
+    "https://bsky.app/profile/werd.io",
+    "https://www.threads.com/@ben.werdmuller"
+   ],
+   "webmention": "https://werd.io/webmentions/receive/"
+  }
+ },
  "wesolver.blogspot.com": {
   "checked": "2026-10-24T06:15:58Z",
   "method": "enrich_hosts",
@@ -564,6 +869,112 @@
    "rel_me": [],
    "webmention": null,
    "error": "HTTP 404"
+  }
+ },
+ "whatever.scalzi.com": {
+  "checked": "2026-10-25T05:39:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.12",
+    "192.0.78.13"
+   ],
+   "aaaa": [],
+   "cname": "scalzi.wordpress.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:03Z",
+   "title": "Whatever | DIGITAL CONTENT FROM ANALOG PEOPLE",
+   "generator": "Site Kit by Google 1.190.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://whatever.scalzi.com/feed/",
+     "title": "Whatever » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://whatever.scalzi.com/comments/feed/",
+     "title": "Whatever » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "where.coraline.codes": {
+  "checked": "2026-10-25T05:39:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [
+    "2600:1f18:16e:df01::258",
+    "2600:1f18:16e:df01::259"
+   ],
+   "cname": "where-coraline-codes.netlify.app",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:06Z",
+   "title": "Coraline Ada Ehmke",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wheregoes.com": {
+  "checked": "2026-10-25T05:39:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "159.89.241.5"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "mira.ns.cloudflare.com",
+    "roan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:09Z",
+   "title": "Link Checker | Redirect Checker - WhereGoes",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "whereslou.com": {
@@ -634,6 +1045,164 @@
    "hcard": false,
    "rel_me": [],
    "webmention": "https://www.wheresyoured.at/webmentions/receive/"
+  }
+ },
+ "whilefalse.blogspot.com": {
+  "checked": "2026-10-25T05:39:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.32.1"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:81e::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:12Z",
+   "title": "Elided Branches",
+   "generator": "blogger",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.elidedbranches.com/feeds/posts/default",
+     "title": "Elided Branches - Atom"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.elidedbranches.com/feeds/posts/default?alt=rss",
+     "title": "Elided Branches - RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://www.blogger.com/profile/05090020862261633248"
+   ],
+   "webmention": null
+  }
+ },
+ "whitehouse.gov": {
+  "checked": "2026-10-25T05:39:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.51"
+   ],
+   "aaaa": [
+    "2a04:fa87:fffd::c000:4233"
+   ],
+   "cname": null,
+   "ns": [
+    "ernest.ns.cloudflare.com",
+    "wally.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:15Z",
+   "title": "The White House",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wiki.ubuntu.com": {
+  "checked": "2026-10-25T05:39:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "91.189.92.126"
+   ],
+   "aaaa": [
+    "2a06:bc80:0:1013::137"
+   ],
+   "cname": "ingress-ps7-documentation.dynamic.admin.canonical.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:17Z",
+   "title": "Ubuntu Wiki",
+   "generator": "MediaWiki 1.46.2",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://wiki.ubuntu.com/w/index.php?title=Special:RecentChanges&feed=atom",
+     "title": "Ubuntu Wiki Atom feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wikimediafoundation.org": {
+  "checked": "2026-10-25T05:39:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.2"
+   ],
+   "aaaa": [
+    "2a04:fa87:fffd::c000:4280"
+   ],
+   "cname": null,
+   "ns": [
+    "ns0.wikimedia.org",
+    "ns1.wikimedia.org",
+    "ns2.wikimedia.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:34Z",
+   "title": "Home – Wikimedia Foundation",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://wikimediafoundation.org/feed/",
+     "title": "Wikimedia Foundation » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://wikimedia.social/@wikimediafoundation"
+   ],
+   "webmention": null
   }
  },
  "wikitribune.com": {
@@ -942,6 +1511,41 @@
     "ns4.wordpress.org"
    ],
    "checked": "2026-10-24T01:48:10Z"
+  }
+ },
+ "work.qz.com": {
+  "checked": "2026-10-25T05:39:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.14.70",
+    "104.26.15.70",
+    "172.67.68.41"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:e46",
+    "2606:4700:20::681a:f46",
+    "2606:4700:20::ac43:4429"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:39:36Z",
+   "title": "Future of Work - Quartz",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "world.hey.com": {

@@ -1,4 +1,334 @@
 {
+ "90percentofeverything.com": {
+  "checked": "2026-10-25T05:42:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p01.nsone.net",
+    "dns2.p01.nsone.net",
+    "dns3.p01.nsone.net",
+    "dns4.p01.nsone.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for '90percentofeverything.com'"
+  },
+  "home": {
+   "checked": "2026-10-25T05:42:13Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for '90percentofeverything.com'"
+  }
+ },
+ "99daysoffreedom.com": {
+  "checked": "2026-10-25T05:42:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.86.4",
+    "172.67.213.80"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:5604",
+    "2606:4700:3037::ac43:d550"
+   ],
+   "cname": null,
+   "ns": [
+    "aragorn.ns.cloudflare.com",
+    "cruz.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:42:14Z",
+   "title": "Pinco rəsmi sayt: 10 000 AZN bonus, giriş və qeydiyyat Pinco AZ",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://99daysoffreedom.com/sitemap.xml",
+     "title": "Sitemap"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "99percentinvisible.org": {
+  "checked": "2026-10-25T05:42:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.14.9",
+    "104.26.15.9",
+    "172.67.72.237"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:e09",
+    "2606:4700:20::681a:f09",
+    "2606:4700:20::ac43:48ed"
+   ],
+   "cname": null,
+   "ns": [
+    "jim.ns.cloudflare.com",
+    "sara.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:42:19Z",
+   "title": "99% Invisible",
+   "generator": "WordPress 7.1.3",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "99u.com": {
+  "checked": "2026-10-25T05:42:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.132",
+    "151.101.66.132",
+    "151.101.130.132",
+    "151.101.194.132"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1056.awsdns-04.org",
+    "ns-1804.awsdns-33.co.uk",
+    "ns-365.awsdns-45.com",
+    "ns-936.awsdns-53.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:42:22Z",
+   "title": "Blog :: Behance",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "http://feeds.feedburner.com/behance/vorr",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "9elements.com": {
+  "checked": "2026-10-25T05:42:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.2.60.5"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple-edge.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple-edge.io",
+    "ns4.dnsimple-edge.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:42:24Z",
+   "title": "Home - 9elements",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://9elements.com/blog/rss.xml",
+     "title": "The 9elements blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://ruhr.social/@9elements"
+   ],
+   "webmention": null
+  }
+ },
+ "9news.com": {
+  "checked": "2026-10-25T05:42:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.248.160.137",
+    "76.223.34.124"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1438.awsdns-51.org",
+    "ns-15.awsdns-01.com",
+    "ns-1870.awsdns-41.co.uk",
+    "ns-704.awsdns-24.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:42:27Z",
+   "title": "Denver's Leading Local News: Weather, Traffic, Sports and more | Denver, Colorado | 9news.com",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.9news.com/feeds/syndication/rss/news",
+     "title": "KUSA RSS Feed: news"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "9rules.com": {
+  "checked": "2026-10-25T05:42:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.47.116",
+    "172.67.147.125"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:937d",
+    "2606:4700:3037::6815:2f74"
+   ],
+   "cname": null,
+   "ns": [
+    "fiona.ns.cloudflare.com",
+    "igor.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-25T05:42:29Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "9to5google.com": {
+  "checked": "2026-10-25T05:43:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.2"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-25T05:43:00Z",
+   "title": "9to5Google - Google news, Pixel, Android, Gemini, Home, more",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://9to5google.com/feed/",
+     "title": "9to5Google » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://9to5google.com/comments/feed/",
+     "title": "9to5Google » Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://9to5google.com/web-stories/feed/",
+     "title": "9to5Google » Stories Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "9to5mac.com": {
   "checked": "2026-10-23T21:26:39Z",
   "method": "enrich_hosts",
