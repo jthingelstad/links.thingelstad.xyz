@@ -144,7 +144,7 @@ export interface LlmsYear {
   bytes: number;
 }
 
-const EXCERPT = "From the page (probably an excerpt, not Jamie's words):";
+const EXCERPT = "From the page (quoted, not Jamie's words):";
 const AGENT =
   "From an agent that works Jamie's reading queue (a summary, not Jamie's words):";
 

@@ -29,10 +29,13 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   first rule wins, "page" is the rest. The browser search and the MCP server import
   the same file, so it takes no Node imports. Adding a kind adds a `/kinds/<kind>/`
   URL.
-- **Voice** (`src/lib/voice.ts`): who a note speaks for. `jamie`, `mixed` and `excerpt`
-  are heuristics from the text and the year; `agent` is provenance, read from the
-  `_agent` tag the OpenClaw `pinboard-enrichment` skill adds to every note it writes,
-  never from the text. The site, the twins, the llms files and the MCP label with it.
+- **Voice** (`src/lib/voice.ts`): who a note speaks for, read from the note's form
+  alone: bare text is Jamie's (`jamie`), a `>` blockquote is the page's words
+  (`excerpt`), a blockquote inside Jamie's text is `mixed`. There is no year rule:
+  the page excerpts the bookmarklet saved before 2017 were quoted at the source on
+  2026-10-24. `agent` is provenance, read from the `_agent` tag the OpenClaw
+  `pinboard-enrichment` skill adds to every note it writes, never from the text. The
+  site, the twins, the llms files and the MCP label with it.
 - **The database.** `npm run db` (`tools/build_db.py`, stdlib only) writes
   `public/links.db` from the JSON; `npm run build` runs it first. It is gitignored,
   deterministic, and facts only like the pages. The site never reads it.

@@ -94,7 +94,7 @@ const xmlText = (text: string) =>
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
 
-const EXCERPT_LABEL = "From the page (probably an excerpt, not Jamie's words):";
+const EXCERPT_LABEL = "From the page (quoted, not Jamie's words):";
 
 // One item's content, rendered once however many feeds carry it.
 const contents = new Map<string, { html: string; text: string }>();

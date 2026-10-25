@@ -84,7 +84,7 @@ export interface Tool {
 const permalink = (id: string) => absolute(linkPath(id));
 const issueNumber = (issue: Issue) => issue.number ?? issue.key;
 const excerptNote =
-  'A note whose voice is "excerpt" is most likely a passage from the linked page, not Jamie\'s words; "mixed" is commentary around a quotation.';
+  'A note whose voice is "excerpt" is a passage quoted from the linked page, not Jamie\'s words; "mixed" is commentary around a quotation.';
 const agentNote =
   'A note whose voice is "agent" is a summary an agent wrote for Jamie\'s reading queue, not Jamie\'s words.';
 const voiceNotes = (links: Link[], notes: string[]) => {
@@ -624,7 +624,7 @@ const statsTool: Tool = {
       })),
       notes: [
         "Years and days are US Central time. Tags are filing marks, not topics: the newsletter's, and _agent on a note an agent wrote.",
-        "voices counts the notes by who wrote them: jamie (Jamie's words), mixed (commentary around a quotation), excerpt (most likely a passage from the page), agent (a summary an agent wrote for Jamie's reading queue).",
+        "voices counts the notes by who wrote them: jamie (Jamie's words), mixed (commentary around a quotation), excerpt (a passage quoted from the page), agent (a summary an agent wrote for Jamie's reading queue).",
       ],
     };
   },

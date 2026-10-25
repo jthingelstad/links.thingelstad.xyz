@@ -116,7 +116,7 @@ export function buildDataset(files: Files): Dataset {
         day,
         year,
         hasNote: (row.note ?? '').trim() !== '',
-        voice: voiceOf(row.note ?? '', year, row.tags ?? []),
+        voice: voiceOf(row.note ?? '', row.tags ?? []),
       };
     })
     .sort((a, b) => byText(a.saved, b.saved) || byText(a.id, b.id));

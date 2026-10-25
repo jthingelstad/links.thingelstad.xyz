@@ -269,7 +269,7 @@ test('a year llms record: title, URL, date and host, issues, permalink, note', (
   assert.ok(
     dataset
       .llmsRecord(excerpt)
-      .includes("From the page (probably an excerpt, not Jamie's words):"),
+      .includes("From the page (quoted, not Jamie's words):"),
   );
   const bare = data.links.find((l) => !l.hasNote);
   assert.ok(dataset.llmsRecord(bare).trimEnd().endsWith('/'));
