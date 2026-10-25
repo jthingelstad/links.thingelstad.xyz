@@ -12,6 +12,7 @@ import FactsCard from '../../components/FactsCard.astro';
 import RecordFacts from '../../components/RecordFacts.astro';
 import {
   type Link,
+  absolute,
   appearances,
   connectionsOf,
   dateLabel,
@@ -113,6 +114,9 @@ const card = cardOf(link);
         <b>{shownHost}</b>
         {shownPath}
       </p>
+      {/* The entry's own address. The title's u-bookmark-of is the saved
+          link, and an explicit u-* stops the parser implying a url. */}
+      <data class="u-url" value={absolute(linkPath(link.id))}></data>
       <data class="p-host" value={link.host}></data>
       {link.voice && <data class="p-voice" value={link.voice}></data>}
       <div class="record-byline" data-pagefind-ignore="all">

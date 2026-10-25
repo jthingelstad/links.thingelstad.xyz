@@ -1,6 +1,10 @@
 ---
 // The links one Weekly Thing carried, in issue order and by section. A link
 // that was never saved to Pinboard is listed as the plain external link.
+// The page is an h-feed (Layout's `feed`): each saved link's row is an
+// h-entry, as LinkList's rows are. A link not in the collection has no
+// record here, so its row is not an entry, and an issue with no saved link
+// is no feed.
 import Layout from '../../layouts/Layout.astro';
 import {
   type Issue,
@@ -44,6 +48,7 @@ const saved = rows.filter((row) => row.id && linkById.has(row.id)).length;
 <Layout
   title={`${issueTitle(issue)} · Linking Things`}
   description={`The ${plural(rows.length, 'link')} in ${issueTitle(issue)}, ${dateLabel(issue.date)}.`}
+  feed={saved > 0}
 >
   <p class="kicker">Weekly Thing · {dateLabel(issue.date)}</p>
   <h1 class="page-title">{issueTitle(issue)}</h1>
@@ -65,12 +70,15 @@ const saved = rows.filter((row) => row.id && linkById.has(row.id)).length;
         {section.rows.map((row) => {
           const link = row.id ? linkById.get(row.id) : undefined;
           return link ? (
-            <li>
-              <a class="title" href={linkPath(link.id)}>
+            <li class="h-entry">
+              <a class="title p-name u-url" href={linkPath(link.id)}>
                 {link.shown}
               </a>
               <span class="meta">
-                {link.host} · saved {shortDateLabel(link.saved)}
+                {link.host} · saved{' '}
+                <time class="dt-published" datetime={link.saved}>
+                  {shortDateLabel(link.saved)}
+                </time>
               </span>
             </li>
           ) : (

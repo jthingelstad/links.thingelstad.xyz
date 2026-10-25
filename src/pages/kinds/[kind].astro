@@ -40,6 +40,7 @@ const feed = kindFeed(kind);
   title={`${words.title} · Linking Things`}
   description={`${plural(list.length, 'link')} of the kind ${words.name.toLowerCase()} that Jamie Thingelstad has saved. ${words.about}`}
   alternates={feedAlternates(feed)}
+  feed
 >
   <p class="kicker">
     <a href="/kinds/">Kind</a>
@@ -76,7 +77,7 @@ const feed = kindFeed(kind);
       <h2>
         {year} <span class="meta">{plural(links.length, 'link')}</span>
       </h2>
-      <LinkList links={links} compact />
+      <LinkList links={links} compact entries />
     </section>
   ))}
 </Layout>

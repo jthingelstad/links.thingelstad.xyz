@@ -1,6 +1,12 @@
 ---
 // A list of saved links: the title opens the record, then host and date in
 // Central, and a chip when the link was in a Weekly Thing.
+//
+// With `entries`, each row is an h-entry (p-name and u-url on the title,
+// which opens the record, and dt-published on the date), for a page whose
+// main is an h-feed (Layout's `feed`). It is off by default because the
+// record page lists links inside its own h-entry, where rows would read as
+// its children.
 import {
   type Link,
   appearances,
@@ -15,6 +21,7 @@ interface Props {
   host?: boolean;
   snippet?: boolean;
   date?: (link: Link) => string;
+  entries?: boolean;
 }
 const {
   links,
@@ -22,6 +29,7 @@ const {
   host = true,
   snippet = false,
   date = (link: Link) => shortDateLabel(link.saved),
+  entries = false,
 } = Astro.props;
 ---
 
@@ -29,12 +37,22 @@ const {
   {links.map((link) => {
     const issues = appearances.get(link.id);
     return (
-      <li>
-        <a class="title" href={linkPath(link.id)}>
+      <li class={entries ? 'h-entry' : undefined}>
+        <a
+          class:list={['title', { 'p-name u-url': entries }]}
+          href={linkPath(link.id)}
+        >
           {link.shown}
         </a>
         <span class="meta">
-          {[host && link.host, date(link)].filter(Boolean).join(' · ')}
+          {host && `${link.host} · `}
+          {entries ? (
+            <time class="dt-published" datetime={link.saved}>
+              {date(link)}
+            </time>
+          ) : (
+            date(link)
+          )}
           {issues && (
             <>
               {' '}
