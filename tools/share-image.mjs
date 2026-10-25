@@ -12,8 +12,14 @@ try {
     colorScheme: 'light',
   });
   await page.route(/tinylytics/, (route) => route.abort());
-  await page.goto('https://links.thingelstad.xyz/', { waitUntil: 'networkidle' });
-  await page.screenshot({ path: 'public/share.jpg', type: 'jpeg', quality: 82 });
+  await page.goto('https://links.thingelstad.xyz/', {
+    waitUntil: 'networkidle',
+  });
+  await page.screenshot({
+    path: 'public/share.jpg',
+    type: 'jpeg',
+    quality: 82,
+  });
 } finally {
   await browser.close();
 }
