@@ -3,7 +3,8 @@
 
 Adapted from poap.thingelstad.xyz's validator. It checks:
 
-- every page has a title, a canonical link to its own URL, and a main landmark;
+- every page has a title, a canonical link to its own URL, a main landmark,
+  and the one share image (tools/share-image.mjs) as its og:image;
 - every internal href and src resolves to a built file (or to /mcp, which
   CloudFront sends to the MCP server), and every #fragment on an internal
   link names an id on the target page;
@@ -78,6 +79,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 SITE = "https://links.thingelstad.xyz"
+SHARE_IMAGE = "/share.jpg"
 # The one script from another host, production builds only (Analytics.astro).
 TINYLYTICS = "https://tinylytics.app/embed/x4A9AVd_xma4hyT9xLZw.js?kudos=custom"
 PRODUCTION = os.environ.get("PUBLIC_TINYLYTICS_ENABLED") == "true"
@@ -150,6 +152,7 @@ class Page(HTMLParser):
         self.ids = set()
         self.title = False
         self.canonical = None
+        self.og_image = None
         self.noindex = False
         self.main = False
         self.inline_urls = []
@@ -173,6 +176,8 @@ class Page(HTMLParser):
         rels = set(data.get("rel", "").lower().split())
         if tag == "link" and "canonical" in rels:
             self.canonical = data.get("href")
+        if tag == "meta" and data.get("property") == "og:image":
+            self.og_image = data.get("content")
         if tag == "meta" and data.get("name", "").lower() == "robots":
             self.noindex |= "noindex" in data.get("content", "").lower()
         if tag == "link" and "alternate" in rels:
@@ -744,6 +749,8 @@ def check_db(data_links, problems):
 
 def main():
     problems = []
+    if not (DIST / SHARE_IMAGE.lstrip("/")).is_file():
+        problems.append(f"{SHARE_IMAGE} is missing: run npm run share-image")
     sites = json.loads((ROOT / "shared/sites.json").read_text())
     allowed_off_site = {sites["owner"]["avatar"]}
     if PRODUCTION:
@@ -824,6 +831,8 @@ def main():
         for flag, name in ((parser.title, "title"), (parser.main, "main")):
             if not flag:
                 problems.append(f"{rel}: no {name}")
+        if parser.og_image != SITE + SHARE_IMAGE:
+            problems.append(f"{rel}: og:image {parser.og_image} is not {SITE + SHARE_IMAGE}")
         if rel != "404.html":
             if not parser.canonical:
                 problems.append(f"{rel}: no canonical")
