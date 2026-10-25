@@ -1,6 +1,12 @@
 """A tiny Pinboard v1 client that can write: posts/get and posts/add (replace).
 Separate from tools/linking/pinboard.py, which stays read-only by design. The
 token is read from PINBOARD_API_TOKEN and never printed; errors are redacted.
+
+Pinboard reads parameters from the query string only: a POST body is ignored
+("missing url") and a token in the body answers 401, so every call is a GET
+and a note whose encoded query passes about 8,000 characters fails with HTTP
+414. Five pre-WT notes of 9,000 to 27,000 characters hit that in the
+2026-10-24 cleanup; the API has no transport for them.
 One-shot, 2026-10."""
 
 import json
@@ -34,18 +40,11 @@ class Client:
     def _call(self, endpoint, params, attempts=4):
         """One call, retried on a transient failure (HTTP 5xx, timeout). posts/add with
         replace=yes is idempotent, so repeating a write that may have landed is safe."""
-        post = False
         for attempt in range(1, attempts + 1):
             try:
-                return self._once(endpoint, params, post=post)
+                return self._once(endpoint, params)
             except PinboardWriteError as error:
                 text = str(error)
-                # A note of 8,000 characters or more overflows the GET query
-                # (HTTP 414); the same parameters go once more as a POST body.
-                if "HTTP 414" in text and not post:
-                    post = True
-                    print(f"{endpoint}: HTTP 414 on GET; sending the same call as POST", flush=True)
-                    continue
                 transient = "HTTP 5" in text or "Timeout" in text or "URLError" in text or "RemoteDisconnected" in text
                 if not transient or attempt == attempts:
                     raise
@@ -53,18 +52,13 @@ class Client:
                 print(f"{endpoint}: {text}; retry {attempt} in {wait}s", flush=True)
                 time.sleep(wait)
 
-    def _once(self, endpoint, params, post=False):
+    def _once(self, endpoint, params):
         if self.last is not None:
             wait = SPACING - (time.monotonic() - self.last)
             if wait > 0:
                 time.sleep(wait)
         query = urlencode({**params, "format": "json", "auth_token": self.token})
-        headers = {"User-Agent": UA, "Accept": "application/json"}
-        if post:
-            headers["Content-Type"] = "application/x-www-form-urlencoded"
-            request = urllib.request.Request(f"{API}{endpoint}", data=query.encode("utf-8"), headers=headers)
-        else:
-            request = urllib.request.Request(f"{API}{endpoint}?{query}", headers=headers)
+        request = urllib.request.Request(f"{API}{endpoint}?{query}", headers={"User-Agent": UA, "Accept": "application/json"})
         try:
             with urllib.request.urlopen(request, timeout=180 if endpoint == "posts/all" else 30) as response:
                 body = response.read()
