@@ -97,10 +97,18 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   (`shared/sites.json`, `shared/tokens.css`, `shared/fonts/`) are vendored from
   `../thingelstad.com/shared/` by `npm run sites:sync`; `npm run sites:check` fails on
   drift. Never edit `shared/` here. No italics on sans-serif type.
-- **The share image** (2026-10-25, the SEO scan): every page's `og:image` is `/share.jpg`,
-  the live front page at 1200 x 630 with a large Twitter card. `npm run share-image`
-  (`tools/share-image.mjs`) redraws it by hand, with Tinylytics blocked; the count on it
-  is a point in time. `tools/validate-site.py` fails a page that names another image.
+- **Share images.** A record's `og:image` is its own card (2026-10-25; Jamie: "Linking
+  Things link cards with Jamie-voice notes only"), drawn by cards.thingelstad.com from the
+  record's h-entry: the title, `p-host`, the day saved, a `p-issue` on each issue chip,
+  and the note only when `p-voice` is `jamie`. `src/lib/card.ts` forms the card's URL,
+  with `v` a hash of what the card shows, and is the only place `v` is computed; the
+  card maker's own rules are in `../thingelstad.com/cards.thingelstad.com/AGENTS.md`.
+  Changing what a record's h-entry carries changes its card, so check both. Every other
+  page's `og:image` is `/share.jpg` (the SEO scan, 2026-10-25), the live front page at
+  1200 x 630 with a large Twitter card: `npm run share-image` (`tools/share-image.mjs`)
+  redraws it by hand, with Tinylytics blocked; the count on it is a point in time.
+  `tools/validate-site.py` fails a record that doesn't name its card and any other page
+  that names another image.
 - **Secrets.** `.env`, `pinboard/` and `archive/` are never committed.
   `pinboard/posts_all.json` holds private bookmarks and must never be published or
   copied into `data/`. Never print the Pinboard token.
