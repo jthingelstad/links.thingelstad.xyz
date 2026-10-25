@@ -7,8 +7,9 @@
 // indexedRecord), never a bare bookmark with nothing to read.
 //
 // The ids ride in the page as one string of 12-hex ids, about 100 KB (half
-// that compressed), and only a reader who asked for a surprise downloads it. The page is noindex, out of
-// the sitemap and disallowed in robots.txt: it is a door, not a page.
+// that compressed), and only a reader who asked for a surprise downloads it. The page is noindex and out of
+// the sitemap: it is a door, not a page. robots.txt leaves it crawlable, so a
+// crawler can read the noindex.
 import Layout from '../layouts/Layout.astro';
 import { indexedRecord, links, newestPath } from '../lib/data';
 const ids = links

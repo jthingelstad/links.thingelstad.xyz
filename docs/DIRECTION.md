@@ -114,7 +114,7 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 | `/topics/<slug>/` | Links in a topic, co-topics, the hosts and issues most present in it (phase 3) |
 | `/years/<yyyy>/` | The year's links by month |
 | `/newest/` | Built: the newest 50 links, the site feed's links, as a page |
-| `/surprise/` | Built: Surprise me, a door that replaces itself with one record at random, drawn from the records with Jamie's own words or a Weekly Thing; noindex, out of the sitemap, disallowed in robots.txt |
+| `/surprise/` | Built: Surprise me, a door that replaces itself with one record at random, drawn from the records with Jamie's own words or a Weekly Thing; noindex and out of the sitemap, but crawlable, so crawlers can read the noindex |
 | `/stats/` | Linking volume along its dimensions (section "Statistics") |
 | `/about/` | The homage, in Jamie's words: what this is, why links matter, how it is made. Built from `content/about.md` (a `# ` title, then `## ` sections; the build fails on any other shape), a first draft in Jamie's voice from the Librarian for Jamie to edit. Linked from every page's footer |
 | `/feed.xml`, `/feed.json` | The newest 50 links as RSS 2.0 and JSON Feed 1.1, the Link Thing feed reborn; every host, kind and topic page carries its own pair at `feed.xml` and `feed.json` under its path. Built for the site, all 7,064 host pages (the host's newest 50) and the eight kind pages (the kind's newest 50); topics with the topic pages. Each item is the record: its permalink as link and id, the destination and the note as content, Central dates with the real offset, tags as categories. Every page advertises the site pair; a host page advertises its own first |
