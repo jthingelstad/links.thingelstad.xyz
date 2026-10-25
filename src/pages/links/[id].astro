@@ -34,6 +34,7 @@ import {
   weekdayDateLabel,
 } from '../../lib/data';
 import { withoutAffiliateTag } from '../../lib/kinds';
+import { cardOf } from '../../lib/card';
 import { alsoSavedAs, factsOf } from '../../lib/enrichment';
 
 export function getStaticPaths() {
@@ -71,12 +72,16 @@ const sameVideo = alsoSavedAs(link).filter((other) => !twice.has(other.id));
 const description = link.hasNote
   ? noteText(link, 155)
   : `A link from ${link.host}, saved by Jamie Thingelstad on ${dateLabel(link.saved)}.`;
+// Its share card, drawn from this page's h-entry (lib/card.ts): p-host and
+// p-voice are there for it, and p-issue on each issue chip.
+const card = cardOf(link);
 ---
 
 <Layout
   title={`${link.shown} · Linking Things`}
   noindex={!indexedRecord(link)}
   description={description}
+  image={card}
   alternates={[
     { type: 'application/json', href: linkJsonPath(link.id) },
     { type: 'text/markdown', href: linkMarkdownPath(link.id) },
@@ -108,6 +113,8 @@ const description = link.hasNote
         <b>{shownHost}</b>
         {shownPath}
       </p>
+      <data class="p-host" value={link.host}></data>
+      {link.voice && <data class="p-voice" value={link.voice}></data>}
       <div class="record-byline" data-pagefind-ignore="all">
         <span>
           Saved{' '}
@@ -119,7 +126,7 @@ const description = link.hasNote
         </span>
         {appears.map((a) => (
           <a class="chip" href={issuePath(a.issue)}>
-            In {issueLabel(a.issue)}
+            In <span class="p-issue">{issueLabel(a.issue)}</span>
           </a>
         ))}
         <Kudos path={linkPath(link.id)} />

@@ -4,7 +4,8 @@
 Adapted from poap.thingelstad.xyz's validator. It checks:
 
 - every page has a title, a canonical link to its own URL, a main landmark,
-  and the one share image (tools/share-image.mjs) as its og:image;
+  and as its og:image its record's card (src/lib/card.ts) on a record page
+  and the one share image (tools/share-image.mjs) on every other;
 - every internal href and src resolves to a built file (or to /mcp, which
   CloudFront sends to the MCP server), and every #fragment on an internal
   link names an id on the target page;
@@ -80,6 +81,9 @@ ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 SITE = "https://links.thingelstad.xyz"
 SHARE_IMAGE = "/share.jpg"
+# A record's card, from cards.thingelstad.com: /links/<id>/ draws at
+# /links/links/<id>.png, at the v the page hashed from what the card shows.
+RECORD_CARD = re.compile(r"https://cards\.thingelstad\.com/links/links/([0-9a-f]{12})\.png\?v=[0-9a-f]{10}")
 # The one script from another host, production builds only (Analytics.astro).
 TINYLYTICS = "https://tinylytics.app/embed/x4A9AVd_xma4hyT9xLZw.js?kudos=custom"
 PRODUCTION = os.environ.get("PUBLIC_TINYLYTICS_ENABLED") == "true"
@@ -831,7 +835,12 @@ def main():
         for flag, name in ((parser.title, "title"), (parser.main, "main")):
             if not flag:
                 problems.append(f"{rel}: no {name}")
-        if parser.og_image != SITE + SHARE_IMAGE:
+        record = re.fullmatch(r"/links/([0-9a-f]{12})/", url)
+        if record:
+            card = RECORD_CARD.fullmatch(parser.og_image or "")
+            if not card or card.group(1) != record.group(1):
+                problems.append(f"{rel}: og:image {parser.og_image} is not its card")
+        elif parser.og_image != SITE + SHARE_IMAGE:
             problems.append(f"{rel}: og:image {parser.og_image} is not {SITE + SHARE_IMAGE}")
         if rel != "404.html":
             if not parser.canonical:

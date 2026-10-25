@@ -23,6 +23,9 @@ interface Props {
   noindex?: boolean;
   // The front page: the search box is the page, so no site header.
   home?: boolean;
+  // A record's own share card (lib/card.ts); every other page shares the
+  // front page.
+  image?: { url: string; alt: string };
 }
 const SITE_NAME = 'Linking Things';
 const {
@@ -32,6 +35,10 @@ const {
   notFound = false,
   noindex = false,
   home = false,
+  image = {
+    url: new URL('/share.jpg', Astro.site).href,
+    alt: 'The Linking Things front page: its search box over every link Jamie Thingelstad has saved since 2005',
+  },
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const sections = [
@@ -84,17 +91,11 @@ const current = (href: string) =>
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE_NAME} />
     {!notFound && <meta property="og:url" content={canonical} />}
-    {/* One share image for every page: the front page (tools/share-image.mjs). */}
-    <meta
-      property="og:image"
-      content={new URL('/share.jpg', Astro.site).href}
-    />
+    {/* A record's card, or the front page (tools/share-image.mjs) for the rest. */}
+    <meta property="og:image" content={image.url} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="The Linking Things front page: its search box over every link Jamie Thingelstad has saved since 2005"
-    />
+    <meta property="og:image:alt" content={image.alt} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="theme-color"
