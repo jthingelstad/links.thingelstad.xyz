@@ -1,0 +1,106 @@
+"""A tiny Pinboard v1 client that can write: posts/get and posts/add (replace).
+Separate from tools/linking/pinboard.py, which stays read-only by design. The
+token is read from PINBOARD_API_TOKEN and never printed; errors are redacted.
+
+Pinboard reads parameters from the query string only: a POST body is ignored
+("missing url") and a token in the body answers 401, so every call is a GET
+and a note whose encoded query passes about 8,000 characters fails with HTTP
+414. Five pre-WT notes of 9,000 to 27,000 characters hit that in the
+2026-10-24 cleanup; the API has no transport for them.
+One-shot, 2026-10."""
+
+import json
+import os
+import re
+import time
+import urllib.error
+import urllib.request
+from urllib.parse import urlencode
+
+API = "https://api.pinboard.in/v1/"
+UA = "links.thingelstad.xyz-cleanup/1 (+https://links.thingelstad.xyz/)"
+SPACING = 3.0
+
+
+class PinboardWriteError(Exception):
+    pass
+
+
+class Client:
+    def __init__(self):
+        self.token = os.environ.get("PINBOARD_API_TOKEN")
+        if not self.token:
+            raise PinboardWriteError("PINBOARD_API_TOKEN is not set")
+        self.last = None
+
+    def _redact(self, text):
+        text = str(text).replace(self.token, "[redacted]")
+        return re.sub(r"auth_token=[^&\s'\"]*", "auth_token=[redacted]", text)
+
+    def _call(self, endpoint, params, attempts=4):
+        """One call, retried on a transient failure (HTTP 5xx, timeout). posts/add with
+        replace=yes is idempotent, so repeating a write that may have landed is safe."""
+        for attempt in range(1, attempts + 1):
+            try:
+                return self._once(endpoint, params)
+            except PinboardWriteError as error:
+                text = str(error)
+                transient = "HTTP 5" in text or "Timeout" in text or "URLError" in text or "RemoteDisconnected" in text
+                if not transient or attempt == attempts:
+                    raise
+                wait = (10, 30, 60)[attempt - 1]
+                print(f"{endpoint}: {text}; retry {attempt} in {wait}s", flush=True)
+                time.sleep(wait)
+
+    def _once(self, endpoint, params):
+        if self.last is not None:
+            wait = SPACING - (time.monotonic() - self.last)
+            if wait > 0:
+                time.sleep(wait)
+        query = urlencode({**params, "format": "json", "auth_token": self.token})
+        request = urllib.request.Request(f"{API}{endpoint}?{query}", headers={"User-Agent": UA, "Accept": "application/json"})
+        try:
+            with urllib.request.urlopen(request, timeout=180 if endpoint == "posts/all" else 30) as response:
+                body = response.read()
+        except urllib.error.HTTPError as error:
+            code = error.code
+            error.close()
+            raise PinboardWriteError(f"{endpoint}: HTTP {code}") from None
+        except Exception as error:  # noqa: BLE001
+            raise PinboardWriteError(self._redact(f"{endpoint}: {type(error).__name__}: {error}")) from None
+        finally:
+            self.last = time.monotonic()
+        try:
+            return json.loads(body)
+        except ValueError:
+            raise PinboardWriteError(f"{endpoint}: not JSON") from None
+
+    def all(self):
+        """Every bookmark, as posts/all returns them (Pinboard allows this once every five minutes)."""
+        data = self._call("posts/all", {})
+        if not isinstance(data, list):
+            raise PinboardWriteError("posts/all: unexpected shape")
+        return data
+
+    def get(self, url):
+        """The bookmark for url as Pinboard holds it now, or None."""
+        data = self._call("posts/get", {"url": url})
+        posts = data.get("posts") or []
+        return posts[0] if posts else None
+
+    def replace(self, post, extended):
+        """Rewrite one bookmark's note, every other field as it was."""
+        params = {
+            "url": post["href"],
+            "description": post["description"],
+            "extended": extended,
+            "tags": post["tags"],
+            "dt": post["time"],
+            "replace": "yes",
+            "shared": post["shared"],
+            "toread": post["toread"],
+        }
+        data = self._call("posts/add", params)
+        if data.get("result_code") != "done":
+            raise PinboardWriteError(f"posts/add: {data.get('result_code', data)}")
+        return data
