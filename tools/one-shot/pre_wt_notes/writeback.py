@@ -61,13 +61,16 @@ def main():
     while index < len(args):
         arg = args[index]
         if arg == "--year":
-            years.add(args[index + 1]); index += 2
+            years.add(args[index + 1])
+            index += 2
         elif arg == "--limit":
-            limit = int(args[index + 1]); index += 2
+            limit = int(args[index + 1])
+            index += 2
         elif arg == "--write":
             index += 1
         else:
-            positional.append(arg); index += 1
+            positional.append(arg)
+            index += 1
     out_dir = Path(positional[0])
     changes = [row for row in read_jsonl(out_dir / "changes.jsonl") if row["action"] in WRITE_ACTIONS]
     if years:
@@ -97,11 +100,14 @@ def main():
         for number, row in enumerate(todo, 1):
             live = current.get(row["hash"])
             if live is None:
-                record(row, "missing"); continue
+                record(row, "missing")
+                continue
             if live["extended"] == row["new"]:
-                record(row, "already", meta=live["meta"]); continue
+                record(row, "already", meta=live["meta"])
+                continue
             if live["extended"] != row["old"]:
-                record(row, "differs", meta=live["meta"]); continue
+                record(row, "differs", meta=live["meta"])
+                continue
             if not write:
                 counts["planned"] += 1
                 continue

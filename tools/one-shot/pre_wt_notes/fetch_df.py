@@ -1,15 +1,23 @@
 """Fetch Daring Fireball's monthly Linked List archive pages (titles, target
 URLs and post text) for the pre-WT years. Read-only, paced, resumable."""
-import html, json, re, sys, time, urllib.request
+import html
+import json
+import re
+import sys
+import time
+import urllib.request
 from pathlib import Path
 
-OUT = Path(sys.argv[1]); OUT.mkdir(exist_ok=True)
+OUT = Path(sys.argv[1])
+OUT.mkdir(exist_ok=True)
 UA = "links.thingelstad.xyz one-shot cleanup (jamie@thingelstad.com)"
 months = []
 y, m = 2005, 8
 while (y, m) <= (2017, 6):
-    months.append((y, m)); m += 1
-    if m == 13: y, m = y + 1, 1
+    months.append((y, m))
+    m += 1
+    if m == 13:
+        y, m = y + 1, 1
 posts = []
 for y, m in months:
     cache = OUT / f"{y}-{m:02d}.html"
@@ -19,7 +27,8 @@ for y, m in months:
             with urllib.request.urlopen(req, timeout=60) as r:
                 cache.write_bytes(r.read())
         except Exception as e:  # noqa: BLE001
-            print(y, m, "ERR", e, file=sys.stderr); cache.write_text("")
+            print(y, m, "ERR", e, file=sys.stderr)
+            cache.write_text("")
         time.sleep(1.2)
     text = cache.read_text(encoding="utf-8", errors="replace")
     for dt, dd in re.findall(r"<dt[^>]*>(.*?)</dt>\s*<dd>(.*?)</dd>", text, re.S):

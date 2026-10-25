@@ -41,7 +41,8 @@ def unquote(text):
         assert line == ">" or line.startswith("> "), f"not a quote line: {line[:40]!r}"
         if line == ">":
             if current:
-                paragraphs.append(" ".join(current)); current = []
+                paragraphs.append(" ".join(current))
+                current = []
         else:
             current.append(line[2:].strip())
     if current:
