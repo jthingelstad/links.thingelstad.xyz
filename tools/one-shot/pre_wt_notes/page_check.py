@@ -30,7 +30,8 @@ _last = {}
 
 
 def pace_key(host):
-    return "archive" if host.endswith("archive.org") else host
+    archive = host == "archive.org" or host.endswith(".archive.org")
+    return "archive" if archive else host
 
 
 def paced(host):
