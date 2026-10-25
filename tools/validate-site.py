@@ -22,6 +22,10 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   page, and every page but the 404 and those marked noindex is in the
   sitemap, once; a noindex page is never in it, and only records, host
   pages and /surprise/ (a door to a random record) are marked noindex;
+  robots.txt disallows no noindex page (a crawler has to fetch a page to
+  read its noindex);
+- every page's footer h-card names owner.url from shared/sites.json as
+  its u-url (its u-photo stops the parser implying one from the link);
 - every record page has its JSON and Markdown twins, the JSON names the same
   id, and there is one record per link in data/links (read, never written);
 - Pagefind indexed exactly the record pages;
@@ -751,12 +755,38 @@ def check_db(data_links, problems):
     return counts
 
 
+def robots_rules(text):
+    """The Allow and Disallow paths robots.txt gives every crawler (User-agent: *)."""
+    rules, agents, in_rules = [], set(), False
+    for line in text.splitlines():
+        key, _, value = line.split("#", 1)[0].partition(":")
+        key, value = key.strip().lower(), value.strip()
+        if key == "user-agent":
+            if in_rules:
+                agents, in_rules = set(), False
+            agents.add(value)
+        elif key in ("allow", "disallow"):
+            in_rules = True
+            if "*" in agents and value:
+                rules.append((key == "allow", value))
+    return rules
+
+
+def robots_allows(rules, path):
+    """RFC 9309: the longest matching path wins, and Allow wins a tie. Python's
+    urllib.robotparser takes the first match instead, so this site's leading
+    Allow: / would hide every Disallow from it. No rule here uses * or $."""
+    matches = [(len(rule), allow) for allow, rule in rules if path.startswith(rule)]
+    return max(matches, default=(0, True))[1]
+
+
 def main():
     problems = []
     if not (DIST / SHARE_IMAGE.lstrip("/")).is_file():
         problems.append(f"{SHARE_IMAGE} is missing: run npm run share-image")
     sites = json.loads((ROOT / "shared/sites.json").read_text())
     allowed_off_site = {sites["owner"]["avatar"]}
+    owner_u_url = f'<data class="u-url" value="{sites["owner"]["url"]}"></data>'
     if PRODUCTION:
         allowed_off_site.add(TINYLYTICS)
     pages = sorted(DIST.rglob("*.html"))
@@ -812,6 +842,9 @@ def main():
             about = parser
         if "/about/" not in parser.refs:
             without_about.append(url)
+        card = re.search(r'<a class="h-card".*?</a>', text, re.S)
+        if not card or owner_u_url not in card.group():
+            problems.append(f"{rel}: the footer h-card does not carry owner.url as its u-url")
         for embed in parser.embeds:
             if not embed.startswith(PLAYERS):
                 problems.append(f"{rel}: a video player at {embed}")
@@ -906,6 +939,10 @@ def main():
             problems.append(f"{url} is marked noindex but is in the sitemap")
         elif url not in noindex and SITE + url not in seen:
             problems.append(f"{url} is not in the sitemap")
+    robots = robots_rules((DIST / "robots.txt").read_text())
+    for url in sorted(noindex):
+        if not robots_allows(robots, url):
+            problems.append(f"{url} is marked noindex but robots.txt disallows it")
 
     # Records, twins and the data.
     records = sorted(p.parent.name for p in (DIST / "links").glob("*/index.html"))
