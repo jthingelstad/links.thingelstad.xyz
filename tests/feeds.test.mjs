@@ -210,6 +210,17 @@ test('llms.txt has the llmstxt.org shape', () => {
   ])
     assert.ok(text.includes(`(https://links.thingelstad.xyz${path})`), path);
   assert.ok(text.includes('`/links/<id>.md`'));
+  // What llmstxt.org's reference parser reads (tools/validate-site.py,
+  // llms_shape_problems): no heading above the first `##`, then every line
+  // under a heading (`###` too) is one `- [name](url): notes` item.
+  const [head, ...sections] = text.split(/^##/m);
+  const below = (part) => part.split('\n').slice(1);
+  assert.ok(!below(head).some((line) => line.startsWith('#')));
+  for (const section of sections)
+    for (const line of below(section).filter((l) => l.trim())) {
+      assert.match(line, /^- \[[^[\]]+\]\(https?:[^)\s]+\)(: \S.*)?$/, line);
+      assert.equal(line.split('](').length, 2, line);
+    }
   assert.ok(!text.includes('llms-full'));
   assert.ok(!text.includes('on-this-day'));
   // No em-dash (U+2014) anywhere, and no Pinboard in what readers see.

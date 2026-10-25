@@ -53,6 +53,11 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   feed readers, the Librarian, WT Builder and MCP clients depend on them.
   `src/lib/paths.ts` is the one place they are formed; `src/lib/data.ts` re-exports
   it for the pages and the MCP server imports it directly.
+- **`/llms.txt`** (`llmsTxt()` in `src/lib/dataset.ts`) keeps the shape llmstxt.org's
+  reference parser reads: prose only above the first `##`, then every line under a
+  heading (`###` too) is one `- [name](url): notes` item, one link, no brackets in the
+  name. `validate:site` fails a built file that strays (`llms_shape_problems`); the
+  year files are full text, not that shape.
 - **Search grammar** (`src/lib/search-grammar.ts`): parsing a query (words,
   "phrases", -exclusions, `site:`, `year:`, `wt:`, `kind:`), the rule that keeps
   only real matches (a bare word by its first three letters, a "quoted" word whole),
