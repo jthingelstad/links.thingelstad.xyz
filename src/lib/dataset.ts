@@ -202,12 +202,21 @@ export const sizeLabel = (bytes: number) =>
     ? `${(bytes / 1e6).toFixed(1)} MB`
     : `${Math.max(1, Math.round(bytes / 1e3))} KB`;
 
+// The shape llmstxt.org's reference parser (llms-txt, parse_llms_file) reads:
+// prose only above the first `##`; under each heading, every non-empty line is
+// one `- [name](url): notes` item with one link, and no "[" or "]" in a name.
+// A line without a link breaks the whole parse, and a second link on a line is
+// dropped. npm run validate:site fails a built llms.txt that strays from it.
 export function llmsTxt() {
   const a = absolute;
   const example = links[0];
   const files = llmsYears().map(
     (file) =>
       `- [${file.year}](${a(file.path)}): ${plural(file.links.length, 'link')}, ${sizeLabel(file.bytes)}`,
+  );
+  const kindPages = kinds.map(
+    (kind) =>
+      `- [${kindWords[kind].title}](${a(kindPath(kind))}): ${plural(linksByKind.get(kind)?.length ?? 0, 'link')} of this kind`,
   );
   return `${[
     '# Linking Things',
@@ -216,23 +225,26 @@ export function llmsTxt() {
     '',
     "Each link's record is at `/links/<id>/`, where `<id>` is the first 12 hex characters of the md5 of the URL exactly as saved, so anyone can compute it from a URL; a 404 means the link was never saved or is not public. Every record has a JSON twin at `/links/<id>.json` and a Markdown twin at `/links/<id>.md`. Notes from 2007 to 2016 are mostly excerpts from the page, not Jamie's words; the JSON twin carries that label as `voice`, and the files below mark each such note. A note an agent wrote for Jamie's reading queue is labelled `agent` the same way.",
     '',
+    'The year files under "Every record, by year" each hold the links saved that year, newest first: title, URL, date and host, tags, the Weekly Thing issues, the permalink, and the note in full. Newest year first.',
+    '',
     '## Data',
     '',
     `- [Every link](${a(datasetPath.links)}): ${number(counts.links)} public links, newest first, with every field as saved (id, hash, url, title, note, saved, tags, toread, meta), then the permalink and the kind`,
     `- [Hosts](${a(datasetPath.hosts)}): every host with its number of links, the first and latest saved, and its page`,
     `- [Weekly Thing issues](${a(datasetPath.issues)}): the links each of ${number(counts.issues)} issues of The Weekly Thing carried, joined to the saved links`,
-    `- [JSON Feed](${a(feedPath('json'))}) and [RSS](${a(feedPath('rss'))}): the newest ${FEED_SIZE} links; every host page and every kind page has its own pair at \`feed.json\` and \`feed.xml\` under its path, as in \`/hosts/<host>/feed.json\` and \`/kinds/video/feed.json\``,
+    `- [JSON Feed](${a(feedPath('json'))}): the newest ${FEED_SIZE} links; every host page and every kind page has its own at \`feed.json\` under its path, as in \`/hosts/<host>/feed.json\` and \`/kinds/video/feed.json\``,
+    `- [RSS](${a(feedPath('rss'))}): the same newest ${FEED_SIZE} links; every host page and every kind page has its own at \`feed.xml\` under its path, as in \`/hosts/<host>/feed.xml\` and \`/kinds/video/feed.xml\``,
     `- [SQLite database](${a(datasetPath.db)}): the same public data in one file, with tables \`links\`, \`hosts\`, \`issues\`, \`appearances\`, \`host_facts\`, \`wayback\`, \`facts\` and \`meta\``,
     '',
     '## Every record, by year',
-    '',
-    `Each file holds the links saved that year, newest first: title, URL, date and host, tags, the Weekly Thing issues, the permalink, and the note in full. Newest year first.`,
     '',
     ...files,
     '',
     '## Records',
     '',
-    `- [The first link saved](${a(linkPath(example.id))}), [as JSON](${a(linkJsonPath(example.id))}) and [as Markdown](${a(linkMarkdownPath(example.id))}): the shape of every record`,
+    `- [The first link saved](${a(linkPath(example.id))}): the shape of every record`,
+    `- [The first link saved, as JSON](${a(linkJsonPath(example.id))}): its JSON twin`,
+    `- [The first link saved, as Markdown](${a(linkMarkdownPath(example.id))}): its Markdown twin`,
     '',
     '## Agents',
     '',
@@ -246,7 +258,8 @@ export function llmsTxt() {
     `- [Years](${a('/years/')}): the links saved each year, by month`,
     `- [Issues](${a('/issues/')}): every Weekly Thing issue and the links it carried`,
     `- [Hosts](${a('/hosts/')}): the sites linked most; every host has a page at \`/hosts/<host>/\``,
-    `- [Kinds](${a(kindsPath)}): what each link is, read from its address: ${kinds.map((kind) => `[${kindWords[kind].title.toLowerCase()}](${a(kindPath(kind))}) (${number(linksByKind.get(kind)?.length ?? 0)})`).join(', ')}`,
+    `- [Kinds](${a(kindsPath)}): what each link is, read from its address; each kind's page follows`,
+    ...kindPages,
     `- [Stats](${a('/stats/')}): linking volume by year, month, weekday and hour, notes, hosts and the Weekly Thing`,
     `- [About](${a(aboutPath)}): what this is, why links matter, and how it is made, in Jamie's words`,
     '',

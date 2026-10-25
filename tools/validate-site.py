@@ -47,7 +47,9 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   as its twins have them, every issue newest first with its
   title, Central date and the saved links it carried, and each year's and
   kind's count;
-- llms.txt follows llmstxt.org's shape and links every year's
+- llms.txt follows llmstxt.org's shape, the one its reference parser reads
+  (prose only above the first ##, then one `- [name](url): notes` item per
+  line, one link each), and links every year's
   /years/<yyyy>/llms.txt; the year files hold every record exactly once, each
   in the file of its Central year, and none passes 4 MB (past that a year is
   split by month); every URL on this site inside the feeds, the JSON files
@@ -610,6 +612,38 @@ def check_suggest(data_links, twin_kinds, twin_hosts, problems):
 
 RECORD_LINE = re.compile(r"^- Record: (\S+)$", re.M)
 
+# llmstxt.org's reference parser (the llms-txt package, parse_llms_file) splits
+# the file at every line that starts "##" (so "###" too) and reads each
+# non-empty line under one as a `- [name](url): notes` item. A line with no
+# link breaks the whole parse; a second link on a line is silently dropped;
+# a name ends at its first "]". Above the first "##" go the "# " title, an
+# optional "> " summary and prose, with no headings.
+LLMS_ITEM = re.compile(r"^- \[[^\[\]]+\]\(https?:[^)\s]+\)(: \S.*)?$")
+
+
+def llms_shape_problems(text, name="llms.txt"):
+    """Every way llms.txt strays from what the reference parser reads."""
+    found = []
+    head, *rest = re.split(r"^##\s*(.*?$)", text, flags=re.M)
+    lines = head.strip().splitlines()
+    if not lines or not lines[0].startswith("# "):
+        found.append(f"{name}: does not open with a '# ' title")
+    for line in lines[1:]:
+        if line.startswith("#"):
+            found.append(f"{name}: a heading above the first section: {line[:60]}")
+    if not rest:
+        found.append(f"{name}: no sections")
+    headings = rest[0::2]
+    for heading in sorted({h for h in headings if headings.count(h) > 1}):
+        found.append(f"{name}: two sections named '{heading}'; the parser keeps one")
+    for heading, body in zip(rest[0::2], rest[1::2]):
+        for line in body.splitlines():
+            if line.strip() and (not LLMS_ITEM.match(line) or line.count("](") != 1):
+                found.append(
+                    f"{name}: under '{heading}', not one '- [name](url): notes' item: {line[:80]}"
+                )
+    return found
+
 
 def year_llms_files():
     return sorted(DIST.glob("years/*/llms.txt"))
@@ -617,13 +651,15 @@ def year_llms_files():
 
 def check_llms(data_links, problems):
     """llms.txt has llmstxt.org's shape (an H1, a blockquote, then sections of
-    links), its links resolve and it links every year file; the year files
-    hold every record once, each in its own Central year, newest first."""
+    one-link items the reference parser reads), its links resolve and it links
+    every year file; the year files hold every record once, each in its own
+    Central year, newest first."""
     file = DIST / "llms.txt"
     llms = file.read_text() if file.exists() else ""
     lines = llms.splitlines()
     if not lines or not lines[0].startswith("# ") or not any(line.startswith("> ") for line in lines):
         problems.append("llms.txt: needs an H1 and a blockquote summary")
+    problems += llms_shape_problems(llms)
     targets = re.findall(r"\]\(([^)\s]+)\)", llms)
     for target in targets:
         path = target[len(SITE):] if target.startswith(SITE + "/") else None

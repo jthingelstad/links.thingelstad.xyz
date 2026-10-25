@@ -1,8 +1,10 @@
 """The built-site validator's microformats rule (tools/validate-site.py,
-check_microformats). Run: python3 -m unittest discover -s tests -v
+check_microformats) and its llms.txt shape rule (llms_shape_problems). Run:
+python3 -m unittest discover -s tests -v
 
-The rule is checked here on small pages, so each way it fails stays pinned;
-npm run validate:site runs it on every built page."""
+The rules are checked here on small pages and files, so each way they fail
+stays pinned; npm run validate:site runs them on every built page and on the
+built llms.txt."""
 
 import importlib.util
 import unittest
@@ -116,6 +118,67 @@ class OtherPages(unittest.TestCase):
         self.assertTrue(problems("/about/", list_page([row(RECORD)], url="/about/")))
         plain = f'<main id="main" class="site-main"><h1>About</h1></main>{FOOTER}'
         self.assertEqual(problems("/about/", plain), [])
+
+
+# An llms.txt the reference parser reads: prose only above the first section,
+# then one `- [name](url): notes` item per line.
+LLMS = f"""# Linking Things
+
+> Every public link Jamie Thingelstad has saved since 2005.
+
+Prose is allowed here, above the first section.
+
+## Data
+
+- [Every link]({SITE}/links.json): newest first
+- [RSS]({SITE}/feed.xml)
+
+## Every record, by year
+
+- [2026]({SITE}/years/2026/llms.txt): 633 links, 358 KB
+"""
+
+
+def llms_problems(text):
+    return validate_site.llms_shape_problems(text)
+
+
+class LlmsShape(unittest.TestCase):
+    def test_the_shape_the_parser_reads_passes(self):
+        self.assertEqual(llms_problems(LLMS), [])
+
+    def test_a_line_without_a_link_fails(self):
+        # The intro that sat under "Every record, by year" until 2026-10-25:
+        # the reference parser stops with an AttributeError on it.
+        text = LLMS.replace("## Every record, by year\n", "## Every record, by year\n\nEach file holds a year.\n")
+        self.assertEqual(len(llms_problems(text)), 1)
+
+    def test_two_links_on_a_line_fail(self):
+        two = f"- [JSON Feed]({SITE}/feed.json) and [RSS]({SITE}/feed.xml): the newest 50"
+        self.assertEqual(len(llms_problems(LLMS.replace(f"- [RSS]({SITE}/feed.xml)", two))), 1)
+        three = f"- [Kinds]({SITE}/kinds/): [videos]({SITE}/kinds/video/) (352)"
+        self.assertEqual(len(llms_problems(LLMS.replace(f"- [RSS]({SITE}/feed.xml)", three))), 1)
+
+    def test_a_name_with_a_bracket_or_a_bad_item_fails(self):
+        for line in (
+            f"- [The [first] link]({SITE}/links/0123456789ab/)",
+            "- [Every link](/links.json): a relative URL",
+            f"* [Every link]({SITE}/links.json): another bullet",
+            f"- [Every link]({SITE}/links.json) newest first",
+            f"- [Every link]({SITE}/links.json):",
+        ):
+            text = LLMS.replace(f"- [Every link]({SITE}/links.json): newest first", line)
+            self.assertEqual(len(llms_problems(text)), 1, line)
+
+    def test_a_deeper_heading_is_a_section_too(self):
+        # "###" starts a section for the parser, so prose under it breaks it.
+        text = LLMS.replace("## Data\n", "## Data\n\n### Files\n\nThe data files.\n")
+        self.assertEqual(len(llms_problems(text)), 1)
+
+    def test_a_heading_above_the_sections_or_a_repeated_section_fails(self):
+        self.assertTrue(llms_problems(LLMS.replace("Prose is allowed", "# Prose is allowed")))
+        self.assertTrue(llms_problems(LLMS + "\n## Data\n\n- [Hosts](" + SITE + "/hosts.json)\n"))
+        self.assertTrue(llms_problems("Linking Things\n\n## Data\n"))
 
 
 if __name__ == "__main__":
