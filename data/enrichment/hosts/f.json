@@ -1,4 +1,294 @@
 {
+ "f-secure.com": {
+  "checked": "2026-10-26T06:55:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.2.147.70"
+   ],
+   "aaaa": [
+    "2600:1418:1000:38e::1690",
+    "2600:1418:1000:396::1690"
+   ],
+   "cname": null,
+   "ns": [
+    "a1-129.akam.net",
+    "a10-64.akam.net",
+    "a11-66.akam.net",
+    "a14-65.akam.net",
+    "a4-64.akam.net",
+    "a7-66.akam.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:55:40Z",
+   "title": "Protect your digital moments | F‑Secure",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "f1fanatic.co.uk": {
+  "checked": "2026-10-26T06:55:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "78.157.218.220"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns17.domaincontrol.com",
+    "ns18.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:55:44Z",
+   "title": "RaceFans – Formula 1, IndyCar, WEC, F2 and more independent motorsport coverage",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.racefans.net/feed/",
+     "title": "RaceFans » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.racefans.net/comments/feed/",
+     "title": "RaceFans » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "fa.bianp.net": {
+  "checked": "2026-10-26T06:55:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.8.27.11",
+    "65.8.27.57",
+    "65.8.27.102",
+    "65.8.27.125"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:55:47Z",
+   "title": "Keep the gradient flowing",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "http://fa.bianp.net/blog/feed/atom.xml",
+     "title": "Keep the gradient flowing ALL Atom Feed"
+    },
+    {
+     "type": "rss",
+     "url": "http://fa.bianp.net/blog/feed/rss.xml",
+     "title": "Keep the gradient flowing RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "fabbaloo.com": {
+  "checked": "2026-10-26T06:55:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.6.192",
+    "104.26.7.192",
+    "172.67.69.142"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:6c0",
+    "2606:4700:20::681a:7c0",
+    "2606:4700:20::ac43:458e"
+   ],
+   "cname": null,
+   "ns": [
+    "leanna.ns.cloudflare.com",
+    "rodney.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:55:50Z",
+   "title": "3D Printing News ~ Fabbaloo",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.fabbaloo.com/feed",
+     "title": "Fabbaloo » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.fabbaloo.com/comments/feed",
+     "title": "Fabbaloo » Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.fabbaloo.com/web-stories/feed/",
+     "title": "Fabbaloo » Stories Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://techhub.social/@fabbaloo",
+    "https://mastodon.social/@krst"
+   ],
+   "webmention": null
+  }
+ },
+ "fabiensanglard.net": {
+  "checked": "2026-10-26T06:55:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "108.179.235.106"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns8505.hostgator.com",
+    "ns8506.hostgator.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:55:53Z",
+   "title": "Homepage",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://fabiensanglard.net/rss.xml",
+     "title": "RSS Feed for fabiensanglard.net"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "fabricatedknowledge.com": {
+  "checked": "2026-10-26T06:55:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-26T06:55:56Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "facebook-studio.com": {
+  "checked": "2026-10-26T06:55:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "157.240.254.12"
+   ],
+   "aaaa": [
+    "2a03:2880:f03a:12:face:b00c:0:2"
+   ],
+   "cname": null,
+   "ns": [
+    "a.ns.facebook.com",
+    "b.ns.facebook.com",
+    "c.ns.facebook.com",
+    "d.ns.facebook.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'facebook-studio.com'"
+  },
+  "home": {
+   "checked": "2026-10-26T06:55:56Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'facebook-studio.com'"
+  }
+ },
  "facebook.com": {
   "checked": "2026-10-24T05:47:53Z",
   "method": "enrich_hosts",
@@ -93,6 +383,112 @@
    "webmention": null
   }
  },
+ "facebookresearch.github.io": {
+  "checked": "2026-10-26T06:56:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:00Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "fadingred.com": {
+  "checked": "2026-10-26T06:56:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.55.65",
+    "172.67.170.154"
+   ],
+   "aaaa": [
+    "2606:4700:3035::6815:3741",
+    "2606:4700:3037::ac43:aa9a"
+   ],
+   "cname": null,
+   "ns": [
+    "julian.ns.cloudflare.com",
+    "violet.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:02Z",
+   "title": "Canadian Online Casino Free Spins - Top Sites for Playing in CAD",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "faithandfear.blogharbor.com": {
+  "checked": "2026-10-26T06:56:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.5.188",
+    "172.67.154.169"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:5bc",
+    "2606:4700:3035::ac43:9aa9"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:06Z",
+   "title": "PressHarbor WordPress Hosting - WordPress Hosting for Serious Sites",
+   "generator": "Site Kit by Google 1.190.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "fakesteve.blogspot.com": {
   "checked": "2026-10-24T05:52:14Z",
   "method": "enrich_hosts",
@@ -146,6 +542,291 @@
    "checked": "2026-10-24T05:52:14Z"
   }
  },
+ "falseisnottrue.tumblr.com": {
+  "checked": "2026-10-26T06:56:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "74.114.154.18",
+    "74.114.154.22"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:07Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "family.1password.com": {
+  "checked": "2026-10-26T06:56:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.84.127.39",
+    "52.84.127.82",
+    "52.84.127.91",
+    "52.84.127.118"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:10Z",
+   "title": "Password Manager for Individuals & Families | 1Password",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "family.co": {
+  "checked": "2026-10-26T06:56:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.22.205",
+    "104.18.23.205"
+   ],
+   "aaaa": [
+    "2606:4700::6812:16cd",
+    "2606:4700::6812:17cd"
+   ],
+   "cname": null,
+   "ns": [
+    "art.ns.cloudflare.com",
+    "elaine.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:14Z",
+   "title": "Family",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "familyfinds.com": {
+  "checked": "2026-10-26T06:56:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "69.88.157.44"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.directhosts.com",
+    "ns2.directhosts.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:16Z",
+   "title": "Family Finds | Fashion, Style, Clothing & Apparel News",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "fancyhands.com": {
+  "checked": "2026-10-26T06:56:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.41.54",
+    "172.66.154.144"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:2936",
+    "2606:4700:10::ac42:9a90"
+   ],
+   "cname": null,
+   "ns": [
+    "darl.ns.cloudflare.com",
+    "princess.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:21Z",
+   "title": "Assistants for Everyone - Fancy Hands",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "farcaster.xyz": {
+  "checked": "2026-10-26T06:56:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.28.145",
+    "172.67.170.223"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:1c91",
+    "2606:4700:3032::ac43:aadf"
+   ],
+   "cname": null,
+   "ns": [
+    "brian.ns.cloudflare.com",
+    "lola.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:23Z",
+   "title": "Farcaster",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "farmingdale-observer.com": {
+  "checked": "2026-10-26T06:56:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.52.35",
+    "172.67.194.200"
+   ],
+   "aaaa": [
+    "2606:4700:3034::ac43:c2c8",
+    "2606:4700:3037::6815:3423"
+   ],
+   "cname": null,
+   "ns": [
+    "cody.ns.cloudflare.com",
+    "macy.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:25Z",
+   "title": "Farmingdale Observer",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://farmingdale-observer.com/feed/",
+     "title": "Farmingdale Observer » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://farmingdale-observer.com/comments/feed/",
+     "title": "Farmingdale Observer » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "farmtofork.net": {
+  "checked": "2026-10-26T06:56:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.49.23.144",
+    "198.49.23.145",
+    "198.185.159.144",
+    "198.185.159.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.bluehost.com",
+    "ns2.bluehost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:30Z",
+   "title": "Farm to Fork",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "farnamstreetblog.com": {
   "checked": "2026-10-24T06:26:18Z",
   "method": "enrich_hosts",
@@ -191,6 +872,183 @@
    "hcard": false,
    "rel_me": [],
    "webmention": null
+  }
+ },
+ "fas.org": {
+  "checked": "2026-10-26T06:56:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "50.116.19.161"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "cortney.ns.cloudflare.com",
+    "dimitris.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:32Z",
+   "title": "Home - Federation of American Scientists",
+   "generator": "WordPress 7.0.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://fas.org/home/feed/",
+     "title": "Federation of American Scientists » Home Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "fast-poll.com": {
+  "checked": "2026-10-26T06:56:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "209.142.67.105"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.managed-vps.net",
+    "ns2.managed-vps.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:34Z",
+   "title": "Fast Poll – Create a Free Quick Poll in Seconds",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "fast.ai": {
+  "checked": "2026-10-26T06:56:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.2.19",
+    "104.26.3.19",
+    "172.67.69.159"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:213",
+    "2606:4700:20::681a:313",
+    "2606:4700:20::ac43:459f"
+   ],
+   "cname": null,
+   "ns": [
+    "melissa.ns.cloudflare.com",
+    "roman.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:37Z",
+   "title": "fast.ai—Making neural nets uncool again – fast.ai",
+   "generator": "quarto-1.9.38",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.fast.ai/index.xml",
+     "title": "fast.ai"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "fastapi.tiangolo.com": {
+  "checked": "2026-10-26T06:56:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.66.45.21",
+    "172.66.46.235"
+   ],
+   "aaaa": [
+    "2606:4700:310c::ac42:2d15",
+    "2606:4700:310c::ac42:2eeb"
+   ],
+   "cname": "fastapitiangolo.pages.dev",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:41Z",
+   "title": "FastAPI - FastAPI",
+   "generator": "zensical-0.0.65",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "fastcharts.io": {
+  "checked": "2026-10-26T06:56:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "SERVFAIL"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:44Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
   }
  },
  "fastcodesign.com": {
@@ -247,6 +1105,43 @@
    "checked": "2026-10-24T05:45:49Z"
   }
  },
+ "fastcomments.com": {
+  "checked": "2026-10-26T06:56:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "40.160.34.62"
+   ],
+   "aaaa": [
+    "2604:2dc0:100:263e::10"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.fastcomments.com",
+    "ns2.fastcomments.com",
+    "ns3.fastcomments.com",
+    "ns4.fastcomments.com",
+    "ns5.fastcomments.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:45Z",
+   "title": "Live Commenting System For Any Website or Application - FastComments",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "fastcompany.com": {
   "checked": "2026-10-23T21:28:33Z",
   "method": "enrich_hosts",
@@ -289,6 +1184,53 @@
     "ns-715.awsdns-25.net"
    ],
    "checked": "2026-10-23T21:28:33Z"
+  }
+ },
+ "fasterthanli.me": {
+  "checked": "2026-10-26T06:56:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.42.60",
+    "172.67.201.149"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:c995",
+    "2606:4700:3033::6815:2a3c"
+   ],
+   "cname": null,
+   "ns": [
+    "isaac.ns.cloudflare.com",
+    "nadia.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:50Z",
+   "title": "fasterthanli.me",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://fasterthanli.me/index.xml",
+     "title": "Sitewide Atom feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://bsky.app/profile/fasterthanli.me",
+    "https://github.com/sponsors/fasterthanlime",
+    "https://www.linkedin.com/in/fasterthanlime",
+    "https://hachyderm.io/@fasterthanlime"
+   ],
+   "webmention": null
   }
  },
  "fastly.com": {
@@ -417,6 +1359,445 @@
    "webmention": null
   }
  },
+ "fastorslow.com": {
+  "checked": "2026-10-26T06:56:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1489.awsdns-58.org",
+    "ns-1596.awsdns-07.co.uk",
+    "ns-461.awsdns-57.com",
+    "ns-709.awsdns-24.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:53Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "fatalerror.wordpress.com": {
+  "checked": "2026-10-26T06:56:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.12",
+    "192.0.78.13"
+   ],
+   "aaaa": [],
+   "cname": "lb.wordpress.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:53Z",
+   "title": "Blue Screen Of Duds | Where the alter ego of codelust plays",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://fatalerror.wordpress.com/feed/",
+     "title": "Blue Screen Of Duds » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://fatalerror.wordpress.com/comments/feed/",
+     "title": "Blue Screen Of Duds » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "http://frontiernxt.com",
+    "http://shyam.somanadh.com"
+   ],
+   "webmention": null
+  }
+ },
+ "faz.net": {
+  "checked": "2026-10-26T06:56:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "40.118.6.229"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "anycast1.irondns.net",
+    "anycast2.irondns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:56:58Z",
+   "title": "Aktuelle Nachrichten online - FAZ.NET",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.faz.net/rss/aktuell/",
+     "title": "FAZ.NET"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "fb.textile.photos": {
+  "checked": "2026-10-26T06:57:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.45.225",
+    "172.67.219.172"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:2de1",
+    "2606:4700:3035::ac43:dbac"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-26T06:57:03Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "fbaexperiment.com": {
+  "checked": "2026-10-26T06:57:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-26T06:57:07Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "fbcmd.dtompkins.com": {
+  "checked": "2026-10-26T06:57:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": "dtompkins.github.io",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:57:07Z",
+   "title": "FBCMD (R.I.P.)",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "fcp.co": {
+  "checked": "2026-10-26T06:57:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "50.28.36.23"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns3.cybersalthosting.com",
+    "ns4.cybersalthosting.com",
+    "ns5.cybersalthosting.com",
+    "ns6.cybersalthosting.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:57:10Z",
+   "title": "FCPX & Final Cut Pro Dedicated News, Tutorials, Reviews & Forums",
+   "generator": "Joomla! - Open Source Content Management",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "fda.gov": {
+  "checked": "2026-10-26T06:57:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.217.55.172",
+    "23.217.55.187"
+   ],
+   "aaaa": [
+    "2600:1418:1000:5::17d9:37ac",
+    "2600:1418:1000:5::17d9:37bb"
+   ],
+   "cname": null,
+   "ns": [
+    "a1-242.akam.net",
+    "a13-64.akam.net",
+    "a2-65.akam.net",
+    "a20-65.akam.net",
+    "a24-66.akam.net",
+    "a7-67.akam.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-26T06:57:14Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "feather.wiki": {
+  "checked": "2026-10-26T06:57:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:57:19Z",
+   "title": "Feather Wiki",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "federalreserve.gov": {
+  "checked": "2026-10-26T06:57:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.33.249",
+    "172.64.154.7"
+   ],
+   "aaaa": [
+    "2606:4700:4404::ac40:9a07",
+    "2606:4700:4405::6812:21f9"
+   ],
+   "cname": null,
+   "ns": [
+    "art.ns.cloudflare.com",
+    "pat.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:57:22Z",
+   "title": "Federal Reserve Board - Home",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "federation.wtf": {
+  "checked": "2026-10-26T06:57:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.29.17.194",
+    "216.198.79.66"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.vercel-dns.com",
+    "ns2.vercel-dns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:57:24Z",
+   "title": "Federation",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "fedipact.online": {
+  "checked": "2026-10-26T06:57:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.51.233.1"
+   ],
+   "aaaa": [
+    "2620:2:6000::bad:dab:cafe"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-26T06:57:27Z",
+   "title": "🖤 ANTI-META FEDI PACT 🖤",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://cyberpunk.lol/@FediPact"
+   ],
+   "webmention": null
+  }
+ },
  "feed43.com": {
   "checked": "2026-10-24T06:26:26Z",
   "method": "enrich_hosts",
@@ -445,6 +1826,40 @@
    "rel_me": [],
    "webmention": null,
    "error": "does not resolve"
+  }
+ },
+ "feedafever.com": {
+  "checked": "2026-10-26T06:57:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "70.32.106.78"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.mediatemple.net",
+    "ns2.mediatemple.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-26T06:57:30Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
   }
  },
  "feedbin.com": {

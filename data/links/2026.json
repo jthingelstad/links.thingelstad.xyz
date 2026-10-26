@@ -7105,100 +7105,100 @@
   "id": "4b5537308716",
   "hash": "4b5537308716f1d5fdaf56e430c550fc",
   "url": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007",
-  "title": "Margaret Hamilton, computing pioneer who led software development for the Apollo program, dies at 90 | MIT News | Massachusetts Institute of Technology",
-  "note": "",
+  "title": "Margaret Hamilton, computing pioneer who led software development for the Apollo program, dies at 90 | MIT News",
+  "note": "Pioneering computer programmer and a giant in the field. Thank you!",
   "saved": "2026-10-09T12:01:17Z",
   "tags": [],
   "toread": false,
-  "meta": "d2ff269f5dd3a5a249e59f82c60d26fd"
+  "meta": "892fc49a681ec6a57396dd783515d9e7"
  },
  {
   "id": "7c5a9185fecb",
   "hash": "7c5a9185fecb42c26a8f111b6f12e4fc",
   "url": "https://sheets.works/data-viz/holding-up-the-internet",
   "title": "The people holding up the internet | Data Drop",
-  "note": "",
+  "note": "The reality is that so much of the software our world runs on was written by a really small number of people. This site does a great job of highlighting those folks and showing their accomplishments. These are the names we should respect versus the founders of social networks.",
   "saved": "2026-10-09T12:02:07Z",
   "tags": [],
   "toread": false,
-  "meta": "c0617fd4c0f40c20f0643593194ad999"
+  "meta": "d0588c0476f5d13ec7d1b2432876fe9a"
  },
  {
   "id": "54cf8257a973",
   "hash": "54cf8257a9733f5c83a0d4d75b925fae",
   "url": "https://quesma.com/blog/invisible-cities-one-shot/",
-  "title": "I gave Opus 5.5 one prompt and six hours to visualize Invisible Cities - Quesma Blog",
-  "note": "",
+  "title": "I gave Opus 5.5 one prompt and six hours to visualize Invisible Cities",
+  "note": "[Visualizing the series of cities](https://p.migdal.pl/invisible-cities-opus-5.5/) with a one shot prompt from Opus. Really cool.",
   "saved": "2026-10-09T12:04:04Z",
   "tags": [],
   "toread": false,
-  "meta": "21bab5d5e31cf5aa12669f1302aee2e4"
+  "meta": "98b69014d9412b2eb8cbbc3422cf4045"
  },
  {
   "id": "9ddfaf283c6b",
   "hash": "9ddfaf283c6b790bb4f86c838dbfc037",
   "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/",
   "title": "Microsoft-Decision-1: Our model for fast decision-making",
-  "note": "",
+  "note": "Another decision model in the spirit of Jev. These are pretty useful and interesting for specific use cases.",
   "saved": "2026-10-12T20:39:45Z",
   "tags": [],
   "toread": false,
-  "meta": "a5418205dd149098addf826156086dd9"
+  "meta": "700623fd38b00da6bd7a61b28ea2b20b"
  },
  {
   "id": "6739db0aaea7",
   "hash": "6739db0aaea7b2f0c35fbecf2a5a522f",
   "url": "https://unsloth.ai/docs/new/train-your-own-decision-model-with-unsloth",
   "title": "Train your own Decision Model | Unsloth Documentation",
-  "note": "",
+  "note": "Another take on training your own decision model.",
   "saved": "2026-10-12T20:41:57Z",
   "tags": [],
   "toread": false,
-  "meta": "8a4ae197ff78c0eec4c827cfbd67a88e"
+  "meta": "b3d98d834d21573429c42d3cff7cfc55"
  },
  {
   "id": "e0c967eeba62",
   "hash": "e0c967eeba62fb7cad02f6c5bd8ce640",
   "url": "https://nishtahir.com/build-your-own-decision-model/",
   "title": "Build your own decision model",
-  "note": "",
+  "note": "Training a custom model is crazy expensive and I would assume someone was nuts to endeavor to do it for internal use at a company. Building a decision model though seems like something that may be very useful and applicable.",
   "saved": "2026-10-12T20:42:16Z",
   "tags": [],
   "toread": false,
-  "meta": "6c45ccf885513e1d39a6df0e841d6c17"
+  "meta": "a6a748978aba664bc0baddccf8b9ff40"
  },
  {
   "id": "99f2dfbea736",
   "hash": "99f2dfbea73628b78bd136120aa2b562",
   "url": "https://blog.glyph.im/2026/10/programming-isnt-special.html",
   "title": "Deciphering Glyph :: Programming Isn’t Special",
-  "note": "",
+  "note": "I am receptive to the concept that programming can be like art. An algorithm can be beautiful. But ultimately a program has to run and follow the laws of the runtime. Art does not. Productivity is a meaningful consideration with programming that really doesn't extend to art. Yes you can artfully program, but there is also a cost and performance consideration that has no analog in the world of art.",
   "saved": "2026-10-12T20:44:00Z",
   "tags": [],
   "toread": false,
-  "meta": "80f2d3379dde152df6897f625a27a2b3"
+  "meta": "fc0c2cf2cdb1a9a0c54eba6177a3123f"
  },
  {
   "id": "6e39baa3659f",
   "hash": "6e39baa3659f5d04e614eb19e54880cd",
   "url": "https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/",
   "title": "Announcing AWS Lambda Web Functions",
-  "note": "",
+  "note": "I was super excited to see this since I've lately built a number of serverless applications and what I really wanted was to just run a node instance in Lambda. Magically this landed just in time. The other amazing thing? I gave Claude a single prompt in a handful of projects and had moved four different systems to this. A little bit of debugging was needed but the apps are now noticeably faster.",
   "saved": "2026-10-13T06:03:20Z",
   "tags": [],
   "toread": false,
-  "meta": "7bedff5dbd98188ffbb6ad210fb26bc6"
+  "meta": "0ab8ecfbcfb9722fb55ec1cff81168be"
  },
  {
   "id": "2545696fec77",
   "hash": "2545696fec771d8d8ae8d11c3f180574",
   "url": "https://512pixels.net/2026/10/apple-homeview-impressions/",
   "title": "With HomeView, Apple Shows How Powerful Its Ecosystem Can Be",
-  "note": "",
+  "note": "I find myself intrigued by this product but ultimately not feeling like I need to get my wallet out. I'm not sure where it would live in our computing life. Perhaps we just have enough screens?",
   "saved": "2026-10-14T08:56:51Z",
   "tags": [],
   "toread": false,
-  "meta": "2662011833ec014322257d166dbde260"
+  "meta": "93e041d53e16f271234e330adcce6b79"
  },
  {
   "id": "8625f276e36e",
@@ -7207,31 +7207,33 @@
   "title": "Redesigning source control at Anthropic",
   "note": "",
   "saved": "2026-10-14T13:59:21Z",
-  "tags": [],
+  "tags": [
+   "_exclude"
+  ],
   "toread": false,
-  "meta": "5018123a791ae10e939fd611b8277cd2"
+  "meta": "513bd22ff681bc59c95cfdefb2400b6b"
  },
  {
   "id": "84248f3bb838",
   "hash": "84248f3bb838b097c4537fb0b107a336",
   "url": "https://www.anthropic.com/research/employment-at-anthropic",
   "title": "How employment is changing at Anthropic",
-  "note": "",
+  "note": "Some interesting data on how work at Anthropic is being changed as Claude takes on more and more of the actual effort. \"By August interactive AI agent hours outnumbered employees six to one.\" I read that as about 85% of their \"workforce\" is Claude.\n\n> This acceleration makes human attention the bottleneck for agent output. Even among non-technical employees, reading all the output of their Claude agents would take half their work week. In response, employees turn to \"meta-work,\" of building visibility tools and monitoring agent pipelines.\n\nThe \"Reading Claude as a fulltime job\" graph is mind-blowing and a direct representation of the above bottleneck. Engineers are starting to see this as you release agentic processes you need the entire flow to be agentic or it slows down massively.",
   "saved": "2026-10-18T10:37:54Z",
   "tags": [],
   "toread": false,
-  "meta": "207bd40a9594e5f15381614e521393bb"
+  "meta": "08fc6ed2b618f4d28145f0afd710bb30"
  },
  {
   "id": "86dae906ff97",
   "hash": "86dae906ff97339f6b01b34b48eb7931",
   "url": "https://pele.run/",
   "title": "Pele · Mermaid diagrams as themeable SVG",
-  "note": "",
+  "note": "Mermaid is an easy way to use pure text to describe a process flow or really any kind of diagram as text. The wonderful thing is you can then commit it in code tools and version it. There are a number of tools that then visualize those but most are not terribly nice. This library does a really good job of showing it. I asked Claude to include it on my Things I've Built site. The example for [Linking Things](https://thingelstad.xyz/things/linking-things/) is pretty good.",
   "saved": "2026-10-18T10:46:48Z",
   "tags": [],
   "toread": false,
-  "meta": "9841227fc4dcf1792ff3d805072f1a1b"
+  "meta": "f9f6c875370609d32ea1eef171f6f6d4"
  },
  {
   "id": "ca0a35e986ac",
@@ -7240,64 +7242,66 @@
   "title": "Speeding up code review with `small-change` | Irrational Exuberance",
   "note": "",
   "saved": "2026-10-18T11:07:24Z",
-  "tags": [],
+  "tags": [
+   "_exclude"
+  ],
   "toread": false,
-  "meta": "f83472ad7fa7b72a2937a01ec6602c8a"
+  "meta": "18d7a71329111d1f45c5024438b44942"
  },
  {
   "id": "f6337eab23d0",
   "hash": "f6337eab23d080374f8241b684d52a24",
   "url": "https://www.macsparky.com/blog/2026/10/drafts-adds-a-chat-console-and-better-dictation/",
   "title": "Drafts Adds a Chat Console and Better Dictation - MacSparky",
-  "note": "",
+  "note": "I'm a regular and longtime user of Drafts and I wasn't expecting this feature. It looks like it could be pretty useful for impromptu things, which is generally where Drafts shines!",
   "saved": "2026-10-18T11:09:29Z",
   "tags": [],
   "toread": false,
-  "meta": "cd94364974f451dcdbef620e0e948522"
+  "meta": "34cb4578dd3f24d7d47ebc437dc184f0"
  },
  {
   "id": "97835a3362b9",
   "hash": "97835a3362b9bfefd55bb2ec9543f92b",
   "url": "https://www.lennysnewsletter.com/p/how-tech-workers-are-feeling-in-2026?open=false#%C2%A7our-biggest-takeaways",
   "title": "How tech workers are feeling in 2026: a workforce splitting in two",
-  "note": "",
+  "note": "Technology has a pretty high burnout rate. I don't think it is discussed enough. With the massive transformation happening with AI we are seeing this push people in all sorts of ways.\n\n> Tech workers are either amplified by AI or shaken by it, and that divide shapes their feelings about work more than any title, tenure, or company.\n\nI wrote [Building and Puzzling about Software](https://www.thingelstad.com/2026/09/17/building-and-puzzling-about-software.html) and would suggest those \"amplified\" are the Builders and the \"shaken by it\" are the Puzzlers.\n\nI believe that a lot of burnout in tech comes from the fact that you must always be learning, and learning is hard. After 30+ years in this field I know that is the one fact that has held true. You must always be learning the next thing. And at least for me as I get older that learning isn't as easy.\n\n> Significant burnout rose from 44.7% to 55.7% of respondents, while career optimism fell from 54.8% to 48.7%. \n\nTo be optimistic for a bit, I do think that we will get to the other side of this and return to a somewhat normalized rate of change. Each major transformation in tech has a high change curve where everything gets redefined, and then you stabilize and scale on the other side. The time of that change is directly linked to the scale of the change.\n\nThis one may take a while.",
   "saved": "2026-10-19T13:20:21Z",
   "tags": [],
   "toread": false,
-  "meta": "2edf521736690a1fc6f116a22ffb0a9c"
+  "meta": "f942f590b34d6bb1259c1850fdae16c9"
  },
  {
   "id": "616a040069c1",
   "hash": "616a040069c1f5255a05a1cd1fc71724",
   "url": "https://www.eff.org/deeplinks/2026/10/announcing-privacy-badger-safari-macos",
   "title": "Announcing Privacy Badger for Safari on macOS",
-  "note": "",
+  "note": "Happy to see this finally arriving in Safari!",
   "saved": "2026-10-20T10:13:53Z",
   "tags": [],
   "toread": false,
-  "meta": "42a01ca110ba16d1c0e5ab61e81f14b5"
+  "meta": "e141b0cb6dbead697c7007bc3d0571f0"
  },
  {
   "id": "0e76bb91d44a",
   "hash": "0e76bb91d44a1a7dd00e633e95727aec",
   "url": "https://www.youtube.com/watch?v=XnIrVCrbHe8",
   "title": "BeastBox: Your Mouth Is the Drum Kit @ Minnedemo42",
-  "note": "",
+  "note": "Full video of a great demo from Minnedemo. The responsiveness of the software here is impressive.",
   "saved": "2026-10-20T14:28:51Z",
   "tags": [],
   "toread": false,
-  "meta": "f47c76b45245d9d7370964d3dc6d4e32"
+  "meta": "60fede1aa23b6465deee5ed7c274624f"
  },
  {
   "id": "2ee60e58343d",
   "hash": "2ee60e58343d3ea0895802be5c721195",
   "url": "https://www.youtube.com/watch?v=1YLQPJd9OtU",
   "title": "Watt Window: See Your Energy Costs @ Minnedemo42",
-  "note": "",
+  "note": "Video of demo from Minnedemo with great insight into plant operations.",
   "saved": "2026-10-20T14:28:58Z",
   "tags": [],
   "toread": false,
-  "meta": "2e973304dbd4cfde71f65950caf81e9c"
+  "meta": "8b1840924821e01a748ca9db0ed89875"
  },
  {
   "id": "c15f7b962636",
@@ -7317,22 +7321,22 @@
   "hash": "0fd02e34b95b1f25d10f7f86de629990",
   "url": "https://claude.com/product/claude-duet",
   "title": "Claude Duet | Your personal AI assistant",
-  "note": "",
+  "note": "This looks like Claude's answer to ChatGPT dot and I'm pretty curious about it. We can't install it yet but I did sign up for the beta program and as a Claude MAX customer I think I'll get in right away. Or at least I hope!\n\nWhat has me interested is the screenshot of the interface with three sections: Chat, Tasks, and Make. My guess at what those features might be is what has me excited.\n\n- **Chat**: this is expected and I would assume will be very similar to dot or any other \"agentic\" chat interface. If you are thinking standard Claude or ChatGPT I think it will be more like a continuous conversation with the agent.\n- **Tasks**: this is the thing I wish Dot showed me and doesn't. I can ask Dot (Otto) to do several things but I cannot see what its list of tasks are. So I have to remember to ask it if it has done anything. I've had it just lose track of things far too often. I'd rather have a shared task list that the agent and I see together.\n- **Make**: having an agent drive multiple Claude Code sessions is something I tried to do with Dot and it only worked okay. If Make is a way to drive a project through many coding sessions to an outcome I'm gonna be very happy.\n\nI'm hoping a Duet invite lands in my email soon!",
   "saved": "2026-10-22T15:58:13Z",
   "tags": [],
   "toread": false,
-  "meta": "a30af2fcd60965448d70a36041041b75"
+  "meta": "3b3888dfc82bdc0f717d726af4dc165b"
  },
  {
   "id": "f3f99b3460b1",
   "hash": "f3f99b3460b1541fc6be5cc68f5b43d4",
   "url": "https://hadrian.io/vulnerability-alerts/php2shell-leaked-critical-php-rce-cve-2026-109618-cve-2026-109619",
-  "title": "php2shell: Leaked critical PHP RCEs (CVE-2026-109618, -109619) | Hadrian",
-  "note": "",
+  "title": "php2shell: Leaked critical PHP RCEs",
+  "note": "Atrocious security vulnerability in one of the most ubiquitous languages used online. Ouch!",
   "saved": "2026-10-23T01:05:00Z",
   "tags": [],
   "toread": false,
-  "meta": "e83330792b0c8e892d47da9113f6e114"
+  "meta": "645523eec361b2ead5dfd09d94b5be71"
  },
  {
   "id": "3fa371d4a8eb",
@@ -7341,9 +7345,11 @@
   "title": "My obituary for programming « dumbmatter.com",
   "note": "",
   "saved": "2026-10-23T01:05:06Z",
-  "tags": [],
+  "tags": [
+   "_exclude"
+  ],
   "toread": false,
-  "meta": "5de0b03b08036c1f87880082444bffcc"
+  "meta": "e3eb495640c902bf277c4587993f79c4"
  },
  {
   "id": "1c8176546929",
@@ -7352,20 +7358,22 @@
   "title": "VAULT · ussa",
   "note": "",
   "saved": "2026-10-23T01:05:21Z",
-  "tags": [],
+  "tags": [
+   "_exclude"
+  ],
   "toread": false,
-  "meta": "bf943874c68cf246cd6c27eb3f5c8049"
+  "meta": "5b2bf8c2ce0b0bea3a3781c42d98061a"
  },
  {
   "id": "2ca5ff97f513",
   "hash": "2ca5ff97f5136f02bd18b4332d85e4ac",
   "url": "https://github.com/tywr/Nordwand-Mono",
-  "title": "tywr/Nordwand-Mono: A compact monospace neo-grotesque font designed for developers (and adventurers).",
-  "note": "",
+  "title": "Nordwand-Mono: A compact monospace neo-grotesque font designed for developers (and adventurers).",
+  "note": "Delightful little font.",
   "saved": "2026-10-23T03:33:35Z",
   "tags": [],
   "toread": false,
-  "meta": "d1a15f204fdafffbe693a336604eefb0"
+  "meta": "5f77a5a239601d22aee5070200a02b18"
  },
  {
   "id": "274b7f8ab151",
@@ -7374,20 +7382,22 @@
   "title": "This notes app made me realize why my Notion research always felt so fragmented",
   "note": "",
   "saved": "2026-10-23T03:35:39Z",
-  "tags": [],
+  "tags": [
+   "_exclude"
+  ],
   "toread": false,
-  "meta": "21f38fc753e8fb9cec184c1ab2def765"
+  "meta": "34795e494505b5833846aa2d9d1ca970"
  },
  {
   "id": "73fe0fffb207",
   "hash": "73fe0fffb207ac9761e0d39bcdb60815",
   "url": "https://www.404media.co/video-game-reverse-engineering-community-shuts-down-because-ai-has-made-it-too-easy/",
   "title": "Video Game Reverse Engineering Community Shuts Down Because AI Has Made It Too Easy",
-  "note": "",
+  "note": "Reverse engineering things is super simple for coding agents.",
   "saved": "2026-10-23T03:37:49Z",
   "tags": [],
   "toread": false,
-  "meta": "80322a00d5ff662e038c9279b284350f"
+  "meta": "8514a7bd8439037e53d140950d0a8f08"
  },
  {
   "id": "25ba6e05abc7",
@@ -7396,31 +7406,33 @@
   "title": "tmux Claude Code: Sessions, send-keys, and the Ceiling",
   "note": "",
   "saved": "2026-10-23T03:39:08Z",
-  "tags": [],
+  "tags": [
+   "_exclude"
+  ],
   "toread": false,
-  "meta": "b3aa2fb6b1212f0e60c7f2bf50339a8b"
+  "meta": "ee22734c73c78f59d365e2c21cef3656"
  },
  {
   "id": "44dc34f3551d",
   "hash": "44dc34f3551d915d25f421836786af2a",
   "url": "https://contextfirst.blog/superlite-hand-an-agent-a-spec/",
   "title": "Superlite: hand an agent a spec, come back to tested work",
-  "note": "",
+  "note": "Coding orchestration agents are showing up all over the place.",
   "saved": "2026-10-23T03:41:14Z",
   "tags": [],
   "toread": false,
-  "meta": "cbca13bf3a2a61cd0136cf260fdaec4d"
+  "meta": "d31afd4e4d71d6fdcd22b6d58154f76c"
  },
  {
   "id": "10e42c60f68d",
   "hash": "10e42c60f68db9f7b2b51ff02428b0fe",
   "url": "https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/",
   "title": "People are using AI to make their smart TVs dumb again | TechCrunch",
-  "note": "",
+  "note": "This is great! Want to embed spyware and surveillance in your Smart TV? All that code is also an opportunity to hack the device and remove that stuff.",
   "saved": "2026-10-23T03:41:56Z",
   "tags": [],
   "toread": false,
-  "meta": "7470376eff2a362e33ca2f6b97dc8575"
+  "meta": "697aa82111227f37c4a9c28dc7ae07e2"
  },
  {
   "id": "464ce25070a6",
@@ -7487,5 +7499,16 @@
   "tags": [],
   "toread": false,
   "meta": "cf833531977d01ed5428a09d91876013"
+ },
+ {
+  "id": "cbc3e91a780e",
+  "hash": "cbc3e91a780e08a419d855c718592989",
+  "url": "https://www.caseyaccidental.com/p/how-pm-work-is-changing-in-the-ai",
+  "title": "How PM Work Is Changing in the AI Era - Casey Winters",
+  "note": "",
+  "saved": "2026-10-26T02:21:57Z",
+  "tags": [],
+  "toread": false,
+  "meta": "51f10bb232b7a9ae95c8ec50f54492fb"
  }
 ]
