@@ -14,7 +14,10 @@ After approval, the join reads the public weekly repository's main checkout
 in an isolated runner, uses the existing Python generator and validates its
 output. It stages only data/derived/issues.json, refuses a moved main,
 pushes without force and dispatches the existing full CI/deploy workflow
-(a GITHUB_TOKEN push alone would not run it). An unchanged join does nothing.
+(a GITHUB_TOKEN push alone would not run it). An unchanged join skips CI only
+when the public revision already matches this commit. A repeated delivery
+dispatches CI again if a previous push succeeded but its dispatch was lost;
+an unknown public revision also keeps this recovery path open.
 The step-5 sender reports only after the public deployment, not here.
 
 Jamie adds `github_links_actions_token` to sync-runtime, a fine-grained PAT

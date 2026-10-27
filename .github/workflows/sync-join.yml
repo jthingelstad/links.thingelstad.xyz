@@ -60,11 +60,14 @@ jobs:
         run: |
           set -euo pipefail
           git add data/derived/issues.json
-          if git diff --cached --quiet; then exit 0; fi
           git fetch origin main
           test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'The issue join follows the published archive.'
-          git push origin HEAD:main
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'The issue join follows the published archive.'
+            git push origin HEAD:main
+          fi
+          needed="$(JOIN_COMMIT="$(git rev-parse HEAD)" node tools/join-publication.mjs)"
+          if [[ "$needed" = false ]]; then exit 0; fi
           gh workflow run ci.yml --repo "$GITHUB_REPOSITORY" --ref main
