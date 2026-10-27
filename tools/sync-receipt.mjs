@@ -2,11 +2,12 @@
 export function instant(value) {
   if (
     typeof value !== 'string' ||
-    !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(value)
+    !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?Z$/.test(value)
   )
     return null;
   try {
-    return new Date(value).toISOString().replace('.000Z', 'Z') === value
+    return new Date(value).toISOString().replace(/\.\d{3}Z$/, 'Z') ===
+      value.replace(/\.\d+Z$/, 'Z')
       ? value
       : null;
   } catch {

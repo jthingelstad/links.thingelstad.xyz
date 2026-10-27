@@ -11,7 +11,7 @@ const before = {
 const built = {
   version: 1,
   link: { id: '2026-10-27T01:00:00Z', at: '2026-10-27T01:00:00Z' },
-  issue: { id: '355', at: '2026-10-31T12:00:00Z' },
+  issue: { id: '355', at: '2026-10-31T12:00:00.604000Z' },
   private: 'canary',
 };
 test('only a known public build advancing to the verified built identities reports', () => {
