@@ -71,3 +71,32 @@ rerunning main CI. The publisher validates before any website write, retains the
 existing removal guard and publication ordering, verifies public bytes, and
 writes its success marker last. Source packages are versioned for recovery.
 Use actual already-confirmed missing bookmarks for end-to-end acceptance.
+
+## Acceptance on 2026-10-27
+
+The first approved AWS release was main `e0e970df9fa2222edffbe66dfa8dfd7b133ddd08`
+(GitHub run `40556436240`). CodeBuild verified and published the existing
+16,539 records before captures were enabled. The source then captured all
+50 real feed records; EventBridge started the content builds without a
+GitHub dispatch credential. All 50 captures were acknowledged by the
+published fact, with 16,544 records in the resulting site.
+
+These five records were known HTTP 404s before publication. Each now passes
+exact URL/id checks in its public JSON twin, HTML and Markdown, `/links.json`,
+RSS, `/newest/`, and the downloadable SQLite database:
+
+| Feedbin id | Public link id |
+| --- | --- |
+| 5323715058 | 99acb94678d1 |
+| 5317954508 | df7d9d2802df |
+| 5314473860 | 7832d4d7980d |
+| 5258533599 | 79b6ca584a93 |
+| 5244978813 | 7f3a627640ac |
+
+Sync's current star journey records the exact destination report at
+`2026-10-27T18:19:06Z` (`via: site-deploy`), and both star hops are fresh.
+The source star has no timestamp, so this creates no star-to-arrival lag.
+The global full-mirror stamp remains `2026-10-26T17:31:17Z` and the newest
+joined issue remains 353. The MCP reader retains its existing ten-minute
+revalidation interval; public static arrival and cached MCP refresh are
+separate observations.
