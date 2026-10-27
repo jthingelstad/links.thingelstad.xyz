@@ -48,6 +48,7 @@ from zoneinfo import ZoneInfo
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from linking.hosts import host_of  # noqa: E402
+from linking.bookmarks import merge_bookmarks  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 METHOD = "build_db"
@@ -169,7 +170,7 @@ def dumps(value):
 
 def load(root, enrichment):
     data = root / "data"
-    links = [link for path in files(data / "links", YEAR_FILE) for link in read_json(path)]
+    links = merge_bookmarks([link for path in files(data / "links", YEAR_FILE) for link in read_json(path)], data)
     links.sort(key=lambda link: (link["saved"], link["id"]))
     issues = read_json(data / "derived/issues.json")["issues"]
     return {

@@ -25,6 +25,22 @@ update stamp moved; at most one `posts/all` per five minutes; token from
 `PINBOARD_API_TOKEN`, never printed). `tools/validate_data.py` fails on a private
 bookmark, an unknown field, a bad id, or a duplicate.
 
+## `data/derived/bookmarks.json`
+
+An additive public capture ledger written only by `tools/import_bookmarks.py`
+through `sync-bookmarks.yml` (2026-10-27, Feedbin to Pinboard to Linking Things).
+`docs/BOOKMARKS.md` describes delivery and activation. Each SHA-256 capture key
+maps to `id` (Feedbin), `url`, `link_id`, `observed_at`, `imported` and `record`.
+`record` has exactly the canonical public bookmark fields above. The input
+must explicitly say `shared=yes`; no private record or full raw export enters
+this file. All captures are validated before the ledger is written.
+
+The build and Python tools combine this ledger with the nightly year files.
+Canonical records win every field. An absent capture is visible only if its
+observation is newer than the full snapshot's `fetched_at`; a later full
+snapshot controls deletion and privacy. The bookmark workflow never rewrites
+year files, account-wide timestamps or counts, or the issue join.
+
 ## `data/derived/issues.json`
 
 The join to The Weekly Thing, written by `tools/join_issues.py` from the issue files

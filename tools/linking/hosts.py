@@ -52,7 +52,8 @@ def load_links(links_dir):
     for path in sorted(Path(links_dir).iterdir()):
         if YEAR_FILE_RE.fullmatch(path.name):
             links.extend(jsonio.load(path))
-    return links
+    from .bookmarks import merge_bookmarks
+    return merge_bookmarks(links, Path(links_dir).parent)
 
 
 def index(links):

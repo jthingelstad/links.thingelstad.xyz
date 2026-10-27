@@ -608,3 +608,10 @@ runs the enrichment tools' own offline `--dry-run`s, prints the plan, and writes
 nothing (no log, no lock, no bytecode), reads no secret and makes no request.
 Exit codes: 0 done or nothing to commit, 1 a step failed, 2 the preflight refused,
 64 a bad argument.
+
+## Confirmed public bookmark captures
+
+`node tools/bookmark-inbox.mjs` reads only the dedicated private public-record inbox.
+`python3 tools/import_bookmarks.py --inbox .build/bookmark-inbox` validates it and
+writes only the additive public ledger, never the nightly snapshot or the issue
+join. The workflow and precedence rules are in `docs/BOOKMARKS.md`.

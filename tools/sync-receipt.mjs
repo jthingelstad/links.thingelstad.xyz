@@ -76,10 +76,81 @@ export async function publicFact(base, get = fetch) {
   }
 }
 
+const starKey = (star) => `${star.id}\n${star.url}\n${star.link_id}`;
+const validStar = (star) =>
+  /^\d+$/.test(star?.id) &&
+  /^[a-f0-9]{12}$/.test(star?.link_id) &&
+  /^https?:\/\//.test(star?.url);
+
+// Only a known HTTP 404 establishes absence. A failed fetch is unknown.
+export async function bookmarkAbsences(built, base, get = fetch) {
+  const absent = [];
+  for (const star of built?.stars ?? []) {
+    if (!validStar(star)) continue;
+    try {
+      const response = await get(new URL(`/links/${star.link_id}.json`, base), {
+        cache: 'no-store',
+        signal: AbortSignal.timeout(5000),
+      });
+      if (response.status === 404) absent.push(starKey(star));
+    } catch {
+      /* Unknown is never absence. */
+    }
+  }
+  return absent;
+}
+
+export async function starArrivals(
+  absent,
+  built,
+  served,
+  at,
+  base,
+  get = fetch,
+) {
+  if (built?.version !== 1 || served?.version !== 1 || !instant(at)) return [];
+  const live = new Set((served.stars ?? []).filter(validStar).map(starKey));
+  const missing = new Set(absent);
+  const entries = [];
+  for (const star of built.stars ?? []) {
+    if (
+      !validStar(star) ||
+      !missing.has(starKey(star)) ||
+      !live.has(starKey(star))
+    )
+      continue;
+    try {
+      const response = await get(new URL(`/links/${star.link_id}.json`, base), {
+        cache: 'no-store',
+        signal: AbortSignal.timeout(5000),
+      });
+      if (!response.ok) continue;
+      const record = await response.json();
+      if (record.id !== star.link_id || record.url !== star.url) continue;
+      entries.push({
+        Source: 'links',
+        DetailType: 'received',
+        Time: new Date(at),
+        Detail: JSON.stringify({
+          system: 'links',
+          kind: 'star',
+          id: star.id,
+          at,
+          via: 'site-deploy',
+        }),
+      });
+    } catch {
+      /* Polling remains the backstop. */
+    }
+  }
+  return entries;
+}
+
 export async function reportArrivals({
   bus,
   before,
   built,
+  absent = [],
   base,
   get = fetch,
   put,
@@ -89,14 +160,13 @@ export async function reportArrivals({
   if (!bus) return 0;
   try {
     const served = await publicFact(base, get);
-    const entries = arrivals(
-      before,
-      built,
-      served,
-      now()
-        .toISOString()
-        .replace(/\.\d{3}Z$/, 'Z'),
-    );
+    const at = now()
+      .toISOString()
+      .replace(/\.\d{3}Z$/, 'Z');
+    const entries = [
+      ...arrivals(before, built, served, at),
+      ...(await starArrivals(absent, built, served, at, base, get)),
+    ];
     if (!entries.length) return 0;
     if (!put) {
       const { EventBridgeClient, PutEventsCommand } =

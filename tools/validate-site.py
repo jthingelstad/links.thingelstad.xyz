@@ -89,6 +89,9 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 from zoneinfo import ZoneInfo
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from linking.bookmarks import merge_bookmarks  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 SITE = "https://links.thingelstad.xyz"
@@ -905,11 +908,11 @@ def main():
     pages = sorted(DIST.rglob("*.html"))
     if not pages:
         sys.exit("No pages in dist/. Run npm run build first.")
-    data_links = [
+    data_links = merge_bookmarks([
         link
         for file in sorted((ROOT / "data/links").glob("[0-9][0-9][0-9][0-9].json"))
         for link in json.loads(file.read_text())
-    ]
+    ], ROOT / "data")
     # A saved link about Tinylytics would put its name in the content; then
     # only the fetch checks apply, and this says so.
     content_names_tinylytics = any(

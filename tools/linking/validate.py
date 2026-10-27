@@ -11,6 +11,7 @@ from . import jsonio
 from .check_enrichment import check_enrichment
 from .pinboard import RECORD_FIELDS, STATE_FIELDS
 from .urls import md5_hex
+from .bookmarks import merge_bookmarks
 
 HEX12 = re.compile(r"[0-9a-f]{12}")
 HEX32 = re.compile(r"[0-9a-f]{32}")
@@ -295,10 +296,29 @@ def validate(data_dir, raw_path=None, token=None, media_dir=None):
     media_dir = Path(media_dir) if media_dir is not None else data_dir.parent / "public" / "media"
     report = Report()
     by_id = check_links(report, data_dir / "links")
+    # The account-wide checkpoint continues to describe the full snapshot.
+    check_state(report, data_dir / "sync.json", len(by_id))
+    capture_path = data_dir / "derived" / "bookmarks.json"
+    if capture_path.exists():
+        try:
+            ledger = jsonio.load(capture_path)
+            if ledger["version"] != 1 or not isinstance(ledger["captures"], dict):
+                raise ValueError()
+            for digest, capture in ledger["captures"].items():
+                record = capture["record"]
+                if (not re.fullmatch(r"[a-f0-9]{64}", digest)
+                    or not re.fullmatch(r"\d+", capture["id"])
+                    or not isinstance(capture["imported"], bool)
+                    or not _valid_stamp(capture["observed_at"])
+                    or capture["link_id"] != record["id"] or capture["url"] != record["url"]):
+                    raise ValueError()
+                check_record(report, str(capture_path), record, record["saved"][:4])
+            by_id = {r["id"]: r for r in merge_bookmarks(list(by_id.values()), data_dir)}
+        except (ValueError, KeyError, TypeError):
+            report.error(str(capture_path), "invalid public bookmark captures")
     years = {record["saved"][:4] for record in by_id.values()}
     private_checked = check_private(report, by_id, raw_path) if raw_path else False
     counts = check_issues(report, data_dir / "derived" / "issues.json", by_id)
-    check_state(report, data_dir / "sync.json", len(by_id))
     enrichment = check_enrichment(report, data_dir / "enrichment", by_id, media_dir)
     scan_credentials(report, data_dir, token)
     issues, linked, unmatched = counts if counts else (0, 0, 0)

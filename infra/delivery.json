@@ -210,6 +210,33 @@
                 "Ref": "AWS::NoValue"
               }
             ]
+          },
+          {
+            "PolicyName": "BookmarkInboxRead",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": ["s3:ListBucket"],
+                  "Resource": {
+                    "Fn::Sub": "arn:${AWS::Partition}:s3:::links-storage-inbox-${AWS::AccountId}"
+                  },
+                  "Condition": {
+                    "StringLike": {
+                      "s3:prefix": ["bookmarks/*"]
+                    }
+                  }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": ["s3:GetObject"],
+                  "Resource": {
+                    "Fn::Sub": "arn:${AWS::Partition}:s3:::links-storage-inbox-${AWS::AccountId}/bookmarks/*"
+                  }
+                }
+              ]
+            }
           }
         ]
       }
