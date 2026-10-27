@@ -67,8 +67,9 @@ jobs:
   # Builds from the committed data/ alone: no AWS access, no Pinboard token.
   # The Pinboard sync runs on Jamie's Mac and commits data/ (docs/deployment.md).
   # On main the build turns Tinylytics on (the layout still loads it only on
-  # the production host), and the archive it verifies is what the deploy
-  # publishes.
+  # the production host). The verified artifact binds the tested commit;
+  # main promotes that source package to the AWS publisher, which rebuilds
+  # it with the durable public bookmark inbox.
   build:
     name: Build and browser validation
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
