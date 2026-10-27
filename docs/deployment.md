@@ -52,8 +52,8 @@ unchanged, so a later `apply` never swaps the revision; that is the CI deploy's 
 order is mcp, the distribution's grant on its endpoint, storage, site,
 storage again (the bucket policy names the distribution), publisher, delivery, certificate. The
 certificate stack waits until ACM sees its validation record, so `apply` prints both
-records as soon as they exist and keeps waiting (up to an hour) while Jamie adds them at
-Namecheap. If it is cut off, run it again: finished stacks
+records as soon as they exist and keeps waiting (up to an hour) while they are added to the
+zone stack (see DNS below). If it is cut off, run it again: finished stacks
 report no changes and a stack still in progress is waited for. When ACM shows ISSUED:
 
 ```sh
@@ -66,15 +66,24 @@ push to main deploys. A later `infra:apply` keeps the attached certificate (it r
 site stack's current parameter), and a stack that failed to create
 (`ROLLBACK_COMPLETE`) has to be deleted on Jamie's go before it is created again.
 
-## DNS (Namecheap, hosts relative to `thingelstad.xyz`)
+## DNS
+
+`thingelstad.xyz` is a Route 53 hosted zone, and every record in it is code in the
+`dns-thingelstad-xyz` stack: `config/dns-thingelstad-xyz-stack.yaml` in
+`projects-sysadmin`. DNS moved there from Namecheap BasicDNS on 2026-10-27; Namecheap is
+still the registrar but no longer serves the zone. A record changes by a pull request to
+that stack and a deploy, never in a console and never at Namecheap. The site's two
+records are there:
 
 | Type  | Host                                                        | Target                                           |
 | ----- | ----------------------------------------------------------- | ------------------------------------------------ |
 | CNAME | `links`                                                     | the CloudFront domain in `infra/deployment.json` |
 | CNAME | the ACM validation host (`_<hash>.links`, printed by apply) | the ACM validation value (keep it for renewal)   |
 
-Both records are printed by the bootstrap script. DNS changes are made by Jamie. There is
-no Route 53 zone.
+The bootstrap script still prints them formatted for Namecheap; put them in the zone
+stack instead. The certificate stack can own its validation record later
+(`DomainValidationOptions` with the zone's `HostedZoneId`); until then it stays in the
+zone stack.
 
 ## Every push to main
 
