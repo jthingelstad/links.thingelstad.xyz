@@ -145,6 +145,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           DEPLOY_ALLOW_REMOVALS: ${{ inputs.allow_removals }}
+          SYNC_RECEIVED_BUS: ${{ vars.SYNC_RECEIVED_BUS }}
       # The MCP server (src/mcp/, tools/deploy-mcp.mjs), packaged with the
       # Pagefind client of the build just published. A bundle that is already
       # live (most pushes: content changes leave it alone) ends the step.
