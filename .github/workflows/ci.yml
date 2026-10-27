@@ -32,6 +32,7 @@ jobs:
       - run: npm run format:check
       - run: npm run check
       - run: npm test
+      - run: npm run test:bookmark-import
       - run: npm run sites:check
       - run: pipx run --spec ruff==0.17.0 ruff check tools tests
       - run: npm audit --audit-level=high

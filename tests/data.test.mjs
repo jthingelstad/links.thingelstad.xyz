@@ -11,19 +11,9 @@ import { test } from 'node:test';
 import * as data from '../src/lib/data.ts';
 import * as day from '../src/lib/day.ts';
 import { normalizeUrl } from '../src/lib/normalize.ts';
+import { publicRecords } from './public-records.mjs';
 
-// The independent Python reader must agree with the TypeScript build,
-// including the additive inbox and its full-snapshot precedence.
-const effective = spawnSync(
-  'python3',
-  [
-    '-c',
-    "import sys,json; sys.path.insert(0,'tools'); from linking.hosts import load_links; print(json.dumps(load_links('data/links')))",
-  ],
-  { encoding: 'utf8', maxBuffer: 32_000_000 },
-);
-assert.equal(effective.status, 0, effective.stderr);
-const raw = JSON.parse(effective.stdout);
+const raw = publicRecords();
 const rawIssues = JSON.parse(
   readFileSync('data/derived/issues.json', 'utf8'),
 ).issues;
