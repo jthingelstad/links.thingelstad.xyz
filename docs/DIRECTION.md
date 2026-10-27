@@ -658,7 +658,7 @@ Pagefind index. A small, stateless, read-only server with no authentication at
 `infra/mcp.json`). It was planned behind its own hostname, the pattern of the
 thingelstad.com and Elixir servers; it is a path of the site's distribution instead,
 which reaches the function through origin access control (the endpoint answers only
-requests CloudFront signs), so there is no new certificate, no Namecheap record and no
+requests CloudFront signs), so there is no new certificate, no new DNS record and no
 second edge to watch. It reads the three files the site publishes (`links.json`,
 `issues.json`, `hosts.json`) over HTTPS and checks their ETags every ten minutes, so it
 is never ahead of the site and never reads `data/` or a bucket. The deploy workflow
@@ -736,8 +736,9 @@ the mirror is kept lossless and Pinboard-shaped, not merely sufficient for pages
   storage, site, delivery, and mcp for the MCP server at `/mcp`), S3 and CloudFront,
   directory-index function, 5xx alarm on the family topic, GitHub Actions deploying
   `main` through OIDC. `npm run infra:plan` change sets with the `cloud-engineer`
-  identity, applied on Jamie's go. Namecheap records (the `links` CNAME and the ACM
-  validation CNAME) are Jamie's step; the handoff formats them for Namecheap.
+  identity, applied on Jamie's go. The DNS records (the `links` CNAME and the ACM
+  validation CNAME) were Jamie's Namecheap step at launch; since 2026-10-27 they are
+  code in the `thingelstad.xyz` zone stack in `projects-sysadmin`.
 - **Repository** `jthingelstad/links.thingelstad.xyz`, public like its siblings.
   `pinboard/`, `archive/` and `.env*` ignored; the Pinboard token lives only in `.env`
   on the Mac, and CI never holds it.

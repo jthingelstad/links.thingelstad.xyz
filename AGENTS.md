@@ -142,4 +142,6 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   `cloud-engineer` identity (`npm run infra:plan` to review, `npm run infra:apply` on
   Jamie's go, `npm run infra:attach` once for the certificate), never through the
   deployment role. `apply` plans each stack afresh and executes it at once, so read what
-  it prints too. DNS changes (Namecheap) are made by Jamie.
+  it prints too. DNS records are code in the `thingelstad.xyz` Route 53 zone stack in
+  `projects-sysadmin` (`config/dns-thingelstad-xyz-stack.yaml`; moved from Namecheap
+  2026-10-27), changed by pull request and deploy there, never in a console.
