@@ -1,13 +1,16 @@
-# Join subscriber (prepared, off)
+# Join subscriber (off)
 
-This PR remains unmerged and undeployed. The workflow defaults to a dry run
-with contents-read permission, no checkout, source read, commit or deploy.
+Merged 2026-10-27 and inert. The workflow defaults to a dry run with
+contents-read permission, no checkout, source read, commit or deploy.
 No live rehearsal ran. It does not change the nightly job or its checkout.
 
-Real work has two independent gates: the sync stack's disabled rule and
-explicit `ApproveLinksJoinRepair`, plus this repository's Actions variable
-`SYNC_JOIN_APPROVED=true`. Jamie must approve repairing the WT354 example
-before either gate opens. Until then it stays late and no generated data is
+On 2026-10-27 the sync stack folded its per-destination parameters into one,
+`ReceiverRoles` (deploy override `SYNC_RECEIVER_ROLES`, a comma-separated
+list of role names), and removed its subscriber scaffolding, the disabled
+rule and its approval parameter among it. This workflow stays, but nothing
+on the bus starts it now. Real work also needs this repository's Actions
+variable `SYNC_JOIN_APPROVED=true`, set only after Jamie approves repairing
+the WT354 example. Until then it stays late and no generated data is
 changed. Do not dispatch the real workflow as a test.
 
 After approval, the join reads the public weekly repository's main checkout

@@ -18,7 +18,7 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   hand. `src/lib/data.ts` is the only module that reads `data/links` and
   `data/derived`, and everything derived (hosts, years, weeks, appearances, mentions,
   saved twice, kinds) is derived there, in memory.
-- **Bus join, prepared off.** `sync-join.yml` defaults to a credential-free rehearsal. Real work also requires `SYNC_JOIN_APPROVED=true`, Jamie's explicit permission to repair WT354; the sync rule has a separate approval gate. The nightly checkout and schedule stay as they are. Never run the real join to test this proposal.
+- **Bus join, off.** `sync-join.yml` defaults to a credential-free rehearsal. Real work also requires `SYNC_JOIN_APPROVED=true`, Jamie's explicit permission to repair WT354. The sync stack removed its subscriber scaffolding on 2026-10-27 (its roles are one `ReceiverRoles` list now), so nothing on the bus starts the workflow. The nightly checkout and schedule stay as they are. Never run the real join to test this proposal.
 - **Enrichment.** `src/lib/enrichment.ts` is the only module that reads
   `data/enrichment` (`LINKS_ENRICHMENT` points it at `tests/fixtures/enrichment`
   for tests and screenshots). It keeps facts and drops every liveness field (dns,

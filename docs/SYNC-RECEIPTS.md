@@ -1,10 +1,9 @@
 # Publishing bus receipts
 
-This proposal stays unmerged and undeployed for Jamie's review. The Actions
-variable `SYNC_RECEIVED_BUS` is empty by default. Set it to
-`thingelstad-publishing` only after the reviewed sync stack grant allows
-`links` / `received` or `ping` on that bus for the existing deployment role
-`links-delivery-DeploymentRole-38md8sad6OG8`.
+Merged 2026-10-27; inert until the sync stack lists this repository's
+deploy role (`links-delivery-DeploymentRole-38md8sad6OG8`) in
+`ReceiverRoles` and the Actions variable `SYNC_RECEIVED_BUS` is set to
+`thingelstad-publishing`. It is empty by default.
 
 `/sync-fact.json` is an additive, scriptless build output containing only
 the imported change stamp and newest joined issue id/time. It omits counts,
