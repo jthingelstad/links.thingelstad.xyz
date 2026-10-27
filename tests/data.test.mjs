@@ -6,15 +6,14 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { readdirSync, readFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import * as data from '../src/lib/data.ts';
 import * as day from '../src/lib/day.ts';
 import { normalizeUrl } from '../src/lib/normalize.ts';
+import { publicRecords } from './public-records.mjs';
 
-const raw = readdirSync('data/links')
-  .filter((name) => /^\d{4}\.json$/.test(name))
-  .flatMap((name) => JSON.parse(readFileSync(`data/links/${name}`, 'utf8')));
+const raw = publicRecords();
 const rawIssues = JSON.parse(
   readFileSync('data/derived/issues.json', 'utf8'),
 ).issues;

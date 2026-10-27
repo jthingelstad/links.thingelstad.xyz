@@ -30,7 +30,11 @@ import {
   waitUntilInvalidationCompleted,
 } from '@aws-sdk/client-cloudfront';
 import { GetCallerIdentityCommand, STSClient } from '@aws-sdk/client-sts';
-import { publicFact, reportArrivals } from './sync-receipt.mjs';
+import {
+  bookmarkAbsences,
+  publicFact,
+  reportArrivals,
+} from './sync-receipt.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {
@@ -202,6 +206,12 @@ const receiptBus = process.env.SYNC_RECEIVED_BUS || '';
 const beforeReceipt = receiptBus
   ? await publicFact(config.productionUrl)
   : null;
+const builtReceipt = receiptBus
+  ? JSON.parse(await fs.readFile(path.join(DIST, 'sync-fact.json'), 'utf8'))
+  : null;
+const bookmarkAbsent = receiptBus
+  ? await bookmarkAbsences(builtReceipt, config.productionUrl)
+  : [];
 
 async function put(key) {
   const Body = await fs.readFile(path.join(DIST, key));
@@ -313,6 +323,7 @@ if (receiptBus) {
       bus: receiptBus,
       before: beforeReceipt,
       built,
+      absent: bookmarkAbsent,
       base: config.productionUrl,
     });
   } catch {

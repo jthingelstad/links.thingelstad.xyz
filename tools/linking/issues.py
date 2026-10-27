@@ -41,7 +41,8 @@ def load_links(links_dir):
     for path in sorted(Path(links_dir).glob("*.json")):
         if re.fullmatch(r"\d{4}\.json", path.name):
             records.extend(jsonio.load(path))
-    return records
+    from .bookmarks import merge_bookmarks
+    return merge_bookmarks(records, Path(links_dir).parent)
 
 
 class LinkIndex:

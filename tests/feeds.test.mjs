@@ -2,16 +2,15 @@
 // (src/lib/feeds.ts, src/lib/dataset.ts, src/lib/data.ts), checked on the real
 // data/. The built files themselves are checked by npm run validate:site.
 import assert from 'node:assert/strict';
-import { readdirSync, readFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import * as data from '../src/lib/data.ts';
 import * as feeds from '../src/lib/feeds.ts';
 import * as dataset from '../src/lib/dataset.ts';
 import { kindOf } from '../src/lib/kinds.ts';
+import { publicRecords } from './public-records.mjs';
 
-const raw = readdirSync('data/links')
-  .filter((name) => /^\d{4}\.json$/.test(name))
-  .flatMap((name) => JSON.parse(readFileSync(`data/links/${name}`, 'utf8')));
+const raw = publicRecords();
 
 test('feed dates are Central with the real offset', () => {
   // Daylight time, then standard time.

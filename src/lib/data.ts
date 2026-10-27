@@ -100,6 +100,25 @@ export const importedChange: string | null = (() => {
   }
 })();
 
+interface BookmarkCapture {
+  id: string;
+  url: string;
+  link_id: string;
+  observed_at: string;
+  imported: boolean;
+  record: MirrorLink;
+}
+const bookmarkLedger: Record<string, BookmarkCapture> = (() => {
+  try {
+    return read<{ version: number; captures: Record<string, BookmarkCapture> }>(
+      'data/derived/bookmarks.json',
+    ).captures;
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') return {};
+    throw error;
+  }
+})();
+
 // Dates, in Central.
 const zone = 'America/Chicago';
 const partsOf = new Intl.DateTimeFormat('en-US', {
@@ -206,10 +225,24 @@ export function weekOf(day: string) {
 
 const byText = (a: string, b: string) => (a < b ? -1 : a > b ? 1 : 0);
 
-const mirror: MirrorLink[] = readdirSync(join(root, 'data/links'))
+const snapshot: MirrorLink[] = readdirSync(join(root, 'data/links'))
   .filter((name) => /^\d{4}\.json$/.test(name))
   .sort()
   .flatMap((name) => read<MirrorLink[]>(`data/links/${name}`));
+const mirrored = new Map(snapshot.map((record) => [record.id, record]));
+const snapshotAt =
+  read<{ fetched_at: string | null }>('data/sync.json').fetched_at ?? '';
+for (const capture of Object.values(bookmarkLedger)) {
+  if (
+    capture.imported &&
+    capture.observed_at > snapshotAt &&
+    !mirrored.has(capture.link_id)
+  )
+    mirrored.set(capture.link_id, capture.record);
+}
+const mirror = [...mirrored.values()].sort(
+  (a, b) => a.saved.localeCompare(b.saved) || a.id.localeCompare(b.id),
+);
 
 // A saved time on the hour exactly, or one that many links share (67 were
 // stamped 2010-12-05 12:21:18 UTC by an import), is a made-up clock: those
@@ -254,6 +287,15 @@ export const links: Link[] = mirror
   .sort((a, b) => byText(a.saved, b.saved) || byText(a.id, b.id));
 export const newest = [...links].reverse();
 export const linkById = new Map(links.map((link) => [link.id, link]));
+// A later full sync may remove or privatise an imported bookmark. Such a
+// record must disappear from the public arrival fact too.
+export const bookmarkCaptureIds = Object.keys(bookmarkLedger);
+export const bookmarkStars = Object.values(bookmarkLedger)
+  .filter(
+    (capture) =>
+      capture.imported && linkById.get(capture.link_id)?.url === capture.url,
+  )
+  .map(({ id, url, link_id }) => ({ id, url, link_id }));
 
 export const issues: Issue[] = read<{ issues: Issue[] }>(
   'data/derived/issues.json',

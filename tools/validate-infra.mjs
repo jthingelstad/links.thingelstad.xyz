@@ -42,10 +42,35 @@ export function validate({
     Object.entries(storage.Resources)
       .filter(([, r]) => r.Type === 'AWS::S3::Bucket')
       .map(([name]) => name),
-    ['SiteBucket'],
-    'storage has the web bucket only',
+    ['SiteBucket', 'BookmarkInbox'],
+    'storage has the public origin and the separate private bookmark inbox',
   );
   const bucket = storage.Resources.SiteBucket;
+  const inbox = storage.Resources.BookmarkInbox;
+  assert.equal(inbox.DeletionPolicy, 'Retain');
+  assert.equal(inbox.UpdateReplacePolicy, 'Retain');
+  assert.equal(
+    inbox.Properties.BucketName['Fn::Sub'],
+    '${AWS::StackName}-inbox-${AWS::AccountId}',
+  );
+  for (const property of [
+    'PublicAccessBlockConfiguration',
+    'BucketEncryption',
+    'OwnershipControls',
+    'VersioningConfiguration',
+  ])
+    assert.deepEqual(inbox.Properties[property], bucket.Properties[property]);
+  const inboxPolicy =
+    storage.Resources.BookmarkInboxPolicy.Properties.PolicyDocument.Statement;
+  assert.equal(
+    inboxPolicy.length,
+    1,
+    'the inbox has no CloudFront or public grant',
+  );
+  assert.equal(inboxPolicy[0].Effect, 'Deny');
+  assert.deepEqual(inboxPolicy[0].Condition, {
+    Bool: { 'aws:SecureTransport': 'false' },
+  });
   const p = bucket.Properties;
   assert.equal(bucket.DeletionPolicy, 'Retain');
   assert.equal(bucket.UpdateReplacePolicy, 'Retain');
@@ -215,7 +240,23 @@ export function validate({
   ]);
   // The site's policy, and the MCP deploy's (validateMcp) when the mcp stack
   // exists.
-  assert.equal(role.Policies.length, 2);
+  assert.equal(role.Policies.length, 3);
+  const inboxRead = role.Policies[2];
+  assert.equal(inboxRead.PolicyName, 'BookmarkInboxRead');
+  const [listInbox, readInbox] = inboxRead.PolicyDocument.Statement;
+  assert.deepEqual(listInbox.Action, ['s3:ListBucket']);
+  assert.deepEqual(listInbox.Condition, {
+    StringLike: { 's3:prefix': ['bookmarks/*'] },
+  });
+  assert.equal(
+    listInbox.Resource['Fn::Sub'],
+    'arn:${AWS::Partition}:s3:::links-storage-inbox-${AWS::AccountId}',
+  );
+  assert.deepEqual(readInbox.Action, ['s3:GetObject']);
+  assert.equal(
+    readInbox.Resource['Fn::Sub'],
+    'arn:${AWS::Partition}:s3:::links-storage-inbox-${AWS::AccountId}/bookmarks/*',
+  );
   assert.equal(role.Policies[0].PolicyName, 'SiteDelivery');
   assert.ok(!role.ManagedPolicyArns, 'no managed policies');
   for (const s of role.Policies[0].PolicyDocument.Statement) {

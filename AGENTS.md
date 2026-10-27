@@ -14,10 +14,11 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   production builds only (`PUBLIC_TINYLYTICS_ENABLED=true`, set by the deploy
   workflow; `design/tinylytics.md`). Never send a hit or a kudos from QA.
 - **Data.** `data/` is written only by the Python tools (`tools/sync.py`,
-  `tools/join_issues.py`, `tools/enrich_*.py`; `tools/README.md`). Never edit it by
+  `tools/join_issues.py`, `tools/import_bookmarks.py`, `tools/enrich_*.py`; `tools/README.md`). Never edit it by
   hand. `src/lib/data.ts` is the only module that reads `data/links` and
   `data/derived`, and everything derived (hosts, years, weeks, appearances, mentions,
   saved twice, kinds) is derived there, in memory.
+- **Public bookmark fast path.** `docs/BOOKMARKS.md` and hop 23 cover Feedbin-confirmed public captures, a private S3 inbox, and `sync-bookmarks.yml`. Only that workflow writes `data/derived/bookmarks.json`; the Mac retains the canonical year files and full snapshot. Canonical records and newer full snapshots take precedence over captures. This path never runs enrichment or the issue join.
 - **Bus join, off.** `sync-join.yml` defaults to a credential-free rehearsal. Real work also requires `SYNC_JOIN_APPROVED=true`, Jamie's explicit permission to repair WT354. The sync stack removed its subscriber scaffolding on 2026-10-27 (its roles are one `ReceiverRoles` list now), so nothing on the bus starts the workflow. The nightly checkout and schedule stay as they are. Never run the real join to test this proposal.
 - **Enrichment.** `src/lib/enrichment.ts` is the only module that reads
   `data/enrichment` (`LINKS_ENRICHMENT` points it at `tests/fixtures/enrichment`
@@ -40,7 +41,7 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
 - **The database.** `npm run db` (`tools/build_db.py`, stdlib only) writes
   `public/links.db` from the JSON; `npm run build` runs it first. It is gitignored,
   deterministic, and facts only like the pages. The site never reads it.
-- **Arrival receipts.** `/sync-fact.json` carries the imported change stamp and newest joined issue id/time only. `tools/sync-receipt.mjs` reports after a verified public deploy, never after a local join alone. Empty `SYNC_RECEIVED_BUS` is off. Unknown baselines and unchanged facts are not arrivals; the WT354 join remains Jamie's decision.
+- **Arrival receipts.** `/sync-fact.json` carries the imported change stamp, newest joined issue id/time, and public Feedbin star/capture identities. Exact star arrivals also require a public JSON twin readback after a known 404. `tools/sync-receipt.mjs` reports after a verified public deploy, never after a local join alone. Empty `SYNC_RECEIVED_BUS` is off. Unknown baselines and unchanged facts are not arrivals; the WT354 join remains Jamie's decision.
 - **The id** is the first 12 hex characters of md5 of the URL exactly as saved, and it
   comes from the data. Never recompute an id from a normalised URL. Normalisation is
   for joins only; `src/lib/normalize.ts` must agree with `tools/linking/urls.py`, and

@@ -1,5 +1,10 @@
 import type { APIRoute } from 'astro';
-import { importedChange, issues } from '../lib/data';
+import {
+  bookmarkCaptureIds,
+  bookmarkStars,
+  importedChange,
+  issues,
+} from '../lib/data';
 
 export const GET: APIRoute = () => {
   const latest = issues
@@ -10,6 +15,8 @@ export const GET: APIRoute = () => {
       version: 1,
       link: importedChange ? { id: importedChange, at: importedChange } : null,
       issue: latest ? { id: String(latest.number), at: latest.date } : null,
+      stars: bookmarkStars,
+      bookmark_captures: bookmarkCaptureIds,
     }) + '\n',
     { headers: { 'content-type': 'application/json; charset=utf-8' } },
   );
