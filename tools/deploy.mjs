@@ -30,6 +30,7 @@ import {
   waitUntilInvalidationCompleted,
 } from '@aws-sdk/client-cloudfront';
 import { GetCallerIdentityCommand, STSClient } from '@aws-sdk/client-sts';
+import { publicFact, reportArrivals } from './sync-receipt.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {
@@ -197,6 +198,11 @@ if (dryRun) {
 }
 if (refusal) throw new Error(refusal);
 
+const receiptBus = process.env.SYNC_RECEIVED_BUS || '';
+const beforeReceipt = receiptBus
+  ? await publicFact(config.productionUrl)
+  : null;
+
 async function put(key) {
   const Body = await fs.readFile(path.join(DIST, key));
   const response = await s3.send(
@@ -298,3 +304,20 @@ console.log(
     url: config.deliveryUrl,
   }),
 );
+if (receiptBus) {
+  try {
+    const built = JSON.parse(
+      await fs.readFile(path.join(DIST, 'sync-fact.json'), 'utf8'),
+    );
+    await reportArrivals({
+      bus: receiptBus,
+      before: beforeReceipt,
+      built,
+      base: config.productionUrl,
+    });
+  } catch {
+    console.warn(
+      'Sync receipt evidence was unavailable; polling remains the backstop.',
+    );
+  }
+}

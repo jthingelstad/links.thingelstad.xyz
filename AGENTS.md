@@ -39,6 +39,7 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
 - **The database.** `npm run db` (`tools/build_db.py`, stdlib only) writes
   `public/links.db` from the JSON; `npm run build` runs it first. It is gitignored,
   deterministic, and facts only like the pages. The site never reads it.
+- **Arrival receipts.** `/sync-fact.json` carries the imported change stamp and newest joined issue id/time only. `tools/sync-receipt.mjs` reports after a verified public deploy, never after a local join alone. Empty `SYNC_RECEIVED_BUS` is off. Unknown baselines and unchanged facts are not arrivals; the WT354 join remains Jamie's decision.
 - **The id** is the first 12 hex characters of md5 of the URL exactly as saved, and it
   comes from the data. Never recompute an id from a normalised URL. Normalisation is
   for joins only; `src/lib/normalize.ts` must agree with `tools/linking/urls.py`, and

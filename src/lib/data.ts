@@ -86,6 +86,20 @@ const root = process.env.LINKS_ROOT || process.cwd();
 const read = <T>(path: string): T =>
   JSON.parse(readFileSync(join(root, path), 'utf8')) as T;
 
+// Public import checkpoint only; never expose the private bookmark count.
+export const importedChange: string | null = (() => {
+  try {
+    const stamp = read<{ updated?: unknown }>('data/sync.json').updated;
+    return typeof stamp === 'string' &&
+      /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(stamp) &&
+      new Date(stamp).toISOString().replace('.000Z', 'Z') === stamp
+      ? stamp
+      : null;
+  } catch {
+    return null;
+  }
+})();
+
 // Dates, in Central.
 const zone = 'America/Chicago';
 const partsOf = new Intl.DateTimeFormat('en-US', {
