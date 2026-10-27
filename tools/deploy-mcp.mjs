@@ -1,7 +1,6 @@
 // Put the packaged MCP server (.build/mcp/, npm run mcp:package) live.
 //
-//   node tools/deploy-mcp.mjs            main in GitHub Actions only, with the
-//                                        OIDC deployment role (infra/delivery.json)
+//   node tools/deploy-mcp.mjs            the approved AWS publisher only
 //   node tools/deploy-mcp.mjs --dry-run  read the stack and print the plan;
 //                                        writes nothing (any identity in the account)
 //
@@ -36,6 +35,7 @@ import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3';
 import { GetCallerIdentityCommand, STSClient } from '@aws-sdk/client-sts';
 import { createHash } from 'node:crypto';
 import fs from 'node:fs/promises';
+import { publicationContext } from './publication-context.mjs';
 import path from 'node:path';
 import {
   KEY,
@@ -45,7 +45,6 @@ import {
 } from './mcp-plan.mjs';
 import { OUT } from './package-mcp.mjs';
 
-const REPOSITORY = 'jthingelstad/links.thingelstad.xyz';
 const dryRun = process.argv.includes('--dry-run');
 const config = JSON.parse(await fs.readFile('infra/deployment.json', 'utf8'));
 const StackName = config.stacks.mcp;
@@ -54,13 +53,6 @@ const Bucket = config.mcpCodeBucket;
 await main();
 
 async function main() {
-  if (
-    !dryRun &&
-    (process.env.GITHUB_REPOSITORY !== REPOSITORY ||
-      process.env.GITHUB_REF !== 'refs/heads/main' ||
-      !/^[a-f0-9]{40}$/.test(process.env.GITHUB_SHA || ''))
-  )
-    throw new Error('Only this repository main branch can deploy');
   if (!StackName || !Bucket || !config.deliveryUrl)
     throw new Error('infra/deployment.json names no MCP stack or code bucket');
 
@@ -90,13 +82,10 @@ async function main() {
   );
   if (identity.Account !== config.account)
     throw new Error(`Unexpected AWS account ${identity.Account}`);
-  if (
-    !dryRun &&
-    !identity.Arn.includes(
-      `:assumed-role/${config.deploymentRoleArn.split('/').at(-1)}/`,
-    )
-  )
-    throw new Error('Unexpected deployment identity');
+  const publication = dryRun
+    ? null
+    : await publicationContext(config, identity);
+  const assertCurrentHead = async () => publication?.assertCurrent();
 
   const cfn = new CloudFormationClient(settings);
   let stack;
@@ -153,7 +142,7 @@ async function main() {
   if (put.ChecksumSHA256 && put.ChecksumSHA256 !== manifest.checksumSha256)
     throw new Error(`S3 reports another SHA-256 for ${Key}`);
 
-  const ChangeSetName = `deploy-${process.env.GITHUB_RUN_ID}-${process.env.GITHUB_RUN_ATTEMPT}`;
+  const ChangeSetName = `deploy-${publication.run}`;
   await cfn.send(
     new CreateChangeSetCommand({
       StackName,
@@ -260,22 +249,4 @@ async function main() {
       serverVersion: answer.result.serverInfo.version,
     }),
   );
-}
-
-async function assertCurrentHead() {
-  const response = await fetch(
-    `https://api.github.com/repos/${REPOSITORY}/git/ref/heads/main`,
-    {
-      headers: {
-        authorization: `Bearer ${process.env.GH_TOKEN}`,
-        accept: 'application/vnd.github+json',
-      },
-      signal: AbortSignal.timeout(15000),
-    },
-  );
-  if (
-    !response.ok ||
-    (await response.json()).object.sha !== process.env.GITHUB_SHA
-  )
-    throw new Error('Refusing to deploy a superseded main revision');
 }

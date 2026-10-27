@@ -1,0 +1,445 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "links.thingelstad.xyz single AWS publisher for approved releases and public bookmark events",
+  "Parameters": {
+    "SiteBucket": {
+      "Type": "String",
+      "AllowedPattern": "[a-zA-Z0-9.-]+"
+    },
+    "DistributionId": {
+      "Type": "String",
+      "AllowedPattern": "[a-zA-Z0-9.-]+"
+    },
+    "McpCodeBucket": {
+      "Type": "String",
+      "Default": "",
+      "AllowedPattern": "^$|^[a-z0-9.-]+$",
+      "Description": "The links-mcp stack's CodeBucket. Empty gives the role no MCP actions."
+    },
+    "McpExecutionRoleArn": {
+      "Type": "String",
+      "Default": "",
+      "AllowedPattern": "^$|^arn:aws:iam::[0-9]{12}:role/[A-Za-z0-9+=,.@_-]+$",
+      "Description": "The links-mcp stack's ExecutionRoleArn, the one role the deploy may pass"
+    },
+    "InboxBucket": {
+      "Type": "String"
+    },
+    "PublishingBus": {
+      "Type": "String",
+      "Default": "thingelstad-publishing"
+    }
+  },
+  "Conditions": {
+    "HasMcp": {
+      "Fn::And": [
+        {
+          "Fn::Not": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "McpCodeBucket"
+                },
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Not": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "McpExecutionRoleArn"
+                },
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "Resources": {
+    "Logs": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Sub": "/aws/codebuild/${AWS::StackName}"
+        },
+        "RetentionInDays": 30
+      }
+    },
+    "PublisherRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "codebuild.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole",
+              "Condition": {
+                "StringEquals": {
+                  "aws:SourceAccount": {
+                    "Ref": "AWS::AccountId"
+                  }
+                },
+                "ArnEquals": {
+                  "aws:SourceArn": {
+                    "Fn::Sub": "arn:${AWS::Partition}:codebuild:${AWS::Region}:${AWS::AccountId}:project/${AWS::StackName}"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "SiteDelivery",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": ["s3:ListBucket", "s3:GetBucketLocation"],
+                  "Resource": {
+                    "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}"
+                  }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": ["s3:GetObject", "s3:PutObject", "s3:DeleteObject"],
+                  "Resource": {
+                    "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}/*"
+                  }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "cloudfront:CreateInvalidation",
+                    "cloudfront:GetInvalidation"
+                  ],
+                  "Resource": {
+                    "Fn::Sub": "arn:${AWS::Partition}:cloudfront::${AWS::AccountId}:distribution/${DistributionId}"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Fn::If": [
+              "HasMcp",
+              {
+                "PolicyName": "McpDelivery",
+                "PolicyDocument": {
+                  "Version": "2012-10-17",
+                  "Statement": [
+                    {
+                      "Sid": "UploadThePackagedServer",
+                      "Effect": "Allow",
+                      "Action": [
+                        "s3:PutObject",
+                        "s3:GetObject",
+                        "s3:GetObjectVersion"
+                      ],
+                      "Resource": {
+                        "Fn::Sub": "arn:${AWS::Partition}:s3:::${McpCodeBucket}/mcp/*"
+                      }
+                    },
+                    {
+                      "Sid": "ChangeTheMcpStackOnly",
+                      "Effect": "Allow",
+                      "Action": [
+                        "cloudformation:DescribeStacks",
+                        "cloudformation:DescribeStackEvents",
+                        "cloudformation:CreateChangeSet",
+                        "cloudformation:DescribeChangeSet",
+                        "cloudformation:ExecuteChangeSet",
+                        "cloudformation:DeleteChangeSet"
+                      ],
+                      "Resource": {
+                        "Fn::Sub": "arn:${AWS::Partition}:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/links-mcp/*"
+                      }
+                    },
+                    {
+                      "Sid": "CreateARevision",
+                      "Effect": "Allow",
+                      "Action": [
+                        "lambda:CreateWebFunctionRevision",
+                        "lambda:GetWebFunction"
+                      ],
+                      "Resource": {
+                        "Fn::Sub": "arn:${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:web-function/links-mcp"
+                      }
+                    },
+                    {
+                      "Sid": "ReadRevisions",
+                      "Effect": "Allow",
+                      "Action": ["lambda:GetWebFunctionRevision"],
+                      "Resource": {
+                        "Fn::Sub": "arn:${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:web-function/links-mcp/revision/*"
+                      }
+                    },
+                    {
+                      "Sid": "PointTheEndpointAtIt",
+                      "Effect": "Allow",
+                      "Action": [
+                        "lambda:GetWebFunctionEndpoint",
+                        "lambda:UpdateWebFunctionEndpoint"
+                      ],
+                      "Resource": {
+                        "Fn::Sub": "arn:${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:web-function/links-mcp/endpoint/*"
+                      }
+                    },
+                    {
+                      "Sid": "PassOnlyTheMcpExecutionRole",
+                      "Effect": "Allow",
+                      "Action": ["iam:PassRole"],
+                      "Resource": {
+                        "Ref": "McpExecutionRoleArn"
+                      },
+                      "Condition": {
+                        "StringEquals": {
+                          "iam:PassedToService": "lambda.amazonaws.com"
+                        }
+                      }
+                    },
+                    {
+                      "Sid": "ReadTheMcpExecutionRole",
+                      "Effect": "Allow",
+                      "Action": ["iam:GetRole"],
+                      "Resource": {
+                        "Ref": "McpExecutionRoleArn"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "Ref": "AWS::NoValue"
+              }
+            ]
+          },
+          {
+            "PolicyName": "BookmarkInboxRead",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": ["s3:ListBucket"],
+                  "Resource": {
+                    "Fn::Sub": "arn:${AWS::Partition}:s3:::links-storage-inbox-${AWS::AccountId}"
+                  }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": ["s3:GetObject"],
+                  "Resource": {
+                    "Fn::Sub": "arn:${AWS::Partition}:s3:::links-storage-inbox-${AWS::AccountId}/bookmarks/*"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "PolicyName": "ApprovedPackage",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": ["s3:GetObject", "s3:GetObjectVersion"],
+                  "Resource": {
+                    "Fn::Sub": "arn:${AWS::Partition}:s3:::${InboxBucket}/releases/*"
+                  }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": ["s3:GetBucketLocation", "s3:GetBucketAcl"],
+                  "Resource": {
+                    "Fn::Sub": "arn:${AWS::Partition}:s3:::${InboxBucket}"
+                  }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": ["s3:GetObject", "s3:PutObject"],
+                  "Resource": [
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:s3:::${InboxBucket}/publisher/success.json"
+                    },
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:s3:::${InboxBucket}/cache/*"
+                    }
+                  ]
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": ["logs:CreateLogStream", "logs:PutLogEvents"],
+                  "Resource": {
+                    "Fn::GetAtt": ["Logs", "Arn"]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "cfn-lint": {
+          "config": {
+            "ignore_checks": ["W3037"]
+          }
+        }
+      }
+    },
+    "Project": {
+      "Type": "AWS::CodeBuild::Project",
+      "Properties": {
+        "Name": {
+          "Ref": "AWS::StackName"
+        },
+        "Description": "Publish Linking Things from approved source and durable public bookmark captures",
+        "ServiceRole": {
+          "Fn::GetAtt": ["PublisherRole", "Arn"]
+        },
+        "ConcurrentBuildLimit": 1,
+        "TimeoutInMinutes": 30,
+        "QueuedTimeoutInMinutes": 60,
+        "Source": {
+          "Type": "S3",
+          "Location": {
+            "Fn::Sub": "${InboxBucket}/releases/current.zip"
+          },
+          "BuildSpec": "tools/publisher-buildspec.yml"
+        },
+        "Artifacts": {
+          "Type": "NO_ARTIFACTS"
+        },
+        "Environment": {
+          "Type": "LINUX_CONTAINER",
+          "ComputeType": "BUILD_GENERAL1_SMALL",
+          "Image": "aws/codebuild/standard:8.0",
+          "PrivilegedMode": false,
+          "EnvironmentVariables": [
+            {
+              "Name": "SYNC_RECEIVED_BUS",
+              "Value": {
+                "Ref": "PublishingBus"
+              },
+              "Type": "PLAINTEXT"
+            }
+          ]
+        },
+        "Cache": {
+          "Type": "S3",
+          "Location": {
+            "Fn::Sub": "${InboxBucket}/cache"
+          }
+        },
+        "LogsConfig": {
+          "CloudWatchLogs": {
+            "Status": "ENABLED",
+            "GroupName": {
+              "Ref": "Logs"
+            }
+          }
+        }
+      }
+    },
+    "StartRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "events.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole",
+              "Condition": {
+                "StringEquals": {
+                  "aws:SourceAccount": {
+                    "Ref": "AWS::AccountId"
+                  }
+                },
+                "ArnEquals": {
+                  "aws:SourceArn": {
+                    "Fn::Sub": "arn:${AWS::Partition}:events:${AWS::Region}:${AWS::AccountId}:rule/${PublishingBus}/${AWS::StackName}-bookmarks"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "StartPublisher",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": ["codebuild:StartBuild"],
+                  "Resource": {
+                    "Fn::GetAtt": ["Project", "Arn"]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "BookmarkRule": {
+      "Type": "AWS::Events::Rule",
+      "Properties": {
+        "Name": {
+          "Fn::Sub": "${AWS::StackName}-bookmarks"
+        },
+        "EventBusName": {
+          "Ref": "PublishingBus"
+        },
+        "State": "ENABLED",
+        "EventPattern": {
+          "source": ["pinboard"],
+          "detail-type": ["bookmarks-ready"]
+        },
+        "Targets": [
+          {
+            "Id": "publisher",
+            "Arn": {
+              "Fn::GetAtt": ["Project", "Arn"]
+            },
+            "RoleArn": {
+              "Fn::GetAtt": ["StartRole", "Arn"]
+            },
+            "Input": "{}",
+            "RetryPolicy": {
+              "MaximumEventAgeInSeconds": 3600,
+              "MaximumRetryAttempts": 10
+            }
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "PublisherProject": {
+      "Value": {
+        "Ref": "Project"
+      }
+    },
+    "PublisherRoleArn": {
+      "Value": {
+        "Fn::GetAtt": ["PublisherRole", "Arn"]
+      }
+    }
+  }
+}

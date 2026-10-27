@@ -1,7 +1,6 @@
 // Publish dist/ to the web bucket and refresh CloudFront.
 //
-//   node tools/deploy.mjs            publish: main in GitHub Actions only, with
-//                                    the OIDC deployment role (infra/delivery.json)
+//   node tools/deploy.mjs            publish from the approved AWS publisher only
 //   node tools/deploy.mjs --dry-run  list the bucket and print the plan; writes
 //                                    nothing (any identity in the account)
 //
@@ -10,8 +9,8 @@
 //    a page); upload only keys whose ETag differs, or every key when the live
 //    revision.json was written under other header rules.
 // 2. Upload in publication order (assets, then what pages name, then pages,
-//    then revision.json), checking before each group that this commit is still
-//    the head of main.
+//    then revision.json), checking before each group that the approved release is
+//    still current.
 // 3. Remove page keys the build no longer has (a link made private must leave
 //    the site), invalidate, and only then remove stale content-addressed
 //    assets, so a cached page never names a missing stylesheet.
@@ -36,6 +35,7 @@ import {
   reportArrivals,
 } from './sync-receipt.mjs';
 import fs from 'node:fs/promises';
+import { publicationContext } from './publication-context.mjs';
 import path from 'node:path';
 import {
   contentType,
@@ -53,20 +53,12 @@ import {
   shadowedByRedirect,
 } from './delivery-plan.mjs';
 
-const REPOSITORY = 'jthingelstad/links.thingelstad.xyz';
 const DIST = 'dist';
 const CONCURRENCY = 32;
 const dryRun = process.argv.includes('--dry-run');
 const config = JSON.parse(await fs.readFile('infra/deployment.json', 'utf8'));
 const Bucket = config.siteBucket;
 
-if (
-  !dryRun &&
-  (process.env.GITHUB_REPOSITORY !== REPOSITORY ||
-    process.env.GITHUB_REF !== 'refs/heads/main' ||
-    !/^[a-f0-9]{40}$/.test(process.env.GITHUB_SHA || ''))
-)
-  throw new Error('Only this repository main branch can publish');
 if (
   !dryRun &&
   (!config.distributionId || !config.deploymentRoleArn || !config.deliveryUrl)
@@ -81,33 +73,8 @@ const identity = await new STSClient(settings).send(
 );
 if (identity.Account !== config.account)
   throw new Error(`Unexpected AWS account ${identity.Account}`);
-if (
-  !dryRun &&
-  !identity.Arn.includes(
-    `:assumed-role/${config.deploymentRoleArn.split('/').at(-1)}/`,
-  )
-)
-  throw new Error('Unexpected deployment identity');
-
-async function assertCurrentHead() {
-  if (dryRun) return;
-  const response = await fetch(
-    `https://api.github.com/repos/${REPOSITORY}/git/ref/heads/main`,
-    {
-      headers: {
-        authorization: `Bearer ${process.env.GH_TOKEN}`,
-        accept: 'application/vnd.github+json',
-      },
-      signal: AbortSignal.timeout(15000),
-    },
-  );
-  if (
-    !response.ok ||
-    (await response.json()).object.sha !== process.env.GITHUB_SHA
-  )
-    throw new Error('Refusing to publish a superseded main revision');
-}
-
+const publication = dryRun ? null : await publicationContext(config, identity);
+const assertCurrentHead = async () => publication?.assertCurrent();
 async function builtKeys(folder) {
   const keys = [];
   for (const entry of await fs.readdir(folder, { withFileTypes: true })) {
@@ -125,7 +92,11 @@ await assertCurrentHead();
 const revision = JSON.parse(
   await fs.readFile(path.join(DIST, 'revision.json'), 'utf8'),
 );
-if (!dryRun && revision.commit !== process.env.GITHUB_SHA)
+if (
+  !dryRun &&
+  (revision.commit !== publication.release.commit ||
+    revision.release !== publication.release.id)
+)
   throw new Error('Build artifact does not match this commit');
 if (revision.headers !== headersFingerprint)
   throw new Error(
@@ -170,7 +141,8 @@ const livePages = [...remote.keys()].filter((key) => !isHashedAsset(key));
 const limit = removalLimit(livePages.length);
 const paths = invalidationPaths([...plan.upload, ...stalePages]);
 const summary = {
-  commit: dryRun ? revision.commit : process.env.GITHUB_SHA,
+  commit: revision.commit,
+  release: revision.release ?? null,
   bucket: bucketExists ? Bucket : `${Bucket} (does not exist yet)`,
   built: keys.length,
   live: remote.size,
@@ -183,7 +155,7 @@ const summary = {
 };
 const refusal =
   stalePages.length > limit &&
-  process.env.DEPLOY_ALLOW_REMOVALS !== String(stalePages.length)
+  publication?.release.allowRemovals !== String(stalePages.length)
     ? `Refusing to remove ${stalePages.length} pages (limit ${limit}), first ${stalePages.slice(0, 5).join(', ')}. ` +
       `If that is intended, run the workflow by hand with allow_removals=${stalePages.length}.`
     : null;
@@ -255,7 +227,7 @@ if (paths.length) {
     new CreateInvalidationCommand({
       DistributionId: config.distributionId,
       InvalidationBatch: {
-        CallerReference: `${process.env.GITHUB_RUN_ID}-${process.env.GITHUB_RUN_ATTEMPT}`,
+        CallerReference: publication.run,
         Paths: { Quantity: paths.length, Items: paths },
       },
     }),

@@ -6,7 +6,8 @@
     "storage": "links-storage",
     "site": "links-site",
     "delivery": "links-delivery",
-    "certificate": "links-certificate"
+    "certificate": "links-certificate",
+    "publisher": "links-publisher"
   },
   "siteBucket": "links-storage-web-999153317627",
   "distributionId": "EL588B3EJIVDL",
@@ -25,5 +26,8 @@
     "ManagedBy": "cloudformation",
     "Environment": "production"
   },
-  "alarmTopic": "arn:aws:sns:us-east-1:999153317627:weekly-thing-librarian-alarms"
+  "alarmTopic": "arn:aws:sns:us-east-1:999153317627:weekly-thing-librarian-alarms",
+  "publisherBucket": "links-storage-inbox-999153317627",
+  "publisherProject": "links-publisher",
+  "publisherRoleArn": "arn:aws:iam::999153317627:role/links-publisher-PublisherRole-VuF5UK1AVgYZ"
 }

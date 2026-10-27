@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 24
+      python: 3.13
+    commands:
+      - npm ci --cache /root/.npm --prefer-offline
+  build:
+    commands:
+      - node tools/publish.mjs
+cache:
+  paths:
+    - /root/.npm/**/*

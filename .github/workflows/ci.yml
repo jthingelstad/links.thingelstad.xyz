@@ -36,7 +36,7 @@ jobs:
       - run: npm run sites:check
       - run: pipx run --spec ruff==0.17.0 ruff check tools tests
       - run: npm audit --audit-level=high
-      - run: pipx run --spec cfn-lint==1.57.2 cfn-lint infra/storage.json infra/certificate.json infra/site.json infra/delivery.json infra/mcp.json
+      - run: pipx run --spec cfn-lint==1.57.2 cfn-lint infra/storage.json infra/certificate.json infra/site.json infra/delivery.json infra/mcp.json infra/publisher.json
       - run: npm run validate:infra
       - run: npm run validate:data
   codeql:
@@ -110,7 +110,7 @@ jobs:
           path: /tmp/links-site-qa/
           retention-days: 7
   deploy:
-    name: Deploy
+    name: Release to AWS publisher
     needs: [quality, codeql, build]
     # Deploys only once the delivery role exists (repository variable set after
     # tools/bootstrap-infra.mjs apply). Until then main builds and stops here.
@@ -142,15 +142,7 @@ jobs:
         with:
           role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
           aws-region: us-east-1
-      - run: npm run deploy
+      - run: npm run publisher:release
         env:
           GH_TOKEN: ${{ github.token }}
           DEPLOY_ALLOW_REMOVALS: ${{ inputs.allow_removals }}
-          SYNC_RECEIVED_BUS: ${{ vars.SYNC_RECEIVED_BUS }}
-      # The MCP server (src/mcp/, tools/deploy-mcp.mjs), packaged with the
-      # Pagefind client of the build just published. A bundle that is already
-      # live (most pushes: content changes leave it alone) ends the step.
-      - run: npm run mcp:package
-      - run: npm run mcp:deploy
-        env:
-          GH_TOKEN: ${{ github.token }}
