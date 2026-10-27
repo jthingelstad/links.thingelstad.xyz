@@ -27,8 +27,8 @@ bookmark, an unknown field, a bad id, or a duplicate.
 
 ## `data/derived/bookmarks.json`
 
-An additive public capture ledger written only by `tools/import_bookmarks.py`
-through `sync-bookmarks.yml` (2026-10-27, Feedbin to Pinboard to Linking Things).
+An additive public capture ledger generated for each build only by `tools/import_bookmarks.py`
+inside the single AWS publisher (2026-10-27, Feedbin to Pinboard to Linking Things).
 `docs/BOOKMARKS.md` describes delivery and activation. Each SHA-256 capture key
 maps to `id` (Feedbin), `url`, `link_id`, `observed_at`, `imported` and `record`.
 `record` has exactly the canonical public bookmark fields above. The input
@@ -38,7 +38,7 @@ this file. All captures are validated before the ledger is written.
 The build and Python tools combine this ledger with the nightly year files.
 Canonical records win every field. An absent capture is visible only if its
 observation is newer than the full snapshot's `fetched_at`; a later full
-snapshot controls deletion and privacy. The bookmark workflow never rewrites
+snapshot controls deletion and privacy. The AWS publisher never rewrites
 year files, account-wide timestamps or counts, or the issue join.
 
 ## `data/derived/issues.json`

@@ -1,8 +1,9 @@
 # Deployment, storage and DNS
 
 The pattern is POAP's (`poap.thingelstad.xyz`): a private web bucket that only CloudFront
-reads, and pages deployed from main by GitHub Actions through an OIDC role that cannot
-change infrastructure. Linking Things has no media bucket and no archive bucket; every
+reads, and pages deployed by one AWS CodeBuild publisher. GitHub main promotes
+its tested source package using OIDC; content events use IAM. `docs/BOOKMARKS.md`
+describes the durable inbox, canonical snapshot and publication receipts. Linking Things has no media bucket and no archive bucket; every
 object is in `dist/`, the video thumbnails and book covers under `media/` included
 (`public/media/`, written only by `tools/enrich_facts.py`, about 6 MB). The one path
 that is not a file is `/mcp`, the MCP server: a Lambda Web Function behind the same
@@ -15,7 +16,8 @@ distribution (section "The MCP server").
 | `links-certificate` | `infra/certificate.json` | ACM certificate for `links.thingelstad.xyz`, DNS validated                                                                                                                                                                                                                  |
 | `links-storage`     | `infra/storage.json`     | `links-storage-web-999153317627`: private, SSE-S3, versioned (replaced and removed objects kept 30 days), retained if the stack goes                                                                                                                                        |
 | `links-site`        | `infra/site.json`        | Distribution with origin access control, cache and header policies, the index and crawler functions, a 14-day access log without client addresses, 5xx alarm to the family topic; the `/mcp*` behaviour to the `links-mcp` endpoint through a second origin access control  |
-| `links-delivery`    | `infra/delivery.json`    | GitHub OIDC deployment role, main only: list, read, write and remove site objects, invalidate this distribution; upload the MCP package, change that stack's code through a change set, and pass and read the MCP execution role; nothing else                              |
+| `links-delivery`    | `infra/delivery.json`    | Main-only GitHub OIDC role: promote one approved source package and start/watch the AWS publisher                                                                                                                                                                           |
+| `links-publisher`   | `infra/publisher.json`   | One serialized CodeBuild project, its scoped site/MCP role, logs and EventBridge bookmark trigger                                                                                                                                                                           |
 | `links-mcp`         | `infra/mcp.json`         | The MCP server: `links-mcp-code-999153317627` (private, versioned, the packaged server), an execution role that writes its own logs and nothing else, 30-day logs, the `links-mcp` web function, its revision and `live` endpoint (IAM auth), 5xx alarm to the family topic |
 
 Live ids and ARNs are in `infra/deployment.json`; `tools/bootstrap-infra.mjs` writes them.
@@ -48,7 +50,7 @@ Pagefind client and uploads it (section "Adding it to the live site, once"). Onc
 `links-mcp` has its endpoint, `apply` passes the live `CodeKey` and `CodeVersion` through
 unchanged, so a later `apply` never swaps the revision; that is the CI deploy's job. The
 order is mcp, the distribution's grant on its endpoint, storage, site,
-storage again (the bucket policy names the distribution), delivery, certificate. The
+storage again (the bucket policy names the distribution), publisher, delivery, certificate. The
 certificate stack waits until ACM sees its validation record, so `apply` prints both
 records as soon as they exist and keeps waiting (up to an hour) while Jamie adds them at
 Namecheap. If it is cut off, run it again: finished stacks
@@ -83,10 +85,21 @@ site validator (links, metadata, sitemap, twins, Pagefind) and Chromium checks a
 and phone widths against `dist/` served behind the edge function
 (`npm run test:ci-browser`). On main the build turns Tinylytics on
 (`PUBLIC_TINYLYTICS_ENABLED=true`; the layout still loads it only on the production host)
-and keeps the verified `dist/` as an artifact, and the deployment job publishes exactly
-that artifact with `npm run deploy`, then runs `npm run mcp:package` and `npm run
-mcp:deploy` (section "What an MCP deploy does"), which swap the MCP's revision only when
-the package's contents changed.
+and keeps the verified `dist/` as an artifact. Once every gate passes, the release
+job uses OIDC to promote the clean tested source commit and canonical data snapshot
+as a versioned package in the private inbox bucket. `npm run publisher:release`
+starts and watches the single AWS publisher. That publisher combines the source
+snapshot with all public bookmark captures, validates data, builds and validates
+the site, runs `npm run deploy`, then packages and deploys the MCP server.
+Bookmark events use the same publisher and approved package. They never create
+commits or run CI. Only a complete verified publication writes the private success
+marker; duplicate wake-ups can then exit without rebuilding.
+
+For this migration use `npm run infra:plan -- --publisher-only` and
+`npm run infra:apply -- --publisher-only`; these touch only the new publisher and
+existing GitHub promotion role. Commit the generated publisher role ARN. The
+GitHub role loses its direct site, inbox and MCP grants. Sync's `ReceiverRoles`
+grants the publisher its existing received-event contract.
 
 `npm run deploy:plan` prints what a deploy would do with any identity in the account and
 writes nothing.
@@ -104,8 +117,7 @@ writes nothing.
    always follow the rules.
 2. **Upload** in publication order: content-addressed assets, then what pages name by a
    fixed name (twins, feeds, Pagefind's entry file and scripts), then pages,
-   `revision.json` last. Before each group the deploy checks this commit is still the
-   head of main, so a superseded run stops.
+   `revision.json` last. Before each group the deploy checks the approved S3 package is still current, so a superseded run stops.
 3. **Remove** page keys the build no longer has, then invalidate, then remove stale
    content-addressed assets (so a cached page never names a missing stylesheet).
    Removal is the policy because a link made private at Pinboard must leave the site.
@@ -240,7 +252,7 @@ expects the validator to refuse each edit.
 
 ### What an MCP deploy does
 
-After the site deploy, the deploy job runs `npm run mcp:package` and `npm run
+After the site deploy, the AWS publisher runs `npm run mcp:package` and `npm run
 mcp:deploy` (`tools/deploy-mcp.mjs`, its rules in `tools/mcp-plan.mjs`):
 
 1. **Package.** `src/mcp/main.ts` bundled by esbuild with no runtime dependencies,

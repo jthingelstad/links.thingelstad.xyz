@@ -18,6 +18,7 @@ export const NAMES = [
   'certificate',
   'deployment',
   'mcp',
+  'publisher',
 ];
 
 export async function readInfra(folder = 'infra') {
@@ -36,6 +37,7 @@ export function validate({
   certificate,
   deployment,
   mcp,
+  publisher,
 }) {
   // One private, retained, versioned, encrypted web bucket.
   assert.deepEqual(
@@ -229,48 +231,80 @@ export function validate({
     claim['token.actions.githubusercontent.com:sub'],
     `${SUBJECT}:ref:refs/heads/main`,
   );
-  const allowed = new Set([
-    's3:ListBucket',
-    's3:GetBucketLocation',
-    's3:GetObject',
-    's3:PutObject',
-    's3:DeleteObject',
-    'cloudfront:CreateInvalidation',
-    'cloudfront:GetInvalidation',
+  // GitHub can promote one package and start/watch one publisher. It cannot
+  // write the website, read captures, or deploy the MCP server.
+  assert.equal(role.Policies.length, 1);
+  assert.equal(role.Policies[0].PolicyName, 'PromotePublisher');
+  assert.deepEqual(role.Policies[0].PolicyDocument.Statement, [
+    {
+      Effect: 'Allow',
+      Action: ['s3:PutObject'],
+      Resource: {
+        'Fn::Sub':
+          'arn:${AWS::Partition}:s3:::${PublisherBucket}/releases/current.zip',
+      },
+    },
+    {
+      Effect: 'Allow',
+      Action: ['codebuild:StartBuild', 'codebuild:BatchGetBuilds'],
+      Resource: {
+        'Fn::Sub':
+          'arn:${AWS::Partition}:codebuild:${AWS::Region}:${AWS::AccountId}:project/${PublisherProject}',
+      },
+    },
   ]);
-  // The site's policy, and the MCP deploy's (validateMcp) when the mcp stack
-  // exists.
-  assert.equal(role.Policies.length, 3);
-  const inboxRead = role.Policies[2];
-  assert.equal(inboxRead.PolicyName, 'BookmarkInboxRead');
-  const [listInbox, readInbox] = inboxRead.PolicyDocument.Statement;
-  assert.deepEqual(listInbox.Action, ['s3:ListBucket']);
-  assert.deepEqual(listInbox.Condition, {
-    StringLike: { 's3:prefix': ['bookmarks/*'] },
+  assert.ok(!role.ManagedPolicyArns);
+  const project = publisher.Resources.Project.Properties;
+  assert.equal(project.ConcurrentBuildLimit, 1);
+  assert.deepEqual(project.Source, {
+    Type: 'S3',
+    Location: { 'Fn::Sub': '${InboxBucket}/releases/current.zip' },
+    BuildSpec: 'tools/publisher-buildspec.yml',
   });
+  assert.equal(project.Environment.PrivilegedMode, false);
+  const start =
+    publisher.Resources.StartRole.Properties.Policies[0].PolicyDocument
+      .Statement;
+  assert.deepEqual(start, [
+    {
+      Effect: 'Allow',
+      Action: ['codebuild:StartBuild'],
+      Resource: { 'Fn::GetAtt': ['Project', 'Arn'] },
+    },
+  ]);
+  const rule = publisher.Resources.BookmarkRule.Properties;
+  assert.deepEqual(rule.EventPattern, {
+    source: ['pinboard'],
+    'detail-type': ['bookmarks-ready'],
+  });
+  assert.equal(rule.EventBusName.Ref, 'PublishingBus');
+  assert.ok(!JSON.stringify(publisher).includes('DeleteObjectVersion'));
+  const publisherRole = publisher.Resources.PublisherRole.Properties;
   assert.equal(
-    listInbox.Resource['Fn::Sub'],
-    'arn:${AWS::Partition}:s3:::links-storage-inbox-${AWS::AccountId}',
+    publisherRole.AssumeRolePolicyDocument.Statement[0].Principal.Service,
+    'codebuild.amazonaws.com',
   );
-  assert.deepEqual(readInbox.Action, ['s3:GetObject']);
-  assert.equal(
-    readInbox.Resource['Fn::Sub'],
-    'arn:${AWS::Partition}:s3:::links-storage-inbox-${AWS::AccountId}/bookmarks/*',
-  );
-  assert.equal(role.Policies[0].PolicyName, 'SiteDelivery');
-  assert.ok(!role.ManagedPolicyArns, 'no managed policies');
-  for (const s of role.Policies[0].PolicyDocument.Statement) {
-    assert.equal(s.Effect, 'Allow');
-    for (const action of s.Action)
-      assert.ok(allowed.has(action), `${action} is not a delivery action`);
-    assert.notEqual(s.Resource, '*');
-    assert.ok(!JSON.stringify(s.Resource).includes('"*"'));
-  }
-  assert.ok(
-    !JSON.stringify(delivery).includes('DeleteObjectVersion'),
-    'the deploy cannot remove the 30-day versions',
-  );
-
+  assert.equal(publisherRole.Policies[0].PolicyName, 'SiteDelivery');
+  assert.deepEqual(publisherRole.Policies[0].PolicyDocument.Statement, [
+    {
+      Effect: 'Allow',
+      Action: ['s3:ListBucket', 's3:GetBucketLocation'],
+      Resource: { 'Fn::Sub': 'arn:${AWS::Partition}:s3:::${SiteBucket}' },
+    },
+    {
+      Effect: 'Allow',
+      Action: ['s3:GetObject', 's3:PutObject', 's3:DeleteObject'],
+      Resource: { 'Fn::Sub': 'arn:${AWS::Partition}:s3:::${SiteBucket}/*' },
+    },
+    {
+      Effect: 'Allow',
+      Action: ['cloudfront:CreateInvalidation', 'cloudfront:GetInvalidation'],
+      Resource: {
+        'Fn::Sub':
+          'arn:${AWS::Partition}:cloudfront::${AWS::AccountId}:distribution/${DistributionId}',
+      },
+    },
+  ]);
   assert.equal(deployment.account, '999153317627');
   assert.equal(deployment.region, 'us-east-1');
   assert.equal(deployment.productionUrl, `https://${DOMAIN}/`);
@@ -287,14 +321,14 @@ export function validate({
     deployment.stackTags.Repository,
     'jthingelstad/links.thingelstad.xyz',
   );
-  validateMcp({ site, delivery, deployment, mcp });
+  validateMcp({ site, publisher, deployment, mcp });
 }
 
 // The MCP server: a Lambda Web Function whose endpoint answers only signed
 // requests (IamAuth), from the site's distribution, at /mcp. Its role writes
 // its logs and nothing else; the deploy can upload a bundle, swap the revision
 // on the links-mcp stack and pass that one role, and nothing else.
-export function validateMcp({ site, delivery, deployment, mcp }) {
+export function validateMcp({ site, publisher, deployment, mcp }) {
   const STACK = deployment.stacks.mcp;
   assert.equal(STACK, 'links-mcp');
   assert.equal(deployment.mcpCodeBucket, `${STACK}-code-${deployment.account}`);
@@ -484,7 +518,7 @@ export function validateMcp({ site, delivery, deployment, mcp }) {
   ]);
 
   // The deploy's MCP actions, exactly, and only once the mcp stack exists.
-  const role = delivery.Resources.DeploymentRole.Properties;
+  const role = publisher.Resources.PublisherRole.Properties;
   assert.ok(
     Array.isArray(role.Policies[1]['Fn::If']),
     'the MCP grants wait for the mcp stack',

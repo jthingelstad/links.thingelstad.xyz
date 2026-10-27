@@ -1,56 +1,12 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "links.thingelstad.xyz GitHub OIDC main-only publication of the site and its MCP server",
+  "Description": "links.thingelstad.xyz main-only GitHub OIDC promotion of tested AWS publisher packages",
   "Parameters": {
-    "SiteBucket": {
-      "Type": "String",
-      "AllowedPattern": "[a-zA-Z0-9.-]+"
+    "PublisherBucket": {
+      "Type": "String"
     },
-    "DistributionId": {
-      "Type": "String",
-      "AllowedPattern": "[a-zA-Z0-9.-]+"
-    },
-    "McpCodeBucket": {
-      "Type": "String",
-      "Default": "",
-      "AllowedPattern": "^$|^[a-z0-9.-]+$",
-      "Description": "The links-mcp stack's CodeBucket. Empty gives the role no MCP actions."
-    },
-    "McpExecutionRoleArn": {
-      "Type": "String",
-      "Default": "",
-      "AllowedPattern": "^$|^arn:aws:iam::[0-9]{12}:role/[A-Za-z0-9+=,.@_-]+$",
-      "Description": "The links-mcp stack's ExecutionRoleArn, the one role the deploy may pass"
-    }
-  },
-  "Conditions": {
-    "HasMcp": {
-      "Fn::And": [
-        {
-          "Fn::Not": [
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "McpCodeBucket"
-                },
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "Fn::Not": [
-            {
-              "Fn::Equals": [
-                {
-                  "Ref": "McpExecutionRoleArn"
-                },
-                ""
-              ]
-            }
-          ]
-        }
-      ]
+    "PublisherProject": {
+      "Type": "String"
     }
   },
   "Resources": {
@@ -86,153 +42,25 @@
         },
         "Policies": [
           {
-            "PolicyName": "SiteDelivery",
+            "PolicyName": "PromotePublisher",
             "PolicyDocument": {
               "Version": "2012-10-17",
               "Statement": [
                 {
                   "Effect": "Allow",
-                  "Action": ["s3:ListBucket", "s3:GetBucketLocation"],
+                  "Action": ["s3:PutObject"],
                   "Resource": {
-                    "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}"
-                  }
-                },
-                {
-                  "Effect": "Allow",
-                  "Action": ["s3:GetObject", "s3:PutObject", "s3:DeleteObject"],
-                  "Resource": {
-                    "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}/*"
+                    "Fn::Sub": "arn:${AWS::Partition}:s3:::${PublisherBucket}/releases/current.zip"
                   }
                 },
                 {
                   "Effect": "Allow",
                   "Action": [
-                    "cloudfront:CreateInvalidation",
-                    "cloudfront:GetInvalidation"
+                    "codebuild:StartBuild",
+                    "codebuild:BatchGetBuilds"
                   ],
                   "Resource": {
-                    "Fn::Sub": "arn:${AWS::Partition}:cloudfront::${AWS::AccountId}:distribution/${DistributionId}"
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "Fn::If": [
-              "HasMcp",
-              {
-                "PolicyName": "McpDelivery",
-                "PolicyDocument": {
-                  "Version": "2012-10-17",
-                  "Statement": [
-                    {
-                      "Sid": "UploadThePackagedServer",
-                      "Effect": "Allow",
-                      "Action": [
-                        "s3:PutObject",
-                        "s3:GetObject",
-                        "s3:GetObjectVersion"
-                      ],
-                      "Resource": {
-                        "Fn::Sub": "arn:${AWS::Partition}:s3:::${McpCodeBucket}/mcp/*"
-                      }
-                    },
-                    {
-                      "Sid": "ChangeTheMcpStackOnly",
-                      "Effect": "Allow",
-                      "Action": [
-                        "cloudformation:DescribeStacks",
-                        "cloudformation:DescribeStackEvents",
-                        "cloudformation:CreateChangeSet",
-                        "cloudformation:DescribeChangeSet",
-                        "cloudformation:ExecuteChangeSet",
-                        "cloudformation:DeleteChangeSet"
-                      ],
-                      "Resource": {
-                        "Fn::Sub": "arn:${AWS::Partition}:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/links-mcp/*"
-                      }
-                    },
-                    {
-                      "Sid": "CreateARevision",
-                      "Effect": "Allow",
-                      "Action": [
-                        "lambda:CreateWebFunctionRevision",
-                        "lambda:GetWebFunction"
-                      ],
-                      "Resource": {
-                        "Fn::Sub": "arn:${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:web-function/links-mcp"
-                      }
-                    },
-                    {
-                      "Sid": "ReadRevisions",
-                      "Effect": "Allow",
-                      "Action": ["lambda:GetWebFunctionRevision"],
-                      "Resource": {
-                        "Fn::Sub": "arn:${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:web-function/links-mcp/revision/*"
-                      }
-                    },
-                    {
-                      "Sid": "PointTheEndpointAtIt",
-                      "Effect": "Allow",
-                      "Action": [
-                        "lambda:GetWebFunctionEndpoint",
-                        "lambda:UpdateWebFunctionEndpoint"
-                      ],
-                      "Resource": {
-                        "Fn::Sub": "arn:${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:web-function/links-mcp/endpoint/*"
-                      }
-                    },
-                    {
-                      "Sid": "PassOnlyTheMcpExecutionRole",
-                      "Effect": "Allow",
-                      "Action": ["iam:PassRole"],
-                      "Resource": {
-                        "Ref": "McpExecutionRoleArn"
-                      },
-                      "Condition": {
-                        "StringEquals": {
-                          "iam:PassedToService": "lambda.amazonaws.com"
-                        }
-                      }
-                    },
-                    {
-                      "Sid": "ReadTheMcpExecutionRole",
-                      "Effect": "Allow",
-                      "Action": ["iam:GetRole"],
-                      "Resource": {
-                        "Ref": "McpExecutionRoleArn"
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "Ref": "AWS::NoValue"
-              }
-            ]
-          },
-          {
-            "PolicyName": "BookmarkInboxRead",
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": ["s3:ListBucket"],
-                  "Resource": {
-                    "Fn::Sub": "arn:${AWS::Partition}:s3:::links-storage-inbox-${AWS::AccountId}"
-                  },
-                  "Condition": {
-                    "StringLike": {
-                      "s3:prefix": ["bookmarks/*"]
-                    }
-                  }
-                },
-                {
-                  "Effect": "Allow",
-                  "Action": ["s3:GetObject"],
-                  "Resource": {
-                    "Fn::Sub": "arn:${AWS::Partition}:s3:::links-storage-inbox-${AWS::AccountId}/bookmarks/*"
+                    "Fn::Sub": "arn:${AWS::Partition}:codebuild:${AWS::Region}:${AWS::AccountId}:project/${PublisherProject}"
                   }
                 }
               ]

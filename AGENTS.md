@@ -18,7 +18,7 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   hand. `src/lib/data.ts` is the only module that reads `data/links` and
   `data/derived`, and everything derived (hosts, years, weeks, appearances, mentions,
   saved twice, kinds) is derived there, in memory.
-- **Public bookmark fast path.** `docs/BOOKMARKS.md` and hop 23 cover Feedbin-confirmed public captures, a private S3 inbox, and `sync-bookmarks.yml`. Only that workflow writes `data/derived/bookmarks.json`; the Mac retains the canonical year files and full snapshot. Canonical records and newer full snapshots take precedence over captures. This path never runs enrichment or the issue join.
+- **Public bookmark path.** `docs/BOOKMARKS.md` and hop 23 cover Feedbin-confirmed public captures and the private S3 inbox. The single `links-publisher` CodeBuild job combines the approved canonical snapshot with the full durable inbox into a build-local `data/derived/bookmarks.json`. Content arrivals make no Git commits. Canonical records and newer full snapshots control edits, privacy and deletion. This path never runs enrichment or the issue join. GitHub main promotes tested versioned source packages using OIDC; only the AWS publisher deploys the website and MCP. `tools/publication-context.mjs` verifies its role, project and current approved release before writes.
 - **Bus join, off.** `sync-join.yml` defaults to a credential-free rehearsal. Real work also requires `SYNC_JOIN_APPROVED=true`, Jamie's explicit permission to repair WT354. The sync stack removed its subscriber scaffolding on 2026-10-27 (its roles are one `ReceiverRoles` list now), so nothing on the bus starts the workflow. The nightly checkout and schedule stay as they are. Never run the real join to test this proposal.
 - **Enrichment.** `src/lib/enrichment.ts` is the only module that reads
   `data/enrichment` (`LINKS_ENRICHMENT` points it at `tests/fixtures/enrichment`
@@ -125,14 +125,15 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   `npm run build`, `npm run validate:site` and `npm run test:ci-browser` before
   pushing. Chromium for screenshots: `npx playwright install chromium`.
 - **Hosting** is S3 and CloudFront in four stacks plus `links-mcp`, the MCP server's
-  Lambda Web Function behind the same distribution (`infra/`), deployed from main by
-  GitHub Actions through an OIDC role; `docs/deployment.md` has the stacks, the
+  Lambda Web Function behind the same distribution (`infra/`), plus `links-publisher`,
+  the single AWS CodeBuild publisher. GitHub main promotes tested source packages
+  through its OIDC role; only CodeBuild deploys the site and MCP; `docs/deployment.md` has the stacks, the
   bootstrap, the DNS records and what a deploy uploads, removes and invalidates. A new
   file extension needs its Content-Type in `tools/delivery-plan.mjs` or the deploy
   stops. The sync and the enrichment run on the Mac as the nightly launchd job
   `com.thingelstad.links-nightly` (`tools/nightly.sh` at 00:30 Central; the plist is in
   `launchd/`), which commits `data/` and `public/media` as "Nightly: sync and
-  enrichment, <date>" and pushes, and the push deploys. CI never holds the token. The
+  enrichment, <date>" and pushes, and the push releases to the AWS publisher. CI never holds the token. The
   job needs the main checkout on `main` and clean, so work in a worktree. While the
   first enrichment pass runs (about three weeks of nights) a night takes about three
   hours (2026-10-24: 1,000 hosts in 75 minutes, 800 Wayback lookups in 97 minutes), so

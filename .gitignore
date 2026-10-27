@@ -17,3 +17,6 @@ public/links.db.tmp
 
 # The packaged MCP server (npm run mcp:package).
 .build/
+
+# Present only inside an approved AWS build package.
+publisher-release.json

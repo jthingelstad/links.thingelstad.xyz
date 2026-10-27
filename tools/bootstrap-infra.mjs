@@ -52,12 +52,14 @@ const mode = process.argv[2];
 // plan can show the distribution's grant and the site and delivery change
 // sets, which name the new endpoint, before they run (docs/deployment.md).
 const mcpOnly = process.argv.includes('--mcp-only');
+const publisherOnly = process.argv.includes('--publisher-only');
 if (
   !['plan', 'apply', 'attach'].includes(mode) ||
-  (mcpOnly && mode !== 'apply')
+  (mcpOnly && mode !== 'apply') ||
+  (publisherOnly && mode === 'attach')
 )
   throw new Error(
-    'Usage: node tools/bootstrap-infra.mjs plan|apply [--mcp-only]|attach',
+    'Usage: node tools/bootstrap-infra.mjs plan|apply [--mcp-only|--publisher-only]|attach',
   );
 const config = JSON.parse(await fs.readFile('infra/deployment.json', 'utf8'));
 const settings = { region: config.region, maxAttempts: 5 };
@@ -250,6 +252,43 @@ async function record(values) {
 }
 
 const { stacks } = config;
+if (publisherOnly) {
+  const storage = outputs(await stack(stacks.storage));
+  const site = outputs(await stack(stacks.site));
+  const mcp = outputs(await stack(stacks.mcp));
+  const publisher = outputs(
+    await converge(
+      stacks.publisher,
+      'publisher',
+      {
+        SiteBucket: storage.SiteBucket,
+        DistributionId: site.DistributionId,
+        McpCodeBucket: mcp.CodeBucket,
+        McpExecutionRoleArn: mcp.ExecutionRoleArn,
+        InboxBucket: storage.BookmarkInbox,
+      },
+      ['CAPABILITY_IAM'],
+    ),
+  );
+  const delivery = outputs(
+    await converge(
+      stacks.delivery,
+      'delivery',
+      {
+        PublisherBucket: storage.BookmarkInbox,
+        PublisherProject: publisher.PublisherProject || config.publisherProject,
+      },
+      ['CAPABILITY_IAM'],
+    ),
+  );
+  await record({
+    publisherBucket: storage.BookmarkInbox,
+    publisherProject: publisher.PublisherProject || config.publisherProject,
+    publisherRoleArn: publisher.PublisherRoleArn || config.publisherRoleArn,
+    deploymentRoleArn: delivery.DeploymentRoleArn || config.deploymentRoleArn,
+  });
+  process.exit(0);
+}
 const siteExisting = await stack(stacks.site);
 const certificateExisting = outputs(await stack(stacks.certificate));
 let certificateArn = parameter(siteExisting, 'CertificateArn');
@@ -409,21 +448,38 @@ if (site.DistributionId)
   await converge(stacks.storage, 'storage', {
     DistributionId: site.DistributionId,
   });
-const delivery = outputs(
+// The publisher owns all site/MCP writes. GitHub only promotes approved
+// source packages and starts/watches this one project.
+const publisher = outputs(
   await converge(
-    stacks.delivery,
-    'delivery',
+    stacks.publisher,
+    'publisher',
     {
       SiteBucket: siteBucket,
       DistributionId: site.DistributionId || 'PENDING',
       McpCodeBucket: mcp.CodeBucket || '',
       McpExecutionRoleArn: mcp.ExecutionRoleArn || '',
+      InboxBucket: storage.BookmarkInbox || config.publisherBucket,
+    },
+    ['CAPABILITY_IAM'],
+  ),
+);
+const delivery = outputs(
+  await converge(
+    stacks.delivery,
+    'delivery',
+    {
+      PublisherBucket: storage.BookmarkInbox || config.publisherBucket,
+      PublisherProject: publisher.PublisherProject || config.publisherProject,
     },
     ['CAPABILITY_IAM'],
   ),
 );
 await record({
   siteBucket,
+  publisherBucket: storage.BookmarkInbox || config.publisherBucket,
+  publisherProject: publisher.PublisherProject || config.publisherProject,
+  publisherRoleArn: publisher.PublisherRoleArn || config.publisherRoleArn,
   distributionId: site.DistributionId || null,
   cloudfrontDomain: site.DistributionDomain || null,
   deliveryUrl: site.DistributionDomain

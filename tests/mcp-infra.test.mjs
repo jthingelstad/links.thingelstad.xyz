@@ -35,7 +35,7 @@ const mcpOrigin = (copy) =>
     (o) => o['Fn::If'],
   )['Fn::If'][1];
 const mcpDelivery = (copy) =>
-  copy.delivery.Resources.DeploymentRole.Properties.Policies[1]['Fn::If'][1]
+  copy.publisher.Resources.PublisherRole.Properties.Policies[1]['Fn::If'][1]
     .PolicyDocument.Statement;
 
 test('the templates as committed validate', () => {
@@ -198,8 +198,8 @@ test("the deploy's MCP grants are exactly the listed ones", () => {
     mcpDelivery(c).push({ Effect: 'Allow', Action: 'lambda:*', Resource: '*' });
   });
   refused('granted before the stack exists', (c) => {
-    c.delivery.Resources.DeploymentRole.Properties.Policies[1] =
-      c.delivery.Resources.DeploymentRole.Properties.Policies[1]['Fn::If'][1];
+    c.publisher.Resources.PublisherRole.Properties.Policies[1] =
+      c.publisher.Resources.PublisherRole.Properties.Policies[1]['Fn::If'][1];
   });
   refused('another stack name', (c) => {
     c.deployment.stacks.mcp = 'links-api';
