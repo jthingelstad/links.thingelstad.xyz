@@ -25,7 +25,8 @@ The step-5 sender reports only after the public deployment, not here.
 
 Jamie adds `github_links_actions_token` to sync-runtime, a fine-grained PAT
 limited to this repository with Actions write. GitHub cannot limit that PAT
-to one workflow; the connection endpoint and role pin sync-join.yml. No
+to one workflow; a future sync subscriber (the shape is in sync's
+docs/SUBSCRIBERS.md; nothing is built) would pin sync-join.yml. No
 token value enters a session. Configure the ping lane first and verify its
 dry-run result. At-least-once deliveries may repeat a harmless unchanged
 join; no exactly-once guarantee is claimed.
