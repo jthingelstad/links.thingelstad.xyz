@@ -1,4 +1,293 @@
 {
+ "lab.hakim.se": {
+  "checked": "2026-10-27T06:44:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.43.147",
+    "172.67.180.78"
+   ],
+   "aaaa": [
+    "2606:4700:3034::ac43:b44e",
+    "2606:4700:3036::6815:2b93"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:35Z",
+   "title": "Hakim El Hattab",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://hakim.se/rss.xml",
+     "title": "RSS 2.0"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "labnol.org": {
+  "checked": "2026-10-27T06:44:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.195",
+    "151.101.65.195"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:39Z",
+   "title": "Digital Inspiration - Tech how-to guides, software tips, and tutorials",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.labnol.org/rss.xml",
+     "title": "Digital Inspiration RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "labo.nintendo.com": {
+  "checked": "2026-10-27T06:44:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "143.204.204.18",
+    "143.204.204.45",
+    "143.204.204.78",
+    "143.204.204.104"
+   ],
+   "aaaa": [
+    "2600:9000:2058:200:1d:d807:48c0:93a1",
+    "2600:9000:2058:400:1d:d807:48c0:93a1",
+    "2600:9000:2058:2400:1d:d807:48c0:93a1",
+    "2600:9000:2058:2a00:1d:d807:48c0:93a1",
+    "2600:9000:2058:3800:1d:d807:48c0:93a1",
+    "2600:9000:2058:4200:1d:d807:48c0:93a1",
+    "2600:9000:2058:5e00:1d:d807:48c0:93a1",
+    "2600:9000:2058:f200:1d:d807:48c0:93a1"
+   ],
+   "cname": "d1b47wo5eceg4j.cloudfront.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: unable to get local issuer certificate"
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:41Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: unable to get local issuer certificate"
+  }
+ },
+ "labri.fr": {
+  "checked": "2026-10-27T06:44:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "donaser.labri.fr",
+    "edwood.emi.u-bordeaux.fr",
+    "neouvielle.enseirb-matmeca.fr",
+    "ns.univ-bordeaux.fr"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:44Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "labs.adobe.com": {
+  "checked": "2026-10-27T06:44:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.220.206.41",
+    "23.220.206.46"
+   ],
+   "aaaa": [
+    "2600:1418:1000:d::17d9:6867",
+    "2600:1418:1000:d::17d9:686a"
+   ],
+   "cname": "labs-stls.adobe.com.edgesuite.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:45Z",
+   "title": "Adobe Labs",
+   "generator": "Gatsby 4.1.1",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "labs.earthpeople.se": {
+  "checked": "2026-10-27T06:44:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.93.227.203"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:49Z",
+   "title": "Labs – By Earth People",
+   "generator": "WordPress 6.8.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://labs.earthpeople.se/feed/",
+     "title": "Labs » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://labs.earthpeople.se/comments/feed/",
+     "title": "Labs » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "labs.frickle.com": {
+  "checked": "2026-10-27T06:44:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "5.9.135.91"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "connection refused"
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:53Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "connection refused"
+  }
+ },
+ "labs.ripe.net": {
+  "checked": "2026-10-27T06:44:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "SERVFAIL"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:56Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
  "labs.spotify.com": {
   "checked": "2026-10-24T06:08:54Z",
   "method": "enrich_hosts",
@@ -25,6 +314,192 @@
    "title": "Spotify Labs — the home to our newest ideas",
    "generator": null,
    "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "labs.talkingpointsmemo.com": {
+  "checked": "2026-10-27T06:44:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.34.117",
+    "172.66.149.53"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:2275",
+    "2606:4700:10::ac42:9535"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:56Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "labzilla.io": {
+  "checked": "2026-10-27T06:45:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.20.205",
+    "172.67.194.102"
+   ],
+   "aaaa": [
+    "2606:4700:3035::ac43:c266",
+    "2606:4700:3037::6815:14cd"
+   ],
+   "cname": null,
+   "ns": [
+    "beau.ns.cloudflare.com",
+    "lara.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:45:00Z",
+   "title": "Home - LabZilla",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://labzilla.io/feed.xml",
+     "title": "LabZilla"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "lacajachina.com": {
+  "checked": "2026-10-27T06:45:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.200.160.18"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.bigcommerce.com",
+    "ns2.bigcommerce.com",
+    "ns3.bigcommerce.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:45:03Z",
+   "title": "La Caja China Roasting Box and Accessories",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "lacie.com": {
+  "checked": "2026-10-27T06:45:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.35.124",
+    "172.64.152.132"
+   ],
+   "aaaa": [
+    "2606:4700:440a::6812:237c",
+    "2a06:98c1:3100::ac40:9884"
+   ],
+   "cname": null,
+   "ns": [
+    "ns0126.secondary.cloudflare.com",
+    "ns0213.secondary.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:45:06Z",
+   "title": "External Drives for Creative Professionals | Seagate US",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "lacocinadedavid.wordpress.com": {
+  "checked": "2026-10-27T06:45:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.12",
+    "192.0.78.13"
+   ],
+   "aaaa": [],
+   "cname": "lb.wordpress.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:45:10Z",
+   "title": "La Cocina de David | The culinary explorations of Señor Boy.",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://lacocinadedavid.wordpress.com/feed/",
+     "title": "La Cocina de David » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://lacocinadedavid.wordpress.com/comments/feed/",
+     "title": "La Cocina de David » Comments Feed"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
    "webmention": null

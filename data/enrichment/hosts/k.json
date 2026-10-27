@@ -1,4 +1,292 @@
 {
+ "k3s.io": {
+  "checked": "2026-10-27T06:32:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "brad.ns.cloudflare.com",
+    "nora.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:32:15Z",
+   "title": "K3s",
+   "generator": "Docusaurus v3.7.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "k3tan.com": {
+  "checked": "2026-10-27T06:32:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.61.32",
+    "172.67.205.166"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:3d20",
+    "2606:4700:3037::ac43:cda6"
+   ],
+   "cname": null,
+   "ns": [
+    "karl.ns.cloudflare.com",
+    "nola.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 530
+  },
+  "home": {
+   "checked": "2026-10-27T06:32:17Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 530"
+  }
+ },
+ "kadavy.net": {
+  "checked": "2026-10-27T06:34:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.10",
+    "141.193.213.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "kanye.ns.cloudflare.com",
+    "nina.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:34:19Z",
+   "title": "Bestselling Author David Kadavy on Creativity, Productivity & Self Publishing",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kagi.com": {
+  "checked": "2026-10-27T06:34:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.111.242.115"
+   ],
+   "aaaa": [
+    "2600:1901:0:daa1::"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-119.awsdns-14.com",
+    "ns-1265.awsdns-30.org",
+    "ns-1728.awsdns-24.co.uk",
+    "ns-899.awsdns-48.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:34:22Z",
+   "title": "Kagi - Better search results. No ads.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kaguya.io": {
+  "checked": "2026-10-27T06:34:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.81.196",
+    "172.67.146.61"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:923d",
+    "2606:4700:3034::6815:51c4"
+   ],
+   "cname": null,
+   "ns": [
+    "donna.ns.cloudflare.com",
+    "ricardo.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:34:25Z",
+   "title": "Kaguya • The social site for VN readers",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kainagata.com": {
+  "checked": "2026-10-27T06:34:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.44.157",
+    "172.67.201.42"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:c92a",
+    "2606:4700:3033::6815:2c9d"
+   ],
+   "cname": null,
+   "ns": [
+    "apollo.ns.cloudflare.com",
+    "clara.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:34:28Z",
+   "title": "Online real money casino Australia - Top Real Money Casino Sites",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kaleidoscopeapp.com": {
+  "checked": "2026-10-27T06:34:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.150.1.65",
+    "216.150.1.193"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.vercel-dns.com",
+    "ns2.vercel-dns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:34:31Z",
+   "title": "Git Diff and Merge Tool | Kaleidoscope",
+   "generator": "Framer 0116799",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kalyani.com": {
+  "checked": "2026-10-27T06:34:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-a1.googledomains.com",
+    "ns-cloud-a2.googledomains.com",
+    "ns-cloud-a3.googledomains.com",
+    "ns-cloud-a4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:34:34Z",
+   "title": "HOST: HTTP Outbound Service Trigger | Nik Kalyani",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "kalzumeus.com": {
   "checked": "2026-10-24T06:08:43Z",
   "method": "enrich_hosts",
@@ -32,6 +320,156 @@
      "type": "rss",
      "url": "https://www.kalzumeus.com/feed/articles/",
      "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kanoki.org": {
+  "checked": "2026-10-27T06:34:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [
+    "2600:1f18:16e:df01::258",
+    "2600:1f18:16e:df01::259"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.p07.nsone.net",
+    "dns2.p07.nsone.net",
+    "dns3.p07.nsone.net",
+    "dns4.p07.nsone.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:34:37Z",
+   "title": "kanoki",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kanthak.net": {
+  "checked": "2026-10-27T06:34:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T06:34:40Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "kaos.to": {
+  "checked": "2026-10-27T06:34:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "173.236.193.184"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: self-signed certificate"
+  },
+  "home": {
+   "checked": "2026-10-27T06:34:40Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: self-signed certificate"
+  }
+ },
+ "kaporcenter.org": {
+  "checked": "2026-10-27T06:34:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.135.42"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns10.dnsmadeeasy.com",
+    "ns11.dnsmadeeasy.com",
+    "ns12.dnsmadeeasy.com",
+    "ns13.dnsmadeeasy.com",
+    "ns14.dnsmadeeasy.com",
+    "ns15.dnsmadeeasy.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:34:55Z",
+   "title": "Homepage - Kapor Center",
+   "generator": "WordPress 6.8.11",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.kaporcenter.org/feed/",
+     "title": "Kapor Center » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.kaporcenter.org/comments/feed/",
+     "title": "Kapor Center » Comments Feed"
     }
    ],
    "hcard": false,
@@ -96,6 +534,105 @@
    "checked": "2026-10-24T05:52:52Z"
   }
  },
+ "karllhughes.com": {
+  "checked": "2026-10-27T06:34:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.28.139",
+    "172.67.170.217"
+   ],
+   "aaaa": [
+    "2606:4700:3034::ac43:aad9",
+    "2606:4700:3037::6815:1c8b"
+   ],
+   "cname": null,
+   "ns": [
+    "brian.ns.cloudflare.com",
+    "mina.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:34:58Z",
+   "title": "Karl Hughes - Buying and Scaling Digital Service Businesses",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "karotz.com": {
+  "checked": "2026-10-27T06:35:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "SERVFAIL"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:01Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "karpathy.ai": {
+  "checked": "2026-10-27T06:35:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.195",
+    "151.101.65.195"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:16Z",
+   "title": "Andrej Karpathy",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "karpathy.bearblog.dev": {
   "checked": "2026-10-24T05:57:33Z",
   "method": "enrich_hosts",
@@ -137,6 +674,311 @@
      "title": "karpathy"
     }
    ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "karpathy.github.io": {
+  "checked": "2026-10-27T06:35:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:20Z",
+   "title": "Andrej Karpathy blog",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://karpathy.github.io/feed.xml",
+     "title": "Andrej Karpathy blog posts"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kartograph.org": {
+  "checked": "2026-10-27T06:35:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.53.91",
+    "172.67.211.13"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:355b",
+    "2606:4700:3035::ac43:d30d"
+   ],
+   "cname": null,
+   "ns": [
+    "meiling.ns.cloudflare.com",
+    "quinton.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:21Z",
+   "title": "Inclave Casino Guide: List of Casinos with Inclave Login",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kasava.dev": {
+  "checked": "2026-10-27T06:35:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.150.1.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dylan.ns.cloudflare.com",
+    "eloise.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:24Z",
+   "title": "Kasava — PRDs from your real code, not a blank page",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kasurian.com": {
+  "checked": "2026-10-27T06:35:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "178.128.137.126"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:27Z",
+   "title": "Kasurian",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.kasurian.com/p/rss/",
+     "title": "Kasurian"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.kasurian.com/",
+     "title": "Kasurian"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://www.kasurian.com/webmentions/receive/"
+  }
+ },
+ "katharostones.com": {
+  "checked": "2026-10-27T06:35:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:30Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "kathkeating.com": {
+  "checked": "2026-10-27T06:35:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.17.188",
+    "172.67.178.20"
+   ],
+   "aaaa": [
+    "2606:4700:3033::6815:11bc",
+    "2606:4700:3033::ac43:b214"
+   ],
+   "cname": null,
+   "ns": [
+    "david.ns.cloudflare.com",
+    "kara.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:31Z",
+   "title": "Kathy Keating › Technology Advisor for CEOs and Boards",
+   "generator": "All in One SEO Pro (AIOSEO) 5.0.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kathkeating.com/feed/",
+     "title": "Kathy Keating » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://kathkeating.com/comments/feed/",
+     "title": "Kathy Keating » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "katiefloyd.com": {
+  "checked": "2026-10-27T06:35:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "launch1.spaceship.net",
+    "launch2.spaceship.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:35Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "keavy.com": {
+  "checked": "2026-10-27T06:35:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple-edge.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple-edge.io",
+    "ns4.dnsimple-edge.org"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:35Z",
+   "title": "Hello. - Keavy McMinn",
+   "generator": null,
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -184,6 +1026,115 @@
    "webmention": null
   }
  },
+ "keepcalm-o-matic.co.uk": {
+  "checked": "2026-10-27T06:35:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.61.63",
+    "172.67.206.189"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:3d3f",
+    "2606:4700:3033::ac43:cebd"
+   ],
+   "cname": null,
+   "ns": [
+    "kia.ns.cloudflare.com",
+    "mark.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:39Z",
+   "title": "Sunsetting the Keep Calm-o-Matic - Reincubate",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://reincubate.com/rss/",
+     "title": "Reincubate Blog RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "keepsolid.com": {
+  "checked": "2026-10-27T06:35:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.66.135.10",
+    "172.66.139.225"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "hope.ns.cloudflare.com",
+    "lakas.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:41Z",
+   "title": "Cybersecurity Products and Tools",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kehlfamily.com": {
+  "checked": "2026-10-27T06:35:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1418.awsdns-49.org",
+    "ns-1955.awsdns-52.co.uk",
+    "ns-606.awsdns-11.net",
+    "ns-8.awsdns-01.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:44Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
  "kellanem.com": {
   "checked": "2026-10-24T06:39:14Z",
   "method": "enrich_hosts",
@@ -223,6 +1174,161 @@
     }
    ],
    "hcard": true,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kellblog.com": {
+  "checked": "2026-10-27T06:35:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "178.128.137.126"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns33.domaincontrol.com",
+    "ns34.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:44Z",
+   "title": "Kellblog",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.kellblog.com/rss/",
+     "title": "Kellblog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://www.kellblog.com/webmentions/receive/"
+  }
+ },
+ "kenhub.github.io": {
+  "checked": "2026-10-27T06:35:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:48Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "kenkantzer.com": {
+  "checked": "2026-10-27T06:35:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.1.189",
+    "172.67.129.217"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:81d9",
+    "2606:4700:3032::6815:1bd"
+   ],
+   "cname": null,
+   "ns": [
+    "dina.ns.cloudflare.com",
+    "yahir.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:50Z",
+   "title": "Ken Kantzer's Blog - logging my thoughts on technology, security & management",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kenkantzer.com/feed/",
+     "title": "Ken Kantzer's Blog » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://kenkantzer.com/comments/feed/",
+     "title": "Ken Kantzer's Blog » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kennethreitz.com": {
+  "checked": "2026-10-27T06:35:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "103.224.212.142"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.abovedomains.com",
+    "ns2.abovedomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:55Z",
+   "title": "kennethreitz.com",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
    "rel_me": [],
    "webmention": null
   }
@@ -286,6 +1392,89 @@
    "checked": "2026-10-24T05:52:54Z"
   }
  },
+ "kensegall.com": {
+  "checked": "2026-10-27T06:35:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.10",
+    "141.193.213.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "barbara.ns.cloudflare.com",
+    "lars.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:56Z",
+   "title": "Ken Segall | Truth, Justice & Simplicity",
+   "generator": "Divi Child v.1.0.1",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kensegall.com/feed/",
+     "title": "Ken Segall » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://kensegall.com/comments/feed/",
+     "title": "Ken Segall » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kermankohli.substack.com": {
+  "checked": "2026-10-27T06:35:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:35:59Z",
+   "title": "Kerman Kohli | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kermankohli.substack.com/feed",
+     "title": "Kerman Kohli"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "kernest.com": {
   "checked": "2026-10-24T05:57:37Z",
   "method": "enrich_hosts",
@@ -320,6 +1509,265 @@
    "hcard": false,
    "rel_me": [],
    "webmention": null
+  }
+ },
+ "keunwoo.com": {
+  "checked": "2026-10-27T06:36:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "44.225.89.241"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-c1.googledomains.com",
+    "ns-cloud-c2.googledomains.com",
+    "ns-cloud-c3.googledomains.com",
+    "ns-cloud-c4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:36:02Z",
+   "title": "Keunwoo Lee's Minimum Viable Homepage",
+   "generator": "Hugo 0.115.0-DEV",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://keunwoo.com/feed.atom",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://indieweb.social/@keunwoo"
+   ],
+   "webmention": null
+  }
+ },
+ "kevan.org": {
+  "checked": "2026-10-27T06:36:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "80.208.230.242"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "bark.bocks.com",
+    "wood.bocks.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:36:05Z",
+   "title": "kevan dot org",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kevinboone.me": {
+  "checked": "2026-10-27T06:36:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.uk2.net",
+    "dns2.uk2.net",
+    "dns3.uk2.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:36:12Z",
+   "title": "Kevin Boone: Home page",
+   "generator": null,
+   "feeds": [],
+   "hcard": true,
+   "rel_me": [
+    "https://kevinboone.me",
+    "https://github.com/kevinboone"
+   ],
+   "webmention": "https://webmention.io/kevinboone.me/webmention"
+  }
+ },
+ "kevinharder.com": {
+  "checked": "2026-10-27T06:36:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "20.80.156.48"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:36:14Z",
+   "title": "Kevin Harder | Software Engineer",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kevinjennings.com": {
+  "checked": "2026-10-27T06:36:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.185.56.175"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.iwantmyname.com",
+    "dns2.iwantmyname.com",
+    "dns3.iwantmyname.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'kevinjennings.com'"
+  },
+  "home": {
+   "checked": "2026-10-27T06:36:18Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'kevinjennings.com'"
+  }
+ },
+ "kevo.net": {
+  "checked": "2026-10-27T06:36:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.190.63.222"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.sedoparking.com",
+    "ns2.sedoparking.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "connection reset"
+  },
+  "home": {
+   "checked": "2026-10-27T06:36:19Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "connection reset"
+  }
+ },
+ "kevquirk.com": {
+  "checked": "2026-10-27T06:36:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "78.46.163.192"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "coco.bunny.net",
+    "kiki.bunny.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:36:21Z",
+   "title": "Kev Quirk",
+   "generator": "Pure Blog",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kevquirk.com/feed",
+     "title": "Kev Quirk RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://fosstodon.org/@kev"
+   ],
+   "webmention": "https://kevquirk.com/comments/api/webmention"
   }
  },
  "keybase.io": {
@@ -358,6 +1806,211 @@
   },
   "rdap": null,
   "rdap_error": "no RDAP service for .io"
+ },
+ "keygen.sh": {
+  "checked": "2026-10-27T06:36:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.12.182",
+    "104.26.13.182",
+    "172.67.73.37"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:cb6",
+    "2606:4700:20::681a:db6",
+    "2606:4700:20::ac43:4925"
+   ],
+   "cname": null,
+   "ns": [
+    "abby.ns.cloudflare.com",
+    "burt.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:36:25Z",
+   "title": "Software Licensing and Distribution API - Keygen",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "keynoteuser.com": {
+  "checked": "2026-10-27T06:36:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "72.52.196.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.peathosting.com",
+    "ns2.peathosting.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:36:28Z",
+   "title": "Peat Creative - KeynoteUser.com",
+   "generator": "MYOB",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kfirlavi.com": {
+  "checked": "2026-10-27T06:36:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.247.81.99"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.parkingcrew.net",
+    "ns2.parkingcrew.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:36:32Z",
+   "title": "kfirlavi.com",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kgbook.org": {
+  "checked": "2026-10-27T06:36:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "x.ns.joker.com",
+    "y.ns.joker.com",
+    "z.ns.joker.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:36:34Z",
+   "title": "Knowledge Graphs",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "khan.github.io": {
+  "checked": "2026-10-27T06:36:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:36:36Z",
+   "title": "Open Source – Khan Academy",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "khulaproject.com": {
+  "checked": "2026-10-27T06:36:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T06:36:38Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
  },
  "kickstarter.com": {
   "checked": "2026-10-24T05:31:40Z",
@@ -409,6 +2062,389 @@
    "checked": "2026-10-24T05:31:40Z"
   }
  },
+ "kickstarter.engineering": {
+  "checked": "2026-10-27T06:36:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.0.16.118",
+    "52.1.119.170",
+    "52.1.147.205",
+    "52.1.173.203",
+    "52.4.38.70",
+    "52.4.145.119",
+    "52.4.175.111",
+    "52.4.225.124",
+    "52.4.240.221",
+    "52.5.181.79",
+    "52.6.3.192",
+    "52.6.46.142"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1009.awsdns-62.net",
+    "ns-1374.awsdns-43.org",
+    "ns-1611.awsdns-09.co.uk",
+    "ns-187.awsdns-23.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-27T06:36:38Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "kidblog.org": {
+  "checked": "2026-10-27T06:42:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.36.158.100"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1025.awsdns-00.org",
+    "ns-1937.awsdns-50.co.uk",
+    "ns-298.awsdns-37.com",
+    "ns-766.awsdns-31.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:42:41Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kidscodecamp.com": {
+  "checked": "2026-10-27T06:42:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.248.169.48",
+    "76.223.54.146"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.afternic.com",
+    "ns2.afternic.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:42:43Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kieranhealy.org": {
+  "checked": "2026-10-27T06:42:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "173.236.141.10"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:42:45Z",
+   "title": "kieranhealy.org",
+   "generator": "Hugo 0.168.0 with theme even",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kieranhealy.org/index.xml",
+     "title": "kieranhealy.org"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@kjhealy"
+   ],
+   "webmention": null
+  }
+ },
+ "kimmoir.blog": {
+  "checked": "2026-10-27T06:42:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.24",
+    "192.0.78.25"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:42:48Z",
+   "title": "Built to Run – Wrangling distributed systems with a side order of pancakes",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kimmoir.blog/feed/",
+     "title": "Built to Run » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://kimmoir.blog/comments/feed/",
+     "title": "Built to Run » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kingjamesprogramming.tumblr.com": {
+  "checked": "2026-10-27T06:42:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "74.114.154.18",
+    "74.114.154.22"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-27T06:42:51Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "kirby.kevinson.org": {
+  "checked": "2026-10-27T06:42:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "103.224.182.253"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.abovedomains.com",
+    "ns2.abovedomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:42:53Z",
+   "title": "kevinson.org",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kirklennon.com": {
+  "checked": "2026-10-27T06:42:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.131.45.203"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:42:55Z",
+   "title": "Kirk Lennon",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@kirklennon"
+   ],
+   "webmention": null
+  }
+ },
+ "kiro.dev": {
+  "checked": "2026-10-27T06:42:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "99.84.203.31",
+    "99.84.203.55",
+    "99.84.203.62",
+    "99.84.203.71"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1033.awsdns-01.org",
+    "ns-126.awsdns-15.com",
+    "ns-1887.awsdns-43.co.uk",
+    "ns-773.awsdns-32.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:42:58Z",
+   "title": "Kiro: Move beyond AI coding to agentic engineering",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kitbashed.com": {
+  "checked": "2026-10-27T06:43:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.49.23.144",
+    "198.49.23.145",
+    "198.185.159.144",
+    "198.185.159.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p06.nsone.net",
+    "dns2.p06.nsone.net",
+    "dns3.p06.nsone.net",
+    "dns4.p06.nsone.net",
+    "ns01.squarespacedns.com",
+    "ns02.squarespacedns.com",
+    "ns03.squarespacedns.com",
+    "ns04.squarespacedns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:01Z",
+   "title": "Kitbashed - The Origins of Star Wars",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kitbashed.com/blog?format=rss",
+     "title": "RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "kitchensoap.com": {
   "checked": "2026-10-24T05:57:39Z",
   "method": "enrich_hosts",
@@ -450,6 +2486,82 @@
    "hcard": false,
    "rel_me": [],
    "webmention": null
+  }
+ },
+ "kitklarenberg.substack.com": {
+  "checked": "2026-10-27T06:43:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:03Z",
+   "title": "Global Delinquents | Kit Klarenberg | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.kitklarenberg.com/feed",
+     "title": "Global Delinquents"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kiva.org": {
+  "checked": "2026-10-27T06:43:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.82.9.206",
+    "44.237.51.127",
+    "52.25.80.105"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1401.awsdns-47.org",
+    "ns-1628.awsdns-11.co.uk",
+    "ns-467.awsdns-58.com",
+    "ns-823.awsdns-38.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:06Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
   }
  },
  "kk.org": {
@@ -548,6 +2660,150 @@
    "webmention": null
   }
  },
+ "klein.com": {
+  "checked": "2026-10-27T06:43:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "51.195.228.252"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.name-services.com",
+    "dns2.name-services.com",
+    "dns3.name-services.com",
+    "dns4.name-services.com",
+    "dns5.name-services.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:08Z",
+   "title": "Advanced Sonar Imaging for Hydrographic, Offshore & Military Applications - Klein Marine Systems",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "klinger.io": {
+  "checked": "2026-10-27T06:43:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.36.158.100"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.easyname.eu",
+    "ns2.easyname.eu"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:12Z",
+   "title": "Andreas Klinger",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://klinger.io/rss.xml",
+     "title": "RSS feed for blog posts"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "klout.com": {
+  "checked": "2026-10-27T06:43:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.251.168",
+    "15.197.225.128"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns25.domaincontrol.com",
+    "ns26.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:15Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
+  }
+ },
+ "knowledgetrain.co.uk": {
+  "checked": "2026-10-27T06:43:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.91.104",
+    "172.67.215.157"
+   ],
+   "aaaa": [
+    "2606:4700:3037::6815:5b68",
+    "2606:4700:3037::ac43:d79d"
+   ],
+   "cname": null,
+   "ns": [
+    "cleo.ns.cloudflare.com",
+    "laila.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:19Z",
+   "title": "Professional Training and Certification | Knowledge Train",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "knowyourcompany.com": {
   "checked": "2026-10-24T06:39:20Z",
   "method": "enrich_hosts",
@@ -622,6 +2878,364 @@
    "webmention": null
   }
  },
+ "kobikobi.wordpress.com": {
+  "checked": "2026-10-27T06:43:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.12",
+    "192.0.78.13"
+   ],
+   "aaaa": [],
+   "cname": "lb.wordpress.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:21Z",
+   "title": "Kobi's Blog | Programming related things.",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kobikobi.wordpress.com/feed/",
+     "title": "Kobi's Blog » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://kobikobi.wordpress.com/comments/feed/",
+     "title": "Kobi's Blog » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kocienda.micro.blog": {
+  "checked": "2026-10-27T06:43:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.200.22.214"
+   ],
+   "aaaa": [
+    "2600:3c00:1::68c8:16d6"
+   ],
+   "cname": "nb-104-200-22-214.dallas.nodebalancer.linode.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:24Z",
+   "title": "Ken Kocienda",
+   "generator": "Hugo 0.54.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kocienda.micro.blog/feed.xml",
+     "title": "Ken Kocienda"
+    },
+    {
+     "type": "rss",
+     "url": "https://kocienda.micro.blog/podcast.xml",
+     "title": "Podcast"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://micro.blog/kocienda"
+   ],
+   "webmention": "https://micro.blog/webmention"
+  }
+ },
+ "kodapp.com": {
+  "checked": "2026-10-27T06:43:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.0.215.116"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.namecheaphosting.com",
+    "dns2.namecheaphosting.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:27Z",
+   "title": "Situs Slot Gacor 4D & Link Slot Gacor Malam ini Jamin Gacor",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "koi.security": {
+  "checked": "2026-10-27T06:43:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.202.211.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "kip.ns.cloudflare.com",
+    "pearl.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:30Z",
+   "title": "Cortex Agentic Endpoint Security - Palo Alto Networks",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "koingosw.com": {
+  "checked": "2026-10-27T06:43:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "74.208.133.173"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.koingosw.com",
+    "ns2.koingosw.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:33Z",
+   "title": "Koingo Software, Inc.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "koinly.io": {
+  "checked": "2026-10-27T06:43:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.44.180",
+    "172.66.163.123"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:2cb4",
+    "2606:4700:10::ac42:a37b"
+   ],
+   "cname": null,
+   "ns": [
+    "gail.ns.cloudflare.com",
+    "jay.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:34Z",
+   "title": "Koinly: Free Crypto Tax Software",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kolor.com": {
+  "checked": "2026-10-27T06:43:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "44.228.255.67",
+    "44.230.37.159",
+    "44.239.142.136",
+    "44.241.200.138"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1319.awsdns-36.org",
+    "ns-1573.awsdns-04.co.uk",
+    "ns-171.awsdns-21.com",
+    "ns-638.awsdns-15.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:37Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "komments.cloud": {
+  "checked": "2026-10-27T06:43:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "78.46.162.15"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:40Z",
+   "title": "Welcome to Komments",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "komoroske.com": {
+  "checked": "2026-10-27T06:43:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.119.201.3"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-d1.googledomains.com",
+    "ns-cloud-d2.googledomains.com",
+    "ns-cloud-d3.googledomains.com",
+    "ns-cloud-d4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:43Z",
+   "title": "Alex Komoroske",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "konstellations.kernest.com": {
+  "checked": "2026-10-27T06:43:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.223.25.84",
+    "54.243.117.197"
+   ],
+   "aaaa": [
+    "2600:1f18:4ae:c605:dd5d:b838:5816:d7fb",
+    "2600:1f18:4ae:c606:78d4:4260:db4e:aeee"
+   ],
+   "cname": "traff-https.hugedomains.com",
+   "ns": [
+    "nsg1.namebrightdns.com",
+    "nsg2.namebrightdns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:46Z",
+   "title": "Kernest.com is for sale | HugeDomains",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "kotaku.com": {
   "checked": "2026-10-24T06:39:27Z",
   "method": "enrich_hosts",
@@ -659,6 +3273,48 @@
      "type": "rss",
      "url": "https://kotaku.com/feed",
      "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "koto.dev": {
+  "checked": "2026-10-27T06:43:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.22.130",
+    "172.67.205.19"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:1682",
+    "2606:4700:3033::ac43:cd13"
+   ],
+   "cname": null,
+   "ns": [
+    "maria.ns.cloudflare.com",
+    "mario.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:48Z",
+   "title": "Koto Programming Language",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://koto.dev/atom.xml",
+     "title": "Feed"
     }
    ],
    "hcard": false,
@@ -790,6 +3446,82 @@
    "webmention": null
   }
  },
+ "kqed.org": {
+  "checked": "2026-10-27T06:43:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.244.210.32"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1040.awsdns-02.org",
+    "ns-151.awsdns-18.com",
+    "ns-2012.awsdns-59.co.uk",
+    "ns-848.awsdns-42.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:51Z",
+   "title": "KQED | News, Radio, Podcasts, TV | Public Media for Northern California",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://ww2.kqed.org/news/feed/",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "krakend.io": {
+  "checked": "2026-10-27T06:43:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.91.40",
+    "172.67.209.134"
+   ],
+   "aaaa": [
+    "2606:4700:3034::ac43:d186",
+    "2606:4700:3036::6815:5b28"
+   ],
+   "cname": null,
+   "ns": [
+    "bradley.ns.cloudflare.com",
+    "teresa.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:56Z",
+   "title": "High-performance Open Source API Gateway | KrakenD",
+   "generator": "Hugo 0.158.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "krebsonsecurity.com": {
   "checked": "2026-10-23T21:27:16Z",
   "method": "enrich_hosts",
@@ -835,6 +3567,201 @@
    "checked": "2026-10-23T21:27:16Z"
   }
  },
+ "kristoff.it": {
+  "checked": "2026-10-27T06:43:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns81.domaincontrol.com",
+    "ns82.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:43:59Z",
+   "title": "Home | Loris Cro's Blog",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "krugazor.free.fr": {
+  "checked": "2026-10-27T06:44:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "212.27.63.102"
+   ],
+   "aaaa": [
+    "2a01:e0c:1:1597::102"
+   ],
+   "cname": "perso102-g5.free.fr",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "network: No route to host"
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:01Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "network: No route to host"
+  }
+ },
+ "krugman.blogs.nytimes.com": {
+  "checked": "2026-10-27T06:44:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.164",
+    "151.101.65.164",
+    "151.101.129.164",
+    "151.101.193.164"
+   ],
+   "aaaa": [],
+   "cname": "blogs.nytimes.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:03Z",
+   "title": "Economics and Politics by Paul Krugman - The Conscience of a Liberal - The New York Times",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kryptosign.io": {
+  "checked": "2026-10-27T06:44:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:05Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "kstp.com": {
+  "checked": "2026-10-27T06:44:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.185.0.4"
+   ],
+   "aaaa": [
+    "2620:12a:8000::4",
+    "2620:12a:8001::4"
+   ],
+   "cname": null,
+   "ns": [
+    "pdns01.domaincontrol.com",
+    "pdns02.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:05Z",
+   "title": "5 EYEWITNESS NEWS - KSTP.com 5 Eyewitness News",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kubbmilwaukee.com": {
+  "checked": "2026-10-27T06:44:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:09Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
  "kubbon.com": {
   "checked": "2026-10-24T06:08:47Z",
   "method": "enrich_hosts",
@@ -878,6 +3805,132 @@
    "webmention": null
   }
  },
+ "kubbtour.ch": {
+  "checked": "2026-10-27T06:44:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "80.74.148.149"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns.hostorama.com",
+    "ns2.hostorama.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:09Z",
+   "title": "Fabelhaftes Fislisbach: Von Falschen Hasen, weissen Walen und unsterblichen Legenden - kubbtour.ch",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kubbunited.com": {
+  "checked": "2026-10-27T06:44:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.49.23.144",
+    "198.49.23.145",
+    "198.185.159.144",
+    "198.185.159.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p01.nsone.net",
+    "dns2.p01.nsone.net",
+    "dns3.p01.nsone.net",
+    "dns4.p01.nsone.net",
+    "ns01.squarespacedns.com",
+    "ns02.squarespacedns.com",
+    "ns03.squarespacedns.com",
+    "ns04.squarespacedns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:15Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "kube.io": {
+  "checked": "2026-10-27T06:44:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.1.236",
+    "172.67.152.148"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:9894",
+    "2606:4700:3034::6815:1ec"
+   ],
+   "cname": null,
+   "ns": [
+    "kip.ns.cloudflare.com",
+    "venus.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:16Z",
+   "title": "KUBE — Software & Design",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kube.io/rss.xml",
+     "title": "kube.io — Blog"
+    },
+    {
+     "type": "atom",
+     "url": "https://kube.io/atom.xml",
+     "title": "kube.io — Blog (Atom)"
+    },
+    {
+     "type": "json",
+     "url": "https://kube.io/feed.json",
+     "title": "kube.io — Blog (JSON Feed)"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "kungfugrippe.com": {
   "checked": "2026-10-24T06:39:31Z",
   "method": "enrich_hosts",
@@ -909,6 +3962,90 @@
    "hcard": false,
    "rel_me": [],
    "webmention": null
+  }
+ },
+ "kvz.io": {
+  "checked": "2026-10-27T06:44:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-122.awsdns-15.com",
+    "ns-1517.awsdns-61.org",
+    "ns-1735.awsdns-24.co.uk",
+    "ns-683.awsdns-21.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:18Z",
+   "title": "kvz.io",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kvz.io/feed.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kyefox.com": {
+  "checked": "2026-10-27T06:44:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.31.167",
+    "172.66.161.39"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:1fa7",
+    "2606:4700:10::ac42:a127"
+   ],
+   "cname": null,
+   "ns": [
+    "aragorn.ns.cloudflare.com",
+    "rachel.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:21Z",
+   "title": "Kye Fox",
+   "generator": "Ghost 6.72",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kyefox.com/rss/",
+     "title": "Kye Fox"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://sifa.id/p/kyefox.com"
+   ],
+   "webmention": "https://kyefox.com/webmentions/receive/"
   }
  },
  "kyivindependent.com": {
@@ -1005,6 +4142,162 @@
     "odin.ns.cloudflare.com"
    ],
    "checked": "2026-10-24T05:44:37Z"
+  }
+ },
+ "kyju.org": {
+  "checked": "2026-10-27T06:44:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "78.47.239.202"
+   ],
+   "aaaa": [
+    "2a01:4f8:c0c:6358::1"
+   ],
+   "cname": null,
+   "ns": [
+    "jill.ns.cloudflare.com",
+    "paul.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:23Z",
+   "title": "kyju.org",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kyla.substack.com": {
+  "checked": "2026-10-27T06:44:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:27Z",
+   "title": "Kyla’s Newsletter | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kyla.substack.com/feed",
+     "title": "Kyla’s Newsletter"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kylechayka.substack.com": {
+  "checked": "2026-10-27T06:44:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:29Z",
+   "title": "Kyle Chayka Industries | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kylechayka.substack.com/feed",
+     "title": "Kyle Chayka Industries"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "kyo.iroiro.party": {
+  "checked": "2026-10-27T06:44:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.9.195",
+    "172.67.189.138"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:bd8a",
+    "2606:4700:3037::6815:9c3"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T06:44:32Z",
+   "title": "今日境",
+   "generator": "Nikola (getnikola.com)",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://kyo.iroiro.party/rss.xml",
+     "title": "RSS (zh_cn)"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://github.com/gudzpoz",
+    "https://codeberg.org/gudzpoz",
+    "https://f.iroiro.party/profile/kana",
+    "https://bsky.app/profile/kana.iroiro.party"
+   ],
+   "webmention": "https://webmention.io/kyo.iroiro.party/webmention"
   }
  }
 }

@@ -1,4 +1,81 @@
 {
+ "gabbleapp.com": {
+  "checked": "2026-10-27T05:39:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.223.25.84",
+    "54.243.117.197"
+   ],
+   "aaaa": [
+    "2600:1f18:4ae:c605:dd5d:b838:5816:d7fb",
+    "2600:1f18:4ae:c606:78d4:4260:db4e:aeee"
+   ],
+   "cname": null,
+   "ns": [
+    "nsg1.namebrightdns.com",
+    "nsg2.namebrightdns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  },
+  "home": {
+   "checked": "2026-10-27T05:39:51Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  }
+ },
+ "gabrielsieben.tech": {
+  "checked": "2026-10-27T05:39:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.233.219.49",
+    "172.233.219.78",
+    "172.233.219.123",
+    "172.237.146.8",
+    "172.237.146.25",
+    "172.237.146.38"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.parklogic.com",
+    "ns2.parklogic.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: unable to get local issuer certificate"
+  },
+  "home": {
+   "checked": "2026-10-27T05:39:52Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: unable to get local issuer certificate"
+  }
+ },
  "gabrielweinberg.com": {
   "checked": "2026-10-24T06:27:43Z",
   "method": "enrich_hosts",
@@ -41,6 +118,306 @@
    "webmention": null
   }
  },
+ "galactanet.com": {
+  "checked": "2026-10-27T05:39:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.119.206.253"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:39:54Z",
+   "title": "Galactanet",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "galiglobal.com": {
+  "checked": "2026-10-27T05:39:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.8.96",
+    "172.67.157.69"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:9d45",
+    "2606:4700:3037::6815:860"
+   ],
+   "cname": null,
+   "ns": [
+    "davina.ns.cloudflare.com",
+    "sri.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:39:57Z",
+   "title": "About me",
+   "generator": "generated-from-markdown",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gamasutra.com": {
+  "checked": "2026-10-27T05:40:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.33.97",
+    "172.67.189.130"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:bd82",
+    "2606:4700:3036::6815:2161"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.ubmdns.com",
+    "ns2.ubmdns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:40:00Z",
+   "title": "Game Industry News, Deep Dives, and Interviews | Game Developer",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gamedeveloper.com": {
+  "checked": "2026-10-27T05:40:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.35.113",
+    "172.64.152.143"
+   ],
+   "aaaa": [
+    "2606:4700:4408::ac40:988f",
+    "2a06:98c1:3102::6812:2371"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.ubmdns.com",
+    "ns2.ubmdns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:40:01Z",
+   "title": "Game Industry News, Deep Dives, and Interviews | Game Developer",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gamepolitics.com": {
+  "checked": "2026-10-27T05:40:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.18.199",
+    "172.67.183.80"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:12c7",
+    "2606:4700:3036::ac43:b750"
+   ],
+   "cname": null,
+   "ns": [
+    "mario.ns.cloudflare.com",
+    "ximena.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:40:03Z",
+   "title": "Berita Terkini Kasino & Pertaruhan Dalam Talian 2026 di Malaysia",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://gamepolitics.com/feed/",
+     "title": "Suapan GAMEPOLITICS »"
+    },
+    {
+     "type": "rss",
+     "url": "https://gamepolitics.com/comments/feed/",
+     "title": "Suapan Ulasan GAMEPOLITICS »"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gamma.io": {
+  "checked": "2026-10-27T05:40:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.26.190",
+    "104.18.27.190"
+   ],
+   "aaaa": [
+    "2606:4700::6812:1abe",
+    "2606:4700::6812:1bbe"
+   ],
+   "cname": null,
+   "ns": [
+    "eva.ns.cloudflare.com",
+    "jeff.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:40:07Z",
+   "title": "Gamma | Find & Buy Bitcoin Ordinals and NFTs",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "ganddpub.com": {
+  "checked": "2026-10-27T05:40:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.74.125.2"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns73.domaincontrol.com",
+    "ns74.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:40:10Z",
+   "title": "George and the Dragon",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.ganddpub.com/feed/",
+     "title": "George and the Dragon » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.ganddpub.com/comments/feed/",
+     "title": "George and the Dragon » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gantt.io": {
+  "checked": "2026-10-27T05:40:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.198.79.130",
+    "216.198.79.194"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.vercel-dns.com",
+    "ns2.vercel-dns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:40:13Z",
+   "title": "Create a beautiful Gantt with Gantt.io in no time!",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "gapingvoid.com": {
   "checked": "2026-10-24T06:27:45Z",
   "method": "enrich_hosts",
@@ -72,6 +449,165 @@
    "hcard": false,
    "rel_me": [],
    "webmention": null
+  }
+ },
+ "gapingvoid.streetcards.com": {
+  "checked": "2026-10-27T05:40:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "91.234.184.204"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-27T05:40:16Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "garba.org": {
+  "checked": "2026-10-27T05:40:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.160.249.62",
+    "18.160.249.76",
+    "18.160.249.98",
+    "18.160.249.129"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-134.awsdns-16.com",
+    "ns-1504.awsdns-60.org",
+    "ns-1987.awsdns-56.co.uk",
+    "ns-902.awsdns-48.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:40:47Z",
+   "title": "Ernesto Garbarino",
+   "generator": "Hugo 0.102.3",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "garrettdimon.com": {
+  "checked": "2026-10-27T05:40:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "69.46.46.77"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple-edge.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple-edge.io",
+    "ns4.dnsimple-edge.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:40:50Z",
+   "title": "Garrett Dimon",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://garrettdimon.com/feed",
+     "title": "GarrettDimon.com"
+    },
+    {
+     "type": "rss",
+     "url": "https://garrettdimon.com/feed/posts",
+     "title": "GarrettDimon.com Posts Only"
+    },
+    {
+     "type": "rss",
+     "url": "https://garrettdimon.com/feed/links",
+     "title": "GarrettDimon.com Links Only"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://ruby.social/@garrettdimon",
+    "https://bsky.app/profile/garrettdimon.com",
+    "https://github.com/garrettdimon",
+    "https://speakerdeck.com/garrettdimon",
+    "https://linkedin.com/in/garrettdimon"
+   ],
+   "webmention": null
+  }
+ },
+ "garrick.typerighter.com": {
+  "checked": "2026-10-27T05:40:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.248.169.48",
+    "76.223.54.146"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.afternic.com",
+    "ns2.afternic.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: TLSV1_UNRECOGNIZED_NAME"
+  },
+  "home": {
+   "checked": "2026-10-27T05:40:53Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: TLSV1_UNRECOGNIZED_NAME"
   }
  },
  "garrickvanburen.com": {
@@ -136,6 +672,45 @@
    "checked": "2026-10-24T05:30:16Z"
   }
  },
+ "garron.me": {
+  "checked": "2026-10-27T05:40:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.32.227",
+    "172.67.156.81"
+   ],
+   "aaaa": [
+    "2606:4700:3033::6815:20e3",
+    "2606:4700:3033::ac43:9c51"
+   ],
+   "cname": null,
+   "ns": [
+    "pedro.ns.cloudflare.com",
+    "selah.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:40:55Z",
+   "title": "garron.me — Guillermo Garron",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://twitter.com/ggarron",
+    "https://github.com/ggarron"
+   ],
+   "webmention": null
+  }
+ },
  "gartner.com": {
   "checked": "2026-10-24T06:27:48Z",
   "method": "enrich_hosts",
@@ -173,6 +748,116 @@
    "hcard": false,
    "rel_me": [],
    "webmention": null
+  }
+ },
+ "garymarcus.substack.com": {
+  "checked": "2026-10-27T05:40:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:40:58Z",
+   "title": "Marcus on AI | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://garymarcus.substack.com/feed",
+     "title": "Marcus on AI"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "garyvaynerchuk.com": {
+  "checked": "2026-10-27T05:41:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.150.1.1",
+    "216.150.16.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns57.domaincontrol.com",
+    "ns58.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:41:00Z",
+   "title": "Gary Vaynerchuk | Entrepreneur, Author & Creator",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gas2.org": {
+  "checked": "2026-10-27T05:41:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.73.159",
+    "172.67.163.217"
+   ],
+   "aaaa": [
+    "2606:4700:3035::ac43:a3d9",
+    "2606:4700:3037::6815:499f"
+   ],
+   "cname": null,
+   "ns": [
+    "kirk.ns.cloudflare.com",
+    "lila.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-27T05:41:03Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
   }
  },
  "gatesnotes.com": {
@@ -230,6 +915,46 @@
    "checked": "2026-10-24T05:35:10Z"
   }
  },
+ "gatheringinlight.com": {
+  "checked": "2026-10-27T05:41:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.24.57.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hover.com",
+    "ns2.hover.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:41:36Z",
+   "title": "gathering in light a blog by wess daniels",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://gatheringinlight.com/posts_feed",
+     "title": "gathering in light a blog by wess daniels"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://social.lol/@wess"
+   ],
+   "webmention": null
+  }
+ },
  "gawker.com": {
   "checked": "2026-10-24T05:44:18Z",
   "method": "enrich_hosts",
@@ -280,6 +1005,216 @@
    "checked": "2026-10-24T05:44:18Z"
   }
  },
+ "gazs.github.io": {
+  "checked": "2026-10-27T05:41:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-27T05:41:39Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "gcdataconcepts.com": {
+  "checked": "2026-10-27T05:41:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.185.52.187"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns8295.hostgator.com",
+    "ns8296.hostgator.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:41:40Z",
+   "title": "Home - Gulf Coast Data Concepts",
+   "generator": "All in One SEO (AIOSEO) 5.0.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://gulfcoastdataconcepts.com/index.php/feed/",
+     "title": "Gulf Coast Data Concepts » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://gulfcoastdataconcepts.com/index.php/comments/feed/",
+     "title": "Gulf Coast Data Concepts » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gdcvault.com": {
+  "checked": "2026-10-27T05:41:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.39.216",
+    "172.64.148.40"
+   ],
+   "aaaa": [
+    "2606:4700:4404::ac40:9428",
+    "2a06:98c1:3109::6812:27d8"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.ubmdns.com",
+    "ns2.ubmdns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:41:43Z",
+   "title": "GDC Vault",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gdgt.com": {
+  "checked": "2026-10-27T05:41:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.213.18.2",
+    "54.221.195.107"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1488.awsdns-58.org",
+    "ns-1763.awsdns-28.co.uk",
+    "ns-395.awsdns-49.com",
+    "ns-943.awsdns-53.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:41:44Z",
+   "title": "Engadget | Technology News & Expert Reviews",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.engadget.com/category/news/feed/",
+     "title": "News - Engadget"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.engadget.com/feed/",
+     "title": "RSS 2.0"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gdstechnology.blog.gov.uk": {
+  "checked": "2026-10-27T05:41:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.167.183.9",
+    "3.167.183.28",
+    "3.167.183.89",
+    "3.167.183.128"
+   ],
+   "aaaa": [
+    "2600:9000:2203:1a00:16:702d:4080:93a1",
+    "2600:9000:2203:2600:16:702d:4080:93a1",
+    "2600:9000:2203:2a00:16:702d:4080:93a1",
+    "2600:9000:2203:7200:16:702d:4080:93a1",
+    "2600:9000:2203:8e00:16:702d:4080:93a1",
+    "2600:9000:2203:c000:16:702d:4080:93a1",
+    "2600:9000:2203:c400:16:702d:4080:93a1",
+    "2600:9000:2203:f400:16:702d:4080:93a1"
+   ],
+   "cname": "d108ckuk90sd1e.cloudfront.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:41:47Z",
+   "title": "Technology in government – About digital and technology projects in government.",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://technology.blog.gov.uk/feed/",
+     "title": "Technology in government » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "gearthblog.com": {
   "checked": "2026-10-24T06:07:15Z",
   "method": "enrich_hosts",
@@ -321,6 +1256,224 @@
    "hcard": false,
    "rel_me": [],
    "webmention": null
+  }
+ },
+ "geekandi.com": {
+  "checked": "2026-10-27T05:41:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.10.170",
+    "104.26.11.170",
+    "172.67.75.167"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:aaa",
+    "2606:4700:20::681a:baa",
+    "2606:4700:20::ac43:4ba7"
+   ],
+   "cname": null,
+   "ns": [
+    "brad.ns.cloudflare.com",
+    "karina.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:41:51Z",
+   "title": "Geek and I",
+   "generator": "Astro v7.3.2",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.geekandi.com/rss.xml",
+     "title": "Geek and I"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "geekblog.oneandoneis2.org": {
+  "checked": "2026-10-27T05:41:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "67.20.113.201"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:41:53Z",
+   "title": "Index of /",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "geekchichq.com": {
+  "checked": "2026-10-27T05:41:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.157.56.140"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.brainydns.com",
+    "ns2.brainydns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:41:55Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "geekdesk.com": {
+  "checked": "2026-10-27T05:41:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "208.98.35.208"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.site4now.net",
+    "ns2.site4now.net",
+    "ns3.site4now.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "connection reset"
+  },
+  "home": {
+   "checked": "2026-10-27T05:41:57Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "connection reset"
+  }
+ },
+ "geekitikis.com": {
+  "checked": "2026-10-27T05:41:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.227.38.32"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns33.domaincontrol.com",
+    "ns34.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:41:58Z",
+   "title": "Shop Geeki Tikis® - The Official Geeki Tikis® Online Store – Beeline Creative, Inc.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "geekmonkey.org": {
+  "checked": "2026-10-27T05:42:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.3.7",
+    "151.101.67.7",
+    "151.101.131.7",
+    "151.101.195.7"
+   ],
+   "aaaa": [
+    "2a04:4e42::775",
+    "2a04:4e42:200::775",
+    "2a04:4e42:400::775",
+    "2a04:4e42:600::775"
+   ],
+   "cname": null,
+   "ns": [
+    "dave.ns.cloudflare.com",
+    "lara.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:42:02Z",
+   "title": "geekmonkey",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://geekmonkey.org/rss/",
+     "title": "geekmonkey"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://geekmonkey.org/webmentions/receive/"
   }
  },
  "geekwire.com": {
@@ -365,6 +1518,200 @@
    "webmention": null
   }
  },
+ "gekk.info": {
+  "checked": "2026-10-27T05:42:04Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "173.236.252.210"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:42:04Z",
+   "title": "cathode ray dude dot com",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "genehughson.wordpress.com": {
+  "checked": "2026-10-27T05:42:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.12",
+    "192.0.78.13"
+   ],
+   "aaaa": [],
+   "cname": "lb.wordpress.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:42:06Z",
+   "title": "Form Follows Function | All Things Architectural",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://genehughson.wordpress.com/feed/",
+     "title": "Form Follows Function » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://genehughson.wordpress.com/comments/feed/",
+     "title": "Form Follows Function » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "genengnews.com": {
+  "checked": "2026-10-27T05:42:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.20",
+    "141.193.213.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "amy.ns.cloudflare.com",
+    "leonidas.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:42:09Z",
+   "title": "Homepage - GEN - Genetic Engineering and Biotechnology News",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.genengnews.com/feed/",
+     "title": "GEN - Genetic Engineering and Biotechnology News » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.genengnews.com/comments/feed/",
+     "title": "GEN - Genetic Engineering and Biotechnology News » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "generalcompression.com": {
+  "checked": "2026-10-27T05:42:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.69.232",
+    "172.67.215.111"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:d76f",
+    "2606:4700:3034::6815:45e8"
+   ],
+   "cname": null,
+   "ns": [
+    "marge.ns.cloudflare.com",
+    "seamus.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:42:14Z",
+   "title": "Ufabet - Ufa Login",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "generativist.falsifiable.com": {
+  "checked": "2026-10-27T05:42:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.62.162",
+    "172.67.137.22"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:8916",
+    "2606:4700:3036::6815:3ea2"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:42:15Z",
+   "title": "Johnny Nelson",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://angel.co/u/generativist",
+    "https://www.blockchain.com/btc/address/3JXXs3hj3dr7GJytReJrnFTgsP7oNFKBD2",
+    "https://github.com/jbn",
+    "https://gitlab.com/generativist",
+    "https://twitter.com/generativist",
+    "https://generativist.com"
+   ],
+   "webmention": null
+  }
+ },
  "geni.com": {
   "checked": "2026-10-24T06:27:54Z",
   "method": "enrich_hosts",
@@ -394,6 +1741,802 @@
    "checked": "2026-10-24T06:27:54Z",
    "title": "Join the World Family Tree - Geni.com",
    "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "genius.cat-v.org": {
+  "checked": "2026-10-27T05:42:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "168.235.104.38"
+   ],
+   "aaaa": [],
+   "cname": "cat-v.org",
+   "ns": [],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'genius.cat-v.org'"
+  },
+  "home": {
+   "checked": "2026-10-27T05:42:18Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'genius.cat-v.org'"
+  }
+ },
+ "gentlydownthe.stream": {
+  "checked": "2026-10-27T05:42:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.90.37",
+    "172.67.152.109"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:986d",
+    "2606:4700:3035::6815:5a25"
+   ],
+   "cname": null,
+   "ns": [
+    "carla.ns.cloudflare.com",
+    "kyree.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:42:20Z",
+   "title": "Gently Down the Stream",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "geocoder.us": {
+  "checked": "2026-10-27T05:42:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "SERVFAIL"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T05:42:22Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "geoffreylitt.com": {
+  "checked": "2026-10-27T05:42:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p05.nsone.net",
+    "dns2.p05.nsone.net",
+    "dns3.p05.nsone.net",
+    "dns4.p05.nsone.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:42:55Z",
+   "title": "Geoffrey Litt",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@geoffreylitt"
+   ],
+   "webmention": null
+  }
+ },
+ "geography.about.com": {
+  "checked": "2026-10-27T05:42:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T05:42:59Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "geon.github.io": {
+  "checked": "2026-10-27T05:42:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:42:59Z",
+   "title": "Hello World! | geon",
+   "generator": "Jekyll v3.10.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "george.hotell.ing": {
+  "checked": "2026-10-27T05:43:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.200.22.214"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:02Z",
+   "title": "George Hotelling",
+   "generator": "Hugo 0.91.2",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://george.hotell.ing/feed.xml",
+     "title": "George Hotelling"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://micro.blog/george",
+    "https://github.com/georgeh"
+   ],
+   "webmention": "https://micro.blog/webmention"
+  }
+ },
+ "georgemauer.net": {
+  "checked": "2026-10-27T05:43:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8002::153"
+   ],
+   "cname": null,
+   "ns": [
+    "ns27.domaincontrol.com",
+    "ns28.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:05Z",
+   "title": "George Mauer's Blog",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://georgemauer.net/rss.xml",
+     "title": "Oh, thoughts, you know"
+    },
+    {
+     "type": "atom",
+     "url": "https://georgemauer.net/atom.xml",
+     "title": "Oh, thoughts, you know"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "georgepsarakis.github.io": {
+  "checked": "2026-10-27T05:43:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:07Z",
+   "title": "George Psarakis - Thoughts on Software Engineering | Personal Blog & Presentation Slides",
+   "generator": "Jekyll v3.7.3",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "geospatialelucubrations.blogspot.com": {
+  "checked": "2026-10-27T05:43:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.41.65"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:815::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:10Z",
+   "title": "Geospatial Elucubrations",
+   "generator": "blogger",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://geospatialelucubrations.blogspot.com/feeds/posts/default",
+     "title": "Geospatial Elucubrations - Atom"
+    },
+    {
+     "type": "rss",
+     "url": "https://geospatialelucubrations.blogspot.com/feeds/posts/default?alt=rss",
+     "title": "Geospatial Elucubrations - RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://www.blogger.com/profile/17199173181807664396"
+   ],
+   "webmention": null
+  }
+ },
+ "geoutil.com": {
+  "checked": "2026-10-27T05:43:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.7.228",
+    "172.67.188.17"
+   ],
+   "aaaa": [
+    "2606:4700:3036::ac43:bc11",
+    "2606:4700:3037::6815:7e4"
+   ],
+   "cname": null,
+   "ns": [
+    "dell.ns.cloudflare.com",
+    "vicky.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:12Z",
+   "title": "GeoUtil — Free Online Map & Geography Tools",
+   "generator": "VitePress v1.6.4",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gephi.github.io": {
+  "checked": "2026-10-27T05:43:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:15Z",
+   "title": "Gephi: Open-Source Network Visualization and Analysis Software",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gerred.github.io": {
+  "checked": "2026-10-27T05:43:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:19Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "gerrit.wikimedia.org": {
+  "checked": "2026-10-27T05:43:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "208.80.154.225"
+   ],
+   "aaaa": [
+    "2620:0:861:ed1a::2"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:20Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gerrithub.io": {
+  "checked": "2026-10-27T05:43:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "95.216.78.153",
+    "144.217.182.195",
+    "192.99.233.76"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1168.awsdns-18.org",
+    "ns-2031.awsdns-61.co.uk",
+    "ns-59.awsdns-07.com",
+    "ns-849.awsdns-42.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:23Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gerrymcgovern.com": {
+  "checked": "2026-10-27T05:43:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "78.153.209.41"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.blacknightdns.com",
+    "ns2.blacknightdns.com",
+    "ns3.blacknightdns.com",
+    "ns4.blacknightdns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:25Z",
+   "title": "Gerry McGovern",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://gerrymcgovern.com/feed/",
+     "title": "Gerry McGovern » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getalby.com": {
+  "checked": "2026-10-27T05:43:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.4.112",
+    "104.26.5.112",
+    "172.67.72.39"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:470",
+    "2606:4700:20::681a:570",
+    "2606:4700:20::ac43:4827"
+   ],
+   "cname": null,
+   "ns": [
+    "bill.ns.cloudflare.com",
+    "paislee.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:30Z",
+   "title": "Alby — Bitcoin Lightning Wallets & Tools",
+   "generator": "Framer 56ce7df",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getbatterybox.com": {
+  "checked": "2026-10-27T05:43:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.227.38.32"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:33Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "getbigmail.com": {
+  "checked": "2026-10-27T05:43:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.67.129",
+    "172.67.223.22"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:df16",
+    "2606:4700:3034::6815:4381"
+   ],
+   "cname": null,
+   "ns": [
+    "fred.ns.cloudflare.com",
+    "michelle.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:35Z",
+   "title": "Big Mail",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getblogging.org": {
+  "checked": "2026-10-27T05:43:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "67.207.95.217"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:38Z",
+   "title": "Get Blogging!",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://werd.io"
+   ],
+   "webmention": null
+  }
+ },
+ "getboom.app": {
+  "checked": "2026-10-27T05:43:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.54.44",
+    "172.67.223.149"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:df95",
+    "2606:4700:3037::6815:362c"
+   ],
+   "cname": null,
+   "ns": [
+    "drew.ns.cloudflare.com",
+    "tessa.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:41Z",
+   "title": "Boom for Mac: Present & Record Like a Pro",
+   "generator": "Framer bc931d3",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getbootstrap.com": {
+  "checked": "2026-10-27T05:43:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.26.6",
+    "172.66.169.22"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:1a06",
+    "2606:4700:10::ac42:a916"
+   ],
+   "cname": null,
+   "ns": [
+    "iris.ns.cloudflare.com",
+    "tom.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:43Z",
+   "title": "Bootstrap · The most popular HTML, CSS, and JS library in the world.",
+   "generator": "Astro v7.3.2",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -437,6 +2580,565 @@
    "webmention": null
   }
  },
+ "getcloak.com": {
+  "checked": "2026-10-27T05:43:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.16.219",
+    "104.18.17.219"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1000.awsdns-61.net",
+    "ns-1111.awsdns-10.org",
+    "ns-1746.awsdns-26.co.uk",
+    "ns-271.awsdns-33.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:46Z",
+   "title": "The Super Simple VPN You Can Trust | Encrypt.me",
+   "generator": "All in One SEO (AIOSEO) 5.0.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://encrypt.me/feed/",
+     "title": "Encrypt.me » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://encrypt.me/comments/feed/",
+     "title": "Encrypt.me » Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://encrypt.me/sample-page/feed/",
+     "title": "Encrypt.me » Home Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getcocoon.com": {
+  "checked": "2026-10-27T05:43:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.236.191.187"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1369.awsdns-43.org",
+    "ns-1577.awsdns-05.co.uk",
+    "ns-167.awsdns-20.com",
+    "ns-953.awsdns-55.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-27T05:43:49Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "getcommandpost.com": {
+  "checked": "2026-10-27T05:44:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.198.107.254"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns55.domaincontrol.com",
+    "ns56.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:44:20Z",
+   "title": "CommandPost | Managed Social Media Solutions",
+   "generator": "Powered by LayerSlider 6.11.1 - Multi-Purpose, Responsive, Parallax, Mobile-Friendly Slider Plugin for WordPress.",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://getcommandpost.com/feed/",
+     "title": "CommandPost Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getdice.co.uk": {
+  "checked": "2026-10-27T05:44:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.49.23.144",
+    "198.49.23.145",
+    "198.185.159.144",
+    "198.185.159.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p08.nsone.net",
+    "dns2.p08.nsone.net",
+    "dns3.p08.nsone.net",
+    "dns4.p08.nsone.net",
+    "ns01.squarespacedns.com",
+    "ns02.squarespacedns.com",
+    "ns03.squarespacedns.com",
+    "ns04.squarespacedns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:44:24Z",
+   "title": "DICE",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getdoxie.com": {
+  "checked": "2026-10-27T05:44:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.202.211.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.messagingengine.com",
+    "ns2.messagingengine.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:44:26Z",
+   "title": "Doxie Scanners — Ultra-Portable & Desktop-Ready Document Scanners",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getdweb.net": {
+  "checked": "2026-10-27T05:44:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.80.104",
+    "172.67.177.226"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:5068",
+    "2606:4700:3031::ac43:b1e2"
+   ],
+   "cname": null,
+   "ns": [
+    "abdullah.ns.cloudflare.com",
+    "sue.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:44:29Z",
+   "title": "DWeb",
+   "generator": "Gatsby 5.4.2",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://bsky.app/profile/getdweb.net",
+    "https://social.coop/@dweb",
+    "https://matrix.to/#/#getdweb:getdweb.net",
+    "https://discord.com/invite/mnH7Bj4PWC",
+    "https://twitter.com/GETDWeb",
+    "https://medium.com/decentralized-web",
+    "https://gitlab.com/getdweb"
+   ],
+   "webmention": null
+  }
+ },
+ "getfleek.dev": {
+  "checked": "2026-10-27T05:44:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.88.228",
+    "172.67.153.181"
+   ],
+   "aaaa": [
+    "2606:4700:3035::ac43:99b5",
+    "2606:4700:3037::6815:58e4"
+   ],
+   "cname": null,
+   "ns": [
+    "bart.ns.cloudflare.com",
+    "jocelyn.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:44:30Z",
+   "title": "Gamespools : Rekomendasi Situs Apk Slot Resmi & Game Gates Of Olympus 2500",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getgrist.com": {
+  "checked": "2026-10-27T05:44:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "194.1.147.9",
+    "194.1.147.31"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1048.awsdns-03.org",
+    "ns-1624.awsdns-11.co.uk",
+    "ns-377.awsdns-47.com",
+    "ns-754.awsdns-30.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:44:33Z",
+   "title": "Spreadsheet Software to End Data Chaos | Grist",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gethttpsforfree.com": {
+  "checked": "2026-10-27T05:44:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.3.229.201"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:44:35Z",
+   "title": "Get HTTPS for free!",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "geti2p.net": {
+  "checked": "2026-10-27T05:44:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "81.7.7.63"
+   ],
+   "aaaa": [
+    "2a02:180:2:c1:81:7:7:63"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.dedus0.airmass1.net",
+    "dns3.denue3.conemu.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:44:38Z",
+   "title": "I2P - The Invisible Internet Project | EN",
+   "generator": "Hugo 0.147.8",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://i2p.net/en/index.xml",
+     "title": "I2P - The Invisible Internet Project"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getlago.com": {
+  "checked": "2026-10-27T05:44:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.8.27.23",
+    "65.8.27.65",
+    "65.8.27.81",
+    "65.8.27.124"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1377.awsdns-44.org",
+    "ns-1885.awsdns-43.co.uk",
+    "ns-367.awsdns-45.com",
+    "ns-694.awsdns-22.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:44:44Z",
+   "title": "Lago | Cloud Billing for Usage, Subscriptions and Hybrid Pricing",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getlater.app": {
+  "checked": "2026-10-27T05:44:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.150.1.129",
+    "216.150.1.193"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.vercel-dns.com",
+    "ns2.vercel-dns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:44:47Z",
+   "title": "Later - Save your Mac apps for later",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getlighthouse.com": {
+  "checked": "2026-10-27T05:44:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.5.80",
+    "172.67.133.49"
+   ],
+   "aaaa": [
+    "2606:4700:3034::ac43:8531",
+    "2606:4700:3036::6815:550"
+   ],
+   "cname": null,
+   "ns": [
+    "alla.ns.cloudflare.com",
+    "seth.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:44:49Z",
+   "title": "Lighthouse Lessons - Management training programs for leaders",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getnao.io": {
+  "checked": "2026-10-27T05:44:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.155.160.35"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns75.domaincontrol.com",
+    "ns76.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:44:52Z",
+   "title": "The #1 Open Source Analytics Agent",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getnarrative.com": {
+  "checked": "2026-10-27T05:44:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.6.24.96"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1109.awsdns-10.org",
+    "ns-117.awsdns-14.com",
+    "ns-1775.awsdns-29.co.uk",
+    "ns-628.awsdns-14.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:44:56Z",
+   "title": "The World's Most Wearable HD Video Camera - Narrative Clip 2",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "getoutline.org": {
   "checked": "2026-10-24T06:28:01Z",
   "method": "enrich_hosts",
@@ -470,6 +3172,83 @@
    "feeds": [],
    "hcard": false,
    "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getpocket.com": {
+  "checked": "2026-10-27T05:44:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.160.200.6",
+    "18.160.200.36",
+    "18.160.200.38",
+    "18.160.200.77"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1518.awsdns-61.org",
+    "ns-1605.awsdns-08.co.uk",
+    "ns-351.awsdns-43.com",
+    "ns-704.awsdns-24.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:44:59Z",
+   "title": "Pocket",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getpublii.com": {
+  "checked": "2026-10-27T05:45:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "109.95.156.76"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dhosting.pl",
+    "ns2.dhosting.pl"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:45:09Z",
+   "title": "Publii: Free Open-Source Static CMS for Fast, Secure Websites",
+   "generator": "Publii Open-Source CMS for Static Site",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://getpublii.com/feed.xml",
+     "title": "Publii - free open-source static CMS for fast, secure websites - RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@publii"
+   ],
    "webmention": null
   }
  },
@@ -507,6 +3286,229 @@
    "rel_me": [],
    "webmention": null,
    "error": "HTTP 503"
+  }
+ },
+ "getscorecard.app": {
+  "checked": "2026-10-27T05:45:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p04.nsone.net",
+    "dns2.p04.nsone.net",
+    "dns3.p04.nsone.net",
+    "dns4.p04.nsone.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:45:14Z",
+   "title": "Lickability",
+   "generator": "Astro v4.16.18",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://getscorecard.app/feed.xml",
+     "title": "Lickability Blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@lickability"
+   ],
+   "webmention": null
+  }
+ },
+ "getsendstack.com": {
+  "checked": "2026-10-27T05:45:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.93.111.53"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "bryce.ns.cloudflare.com",
+    "pearl.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:45:17Z",
+   "title": "Privacy-first newsletter platform – SendStack",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getsentry.com": {
+  "checked": "2026-10-27T05:45:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.8.226.60",
+    "34.111.148.117"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-c1.googledomains.com",
+    "ns-cloud-c2.googledomains.com",
+    "ns-cloud-c3.googledomains.com",
+    "ns-cloud-c4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:45:21Z",
+   "title": "Application Performance Monitoring & Error Tracking Software | Sentry",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getshopped.org": {
+  "checked": "2026-10-27T05:45:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "205.134.241.175"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.webhostinghub.com",
+    "ns2.webhostinghub.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:45:25Z",
+   "title": "Get Shopped! – WordPress Ecommerce",
+   "generator": "WordPress 4.9.26",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://getshopped.org/feed/",
+     "title": "Get Shopped! » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://getshopped.org/comments/feed/",
+     "title": "Get Shopped! » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getsongbird.com": {
+  "checked": "2026-10-27T05:45:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.45.240",
+    "172.67.220.189"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:dcbd",
+    "2606:4700:3035::6815:2df0"
+   ],
+   "cname": null,
+   "ns": [
+    "hope.ns.cloudflare.com",
+    "tadeo.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-27T05:45:28Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "getspace.org": {
+  "checked": "2026-10-27T05:45:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.248.169.48",
+    "76.223.54.146"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns5.afternic.com",
+    "ns6.afternic.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:45:31Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "getstream.io": {
@@ -602,6 +3604,72 @@
   "rdap": null,
   "rdap_error": "refused: rdap.verisign.com: network: Broken pipe"
  },
+ "getvegucated.com": {
+  "checked": "2026-10-27T05:45:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.252.154.47"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.s431.sureserver.com",
+    "ns2.s431.sureserver.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:45:33Z",
+   "title": "Vegucated",
+   "generator": "All in One SEO (AIOSEO) 4.8.9",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "getweeklyupdate.com": {
+  "checked": "2026-10-27T05:45:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "138.68.31.204"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "amir.ns.cloudflare.com",
+    "khloe.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-27T05:45:37Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
  "getworksimple.com": {
   "checked": "2026-10-24T06:28:30Z",
   "method": "enrich_hosts",
@@ -638,6 +3706,180 @@
    "webmention": null
   }
  },
+ "getwoven.com": {
+  "checked": "2026-10-27T05:46:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.2.70.75",
+    "99.83.190.102"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "aryanna.ns.cloudflare.com",
+    "sterling.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:46:08Z",
+   "title": "Woven",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gfmorris.net": {
+  "checked": "2026-10-27T05:46:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "45.33.101.68",
+    "103.168.172.37",
+    "103.168.172.52"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.messagingengine.com",
+    "ns2.messagingengine.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'gfmorris.net'"
+  },
+  "home": {
+   "checked": "2026-10-27T05:46:11Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'gfmorris.net'"
+  }
+ },
+ "ggbs.de": {
+  "checked": "2026-10-27T05:46:42Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "178.254.34.20"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "v38015.1blu.de",
+    "v76870.1blu.de"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:46:42Z",
+   "title": "ggbs.de",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "ghibli.jp": {
+  "checked": "2026-10-27T05:46:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.193.34.156"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns011-3pq164issrr44o6d.3.d-53.info",
+    "ns011-3pq164issrr44o6d.3.d-53.jp",
+    "ns011-3pq164issrr44o6d.3.d-53.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:46:47Z",
+   "title": "スタジオジブリ｜STUDIO GHIBLI",
+   "generator": "rapha.ac",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.ghibli.jp/index.xml",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "ghostcycle.org": {
+  "checked": "2026-10-27T05:46:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "5.153.13.193"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.speedydns.net",
+    "ns2.speedydns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "network: No route to host"
+  },
+  "home": {
+   "checked": "2026-10-27T05:46:51Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "network: No route to host"
+  }
+ },
  "ghostery.com": {
   "checked": "2026-10-24T06:28:31Z",
   "method": "enrich_hosts",
@@ -668,6 +3910,127 @@
   "home": {
    "checked": "2026-10-24T06:28:31Z",
    "title": "Ghostery Ad Blocker | Best Free Ad Blocker & Privacy Tool | Ghostery",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "ghuntley.com": {
+  "checked": "2026-10-27T05:46:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.3.7",
+    "151.101.67.7",
+    "151.101.131.7",
+    "151.101.195.7"
+   ],
+   "aaaa": [
+    "2a04:4e42::775",
+    "2a04:4e42:200::775",
+    "2a04:4e42:400::775",
+    "2a04:4e42:600::775"
+   ],
+   "cname": null,
+   "ns": [
+    "ivy.ns.cloudflare.com",
+    "sid.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:46:54Z",
+   "title": "Geoffrey Huntley",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://ghuntley.com/rss/",
+     "title": "Geoffrey Huntley"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://ghuntley.com/webmentions/receive/"
+  }
+ },
+ "gibsonbrothers.com": {
+  "checked": "2026-10-27T05:46:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.49.23.144",
+    "198.49.23.145",
+    "198.185.159.144",
+    "198.185.159.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns29.domaincontrol.com",
+    "ns30.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:46:56Z",
+   "title": "The Gibson Brothers",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.gibsonbrothers.com/welcome?format=rss",
+     "title": "RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gifcities.org": {
+  "checked": "2026-10-27T05:46:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "207.241.225.8",
+    "207.241.232.8"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "motorhead.easydns.org",
+    "nirvana.easydns.net",
+    "rush.easydns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:46:58Z",
+   "title": "GifCities",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -714,6 +4077,157 @@
     "ines.ns.cloudflare.com"
    ],
    "checked": "2026-10-23T21:25:37Z"
+  }
+ },
+ "gigapxl.com": {
+  "checked": "2026-10-27T05:47:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "91.227.139.235"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dns24.hu",
+    "ns2.dns24.hu",
+    "ns3.dns24.hu",
+    "ns4.dns24.hu"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:01Z",
+   "title": "gigapxl.com",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gilesbowkett.blogspot.com": {
+  "checked": "2026-10-27T05:47:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.250.217.97"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:810::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:05Z",
+   "title": "Giles Bowkett",
+   "generator": "blogger",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://gilesbowkett.blogspot.com/feeds/posts/default",
+     "title": "Giles Bowkett - Atom"
+    },
+    {
+     "type": "rss",
+     "url": "https://gilesbowkett.blogspot.com/feeds/posts/default?alt=rss",
+     "title": "Giles Bowkett - RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gilest.org": {
+  "checked": "2026-10-27T05:47:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "176.126.241.215"
+   ],
+   "aaaa": [
+    "2a00:1098:1::54"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.mythic-beasts.com",
+    "ns2.mythic-beasts.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:07Z",
+   "title": "Giles Turnbull's website",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.me.uk/@gilest"
+   ],
+   "webmention": null
+  }
+ },
+ "gilesthomas.com": {
+  "checked": "2026-10-27T05:47:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "217.70.184.55"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-203-c.gandi.net",
+    "ns-228-a.gandi.net",
+    "ns-35-b.gandi.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:10Z",
+   "title": "Giles' blog",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.gilesthomas.com/feed/rss.xml",
+     "title": "Giles Thomas"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "ginandtacos.com": {
@@ -764,6 +4278,74 @@
     "ns3.dreamhost.com"
    ],
    "checked": "2026-10-24T05:44:21Z"
+  }
+ },
+ "girlsaround.me": {
+  "checked": "2026-10-27T05:47:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.30.6",
+    "172.67.150.42"
+   ],
+   "aaaa": [
+    "2606:4700:3035::6815:1e06",
+    "2606:4700:3036::ac43:962a"
+   ],
+   "cname": null,
+   "ns": [
+    "david.ns.cloudflare.com",
+    "lady.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:12Z",
+   "title": "Online Casinos for Real Money: Best-Paying Sites",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gisanddata.maps.arcgis.com": {
+  "checked": "2026-10-27T05:47:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.167.152.31",
+    "3.167.152.69",
+    "3.167.152.83",
+    "3.167.152.118"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:15Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "gist.github.com": {
@@ -821,6 +4403,117 @@
     "ns-520.awsdns-01.net"
    ],
    "checked": "2026-10-24T05:52:24Z"
+  }
+ },
+ "git-legit.org": {
+  "checked": "2026-10-27T05:47:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "103.27.202.113"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.aplushosting.asia",
+    "ns2.aplushosting.asia"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:19Z",
+   "title": "Git Legit",
+   "generator": "All in One SEO (AIOSEO) 4.8.5",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.git-legit.org/feed/",
+     "title": "Git Legit » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.git-legit.org/comments/feed/",
+     "title": "Git Legit » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "git-tower.com": {
+  "checked": "2026-10-27T05:47:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.132",
+    "151.101.66.132",
+    "151.101.130.132",
+    "151.101.194.132"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "bradley.ns.cloudflare.com",
+    "virginia.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:25Z",
+   "title": "Tower — The most powerful Git client for Mac and Windows",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "git.or.cz": {
+  "checked": "2026-10-27T05:47:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.132.237.69"
+   ],
+   "aaaa": [
+    "2a01:4f8:c012:8b43::1"
+   ],
+   "cname": "repo.or.cz",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'git.or.cz'"
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:28Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'git.or.cz'"
   }
  },
  "github.blog": {
@@ -1003,6 +4696,383 @@
    "checked": "2026-10-24T05:49:37Z"
   }
  },
+ "gitimmersion.com": {
+  "checked": "2026-10-27T05:47:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.84.156",
+    "172.67.194.145"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:c291",
+    "2606:4700:3035::6815:549c"
+   ],
+   "cname": null,
+   "ns": [
+    "dave.ns.cloudflare.com",
+    "virginia.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:32Z",
+   "title": "Git Immersion",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gitlabhq.com": {
+  "checked": "2026-10-27T05:47:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:35Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "gitmsp.org": {
+  "checked": "2026-10-27T05:47:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:35Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "gitpoap.io": {
+  "checked": "2026-10-27T05:47:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "SERVFAIL"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:36Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "gitup.co": {
+  "checked": "2026-10-27T05:47:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-183-b.gandi.net",
+    "ns-240-c.gandi.net",
+    "ns-81-a.gandi.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:38Z",
+   "title": "GitUp",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gitx.frim.nl": {
+  "checked": "2026-10-27T05:47:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "66.33.60.34",
+    "76.76.21.164"
+   ],
+   "aaaa": [],
+   "cname": "cname.vercel-dns.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:43Z",
+   "title": "GitX - Home",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "http://gitx.frim.nl/Downloads/appcast.xml",
+     "title": "GitX Application Update Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "givebutter.com": {
+  "checked": "2026-10-27T05:47:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.66.133.186",
+    "172.66.137.33"
+   ],
+   "aaaa": [
+    "2606:4700:10::ac42:85ba",
+    "2606:4700:10::ac42:8921"
+   ],
+   "cname": null,
+   "ns": [
+    "ashley.ns.cloudflare.com",
+    "vick.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:46Z",
+   "title": "Fundraising Software For Nonprofits | Givebutter",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "givedirectly.org": {
+  "checked": "2026-10-27T05:47:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.8.27.36",
+    "65.8.27.102",
+    "65.8.27.105",
+    "65.8.27.113"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1096.awsdns-09.org",
+    "ns-1741.awsdns-25.co.uk",
+    "ns-444.awsdns-55.com",
+    "ns-840.awsdns-41.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:48Z",
+   "title": "GiveDirectly: Send money to people living in poverty",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "givemesomethingtoread.com": {
+  "checked": "2026-10-27T05:47:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.58.92",
+    "172.67.202.206"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:3a5c",
+    "2606:4700:3032::ac43:cace"
+   ],
+   "cname": null,
+   "ns": [
+    "aryanna.ns.cloudflare.com",
+    "henrik.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:51Z",
+   "title": "It works! Apache httpd",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "giveth.io": {
+  "checked": "2026-10-27T05:47:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.150.1.129",
+    "216.150.16.129"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "brady.ns.cloudflare.com",
+    "cora.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:53Z",
+   "title": "Giveth | Raise More. Keep Everything.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "givingwhatwecan.org": {
+  "checked": "2026-10-27T05:47:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns59.domaincontrol.com",
+    "ns60.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:56Z",
+   "title": "Giving What We Can",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.givingwhatwecan.org/blog/feed.xml",
+     "title": "RSS 2.0"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "gizmodo.com": {
   "checked": "2026-10-24T05:30:19Z",
   "method": "enrich_hosts",
@@ -1062,6 +5132,313 @@
    "checked": "2026-10-24T05:30:19Z"
   }
  },
+ "gkogan.co": {
+  "checked": "2026-10-27T05:47:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "178.128.137.126"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-c1.googledomains.com",
+    "ns-cloud-c2.googledomains.com",
+    "ns-cloud-c3.googledomains.com",
+    "ns-cloud-c4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:47:59Z",
+   "title": "Greg Kogan — Positioning for Frontier Companies",
+   "generator": "Ghost 6.73",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.gkogan.co/rss/",
+     "title": "Greg Kogan — Positioning for Frontier Companies"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://www.gkogan.co/webmentions/receive/"
+  }
+ },
+ "glassdoor.com": {
+  "checked": "2026-10-27T05:48:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.39.196",
+    "172.64.148.60"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "irma.ns.cloudflare.com",
+    "nitin.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:03Z",
+   "title": "Glassdoor | Relevant Job Matches and Company Research",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gliffy.com": {
+  "checked": "2026-10-27T05:48:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.185.0.3"
+   ],
+   "aaaa": [
+    "2620:12a:8000::3",
+    "2620:12a:8001::3"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1006.awsdns-61.net",
+    "ns-1181.awsdns-19.org",
+    "ns-1891.awsdns-44.co.uk",
+    "ns-257.awsdns-32.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:07Z",
+   "title": "AI-Powered Technical Diagramming for Confluence | Gliffy by Perforce",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "glittle.org": {
+  "checked": "2026-10-27T05:48:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.225.47.10",
+    "13.225.47.27",
+    "13.225.47.31",
+    "13.225.47.77"
+   ],
+   "aaaa": [
+    "2600:9000:21d4:2c00:12:9461:6240:93a1",
+    "2600:9000:21d4:3200:12:9461:6240:93a1",
+    "2600:9000:21d4:6400:12:9461:6240:93a1",
+    "2600:9000:21d4:7e00:12:9461:6240:93a1",
+    "2600:9000:21d4:a400:12:9461:6240:93a1",
+    "2600:9000:21d4:a600:12:9461:6240:93a1",
+    "2600:9000:21d4:ba00:12:9461:6240:93a1",
+    "2600:9000:21d4:da00:12:9461:6240:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-cloud-e1.googledomains.com",
+    "ns-cloud-e2.googledomains.com",
+    "ns-cloud-e3.googledomains.com",
+    "ns-cloud-e4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:08Z",
+   "title": "Greg Little",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "globalguerrillas.typepad.com": {
+  "checked": "2026-10-27T05:48:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.114.121",
+    "104.18.115.121",
+    "104.18.116.121",
+    "104.18.117.121",
+    "104.18.118.121"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:11Z",
+   "title": "Typepad | Network Solutions",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "globalnerdy.com": {
+  "checked": "2026-10-27T05:48:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "131.153.238.251"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns.globalnerdy.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:13Z",
+   "title": "Global Nerdy : Tampa Bay’s Technology Blog",
+   "generator": "WordPress 6.7.10",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.globalnerdy.com/feed/",
+     "title": "Global Nerdy » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.globalnerdy.com/comments/feed/",
+     "title": "Global Nerdy » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "globenewswire.com": {
+  "checked": "2026-10-27T05:48:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.199.203.182",
+    "52.7.217.193"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1384.awsdns-45.org",
+    "ns-2019.awsdns-60.co.uk",
+    "ns-313.awsdns-39.com",
+    "ns-875.awsdns-45.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:16Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "glog.glennf.com": {
+  "checked": "2026-10-27T05:48:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "49.12.41.124"
+   ],
+   "aaaa": [
+    "2a01:4f8:1c17:7c60::1"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:17Z",
+   "title": "Glenn Fleishman Interrogates the Past",
+   "generator": "Ghost 6.45",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://glog.glennf.com/blog/rss/",
+     "title": "Glog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://bsky.app/profile/glennf.com",
+    "https://zeppelin.flights/@glennf"
+   ],
+   "webmention": "https://glog.glennf.com/webmentions/receive/"
+  }
+ },
  "glyph.twistedmatrix.com": {
   "checked": "2026-10-24T06:28:34Z",
   "method": "enrich_hosts",
@@ -1099,6 +5476,143 @@
    "webmention": null
   }
  },
+ "glyphicons.com": {
+  "checked": "2026-10-27T05:48:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "195.181.248.109"
+   ],
+   "aaaa": [
+    "2001:880:a:300::2ed"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.websupport.cz",
+    "ns2.websupport.cz",
+    "ns3.websupport.eu"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:24Z",
+   "title": "GLYPHICONS - Visual language that everybody understands",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "glyphsapp.com": {
+  "checked": "2026-10-27T05:48:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.26.156.221"
+   ],
+   "aaaa": [
+    "2a00:d0c0:200:0:dc92:5eff:fe61:770e"
+   ],
+   "cname": null,
+   "ns": [
+    "ns53.domaincontrol.com",
+    "ns54.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:26Z",
+   "title": "Glyphs",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://glyphsapp.com/feed",
+     "title": "Everything RSS Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://glyphsapp.com/news/feed/",
+     "title": "News & Events RSS Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://glyphsapp.com/events/feed/",
+     "title": "Events Only RSS Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://glyphsapp.com/learn/feed/",
+     "title": "Tutorials RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gmays.com": {
+  "checked": "2026-10-27T05:48:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.55.113",
+    "172.67.171.31"
+   ],
+   "aaaa": [
+    "2606:4700:3033::6815:3771",
+    "2606:4700:3037::ac43:ab1f"
+   ],
+   "cname": null,
+   "ns": [
+    "dora.ns.cloudflare.com",
+    "jim.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:30Z",
+   "title": "Gabe’s blog - Semper esurientem.",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://gmays.com/feed/index.xml",
+     "title": "Gabe Mays » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://gmays.com/comments/feed/index.xml",
+     "title": "Gabe Mays » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "gnosis.io": {
   "checked": "2026-10-24T06:28:37Z",
   "method": "enrich_hosts",
@@ -1131,6 +5645,706 @@
    "feeds": [],
    "hcard": false,
    "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gnosisguild.mirror.xyz": {
+  "checked": "2026-10-27T05:48:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.12.13",
+    "104.26.13.13",
+    "172.67.72.185"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:c0d",
+    "2606:4700:20::681a:d0d",
+    "2606:4700:20::ac43:48b9"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:33Z",
+   "title": "gnosis guild 🪐",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gnosismetrics.com": {
+  "checked": "2026-10-27T05:48:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.49.51.36"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1141.awsdns-14.org",
+    "ns-1926.awsdns-48.co.uk",
+    "ns-233.awsdns-29.com",
+    "ns-597.awsdns-10.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:35Z",
+   "title": "Gnosis Analytics",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gnosispay.com": {
+  "checked": "2026-10-27T05:48:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.71.142.77",
+    "52.223.52.2"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1332.awsdns-38.org",
+    "ns-1913.awsdns-47.co.uk",
+    "ns-356.awsdns-44.com",
+    "ns-778.awsdns-33.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:38Z",
+   "title": "Gnosis Pay — Stablecoin card programs",
+   "generator": "Framer c23da9b",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gnosisvalidator.substack.com": {
+  "checked": "2026-10-27T05:48:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:41Z",
+   "title": "Validator Newsletter | GC Comms Team | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://blog.validategnosis.com/feed",
+     "title": "Validator Newsletter"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gnu.org": {
+  "checked": "2026-10-27T05:48:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "209.51.188.116"
+   ],
+   "aaaa": [
+    "2001:470:142:5::116"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.gnu.org",
+    "ns2.gnu.org",
+    "ns4.gnu.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:43Z",
+   "title": "The GNU Operating System and the Free Software Movement",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://planet.gnu.org/rss20.xml",
+     "title": "Planet GNU"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gnuband.org": {
+  "checked": "2026-10-27T05:48:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "173.236.137.222"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.th.seeweb.it",
+    "ns2.th.seeweb.it"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:45Z",
+   "title": "Ramblings by Paolo on Web2.0, Wikipedia, Social Networking, Trust, Reputation, …",
+   "generator": "WordPress 5.7.20",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.gnuband.org/feed/",
+     "title": "Ramblings by Paolo on Web2.0, Wikipedia, Social Networking, Trust, Reputation, ... » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.gnuband.org/comments/feed/",
+     "title": "Ramblings by Paolo on Web2.0, Wikipedia, Social Networking, Trust, Reputation, ... » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gnuplotting.org": {
+  "checked": "2026-10-27T05:48:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153"
+   ],
+   "cname": null,
+   "ns": [
+    "ns77.domaincontrol.com",
+    "ns78.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:49Z",
+   "title": "Gnuplotting",
+   "generator": "WordPress 6.1.1",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://gnuplotting.org/feed/index.html",
+     "title": "RSS 2.0"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "go.cd": {
+  "checked": "2026-10-27T05:48:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "108.156.91.3",
+    "108.156.91.32",
+    "108.156.91.101",
+    "108.156.91.129"
+   ],
+   "aaaa": [
+    "2600:9000:2351:1e00:9:7645:dc80:93a1",
+    "2600:9000:2351:5a00:9:7645:dc80:93a1",
+    "2600:9000:2351:8400:9:7645:dc80:93a1",
+    "2600:9000:2351:9200:9:7645:dc80:93a1",
+    "2600:9000:2351:9400:9:7645:dc80:93a1",
+    "2600:9000:2351:d000:9:7645:dc80:93a1",
+    "2600:9000:2351:da00:9:7645:dc80:93a1",
+    "2600:9000:2351:f400:9:7645:dc80:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1115.awsdns-11.org",
+    "ns-1999.awsdns-57.co.uk",
+    "ns-380.awsdns-47.com",
+    "ns-642.awsdns-16.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:51Z",
+   "title": "Open Source Continuous Delivery and Release Automation Server | GoCD",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.gocd.org/feed.xml",
+     "title": "GoCD blog feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "go.dev": {
+  "checked": "2026-10-27T05:48:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.239.32.21",
+    "216.239.34.21",
+    "216.239.36.21",
+    "216.239.38.21"
+   ],
+   "aaaa": [
+    "2001:4860:4802:32::15",
+    "2001:4860:4802:34::15",
+    "2001:4860:4802:36::15",
+    "2001:4860:4802:38::15"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-cloud-e1.googledomains.com",
+    "ns-cloud-e2.googledomains.com",
+    "ns-cloud-e3.googledomains.com",
+    "ns-cloud-e4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:54Z",
+   "title": "The Go Programming Language",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://hachyderm.io/@golang"
+   ],
+   "webmention": null
+  }
+ },
+ "go.gowalla.com": {
+  "checked": "2026-10-27T05:48:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.14.20",
+    "104.26.15.20",
+    "172.67.72.130"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:e14",
+    "2606:4700:20::681a:f14",
+    "2606:4700:20::ac43:4882"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 525
+  },
+  "home": {
+   "checked": "2026-10-27T05:48:57Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 525"
+  }
+ },
+ "goatcan.wordpress.com": {
+  "checked": "2026-10-27T05:49:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.12",
+    "192.0.78.13"
+   ],
+   "aaaa": [],
+   "cname": "lb.wordpress.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:20Z",
+   "title": "The Goat Farm | Be the goat.",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://goatcan.do/feed/",
+     "title": "The Goat Farm » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://goatcan.do/comments/feed/",
+     "title": "The Goat Farm » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "goatcounter.com": {
+  "checked": "2026-10-27T05:49:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.21.71.180"
+   ],
+   "aaaa": [
+    "2a01:4f9:3081:5413::2"
+   ],
+   "cname": null,
+   "ns": [
+    "alice.ns.cloudflare.com",
+    "joel.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:24Z",
+   "title": "GoatCounter – open source web analytics",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gocomics.com": {
+  "checked": "2026-10-27T05:49:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.248.160.137",
+    "75.2.43.150",
+    "76.223.34.124",
+    "99.83.186.106"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1-05.azure-dns.com",
+    "ns2-05.azure-dns.net",
+    "ns3-05.azure-dns.org",
+    "ns4-05.azure-dns.info"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:28Z",
+   "title": "GoComics",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "godowntownbaltimore.com": {
+  "checked": "2026-10-27T05:49:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns01.domaincontrol.com",
+    "ns02.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:30Z",
+   "title": "Welcome to Downtown Partnership of Baltimore",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gofundme.com": {
+  "checked": "2026-10-27T05:49:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "99.84.203.20",
+    "99.84.203.62",
+    "99.84.203.108",
+    "99.84.203.124"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1018.awsdns-63.net",
+    "ns-1148.awsdns-15.org",
+    "ns-1860.awsdns-40.co.uk",
+    "ns-279.awsdns-34.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:33Z",
+   "title": "GoFundMe | The #1 Crowdfunding and Fundraising Platform",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "goggles.webmaker.org": {
+  "checked": "2026-10-27T05:49:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:35Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "gojko.net": {
+  "checked": "2026-10-27T05:49:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "108.156.91.15",
+    "108.156.91.33",
+    "108.156.91.69",
+    "108.156.91.78"
+   ],
+   "aaaa": [
+    "2600:9000:20c5:1c00:1d:bb47:6680:93a1",
+    "2600:9000:20c5:4c00:1d:bb47:6680:93a1",
+    "2600:9000:20c5:5c00:1d:bb47:6680:93a1",
+    "2600:9000:20c5:8e00:1d:bb47:6680:93a1",
+    "2600:9000:20c5:a400:1d:bb47:6680:93a1",
+    "2600:9000:20c5:a600:1d:bb47:6680:93a1",
+    "2600:9000:20c5:ac00:1d:bb47:6680:93a1",
+    "2600:9000:20c5:dc00:1d:bb47:6680:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1521.awsdns-62.org",
+    "ns-1763.awsdns-28.co.uk",
+    "ns-320.awsdns-40.com",
+    "ns-629.awsdns-14.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:35Z",
+   "title": "In five years, everyone will be a product manager",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://gojko.net/feed.xml",
+     "title": "Gojko's blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "golang.org": {
+  "checked": "2026-10-27T05:49:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.250.217.113"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:800::2011"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.google.com",
+    "ns2.google.com",
+    "ns3.google.com",
+    "ns4.google.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:39Z",
+   "title": "The Go Programming Language",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://hachyderm.io/@golang"
+   ],
    "webmention": null
   }
  },
@@ -1200,6 +6414,323 @@
     "ns5.linode.com"
    ],
    "checked": "2026-10-24T05:52:29Z"
+  }
+ },
+ "goldmansachs.com": {
+  "checked": "2026-10-27T05:49:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.213.120.152"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.goldmansachs.biz",
+    "ns1.goldmansachs.info",
+    "ns1.gs.com",
+    "ns1.gs360.net",
+    "ns2.gs.com",
+    "ns3.gs.com",
+    "ns4.gs.com",
+    "ns5.gs.com",
+    "ns6.gs.com",
+    "ns7.gs.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:41Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "golittleguy.com": {
+  "checked": "2026-10-27T05:49:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.40.111",
+    "172.67.150.190"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:96be",
+    "2606:4700:3035::6815:286f"
+   ],
+   "cname": null,
+   "ns": [
+    "aleena.ns.cloudflare.com",
+    "harlan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:43Z",
+   "title": "Xtreme Outdoors",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "good.is": {
+  "checked": "2026-10-27T05:49:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.9.58",
+    "172.67.159.34"
+   ],
+   "aaaa": [
+    "2606:4700:3035::ac43:9f22",
+    "2606:4700:3037::6815:93a"
+   ],
+   "cname": null,
+   "ns": [
+    "alex.ns.cloudflare.com",
+    "cloe.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:44Z",
+   "title": "GOOD - Good.is",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.good.is/feed/",
+     "title": "Good.is » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "goodenough.us": {
+  "checked": "2026-10-27T05:49:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.24.57.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple.com",
+    "ns2.dnsimple.com",
+    "ns3.dnsimple.com",
+    "ns4.dnsimple-edge.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:47Z",
+   "title": "Good Enough",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://goodenough.us/posts_feed",
+     "title": "Good Enough"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://mastodon.world/@goodenough"
+   ],
+   "webmention": null
+  }
+ },
+ "goodjudgment.com": {
+  "checked": "2026-10-27T05:49:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.10.216",
+    "104.26.11.216",
+    "172.67.75.207"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:ad8",
+    "2606:4700:20::681a:bd8",
+    "2606:4700:20::ac43:4bcf"
+   ],
+   "cname": null,
+   "ns": [
+    "joan.ns.cloudflare.com",
+    "wesley.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:51Z",
+   "title": "See the future sooner with Superforecasting | Good Judgment",
+   "generator": "Site Kit by Google 1.189.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "goodnotesapp.com": {
+  "checked": "2026-10-27T05:49:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "16.15.160.172",
+    "16.15.174.229",
+    "16.15.191.92",
+    "16.15.228.100",
+    "16.15.228.175",
+    "16.15.254.217",
+    "52.216.61.165",
+    "52.217.125.157"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1082.awsdns-07.org",
+    "ns-1737.awsdns-25.co.uk",
+    "ns-369.awsdns-46.com",
+    "ns-925.awsdns-51.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "connection reset"
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:54Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "connection reset"
+  }
+ },
+ "goodstuffmoving.com": {
+  "checked": "2026-10-27T05:49:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.24",
+    "192.0.78.25"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns59.domaincontrol.com",
+    "ns60.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:56Z",
+   "title": "Minneapolis-St. Paul Movers | Good Stuff Moving | Free Quote",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://goodstuffmoving.com/feed/",
+     "title": "Good Stuff Moving » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://goodstuffmoving.com/comments/feed/",
+     "title": "Good Stuff Moving » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "google-latlong.blogspot.com": {
+  "checked": "2026-10-27T05:49:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.210.97"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:810::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:49:58Z",
+   "title": "Official Google Maps news and updates | Google Blog",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "google.com": {
@@ -1379,6 +6910,90 @@
    "webmention": null
   }
  },
+ "googlecode.blogspot.com": {
+  "checked": "2026-10-27T05:50:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.210.225"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:810::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:50:03Z",
+   "title": "The official Google Code blog",
+   "generator": "blogger",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://googlecode.blogspot.com/feeds/posts/default",
+     "title": "The official Google Code blog - Atom"
+    },
+    {
+     "type": "rss",
+     "url": "https://googlecode.blogspot.com/feeds/posts/default?alt=rss",
+     "title": "The official Google Code blog - RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "googlefinanceblog.blogspot.com": {
+  "checked": "2026-10-27T05:50:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.32.1"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:810::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:50:05Z",
+   "title": "Google Finance Blog",
+   "generator": "blogger",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://googlefinanceblog.blogspot.com/feeds/posts/default",
+     "title": "Google Finance Blog - Atom"
+    },
+    {
+     "type": "rss",
+     "url": "https://googlefinanceblog.blogspot.com/feeds/posts/default?alt=rss",
+     "title": "Google Finance Blog - RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "googlemapsapi.blogspot.com": {
   "checked": "2026-10-24T06:28:43Z",
   "method": "enrich_hosts",
@@ -1403,6 +7018,74 @@
   "home": {
    "checked": "2026-10-24T06:28:43Z",
    "title": "Official Google Maps API Blog",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "googleprojectzero.blogspot.com": {
+  "checked": "2026-10-27T05:50:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.214.65"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:810::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:50:06Z",
+   "title": "Google Project Zero",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://projectzero.google/feed.xml",
+     "title": "Project Zero"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "googlepublicpolicy.blogspot.com": {
+  "checked": "2026-10-27T05:50:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.32.1"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:810::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:50:09Z",
+   "title": "Public Policy | Google Blog",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -1473,6 +7156,499 @@
    "checked": "2026-10-24T05:52:32Z"
   }
  },
+ "googlesheepview.com": {
+  "checked": "2026-10-27T05:50:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "66.6.44.4"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com",
+    "dns3.registrar-servers.com",
+    "dns4.registrar-servers.com",
+    "dns5.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-27T05:50:14Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "googlesystem.blogspot.com": {
+  "checked": "2026-10-27T05:50:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.210.193"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:81e::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:50:16Z",
+   "title": "Google Operating System (Unofficial Google Blog)",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://feeds.feedburner.com/GoogleOperatingSystem",
+     "title": "Google Operating System Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "googlewebmastercentral.blogspot.com": {
+  "checked": "2026-10-27T05:50:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.250.217.97"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:81e::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-27T05:50:18Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "gopro.com": {
+  "checked": "2026-10-27T05:50:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.225.47.8",
+    "13.225.47.28",
+    "13.225.47.47",
+    "13.225.47.52"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1054.awsdns-03.org",
+    "ns-2036.awsdns-62.co.uk",
+    "ns-274.awsdns-34.com",
+    "ns-704.awsdns-24.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:50:19Z",
+   "title": "GoPro | Official Camera of Fun | Shop Now & Save",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gothamist.com": {
+  "checked": "2026-10-27T05:50:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.25.84",
+    "172.66.155.107"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:1954",
+    "2606:4700:10::ac42:9b6b"
+   ],
+   "cname": null,
+   "ns": [
+    "bob.ns.cloudflare.com",
+    "vera.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:50:25Z",
+   "title": "Gothamist: New York City Local News, Food, Arts & Events",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gotyourback.space": {
+  "checked": "2026-10-27T05:50:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "92.205.7.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns61.domaincontrol.com",
+    "ns62.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:50:28Z",
+   "title": "Got Your Back",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.gotyourback.space/",
+     "title": "Got Your Back » Backdrops Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gov.uk": {
+  "checked": "2026-10-27T05:50:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.0.144",
+    "151.101.64.144",
+    "151.101.128.144",
+    "151.101.192.144"
+   ],
+   "aaaa": [
+    "2a04:4e42::144",
+    "2a04:4e42:200::144",
+    "2a04:4e42:400::144",
+    "2a04:4e42:600::144",
+    "2a04:4e42:800::144",
+    "2a04:4e42:a00::144",
+    "2a04:4e42:c00::144",
+    "2a04:4e42:e00::144"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.nic.uk",
+    "dns2.nic.uk",
+    "dns3.nic.uk",
+    "dns4.nic.uk",
+    "nsa.nic.uk",
+    "nsb.nic.uk",
+    "nsc.nic.uk",
+    "nsd.nic.uk"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:50:35Z",
+   "title": "Welcome to GOV.UK",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gozero.conservationfund.org": {
+  "checked": "2026-10-27T05:50:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "69.20.83.39"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-27T05:50:37Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "gpetrium.com": {
+  "checked": "2026-10-27T05:51:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.1.242",
+    "172.67.152.154"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:989a",
+    "2606:4700:3035::6815:1f2"
+   ],
+   "cname": null,
+   "ns": [
+    "colin.ns.cloudflare.com",
+    "elisa.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 520
+  },
+  "home": {
+   "checked": "2026-10-27T05:51:09Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 520"
+  }
+ },
+ "gpfault.net": {
+  "checked": "2026-10-27T05:53:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.249.141.9",
+    "13.249.141.16",
+    "13.249.141.33",
+    "13.249.141.117"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1434.awsdns-51.org",
+    "ns-1825.awsdns-36.co.uk",
+    "ns-192.awsdns-24.com",
+    "ns-604.awsdns-11.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:12Z",
+   "title": "General Protection Fault",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://gpfault.net/rss.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gpg.fail": {
+  "checked": "2026-10-27T05:53:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.9.53",
+    "172.67.159.29"
+   ],
+   "aaaa": [
+    "2606:4700:3035::6815:935",
+    "2606:4700:3036::ac43:9f1d"
+   ],
+   "cname": null,
+   "ns": [
+    "lynn.ns.cloudflare.com",
+    "maya.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:15Z",
+   "title": "gpg.fail",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gpgtools.org": {
+  "checked": "2026-10-27T05:53:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.26.156.66"
+   ],
+   "aaaa": [
+    "2a00:d0c0:200:0:b9:1a:9c:41"
+   ],
+   "cname": null,
+   "ns": [
+    "ns5.kasserver.com",
+    "ns6.kasserver.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:19Z",
+   "title": "GPG Suite",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://infosec.exchange/@gpgtools"
+   ],
+   "webmention": null
+  }
+ },
+ "gq-magazine.co.uk": {
+  "checked": "2026-10-27T05:53:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.223.6.210",
+    "166.117.251.134"
+   ],
+   "aaaa": [
+    "2600:9000:a41b:ef95:eff:32b3:411c:f36c",
+    "2600:9000:a707:a46c:560f:b721:9702:d75e"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1116.awsdns-11.org",
+    "ns-1935.awsdns-49.co.uk",
+    "ns-28.awsdns-03.com",
+    "ns-836.awsdns-40.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:24Z",
+   "title": "British GQ - Men’s Style & Fashion, Grooming, Culture, Watches and Fitness | British GQ",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.gq-magazine.co.uk/feed/rss",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "gq.com": {
   "checked": "2026-10-24T05:57:16Z",
   "method": "enrich_hosts",
@@ -1515,6 +7691,49 @@
    "hcard": false,
    "rel_me": [],
    "webmention": null
+  }
+ },
+ "gracias-madre.com": {
+  "checked": "2026-10-27T05:53:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "16.15.0.25",
+    "16.15.0.228",
+    "16.15.4.151",
+    "16.15.4.247",
+    "52.219.113.171",
+    "52.219.120.35",
+    "52.219.194.155",
+    "52.219.220.179"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1476.awsdns-56.org",
+    "ns-1685.awsdns-18.co.uk",
+    "ns-192.awsdns-24.com",
+    "ns-572.awsdns-07.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "connection reset"
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:25Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "connection reset"
   }
  },
  "graemethickins.typepad.com": {
@@ -1565,6 +7784,213 @@
    "checked": "2026-10-24T05:52:33Z"
   }
  },
+ "graffletopia.com": {
+  "checked": "2026-10-27T05:53:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.193.101",
+    "15.197.246.237",
+    "52.223.46.195",
+    "99.83.183.127"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple-edge.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple-edge.io",
+    "ns4.dnsimple-edge.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:27Z",
+   "title": "Awesome OmniGraffle stencils | Graffletopia",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.graffletopia.com/stencils.atom",
+     "title": "Graffletopia feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "grahamduncan.blog": {
+  "checked": "2026-10-27T05:53:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.71.233.203"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns101.register.com",
+    "dns102.register.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:31Z",
+   "title": "Home - Graham Duncan Blog",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://grahamduncan.blog/feed/",
+     "title": "Graham Duncan Blog » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://grahamduncan.blog/comments/feed/",
+     "title": "Graham Duncan Blog » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "grahamwatson.com": {
+  "checked": "2026-10-27T05:53:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.172.94.1",
+    "100.24.208.97"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns75.domaincontrol.com",
+    "ns76.domaincontrol.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:33Z",
+   "title": "Graham Watson | Iconic Cycling Photography",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.grahamwatson.com/feed/rss2",
+     "title": null
+    },
+    {
+     "type": "atom",
+     "url": "https://www.grahamwatson.com/feed/atom",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "grandforksherald.com": {
+  "checked": "2026-10-27T05:53:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.192.55.8",
+    "54.192.55.13",
+    "54.192.55.58",
+    "54.192.55.96"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1133.awsdns-13.org",
+    "ns-2014.awsdns-59.co.uk",
+    "ns-468.awsdns-58.com",
+    "ns-966.awsdns-56.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:35Z",
+   "title": "Grand Forks Herald | News, weather & sports from Grand Forks and East Grand Forks",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.grandforksherald.com/index.rss",
+     "title": "Grand Forks Herald | News, weather & sports from Grand Forks and East Grand Forks"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "granola.ai": {
+  "checked": "2026-10-27T05:53:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1255.awsdns-28.org",
+    "ns-1786.awsdns-31.co.uk",
+    "ns-241.awsdns-30.com",
+    "ns-845.awsdns-41.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:41Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "grantland.com": {
   "checked": "2026-10-24T06:28:45Z",
   "method": "enrich_hosts",
@@ -1599,6 +8025,139 @@
      "title": "RSS Feed"
     }
    ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "graph.henryn.ca": {
+  "checked": "2026-10-27T05:53:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:44Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "graphcdn.io": {
+  "checked": "2026-10-27T05:53:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "sloan.ns.cloudflare.com",
+    "yadiel.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:44Z",
+   "title": "Stellate: Scalable, Secure GraphQL APIs at the Edge",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "graphicore.github.io": {
+  "checked": "2026-10-27T05:53:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:48Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "graphicpush.com": {
+  "checked": "2026-10-27T05:53:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "173.236.253.216"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:49Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -1645,6 +8204,996 @@
    "webmention": null
   }
  },
+ "graphinsight.com": {
+  "checked": "2026-10-27T05:53:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.21.146",
+    "172.67.199.33"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:c721",
+    "2606:4700:3037::6815:1592"
+   ],
+   "cname": null,
+   "ns": [
+    "dakota.ns.cloudflare.com",
+    "molly.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-27T05:53:51Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "graphite.dev": {
+  "checked": "2026-10-27T05:54:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.8.27.49",
+    "65.8.27.73",
+    "65.8.27.111",
+    "65.8.27.118"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1506.awsdns-60.org",
+    "ns-1950.awsdns-51.co.uk",
+    "ns-419.awsdns-52.com",
+    "ns-578.awsdns-08.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:54:22Z",
+   "title": "Graphite - Code review for the age of AI",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://graphite.com/feed.xml",
+     "title": "RSS Feed for petefreitag.com"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "graphite.wikidot.com": {
+  "checked": "2026-10-27T05:54:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "107.20.139.170"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:54:25Z",
+   "title": "Graphite",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "graphql.college": {
+  "checked": "2026-10-27T05:54:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.215.31.113"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dyna-ns.net",
+    "ns2.dyna-ns.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:54:40Z",
+   "title": "Jovo — The Open Source Framework for Voice & Chat Apps",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gratefulness.io": {
+  "checked": "2026-10-27T05:54:42Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.248.244.96",
+    "35.71.179.82",
+    "75.2.60.68",
+    "99.83.220.108"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple.com",
+    "ns2.dnsimple.com",
+    "ns3.dnsimple.com",
+    "ns4.dnsimple.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:54:42Z",
+   "title": "Gratefulness - A simple way to express gratitude.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gravitational.com": {
+  "checked": "2026-10-27T05:54:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.16.93",
+    "104.18.17.93"
+   ],
+   "aaaa": [
+    "2606:4700::6812:105d",
+    "2606:4700::6812:115d"
+   ],
+   "cname": null,
+   "ns": [
+    "a.ns.goteleport.com",
+    "b.ns.goteleport.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:54:45Z",
+   "title": "Unified Identity Securing Classic & AI Infrastructure | Teleport",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gravitee.io": {
+  "checked": "2026-10-27T05:54:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.6.106",
+    "104.18.7.106"
+   ],
+   "aaaa": [
+    "2606:4700::6812:66a",
+    "2606:4700::6812:76a"
+   ],
+   "cname": null,
+   "ns": [
+    "sarah.ns.cloudflare.com",
+    "sean.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:54:47Z",
+   "title": "Gravitee | The AI Agent Management Platform",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gravityfund.vc": {
+  "checked": "2026-10-27T05:54:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "184.154.118.34"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.domain.com",
+    "ns2.domain.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:54:50Z",
+   "title": "Home - Gravity Fund",
+   "generator": "WordPress 6.9.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://gravityfund.vc/feed/",
+     "title": "Gravity Fund » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://gravityfund.vc/comments/feed/",
+     "title": "Gravity Fund » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "graylog2.org": {
+  "checked": "2026-10-27T05:54:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.88.209",
+    "172.67.153.95"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:58d1",
+    "2606:4700:3031::ac43:995f"
+   ],
+   "cname": null,
+   "ns": [
+    "sreeni.ns.cloudflare.com",
+    "yichun.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-27T05:54:54Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "graymirror.substack.com": {
+  "checked": "2026-10-27T05:55:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:55:27Z",
+   "title": "Gray Mirror | Curtis Yarvin | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://graymirror.substack.com/feed",
+     "title": "Gray Mirror"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "greatnorthventures.com": {
+  "checked": "2026-10-27T05:55:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "169.62.4.20"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1jlp.name.com",
+    "ns2fgp.name.com",
+    "ns3dty.name.com",
+    "ns4cjp.name.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:55:29Z",
+   "title": "Great North Ventures",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://greatnorthventures.com/feed/",
+     "title": "» Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://greatnorthventures.com/comments/feed/",
+     "title": "» Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "greatschools.org": {
+  "checked": "2026-10-27T05:55:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.203.241.196"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1421.awsdns-49.org",
+    "ns-166.awsdns-20.com",
+    "ns-1873.awsdns-42.co.uk",
+    "ns-629.awsdns-14.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: certificate has expired"
+  },
+  "home": {
+   "checked": "2026-10-27T05:55:33Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: certificate has expired"
+  }
+ },
+ "greenbuilder.com": {
+  "checked": "2026-10-27T05:55:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.174.222.92"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.siteground.net",
+    "ns2.siteground.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: self-signed certificate"
+  },
+  "home": {
+   "checked": "2026-10-27T05:55:34Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: self-signed certificate"
+  }
+ },
+ "greencarreports.com": {
+  "checked": "2026-10-27T05:55:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.34.37",
+    "172.67.167.220"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:2225",
+    "2606:4700:3037::ac43:a7dc"
+   ],
+   "cname": null,
+   "ns": [
+    "ken.ns.cloudflare.com",
+    "may.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:55:36Z",
+   "title": "Green Car Reports - Hybrid and Electric Car News, Reviews and Buying Guides",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://feeds.highgearmedia.com/?sites=GreenCarReports",
+     "title": "Green Car Reports News"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "greendimes.com": {
+  "checked": "2026-10-27T05:55:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.251.218.99"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.osnaburg.net",
+    "ns2.osnaburg.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:55:37Z",
+   "title": "Greendimes - Situs Login Slot Online Terpercaya",
+   "generator": "All in One SEO (AIOSEO) 4.7.7",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.greendimes.com/feed/",
+     "title": "Greendimes - Situs Login Slot Online Terpercaya » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "greendisk.com": {
+  "checked": "2026-10-27T05:55:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "44.228.55.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.isomedia.com",
+    "ns2.isomedia.com",
+    "ns3.isomedia.com",
+    "ns4.isomedia.com",
+    "ns5.isomedia.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:55:43Z",
+   "title": "GreenDisk",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gregmorris.co.uk": {
+  "checked": "2026-10-27T05:55:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.36.12",
+    "172.67.183.13"
+   ],
+   "aaaa": [
+    "2606:4700:3035::6815:240c",
+    "2606:4700:3036::ac43:b70d"
+   ],
+   "cname": null,
+   "ns": [
+    "marty.ns.cloudflare.com",
+    "tegan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:55:46Z",
+   "title": "Greg Morris",
+   "generator": "Astro v5.5.6",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://gregmorris.co.uk/rss.xml",
+     "title": "Greg Morris RSS"
+    },
+    {
+     "type": "rss",
+     "url": "https://gregmorris.co.uk/notes.xml",
+     "title": "Greg Morris Notes"
+    },
+    {
+     "type": "json",
+     "url": "https://gregmorris.co.uk/feed.json",
+     "title": "Greg Morris JSON Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://social.lol/@gm",
+    "https://bsky.app/profile/gregmorris.micro.blog",
+    "https://www.threads.net/@_greg_morris",
+    "https://www.instagram.com/_greg_morris",
+    "https://www.youtube.com/@greg_morris",
+    "https://www.linkedin.com/in/greg-morris-gr36",
+    "https://www.strava.com/athletes/165319588"
+   ],
+   "webmention": null
+  }
+ },
+ "gregoryscoffee.com": {
+  "checked": "2026-10-27T05:55:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.227.38.71"
+   ],
+   "aaaa": [
+    "2620:127:f00f:5::"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:55:48Z",
+   "title": "Gregorys Coffee - See Coffee Differently",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gremlin.com": {
+  "checked": "2026-10-27T05:55:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.202.211.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1338.awsdns-39.org",
+    "ns-1865.awsdns-41.co.uk",
+    "ns-41.awsdns-05.com",
+    "ns-563.awsdns-06.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:55:51Z",
+   "title": "Enterprise Reliability Management & Resilience Testing | Gremlin",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "grep.app": {
+  "checked": "2026-10-27T05:55:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.239.109.65",
+    "64.239.109.129"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.vercel-dns.com",
+    "ns2.vercel-dns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 429
+  },
+  "home": {
+   "checked": "2026-10-27T05:55:54Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 429 (Vercel challenge)"
+  }
+ },
+ "grepular.com": {
+  "checked": "2026-10-27T05:55:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "147.189.155.195"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "fsh.grepular.com",
+    "wake.grepular.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:55:56Z",
+   "title": "grepular.com",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.grepular.com/rss",
+     "title": "RSS Feed"
+    },
+    {
+     "type": "atom",
+     "url": "https://www.grepular.com/atom",
+     "title": "Atom Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://gitlab.com/grepular",
+    "https://mastodon.social/@grepular",
+    "https://bsky.app/profile/grepular.com"
+   ],
+   "webmention": null
+  }
+ },
+ "grist.org": {
+  "checked": "2026-10-27T05:56:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.20.37.100",
+    "172.66.161.20"
+   ],
+   "aaaa": [
+    "2606:4700:10::6814:2564",
+    "2606:4700:10::ac42:a114"
+   ],
+   "cname": null,
+   "ns": [
+    "connie.ns.cloudflare.com",
+    "quincy.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:56:01Z",
+   "title": "Grist – Climate and environmental news | Grist",
+   "generator": "Site Kit by Google 1.187.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "groktiddlywiki.com": {
+  "checked": "2026-10-27T05:56:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "143.204.204.16",
+    "143.204.204.39",
+    "143.204.204.69",
+    "143.204.204.91"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1290.awsdns-33.org",
+    "ns-1626.awsdns-11.co.uk",
+    "ns-185.awsdns-23.com",
+    "ns-706.awsdns-24.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:56:03Z",
+   "title": "Grok TiddlyWiki — Build a deep, lasting understanding of TiddlyWiki",
+   "generator": "TiddlyWiki",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "groq.com": {
+  "checked": "2026-10-27T05:56:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.239.109.193"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "imani.ns.cloudflare.com",
+    "jihoon.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:56:11Z",
+   "title": "Groq is the premier neocloud for fast inference",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "groundeffectimaging.com": {
+  "checked": "2026-10-27T05:56:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T05:56:14Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "groupcardapps.com": {
+  "checked": "2026-10-27T05:56:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.49.23.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-e1.googledomains.com",
+    "ns-cloud-e2.googledomains.com",
+    "ns-cloud-e3.googledomains.com",
+    "ns-cloud-e4.googledomains.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:56:14Z",
+   "title": "Modern Employee Recognition and Online Group eCards | Kudoboard",
+   "generator": "WP Rocket 3.19.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.kudoboard.com/feed/",
+     "title": "Kudoboard » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.kudoboard.com/comments/feed/",
+     "title": "Kudoboard » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "grouplens.org": {
   "checked": "2026-10-24T06:07:19Z",
   "method": "enrich_hosts",
@@ -1678,6 +9227,40 @@
    "rel_me": [],
    "webmention": null,
    "error": "timeout"
+  }
+ },
+ "grouplogic.com": {
+  "checked": "2026-10-27T05:56:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.188.230.221"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1429.awsdns-50.org",
+    "ns-1609.awsdns-09.co.uk",
+    "ns-254.awsdns-31.com",
+    "ns-857.awsdns-43.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:56:17Z",
+   "title": "Acronis Cyber Files",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "groups.drupal.org": {
@@ -1747,6 +9330,420 @@
    "title": null,
    "generator": null,
    "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "grove.io": {
+  "checked": "2026-10-27T05:56:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "138.68.38.192"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1435.awsdns-51.org",
+    "ns-2044.awsdns-63.co.uk",
+    "ns-459.awsdns-57.com",
+    "ns-703.awsdns-23.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:56:24Z",
+   "title": "Grove - Hosted IRC and so much more",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "growthalytics.com": {
+  "checked": "2026-10-27T05:56:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.64.119.221"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com",
+    "dns3.registrar-servers.com",
+    "dns4.registrar-servers.com",
+    "dns5.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-27T05:56:27Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "growthink.com": {
+  "checked": "2026-10-27T05:56:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.10.75",
+    "104.26.11.75",
+    "172.67.70.177"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:a4b",
+    "2606:4700:20::681a:b4b",
+    "2606:4700:20::ac43:46b1"
+   ],
+   "cname": null,
+   "ns": [
+    "ivy.ns.cloudflare.com",
+    "phil.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:56:43Z",
+   "title": "Business Consulting and Business Planning Services | Growthink",
+   "generator": "WordPress 6.9.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.growthink.com/feed",
+     "title": "Growthink » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.growthink.com/comments/feed",
+     "title": "Growthink » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "grubstreet.com": {
+  "checked": "2026-10-27T05:56:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.91",
+    "151.101.65.91",
+    "151.101.129.91",
+    "151.101.193.91"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1216.awsdns-24.org",
+    "ns-1830.awsdns-36.co.uk",
+    "ns-54.awsdns-06.com",
+    "ns-605.awsdns-11.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:56:45Z",
+   "title": "Grub Street -- New York Magazine's Food and Restaurant Blog",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "grubz.net": {
+  "checked": "2026-10-27T05:56:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.200.22.214"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1crv.name.com",
+    "ns2cvx.name.com",
+    "ns3cjl.name.com",
+    "ns4hny.name.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
+  },
+  "home": {
+   "checked": "2026-10-27T05:56:47Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
+  }
+ },
+ "grumdrig.com": {
+  "checked": "2026-10-27T05:56:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "45.79.71.95"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:56:50Z",
+   "title": "Fred",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gsap.com": {
+  "checked": "2026-10-27T05:56:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.28.16",
+    "104.18.29.16"
+   ],
+   "aaaa": [
+    "2606:4700::6812:1c10",
+    "2606:4700::6812:1d10"
+   ],
+   "cname": null,
+   "ns": [
+    "heidi.ns.cloudflare.com",
+    "jerome.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:56:52Z",
+   "title": "Homepage | GSAP",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://gsap.com/feed/feed.xml",
+     "title": "GSAP"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gscottolson.com": {
+  "checked": "2026-10-27T05:56:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.40.34.41"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hover.com",
+    "ns2.hover.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-27T05:56:55Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "gsd.di.uminho.pt": {
+  "checked": "2026-10-27T05:57:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "193.136.19.96"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.stabletransit.com",
+    "dns2.stabletransit.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:57:12Z",
+   "title": "Welcome to the Distributed Systems Group web site — GSD",
+   "generator": "Plone - http://plone.org",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gsma.com": {
+  "checked": "2026-10-27T05:57:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.16.144",
+    "104.18.17.144"
+   ],
+   "aaaa": [
+    "2606:4700::6812:1090",
+    "2606:4700::6812:1190"
+   ],
+   "cname": null,
+   "ns": [
+    "eric.ns.cloudflare.com",
+    "leah.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:57:15Z",
+   "title": "GSMA",
+   "generator": "WordPress 7.0.2",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gtdfocus.com": {
+  "checked": "2026-10-27T05:57:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "209.38.16.75"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-c1.googledomains.com",
+    "ns-cloud-c2.googledomains.com",
+    "ns-cloud-c3.googledomains.com",
+    "ns-cloud-c4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:57:19Z",
+   "title": "One-on-One GTD Coaching for Professionals | GTD Focus",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://gtdfocus.com/feed/",
+     "title": "Workflow Coaching GTD Focus » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://gtdfocus.com/comments/feed/",
+     "title": "Workflow Coaching GTD Focus » Comments Feed"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -1852,6 +9849,104 @@
    "checked": "2026-10-24T05:49:39Z"
   }
  },
+ "guardiananalytics.com": {
+  "checked": "2026-10-27T05:57:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.185.80.37"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "udns1.ultradns.net",
+    "udns2.ultradns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:57:26Z",
+   "title": "Xceed: AI FRAML Platform | NICE Actimize",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "guardianapp.com": {
+  "checked": "2026-10-27T05:57:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "206.189.253.127"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-e1.googledomains.com",
+    "ns-cloud-e2.googledomains.com",
+    "ns-cloud-e3.googledomains.com",
+    "ns-cloud-e4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:57:31Z",
+   "title": "Guardian Firewall - Guardian Firewall",
+   "generator": "Hugo 0.163.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@guardianfirewall"
+   ],
+   "webmention": null
+  }
+ },
+ "guardo.io": {
+  "checked": "2026-10-27T05:57:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-27T05:57:34Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
  "guernicamag.com": {
   "checked": "2026-10-24T06:29:20Z",
   "method": "enrich_hosts",
@@ -1889,6 +9984,126 @@
    ],
    "hcard": false,
    "rel_me": [],
+   "webmention": null
+  }
+ },
+ "guestbook.goodenough.us": {
+  "checked": "2026-10-27T05:57:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": "goodenoughllc.github.io",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:57:34Z",
+   "title": "A Good Enough Guestbook",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.world/@goodenoughllc"
+   ],
+   "webmention": null
+  }
+ },
+ "guide.couchdb.org": {
+  "checked": "2026-10-27T05:57:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:57:38Z",
+   "title": "CouchDB: The Definitive Guide",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "guix.gnu.org": {
+  "checked": "2026-10-27T05:57:42Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "46.224.9.33"
+   ],
+   "aaaa": [
+    "2a01:4f8:c013:3c5b::"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.gnu.org",
+    "ns2.gnu.org",
+    "ns3.gnu.org",
+    "ns4.gnu.org"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:57:42Z",
+   "title": "GNU Guix transactional package manager and distribution — GNU Guix",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://guix.gnu.org/feeds/blog.atom",
+     "title": "GNU Guix — Activity Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://hachyderm.io/@guix"
+   ],
    "webmention": null
   }
  },
@@ -1969,6 +10184,45 @@
    "webmention": null
   }
  },
+ "gutenberg.org": {
+  "checked": "2026-10-27T05:57:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "152.19.134.47"
+   ],
+   "aaaa": [
+    "2610:28:3090:3000:0:bad:cafe:47"
+   ],
+   "cname": null,
+   "ns": [
+    "ns.unc.edu",
+    "ns2.unc.edu"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:57:46Z",
+   "title": "Free eBooks | Project Gutenberg",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@gutenberg_org",
+    "https://bsky.app/profile/gutenberg.org",
+    "https://mastodon.social/@gutenberg_new",
+    "https://bsky.app/profile/new.gutenberg.org"
+   ],
+   "webmention": null
+  }
+ },
  "guypo.com": {
   "checked": "2026-10-24T06:29:30Z",
   "method": "enrich_hosts",
@@ -2007,6 +10261,44 @@
    "rel_me": [],
    "webmention": null,
    "error": "tls: Hostname mismatch, certificate is not valid for 'guypo.com'"
+  }
+ },
+ "guzey.com": {
+  "checked": "2026-10-27T05:57:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [
+    "2600:1f18:16e:df01::258",
+    "2600:1f18:16e:df01::259"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.p07.nsone.net",
+    "dns2.p07.nsone.net",
+    "dns3.p07.nsone.net",
+    "dns4.p07.nsone.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:57:48Z",
+   "title": "Alexey Guzey",
+   "generator": "Hugo 0.134.3",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "gwern.net": {
@@ -2099,6 +10391,68 @@
    ],
    "hcard": false,
    "rel_me": [],
+   "webmention": null
+  }
+ },
+ "gyford.com": {
+  "checked": "2026-10-27T05:57:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "176.126.243.225"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.mythic-beasts.com",
+    "ns2.mythic-beasts.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-27T05:57:51Z",
+   "title": "Phil Gyford’s website",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.gyford.com/phil/feeds/everything/rss/",
+     "title": "Writing, photos, links, combined"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.gyford.com/phil/writing/feeds/posts/rss/",
+     "title": "Phil Gyford’s writing"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.gyford.com/phil/comments/feeds/posts/rss/",
+     "title": "Phil Gyford’s comments elsewhere"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.gyford.com/phil/feeds/links/rss/",
+     "title": "Links"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.gyford.com/phil/feeds/comments/rss/",
+     "title": "Comments posted on this site"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://www.gyford.com",
+    "https://mastodon.social/@philgyford",
+    "https://bsky.app/profile/phil.gyford.com"
+   ],
    "webmention": null
   }
  },
