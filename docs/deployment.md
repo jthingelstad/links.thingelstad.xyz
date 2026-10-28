@@ -146,6 +146,19 @@ writes nothing.
    CloudFront: same bytes and the Content-Type the deploy stored; and that
    `/links/<id>` redirects to `/links/<id>/`.
 
+7. **IndexNow** (`tools/indexnow.mjs`, tested in `tests/indexnow.test.mjs`; Jamie
+   approved 2026-10-28). After the checks pass, the deploy POSTs to
+   `https://api.indexnow.org/indexnow`, which passes the URLs to Bing, Yandex,
+   Seznam, Naver and Yep. It sends the pages whose built bytes differ from the live
+   object (md5 against the listing, so a headers-only re-upload sends nothing) and
+   that the sitemap lists (noindex pages are not in it), plus the pages the deploy
+   removed. Nothing changed, nothing sent; 10,000 URLs a request. The key is public
+   by design and shared with thingelstad.xyz and weekly.thingelstad.com: its file
+   ships from `public/79f379d18599eeec9bebf34c9a2a5deb.txt` (the key and nothing
+   else, `text/plain`). A refusal or a network failure is logged and the deploy
+   carries on. `npm run deploy:plan` lists what a deploy would send and sends
+   nothing; no other path pings.
+
 One consequence of removing stale Pagefind chunks: a search page left open across a
 deploy can fail to load an old chunk until it is reloaded.
 
