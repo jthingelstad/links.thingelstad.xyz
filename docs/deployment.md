@@ -15,7 +15,7 @@ distribution (section "The MCP server").
 | ------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `links-certificate` | `infra/certificate.json` | ACM certificate for `links.thingelstad.xyz`, DNS validated                                                                                                                                                                                                                  |
 | `links-storage`     | `infra/storage.json`     | `links-storage-web-999153317627`: private, SSE-S3, versioned (replaced and removed objects kept 30 days), retained if the stack goes                                                                                                                                        |
-| `links-site`        | `infra/site.json`        | Distribution with origin access control, cache and header policies, the index and crawler functions, a 14-day access log without client addresses, 5xx alarm to the family topic; the `/mcp*` behaviour to the `links-mcp` endpoint through a second origin access control  |
+| `links-site`        | `infra/site.json`        | Distribution with origin access control, cache and header policies, the index and crawler functions, a 24-month access log without client addresses, 5xx alarm to the family topic; the `/mcp*` behaviour to the `links-mcp` endpoint through a second origin access control  |
 | `links-delivery`    | `infra/delivery.json`    | Main-only GitHub OIDC role: promote one approved source package and start/watch the AWS publisher                                                                                                                                                                           |
 | `links-publisher`   | `infra/publisher.json`   | One serialized CodeBuild project, its scoped site/MCP role, logs and EventBridge bookmark trigger                                                                                                                                                                           |
 | `links-mcp`         | `infra/mcp.json`         | The MCP server: `links-mcp-code-999153317627` (private, versioned, the packaged server), an execution role that writes its own logs and nothing else, 30-day logs, the `links-mcp` web function, its revision and `live` endpoint (IAM auth), 5xx alarm to the family topic |
@@ -368,7 +368,7 @@ Markdown files, and 16,687 Pagefind files.
 - **Monthly, at this site's traffic:** S3 storage under a cent (0.3 GB, plus 30 days of
   replaced versions); CloudFront within the always-free 1 TB, 10 million requests and 2
   million function invocations; the access log within the 750 bytes a request CloudFront
-  delivers to CloudWatch Logs free, 14 days of storage a few cents at most; the 5xx alarm
+  delivers to CloudWatch Logs free, 24 months of storage a few cents a month at most; the 5xx alarm
   $0.10; the certificate free. About $0.15 to $0.50 a month, most of it the alarm and
   template-change deploys. No Route 53.
 - **The MCP server:** a web function is billed for requests, active CPU time and the

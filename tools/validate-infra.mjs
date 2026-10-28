@@ -193,7 +193,7 @@ export function validate({
     31536000,
   );
 
-  // The access log keeps no client address and no cookie, for 14 days.
+  // The access log keeps no client address and no cookie, for 24 months (731 days).
   const accessLog = site.Resources.AccessLogDelivery.Properties.RecordFields;
   assert.ok(accessLog.includes('time-to-first-byte'));
   assert.ok(
@@ -202,7 +202,7 @@ export function validate({
     ),
     'The access log records no client addresses, cookies or referrers',
   );
-  assert.equal(site.Resources.AccessLogGroup.Properties.RetentionInDays, 14);
+  assert.equal(site.Resources.AccessLogGroup.Properties.RetentionInDays, 731);
   const alarm = site.Resources.Distribution5xxAlarm.Properties;
   assert.equal(alarm.MetricName, '5xxErrorRate');
   assert.equal(
