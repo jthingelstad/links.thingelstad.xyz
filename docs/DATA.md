@@ -44,8 +44,13 @@ year files, account-wide timestamps or counts, or the issue join.
 ## `data/derived/issues.json`
 
 The join to The Weekly Thing, written by `tools/join_issues.py` from the issue files
-at `~/Projects/thingelstad.com/weekly.thingelstad.com/apps/site/archive/<n>.md`
-(front matter `number`, `subject`, `publish_date`, `links`). Twenty-one issues of 2017
+at `apps/site/archive/<n>.md` in a freshly fetched, pinned Weekly main tree
+(front matter `number`, `subject`, `publish_date`, `links`). The default exports
+that immutable revision in a temporary directory, independent of any working
+checkout, and logs its full revision with the join summary. Source failure
+leaves the existing output unchanged. `--archive DIR` explicitly uses a local
+archive without a network call, for offline tests and isolated CI sources.
+Twenty-one issues of 2017
 and 2018 (WT32 to WT52) were imported into WT Builder as plain text and list no links in
 front matter; for an issue whose front matter lists none, the rows are the link items of
 the body instead: every Markdown link that is a whole line (with or without a heading
