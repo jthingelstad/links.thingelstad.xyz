@@ -305,7 +305,8 @@ Mac every night and commits what changed; its push to main is the deploy.
 **What it does** (`tools/README.md`, "The nightly job"): checks that the checkout is on
 `main` and clean, fetches and fast-forwards (pushing an earlier run's commit first);
 loads `.env` and `GITHUB_TOKEN` from `gh auth token` without echoing either; runs
-`sync.py` and `join_issues.py`; then, one after another, `enrich_hosts.py --limit 1000`,
+`sync.py` and `join_issues.py` (an isolated, freshly fetched and pinned Weekly main
+archive, never the active local Weekly checkout); then, one after another, `enrich_hosts.py --limit 1000`,
 `enrich_facts.py --limit 500` and `enrich_pages.py --wayback-only --limit 800`;
 validates `data/`; commits `data/` and `public/media/` as `Linking Things nightly` with
 the message `Nightly: sync and enrichment, <YYYY-MM-DD>` and each step's summary in the

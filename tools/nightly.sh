@@ -194,7 +194,7 @@ step() {
 
 if ((DRY_RUN)); then
 	log "plan: load .env and GITHUB_TOKEN from gh auth token (not read in a dry run)"
-	log "plan: tools/sync.py (exit 3, rate limited, is logged and the run goes on), then tools/join_issues.py"
+	log "plan: tools/sync.py (exit 3, rate limited, is logged and the run goes on), then tools/join_issues.py from isolated pinned Weekly main (not fetched in a dry run)"
 	# The enrichment tools' own dry runs: offline, no writes (-B: no bytecode either).
 	for planned in "enrich_hosts.py --limit $HOSTS_LIMIT" "enrich_facts.py --limit $FACTS_LIMIT" \
 		"enrich_pages.py --wayback-only --limit $WAYBACK_LIMIT"; do

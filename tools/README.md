@@ -110,10 +110,17 @@ python3 -I tools/join_issues.py
 python3 -I tools/join_issues.py --archive DIR --links DIR --out FILE
 ```
 
-Defaults: `--archive ~/Projects/thingelstad.com/weekly.thingelstad.com/apps/site/archive`
-(found relative to this repository), `--links data/links`,
-`--out data/derived/issues.json`. It prints a one-line count of issues, link rows,
-linked ids and unmatched rows.
+By default it fetches Weekly's public `refs/heads/main` once into a temporary
+Git repository, resolves its full commit id and exports only that revision's
+`apps/site/archive`. It never reads or switches another worker's checkout.
+A failed fetch or an unresolved source stops before replacing the derived
+join; it never falls back to cached working files. The one-line summary logs
+the pinned revision beside the issue/link counts so a zero exit is not the
+only source evidence. Git is required; Python uses only the standard library.
+
+`--archive DIR` is an explicit offline alternative for fixtures and isolated
+CI sources. The other defaults remain `--links data/links` and
+`--out data/derived/issues.json`. The output schema and URL matching are unchanged.
 
 Every `*.md` file in the archive is an issue. `archive.njk` and `redirects.njk` are
 templates and are not read. For each issue:
