@@ -16,6 +16,8 @@
 //    assets, so a cached page never names a missing stylesheet.
 // 4. Fetch a few routes from CloudFront and compare bytes and Content-Type with
 //    the build.
+// 5. Tell IndexNow which sitemap pages changed or went (tools/indexnow.mjs).
+//    A failed ping is logged and never fails the deploy.
 import {
   DeleteObjectsCommand,
   GetObjectCommand,
@@ -35,6 +37,7 @@ import {
   reportArrivals,
 } from './sync-receipt.mjs';
 import fs from 'node:fs/promises';
+import { changedUrls, sitemapUrls, submit } from './indexnow.mjs';
 import { publicationContext } from './publication-context.mjs';
 import path from 'node:path';
 import {
@@ -153,6 +156,22 @@ const summary = {
   removeAssets: staleAssets.length,
   invalidate: paths.length === 1 && paths[0] === '/*' ? '/*' : paths.length,
 };
+// IndexNow takes the pages whose bytes changed, never a headers-only
+// re-upload, so compare without force.
+const indexable = new Set();
+for (const name of await fs.readdir(DIST))
+  if (/^sitemap-\d+\.xml$/.test(name))
+    for (const url of sitemapUrls(
+      await fs.readFile(path.join(DIST, name), 'utf8'),
+    ))
+      indexable.add(url);
+const indexNowUrls = changedUrls({
+  changed: planSync(local, remote).upload,
+  removed: stalePages,
+  indexable,
+  base: config.productionUrl,
+});
+summary.indexNow = indexNowUrls.length;
 const refusal =
   stalePages.length > limit &&
   publication?.release.allowRemovals !== String(stalePages.length)
@@ -164,6 +183,7 @@ if (dryRun) {
   for (const [label, list] of [
     ['upload', plan.upload],
     ['remove', plan.stale],
+    ['indexnow', indexNowUrls],
   ])
     if (list.length)
       console.log(
@@ -286,6 +306,7 @@ console.log(
     url: config.deliveryUrl,
   }),
 );
+await submit(indexNowUrls, config.productionUrl);
 if (receiptBus) {
   try {
     const built = JSON.parse(

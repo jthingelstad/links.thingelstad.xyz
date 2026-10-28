@@ -139,6 +139,11 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   first enrichment pass runs (about three weeks of nights) a night takes about three
   hours (2026-10-24: 1,000 hosts in 75 minutes, 800 Wayback lookups in 97 minutes), so
   the main checkout is busy from 00:30 to about 03:30 Central.
+- **IndexNow.** After a verified deploy, `tools/deploy.mjs` submits the sitemap pages
+  that deploy changed or removed (`tools/indexnow.mjs`; `docs/deployment.md`, step 7).
+  A failed ping never fails the deploy. Only the publisher's deploy pings;
+  `npm run deploy:plan` shows the list. `public/<key>.txt` is the key file, public by
+  design: never remove it or put it behind a redirect.
 - Infrastructure changes go through reviewed CloudFormation change sets with the
   `cloud-engineer` identity (`npm run infra:plan` to review, `npm run infra:apply` on
   Jamie's go, `npm run infra:attach` once for the certificate), never through the
