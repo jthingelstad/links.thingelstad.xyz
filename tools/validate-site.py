@@ -20,7 +20,7 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   permalink, with a public count (no data-private, Jamie's call 2026-10-23);
 - the sitemap index lists sitemaps that exist, every sitemap URL is a built
   page, and every page but the 404 and those marked noindex is in the
-  sitemap, once; a noindex page is never in it, and only records, host
+  sitemap, once, each with a valid lastmod; a noindex page is never in it, and only records, host
   pages and /surprise/ (a door to a random record) are marked noindex;
   robots.txt disallows no noindex page (a crawler has to fetch a page to
   read its noindex);
@@ -82,7 +82,7 @@ import re
 import sqlite3
 import sys
 import xml.etree.ElementTree as ET
-from datetime import datetime
+from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
 from pathlib import Path
@@ -94,6 +94,8 @@ from linking.bookmarks import merge_bookmarks  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
+W3C_INSTANT = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{3})?Z")
+NOW = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.999Z")
 SITE = "https://links.thingelstad.xyz"
 SHARE_IMAGE = "/share.jpg"
 # A record's card, from cards.thingelstad.com: /links/<id>/ draws at
@@ -1041,7 +1043,19 @@ def main():
             if not sitemap.startswith(SITE + "/") or not file.exists():
                 problems.append(f"sitemap index lists {sitemap}, which is not built")
                 continue
-            listed.extend(loc.findall(file.read_text()))
+            text = file.read_text()
+            listed.extend(loc.findall(text))
+            # Every URL carries a W3C lastmod (src/lib/lastmod.ts): the date
+            # its content last changed, never in the future.
+            for url in re.findall(r"<url>(.*?)</url>", text, re.S):
+                stamp = re.search(r"<lastmod>([^<]+)</lastmod>", url)
+                where = (loc.search(url) or [None, url])[1]
+                if not stamp or not W3C_INSTANT.fullmatch(stamp[1]):
+                    problems.append(f"sitemap URL {where} has no valid lastmod")
+                elif stamp[1] > NOW:
+                    problems.append(f"sitemap URL {where} has a future lastmod")
+            if not re.search(r"<lastmod>[^<]+</lastmod>", index.read_text()):
+                problems.append(f"sitemap index lists {sitemap} without a lastmod")
     seen = set()
     for entry in listed:
         if entry in seen:

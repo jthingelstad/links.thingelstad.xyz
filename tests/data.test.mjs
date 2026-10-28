@@ -359,3 +359,44 @@ test('thin pages are left out of search indexes, the rest are in', () => {
   // A bare link and an excerpt alone are thin; Jamie's words are not.
   assert.ok(data.unindexed.size > 10000 && data.unindexed.size < 16000);
 });
+
+test('every page has a content date for the sitemap, never the build time', async () => {
+  // Sitemap dates are to the second.
+  const second = (date) => Math.floor(Date.parse(date) / 1000) * 1000;
+  const { lastmodOf, pageLastmod } = await import('../src/lib/lastmod.ts');
+  const w3c = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/;
+  for (const [url, lastmod] of pageLastmod) {
+    assert.match(lastmod, w3c, url);
+    assert.ok(Date.parse(lastmod) <= Date.now(), url);
+  }
+  // A record: saved, or the newest issue that carried it.
+  for (const link of data.links) {
+    const dates = [
+      link.saved,
+      ...(data.appearances.get(link.id) ?? []).map((a) => a.issue.date),
+      ...(data.mentionedBy.get(link.id) ?? []).map(
+        (id) => data.linkById.get(id).saved,
+      ),
+      ...(data.savedTwice.get(link.id) ?? []).map(
+        (id) => data.linkById.get(id).saved,
+      ),
+    ];
+    const newest = Math.max(...dates.map(second));
+    assert.equal(
+      Date.parse(lastmodOf(data.absolute(data.linkPath(link.id)))),
+      newest,
+    );
+  }
+  // An issue page is at least as new as the issue.
+  for (const issue of data.issues)
+    assert.ok(
+      Date.parse(lastmodOf(data.absolute(data.issuePath(issue)))) >=
+        second(issue.date),
+    );
+  // The home page is as new as the newest saved link, not the build.
+  assert.ok(
+    Date.parse(lastmodOf(data.absolute('/'))) >=
+      Date.parse(data.links.at(-1).saved),
+  );
+  assert.throws(() => lastmodOf(data.absolute('/no-such-page/')));
+});

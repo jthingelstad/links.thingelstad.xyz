@@ -139,6 +139,14 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   first enrichment pass runs (about three weeks of nights) a night takes about three
   hours (2026-10-24: 1,000 hosts in 75 minutes, 800 Wayback lookups in 97 minutes), so
   the main checkout is busy from 00:30 to about 03:30 Central.
+- **Sitemap dates** (2026-10-28, `src/lib/lastmod.ts`, the sitemap's `serialize` in
+  `astro.config.mjs`): every URL carries the date its content last changed, never the
+  build time. A record: saved, the newest issue that carried it, a later mention or
+  second save. A list page: its newest row (saved, first issue). An issue: its date or
+  its newest link. `/stats/` and `/about/` also take `data/sync.json`'s change stamp.
+  There is no per-link edit date, so a note edited after saving is not seen on its
+  record. A sitemap page with no date fails the build; `validate:site` checks the format.
+  IndexNow still picks pages by bytes, not by `<lastmod>`.
 - **IndexNow.** After a verified deploy, `tools/deploy.mjs` submits the sitemap pages
   that deploy changed or removed (`tools/indexnow.mjs`; `docs/deployment.md`, step 7).
   A failed ping never fails the deploy. Only the publisher's deploy pings;
