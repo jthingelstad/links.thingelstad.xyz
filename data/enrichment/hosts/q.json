@@ -1,4 +1,371 @@
 {
+ "q-lang.io": {
+  "checked": "2026-10-29T05:48:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.31.128",
+    "172.67.176.135"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:b087",
+    "2606:4700:3035::6815:1f80"
+   ],
+   "cname": null,
+   "ns": [
+    "michael.ns.cloudflare.com",
+    "summer.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:48:34Z",
+   "title": "Sunwin toyota.net.pl ⭐️ Link Đăng Ký SunWin, Tải App Mới Nhất 2026",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://toyota.net.pl/feed/",
+     "title": "Dòng thông tin Sunwin »"
+    },
+    {
+     "type": "rss",
+     "url": "https://toyota.net.pl/comments/feed/",
+     "title": "Sunwin » Dòng bình luận"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "qed.princeton.edu": {
+  "checked": "2026-10-29T05:48:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-29T05:48:38Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "qeepsake.co": {
+  "checked": "2026-10-29T05:48:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.84.104.245"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns37.domaincontrol.com",
+    "ns38.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-29T05:48:38Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "qifi.org": {
+  "checked": "2026-10-29T05:48:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "ns11.infomaniak.ch",
+    "ns12.infomaniak.ch"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:48:56Z",
+   "title": "pure JS WiFi QR Code Generator",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "qlocktwo.com": {
+  "checked": "2026-10-29T05:49:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.6.111",
+    "104.26.7.111",
+    "172.67.74.38"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:66f",
+    "2606:4700:20::681a:76f",
+    "2606:4700:20::ac43:4a26"
+   ],
+   "cname": null,
+   "ns": [
+    "igor.ns.cloudflare.com",
+    "tori.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:00Z",
+   "title": "BE PRESENT - Discover the unique QLOCKTWO UNIVERSE | QLOCKTWO",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "qntm.org": {
+  "checked": "2026-10-29T05:49:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "93.93.131.3"
+   ],
+   "aaaa": [
+    "2a00:1098:0:86:1000::33"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.mythic-beasts.com",
+    "ns2.mythic-beasts.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:06Z",
+   "title": "Things Of Interest @ Things Of Interest",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://qntm.org/rss.php",
+     "title": "Things Of Interest RSS feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "qris.cool": {
+  "checked": "2026-10-29T05:49:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.42.81",
+    "172.67.203.97"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:cb61",
+    "2606:4700:3035::6815:2a51"
+   ],
+   "cname": null,
+   "ns": [
+    "elaine.ns.cloudflare.com",
+    "garret.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:10Z",
+   "title": "App | QR is cool",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "qrohlf.com": {
+  "checked": "2026-10-29T05:49:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "amy.ns.cloudflare.com",
+    "max.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:13Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "qsapp.com": {
+  "checked": "2026-10-29T05:49:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.71.244",
+    "172.67.172.101"
+   ],
+   "aaaa": [
+    "2606:4700:3034::6815:47f4",
+    "2606:4700:3034::ac43:ac65"
+   ],
+   "cname": null,
+   "ns": [
+    "jay.ns.cloudflare.com",
+    "zoe.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:13Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "quakkels.com": {
+  "checked": "2026-10-29T05:49:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "138.197.49.101"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'quakkels.com'"
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:18Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'quakkels.com'"
+  }
+ },
  "quantamagazine.org": {
   "checked": "2026-10-24T05:59:24Z",
   "method": "enrich_hosts",
@@ -32,6 +399,204 @@
      "title": "Quanta Magazine » Quanta Comments Feed"
     }
    ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "quantopian.com": {
+  "checked": "2026-10-29T05:49:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.64.119.105"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:19Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "queenbeehoney.com": {
+  "checked": "2026-10-29T05:49:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.124.249.10"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns25.domaincontrol.com",
+    "ns26.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:36Z",
+   "title": "Queen Bee Honey Products – Buy your fresh honey products here",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://queenbeehoney.com/feed/",
+     "title": "Queen Bee Honey Products » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://queenbeehoney.com/comments/feed/",
+     "title": "Queen Bee Honey Products » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "queercents.com": {
+  "checked": "2026-10-29T05:49:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.185.152.208"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1135.websitewelcome.com",
+    "ns1136.websitewelcome.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:39Z",
+   "title": "Queercents – We're here, We're queer, and We're not going Shopping without Coupons",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.queercents.com/feed/",
+     "title": "Queercents » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.queercents.com/comments/feed/",
+     "title": "Queercents » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "quesma.com": {
+  "checked": "2026-10-29T05:49:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.38.231",
+    "172.67.140.195"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:26e7",
+    "2606:4700:3033::ac43:8cc3"
+   ],
+   "cname": null,
+   "ns": [
+    "alex.ns.cloudflare.com",
+    "shaz.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:41Z",
+   "title": "AI Coding Agent Analytics & Cost Intelligence | Quesma",
+   "generator": "Astro v7.3.2",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://quesma.com/rss.xml",
+     "title": "Quesma Blog RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "questvisual.com": {
+  "checked": "2026-10-29T05:49:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.210.206"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:80c::200e"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.google.com",
+    "ns2.google.com",
+    "ns3.google.com",
+    "ns4.google.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:44Z",
+   "title": "Google Translate - A Personal Interpreter on Your Phone or Computer",
+   "generator": null,
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -80,6 +645,464 @@
     "skip.ns.cloudflare.com"
    ],
    "checked": "2026-10-24T05:48:26Z"
+  }
+ },
+ "queues.io": {
+  "checked": "2026-10-29T05:49:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.19.160",
+    "172.67.186.244"
+   ],
+   "aaaa": [
+    "2606:4700:3035::6815:13a0",
+    "2606:4700:3036::ac43:baf4"
+   ],
+   "cname": null,
+   "ns": [
+    "cass.ns.cloudflare.com",
+    "grant.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:46Z",
+   "title": "Tỷ Lệ Kèo Nhà Cái 5 | Keonhacai 5 Kèo Bóng Đá Trực Tiếp 2026",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://tylekeo.tokyo/feed/",
+     "title": "Dòng thông tin tylekeo.tokyo »"
+    },
+    {
+     "type": "rss",
+     "url": "https://tylekeo.tokyo/comments/feed/",
+     "title": "tylekeo.tokyo » Dòng bình luận"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "quibids.com": {
+  "checked": "2026-10-29T05:49:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.130.190",
+    "15.197.148.33"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns71.domaincontrol.com",
+    "ns72.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:49Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "quickonlinetips.com": {
+  "checked": "2026-10-29T05:49:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "191.96.144.112",
+    "195.35.60.131"
+   ],
+   "aaaa": [
+    "2a02:4780:1e:44f0:634a:f762:87c7:26ad",
+    "2a02:4780:22:ec58:8f7b:11ea:cb8c:88a"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.dns-parking.com",
+    "ns2.dns-parking.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:50Z",
+   "title": "QuickOnlineTips - Tech help that works. Since 2004.",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.quickonlinetips.com/archives/feed/",
+     "title": "QuickOnlineTips » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.quickonlinetips.com/archives/comments/feed/",
+     "title": "QuickOnlineTips » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "quicksilver.blacktree.com": {
+  "checked": "2026-10-29T05:49:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:55Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "quid.com": {
+  "checked": "2026-10-29T05:49:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.60.103.30",
+    "199.60.103.226"
+   ],
+   "aaaa": [
+    "2606:2c40::c73c:671e",
+    "2606:2c40::c73c:67e2"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple-edge.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple-edge.io",
+    "ns4.dnsimple-edge.org",
+    "ns5.dnsmadeeasy.com",
+    "ns6.dnsmadeeasy.com",
+    "ns7.dnsmadeeasy.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:55Z",
+   "title": "Quid | AI-Powered Consumer & Market Intelligence Platform",
+   "generator": "HubSpot",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "quietui.org": {
+  "checked": "2026-10-29T05:49:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.150.1.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.digitalocean.com",
+    "ns2.digitalocean.com",
+    "ns3.digitalocean.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:49:57Z",
+   "title": "Quiet UI",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "quillette.com": {
+  "checked": "2026-10-29T05:50:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.17.39",
+    "172.67.220.134"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:dc86",
+    "2606:4700:3035::6815:1127"
+   ],
+   "cname": null,
+   "ns": [
+    "carlos.ns.cloudflare.com",
+    "harmony.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:50:00Z",
+   "title": "Quillette | Ideas Matter",
+   "generator": "Ghost 6.52",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://quillette.com/blog/rss/",
+     "title": "Quillette"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://quillette.com/webmentions/receive/"
+  }
+ },
+ "quiltdata.com": {
+  "checked": "2026-10-29T05:50:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.60.103.50",
+    "199.60.103.150"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple.com",
+    "ns2.dnsimple.com",
+    "ns3.dnsimple.com",
+    "ns4.dnsimple.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:50:03Z",
+   "title": "AWS-Native Life Science Data Management Platform | Quilt",
+   "generator": "HubSpot",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "quinnchrest.com": {
+  "checked": "2026-10-29T05:50:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.200.22.214"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1crv.name.com",
+    "ns2cvx.name.com",
+    "ns3cjl.name.com",
+    "ns4hny.name.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:50:07Z",
+   "title": "Quinn Chrest",
+   "generator": "Hugo 0.91.2",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://quinnchrest.com/feed.xml",
+     "title": "Quinn Chrest"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://micro.blog/quinntchrest"
+   ],
+   "webmention": "https://micro.blog/webmention"
+  }
+ },
+ "quip.com": {
+  "checked": "2026-10-29T05:50:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "32.185.8.156",
+    "52.38.17.164",
+    "54.184.122.186"
+   ],
+   "aaaa": [
+    "2600:1f14:ca9:3503:df11:78de:d723:12b8",
+    "2600:1f14:ca9:3504:dcc2:fa48:faa:ddd5",
+    "2600:1f14:ca9:3505:2911:dec3:964c:a9b"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1244.awsdns-27.org",
+    "ns-1981.awsdns-55.co.uk",
+    "ns-317.awsdns-39.com",
+    "ns-529.awsdns-02.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:50:10Z",
+   "title": "Quip",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "quizlet.com": {
+  "checked": "2026-10-29T05:50:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.16.133.27",
+    "104.16.134.27"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ian.ns.cloudflare.com",
+    "lily.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-29T05:50:13Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403 (Cloudflare challenge)"
+  }
+ },
+ "qumulo.com": {
+  "checked": "2026-10-29T05:50:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.239.109.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-117.awsdns-14.com",
+    "ns-1170.awsdns-18.org",
+    "ns-1999.awsdns-57.co.uk",
+    "ns-757.awsdns-30.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:50:16Z",
+   "title": "Qumulo | Data Simplified Anywhere at Exabyte Scale",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "quora.com": {
@@ -135,6 +1158,40 @@
     "ns-673.awsdns-20.net"
    ],
    "checked": "2026-10-24T05:43:26Z"
+  }
+ },
+ "qwebirc.org": {
+  "checked": "2026-10-29T05:50:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "217.197.84.141"
+   ],
+   "aaaa": [
+    "2a0a:4580:103f:c0de::2"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.mythic-beasts.com",
+    "ns2.mythic-beasts.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-29T05:50:19Z",
+   "title": "News - the qwebirc project",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "qz.com": {
