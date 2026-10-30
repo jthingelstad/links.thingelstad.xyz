@@ -9295,6 +9295,47 @@
    "error": "timeout"
   }
  },
+ "rqlite.io": {
+  "checked": "2026-10-30T05:30:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p01.nsone.net",
+    "dns2.p01.nsone.net",
+    "dns3.p01.nsone.net",
+    "dns4.p01.nsone.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T05:30:35Z",
+   "title": "rqlite",
+   "generator": "Hugo 0.104.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://rqlite.io/index.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "rredc.nrel.gov": {
   "checked": "2026-10-29T06:08:42Z",
   "method": "enrich_hosts",

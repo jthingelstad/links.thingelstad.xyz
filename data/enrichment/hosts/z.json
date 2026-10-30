@@ -41,6 +41,58 @@
    "webmention": null
   }
  },
+ "zachleat.com": {
+  "checked": "2026-10-30T06:35:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.186.135",
+    "15.197.167.90"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p01.nsone.net",
+    "dns2.p01.nsone.net",
+    "dns3.p01.nsone.net",
+    "dns4.p01.nsone.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:43Z",
+   "title": "Zach Leatherman—zachleat.com",
+   "generator": "Eleventy (Build Awesome) v4.0.0",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.zachleat.com/web/feed/",
+     "title": "Zach Leatherman’s Posts Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.zachleat.com/follow/",
+     "title": "Zach Leatherman’s Activity Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://twitter.com/zachleat",
+    "https://github.com/zachleat",
+    "https://zachleat.com/@zachleat",
+    "https://fediverse.zachleat.com/@zachleat",
+    "https://bsky.app/profile/zachleat.com"
+   ],
+   "webmention": "https://webmention.io/www.zachleat.com/webmention"
+  }
+ },
  "zachstronaut.com": {
   "checked": "2026-10-25T05:39:54Z",
   "method": "enrich_hosts",
@@ -67,6 +119,302 @@
   "home": {
    "checked": "2026-10-25T05:39:54Z",
    "title": "zachstronaut - creative developer zachary johnson",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zafulabs.com": {
+  "checked": "2026-10-30T06:35:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.79.106",
+    "172.67.144.178"
+   ],
+   "aaaa": [
+    "2606:4700:3036::6815:4f6a",
+    "2606:4700:3036::ac43:90b2"
+   ],
+   "cname": null,
+   "ns": [
+    "george.ns.cloudflare.com",
+    "violet.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:46Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403 (Cloudflare challenge)"
+  }
+ },
+ "zantafakari.substack.com": {
+  "checked": "2026-10-30T06:35:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:47Z",
+   "title": "Tafakari Letter | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://zantafakari.substack.com/feed",
+     "title": "Tafakari Letter"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zany.sh": {
+  "checked": "2026-10-30T06:35:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "66.241.124.233"
+   ],
+   "aaaa": [
+    "2a09:8280:1::4e:7fdb"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:49Z",
+   "title": "zany 🤪 easy, free & configurable hosted favicons",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zapiks.fr": {
+  "checked": "2026-10-30T06:35:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "89.185.44.124"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-139-a.gandi.net",
+    "ns-14-b.gandi.net",
+    "ns-39-c.gandi.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:52Z",
+   "title": "102431 vidéos sans baballe",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://www.facebook.com/zapiks"
+   ],
+   "webmention": null
+  }
+ },
+ "zaplife.lol": {
+  "checked": "2026-10-30T06:36:01Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:01Z",
+   "title": "ZAPLIFE.LOL",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zarar.dev": {
+  "checked": "2026-10-30T06:36:04Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.1.249",
+    "172.67.128.107"
+   ],
+   "aaaa": [
+    "2606:4700:3034::6815:1f9",
+    "2606:4700:3036::ac43:806b"
+   ],
+   "cname": null,
+   "ns": [
+    "iris.ns.cloudflare.com",
+    "jeff.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:04Z",
+   "title": "Zarar Siddiqi",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://zarar.dev/feed.xml",
+     "title": "Zarar's blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zayenz.se": {
+  "checked": "2026-10-30T06:36:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.2.60.5"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "coco.bunny.net",
+    "kiki.bunny.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:05Z",
+   "title": "Home - zayenz.se",
+   "generator": "Astro v7.3.5",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://zayenz.se/rss.xml",
+     "title": "zayenz.se"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zbd.gg": {
+  "checked": "2026-10-30T06:36:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.226.50.79",
+    "34.198.56.239",
+    "34.200.182.102",
+    "44.217.167.123",
+    "54.146.206.14",
+    "54.211.47.151"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1365.awsdns-42.org",
+    "ns-1852.awsdns-39.co.uk",
+    "ns-192.awsdns-24.com",
+    "ns-848.awsdns-42.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:08Z",
+   "title": "ZBD - The Money Layer for Games",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -240,6 +588,123 @@
    "checked": "2026-10-24T05:54:30Z"
   }
  },
+ "zenandtheartofwork.com": {
+  "checked": "2026-10-30T06:36:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:11Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "zendev.com": {
+  "checked": "2026-10-30T06:36:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.7.133",
+    "172.67.187.145"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:785",
+    "2606:4700:3031::ac43:bb91"
+   ],
+   "cname": null,
+   "ns": [
+    "kai.ns.cloudflare.com",
+    "sara.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:11Z",
+   "title": "ZenDev",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://zendev.com/feed.xml",
+     "title": "ZenDev, LLC"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zengm.com": {
+  "checked": "2026-10-30T06:36:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.90.146",
+    "172.67.157.195"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:9dc3",
+    "2606:4700:3034::6815:5a92"
+   ],
+   "cname": null,
+   "ns": [
+    "dean.ns.cloudflare.com",
+    "meera.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:15Z",
+   "title": "ZenGM - Basketball GM, Football GM, ZenGM Baseball, and ZenGM Hockey",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://zengm.com/blog/feed.xml",
+     "title": "ZenGM Blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "zenhabits.net": {
   "checked": "2026-10-23T21:28:24Z",
   "method": "enrich_hosts",
@@ -279,6 +744,42 @@
     "uma.ns.cloudflare.com"
    ],
    "checked": "2026-10-23T21:28:24Z"
+  }
+ },
+ "zenhabitsbook.com": {
+  "checked": "2026-10-30T06:36:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.5.216",
+    "172.67.133.223"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:5d8",
+    "2606:4700:3033::ac43:85df"
+   ],
+   "cname": null,
+   "ns": [
+    "ian.ns.cloudflare.com",
+    "uma.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:18Z",
+   "title": "Essential Zen Habits",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "zephoria.org": {
@@ -385,6 +886,670 @@
    "webmention": null
   }
  },
+ "zettlr.com": {
+  "checked": "2026-10-30T06:36:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "45.129.183.60"
+   ],
+   "aaaa": [
+    "2a03:4000:47:3d1:64ef:21ff:fe8f:330b"
+   ],
+   "cname": null,
+   "ns": [
+    "ns25.domaincontrol.com",
+    "ns26.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:19Z",
+   "title": "Your One-Stop Publication Workbench | Zettlr",
+   "generator": "OctoberCMS",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://zettlr.com/feed",
+     "title": "Zettlr Blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://fosstodon.org/@zettlr"
+   ],
+   "webmention": null
+  }
+ },
+ "zguide.zeromq.org": {
+  "checked": "2026-10-30T06:36:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:24Z",
+   "title": "Introduction | ØMQ - The Guide",
+   "generator": "Hugo 0.72.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://zguide.zeromq.org/index.xml",
+     "title": "ØMQ - The Guide"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zhengdongwang.com": {
+  "checked": "2026-10-30T06:36:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-b1.googledomains.com",
+    "ns-cloud-b2.googledomains.com",
+    "ns-cloud-b3.googledomains.com",
+    "ns-cloud-b4.googledomains.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:27Z",
+   "title": "Home | Zhengdong",
+   "generator": "Jekyll v4.4.1",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://zhengdongwang.com/feed.xml",
+     "title": "Zhengdong Wang"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zhenyi.gibber.blog": {
+  "checked": "2026-10-30T06:36:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "143.42.74.49"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:30Z",
+   "title": "Gibberish and Stuff",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://zhenyi.gibber.blog/feed",
+     "title": "Gibberish and Stuff"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@zhenyiblog"
+   ],
+   "webmention": null
+  }
+ },
+ "ziglang.org": {
+  "checked": "2026-10-30T06:36:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.109.105.178"
+   ],
+   "aaaa": [
+    "2a01:4f9:3051:4bd2::2"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1467.awsdns-55.org",
+    "ns-1904.awsdns-46.co.uk",
+    "ns-47.awsdns-05.com",
+    "ns-975.awsdns-57.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:34Z",
+   "title": "Home ⚡ Zig Programming Language",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zinc.video": {
+  "checked": "2026-10-30T06:36:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.195",
+    "151.101.65.195"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hover.com",
+    "ns2.hover.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:38Z",
+   "title": "Zinc",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zip-code-boundaries.com": {
+  "checked": "2026-10-30T06:36:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:45Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "zond.github.io": {
+  "checked": "2026-10-30T06:36:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:45Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "zoneit.free.fr": {
+  "checked": "2026-10-30T06:36:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "212.27.63.168"
+   ],
+   "aaaa": [
+    "2a01:e0c:1:1597::168"
+   ],
+   "cname": "perso168-g5.free.fr",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "network: No route to host"
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:47Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "network: No route to host"
+  }
+ },
+ "zookeeper.apache.org": {
+  "checked": "2026-10-30T06:36:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.132"
+   ],
+   "aaaa": [
+    "2a04:4e42::644"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:50Z",
+   "title": "Apache ZooKeeper",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zoomerbackgrounds.com": {
+  "checked": "2026-10-30T06:36:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.70.202",
+    "172.67.139.71"
+   ],
+   "aaaa": [
+    "2606:4700:3035::6815:46ca",
+    "2606:4700:3037::ac43:8b47"
+   ],
+   "cname": null,
+   "ns": [
+    "sandra.ns.cloudflare.com",
+    "vin.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:52Z",
+   "title": "HALOJP # Platform Resmi Toto Slot Gacor 4D Online Sensational Terpercaya 2026",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zscale.org": {
+  "checked": "2026-10-30T06:36:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "66.185.22.68"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "pdns07.domaincontrol.com",
+    "pdns08.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "connection refused"
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:55Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "connection refused"
+  }
+ },
+ "zserge.com": {
+  "checked": "2026-10-30T06:36:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:56Z",
+   "title": "zserge's blog",
+   "generator": "Hugo 0.80.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://zserge.com/rss.xml",
+     "title": "RSS"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://mastodon.social/@zserge",
+    "https://github.com/zserge",
+    "https://zserge.com/"
+   ],
+   "webmention": null
+  }
+ },
+ "zsh.org": {
+  "checked": "2026-10-30T06:36:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "94.142.241.90"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "nlns.globnix.net",
+    "ns0.firedrake.org",
+    "rip.psg.com",
+    "us1ns.pennock-tech.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:36:59Z",
+   "title": "Zsh",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zsolt.blog": {
+  "checked": "2026-10-30T06:37:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.64.119.129",
+    "216.239.32.21",
+    "216.239.34.21",
+    "216.239.36.21",
+    "216.239.38.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  },
+  "home": {
+   "checked": "2026-10-30T06:37:03Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  }
+ },
+ "zsync.moria.org.uk": {
+  "checked": "2026-10-30T06:37:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "188.165.0.143"
+   ],
+   "aaaa": [
+    "2001:41d0:301:3::100"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:37:06Z",
+   "title": "zsync",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zulipchat.com": {
+  "checked": "2026-10-30T06:37:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.93.122.129",
+    "3.228.80.189",
+    "52.20.200.111",
+    "54.243.251.47",
+    "100.58.80.60",
+    "184.193.53.146"
+   ],
+   "aaaa": [
+    "2600:1f18:414:db00:a37a:21cd:b3d5:ce6e",
+    "2600:1f18:414:db16:91f1:b5c2:7a1a:ceed",
+    "2600:1f18:414:db32:723c:22e5:66b4:d43",
+    "2600:1f18:414:db48:762c:eec0:b101:6b43",
+    "2600:1f18:414:db64:14de:1b0c:8246:2734",
+    "2600:1f18:414:db80:5c91:ca39:d39e:10b5"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1176.awsdns-19.org",
+    "ns-1551.awsdns-01.co.uk",
+    "ns-481.awsdns-60.com",
+    "ns-989.awsdns-59.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:37:10Z",
+   "title": "Zulip — organized team chat",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zuora.com": {
+  "checked": "2026-10-30T06:37:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "32.184.163.61",
+    "34.210.13.8",
+    "54.189.119.242"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1376.awsdns-44.org",
+    "ns-1867.awsdns-41.co.uk",
+    "ns-363.awsdns-45.com",
+    "ns-713.awsdns-25.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:37:13Z",
+   "title": "The Leading Quote to Cash & Subscription Management Platform | Zuora",
+   "generator": "WPML ver:4.9.7 stt:1,4,3,27,28;",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "zurb.com": {
   "checked": "2026-10-25T05:40:00Z",
   "method": "enrich_hosts",
@@ -416,6 +1581,154 @@
   "home": {
    "checked": "2026-10-25T05:40:00Z",
    "title": "ZURB - Product Design Company",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zverok.space": {
+  "checked": "2026-10-30T06:37:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-134-a.gandi.net",
+    "ns-20-c.gandi.net",
+    "ns-70-b.gandi.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:37:17Z",
+   "title": "zverok's space",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://zverok.space/feed.xml",
+     "title": "zverok's space"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zwbetz.com": {
+  "checked": "2026-10-30T06:37:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.2.60.5",
+    "99.83.231.61"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "kaiser.ns.cloudflare.com",
+    "monroe.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:37:20Z",
+   "title": "Home | Zachary Betz",
+   "generator": "Hugo 0.131.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zwischenzugs.com": {
+  "checked": "2026-10-30T06:37:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "81.136.151.202"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:37:22Z",
+   "title": "zwischenzugs.com",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://zwischenzugs.com/feed/",
+     "title": "zwischenzugs.com » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://zwischenzugs.com/comments/feed/",
+     "title": "zwischenzugs.com » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "zyan.scripts.mit.edu": {
+  "checked": "2026-10-30T06:37:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.4.86.46"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:37:28Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,

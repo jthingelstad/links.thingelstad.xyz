@@ -35,6 +35,628 @@
    "webmention": null
   }
  },
+ "waitbutwhy.com": {
+  "checked": "2026-10-30T06:16:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.72.171",
+    "172.67.187.36"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:48ab",
+    "2606:4700:3035::ac43:bb24"
+   ],
+   "cname": null,
+   "ns": [
+    "eric.ns.cloudflare.com",
+    "gene.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:10Z",
+   "title": "Wait But Why",
+   "generator": "Site Kit by Google 1.190.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://waitbutwhy.com/feed",
+     "title": "Wait But Why » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://waitbutwhy.com/comments/feed",
+     "title": "Wait But Why » Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://waitbutwhy.com/homepage/feed",
+     "title": "Wait But Why » Homepage Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "waiterrant.net": {
+  "checked": "2026-10-30T06:16:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.92.21.219"
+   ],
+   "aaaa": [
+    "2600:3c03::f03c:95ff:fe98:87fd"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.linode.com",
+    "ns2.linode.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:12Z",
+   "title": "Waiter Rant - DO YOU WANT POMMES FRITES WITH THAT?",
+   "generator": "Divi v.4.27.8",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.waiterrant.net/feed/",
+     "title": "Waiter Rant » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.waiterrant.net/comments/feed/",
+     "title": "Waiter Rant » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "waitwow.com": {
+  "checked": "2026-10-30T06:16:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "13.223.25.84",
+    "54.243.117.197"
+   ],
+   "aaaa": [
+    "2600:1f18:4ae:c605:dd5d:b838:5816:d7fb",
+    "2600:1f18:4ae:c606:78d4:4260:db4e:aeee"
+   ],
+   "cname": null,
+   "ns": [
+    "nsg1.namebrightdns.com",
+    "nsg2.namebrightdns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:15Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  }
+ },
+ "wakingup.com": {
+  "checked": "2026-10-30T06:16:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1316.awsdns-36.org",
+    "ns-1657.awsdns-15.co.uk",
+    "ns-185.awsdns-23.com",
+    "ns-743.awsdns-28.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:16Z",
+   "title": "Waking Up - A New Operating System for Your Mind",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "walkingshadow.org": {
+  "checked": "2026-10-30T06:16:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.27.108",
+    "172.67.142.67"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:8e43",
+    "2606:4700:3035::6815:1b6c"
+   ],
+   "cname": null,
+   "ns": [
+    "alice.ns.cloudflare.com",
+    "gabriel.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:19Z",
+   "title": "Walking Shadow Theatre Company - Original Theater in Minneapolis",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://walkingshadow.org/feed/",
+     "title": "Walking Shadow Theatre Company » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://walkingshadow.org/comments/feed/",
+     "title": "Walking Shadow Theatre Company » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "walkscore.com": {
+  "checked": "2026-10-30T06:16:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.210.65.236",
+    "23.23.105.100",
+    "54.163.193.32"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1019.awsdns-63.net",
+    "ns-1116.awsdns-11.org",
+    "ns-1893.awsdns-44.co.uk",
+    "ns-236.awsdns-29.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:23Z",
+   "title": "Find Apartments for Rent and Rentals - Get Your Walk Score",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wallabag.org": {
+  "checked": "2026-10-30T06:16:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.2.60.5"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.yulpa.io",
+    "ns2.yulpa.io",
+    "ns3.yulpa.io"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:27Z",
+   "title": "Save the web, freely | wallabag: a self hostable application for saving web pages",
+   "generator": "Eleventy v3.1.7",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://fosstodon.org/@wallabag"
+   ],
+   "webmention": null
+  }
+ },
+ "wallbase.cc": {
+  "checked": "2026-10-30T06:16:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.25.202",
+    "172.67.134.136"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:19ca",
+    "2606:4700:3032::ac43:8688"
+   ],
+   "cname": null,
+   "ns": [
+    "dale.ns.cloudflare.com",
+    "deb.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:31Z",
+   "title": "Wallhalla - Quality Wallpapers",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "walletchat.fun": {
+  "checked": "2026-10-30T06:16:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.202.211.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:33Z",
+   "title": "WalletChat - Wallet to Wallet messaging chat for web3",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "walletwallet.alen.ro": {
+  "checked": "2026-10-30T06:16:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.88.197",
+    "172.67.152.158"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:58c5",
+    "2606:4700:3031::ac43:989e"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:36Z",
+   "title": "WalletWallet — Create Apple Passes for Free",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wallofaweso.me": {
+  "checked": "2026-10-30T06:16:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:40Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "wallpaper.com": {
+  "checked": "2026-10-30T06:16:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.232.194.114",
+    "199.232.198.114"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1307.awsdns-35.org",
+    "ns-1881.awsdns-43.co.uk",
+    "ns-243.awsdns-30.com",
+    "ns-884.awsdns-46.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:40Z",
+   "title": "Wallpaper*: design, interiors, architecture, fashion, art",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.wallpaper.com/feeds.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wallstreetandtech.com": {
+  "checked": "2026-10-30T06:16:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.ubmdns.com",
+    "ns2.ubmdns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:43Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "walrus.readthedocs.io": {
+  "checked": "2026-10-30T06:16:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.16.253.120",
+    "104.16.254.120"
+   ],
+   "aaaa": [
+    "2606:4700::6810:fd78",
+    "2606:4700::6810:fe78"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:43Z",
+   "title": "walrus — walrus 0.9.8 documentation",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "walthers.com": {
+  "checked": "2026-10-30T06:16:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.227.38.65"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns3.level3.net",
+    "ns4.level3.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:49Z",
+   "title": "walthers.com – Walthers",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wandb.com": {
+  "checked": "2026-10-30T06:16:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.49.23.144"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-c1.googledomains.com",
+    "ns-cloud-c2.googledomains.com",
+    "ns-cloud-c3.googledomains.com",
+    "ns-cloud-c4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:52Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "waoanime.tv": {
+  "checked": "2026-10-30T06:16:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.157.56.140"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.brainydns.com",
+    "ns2.brainydns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:54Z",
+   "title": "waoanime.tv",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "wapo.st": {
   "checked": "2026-10-24T06:00:46Z",
   "method": "enrich_hosts",
@@ -68,6 +690,68 @@
    "rel_me": [],
    "webmention": null,
    "error": "timeout"
+  }
+ },
+ "warms.maxbittker.repl.co": {
+  "checked": "2026-10-30T06:16:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:56Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "warp.dev": {
+  "checked": "2026-10-30T06:16:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.49.216.32"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns13.domaincontrol.com",
+    "ns14.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:16:56Z",
+   "title": "Warp — Open Infrastructure for Cloud Software Factories",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "warrenellis.ltd": {
@@ -274,6 +958,110 @@
    "checked": "2026-10-23T21:27:50Z"
   }
  },
+ "wasitup.com": {
+  "checked": "2026-10-30T06:17:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.255.119.194"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:17:00Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "wasmer.io": {
+  "checked": "2026-10-30T06:17:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "66.33.60.34",
+    "76.76.21.164"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "grant.ns.cloudflare.com",
+    "paloma.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:17:48Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "watabou.github.io": {
+  "checked": "2026-10-30T06:17:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:17:51Z",
+   "title": "Watabou's Procgen Arcana",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "watabou.itch.io": {
   "checked": "2026-10-25T05:38:09Z",
   "method": "enrich_hosts",
@@ -312,6 +1100,177 @@
     "https://mastodon.gamedev.place/@watawatabou",
     "https://bsky.app/profile/watabou.bsky.social"
    ],
+   "webmention": null
+  }
+ },
+ "watchmouse.com": {
+  "checked": "2026-10-30T06:17:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "67.192.41.125"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "edns161.ultradns.biz",
+    "edns161.ultradns.com",
+    "edns161.ultradns.net",
+    "edns161.ultradns.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:17:53Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "waterllama.com": {
+  "checked": "2026-10-30T06:18:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "173.201.185.205"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns07.domaincontrol.com",
+    "ns08.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:18:24Z",
+   "title": "Waterllama: Water tracker app & drink water reminder",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "watermeters.com": {
+  "checked": "2026-10-30T06:18:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.71.33.78"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "a.dns.hostway.net",
+    "b.dns.hostway.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'watermeters.com'"
+  },
+  "home": {
+   "checked": "2026-10-30T06:18:27Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'watermeters.com'"
+  }
+ },
+ "wattenberger.com": {
+  "checked": "2026-10-30T06:18:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:18:29Z",
+   "title": "Amelia Wattenberger",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wave.com": {
+  "checked": "2026-10-30T06:18:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.149.216.132"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-d1.googledomains.com",
+    "ns-cloud-d2.googledomains.com",
+    "ns-cloud-d3.googledomains.com",
+    "ns-cloud-d4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:18:32Z",
+   "title": "Wave",
+   "generator": "Hugo 0.85.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
    "webmention": null
   }
  },
@@ -373,6 +1332,350 @@
    "checked": "2026-10-24T05:48:41Z"
   }
  },
+ "waynehale.wordpress.com": {
+  "checked": "2026-10-30T06:18:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.12",
+    "192.0.78.13"
+   ],
+   "aaaa": [],
+   "cname": "lb.wordpress.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:18:36Z",
+   "title": "Wayne Hale's Blog | space > exploration > leadership",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://waynehale.wordpress.com/feed/",
+     "title": "Wayne Hale's Blog » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://waynehale.wordpress.com/comments/feed/",
+     "title": "Wayne Hale's Blog » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "waypoint.vice.com": {
+  "checked": "2026-10-30T06:18:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:18:38Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "wbloggar.com": {
+  "checked": "2026-10-30T06:18:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.72.84",
+    "172.67.177.141"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:4854",
+    "2606:4700:3036::ac43:b18d"
+   ],
+   "cname": null,
+   "ns": [
+    "christina.ns.cloudflare.com",
+    "jihoon.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:18:38Z",
+   "title": "Office Cleaning Glasgow | สล็อตเว็บตรง เว็บสล็อต PG SLOT อัตราชนะสูง 100% เว็บตรง 2025",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wbur.org": {
+  "checked": "2026-10-30T06:18:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.235.254.104"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1093.awsdns-08.org",
+    "ns-1883.awsdns-43.co.uk",
+    "ns-399.awsdns-49.com",
+    "ns-695.awsdns-22.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:18:43Z",
+   "title": "WBUR",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://rss.wbur.org/wbur/rss",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "weasner.com": {
+  "checked": "2026-10-30T06:18:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "206.188.193.186"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns23.worldnic.com",
+    "ns24.worldnic.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
+  },
+  "home": {
+   "checked": "2026-10-30T06:18:45Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
+  }
+ },
+ "weathershop.com": {
+  "checked": "2026-10-30T06:19:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.69.83"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.it-techworks.com",
+    "ns2.it-techworks.com",
+    "ns3.it-techworks.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'weathershop.com'"
+  },
+  "home": {
+   "checked": "2026-10-30T06:19:09Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'weathershop.com'"
+  }
+ },
+ "weatherspark.com": {
+  "checked": "2026-10-30T06:19:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "99.84.203.9",
+    "99.84.203.35",
+    "99.84.203.36",
+    "99.84.203.99"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1431.awsdns-50.org",
+    "ns-1634.awsdns-12.co.uk",
+    "ns-335.awsdns-41.com",
+    "ns-747.awsdns-29.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:19:19Z",
+   "title": "The Weather Year Round Anywhere on Earth - Weather Spark",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "web.archive.org": {
+  "checked": "2026-10-30T06:19:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "207.241.237.3"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:19:21Z",
+   "title": "Wayback Machine",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "web.canon.jp": {
+  "checked": "2026-10-30T06:19:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:19:28Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "web.mit.edu": {
+  "checked": "2026-10-30T06:19:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.11.2.34"
+   ],
+   "aaaa": [
+    "2600:1418:1000:38c::255e",
+    "2600:1418:1000:38f::255e"
+   ],
+   "cname": "www.mit.edu.edgekey.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:19:28Z",
+   "title": "MIT - Massachusetts Institute of Technology",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "web.stanford.edu": {
   "checked": "2026-10-25T05:38:12Z",
   "method": "enrich_hosts",
@@ -399,6 +1702,282 @@
    "title": "Stanford University",
    "generator": null,
    "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "web7.creativebasic.com": {
+  "checked": "2026-10-30T06:19:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:19:32Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "webaim.org": {
+  "checked": "2026-10-30T06:19:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.160.181.45",
+    "18.160.181.60",
+    "18.160.181.106",
+    "18.160.181.110"
+   ],
+   "aaaa": [
+    "2600:9000:254a:4800:a:cad:b0c0:93a1",
+    "2600:9000:254a:5800:a:cad:b0c0:93a1",
+    "2600:9000:254a:6c00:a:cad:b0c0:93a1",
+    "2600:9000:254a:7800:a:cad:b0c0:93a1",
+    "2600:9000:254a:7a00:a:cad:b0c0:93a1",
+    "2600:9000:254a:8600:a:cad:b0c0:93a1",
+    "2600:9000:254a:a800:a:cad:b0c0:93a1",
+    "2600:9000:254a:ce00:a:cad:b0c0:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1441.awsdns-52.org",
+    "ns-1679.awsdns-17.co.uk",
+    "ns-264.awsdns-33.com",
+    "ns-529.awsdns-02.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:19:32Z",
+   "title": "WebAIM: Web Accessibility In Mind",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://webaim.org/blog/feed",
+     "title": "WebAIM Blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "webbiquity.com": {
+  "checked": "2026-10-30T06:19:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "70.32.23.71"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.a2hosting.com",
+    "ns2.a2hosting.com",
+    "ns3.a2hosting.com",
+    "ns4.a2hosting.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:19:36Z",
+   "title": "B2B Marketing Blog | Webbiquity - The B2B Marketing Blog",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://webbiquity.com/feed/",
+     "title": "B2B Marketing Blog | Webbiquity » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://webbiquity.com/comments/feed/",
+     "title": "B2B Marketing Blog | Webbiquity » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "webbkoll.dataskydd.net": {
+  "checked": "2026-10-30T06:19:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "65.108.247.158"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:19:41Z",
+   "title": "Analyze | Webbkoll - 5july.net",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "webcrate.app": {
+  "checked": "2026-10-30T06:19:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.59.179",
+    "172.67.182.8"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:b608",
+    "2606:4700:3036::6815:3bb3"
+   ],
+   "cname": null,
+   "ns": [
+    "heidi.ns.cloudflare.com",
+    "jermaine.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:19:45Z",
+   "title": "스포츠중계- Toto Super Man |토토사이트 커뮤니티",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "webdemo.myscript.com": {
+  "checked": "2026-10-30T06:19:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.160.102.22",
+    "18.160.102.42",
+    "18.160.102.87",
+    "18.160.102.108"
+   ],
+   "aaaa": [
+    "2600:9000:254b:1000:7:33eb:8880:93a1",
+    "2600:9000:254b:3000:7:33eb:8880:93a1",
+    "2600:9000:254b:3a00:7:33eb:8880:93a1",
+    "2600:9000:254b:4800:7:33eb:8880:93a1",
+    "2600:9000:254b:6200:7:33eb:8880:93a1",
+    "2600:9000:254b:6600:7:33eb:8880:93a1",
+    "2600:9000:254b:9e00:7:33eb:8880:93a1",
+    "2600:9000:254b:f600:7:33eb:8880:93a1"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:19:48Z",
+   "title": "MyScript Webdemo",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "webdevlaw.uk": {
+  "checked": "2026-10-30T06:19:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.194.90.24"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.krystal.uk",
+    "ns2.krystal.uk"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:19:50Z",
+   "title": "Hi, I'm Heather Burns – — yes, that one.",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://heatherburns.tech/feed/",
+     "title": "Hi, I'm Heather Burns » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://heatherburns.tech/comments/feed/",
+     "title": "Hi, I'm Heather Burns » Comments Feed"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -434,6 +2013,40 @@
   },
   "home": {
    "checked": "2026-10-25T05:38:16Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "webintents.org": {
+  "checked": "2026-10-30T06:19:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "50.56.113.24"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns17.domaincontrol.com",
+    "ns18.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:19:54Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -634,6 +2247,37 @@
    "webmention": null
   }
  },
+ "weblogs.hitwise.com": {
+  "checked": "2026-10-30T06:20:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.19.224.41"
+   ],
+   "aaaa": [],
+   "cname": "parking.hitwise.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "network: No route to host"
+  },
+  "home": {
+   "checked": "2026-10-30T06:20:25Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "network: No route to host"
+  }
+ },
  "weblogtoolscollection.com": {
   "checked": "2026-10-24T05:54:24Z",
   "method": "enrich_hosts",
@@ -688,6 +2332,440 @@
    "checked": "2026-10-24T05:54:24Z"
   }
  },
+ "webmasters.googleblog.com": {
+  "checked": "2026-10-30T06:20:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.214.65"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:802::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-30T06:20:27Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "webmd.com": {
+  "checked": "2026-10-30T06:20:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "207.231.204.56"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "amir.ns.cloudflare.com",
+    "vita.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:20:30Z",
+   "title": "WebMD - Better information. Better health.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "webmention.io": {
+  "checked": "2026-10-30T06:20:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.239.2.96"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.linode.com",
+    "ns2.linode.com",
+    "ns3.linode.com",
+    "ns4.linode.com",
+    "ns5.linode.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:20:32Z",
+   "title": "Webmention.io",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "webmonkey.com": {
+  "checked": "2026-10-30T06:20:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.10",
+    "141.193.213.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "margaret.ns.cloudflare.com",
+    "tanner.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:20:35Z",
+   "title": "Make Money Online, Launch A Business & Grow Digital Skills",
+   "generator": "WP Rocket 3.22.0.2",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.webmonkey.com/feed/",
+     "title": "WebMonkey » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.webmonkey.com/comments/feed/",
+     "title": "WebMonkey » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "webosnation.com": {
+  "checked": "2026-10-30T06:20:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.113.25.57",
+    "185.113.25.58"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1133.awsdns-13.org",
+    "ns-183.awsdns-22.com",
+    "ns-1870.awsdns-41.co.uk",
+    "ns-599.awsdns-10.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:20:38Z",
+   "title": "TechRadar | the technology experts",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.techradar.com/feeds.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "webpagetest.org": {
+  "checked": "2026-10-30T06:20:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.157.108.158",
+    "98.83.184.133",
+    "100.28.104.175"
+   ],
+   "aaaa": [
+    "2600:1f18:297:ba0e:7900:f622:48a8:f266",
+    "2600:1f18:297:ba18:6ddc:5d8f:6053:f003",
+    "2600:1f18:297:ba24:b508:76de:f4a:df34"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.p06.nsone.net",
+    "dns2.p06.nsone.net",
+    "dns3.p06.nsone.net",
+    "dns4.p06.nsone.net",
+    "ns01.catchpointdns.com",
+    "ns02.catchpointdns.com",
+    "ns03.catchpointdns.com",
+    "ns04.catchpointdns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:20:41Z",
+   "title": "WebPageTest | Open-Source Web Performance Optimization",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "webperl.zero-g.net": {
+  "checked": "2026-10-30T06:20:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": "haukex.github.io",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:20:43Z",
+   "title": "WebPerl | Run Perl in the browser with WebPerl!",
+   "generator": "Jekyll v3.8.7",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "websequencediagrams.com": {
+  "checked": "2026-10-30T06:20:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.105.27.183"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns18.zoneedit.com",
+    "ns3.zoneedit.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:20:46Z",
+   "title": "WebSequenceDiagrams - Draw sequence diagrams online in seconds",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "websitepulse.com": {
+  "checked": "2026-10-30T06:20:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "50.31.173.210"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.websitepulse.com",
+    "ns2.websitepulse.com",
+    "ns3.websitepulse.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:20:48Z",
+   "title": "Monitoring Service by WebSitePulse",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "websocketd.com": {
+  "checked": "2026-10-30T06:20:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-101-c.gandi.net",
+    "ns-123-b.gandi.net",
+    "ns-37-a.gandi.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:20:50Z",
+   "title": "websocketd: turn any program into a WebSocket server",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "websota.com": {
+  "checked": "2026-10-30T06:20:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns.intrcomm.net",
+    "ns2.intrcomm.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:20:53Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "websters1913.com": {
+  "checked": "2026-10-30T06:20:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "5.196.88.123"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1110.ui-dns.biz",
+    "ns1110.ui-dns.com",
+    "ns1110.ui-dns.de",
+    "ns1110.ui-dns.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'websters1913.com'"
+  },
+  "home": {
+   "checked": "2026-10-30T06:20:53Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'websters1913.com'"
+  }
+ },
  "webstock.org.nz": {
   "checked": "2026-10-24T06:15:31Z",
   "method": "enrich_hosts",
@@ -723,6 +2801,83 @@
    "rel_me": [],
    "webmention": null,
    "error": "HTTP 503"
+  }
+ },
+ "webtag.io": {
+  "checked": "2026-10-30T06:20:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.55.225",
+    "172.67.173.201"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:adc9",
+    "2606:4700:3033::6815:37e1"
+   ],
+   "cname": null,
+   "ns": [
+    "clyde.ns.cloudflare.com",
+    "elle.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:20:57Z",
+   "title": "ONE88 Webtag - Link Nhà Cái ONE88.COM - Link Vào ONE888 Mới Nhất 10/2026",
+   "generator": "WordPress 7.1.3",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://webtag.io/feed/",
+     "title": "Dòng thông tin ONE88 »"
+    },
+    {
+     "type": "rss",
+     "url": "https://webtag.io/comments/feed/",
+     "title": "ONE88 » Dòng bình luận"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "webtide.intalio.com": {
+  "checked": "2026-10-30T06:21:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:21:02Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
   }
  },
  "weburbanist.com": {
@@ -761,6 +2916,453 @@
    "webmention": null
   }
  },
+ "webvision.mozilla.org": {
+  "checked": "2026-10-30T06:21:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "35.190.14.201"
+   ],
+   "aaaa": [
+    "2600:1901:0:c197::"
+   ],
+   "cname": "prod.refractr.prod.webservices.mozgcp.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:21:02Z",
+   "title": "Mozilla's Vision of the Web — Mozilla",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@mozilla"
+   ],
+   "webmention": null
+  }
+ },
+ "webvm.io": {
+  "checked": "2026-10-30T06:21:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.82.171",
+    "172.67.160.60"
+   ],
+   "aaaa": [
+    "2606:4700:3033::6815:52ab",
+    "2606:4700:3034::ac43:a03c"
+   ],
+   "cname": null,
+   "ns": [
+    "dawn.ns.cloudflare.com",
+    "ray.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:21:08Z",
+   "title": "WebVM - Linux virtualization in WebAssembly",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wecode.wepay.com": {
+  "checked": "2026-10-30T06:21:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "SERVFAIL"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:21:11Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "weekdone.com": {
+  "checked": "2026-10-30T06:21:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "94.237.102.159"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns.pirn.net",
+    "ns1.pirn.net",
+    "ns2.pirn.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:21:13Z",
+   "title": "Weekdone – Leading OKR Software for Goal Tracking and Weekly Status Reporting",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://weekdone.com/feed",
+     "title": "Weekdone » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://weekdone.com/comments/feed",
+     "title": "Weekdone » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "weekly.hatnote.com": {
+  "checked": "2026-10-30T06:21:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.105.157.204"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:21:18Z",
+   "title": "Weeklypedia",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "weeks.ginatrapani.org": {
+  "checked": "2026-10-30T06:21:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.198.14.52"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:21:21Z",
+   "title": "My Life in Weeks by Gina Trapani",
+   "generator": "Hugo 0.143.1",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wefollow.com": {
+  "checked": "2026-10-30T06:21:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.210.35.36"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1364.awsdns-42.org",
+    "ns-1751.awsdns-26.co.uk",
+    "ns-407.awsdns-50.com",
+    "ns-554.awsdns-05.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:21:25Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "weforum.org": {
+  "checked": "2026-10-30T06:21:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "99.81.117.70",
+    "108.132.238.172"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-108.awsdns-13.com",
+    "ns-1240.awsdns-27.org",
+    "ns-1550.awsdns-01.co.uk",
+    "ns-757.awsdns-30.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-30T06:21:56Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "weightshift.com": {
+  "checked": "2026-10-30T06:22:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p04.nsone.net",
+    "dns2.p04.nsone.net",
+    "dns3.p04.nsone.net",
+    "dns4.p04.nsone.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:00Z",
+   "title": "Weightshift • Product design, direction & strategy • San Francisco, CA",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "welcome.storyworth.com": {
+  "checked": "2026-10-30T06:22:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.202.211.1"
+   ],
+   "aaaa": [
+    "2620:cb:2000::1"
+   ],
+   "cname": "cdn.webflow.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:03Z",
+   "title": "Storyworth - Everyone has a story worth sharing",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "well.blogs.nytimes.com": {
+  "checked": "2026-10-30T06:22:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.164",
+    "151.101.65.164",
+    "151.101.129.164",
+    "151.101.193.164"
+   ],
+   "aaaa": [],
+   "cname": "blogs.nytimes.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:05Z",
+   "title": "Well - The New York Times",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/well/rss.xml",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "well.com": {
+  "checked": "2026-10-30T06:22:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.22.72.90"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1103.awsdns-09.org",
+    "ns-1783.awsdns-30.co.uk",
+    "ns-459.awsdns-57.com",
+    "ns-805.awsdns-36.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:08Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "welshheritagefarm.com": {
+  "checked": "2026-10-30T06:22:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.88.132",
+    "172.67.179.178"
+   ],
+   "aaaa": [
+    "2606:4700:3033::6815:5884",
+    "2606:4700:3036::ac43:b3b2"
+   ],
+   "cname": null,
+   "ns": [
+    "augustus.ns.cloudflare.com",
+    "piper.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:15Z",
+   "title": "JENIUSTOTO 2026: Link Login dan Daftar Terbaru yang Mudah Diakses2026",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "wely.com": {
   "checked": "2026-10-25T05:38:58Z",
   "method": "enrich_hosts",
@@ -789,6 +3391,73 @@
    "rel_me": [],
    "webmention": null,
    "error": "does not resolve"
+  }
+ },
+ "wemakeawesomesh.it": {
+  "checked": "2026-10-30T06:22:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.41.214",
+    "172.67.151.172"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:97ac",
+    "2606:4700:3032::6815:29d6"
+   ],
+   "cname": null,
+   "ns": [
+    "daisy.ns.cloudflare.com",
+    "jobs.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:17Z",
+   "title": "We Make Awesome Sh",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "weputachipinit.tumblr.com": {
+  "checked": "2026-10-30T06:22:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "74.114.154.18",
+    "74.114.154.22"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:19Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
   }
  },
  "werd.io": {
@@ -839,6 +3508,48 @@
    "webmention": "https://werd.io/webmentions/receive/"
   }
  },
+ "werve.net": {
+  "checked": "2026-10-30T06:22:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "16.15.212.139",
+    "16.15.214.168",
+    "16.15.236.158",
+    "16.15.246.60",
+    "52.216.25.123",
+    "52.217.123.157",
+    "52.217.195.133"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1040.awsdns-02.org",
+    "ns-1998.awsdns-57.co.uk",
+    "ns-368.awsdns-46.com",
+    "ns-682.awsdns-21.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "connection reset"
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:21Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "connection reset"
+  }
+ },
  "wesolver.blogspot.com": {
   "checked": "2026-10-24T06:15:58Z",
   "method": "enrich_hosts",
@@ -869,6 +3580,195 @@
    "rel_me": [],
    "webmention": null,
    "error": "HTTP 404"
+  }
+ },
+ "weth.io": {
+  "checked": "2026-10-30T06:22:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.91.192",
+    "172.67.178.94"
+   ],
+   "aaaa": [
+    "2606:4700:3036::6815:5bc0",
+    "2606:4700:3036::ac43:b25e"
+   ],
+   "cname": null,
+   "ns": [
+    "brenna.ns.cloudflare.com",
+    "ken.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:23Z",
+   "title": "WETH - Wrapped Ether: What It Is, How It Works & Contract Addresses",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wetwebmedia.com": {
+  "checked": "2026-10-30T06:22:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.71.35.43"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "a.dns.hostway.net",
+    "b.dns.hostway.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'wetwebmedia.com'"
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:24Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'wetwebmedia.com'"
+  }
+ },
+ "weusecoins.com": {
+  "checked": "2026-10-30T06:22:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.72.37",
+    "172.67.174.108"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:ae6c",
+    "2606:4700:3036::6815:4825"
+   ],
+   "cname": null,
+   "ns": [
+    "kay.ns.cloudflare.com",
+    "sam.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:26Z",
+   "title": "What is Bitcoin? Introductory video and current Bitcoin price.",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.weusecoins.com/feed.xml",
+     "title": "WeUseCoins - Learn about Bitcoin."
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "whalewisdom.com": {
+  "checked": "2026-10-30T06:22:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "174.129.12.150"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1305.awsdns-35.org",
+    "ns-1708.awsdns-21.co.uk",
+    "ns-88.awsdns-11.com",
+    "ns-988.awsdns-59.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:29Z",
+   "title": "Track Hedge Funds Using 13F Filings and Data from the Whales",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "what-if.xkcd.com": {
+  "checked": "2026-10-30T06:22:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.0.67",
+    "151.101.64.67",
+    "151.101.128.67",
+    "151.101.192.67"
+   ],
+   "aaaa": [
+    "2a04:4e42::67",
+    "2a04:4e42:200::67",
+    "2a04:4e42:400::67",
+    "2a04:4e42:600::67"
+   ],
+   "cname": "dualstack.i.ssl.global.fastly.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:32Z",
+   "title": "Comet Ice",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://what-if.xkcd.com/feed.atom",
+     "title": "Atom 1.0"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "whatever.scalzi.com": {
@@ -905,6 +3805,276 @@
      "type": "rss",
      "url": "https://whatever.scalzi.com/comments/feed/",
      "title": "Whatever » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "whatevernevermind.com": {
+  "checked": "2026-10-30T06:22:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.255.119.68"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:35Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "whathifi.com": {
+  "checked": "2026-10-30T06:22:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.114",
+    "151.101.66.114",
+    "151.101.130.114",
+    "151.101.194.114"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1055.awsdns-03.org",
+    "ns-1660.awsdns-15.co.uk",
+    "ns-253.awsdns-31.com",
+    "ns-907.awsdns-49.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:53Z",
+   "title": "What Hi-Fi? | Tech news and reviews",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.whathifi.com/feeds.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "whats.new": {
+  "checked": "2026-10-30T06:22:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.239.32.21",
+    "216.239.34.21",
+    "216.239.36.21",
+    "216.239.38.21"
+   ],
+   "aaaa": [
+    "2001:4860:4802:32::15",
+    "2001:4860:4802:34::15",
+    "2001:4860:4802:36::15",
+    "2001:4860:4802:38::15"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-cloud-e1.googledomains.com",
+    "ns-cloud-e2.googledomains.com",
+    "ns-cloud-e3.googledomains.com",
+    "ns-cloud-e4.googledomains.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:54Z",
+   "title": "Do Something .new | A Domain Exclusively for Shortcuts | Google Registry",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "whatthegolf.com": {
+  "checked": "2026-10-30T06:22:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.27.208",
+    "172.67.143.151"
+   ],
+   "aaaa": [
+    "2606:4700:3035::ac43:8f97",
+    "2606:4700:3036::6815:1bd0"
+   ],
+   "cname": null,
+   "ns": [
+    "gail.ns.cloudflare.com",
+    "terry.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:22:58Z",
+   "title": "WHAT THE GOLF?",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "whatwelost.substack.com": {
+  "checked": "2026-10-30T06:23:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "dns: name does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:00Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "dns: name does not resolve"
+  }
+ },
+ "whatwepayfor.com": {
+  "checked": "2026-10-30T06:23:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.80.138",
+    "172.67.183.129"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:b781",
+    "2606:4700:3032::6815:508a"
+   ],
+   "cname": null,
+   "ns": [
+    "carl.ns.cloudflare.com",
+    "lilyana.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:02Z",
+   "title": "SPOTBET : Slot Online RTP Berbasis Data dengan Toto Slot Transparan",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wheelingit.us": {
+  "checked": "2026-10-30T06:23:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.90.44.192"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:05Z",
+   "title": "Wheeling It: Tales From a Nomadic Life – On the Road Since 2010, Traveling Across USA & Europe With Pets",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.wheelingit.us/feed/",
+     "title": "Wheeling It: Tales From a Nomadic Life » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.wheelingit.us/comments/feed/",
+     "title": "Wheeling It: Tales From a Nomadic Life » Comments Feed"
     }
    ],
    "hcard": false,
@@ -1091,6 +4261,140 @@
    "webmention": null
   }
  },
+ "whimsical.co": {
+  "checked": "2026-10-30T06:23:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.11.53",
+    "172.67.165.45"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:a52d",
+    "2606:4700:3035::6815:b35"
+   ],
+   "cname": null,
+   "ns": [
+    "alberto.ns.cloudflare.com",
+    "lila.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:08Z",
+   "title": "Whimsical — The whiteboard for product builders",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://whimsical.com/_next_public/feed.xml",
+     "title": "Whimsical Blog"
+    },
+    {
+     "type": "atom",
+     "url": "https://whimsical.com/releases/feeds/main",
+     "title": "Whimsical Releases"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "whimsical.com": {
+  "checked": "2026-10-30T06:23:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.66.40.179",
+    "172.66.43.77"
+   ],
+   "aaaa": [
+    "2606:4700:3108::ac42:28b3",
+    "2606:4700:3108::ac42:2b4d"
+   ],
+   "cname": null,
+   "ns": [
+    "alberto.ns.cloudflare.com",
+    "lila.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:10Z",
+   "title": "Whimsical — The whiteboard for product builders",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://whimsical.com/_next_public/feed.xml",
+     "title": "Whimsical Blog"
+    },
+    {
+     "type": "atom",
+     "url": "https://whimsical.com/releases/feeds/main",
+     "title": "Whimsical Releases"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "whiona.weblog.lol": {
+  "checked": "2026-10-30T06:23:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "5.78.24.5"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:14Z",
+   "title": "Welcome! · wiwi blog",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://whiona.weblog.lol/rss.xml",
+     "title": "RSS feed"
+    },
+    {
+     "type": "atom",
+     "url": "https://whiona.weblog.lol/atom.xml",
+     "title": "Atom feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "whitehouse.gov": {
   "checked": "2026-10-25T05:39:15Z",
   "method": "enrich_hosts",
@@ -1120,6 +4424,937 @@
    "title": "The White House",
    "generator": null,
    "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "whoismanu.com": {
+  "checked": "2026-10-30T06:23:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.237.57.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.namepros-dns.com",
+    "ns2.brokerage.ns.namepros-dns.is"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:20Z",
+   "title": "whoismanu.com for sale",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "whoisnnamdi.com": {
+  "checked": "2026-10-30T06:23:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-d1.googledomains.com",
+    "ns-cloud-d2.googledomains.com",
+    "ns-cloud-d3.googledomains.com",
+    "ns-cloud-d4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:22Z",
+   "title": "Who Is Nnamdi?",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "whoownsmyavailability.com": {
+  "checked": "2026-10-30T06:23:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:25Z",
+   "title": "Who Owns My Availability?",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.whoownsmyavailability.com/atom.xml",
+     "title": "Who Owns My Availability?"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "why.usesthis.com": {
+  "checked": "2026-10-30T06:23:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:26Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "whydoiprocrastinate.com": {
+  "checked": "2026-10-30T06:23:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.81.184",
+    "172.67.163.97"
+   ],
+   "aaaa": [
+    "2606:4700:3036::ac43:a361",
+    "2606:4700:3037::6815:51b8"
+   ],
+   "cname": null,
+   "ns": [
+    "gabe.ns.cloudflare.com",
+    "wanda.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:26Z",
+   "title": "Quiz by Boss as a Service: Why Do I Procrastinate? (And How to Stop Right Away)",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "whytheluckystiff.net": {
+  "checked": "2026-10-30T06:23:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "pdns03.domaincontrol.com",
+    "pdns04.domaincontrol.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:44Z",
+   "title": "_why's Estate",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wiby.me": {
+  "checked": "2026-10-30T06:23:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.93.49.252"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.domain.com",
+    "ns2.domain.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:46Z",
+   "title": "Wiby - Search Engine for the Classic Web",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wickedbackgrounds.com": {
+  "checked": "2026-10-30T06:23:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.2.60.5"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns11.ovh.net",
+    "ns11.ovh.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:48Z",
+   "title": "stylish SVG Backgrounds for your websites and designs | Wicked Backgrounds",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wickedlasers.com": {
+  "checked": "2026-10-30T06:23:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "45.79.82.201"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.linode.com",
+    "ns2.linode.com",
+    "ns3.linode.com",
+    "ns4.linode.com",
+    "ns5.linode.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:52Z",
+   "title": "Laser Show | RGB Laser Show and Laser Light Show | Wicked Lasers",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "widgets.yahoo.net": {
+  "checked": "2026-10-30T06:23:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:55Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "wifi.dev.bdw.to": {
+  "checked": "2026-10-30T06:23:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:55Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "wiili.org": {
+  "checked": "2026-10-30T06:23:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.49.147",
+    "172.67.163.172"
+   ],
+   "aaaa": [
+    "2606:4700:3033::6815:3193",
+    "2606:4700:3035::ac43:a3ac"
+   ],
+   "cname": null,
+   "ns": [
+    "aleena.ns.cloudflare.com",
+    "ernest.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:23:57Z",
+   "title": "Annuaire des cabinets infirmiers",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wiisfi.com": {
+  "checked": "2026-10-30T06:24:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.86.226",
+    "172.67.137.107"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:56e2",
+    "2606:4700:3033::ac43:896b"
+   ],
+   "cname": null,
+   "ns": [
+    "donald.ns.cloudflare.com",
+    "gene.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:24:00Z",
+   "title": "Understanding Wi-Fi 4/5/6/6E/7/8 (802.11 n/ac/ax/be/bn)",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wiki-pr.com": {
+  "checked": "2026-10-30T06:24:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.199.116.147"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns47.domaincontrol.com",
+    "ns48.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: certificate has expired"
+  },
+  "home": {
+   "checked": "2026-10-30T06:24:02Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: certificate has expired"
+  }
+ },
+ "wiki-timeline.com": {
+  "checked": "2026-10-30T06:24:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dnsowl.com",
+    "ns2.dnsowl.com",
+    "ns3.dnsowl.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:24:05Z",
+   "title": "WikiTimeline - Generate Interactive Historical Timelines from Wikipedia | WikiTimeline",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wiki-wise.com": {
+  "checked": "2026-10-30T06:24:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.0.236",
+    "104.26.1.236",
+    "172.67.75.91"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:ec",
+    "2606:4700:20::681a:1ec",
+    "2606:4700:20::ac43:4b5b"
+   ],
+   "cname": null,
+   "ns": [
+    "cory.ns.cloudflare.com",
+    "ines.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:24:08Z",
+   "title": "Wikiwise — Build your own Wikipedia",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wiki.coworking.org": {
+  "checked": "2026-10-30T06:24:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.88.104",
+    "172.67.176.226"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:b0e2",
+    "2606:4700:3033::6815:5868"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:24:10Z",
+   "title": "Coworking wiki / FrontPage",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://wiki.coworking.org/rss.xml",
+     "title": "Coworking wiki Recent Changes"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wiki.daviddarts.com": {
+  "checked": "2026-10-30T06:24:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.0.119",
+    "151.101.192.119"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'wiki.daviddarts.com'"
+  },
+  "home": {
+   "checked": "2026-10-30T06:24:19Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'wiki.daviddarts.com'"
+  }
+ },
+ "wiki.debian.org": {
+  "checked": "2026-10-30T06:24:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "209.87.16.81"
+   ],
+   "aaaa": [
+    "2607:f8f0:614:1::1274:81"
+   ],
+   "cname": "proxy-ca-01.debian.org",
+   "ns": [],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:24:20Z",
+   "title": "FrontPage - Debian Wiki",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://wiki.debian.org/action/rss_rc/FrontPage?action=rss_rc&unique=1&ddiffs=1",
+     "title": "Debian Wiki Recent Changes"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wiki.jenkins-ci.org": {
+  "checked": "2026-10-30T06:24:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "128.24.70.119"
+   ],
+   "aaaa": [
+    "2603:1030:408:3::2bd"
+   ],
+   "cname": "wiki.jenkins.io",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-30T06:24:23Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "wiki.mozilla.org": {
+  "checked": "2026-10-30T06:24:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.1.91",
+    "151.101.65.91",
+    "151.101.129.91",
+    "151.101.193.91"
+   ],
+   "aaaa": [
+    "2a04:4e42::347",
+    "2a04:4e42:200::347",
+    "2a04:4e42:400::347",
+    "2a04:4e42:600::347"
+   ],
+   "cname": "mozilla.map.fastly.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:24:26Z",
+   "title": "MozillaWiki",
+   "generator": "MediaWiki 1.39.17",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://wiki.mozilla.org/index.php?title=Special:RecentChanges&feed=atom",
+     "title": "MozillaWiki Atom feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wiki.mysqltuner.com": {
+  "checked": "2026-10-30T06:24:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.77.88",
+    "172.67.205.195"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:cdc3",
+    "2606:4700:3032::6815:4d58"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 301
+  },
+  "home": {
+   "checked": "2026-10-30T06:24:31Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "more than 5 redirects"
+  }
+ },
+ "wiki.openstack.org": {
+  "checked": "2026-10-30T06:24:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "166.78.186.100"
+   ],
+   "aaaa": [
+    "2001:4800:7813:516:be76:4eff:fe06:36e7"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "network: No route to host"
+  },
+  "home": {
+   "checked": "2026-10-30T06:24:36Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "network: No route to host"
+  }
+ },
+ "wiki.requarks.io": {
+  "checked": "2026-10-30T06:24:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.14.122",
+    "104.26.15.122",
+    "172.67.69.86"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:e7a",
+    "2606:4700:20::681a:f7a",
+    "2606:4700:20::ac43:4556"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:24:37Z",
+   "title": "Wiki.js",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wiki.rubyonrails.org": {
+  "checked": "2026-10-30T06:24:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:24:39Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "wiki.slicehost.com": {
+  "checked": "2026-10-30T06:24:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "67.207.128.80"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:24:39Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "wiki.spheredev.org": {
+  "checked": "2026-10-30T06:25:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.104.210.210"
+   ],
+   "aaaa": [],
+   "cname": "spheredev.org",
+   "ns": [],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:25:11Z",
+   "title": "Spherical",
+   "generator": "MediaWiki 1.43.9",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://wiki.spheredev.org/index.php?title=Special:RecentChanges&feed=atom",
+     "title": "Spherical wiki Atom feed"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -1157,6 +5392,147 @@
      "title": "Ubuntu Wiki Atom feed"
     }
    ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wikiba.se": {
+  "checked": "2026-10-30T06:25:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "135.181.157.113"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hosting.de",
+    "ns2.hosting.de",
+    "ns3.hosting.de"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:25:20Z",
+   "title": "Wikibase - Open Source Knowledge Graph Software",
+   "generator": "WordPress 7.1.4",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wikidata.org": {
+  "checked": "2026-10-30T06:25:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "208.80.153.224"
+   ],
+   "aaaa": [
+    "2620:0:860:ed1a::1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns0.wikimedia.org",
+    "ns1.wikimedia.org",
+    "ns2.wikimedia.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:25:26Z",
+   "title": "Wikidata",
+   "generator": "MediaWiki 1.48.0-wmf.1",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.wikidata.org/w/index.php?title=Special:RecentChanges&feed=atom",
+     "title": "Wikidata Atom feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://wikis.world/@wikidata"
+   ],
+   "webmention": null
+  }
+ },
+ "wikileaks.org": {
+  "checked": "2026-10-30T06:25:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "51.159.197.136",
+    "80.81.248.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wlinfra.org",
+    "ns2.wlinfra.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:25:30Z",
+   "title": "WikiLeaks",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wikiloopr.com": {
+  "checked": "2026-10-30T06:25:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "103.224.182.253"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.abovedomains.com",
+    "ns2.abovedomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:25:34Z",
+   "title": "wikiloopr.com",
+   "generator": null,
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -1205,6 +5581,267 @@
    "webmention": null
   }
  },
+ "wikiriver.org": {
+  "checked": "2026-10-30T06:25:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:25:36Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "wikispeedruns.com": {
+  "checked": "2026-10-30T06:25:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "32.194.201.119"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-e1.googledomains.com",
+    "ns-cloud-e2.googledomains.com",
+    "ns-cloud-e3.googledomains.com",
+    "ns-cloud-e4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:25:36Z",
+   "title": "Wikipedia Speedruns!",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wikistats.wmflabs.org": {
+  "checked": "2026-10-30T06:25:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.15.56.49"
+   ],
+   "aaaa": [
+    "2a02:ec80:a000:1::1d"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:25:40Z",
+   "title": "WikiStats - MediaWiki statistics",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wikistream.wmflabs.org": {
+  "checked": "2026-10-30T06:25:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.15.56.49"
+   ],
+   "aaaa": [
+    "2a02:ec80:a000:1::1d"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:25:43Z",
+   "title": "wikistream",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wikisum.com": {
+  "checked": "2026-10-30T06:25:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "50.63.212.175"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns01.domaincontrol.com",
+    "ns02.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:25:46Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "wikitok.vercel.app": {
+  "checked": "2026-10-30T06:26:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.29.17.3",
+    "216.198.79.3"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:26:18Z",
+   "title": "WikiTok",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wikitravel.org": {
+  "checked": "2026-10-30T06:26:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.39.49",
+    "172.64.148.207"
+   ],
+   "aaaa": [
+    "2a06:98c1:310b::6812:2731",
+    "2a06:98c1:310c::ac40:94cf"
+   ],
+   "cname": null,
+   "ns": [
+    "jerome.ns.cloudflare.com",
+    "lily.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:26:21Z",
+   "title": "Wikitravel - The Free Travel Guide",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wikitree.com": {
+  "checked": "2026-10-30T06:26:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.217.218.116",
+    "54.88.149.40"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1379.awsdns-44.org",
+    "ns-1707.awsdns-21.co.uk",
+    "ns-485.awsdns-60.com",
+    "ns-619.awsdns-13.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 202
+  },
+  "home": {
+   "checked": "2026-10-30T06:26:26Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "wikitribune.com": {
   "checked": "2026-10-24T06:16:03Z",
   "method": "enrich_hosts",
@@ -1237,6 +5874,37 @@
    "hcard": false,
    "rel_me": [],
    "webmention": null
+  }
+ },
+ "wikitrust.net": {
+  "checked": "2026-10-30T06:26:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.65.211.209"
+   ],
+   "aaaa": [],
+   "cname": "exp.gname.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
+  },
+  "home": {
+   "checked": "2026-10-30T06:26:27Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
   }
  },
  "wikiworks.com": {
@@ -1273,10 +5941,860 @@
    "webmention": null
   }
  },
- "wired.com": {
-  "checked": "2026-10-23T21:26:16Z",
+ "wildfirelabs.substack.com": {
+  "checked": "2026-10-30T06:26:44Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:26:44Z",
+   "title": "Wildfire Labs Substack | Todd Gagne | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://wildfirelabs.substack.com/feed",
+     "title": "Wildfire Labs Substack"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "willd10.substack.com": {
+  "checked": "2026-10-30T06:26:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:26:49Z",
+   "title": "William Davies | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://willd10.substack.com/feed",
+     "title": "William Davies"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "willem.com": {
+  "checked": "2026-10-30T06:26:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "167.235.204.231"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.lemmid.com",
+    "ns2.lemmid.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:26:52Z",
+   "title": "Willem L. Middelkoop · software & writing",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://willem.com/blog/feed.rss",
+     "title": "Willem L. Middelkoop (RSS)"
+    },
+    {
+     "type": "atom",
+     "url": "https://willem.com/blog/feed.atom",
+     "title": "Willem L. Middelkoop (Atom)"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "willempennings.nl": {
+  "checked": "2026-10-30T06:27:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "5.254.117.208"
+   ],
+   "aaaa": [
+    "2a03:5180:7:2:28b:5c9:2702:1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.mijn.host",
+    "ns2.mijn.host",
+    "ns3.mijn.host"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:00Z",
+   "title": "Willem Pennings – Personal projects",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://willempennings.nl/feed/",
+     "title": "Willem Pennings » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://willempennings.nl/comments/feed/",
+     "title": "Willem Pennings » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "willett.io": {
+  "checked": "2026-10-30T06:27:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.64.119.83"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:05Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "williamhertling.com": {
+  "checked": "2026-10-30T06:27:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.10",
+    "141.193.213.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns101.register.com",
+    "dns102.register.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:22Z",
+   "title": "William Hertling's Thoughtstream - A writer musing about science fiction, A.I., and the Internet.",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://williamhertling.com/feed/",
+     "title": "William Hertling's Thoughtstream » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://williamhertling.com/comments/feed/",
+     "title": "William Hertling's Thoughtstream » Comments Feed"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://twitter.com/hertling",
+    "https://en.wikipedia.org/wiki/William_Hertling",
+    "https://www.facebook.com/AuthorWilliamHertling",
+    "https://plus.google.com/+WilliamHertling"
+   ],
+   "webmention": null
+  }
+ },
+ "willllliam.com": {
+  "checked": "2026-10-30T06:27:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.53.224",
+    "172.67.219.91"
+   ],
+   "aaaa": [
+    "2606:4700:3036::6815:35e0",
+    "2606:4700:3037::ac43:db5b"
+   ],
+   "cname": null,
+   "ns": [
+    "athena.ns.cloudflare.com",
+    "harlan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:25Z",
+   "title": "willllliam",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "willpatrick.co.uk": {
+  "checked": "2026-10-30T06:27:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.18.37",
+    "172.67.180.66"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:b442",
+    "2606:4700:3035::6815:1225"
+   ],
+   "cname": null,
+   "ns": [
+    "ivy.ns.cloudflare.com",
+    "khalid.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:28Z",
+   "title": "Will Patrick - Articles on Marketing, Culture & Ideas",
+   "generator": "Hugo 0.161.1",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.willpatrick.co.uk/index.xml",
+     "title": "Will Patrick"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://www.linkedin.com/in/itswillpatrick/"
+   ],
+   "webmention": null
+  }
+ },
+ "willymaps.github.io": {
+  "checked": "2026-10-30T06:27:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:31Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "wilsonquarterly.com": {
+  "checked": "2026-10-30T06:27:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:32Z",
+   "title": "In Search of Our Narratives | Wilson Quarterly",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wilwheaton.net": {
+  "checked": "2026-10-30T06:27:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.12.184",
+    "104.26.13.184",
+    "172.67.68.193"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:cb8",
+    "2606:4700:20::681a:db8",
+    "2606:4700:20::ac43:44c1"
+   ],
+   "cname": null,
+   "ns": [
+    "mark.ns.cloudflare.com",
+    "sue.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:37Z",
+   "title": "WIL WHEATON dot NET",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://wilwheaton.net/feed/",
+     "title": "WIL WHEATON dot NET » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://wilwheaton.net/comments/feed/",
+     "title": "WIL WHEATON dot NET » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wimp.com": {
+  "checked": "2026-10-30T06:27:39Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.236"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns03.domaincontrol.com",
+    "ns04.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:39Z",
+   "title": "Wimp.com - Amazing Videos, Funny Clips. Watch amazing videos and funny clips. Updated daily.",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.wimp.com/feed/",
+     "title": "Wimp.com » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.wimp.com/comments/feed/",
+     "title": "Wimp.com » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wind-sail.com": {
+  "checked": "2026-10-30T06:27:42Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "44.208.83.180",
+    "54.84.240.235"
+   ],
+   "aaaa": [
+    "2600:1f18:4ae:c607:5974:bfa8:d54b:7fe5",
+    "2600:1f18:4ae:c608:1ae1:9fc3:6ee2:84dd"
+   ],
+   "cname": null,
+   "ns": [
+    "expired1.namebrightdns.com",
+    "expired2.namebrightdns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:42Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  }
+ },
+ "windley.com": {
+  "checked": "2026-10-30T06:27:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.49.23.144",
+    "198.49.23.145",
+    "198.185.159.144",
+    "198.185.159.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-b1.googledomains.com",
+    "ns-cloud-b2.googledomains.com",
+    "ns-cloud-b3.googledomains.com",
+    "ns-cloud-b4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:44Z",
+   "title": "Phil Windley's Technometria",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://www.twitter.com/windley",
+    "https://github.com/windley",
+    "https://www.linkedin.com/in/windley"
+   ],
+   "webmention": null
+  }
+ },
+ "window-swap.com": {
+  "checked": "2026-10-30T06:27:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.214.243.246"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns29.domaincontrol.com",
+    "ns30.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:48Z",
+   "title": "WindowSwap - the calmest place on the internet",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "windowslivewriter.spaces.live.com": {
+  "checked": "2026-10-30T06:27:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:50Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "windycitizen.com": {
+  "checked": "2026-10-30T06:27:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "45.32.199.6"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns63.domaincontrol.com",
+    "ns64.domaincontrol.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:50Z",
+   "title": "Windy Citizen - Business Tech, Investment, and Management",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://windycitizen.com/feed/",
+     "title": "Windy Citizen » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://windycitizen.com/comments/feed/",
+     "title": "Windy Citizen » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "winglang.io": {
+  "checked": "2026-10-30T06:27:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple-edge.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple-edge.io",
+    "ns4.dnsimple-edge.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:55Z",
+   "title": "Wing Programming Language for the Cloud",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "winnielim.org": {
+  "checked": "2026-10-30T06:27:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "209.58.165.79"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.sg.opalstack.com",
+    "ns2.sg.opalstack.com",
+    "ns3.sg.opalstack.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:27:58Z",
+   "title": "Winnie Lim",
+   "generator": "WordPress 6.9.10",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://winnielim.org/feed/",
+     "title": "Winnie Lim: long-form + notes"
+    },
+    {
+     "type": "rss",
+     "url": "https://winnielim.org/feed/?cat=2%2C4%2C8",
+     "title": "Winnie Lim: long-form only"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [
+    "https://kopiti.am/@wynlim"
+   ],
+   "webmention": null
+  }
+ },
+ "winnipegfreepress.com": {
+  "checked": "2026-10-30T06:28:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.33"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.mts.net",
+    "dns2.mts.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:06Z",
+   "title": "Winnipeg Free Press – Breaking News, Sports, Manitoba, Canada",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.winnipegfreepress.com/feed",
+     "title": "Winnipeg Free Press » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.winnipegfreepress.com/comments/feed",
+     "title": "Winnipeg Free Press » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://journa.host/@winnipegfreepress"
+   ],
+   "webmention": null
+  }
+ },
+ "winsupersite.com": {
+  "checked": "2026-10-30T06:28:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.43.211",
+    "172.67.185.133"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:2bd3",
+    "2606:4700:3036::ac43:b985"
+   ],
+   "cname": null,
+   "ns": [
+    "bart.ns.cloudflare.com",
+    "hera.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:09Z",
+   "title": "ITPro Today, Network Computing, IoT World Today combine with TechTarget | TechTarget",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.techtarget.com/feeds/news/",
+     "title": "TechTarget - Latest News Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wired.com": {
+  "checked": "2026-10-30T06:38:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -1301,6 +6819,21 @@
    "redirects_http": true,
    "status": 200
   },
+  "home": {
+   "checked": "2026-10-30T06:38:24Z",
+   "title": "WIRED - The Latest in Technology, Science, Culture and Business | WIRED",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.wired.com/feed/rss",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  },
   "rdap": {
    "domain": "wired.com",
    "registrar": "CSC Corporate Domains, Inc.",
@@ -1319,6 +6852,130 @@
     "ns-836.awsdns-40.net"
    ],
    "checked": "2026-10-23T21:26:16Z"
+  }
+ },
+ "wiremock.org": {
+  "checked": "2026-10-30T06:28:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.170.103.10",
+    "3.170.103.17",
+    "3.170.103.51",
+    "3.170.103.114"
+   ],
+   "aaaa": [
+    "2600:9000:210b:1a00:19:1e39:9e00:93a1",
+    "2600:9000:210b:2200:19:1e39:9e00:93a1",
+    "2600:9000:210b:3200:19:1e39:9e00:93a1",
+    "2600:9000:210b:7a00:19:1e39:9e00:93a1",
+    "2600:9000:210b:9c00:19:1e39:9e00:93a1",
+    "2600:9000:210b:ac00:19:1e39:9e00:93a1",
+    "2600:9000:210b:ec00:19:1e39:9e00:93a1",
+    "2600:9000:210b:f800:19:1e39:9e00:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.dnsimple-edge.com",
+    "ns2.dnsimple-edge.net",
+    "ns3.dnsimple-edge.io",
+    "ns4.dnsimple-edge.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:15Z",
+   "title": "WireMock - flexible, open source API mocking | WireMock",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://wiremock.org/feed.xml",
+     "title": "WireMock Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wisconsinkubb.com": {
+  "checked": "2026-10-30T06:28:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.20.112",
+    "172.67.192.94"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:c05e",
+    "2606:4700:3034::6815:1470"
+   ],
+   "cname": null,
+   "ns": [
+    "pat.ns.cloudflare.com",
+    "salvador.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:18Z",
+   "title": "NAGA303 – Situs Slot Judi Online Asia, Login & Link Alternatif",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "withings.com": {
+  "checked": "2026-10-30T06:28:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.227.38.65"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "anycast-dns-01.withings.net",
+    "ns1.withings.net",
+    "ns2.withings.net",
+    "nsext.withings.net",
+    "nsext2.withings.net",
+    "nsext3.withings.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:20Z",
+   "title": "Smart devices to improve your health | Withings",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "withoutbullshit.com": {
@@ -1364,6 +7021,119 @@
    "checked": "2026-10-23T21:28:38Z"
   }
  },
+ "wittwincities.com": {
+  "checked": "2026-10-30T06:28:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "154.213.44.4"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dm1.longmingdns.com",
+    "dm2.longmingdns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "connection refused"
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:26Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "connection refused"
+  }
+ },
+ "wizardzines.com": {
+  "checked": "2026-10-30T06:28:31Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.2.60.5"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:31Z",
+   "title": "wizard zines",
+   "generator": "Hugo 0.145.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://wizardzines.com/index.xml",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://social.jvns.ca/@b0rk",
+    "https://social.jvns.ca/@b0rk_reruns"
+   ],
+   "webmention": null
+  }
+ },
+ "wjh.harvard.edu": {
+  "checked": "2026-10-30T06:28:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "a1-171.akam.net",
+    "a10-66.akam.net",
+    "a11-67.akam.net",
+    "a16-64.akam.net",
+    "a6-66.akam.net",
+    "a7-65.akam.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:34Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
  "wnyc.org": {
   "checked": "2026-10-24T06:01:17Z",
   "method": "enrich_hosts",
@@ -1399,6 +7169,209 @@
    "hcard": false,
    "rel_me": [],
    "webmention": null
+  }
+ },
+ "wolfoliver.medium.com": {
+  "checked": "2026-10-30T06:28:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.152.4",
+    "162.159.153.4"
+   ],
+   "aaaa": [
+    "2606:4700:7::a29f:9804",
+    "2606:4700:7::a29f:9904"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:34Z",
+   "title": "Medium",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://medium.com/feed/@wolfoliver",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://twitter.com/WolfOliver"
+   ],
+   "webmention": null
+  }
+ },
+ "wolfram.com": {
+  "checked": "2026-10-30T06:28:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "140.177.52.200"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "wri-dns2.wolfram.com",
+    "wri-dns3.wolfram.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:40Z",
+   "title": "Wolfram: Delivering the Computational Future",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wolfstreet.com": {
+  "checked": "2026-10-30T06:28:42Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.1.121",
+    "172.67.129.53"
+   ],
+   "aaaa": [
+    "2606:4700:3034::6815:179",
+    "2606:4700:3037::ac43:8135"
+   ],
+   "cname": null,
+   "ns": [
+    "josh.ns.cloudflare.com",
+    "rita.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:42Z",
+   "title": "Wolf Street | The stories behind business, finance, and money",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://wolfstreet.com/feed/",
+     "title": "Wolf Street » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://wolfstreet.com/comments/feed/",
+     "title": "Wolf Street » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wongmjane.com": {
+  "checked": "2026-10-30T06:28:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.71.84",
+    "172.67.143.251"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:8ffb",
+    "2606:4700:3037::6815:4754"
+   ],
+   "cname": null,
+   "ns": [
+    "evan.ns.cloudflare.com",
+    "kara.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:46Z",
+   "title": "Jane Manchun Wong",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://wongmjane.com/blog/feed",
+     "title": "Jane Manchun Wong — Blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@wongmjane",
+    "https://www.threads.com/@wongmjane"
+   ],
+   "webmention": null
+  }
+ },
+ "woodandfaulk.com": {
+  "checked": "2026-10-30T06:28:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "44.208.83.180",
+    "54.84.240.235"
+   ],
+   "aaaa": [
+    "2600:1f18:4ae:c607:5974:bfa8:d54b:7fe5",
+    "2600:1f18:4ae:c608:1ae1:9fc3:6ee2:84dd"
+   ],
+   "cname": null,
+   "ns": [
+    "expired1.namebrightdns.com",
+    "expired2.namebrightdns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:50Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
   }
  },
  "woothemes.com": {
@@ -1449,6 +7422,95 @@
     "ns3.automattic.com"
    ],
    "checked": "2026-10-24T05:50:37Z"
+  }
+ },
+ "wordius.com": {
+  "checked": "2026-10-30T06:28:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "95.217.26.94"
+   ],
+   "aaaa": [
+    "2a01:4f9:c01f:8002::"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.dns-parking.com",
+    "ns2.dns-parking.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:51Z",
+   "title": "Wordius",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.wordius.com/rss.xml",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@wordius",
+    "https://codeberg.org/Wordius"
+   ],
+   "webmention": null
+  }
+ },
+ "wordpress.com": {
+  "checked": "2026-10-30T06:28:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.9",
+    "192.0.78.17"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com",
+    "ns4.wordpress.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:55Z",
+   "title": "WordPress.com: Everything You Need to Build Your Website",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://wordpress.com/blog/feed/",
+     "title": "WordPress.com Blog"
+    },
+    {
+     "type": "rss",
+     "url": "https://discover.wordpress.com/feed/",
+     "title": "WordPress.com Discover"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "wordpress.org": {
@@ -1513,6 +7575,116 @@
    "checked": "2026-10-24T01:48:10Z"
   }
  },
+ "wordpress.tv": {
+  "checked": "2026-10-30T06:28:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.24",
+    "192.0.78.25"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.wordpress.com",
+    "ns2.wordpress.com",
+    "ns3.wordpress.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:28:58Z",
+   "title": "WordPress.tv – WordPress-related videos curated and moderated by the WordPress.org community",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://wordpress.tv/feed/",
+     "title": "WordPress.tv RSS Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://blog.wordpress.tv/feed/",
+     "title": "WordPress.tv Blog RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "words.zip": {
+  "checked": "2026-10-30T06:29:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.150.1.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:00Z",
+   "title": "WORDS.ZIP - Infinite Collaborative Word Search Game Online",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wordwarriors.wayne.edu": {
+  "checked": "2026-10-30T06:29:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.217.1.160"
+   ],
+   "aaaa": [
+    "2606:9700:4208:101::abcd"
+   ],
+   "cname": "whv2prod.cc.wayne.edu",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:03Z",
+   "title": "Word Warriors - Wayne State University",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "work.qz.com": {
   "checked": "2026-10-25T05:39:36Z",
   "method": "enrich_hosts",
@@ -1543,6 +7715,263 @@
    "title": "Future of Work - Quartz",
    "generator": null,
    "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "work.thaslwanter.at": {
+  "checked": "2026-10-30T06:29:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "81.19.159.23"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:07Z",
+   "title": "Haslwanter: Homepage",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "workaguide.com": {
+  "checked": "2026-10-30T06:29:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.53.179.128"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dyna-ns.net",
+    "ns2.dyna-ns.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:09Z",
+   "title": "workaguide.com",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "workato.com": {
+  "checked": "2026-10-30T06:29:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.84.127.26",
+    "52.84.127.46",
+    "52.84.127.66",
+    "52.84.127.75"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1300.awsdns-34.org",
+    "ns-1755.awsdns-27.co.uk",
+    "ns-202.awsdns-25.com",
+    "ns-808.awsdns-37.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:11Z",
+   "title": "Govern & Scale Enterprise AI on the #1 iPaaS | Workato",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "workflow.directory": {
+  "checked": "2026-10-30T06:29:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.75.134",
+    "172.67.177.74"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:4b86",
+    "2606:4700:3037::ac43:b14a"
+   ],
+   "cname": null,
+   "ns": [
+    "athena.ns.cloudflare.com",
+    "jerome.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:14Z",
+   "title": "workflow directory – Technology matters",
+   "generator": "WordPress 5.3.27",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://workflow.directory/feed/",
+     "title": "workflow directory » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://workflow.directory/comments/feed/",
+     "title": "workflow directory » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "workingtheorys.com": {
+  "checked": "2026-10-30T06:29:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.251.168",
+    "15.197.225.128"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns05.domaincontrol.com",
+    "ns06.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:16Z",
+   "title": "Working Theorys | Anu | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.workingtheorys.com/feed",
+     "title": "Working Theorys"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "workingwithmediawiki.com": {
+  "checked": "2026-10-30T06:29:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "85.187.136.124"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.a2hosting.com",
+    "ns2.a2hosting.com",
+    "ns3.a2hosting.com",
+    "ns4.a2hosting.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:20Z",
+   "title": "Working with MediaWiki",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "worksonmymachine.substack.com": {
+  "checked": "2026-10-30T06:29:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:22Z",
+   "title": "Works on My Machine | Scott Werner | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://worksonmymachine.ai/feed",
+     "title": "Works on My Machine"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -1600,6 +8029,399 @@
    "checked": "2026-10-24T05:30:32Z"
   }
  },
+ "world.std.com": {
+  "checked": "2026-10-30T06:29:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.74.137.5"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:24Z",
+   "title": "The World | d01",
+   "generator": "Drupal 7 (http://drupal.org)",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "worldcat.org": {
+  "checked": "2026-10-30T06:29:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.32.188",
+    "172.64.155.68"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "michelle.ns.cloudflare.com",
+    "nico.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:26Z",
+   "title": "WorldCat.org",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "worldemojiday.com": {
+  "checked": "2026-10-30T06:29:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.49.23.144",
+    "198.49.23.145",
+    "198.185.159.144",
+    "198.185.159.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "archer.ns.cloudflare.com",
+    "laila.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:29Z",
+   "title": "📅 World Emoji Day — July 17, 2027",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://worldemojiday.com/home?format=rss",
+     "title": "RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "worldindots.com": {
+  "checked": "2026-10-30T06:29:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.208.88.157",
+    "98.84.224.111"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.p03.nsone.net",
+    "dns2.p03.nsone.net",
+    "dns3.p03.nsone.net",
+    "dns4.p03.nsone.net"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:32Z",
+   "title": "World in Dots | Dotted Maps Generator",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "worldipv6launch.org": {
+  "checked": "2026-10-30T06:29:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.57.186",
+    "172.67.165.117"
+   ],
+   "aaaa": [
+    "2606:4700:3034::6815:39ba",
+    "2606:4700:3035::ac43:a575"
+   ],
+   "cname": null,
+   "ns": [
+    "aron.ns.cloudflare.com",
+    "yahir.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:35Z",
+   "title": "World IPv6 Launch",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://worldipv6launch.org/feed/",
+     "title": "World IPv6 Launch » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://worldipv6launch.org/comments/feed/",
+     "title": "World IPv6 Launch » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "worldlabs.ai": {
+  "checked": "2026-10-30T06:29:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-d1.googledomains.com",
+    "ns-cloud-d2.googledomains.com",
+    "ns-cloud-d3.googledomains.com",
+    "ns-cloud-d4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:38Z",
+   "title": "World Labs",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "worldofends.com": {
+  "checked": "2026-10-30T06:29:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.92.226.36"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns3.pair.com",
+    "ns8.ns0.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:29:41Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "worldsensorium.com": {
+  "checked": "2026-10-30T06:30:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "173.236.142.221"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dreamhost.com",
+    "ns2.dreamhost.com",
+    "ns3.dreamhost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:12Z",
+   "title": "World Sensorium / Conservancy",
+   "generator": "WordPress 7.1.4",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "worldsradio.com": {
+  "checked": "2026-10-30T06:30:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.24.211",
+    "172.67.220.207"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:dccf",
+    "2606:4700:3034::6815:18d3"
+   ],
+   "cname": null,
+   "ns": [
+    "aitana.ns.cloudflare.com",
+    "hassan.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:15Z",
+   "title": "World Radio Map - Listen to Live Radio Stations Around the World | World's Radio",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "worldwideweb.cern.ch": {
+  "checked": "2026-10-30T06:30:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "188.185.42.119",
+    "188.185.46.121",
+    "188.185.48.40"
+   ],
+   "aaaa": [
+    "2001:1458:d00:24::100:281",
+    "2001:1458:d00:25::100:1f8",
+    "2001:1458:d00:61::100:103"
+   ],
+   "cname": "lb-paas-worldwideweb-f675a.cern.ch",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:18Z",
+   "title": "CERN 2019 WorldWideWeb Rebuild",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wornandwound.com": {
+  "checked": "2026-10-30T06:30:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.85.251",
+    "172.67.213.74"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:d54a",
+    "2606:4700:3033::6815:55fb"
+   ],
+   "cname": null,
+   "ns": [
+    "alexis.ns.cloudflare.com",
+    "gene.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:22Z",
+   "title": "Worn & Wound - Watch Reviews, News, and Guides",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "worrydream.com": {
   "checked": "2026-10-24T06:01:24Z",
   "method": "enrich_hosts",
@@ -1651,6 +8473,573 @@
    "rel_me": [
     "https://posts.dynamicland.org/@bret"
    ],
+   "webmention": null
+  }
+ },
+ "worthe-it.co.za": {
+  "checked": "2026-10-30T06:30:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "168.119.66.98"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns01.hkdns.host",
+    "ns02.hkdns.host"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:25Z",
+   "title": "Curly Tail, Curly Braces",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://worthe-it.co.za/atom.xml",
+     "title": "Sitewide ATOM Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://worthe-it.co.za/rss.xml",
+     "title": "Sitewide RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wppmedia.com": {
+  "checked": "2026-10-30T06:30:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.17.51.47",
+    "104.17.107.50"
+   ],
+   "aaaa": [
+    "2606:4700::6811:332f",
+    "2606:4700::6811:6b32"
+   ],
+   "cname": null,
+   "ns": [
+    "blue.foundationdns.com",
+    "blue.foundationdns.net",
+    "blue.foundationdns.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:29Z",
+   "title": "Intelligent growth for the AI era. We are WPP Media",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wprssaggregator.com": {
+  "checked": "2026-10-30T06:30:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.2.126",
+    "104.26.3.126",
+    "172.67.72.101"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:27e",
+    "2606:4700:20::681a:37e",
+    "2606:4700:20::ac43:4865"
+   ],
+   "cname": null,
+   "ns": [
+    "bob.ns.cloudflare.com",
+    "eva.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:30Z",
+   "title": "WP RSS Aggregator - A Comprehensive RSS Import Solution for WordPress",
+   "generator": "Easy Digital Downloads v3.7.2",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.wprssaggregator.com/feed/",
+     "title": "WP RSS Aggregator » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.wprssaggregator.com/comments/feed/",
+     "title": "WP RSS Aggregator » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wpshower.com": {
+  "checked": "2026-10-30T06:30:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "194.135.87.148"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.serveriai.lt",
+    "ns2.serveriai.lt",
+    "ns3.serveriai.lt",
+    "ns4.serveriai.lt"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:33Z",
+   "title": "The Best WordPress Web Hosting Services for 2025 ⋆ Wpshower",
+   "generator": "Site Kit by Google 1.188.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wpzoom.com": {
+  "checked": "2026-10-30T06:30:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.66.40.89",
+    "172.66.43.167"
+   ],
+   "aaaa": [
+    "2606:4700:3108::ac42:2859",
+    "2606:4700:3108::ac42:2ba7"
+   ],
+   "cname": null,
+   "ns": [
+    "james.ns.cloudflare.com",
+    "lia.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:38Z",
+   "title": "High-Quality WordPress Themes and Plugins - WPZOOM",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://feeds2.feedburner.com/wpzoom",
+     "title": "WPZOOM RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wrapbootstrap.com": {
+  "checked": "2026-10-30T06:30:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.0.31",
+    "104.26.1.31",
+    "172.67.75.107"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:1f",
+    "2606:4700:20::681a:11f",
+    "2606:4700:20::ac43:4b6b"
+   ],
+   "cname": null,
+   "ns": [
+    "coco.ns.cloudflare.com",
+    "gabe.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:41Z",
+   "title": "Wrapmarket: Starting points for real projects",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wren.io": {
+  "checked": "2026-10-30T06:30:43Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:43Z",
+   "title": "– Wren",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "write-it-down.com": {
+  "checked": "2026-10-30T06:30:46Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:46Z",
+   "title": "Personal Finance Tracker | Write It Down",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "writeincolor.com": {
+  "checked": "2026-10-30T06:30:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.251.168",
+    "15.197.225.128"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns15.domaincontrol.com",
+    "ns16.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:49Z",
+   "title": "Melody Godfred: Author, Poet, Speaker",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.melodygodfred.com/home?format=rss",
+     "title": "RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "writelatex.com": {
+  "checked": "2026-10-30T06:30:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.4.104",
+    "172.67.131.251"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:83fb",
+    "2606:4700:3035::6815:468"
+   ],
+   "cname": null,
+   "ns": [
+    "bob.ns.cloudflare.com",
+    "tori.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:53Z",
+   "title": "Overleaf, Online LaTeX Editor",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "writeordie.com": {
+  "checked": "2026-10-30T06:30:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "172.233.219.49"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.digitalocean.com",
+    "ns2.digitalocean.com",
+    "ns3.digitalocean.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: unable to get local issuer certificate"
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:55Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: unable to get local issuer certificate"
+  }
+ },
+ "writeout.ai": {
+  "checked": "2026-10-30T06:30:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.10.70",
+    "172.67.131.67"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:8343",
+    "2606:4700:3034::6815:a46"
+   ],
+   "cname": null,
+   "ns": [
+    "bryce.ns.cloudflare.com",
+    "pearl.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:30:59Z",
+   "title": "writeout.ai – Transcribe and translate any audio file",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "writesonic.com": {
+  "checked": "2026-10-30T06:31:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.14.158",
+    "104.26.15.158",
+    "172.67.71.97"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:e9e",
+    "2606:4700:20::681a:f9e",
+    "2606:4700:20::ac43:4761"
+   ],
+   "cname": null,
+   "ns": [
+    "ed.ns.cloudflare.com",
+    "june.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:31:02Z",
+   "title": "Writesonic | The AI Search Growth Engine. Win Customers.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "writewithharper.com": {
+  "checked": "2026-10-30T06:31:04Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.196"
+   ],
+   "aaaa": [
+    "2a04:fa87:fffd::c000:42c4"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.automattic.com",
+    "ns2.automattic.com",
+    "ns3.automattic.com",
+    "ns4.automattic.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:31:04Z",
+   "title": "Harper | Privacy-First Offline Grammar Checker for Developers & Writers",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "writing.wisc.edu": {
+  "checked": "2026-10-30T06:31:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "18.154.185.33",
+    "18.154.185.82",
+    "18.154.185.86",
+    "18.154.185.110"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "adns1.doit.wisc.edu",
+    "adns2.doit.wisc.edu",
+    "adns3.doit.wisc.edu",
+    "adns4.doit.wisc.edu"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:31:07Z",
+   "title": "The Writing Center – University of Wisconsin–Madison – UW–Madison",
+   "generator": "WordPress 7.1.4",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
    "webmention": null
   }
  },
@@ -1763,6 +9152,459 @@
     "ns-705.awsdns-24.net"
    ],
    "checked": "2026-10-24T05:34:18Z"
+  }
+ },
+ "wtcs.org": {
+  "checked": "2026-10-30T06:31:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns0.directnic.com",
+    "ns1.directnic.com",
+    "ns2.directnic.com",
+    "ns3.directnic.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:31:11Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "wtip.org": {
+  "checked": "2026-10-30T06:31:11Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.249.116.160"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "emily.ns.cloudflare.com",
+    "west.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:31:11Z",
+   "title": "Home | WTIP",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wunder.schoenaberselten.com": {
+  "checked": "2026-10-30T06:31:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.0.217.113"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:31:18Z",
+   "title": "wunderschoen aber selten – very much alive. tales of time, tenderness, and trees",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://wunder.schoenaberselten.com/feed/",
+     "title": "wunderschoen aber selten » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://wunder.schoenaberselten.com/comments/feed/",
+     "title": "wunderschoen aber selten » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "wuphf.team": {
+  "checked": "2026-10-30T06:31:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "ns49.domaincontrol.com",
+    "ns50.domaincontrol.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:31:22Z",
+   "title": "WUPHF is now gawkbot",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "ww2.mwusers.com": {
+  "checked": "2026-10-30T06:31:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "38.180.110.204"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:31:25Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "ww35.appletvsource.com": {
+  "checked": "2026-10-30T06:31:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "SERVFAIL"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:31:56Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "wwd.com": {
+  "checked": "2026-10-30T06:31:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.66.184"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1048.awsdns-03.org",
+    "ns-181.awsdns-22.com",
+    "ns-1872.awsdns-42.co.uk",
+    "ns-688.awsdns-22.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:31:56Z",
+   "title": "WWD – Women's Wear Daily brings you breaking news about the fashion industry, designers, celebrity trend setters, and extensive coverage of fashion week.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "www-collectifencore-com.translate.goog": {
+  "checked": "2026-10-30T06:32:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.251.214.193"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:81f::2001"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 400
+  },
+  "home": {
+   "checked": "2026-10-30T06:32:00Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 400"
+  }
+ },
+ "www-users.cs.umn.edu": {
+  "checked": "2026-10-30T06:32:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "134.84.66.195"
+   ],
+   "aaaa": [],
+   "cname": "www-users-lb.cse.umn.edu",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:32:02Z",
+   "title": "College of Science and Engineering",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "www16.co.hennepin.mn.us": {
+  "checked": "2026-10-30T06:32:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "137.70.164.70"
+   ],
+   "aaaa": [],
+   "cname": "www16.wip.co.hennepin.mn.us",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-30T06:32:03Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "www2.dmst.aueb.gr": {
+  "checked": "2026-10-30T06:32:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "62.217.127.175"
+   ],
+   "aaaa": [],
+   "cname": "wwz.dmst.aueb.gr",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:32:14Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "www2.macleans.ca": {
+  "checked": "2026-10-30T06:32:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "24.156.128.26"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:32:19Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "www2.math.ou.edu": {
+  "checked": "2026-10-30T06:32:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "129.15.68.233"
+   ],
+   "aaaa": [],
+   "cname": "newton.math.ou.edu",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "connection refused"
+  },
+  "home": {
+   "checked": "2026-10-30T06:32:50Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "connection refused"
+  }
+ },
+ "www4.uwm.edu": {
+  "checked": "2026-10-30T06:32:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:32:51Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
   }
  }
 }

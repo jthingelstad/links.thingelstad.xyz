@@ -2276,9 +2276,9 @@
   }
  },
  "daringfireball.net": {
-  "checked": "2026-10-23T21:25:30Z",
+  "checked": "2026-10-30T06:37:58Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -2302,6 +2302,24 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:37:58Z",
+   "title": "Daring Fireball",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://daringfireball.net/feeds/main",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@gruber",
+    "https://mastodon.social/@daringfireball"
+   ],
+   "webmention": null
   },
   "rdap": {
    "domain": "daringfireball.net",

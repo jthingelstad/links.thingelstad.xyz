@@ -1,4 +1,195 @@
 {
+ "x.com": {
+  "checked": "2026-10-30T06:32:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.66.146"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "a.r10.twtrdns.net",
+    "a.u10.twtrdns.net",
+    "b.r10.twtrdns.net",
+    "b.u10.twtrdns.net",
+    "c.r10.twtrdns.net",
+    "c.u10.twtrdns.net",
+    "d.r10.twtrdns.net",
+    "d.u10.twtrdns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:32:51Z",
+   "title": "X. It’s what’s happening / X",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "x402.org": {
+  "checked": "2026-10-30T06:33:04Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.10.192",
+    "104.18.11.192"
+   ],
+   "aaaa": [
+    "2606:4700::6812:ac0",
+    "2606:4700::6812:bc0"
+   ],
+   "cname": null,
+   "ns": [
+    "dolly.ns.cloudflare.com",
+    "rayden.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:33:04Z",
+   "title": "x402",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://x402.org/feed/",
+     "title": "x402 » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://x402.org/comments/feed/",
+     "title": "x402 » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "xaprb.com": {
+  "checked": "2026-10-30T06:33:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.198.14.52"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns5.pairnic.com",
+    "ns6.pairnic.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:33:07Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "xaviershay.github.io": {
+  "checked": "2026-10-30T06:33:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-30T06:33:10Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "xcancel.com": {
+  "checked": "2026-10-30T06:33:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.98.60.34"
+   ],
+   "aaaa": [
+    "2605:6400:10:11d::3"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.first-ns.de",
+    "robotns2.second-ns.de",
+    "robotns3.second-ns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 451
+  },
+  "home": {
+   "checked": "2026-10-30T06:33:12Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 451"
+  }
+ },
  "xda-developers.com": {
   "checked": "2026-10-25T05:39:40Z",
   "method": "enrich_hosts",
@@ -30,6 +221,123 @@
    "title": "XDA",
    "generator": null,
    "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "xeno.graphics": {
+  "checked": "2026-10-30T06:33:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "85.10.159.77"
+   ],
+   "aaaa": [
+    "2a01:7c8:f0:1072::dbd1:f2bf"
+   ],
+   "cname": null,
+   "ns": [
+    "ns0.transip.net",
+    "ns1.transip.nl",
+    "ns2.transip.eu"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:33:15Z",
+   "title": "Xenographics – Weird but (sometimes) useful charts",
+   "generator": "WordPress 4.9.35",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://xeno.graphics/feed/",
+     "title": "Xenographics » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://xeno.graphics/comments/feed/",
+     "title": "Xenographics » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "xericdesign.com": {
+  "checked": "2026-10-30T06:33:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.92.92.198"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns5.pairnic.com",
+    "ns6.pairnic.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:33:20Z",
+   "title": "Xeric Design, Ltd.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "xipu.li": {
+  "checked": "2026-10-30T06:33:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.198.79.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-canada.topdns.com",
+    "ns-uk.topdns.com",
+    "ns-usa.topdns.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:33:22Z",
+   "title": "Xipu Li",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://xipu.li/rss.xml",
+     "title": "Xipu Li"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -87,6 +395,40 @@
    "checked": "2026-10-23T21:28:51Z"
   }
  },
+ "xmox.nl": {
+  "checked": "2026-10-30T06:33:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "84.22.96.237"
+   ],
+   "aaaa": [
+    "2a02:2770:12:0:21a:4aff:fee0:fa47"
+   ],
+   "cname": null,
+   "ns": [
+    "ns0.axillis.nl",
+    "ns1.axillis.nl"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:33:25Z",
+   "title": "Mox: modern, secure, all-in-one mail server",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "xon.sh": {
   "checked": "2026-10-25T05:39:42Z",
   "method": "enrich_hosts",
@@ -138,6 +480,120 @@
    "hcard": false,
    "rel_me": [],
    "webmention": null
+  }
+ },
+ "xtermjs.org": {
+  "checked": "2026-10-30T06:33:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [
+    "dns1.papaki.gr",
+    "dns2.papaki.gr"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:33:29Z",
+   "title": "Xterm.js",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "xtimeline.com": {
+  "checked": "2026-10-30T06:33:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.38.139",
+    "172.67.223.45"
+   ],
+   "aaaa": [
+    "2606:4700:3036::6815:268b",
+    "2606:4700:3037::ac43:df2d"
+   ],
+   "cname": null,
+   "ns": [
+    "aspen.ns.cloudflare.com",
+    "jarred.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:33:32Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "xys.org": {
+  "checked": "2026-10-30T06:34:04Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.4.16.124"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns0.directnic.com",
+    "ns1.directnic.com",
+    "ns2.directnic.com",
+    "ns3.directnic.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: TLS_ALERT_HANDSHAKE_FAILURE"
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:04Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: TLS_ALERT_HANDSHAKE_FAILURE"
   }
  }
 }

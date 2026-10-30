@@ -1631,9 +1631,9 @@
   }
  },
  "eff.org": {
-  "checked": "2026-10-23T21:25:39Z",
+  "checked": "2026-10-30T06:38:07Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -1642,9 +1642,8 @@
    "aaaa": [],
    "cname": null,
    "ns": [
-    "ns1.eff.org",
     "ns2.eff.org",
-    "ns4.eff.org"
+    "ns3.eff.org"
    ],
    "mx": true
   },
@@ -1652,6 +1651,17 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:38:07Z",
+   "title": "Electronic Frontier Foundation | Defending your rights in the digital world",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@eff"
+   ],
+   "webmention": null
   },
   "rdap": {
    "domain": "eff.org",

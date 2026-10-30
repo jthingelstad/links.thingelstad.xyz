@@ -1,4 +1,437 @@
 {
+ "yaesu.com": {
+  "checked": "2026-10-30T06:34:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.209.174.109"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hover.com",
+    "ns2.hover.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:05Z",
+   "title": "Welcome to Yaesu",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "yahoo.com": {
+  "checked": "2026-10-30T06:34:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "74.6.143.25",
+    "74.6.143.26",
+    "74.6.231.20",
+    "74.6.231.21",
+    "98.137.11.163",
+    "98.137.11.164"
+   ],
+   "aaaa": [
+    "2001:4998:24:120d::1:0",
+    "2001:4998:24:120d::1:1",
+    "2001:4998:44:3507::8000",
+    "2001:4998:44:3507::8001",
+    "2001:4998:124:1507::f000",
+    "2001:4998:124:1507::f001"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.yahoo.com",
+    "ns2.yahoo.com",
+    "ns3.yahoo.com",
+    "ns4.yahoo.com",
+    "ns5.yahoo.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:07Z",
+   "title": "Yahoo | Mail, Weather, Search, Politics, News, Finance, Sports & Videos",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "yankodesign.com": {
+  "checked": "2026-10-30T06:34:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.6.118",
+    "104.26.7.118",
+    "172.67.69.79"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:676",
+    "2606:4700:20::681a:776",
+    "2606:4700:20::ac43:454f"
+   ],
+   "cname": null,
+   "ns": [
+    "ada.ns.cloudflare.com",
+    "theo.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:10Z",
+   "title": "Yanko Design - Modern Industrial Design News",
+   "generator": "All in One SEO Pro (AIOSEO) 5.0.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.yankodesign.com/feed/",
+     "title": "Yanko Design » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.yankodesign.com/comments/feed/",
+     "title": "Yanko Design » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "yannesposito.com": {
+  "checked": "2026-10-30T06:34:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.28.67",
+    "172.67.144.152"
+   ],
+   "aaaa": [
+    "2606:4700:3035::6815:1c43",
+    "2606:4700:3035::ac43:9098"
+   ],
+   "cname": null,
+   "ns": [
+    "clyde.ns.cloudflare.com",
+    "violet.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:12Z",
+   "title": "Home",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://yannesposito.com/atom.xml",
+     "title": "Atom feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://yannesposito.com/rss.xml",
+     "title": "RSS feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "yap.chat": {
+  "checked": "2026-10-30T06:34:14Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.83.239",
+    "172.67.183.117"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:b775",
+    "2606:4700:3031::6815:53ef"
+   ],
+   "cname": null,
+   "ns": [
+    "isla.ns.cloudflare.com",
+    "zeus.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:14Z",
+   "title": "Yap.Chat: Random Video Chat & Omegle Alternative",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "yay.boo": {
+  "checked": "2026-10-30T06:34:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.24.57.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:16Z",
+   "title": "YAY.BOO!",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "yearcompass.com": {
+  "checked": "2026-10-30T06:34:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.84.127.3",
+    "52.84.127.49",
+    "52.84.127.124",
+    "52.84.127.126"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1004.awsdns-61.net",
+    "ns-1166.awsdns-17.org",
+    "ns-1652.awsdns-14.co.uk",
+    "ns-69.awsdns-08.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:19Z",
+   "title": "YearCompass | The booklet that helps close your year and plan the next one.",
+   "generator": "Gatsby 4.24.4",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "yellowicon.com": {
+  "checked": "2026-10-30T06:34:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.49.23.144",
+    "198.49.23.145",
+    "198.185.159.144",
+    "198.185.159.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'yellowicon.com'"
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:22Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'yellowicon.com'"
+  }
+ },
+ "yellowpagesoptout.com": {
+  "checked": "2026-10-30T06:34:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.15.235",
+    "172.67.208.158"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:d09e",
+    "2606:4700:3037::6815:feb"
+   ],
+   "cname": null,
+   "ns": [
+    "marge.ns.cloudflare.com",
+    "tosana.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:24Z",
+   "title": "Yellow Pages Opt Out",
+   "generator": "Starfield Technologies; Go Daddy Website Builder 8.0.0000",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "yellowstroke.com": {
+  "checked": "2026-10-30T06:34:26Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.dns-parking.com",
+    "ns2.dns-parking.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:26Z",
+   "title": "Yellow Stroke | Evolve with Purpose, Grow with Guidance",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "yggdrasil-network.github.io": {
+  "checked": "2026-10-30T06:34:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:27Z",
+   "title": "Yggdrasil Network | End-to-end encrypted IPv6 networking to connect worlds",
+   "generator": "Jekyll v3.10.0",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://yggdrasil-network.github.io/feed.xml",
+     "title": "Yggdrasil Network"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "ykatkov.name": {
   "checked": "2026-10-25T05:39:45Z",
   "method": "enrich_hosts",
@@ -27,6 +460,42 @@
    "rel_me": [],
    "webmention": null,
    "error": "does not resolve"
+  }
+ },
+ "ymichael.com": {
+  "checked": "2026-10-30T06:34:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.21.41",
+    "172.67.196.97"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:c461",
+    "2606:4700:3035::6815:1529"
+   ],
+   "cname": null,
+   "ns": [
+    "hank.ns.cloudflare.com",
+    "pat.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:30Z",
+   "title": "ymichael",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  },
  "ynab.com": {
@@ -62,6 +531,192 @@
    "title": "YNAB",
    "generator": null,
    "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "yolken.net": {
+  "checked": "2026-10-30T06:34:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.27.97",
+    "172.67.169.27"
+   ],
+   "aaaa": [
+    "2606:4700:3036::6815:1b61",
+    "2606:4700:3036::ac43:a91b"
+   ],
+   "cname": null,
+   "ns": [
+    "galilea.ns.cloudflare.com",
+    "garret.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:33Z",
+   "title": "Benjamin Yolken | Random thoughts from the perspective of a software engineer, particularly around tech careers and development processes.",
+   "generator": "Jekyll v3.9.3",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://yolken.net/feed.xml",
+     "title": "Benjamin Yolken"
+    }
+   ],
+   "hcard": true,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "yoric.github.io": {
+  "checked": "2026-10-30T06:34:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:35Z",
+   "title": "Il y a du thé renversé au bord de la table, by David \"Yoric\" Teller",
+   "generator": "Hugo 0.140.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "you.regettingold.com": {
+  "checked": "2026-10-30T06:34:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.67.54",
+    "172.67.213.213"
+   ],
+   "aaaa": [
+    "2606:4700:3031::ac43:d5d5",
+    "2606:4700:3033::6815:4336"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:34:38Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "youbroketheinternet.org": {
+  "checked": "2026-10-30T06:35:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "81.92.172.231"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "fly.symlynx.com",
+    "nsc6.schlundtech.de"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:09Z",
+   "title": "#youbroketheinternet (YBTI)",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "youcangetitdone.com": {
+  "checked": "2026-10-30T06:35:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.230.63.107",
+    "185.230.63.171",
+    "185.230.63.186"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns0.wixdns.net",
+    "ns1.wixdns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:13Z",
+   "title": "HOME | Get It Done | Get It Done LLC",
+   "generator": "Wix.com Website Builder",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.youcangetitdone.com/blog-feed.xml",
+     "title": "Get It Done LLC - RSS"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -119,6 +774,153 @@
    "checked": "2026-10-24T05:41:26Z"
   }
  },
+ "yourbasic.org": {
+  "checked": "2026-10-30T06:35:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.loopiagroup.com",
+    "ns2.loopiagroup.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:17Z",
+   "title": "Algorithms to Go · YourBasic",
+   "generator": "Hugo 0.154.5",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "yourhackernews.com": {
+  "checked": "2026-10-30T06:35:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.3.33",
+    "172.67.130.40"
+   ],
+   "aaaa": [
+    "2606:4700:3034::6815:321",
+    "2606:4700:3037::ac43:8228"
+   ],
+   "cname": null,
+   "ns": [
+    "coby.ns.cloudflare.com",
+    "kimora.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:20Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "yourlocalepidemiologist.substack.com": {
+  "checked": "2026-10-30T06:35:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.37.200",
+    "172.64.150.56"
+   ],
+   "aaaa": [
+    "2606:4700:4401::ac40:9638",
+    "2606:4700:4404::6812:25c8"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:22Z",
+   "title": "Your Local Epidemiologist | Katelyn Jetelina | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://yourlocalepidemiologist.substack.com/feed",
+     "title": "Your Local Epidemiologist"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "youtu.be": {
+  "checked": "2026-10-30T06:35:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.250.189.110"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:80f::200e"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.google.com",
+    "ns2.google.com",
+    "ns3.google.com",
+    "ns4.google.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:25Z",
+   "title": "YouTube",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "youtube-global.blogspot.com": {
   "checked": "2026-10-25T05:39:45Z",
   "method": "enrich_hosts",
@@ -151,19 +953,16 @@
   }
  },
  "youtube.com": {
-  "checked": "2026-10-23T21:25:13Z",
+  "checked": "2026-10-30T06:37:32Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "172.217.214.91",
-    "172.217.214.93",
-    "172.217.214.136",
-    "172.217.214.190"
+    "142.250.217.110"
    ],
    "aaaa": [
-    "2607:f8b0:4009:803::200e"
+    "2607:f8b0:4009:810::200e"
    ],
    "cname": null,
    "ns": [
@@ -178,6 +977,15 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:37:32Z",
+   "title": "YouTube",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "youtube.com",
@@ -199,6 +1007,155 @@
     "ns4.google.com"
    ],
    "checked": "2026-10-23T21:25:13Z"
+  }
+ },
+ "yro.slashdot.org": {
+  "checked": "2026-10-30T06:35:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.4.215",
+    "104.18.5.215"
+   ],
+   "aaaa": [],
+   "cname": "www.slashdot.org",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:28Z",
+   "title": "Your Rights Online News | Slashdot",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://rss.slashdot.org/Slashdot/slashdotYourRightsOnline",
+     "title": "Slashdot RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.cloud/@slashdot"
+   ],
+   "webmention": null
+  }
+ },
+ "ystrickler.com": {
+  "checked": "2026-10-30T06:35:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "178.128.137.126"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ethan.ns.cloudflare.com",
+    "surina.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:32Z",
+   "title": "Yancey Strickler",
+   "generator": "Ghost 6.74",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.ystrickler.com/rss/",
+     "title": "Yancey Strickler"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://www.ystrickler.com/webmentions/receive/"
+  }
+ },
+ "yuji.wordpress.com": {
+  "checked": "2026-10-30T06:35:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.0.78.12",
+    "192.0.78.13"
+   ],
+   "aaaa": [],
+   "cname": "lb.wordpress.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:36Z",
+   "title": "Yuji Tomita – Yuji's Increasingly Infrequent Ramblings",
+   "generator": "WordPress.com",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://yujitomita.com/feed/",
+     "title": "Yuji Tomita » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://yujitomita.com/comments/feed/",
+     "title": "Yuji Tomita » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "yuml.me": {
+  "checked": "2026-10-30T06:35:40Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.27.83.55"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns73.domaincontrol.com",
+    "ns74.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:35:40Z",
+   "title": "yUML — Diagrams AI can write. Humans can read at a glance.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   }
  }
 }

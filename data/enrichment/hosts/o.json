@@ -1666,9 +1666,9 @@
   }
  },
  "om.co": {
-  "checked": "2026-10-23T21:26:14Z",
+  "checked": "2026-10-30T06:38:22Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -1687,6 +1687,31 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:38:22Z",
+   "title": "On my Om – Technology & Change: Field Notes From The Present Future",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://om.co/feed/",
+     "title": "On my Om » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://om.co/comments/feed/",
+     "title": "On my Om » Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://om.co/feed/podcast",
+     "title": "Podcast RSS feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": null,
   "rdap_error": "no RDAP service for .co"

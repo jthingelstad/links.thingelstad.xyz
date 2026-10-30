@@ -342,6 +342,44 @@
    "error": "timeout"
   }
  },
+ "aardappel.github.io": {
+  "checked": "2026-10-30T05:30:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-30T05:30:21Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
  "aaronhertzmann.com": {
   "checked": "2026-10-25T05:43:27Z",
   "method": "enrich_hosts",
@@ -11862,13 +11900,13 @@
   }
  },
  "arstechnica.com": {
-  "checked": "2026-10-23T21:25:25Z",
+  "checked": "2026-10-30T06:37:53Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "18.119.153.14",
+    "3.13.112.100",
     "18.119.211.17"
    ],
    "aaaa": [],
@@ -11885,6 +11923,15 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:37:53Z",
+   "title": "Ars Technica - Serving the Technologist since 1998. News, reviews, and analysis.",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "arstechnica.com",
@@ -14731,9 +14778,9 @@
   }
  },
  "aws.amazon.com": {
-  "checked": "2026-10-23T21:25:43Z",
+  "checked": "2026-10-30T06:38:10Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -14743,14 +14790,14 @@
     "18.160.102.95"
    ],
    "aaaa": [
-    "2600:9000:212f:600:1c:a813:8500:93a1",
-    "2600:9000:212f:7600:1c:a813:8500:93a1",
-    "2600:9000:212f:ae00:1c:a813:8500:93a1",
-    "2600:9000:212f:b400:1c:a813:8500:93a1",
-    "2600:9000:212f:be00:1c:a813:8500:93a1",
-    "2600:9000:212f:c400:1c:a813:8500:93a1",
-    "2600:9000:212f:ee00:1c:a813:8500:93a1",
-    "2600:9000:212f:fa00:1c:a813:8500:93a1"
+    "2600:9000:254b:400:1c:a813:8500:93a1",
+    "2600:9000:254b:800:1c:a813:8500:93a1",
+    "2600:9000:254b:c00:1c:a813:8500:93a1",
+    "2600:9000:254b:7c00:1c:a813:8500:93a1",
+    "2600:9000:254b:7e00:1c:a813:8500:93a1",
+    "2600:9000:254b:a800:1c:a813:8500:93a1",
+    "2600:9000:254b:c800:1c:a813:8500:93a1",
+    "2600:9000:254b:fa00:1c:a813:8500:93a1"
    ],
    "cname": "tp.8e49140c2-frontier.amazon.com",
    "ns": [],
@@ -14760,6 +14807,15 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:38:10Z",
+   "title": "Cloud Computing Services - Amazon Web Services (AWS)",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "amazon.com",

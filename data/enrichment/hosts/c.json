@@ -2252,6 +2252,59 @@
    "webmention": null
   }
  },
+ "carmelitegothic.com": {
+  "checked": "2026-10-30T05:30:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "50.87.174.119"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.bluehost.com",
+    "ns2.bluehost.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T05:30:25Z",
+   "title": "Carmelite Monks of Wyoming Gothic - Carmelite Gothic",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://carmelitegothic.com/feed/",
+     "title": "Carmelite Gothic » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://carmelitegothic.com/comments/feed/",
+     "title": "Carmelite Gothic » Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://carmelitegothic.com/carmelite-monks-wyoming-gothic/feed/",
+     "title": "Carmelite Gothic » Carmelite Monks of Wyoming Gothic Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://carmelitegothic.com/rsslatest.xml",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "carolinecrampton.com": {
   "checked": "2026-10-26T05:35:48Z",
   "method": "enrich_hosts",

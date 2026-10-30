@@ -9879,9 +9879,9 @@
   }
  },
  "nytimes.com": {
-  "checked": "2026-10-23T21:25:23Z",
+  "checked": "2026-10-30T06:37:50Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -9907,7 +9907,22 @@
   "https": {
    "reachable": true,
    "redirects_http": true,
-   "status": 403
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:37:50Z",
+   "title": "The New York Times - Breaking News, US News, World News and Videos",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "nytimes.com",

@@ -4039,9 +4039,9 @@
   }
  },
  "gigaom.com": {
-  "checked": "2026-10-23T21:25:37Z",
+  "checked": "2026-10-30T06:38:04Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -4060,6 +4060,26 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:38:04Z",
+   "title": "Expert Guidance for Enterprise Technology Decisions | GigaOm",
+   "generator": "Site Kit by Google 1.189.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://gigaom.com/feed/",
+     "title": "Gigaom » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://gigaom.com/comments/feed/",
+     "title": "Gigaom » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "gigaom.com",
@@ -4580,13 +4600,13 @@
   }
  },
  "github.com": {
-  "checked": "2026-10-23T21:25:19Z",
+  "checked": "2026-10-30T06:37:46Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "140.82.113.3"
+    "140.82.113.4"
    ],
    "aaaa": [],
    "cname": null,
@@ -4606,6 +4626,15 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:37:46Z",
+   "title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHub · GitHub",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "github.com",

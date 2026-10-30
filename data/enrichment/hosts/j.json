@@ -1,4 +1,46 @@
 {
+ "j11g.com": {
+  "checked": "2026-10-30T05:30:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "157.90.24.20"
+   ],
+   "aaaa": [
+    "2a01:4f8:1c1c:79a1::1"
+   ],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T05:30:29Z",
+   "title": "Home",
+   "generator": "Pure Blog",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://j11g.com/feed",
+     "title": "Jan van den Berg RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "jackcheng.com": {
   "checked": "2026-10-27T06:19:36Z",
   "method": "enrich_hosts",

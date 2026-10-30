@@ -24900,6 +24900,52 @@
    "webmention": null
   }
  },
+ "buildingslack.com": {
+  "checked": "2026-10-30T05:30:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.3.7",
+    "151.101.67.7",
+    "151.101.131.7",
+    "151.101.195.7"
+   ],
+   "aaaa": [
+    "2a04:4e42::775",
+    "2a04:4e42:200::775",
+    "2a04:4e42:400::775",
+    "2a04:4e42:600::775"
+   ],
+   "cname": null,
+   "ns": [
+    "lara.ns.cloudflare.com",
+    "skip.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T05:30:22Z",
+   "title": "Building Slack",
+   "generator": "Ghost 6.74",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://buildingslack.com/rss/",
+     "title": "Building Slack"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://buildingslack.com/webmentions/receive/"
+  }
+ },
  "builtbywords.substack.com": {
   "checked": "2026-10-26T05:31:38Z",
   "method": "enrich_hosts",
@@ -25230,9 +25276,9 @@
   }
  },
  "businessinsider.com": {
-  "checked": "2026-10-23T21:26:18Z",
+  "checked": "2026-10-30T06:38:26Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -25261,6 +25307,21 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:38:26Z",
+   "title": "Business Insider - Latest News in Tech, Markets, Economy & Innovation",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://feeds.businessinsider.com/custom/all",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "businessinsider.com",

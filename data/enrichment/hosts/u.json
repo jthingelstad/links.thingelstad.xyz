@@ -1,4 +1,356 @@
 {
+ "u24.gov.ua": {
+  "checked": "2026-10-30T06:06:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.20.222",
+    "172.67.194.180"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:14de",
+    "2606:4700:3037::ac43:c2b4"
+   ],
+   "cname": null,
+   "ns": [
+    "duke.ns.cloudflare.com",
+    "marge.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:06:20Z",
+   "title": "UNITED24 — The initiative of the President of Ukraine",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "uarts.edu": {
+  "checked": "2026-10-30T06:06:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:06:23Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "ubuntuforums.org": {
+  "checked": "2026-10-30T06:06:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.canonical.com",
+    "ns2.canonical.com",
+    "ns3.canonical.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:06:23Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "ucl.ac.uk": {
+  "checked": "2026-10-30T06:06:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "144.82.250.24"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns-ns0.ucl.ac.uk",
+    "dns-ns1.ucl.ac.uk",
+    "ns1.cs.ucl.ac.uk"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:06:25Z",
+   "title": "Welcome to UCL | University College London",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "ucomics.com": {
+  "checked": "2026-10-30T06:06:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.12.204",
+    "172.67.153.65"
+   ],
+   "aaaa": [
+    "2606:4700:3037::6815:ccc",
+    "2606:4700:3037::ac43:9941"
+   ],
+   "cname": null,
+   "ns": [
+    "james.ns.cloudflare.com",
+    "priscilla.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:06:44Z",
+   "title": "Home - Ucomics",
+   "generator": "Elementor 4.3.2; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://ucomics.com/feed/",
+     "title": "Ucomics » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "uctv.canberra.edu.au": {
+  "checked": "2026-10-30T06:06:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:06:47Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "ui.com": {
+  "checked": "2026-10-30T06:06:47Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "52.84.127.15",
+    "52.84.127.20",
+    "52.84.127.84",
+    "52.84.127.104"
+   ],
+   "aaaa": [
+    "2600:9000:2203:2000:1c:894d:51c0:93a1",
+    "2600:9000:2203:2800:1c:894d:51c0:93a1",
+    "2600:9000:2203:4c00:1c:894d:51c0:93a1",
+    "2600:9000:2203:5200:1c:894d:51c0:93a1",
+    "2600:9000:2203:5e00:1c:894d:51c0:93a1",
+    "2600:9000:2203:6600:1c:894d:51c0:93a1",
+    "2600:9000:2203:ca00:1c:894d:51c0:93a1",
+    "2600:9000:2203:d200:1c:894d:51c0:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns-1469.awsdns-55.org",
+    "ns-1849.awsdns-39.co.uk",
+    "ns-277.awsdns-34.com",
+    "ns-656.awsdns-18.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:06:47Z",
+   "title": "UniFi - Rethinking IT - Ubiquiti",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "uk.reuters.com": {
+  "checked": "2026-10-30T06:06:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "155.46.172.253"
+   ],
+   "aaaa": [],
+   "cname": "redirect-https.thomsonreuters.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 401
+  },
+  "home": {
+   "checked": "2026-10-30T06:06:51Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 401 (DataDome)"
+  }
+ },
+ "ukrainedao.love": {
+  "checked": "2026-10-30T06:06:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.41.200",
+    "172.67.192.74"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:c04a",
+    "2606:4700:3031::6815:29c8"
+   ],
+   "cname": null,
+   "ns": [
+    "dan.ns.cloudflare.com",
+    "eve.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:06:52Z",
+   "title": "Ukraine DAO",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "ultimate-anonymity.com": {
+  "checked": "2026-10-30T06:06:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.92.245",
+    "172.67.200.251"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:5cf5",
+    "2606:4700:3033::ac43:c8fb"
+   ],
+   "cname": null,
+   "ns": [
+    "chance.ns.cloudflare.com",
+    "dolly.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:06:58Z",
+   "title": "ULTIMATE PRIVACY - Online Anonymity and Privacy!",
+   "generator": "WordPress 7.1.4",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "ulysses.app": {
   "checked": "2026-10-25T05:37:44Z",
   "method": "enrich_hosts",
@@ -36,6 +388,211 @@
    "webmention": null
   }
  },
+ "umami.is": {
+  "checked": "2026-10-30T06:07:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.0.192",
+    "104.26.1.192",
+    "172.67.70.186"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:c0",
+    "2606:4700:20::681a:1c0",
+    "2606:4700:20::ac43:46ba"
+   ],
+   "cname": null,
+   "ns": [
+    "gina.ns.cloudflare.com",
+    "titan.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:02Z",
+   "title": "Umami – Open-Source Web and Product Analytics",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "ummm.co": {
+  "checked": "2026-10-30T06:07:04Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:04Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "umsec.umn.edu": {
+  "checked": "2026-10-30T06:07:04Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.20.107",
+    "104.18.21.107"
+   ],
+   "aaaa": [
+    "2606:4700::6812:146b",
+    "2606:4700::6812:156b"
+   ],
+   "cname": "umsec.umn.edu.cdn.cloudflare.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:04Z",
+   "title": "University of Minnesota Software Engineering Center | College of Science and Engineering",
+   "generator": "Drupal 11 (https://www.drupal.org)",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "un.curl.dev": {
+  "checked": "2026-10-30T06:07:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "159.253.31.95"
+   ],
+   "aaaa": [],
+   "cname": "ipv4.haxx.se",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:08Z",
+   "title": "Uncurled - Uncurled",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "unavatar.io": {
+  "checked": "2026-10-30T06:07:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.75.206",
+    "172.67.181.251"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:b5fb",
+    "2606:4700:3037::6815:4bce"
+   ],
+   "cname": null,
+   "ns": [
+    "brenda.ns.cloudflare.com",
+    "newt.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:13Z",
+   "title": "Universal Avatar API by Username, Email or Domain | unavatar",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "unchartedterritories.tomaspueyo.com": {
+  "checked": "2026-10-30T06:07:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.36.24",
+    "172.64.151.232"
+   ],
+   "aaaa": [
+    "2606:4700:4401::6812:2418",
+    "2606:4700:4406::ac40:97e8"
+   ],
+   "cname": "target.substack-custom-domains.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:16Z",
+   "title": "Uncharted Territories | Tomas Pueyo | Substack",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://unchartedterritories.tomaspueyo.com/feed",
+     "title": "Uncharted Territories"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "uncomfortableprofit.com": {
   "checked": "2026-10-24T06:00:01Z",
   "method": "enrich_hosts",
@@ -70,6 +627,323 @@
      "title": "The Deload"
     }
    ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "uncyclopedia.wikia.com": {
+  "checked": "2026-10-30T06:07:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.142.170",
+    "172.66.2.166"
+   ],
+   "aaaa": [],
+   "cname": "wikia.com",
+   "ns": [],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:18Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
+  }
+ },
+ "underline.email": {
+  "checked": "2026-10-30T06:07:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:20Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "underpassapp.com": {
+  "checked": "2026-10-30T06:07:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "74.114.88.152"
+   ],
+   "aaaa": [
+    "2604:4f00:10:b099:0:45:209:1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.tigertech.net",
+    "ns2.tigertech.biz",
+    "ns3.tigertech.org"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:20Z",
+   "title": "Underpass App Company",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://underpassapp.com/updates.rss",
+     "title": "StopTheMadness updates"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@lapcatsoftware"
+   ],
+   "webmention": null
+  }
+ },
+ "underscorejs.org": {
+  "checked": "2026-10-30T06:07:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.25.112",
+    "172.67.134.18"
+   ],
+   "aaaa": [
+    "2606:4700:3035::ac43:8612",
+    "2606:4700:3037::6815:1970"
+   ],
+   "cname": null,
+   "ns": [
+    "logan.ns.cloudflare.com",
+    "robin.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:23Z",
+   "title": "Underscore.js",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "underwaterphotographeroftheyear.com": {
+  "checked": "2026-10-30T06:07:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.26.150.31"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.underwaterphotographeroftheyear.com",
+    "ns1.uwpcomp.co.uk",
+    "ns2.underwaterphotographeroftheyear.com",
+    "ns2.uwpcomp.co.uk"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:24Z",
+   "title": "Home Page - Underwater Photographer of the Year",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "unic.ac.cy": {
+  "checked": "2026-10-30T06:07:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "141.193.213.20",
+    "141.193.213.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1332.awsdns-38.org",
+    "ns-1561.awsdns-03.co.uk",
+    "ns-428.awsdns-53.com",
+    "ns-691.awsdns-22.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:29Z",
+   "title": "University of Nicosia",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.unic.ac.cy/feed/",
+     "title": "University of Nicosia » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "uniswap.org": {
+  "checked": "2026-10-30T06:07:32Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.140.227",
+    "172.66.0.225"
+   ],
+   "aaaa": [
+    "2606:4700:7::e1",
+    "2a06:98c1:58::e1"
+   ],
+   "cname": null,
+   "ns": [
+    "damian.ns.cloudflare.com",
+    "gemma.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:32Z",
+   "title": "Uniswap Interface",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "universal-radio.com": {
+  "checked": "2026-10-30T06:07:34Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "75.98.226.11"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.cera.net",
+    "dns2.cera.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:34Z",
+   "title": "Universal Radio shortwave, amateur, scanner and CB radio since 1942",
+   "generator": "Microsoft FrontPage 5.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "unix4lyfe.org": {
+  "checked": "2026-10-30T06:07:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "139.99.170.37"
+   ],
+   "aaaa": [
+    "2402:1f00:8100:400::1e94"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.lolduino.com",
+    "ns1.unix4lyfe.org"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:35Z",
+   "title": "unix4lyfe.org",
+   "generator": null,
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -122,6 +996,270 @@
    "webmention": null
   }
  },
+ "unixmagic.net": {
+  "checked": "2026-10-30T06:07:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.messagingengine.com",
+    "ns2.messagingengine.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:41Z",
+   "title": "Unix Magic Poster Annotations",
+   "generator": "Hugo 0.161.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "unixwiz.net": {
+  "checked": "2026-10-30T06:07:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "54.183.133.27"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.easydns.com",
+    "dns2.easydns.net",
+    "dns3.easydns.ca"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:07:44Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "unkey.dev": {
+  "checked": "2026-10-30T06:08:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "76.76.21.9",
+    "76.76.21.93",
+    "76.76.21.98"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "nucum.ns.cloudflare.com",
+    "remy.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:08:00Z",
+   "title": "Unkey | The Developer Platform for Modern APIs",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "unlicense.org": {
+  "checked": "2026-10-30T06:08:03Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.5.81",
+    "172.67.133.50"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:8532",
+    "2606:4700:3037::6815:551"
+   ],
+   "cname": null,
+   "ns": [
+    "elliott.ns.cloudflare.com",
+    "gina.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:08:03Z",
+   "title": "Unlicense Yourself: Set Your Code Free",
+   "generator": "VitePress v1.6.4",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "unlimitednovelty.com": {
+  "checked": "2026-10-30T06:08:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.239.32.21",
+    "216.239.34.21",
+    "216.239.36.21",
+    "216.239.38.21"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-b1.googledomains.com",
+    "ns-cloud-b2.googledomains.com",
+    "ns-cloud-b3.googledomains.com",
+    "ns-cloud-b4.googledomains.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  },
+  "home": {
+   "checked": "2026-10-30T06:08:05Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  }
+ },
+ "unmistakablecreative.com": {
+  "checked": "2026-10-30T06:08:07Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "162.159.135.42"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-1179.awsdns-19.org",
+    "ns-1930.awsdns-49.co.uk",
+    "ns-448.awsdns-56.com",
+    "ns-856.awsdns-43.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:08:07Z",
+   "title": "Unmistakable Creative: Fuel Your Imagination for Change",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://unmistakablecreative.com/feed/",
+     "title": "Unmistakable Creative » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://unmistakablecreative.com/comments/feed/",
+     "title": "Unmistakable Creative » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "unplannedobsolescence.com": {
+  "checked": "2026-10-30T06:08:10Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.248.49.80"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:08:10Z",
+   "title": "Unplanned Obsolescence",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://unplannedobsolescence.com/atom.xml",
+     "title": "Unplanned Obsolescence"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "unpossible.com": {
   "checked": "2026-10-24T05:50:36Z",
   "method": "enrich_hosts",
@@ -156,6 +1294,218 @@
   "rdap": null,
   "rdap_error": "refused: rdap.verisign.com: network: Broken pipe"
  },
+ "unrealircd.com": {
+  "checked": "2026-10-30T06:08:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns0.transip.net",
+    "ns1.transip.nl",
+    "ns2.transip.eu"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:08:13Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
+ "unsloth.ai": {
+  "checked": "2026-10-30T06:08:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.8.42",
+    "104.26.9.42",
+    "172.67.69.105"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:82a",
+    "2606:4700:20::681a:92a",
+    "2606:4700:20::ac43:4569"
+   ],
+   "cname": null,
+   "ns": [
+    "katelyn.ns.cloudflare.com",
+    "lennon.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:08:13Z",
+   "title": "Unsloth - Run and Train Models Locally",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "unsubscriberobot.com": {
+  "checked": "2026-10-30T06:08:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "34.139.164.205"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-b1.googledomains.com",
+    "ns-cloud-b2.googledomains.com",
+    "ns-cloud-b3.googledomains.com",
+    "ns-cloud-b4.googledomains.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:08:19Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "unxutils.sourceforge.net": {
+  "checked": "2026-10-30T06:08:50Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.12.149",
+    "104.18.13.149"
+   ],
+   "aaaa": [
+    "2606:4700::6812:c95",
+    "2606:4700::6812:d95"
+   ],
+   "cname": "projects.sourceforge.net.cdn.cloudflare.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:08:50Z",
+   "title": "Native Win32 ports of some GNU utilities",
+   "generator": "OpenOffice.org 1.1.0 (Linux)",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "unzip.dev": {
+  "checked": "2026-10-30T06:08:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.56.133",
+    "172.67.152.25"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:9819",
+    "2606:4700:3037::6815:3885"
+   ],
+   "cname": null,
+   "ns": [
+    "heather.ns.cloudflare.com",
+    "scott.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:08:53Z",
+   "title": "Unzip.dev - Developer trends newsletter",
+   "generator": "Ghost 6.72",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://unzip.dev/rss/",
+     "title": "Unzip.dev"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://unzip.dev/webmentions/receive/"
+  }
+ },
+ "updates.deadspin.com": {
+  "checked": "2026-10-30T06:08:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
+  },
+  "home": {
+   "checked": "2026-10-30T06:08:56Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "does not resolve"
+  }
+ },
  "updown.io": {
   "checked": "2026-10-25T05:37:53Z",
   "method": "enrich_hosts",
@@ -186,6 +1536,671 @@
    "checked": "2026-10-25T05:37:53Z",
    "title": "updown.io – Website monitoring, simple and inexpensive",
    "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "upgames.dev": {
+  "checked": "2026-10-30T06:08:56Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "45.79.115.7"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hover.com",
+    "ns2.hover.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: certificate has expired"
+  },
+  "home": {
+   "checked": "2026-10-30T06:08:56Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: certificate has expired"
+  }
+ },
+ "upguard.com": {
+  "checked": "2026-10-30T06:08:59Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.33.186.135",
+    "15.197.167.90"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "eva.ns.cloudflare.com",
+    "hank.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:08:59Z",
+   "title": "The #1 Cyber Risk Posture Management Platform | UpGuard",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "uploadvr.com": {
+  "checked": "2026-10-30T06:09:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "178.128.137.126"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns57.domaincontrol.com",
+    "ns58.domaincontrol.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:09:02Z",
+   "title": "UploadVR",
+   "generator": "Ghost 6.74",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.uploadvr.com/rss/",
+     "title": "UploadVR"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://www.uploadvr.com/webmentions/receive/"
+  }
+ },
+ "upptime.js.org": {
+  "checked": "2026-10-30T06:09:05Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.8.84",
+    "104.26.9.84",
+    "172.67.73.64"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:854",
+    "2606:4700:20::681a:954",
+    "2606:4700:20::ac43:4940"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:09:05Z",
+   "title": "Upptime",
+   "generator": "Docusaurus v2.0.0-alpha.66",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://upptime.js.org/blog/rss.xml",
+     "title": "Upptime Blog RSS Feed"
+    },
+    {
+     "type": "atom",
+     "url": "https://upptime.js.org/blog/atom.xml",
+     "title": "Upptime Blog Atom Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "upstart.bizjournals.com": {
+  "checked": "2026-10-30T06:09:08Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "3.222.11.79",
+    "54.226.201.195"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:09:08Z",
+   "title": "Startups News - The Business Journals",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "upvotetracker.com": {
+  "checked": "2026-10-30T06:09:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.85.253",
+    "172.67.213.76"
+   ],
+   "aaaa": [
+    "2606:4700:3036::ac43:d54c",
+    "2606:4700:3037::6815:55fd"
+   ],
+   "cname": null,
+   "ns": [
+    "jay.ns.cloudflare.com",
+    "lauryn.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:09:12Z",
+   "title": "upvotetracker.com : Sumber Berita Harian dengan Analisis Cepat dan Tepat",
+   "generator": "WordPress 7.1.4",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "urb.com": {
+  "checked": "2026-10-30T06:09:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.49.23.144",
+    "198.49.23.145",
+    "198.185.159.144",
+    "198.185.159.145"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns81.worldnic.com",
+    "ns82.worldnic.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:09:15Z",
+   "title": "URB /born in ’90",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "urbanbeancoffee.com": {
+  "checked": "2026-10-30T06:09:18Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "108.61.195.117"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns63.domaincontrol.com",
+    "ns64.domaincontrol.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-30T06:09:18Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "timeout"
+  }
+ },
+ "urbangiraffe.com": {
+  "checked": "2026-10-30T06:09:49Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "192.241.167.58"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.digitalocean.com",
+    "ns2.digitalocean.com",
+    "ns3.digitalocean.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:09:49Z",
+   "title": "Urban Giraffe – Life, The Universe, and WordPress",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://urbangiraffe.com/feed/",
+     "title": "Urban Giraffe » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://urbangiraffe.com/comments/feed/",
+     "title": "Urban Giraffe » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "url-parts.glitch.me": {
+  "checked": "2026-10-30T06:09:52Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.2.59",
+    "151.101.66.59",
+    "151.101.130.59",
+    "151.101.194.59"
+   ],
+   "aaaa": [
+    "2a04:4e42::571",
+    "2a04:4e42:200::571",
+    "2a04:4e42:400::571",
+    "2a04:4e42:600::571"
+   ],
+   "cname": "glitch-custom-domains.map.fastly.net",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:09:52Z",
+   "title": "URL parts",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "url.town": {
+  "checked": "2026-10-30T06:09:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "167.235.29.89"
+   ],
+   "aaaa": [
+    "2a01:4f8:c2c:7dd7::1"
+   ],
+   "cname": null,
+   "ns": [
+    "ns1.dns.kitchen",
+    "ns2.dns.kitchen",
+    "ns3.dns.kitchen"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:09:54Z",
+   "title": "url.town",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://url.town/rss",
+     "title": "RSS feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "urlcanary.com": {
+  "checked": "2026-10-30T06:09:58Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "46.101.33.42"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-228-a.gandi.net",
+    "ns-31-b.gandi.net",
+    "ns-53-c.gandi.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
+  },
+  "home": {
+   "checked": "2026-10-30T06:09:58Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
+  }
+ },
+ "urlte.am": {
+  "checked": "2026-10-30T06:10:02Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.169.253.175"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns21.cloudns.net",
+    "ns22.cloudns.net",
+    "ns23.cloudns.net",
+    "ns24.cloudns.net",
+    "pns21.cloudns.net",
+    "pns22.cloudns.net",
+    "pns23.cloudns.net",
+    "pns24.cloudns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:02Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+  }
+ },
+ "urltoany.com": {
+  "checked": "2026-10-30T06:10:06Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.64.230",
+    "172.67.137.147"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:8993",
+    "2606:4700:3037::6815:40e6"
+   ],
+   "cname": null,
+   "ns": [
+    "blakely.ns.cloudflare.com",
+    "kipp.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:06Z",
+   "title": "URL to Any | All-in-one URL Conversion Tool",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "us15.campaign-archive.com": {
+  "checked": "2026-10-30T06:10:09Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.220.108.4"
+   ],
+   "aaaa": [],
+   "cname": "us15.mailchimp.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:09Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "not HTML (text/plain)"
+  }
+ },
+ "usa.canon.com": {
+  "checked": "2026-10-30T06:10:12Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "146.184.92.157"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "nydns07.cusa.canon.com",
+    "nydns08.cusa.canon.com",
+    "svadns3.cusa.canon.com",
+    "svadns4.cusa.canon.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 403
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:12Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403"
+  }
+ },
+ "usafacts.org": {
+  "checked": "2026-10-30T06:10:13Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.10.66",
+    "104.18.11.66"
+   ],
+   "aaaa": [
+    "2606:4700::6812:a42",
+    "2606:4700::6812:b42"
+   ],
+   "cname": null,
+   "ns": [
+    "kate.ns.cloudflare.com",
+    "luke.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:13Z",
+   "title": "Accessible government data and statistics | USAFacts",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://usafacts.org/rss/",
+     "title": "RSS"
+    },
+    {
+     "type": "rss",
+     "url": "https://usafacts.org/sns/",
+     "title": "SNS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "usakubb.org": {
+  "checked": "2026-10-30T06:10:16Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.230.63.107",
+    "185.230.63.171",
+    "185.230.63.186"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns10.wixdns.net",
+    "ns11.wixdns.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:16Z",
+   "title": "U.S. National Kubb Championship",
+   "generator": "Wix.com Website Builder",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -253,6 +2268,104 @@
    "checked": "2026-10-24T05:54:18Z"
   }
  },
+ "usdtea.io": {
+  "checked": "2026-10-30T06:10:19Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "199.36.158.100"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:19Z",
+   "title": "USDTea: The first stablecoin backed by cans of AriZona Iced Tea",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "usebraintrust.com": {
+  "checked": "2026-10-30T06:10:22Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.150.1.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-b1.googledomains.com",
+    "ns-cloud-b2.googledomains.com",
+    "ns-cloud-b3.googledomains.com",
+    "ns-cloud-b4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:22Z",
+   "title": "Braintrust — AI-Powered Talent Network for Enterprise",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "usebruno.com": {
+  "checked": "2026-10-30T06:10:25Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "100.27.249.156"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.vercel-dns.com",
+    "ns2.vercel-dns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:25Z",
+   "title": "Bruno - The Git-Native API Client",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "usefathom.com": {
   "checked": "2026-10-24T06:00:05Z",
   "method": "enrich_hosts",
@@ -293,6 +2406,42 @@
    "webmention": null
   }
  },
+ "usegitai.com": {
+  "checked": "2026-10-30T06:10:27Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.16.92",
+    "104.18.17.92"
+   ],
+   "aaaa": [
+    "2606:4700::6812:105c",
+    "2606:4700::6812:115c"
+   ],
+   "cname": null,
+   "ns": [
+    "guy.ns.cloudflare.com",
+    "teresa.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:27Z",
+   "title": "Git AI - Track AI Code all the way to production",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "usenix.org": {
   "checked": "2026-10-24T06:15:12Z",
   "method": "enrich_hosts",
@@ -323,6 +2472,185 @@
    "checked": "2026-10-24T06:15:12Z",
    "title": "USENIX Home | USENIX",
    "generator": "Drupal 7 (http://drupal.org)",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "useqwitter.com": {
+  "checked": "2026-10-30T06:10:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.63.123",
+    "172.67.170.172"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:aaac",
+    "2606:4700:3036::6815:3f7b"
+   ],
+   "cname": null,
+   "ns": [
+    "jerry.ns.cloudflare.com",
+    "sofia.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:29Z",
+   "title": "Qwitter - Everything about Social Media Guides, Tech News",
+   "generator": "WordPress 7.0.8",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://useqwitter.com/feed/",
+     "title": "Qwitter » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://useqwitter.com/comments/feed/",
+     "title": "Qwitter » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "userjot.com": {
+  "checked": "2026-10-30T06:10:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.6.42",
+    "104.26.7.42",
+    "172.67.68.48"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:62a",
+    "2606:4700:20::681a:72a",
+    "2606:4700:20::ac43:4430"
+   ],
+   "cname": null,
+   "ns": [
+    "naya.ns.cloudflare.com",
+    "sam.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:33Z",
+   "title": "UserJot: Customer Feedback, Roadmap, Changelog and Support for SaaS Teams",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "users.design.ucla.edu": {
+  "checked": "2026-10-30T06:10:36Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "169.232.172.24"
+   ],
+   "aaaa": [],
+   "cname": "users.dma.ucla.edu",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'users.design.ucla.edu'"
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:36Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'users.design.ucla.edu'"
+  }
+ },
+ "users.ece.utexas.edu": {
+  "checked": "2026-10-30T06:10:38Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "146.6.15.159"
+   ],
+   "aaaa": [],
+   "cname": "ece-fizz.ece.utexas.edu",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:38Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "empty body"
+  }
+ },
+ "useskeletonkey.com": {
+  "checked": "2026-10-30T06:10:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "64.29.17.1",
+    "216.198.79.65"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.vercel-dns.com",
+    "ns2.vercel-dns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:41Z",
+   "title": "Skeleton Key - Escape Room Trip Planner",
+   "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -367,6 +2695,99 @@
    "hcard": true,
    "rel_me": [
     "https://wafer.baby/@d"
+   ],
+   "webmention": null
+  }
+ },
+ "usetrmnl.com": {
+  "checked": "2026-10-30T06:10:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.8.23",
+    "104.26.9.23",
+    "172.67.73.67"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:817",
+    "2606:4700:20::681a:917",
+    "2606:4700:20::ac43:4943"
+   ],
+   "cname": null,
+   "ns": [
+    "piotr.ns.cloudflare.com",
+    "ziggy.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:44Z",
+   "title": "ePaper dashboard to stay focused | TRMNL",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://trmnl.com/feeds/announcements.xml",
+     "title": "TRMNL: Announcements"
+    },
+    {
+     "type": "atom",
+     "url": "https://trmnl.com/feeds/posts.xml",
+     "title": "TRMNL: Posts"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "usher.dev": {
+  "checked": "2026-10-30T06:10:45Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.18.9",
+    "172.67.179.33"
+   ],
+   "aaaa": [
+    "2606:4700:3033::ac43:b321",
+    "2606:4700:3035::6815:1209"
+   ],
+   "cname": null,
+   "ns": [
+    "kip.ns.cloudflare.com",
+    "lola.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:45Z",
+   "title": "usher.dev",
+   "generator": "Astro v5.17.2",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://usher.dev/rss.xml",
+     "title": "RSS Feed for usher.dev"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@tomusher"
    ],
    "webmention": null
   }
@@ -421,6 +2842,40 @@
    "checked": "2026-10-24T05:34:48Z"
   }
  },
+ "ussadesign.com": {
+  "checked": "2026-10-30T06:10:48Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "23.227.38.32"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-cloud-d1.googledomains.com",
+    "ns-cloud-d2.googledomains.com",
+    "ns-cloud-d3.googledomains.com",
+    "ns-cloud-d4.googledomains.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:48Z",
+   "title": "USSA Design",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "usv.com": {
   "checked": "2026-10-24T06:15:15Z",
   "method": "enrich_hosts",
@@ -450,6 +2905,42 @@
   "home": {
    "checked": "2026-10-24T06:15:15Z",
    "title": "Union Square Ventures",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "utkarshkanwat.com": {
+  "checked": "2026-10-30T06:10:51Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.43.168",
+    "172.67.182.134"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:b686",
+    "2606:4700:3035::6815:2ba8"
+   ],
+   "cname": null,
+   "ns": [
+    "decker.ns.cloudflare.com",
+    "desi.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:51Z",
+   "title": "Utkarsh Kanwat - AI Research Engineer",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -489,6 +2980,129 @@
    "title": "ASU Enterprise Technology | ASU Enterprise Technology",
    "generator": "Drupal 10 (https://www.drupal.org)",
    "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "utsire.com": {
+  "checked": "2026-10-30T06:10:54Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "99.84.203.13",
+    "99.84.203.20",
+    "99.84.203.41",
+    "99.84.203.68"
+   ],
+   "aaaa": [
+    "2600:9000:20c5:2e00:1c:5b1d:b1c0:93a1",
+    "2600:9000:20c5:4200:1c:5b1d:b1c0:93a1",
+    "2600:9000:20c5:5e00:1c:5b1d:b1c0:93a1",
+    "2600:9000:20c5:7200:1c:5b1d:b1c0:93a1",
+    "2600:9000:20c5:7a00:1c:5b1d:b1c0:93a1",
+    "2600:9000:20c5:8c00:1c:5b1d:b1c0:93a1",
+    "2600:9000:20c5:ca00:1c:5b1d:b1c0:93a1",
+    "2600:9000:20c5:e000:1c:5b1d:b1c0:93a1"
+   ],
+   "cname": null,
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:54Z",
+   "title": "Utsire",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.utsire.com/www.fondantfancies.com/blog/atom1/index.html",
+     "title": "Atom"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "utteranc.es": {
+  "checked": "2026-10-30T06:10:57Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.7.5",
+    "172.67.135.141"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:705",
+    "2606:4700:3034::ac43:878d"
+   ],
+   "cname": null,
+   "ns": [
+    "ian.ns.cloudflare.com",
+    "kim.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:10:57Z",
+   "title": "utterances",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "ux.stackexchange.com": {
+  "checked": "2026-10-30T06:11:00Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "198.252.206.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:11:00Z",
+   "title": "User Experience Stack Exchange",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://ux.stackexchange.com/feeds",
+     "title": "Feed of recent questions"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
    "webmention": null

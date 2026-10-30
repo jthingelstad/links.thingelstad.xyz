@@ -3323,9 +3323,9 @@
   }
  },
  "kottke.org": {
-  "checked": "2026-10-23T21:26:19Z",
+  "checked": "2026-10-30T06:38:27Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -3347,6 +3347,23 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-30T06:38:27Z",
+   "title": "kottke.org - home of fine hypertext products",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://feeds.kottke.org/main",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@kottke"
+   ],
+   "webmention": null
   },
   "rdap": {
    "domain": "kottke.org",
