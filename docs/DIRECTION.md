@@ -399,75 +399,134 @@ The graph is the point of the site. Edge types, their source, and when they arri
 | saved twice | normalised URL | 43 groups | 1 |
 | cites / cited by | outbound links of the archived page copy, matched to saved URLs | unknown until the archive is parsed; the richest source of real hyperlink structure | 2 |
 | same topic | topics | every link | 3 |
-| similar | embeddings over title, note and excerpt, top 10 kept per link | every link | 3 |
+| similar | embeddings of the title and the note (the title and the URL's words when there is no note), top 10 kept per link | every link (spike 2026-10-30) | 3 |
 
 The "cites" edge is the homage made concrete: the actual hyperlinks between the pages
-Jamie saved. It needs the Pinboard archive (section "The archive"). Phase 1 ships the
-edges that need no new data; the record page and the graph file are shaped to accept
-the rest.
+Jamie saved. It needs the Pinboard archive (section "The archive"), which has not
+arrived. Phase 1 ships the edges that need no new data; the record page and the graph
+file are shaped to accept the rest.
 
 ### Nearest neighbours
 
-Jamie likes this one. Every record shows its five nearest neighbours, computed at
-build from an embedding of the title, the note and the page's description, with the
-reason shown beside each ("same topic", "same issue", "same host", or nothing, which
-is the interesting case: two links from different years and hosts that are about the
-same thing). The top ten per link are kept in `neighbors.json`; the model and its
-version are recorded there. Neighbours are recomputed for new links weekly and for
-everything when the model changes. No runtime cost: the page is static and the
-neighbours are text.
+Jamie likes this one. Every record shows its five nearest neighbours, with the reason
+shown beside each ("same topic", "same issue", "same host", or nothing, which is the
+interesting case: two links from different years and hosts that are about the same
+thing). The top ten per link are kept in `neighbors.json` with the model and the text
+recipe's version. No runtime cost: the page is static and the neighbours are text.
+
+**Our own vectors.** Linking Things embeds its links itself rather than reading the
+Librarian's. The Librarian's links corpus puts the date, the host and the issue in the
+header of every text it embeds, which pulls a link towards its own year, site and
+issue, the connections the site already shows; and the Librarian depends on Linking
+Things, never the other way round (its `AGENTS.md`). Same model, different input:
+
+- **Text.** The title (a trailing " | Site" of 30 characters or fewer trimmed) and the
+  note, cleaned: Markdown links reduced to their words; bare URLs, blockquote marks and
+  HTML tags dropped; at most 1,800 characters. A link with no note gets its title and
+  the words of its URL's path, junk segments dropped, at most 20 words. No date, host or
+  issue goes in.
+- **Model.** `cohere.embed-english-v3` on Bedrock, 1,024 dimensions, `input_type`
+  `clustering`, batches of 96, the `cloud-engineer` identity on the Mac. All 16,558
+  public links were about 1.3 million tokens, about $0.13 (2026-10-30).
+- **Neighbours.** Cosine similarity, the top ten per link, skipping the link itself and
+  a second save of the same URL (same host and path), which would otherwise be every
+  saved-twice link's first neighbour.
+- **Upkeep.** New links are embedded as they arrive and the neighbour lists recomputed
+  whole, which takes seconds. Everything is embedded again only when the model or the
+  text recipe changes. The vectors (68 MB) stay on the Mac, out of git; they cost $0.13
+  to make again, so they need no backup.
+
+**What the spike found** (2026-10-30, every public link, shown to Jamie as a private
+prototype; nothing reached the site):
+
+- Of each link's five nearest neighbours, 77% share no site, year or issue with it,
+  and 33% were saved five or more years apart. The neighbours are mostly connections
+  nothing else on the site makes, which is the point of them.
+- Read by hand they hold up: "From the Hyperlink to the Stream" (2018) sits beside
+  "How We Lost the Web" (2013), Jack Cheng's "The Slow Web" (2012) and "An Ode to
+  Links" (2026).
+- The 4,011 links with no note stand on their title alone and land less surely; a
+  short or generic title gets a loose neighbourhood. Proposed, not approved: text from
+  the Wayback Machine's snapshot nearest each one's save date (section "The archive"),
+  used only as input to its vector and never shown. Never a crawl of the live page.
 
 Hosts and topics have neighbours too: hosts whose links share topics, topics that
 co-occur. The POAP site's `/network/` page is the precedent for one graph view over
-the whole corpus; here it would be topics and the hosts that bridge them, drawn at
-build as SVG.
+the whole corpus; section "Inside the graph" is where that is going.
+
+### Inside the graph
+
+Neighbours on a record are a list; the graph they make is something to move through.
+The spike drew it two ways: a ring of the ten neighbours around the current link, and
+a map of every link, placed so links that say similar things sit close, with topic
+names on it and the reader's path drawn across it. Jamie, 2026-10-30, on the map: "I
+love the giant graph on the bottom! Feeling like we are 'inside' that navigating around
+is what I had in mind", then "yeah… this is the direction".
+
+- **The experience.** You are inside the graph, standing on one link with its
+  neighbours around you, and you move from link to link; the view goes with you, and
+  where you have been stays drawn as a trail. The trail is the memex idea of section
+  "Ideas beyond the brief" arriving from the reader's side; a named trail could start
+  as one.
+- **The map.** The vectors flattened to two dimensions: PCA to 50, then UMAP (cosine).
+  Distance on it is only roughly meaning, and two neighbours can land far apart where
+  the flattening tears, so neighbour lines come from the vectors, never from the map.
+- **The bar is delight.** Jamie, 2026-10-30: "we can reason on how to make the visuals
+  even more compelling and feel even more immersive", and "I think it requires a
+  different approach than where we started." The prototype is evidence, not the design.
+- **No lookups.** A label sits on the thing it names. No numbered markers with a
+  numbered list beside them to decode (Jamie, 2026-10-30: "we should avoid lookups like
+  maps with numbers and then the numbers being listed on the side").
+- **A design spike settles the visuals.** A few distinct concepts, rendered and
+  compared, before any of it is built into the site. Where it lives (a page of its own,
+  or the record page opening into it) is part of that.
+- **Serving.** The prototype ran from one static file of every public link with its
+  place, topic and ten neighbours (5.5 MB), so it fits "serving runs nothing". Jamie,
+  2026-10-30, is open to more: "if we need a server to do it we can explore that for
+  sure". The file's size is the number to watch.
 
 ## Topics
 
 Nothing to inherit: no tags, and the Librarian's nine clusters are per issue and too
 coarse for 17,000 links (its 776 extracted topics are entity names, many noise).
-Proposal:
+Topics come from the same vectors as the neighbours (2026-10-30; the earlier plan, a
+model-proposed vocabulary with every link classified into it by a model, is replaced):
 
-1. **Propose a vocabulary.** A model reads a stratified 1,500-link sample (title,
-   note, excerpt) and proposes topics; the proposals are clustered into about 80 to
-   150 candidates with descriptions.
-2. **The model's vocabulary stands.** Jamie, 2026-10-23: "it isn't realistic for me to
-   prune it. i think you should go with what the model comes back with." The
-   vocabulary is written to `content/topics.yaml` (id, title, description, parent),
-   the Things I've built shape, so a word can still be changed by hand later, but
-   nothing waits on that.
-3. **Classify every link** into one to three topics from the vocabulary, with a
-   structured output so nothing outside it is written. Store in
-   `data/derived/topics.json` with the vocabulary version. New links each week, same
-   prompt.
-4. **Topic pages** list links newest first, show co-topics, the hosts and issues most
-   present, and a feed.
+1. **Cluster.** k-means over the vectors, about 100 topics; the spike's held 33 to 353
+   links, median 162. A link has one topic. One that sits between two shows between
+   them on the map, and its neighbours cross the line.
+2. **A model names them.** A model batch reads each topic's most central titles and its
+   top hosts and names it. In the spike they were named by hand from the same evidence,
+   to see whether names read well: "AI agents", "The small web", "How we lost the web",
+   "Kubb and games", with a few catch-alls ("Miscellany", "Bare links, mixed") that show
+   where the clustering gives out. The model's names stand. Jamie, 2026-10-23: "it
+   isn't realistic for me to prune it. i think you should go with what the model comes
+   back with." They are written to `content/topics.yaml` (id, title, description), the
+   Things I've built shape, so a word can still be changed by hand later, but nothing
+   waits on that.
+3. **A name sits where its topic is densest** on the map (the member with the most
+   topic-mates close by), not at its average, which can fall in empty space or on
+   another topic when the map splits a topic in two.
+4. **Topics hold still.** A new link joins the nearest topic centre. Topics are made
+   again only with the vectors (a new model or text recipe), as a new vocabulary
+   version in `data/derived/topics.json`, so a topic's URL does not move under a
+   reader.
+5. **Topic pages** list links newest first, show neighbouring topics, the hosts and
+   issues most present, and a feed.
 
-One-time cost for the bulk pass, roughly 500 input tokens and 60 output tokens per link
-(the vocabulary prompt cached), first-party API prices as of 2026-10-06:
+Naming 100 topics is one small batch, cents. Jamie accepted model cost at ingestion and
+build on 2026-10-23; none of it reaches serving. The key is `CLAUDE_API_KEY` in the
+Mac's `.env`, next to the Pinboard token (an `OPENAI_API_KEY` sits beside it, unused
+for now); the derive step runs on the Mac and CI never holds it. Every bulk pass goes
+through the Message Batches API (Jamie, 2026-10-23: "make sure to use the new bulk
+methods to get massively lower costs").
 
-| Model | About |
-| --- | --- |
-| Claude Haiku 5.5 | $1.50 |
-| Claude Sonnet 5.5 | $27 |
-| Claude Opus 5.5 | $54 |
-
-The Batch API halves each. Recommended: Sonnet 5.5 proposes the vocabulary (once, a
-few dollars) and Haiku 5.5 classifies; the design does not depend on the choice.
-Weekly reclassification of 30 or so new links costs cents on any of them. Jamie
-accepted model cost at ingestion and build on 2026-10-23; none of it reaches serving.
-The key is `CLAUDE_API_KEY` in the Mac's `.env`, next to the Pinboard token (an
-`OPENAI_API_KEY` sits beside it, unused for now); the derive step runs on the Mac and
-CI never holds it. Every bulk pass goes through the Message Batches API (Jamie,
-2026-10-23: "make sure to use the new bulk methods to get massively lower costs").
-Topics and neighbours wait for the archive export (Jamie, 2026-10-23: "If all we have
-is a title and a URL it is hard to do much with it"); if the export never comes, that
-is a decision to take then, not a title-only pass.
-
-Embedding-based "similar" uses the model the Librarian already uses
-(`cohere.embed-english-v3` on Bedrock) over the same text; 17,000 short documents is
-a few million tokens, cents on Bedrock's published rate (verify before running). Keep
-the vectors out of git; keep the top-10 neighbours per link in `neighbors.json`.
+**The archive gate is lifted** (2026-10-30). Topics and neighbours used to wait for the
+archive export (Jamie, 2026-10-23: "If all we have is a title and a URL it is hard to
+do much with it"). The export never arrives (section "The archive"), three links in four
+have a note to embed, and the spike showed the neighbours hold up without it. Jamie,
+2026-10-30: "Approved: write the neighbours and map design into Linking Things
+DIRECTION.md and lift the Pinboard archive gate".
 
 ## Enrichment
 
@@ -553,8 +612,19 @@ else in the build knows the host.
 
 ## The archive
 
-Jamie's Pinboard archival account holds a copy of every saved page, about 70 GB,
-downloading now. Pinboard documents no export format; users describe a tar.gz with
+Jamie's Pinboard archival account holds a copy of every saved page, about 70 GB on
+2026-10-23. The download never finishes. Jamie, 2026-10-30: "I've attempted to get the
+pinboard archive (75GB!) multiple times and it never returns." No support request is
+filed yet. Topics and neighbours went ahead without it (section "Topics"); what still
+waits is what only the archive holds: the cites graph from the saved copies, when
+Pinboard archived each page, and the `b:` ids.
+
+Proposed, not approved (2026-10-30): the Wayback Machine's snapshot nearest each link's
+save date as the stand-in copy, read once for a bare link's text (section "Nearest
+neighbours") and for the outbound links the cites graph needs. The rules below hold for
+it as for the archive: data only, nothing from it served. Never a crawl of the live page.
+
+Pinboard documents no export format; users describe a tar.gz with
 one folder per bookmark holding the page and its assets plus a JSON manifest. The
 loader (`tools/archive.py`) is an adapter: given the archive root, yield
 (bookmark id, HTML path, manifest). Nothing else touches the layout, so whatever
@@ -749,8 +819,10 @@ the mirror is kept lossless and Pinboard-shaped, not merely sufficient for pages
   push deploys. The GitHub Actions shape was not taken: the token stays on the Mac,
   and the archive and model steps have to run here anyway. The sync does not dispatch
   `links-published` to the Librarian for now (Jamie, 2026-10-23: everything except
-  sending links to the Librarian). Topics, neighbours and archive-derived facts wait
-  for the archive export and will run here too.
+  sending links to the Librarian). Topics and neighbours will run here too, the
+  embedding on Bedrock with the `cloud-engineer` identity (section "Nearest
+  neighbours"); archive-derived facts wait for the archive export, which has not
+  arrived.
 - **Checks**: lint, format, types, unit tests on the data module and the URL
   normaliser, `validate:data` (no private links, no unknown fields),
   `validate:site` (every page in the sitemap, every internal link resolves; every
@@ -858,8 +930,10 @@ entry. Connections from existing data only.
 428 hosts with five or more links, Wayback, page facts and the "cites" graph from the
 archive, kinds, and the first adapters (YouTube, GitHub, Wikipedia, Amazon books).
 
-**3. Browse.** The topic vocabulary, the bulk classification, topic pages, embedding
-neighbours, "similar".
+**3. Browse.** The vectors, neighbours and "similar" on every record, topics (clusters
+named by a model batch) and their pages, and the walk through the graph once its
+design spike settles the visuals (section "Inside the graph"). Nothing in it waits on
+the archive since 2026-10-30.
 
 **4. The Librarian.** The SQLite download, `links.json` in its final shape, and the
 Librarian ingesting it (section "The Librarian"), and a links MCP of its own (built
@@ -874,7 +948,7 @@ Jamie, 2026-10-23, with the design's response:
 | --- | --- | --- |
 | Pinboard's 12-hex id as the permalink | Fine, if we can generate it ourselves | The API `hash` is md5 of the saved URL for all 16,882, so the id is ours to make. Pinboard's web `b:` ids are a different, private id (tested against Jamie's paste). Section "The id". |
 | Results open the record | Agree | Done. |
-| Which model classifies topics | Defer until the archive is in hand | Phase 3; the design does not depend on it. |
+| Which model classifies topics | Defer until the archive is in hand | Phase 3; the design does not depend on it. Superseded 2026-10-30: topics are clusters of the link vectors, named by a model batch, and nothing waits on the archive (section "Topics"). |
 | Archived pages: facts plus an excerpt | Not even that; data only; "I don't want us to be a Wayback Machine" | Facts and the cites graph only; no excerpts anywhere. Section "The archive". |
 | `_exclude` links and links with no text | Include them, but no landing page for a bare link; later, "I'm good with you exploring what works best" | The card that scales with what is known, explored in the spike with screenshots of both the rich and the bare case. Section "Links that are nothing but a link". |
 | Deleted bookmarks | Tombstone, "that could be fun" | Decided; not built yet. A deleted link's page is removed until it is. |
@@ -898,6 +972,12 @@ treatment is left to the build to explore; build started with Opus 5.5 agents on
 
 Then the links MCP: "Let's build it", with search on the site's existing Pagefind
 index. Built 2026-10-24 (section "Agents and the MCP").
+
+Then, 2026-10-30: the archive download never finishes, so the gate on topics and
+neighbours is lifted, and a neighbours and map spike ran on every public link the same
+day (sections "Nearest neighbours", "Inside the graph" and "Topics"). Jamie:
+"Approved: write the neighbours and map design into Linking Things DIRECTION.md and
+lift the Pinboard archive gate".
 
 Still open: which of the ideas beyond the brief earn a phase. The GitHub repository and
 the Tinylytics site exist.
@@ -941,7 +1021,9 @@ than a reading: the reading-queue agent tags every bookmark whose note it writes
 
 - **Pagefind at 17,000 records.** Measured in the spike: it holds, with the two
   behaviours above handled in the browser; `pf_meta` is the fixed cost that grows.
-- **The archive format** is unknown until it lands. The adapter contains it.
+- **The archive may never land.** The download never finishes (2026-10-30). The cites
+  graph and the `b:` ids wait on it; topics and neighbours do not. If it comes, its
+  format is unknown and the adapter contains it.
 - **Destinations change.** Links are not checked ("They just are", Jamie,
   2026-10-23), so no page says whether a destination works; every record carries its
   Wayback link.
