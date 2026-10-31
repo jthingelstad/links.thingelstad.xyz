@@ -1,5 +1,6 @@
-/* /sky/ (src/pages/sky/index.astro). The sky is night whatever the page's
-   theme, and runs the full width of the window under the site header; Doors
+/* The sky (src/components/SkyStage.astro), on the front page and at /sky/.
+   The sky is night whatever the page's theme, and runs the full width of the
+   window under the site header (on the front page, under the strip); Doors
    is the page's own ground and type, light or dark. Nothing smaller than
    --jt-size-label, and no italics. */
 html:has(.sky:not([hidden])) {
@@ -186,6 +187,11 @@ html:has(.sky:not([hidden])) {
   color: var(--sky-ink);
   text-decoration: underline;
 }
+/* What Find lit, in its own warm white. */
+.sky-near.sky-found {
+  max-width: 16rem;
+  color: #ffde9e;
+}
 .sky-ring {
   position: absolute;
   left: 0;
@@ -272,40 +278,23 @@ html:has(.sky:not([hidden])) {
 .sky-find input::placeholder {
   color: var(--sky-muted);
 }
-.sky-results {
-  position: absolute;
-  z-index: 20;
-  left: 0;
-  right: 0;
-  top: calc(100% + 4px);
-  margin: 0;
-  padding: 4px;
-  list-style: none;
-  background: #0b1020;
-  border: 1px solid var(--edge);
-  border-radius: 10px;
-  max-height: 60vh;
+/* Find's list is the search box's (global.css, .search-suggest), at night
+   in the sky's colours; in Doors, the page's own. */
+.sky .sky-results {
+  max-height: min(60vh, 34rem);
   overflow: auto;
+  text-align: left;
 }
-.sky-results [role='option'] {
-  padding: 6px 8px;
-  border-radius: 6px;
-  cursor: pointer;
-  line-height: 1.3;
-  font-size: var(--jt-size-meta);
-}
-.sky-results [role='option']:hover,
-.sky-results [aria-selected='true'] {
-  background: rgba(160, 175, 220, 0.14);
-}
-.sky-results small,
-.sky-results .none {
-  display: block;
-  color: var(--sky-muted);
-  font-size: var(--jt-size-label);
-}
-.sky-results .none {
-  padding: 6px 8px;
+.sky:not([data-view='doors']) .sky-results {
+  --ground: #0b1020;
+  --card: rgba(160, 175, 220, 0.14);
+  --ink: var(--sky-ink);
+  --muted: var(--sky-muted);
+  --link: var(--sky-link);
+  --line: var(--edge);
+  border-color: var(--edge);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 45%);
 }
 .sky-tool,
 .sky-switch button {
@@ -353,7 +342,8 @@ html:has(.sky:not([hidden])) {
 
 /* The card on the star in view (src/scripts/sky-card.ts), and the same card
    as Doors' page. */
-.sky-card {
+.sky-card,
+.sky-home {
   /* The note's own styles (global.css) read the site's tokens; at night
      they read the sky's. */
   --text-soft: var(--sky-soft);
@@ -439,10 +429,12 @@ html:has(.sky:not([hidden])) {
 .sky-card .record-label {
   color: var(--sky-soft);
 }
-.sky-card a {
+.sky-card a,
+.sky-home a {
   color: var(--sky-link);
 }
-.sky-card a:visited {
+.sky-card a:visited,
+.sky-home a:visited {
   color: var(--sky-visited);
 }
 .sky-card .chip {
@@ -473,6 +465,133 @@ html:has(.sky:not([hidden])) {
   margin-top: 10px !important;
   color: var(--sky-muted);
 }
+/* Out of a star to the whole sky, Surprise me and Clear. */
+.sky-out {
+  border: 1px solid var(--edge);
+  background: none;
+  border-radius: 999px;
+  padding: 4px 13px;
+  cursor: pointer;
+  color: var(--sky-ink);
+  font-weight: 600;
+  font-size: var(--jt-size-label);
+}
+.sky-out:hover {
+  border-color: var(--sky-muted);
+}
+
+/* The whole sky's card: what the sky is and the day's quote, or what Find
+   lit. */
+.sky-home {
+  width: min(32rem, calc(100% - 2 * var(--jt-gutter)));
+}
+.sky-home-lede {
+  color: var(--sky-soft);
+  font-size: var(--jt-size-small);
+}
+.sky-home-lede b {
+  color: var(--sky-ink);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.sky-home-title {
+  margin-top: 6px !important;
+  margin-bottom: 4px !important;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+.sky-quote {
+  margin-top: 14px !important;
+  padding-left: 12px;
+  border-left: 2px solid var(--edge);
+  color: var(--sky-soft);
+  font-size: var(--jt-size-meta);
+  line-height: 1.45;
+}
+/* Two lines, the rest a click away (the words are all there to a screen
+   reader). */
+.sky-quote summary {
+  display: block;
+  cursor: pointer;
+  list-style: none;
+}
+.sky-quote summary::-webkit-details-marker {
+  display: none;
+}
+.sky-quote q {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.sky-quote details[open] q {
+  display: block;
+}
+.sky-quote summary:hover q {
+  color: var(--sky-ink);
+}
+.sky-quote figcaption {
+  margin-top: 4px;
+  color: var(--sky-muted);
+  font-size: var(--jt-size-label);
+}
+.sky-home .sky-quote figcaption a,
+.sky-home .sky-quote figcaption a:visited {
+  color: inherit;
+}
+
+/* The front page: the sky from under the strip to the foot of the window,
+   its bar a glass panel with the wordmark and the ways in. */
+.site-main:has(> .sky-home-page:not([hidden])) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.sky-home-page .sky-bar {
+  top: 12px;
+  padding: 8px 10px 8px 18px;
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  backdrop-filter: blur(14px) saturate(1.2);
+  border: 1px solid var(--edge);
+  border-radius: 16px;
+  pointer-events: auto;
+}
+.sky-wordmark,
+.sky-wordmark:visited {
+  margin-right: 6px;
+  color: var(--sky-ink);
+  font-family: var(--jt-font-heading);
+  font-weight: 700;
+  font-size: var(--jt-size-h3);
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.sky-wordmark:hover {
+  text-decoration: underline;
+}
+.sky-home-page .sky-find {
+  flex: 1 1 12rem;
+  max-width: 26rem;
+}
+.sky-ways {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-left: auto;
+  font-size: var(--jt-size-meta);
+}
+.sky-ways a,
+.sky-ways a:visited {
+  color: var(--sky-soft);
+  font-weight: 500;
+  text-decoration: none;
+}
+.sky-ways a:hover {
+  color: var(--sky-ink);
+  text-decoration: underline;
+}
 
 /* Doors: the page's own colours. */
 .sky[data-view='doors'] {
@@ -488,10 +607,27 @@ html:has(.sky:not([hidden])) {
   /* As tall as its page and doors need, and the window at least. */
   height: auto;
   min-height: max(30rem, calc(100dvh - var(--sky-top, 10rem)));
+  display: flex;
+  flex-direction: column;
   color: var(--ink);
   background: var(--ground);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+}
+.sky[data-view='doors'] .sky-bar {
+  position: relative;
+  order: -1;
+  top: auto;
+  left: auto;
+  right: auto;
+  margin: 14px var(--jt-gutter) 0;
+}
+.sky[data-view='doors'] .doors {
+  flex: 1;
+}
+/* A stage given up (the stars did not load) stays down, whatever its view. */
+.sky[data-view][hidden] {
+  display: none;
 }
 .sky[data-view='doors'] .sky-only,
 .sky[data-view='doors'] .sky-gl,
@@ -501,13 +637,11 @@ html:has(.sky:not([hidden])) {
 .sky[data-view='doors'] .sky-tip {
   display: none;
 }
-.sky[data-view='doors'] .sky-results {
-  background: var(--ground);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+.doors-only {
+  display: none;
 }
-.sky[data-view='doors'] .sky-results [role='option']:hover,
-.sky[data-view='doors'] .sky-results [aria-selected='true'] {
-  background: color-mix(in srgb, var(--ink) 7%, transparent);
+.sky[data-view='doors'] .doors-only {
+  display: revert;
 }
 .doors {
   position: relative;
@@ -532,7 +666,7 @@ html:has(.sky:not([hidden])) {
   grid-template-rows: auto auto auto;
   align-content: space-between;
   grid-template-areas: 'top top top' 'left page right' 'bottom bottom bottom';
-  padding: 72px var(--jt-gutter) 52px;
+  padding: 24px var(--jt-gutter) 52px;
 }
 .doors-side {
   display: flex;
@@ -671,7 +805,7 @@ html:has(.sky:not([hidden])) {
     grid-template-rows: none;
     grid-template-areas: 'page' 'around' 'top' 'right' 'bottom' 'left';
     gap: 18px;
-    padding: 112px var(--jt-gutter) 64px;
+    padding: 20px var(--jt-gutter) 64px;
   }
   .doors-around {
     display: block;
@@ -720,13 +854,26 @@ html:has(.sky:not([hidden])) {
     background: var(--ground);
     border-top: 1px solid var(--line);
   }
-  .sky-find {
+  .sky-find,
+  .sky-home-page .sky-find {
     order: 5;
     flex-basis: 100%;
+    max-width: none;
+  }
+  /* The ways in, one row that scrolls sideways, under Find. */
+  .sky-ways {
+    order: 6;
+    flex: 1 1 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-left: 0;
+    padding-bottom: 2px;
+    white-space: nowrap;
   }
 }
 @media (max-width: 700px) {
-  .sky-card {
+  .sky-card,
+  .sky-home {
     left: 0;
     right: 0;
     bottom: 0;

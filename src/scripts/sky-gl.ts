@@ -1,11 +1,14 @@
-// The sky itself at /sky/ (docs/DIRECTION.md, "The sky"): every link a star,
-// drawn with WebGL directly. Two layouts, Meaning (three dimensions of what
-// the links say) and Time (meaning across, the day saved as depth), with the
-// stars flying between them a year at a time; the ten nearest of the star in
-// view as lines and named doors; topic names where each is densest; the
-// titles of the stars nearest the camera as it closes in; and Play, which
+// The sky itself, on the front page and at /sky/ (docs/DIRECTION.md, "The
+// sky"): every link a star, drawn with WebGL directly. Two layouts, Meaning
+// (three dimensions of what the links say) and Time (meaning across, the day
+// saved as depth), with the stars flying between them a year at a time; the
+// ten nearest of the star in view as lines and named doors; topic names where
+// each is densest; the titles of the stars nearest the camera as it closes
+// in; the stars Find lit, gold, with their titles on them; and Play, which
 // flies the sky by itself. sky.ts owns the walk (the star in view, the
-// trail, the visited) and gives this view the star to show.
+// trail, the visited) and gives this view the star to show, or none: the
+// whole sky. It draws from the places alone; the names (titles, sites,
+// neighbours) arrive after, and until then a star cannot be chosen.
 import {
   type Mat4,
   type Projected,
@@ -21,6 +24,7 @@ import {
   project,
   reason,
   shift,
+  spread,
   staggered,
   yearOf,
 } from '../lib/sky.ts';
@@ -28,10 +32,15 @@ import { element, renderCard } from './sky-card.ts';
 
 export interface Walk {
   sky: SkyData;
+  // The star in view, or -1 for the whole sky.
   current: () => number;
   trail: () => number[];
   visited: () => ReadonlySet<number>;
   go: (star: number) => void;
+  // Back out to the whole sky.
+  leave: () => void;
+  // What Find holds, when it has lit stars.
+  query: () => string;
 }
 
 export interface View {
@@ -40,6 +49,14 @@ export interface View {
   pause: () => void;
   resume: () => void;
   stopPlay: () => void;
+}
+
+// The sky has a whole sky to show, stars to light, and its two layouts.
+export interface SkyView extends View {
+  whole: () => void;
+  // The stars Find lit, best first, or null; `frame` flies to take them in.
+  light: (found: number[] | null, frame: boolean) => void;
+  arrange: (name: string, instant?: boolean) => void;
 }
 
 const VERTEX = `
@@ -106,6 +123,9 @@ const GLOWS = [
 const FOV = (55 * Math.PI) / 180;
 const WHOLE = 175;
 const NEAR_LABELS = 14;
+const FOUND_LABELS = 16;
+// Find's stars: gold like the star in view, a little paler and smaller.
+const FOUND: Vec3 = [1, 0.87, 0.62];
 
 const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
 const ease = (u: number) =>
@@ -131,7 +151,7 @@ function compile(gl: WebGLRenderingContext) {
   return program;
 }
 
-export function startSky(stage: HTMLElement, walk: Walk): View | null {
+export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
   const canvas = stage.querySelector<HTMLCanvasElement>('.sky-gl')!;
   const gl = canvas.getContext('webgl', { alpha: true, antialias: false });
   if (!gl) return null;
@@ -146,8 +166,13 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
     return null;
   }
   const sky = walk.sky;
-  const N = sky.ids.length;
+  const N = sky.topic.length;
   const T = sky.topics.length;
+  // The names have arrived.
+  const named = () => sky.titles.length === N;
+  const noted = sky.note.flatMap((n, i) => (n ? [i] : []));
+  // Find's stars, best first.
+  let found: number[] = [];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const $ = <E extends Element>(selector: string) =>
     stage.querySelector<E>(selector)!;
@@ -157,6 +182,7 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
   const ring = $<HTMLElement>('.sky-ring');
   const tip = $<HTMLElement>('.sky-tip');
   const card = $<HTMLElement>('.sky-card');
+  const home = $<HTMLElement>('.sky-home');
   const bar = $<HTMLElement>('.sky-bar');
   const playButton = $<HTMLButtonElement>('[data-play]');
 
@@ -317,9 +343,12 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
     };
     const cur = walk.current();
     for (const j of walk.visited()) lit(j, SEEN, 0.14, 4.5);
-    for (const j of sky.neighbors[cur])
-      lit(j, walk.visited().has(j) ? SEEN : LINK, 0.2, 7.5);
-    lit(cur, HERE, 0.3, 11);
+    for (const j of found) lit(j, FOUND, 0.16, 5.5);
+    if (cur >= 0) {
+      for (const j of sky.neighbors[cur])
+        lit(j, walk.visited().has(j) ? SEEN : LINK, 0.2, 7.5);
+      lit(cur, HERE, 0.3, 11);
+    }
     gl!.bindBuffer(gl!.ARRAY_BUFFER, stars.color);
     gl!.bufferSubData(gl!.ARRAY_BUFFER, 0, color);
     gl!.bindBuffer(gl!.ARRAY_BUFFER, stars.size);
@@ -460,8 +489,27 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
     };
   }
 
-  // Labels: the ten nearest as doors, the topics' names, and the titles of
-  // the stars nearest the camera.
+  // What Find lit: the middle of the best of them, live, so a change of
+  // layout carries the camera with them; and back far enough to take most
+  // of them in.
+  const foundMiddle = (): Vec3 =>
+    spread(found.slice(0, 400).map((i) => posOf(i))).centre;
+  function frameFound() {
+    const { radius } = spread(found.slice(0, 400).map((i) => posOf(i)));
+    follow = -1;
+    flyTo(
+      foundMiddle,
+      clamp((radius / Math.tan(FOV / 2)) * 1.25, 14, WHOLE + 40),
+    );
+  }
+  const frameWhole = () => {
+    follow = -1;
+    if (found.length) frameFound();
+    else flyTo(() => [0, 0, 0], mix > 0.5 ? WHOLE + 60 : WHOLE);
+  };
+
+  // Labels: the ten nearest as doors, the topics' names, the titles of what
+  // Find lit, and the titles of the stars nearest the camera.
   interface Door {
     j: number;
     s: number;
@@ -502,26 +550,43 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
     node.style.opacity = '0';
     node.addEventListener('click', () => {
       stopPlay();
-      walk.go(centreOf(k));
+      if (named()) walk.go(centreOf(k));
     });
     return node;
   });
-  const nearNodes = Array.from({ length: NEAR_LABELS }, () => {
-    const node = element('button', 'sky-near');
-    node.type = 'button';
-    node.tabIndex = -1;
-    node.style.opacity = '0';
-    node.addEventListener('click', () => {
-      stopPlay();
-      const j = Number(node.dataset.star);
-      if (j >= 0) walk.go(j);
+  const titleNodes = (n: number, className: string) =>
+    Array.from({ length: n }, () => {
+      const node = element('button', className);
+      node.type = 'button';
+      node.tabIndex = -1;
+      node.style.opacity = '0';
+      node.addEventListener('click', () => {
+        stopPlay();
+        const j = Number(node.dataset.star);
+        if (j >= 0) walk.go(j);
+      });
+      return node;
     });
-    return node;
-  });
-  box.append(...topicNodes, ...nearNodes);
+  const nearNodes = titleNodes(NEAR_LABELS, 'sky-near');
+  const foundNodes = titleNodes(FOUND_LABELS, 'sky-near sky-found');
+  box.append(...topicNodes, ...foundNodes, ...nearNodes);
+  // A title node shows star i's title; its size is read once a title.
+  const titled = (node: HTMLElement, i: number) => {
+    if (node.dataset.star !== String(i)) {
+      node.dataset.star = String(i);
+      node.textContent = cut(sky.titles[i], 60);
+      node.dataset.w = String(node.offsetWidth);
+      node.dataset.h = String(node.offsetHeight);
+    }
+    return { w: Number(node.dataset.w), h: Number(node.dataset.h) };
+  };
+  const clearDoors = () => {
+    for (const door of doors) door.node.remove();
+    doors = [];
+  };
 
   function buildDoors(i: number) {
-    for (const door of doors) door.node.remove();
+    clearDoors();
     const trail = walk.trail();
     const back = trail.length > 1 ? trail[trail.length - 2] : -1;
     const near = sky.neighbors[i];
@@ -588,7 +653,7 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
     // The hint, while it shows, is in the way too.
     const hint = stage.querySelector<HTMLElement>('.sky-hint')!;
     const shown = hint.style.opacity === '0' ? [] : [hint];
-    for (const node of [...bar.children, card, ...shown]) {
+    for (const node of [bar, card, home, ...shown]) {
       const r = node.getBoundingClientRect();
       if (r.width)
         out.push({
@@ -618,7 +683,7 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
     const cur = walk.current();
     const top = bar.offsetTop + bar.offsetHeight + 8;
     const inner = { x0: 14, y0: top, x1: W - 14, y1: H - 12 };
-    const c = proj(posOf(cur));
+    const c = cur >= 0 ? proj(posOf(cur)) : { x: 0, y: 0, behind: true };
     const cx = c.x;
     const cy = c.y;
     const on = !c.behind;
@@ -701,8 +766,43 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
       if (b) placed.push(b);
     }
 
-    // Topic names: the nearby ones when close, the big ones from far away.
-    const mine = sky.topic[cur];
+    // What Find lit, best first, with no star in view: their titles beside
+    // them, as many as fit.
+    const p: Vec3 = [0, 0, 0];
+    const inside = (q: Projected) =>
+      !q.behind &&
+      q.x > inner.x0 &&
+      q.x < inner.x1 &&
+      q.y > inner.y0 &&
+      q.y < inner.y1;
+    const labelled = new Set([cur, ...doors.map((d) => d.j)]);
+    let lit = 0;
+    for (let k = 0; k < found.length && lit < FOUND_LABELS; k++) {
+      if (cur >= 0 || !named() || k > 600) break;
+      const i = found[k];
+      const q = proj(posOf(i, p));
+      if (!inside(q)) continue;
+      const node = foundNodes[lit];
+      const { w, h } = titled(node, i);
+      let b: Box | null = null;
+      for (const x of [q.x + 7, q.x - 7 - w]) {
+        const cand = { x, y: q.y - h / 2, w, h };
+        if (x >= 4 && x + w <= W - 4 && free(cand)) {
+          b = cand;
+          break;
+        }
+      }
+      if (!b) continue;
+      show(node, b, 1, 0.95);
+      placed.push(b);
+      labelled.add(i);
+      lit += 1;
+    }
+    for (let k = lit; k < FOUND_LABELS; k++) show(foundNodes[k], null);
+
+    // Topic names: the nearby ones when close, the big ones from far away;
+    // fewer while Find has stars lit.
+    const mine = cur >= 0 ? sky.topic[cur] : -1;
     const far = sph.r > 95;
     const order = sky.topics.map((_, k) => k);
     const spots = order.map((k) => topicPos(k));
@@ -711,11 +811,14 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
       order.sort(
         (a, b) => distance(target, spots[a]) - distance(target, spots[b]),
       );
-    const named = new Set([mine, ...order.slice(0, far ? 30 : 12)]);
+    const names = new Set([
+      mine,
+      ...order.slice(0, found.length ? 8 : far ? 30 : 12),
+    ]);
     topicNodes.forEach((node, k) => {
       let b: Box | null = null;
       let opacity = 0;
-      if (named.has(k)) {
+      if (names.has(k)) {
         const p = proj(spots[k]);
         const w = Number(node.dataset.w);
         const h = Number(node.dataset.h);
@@ -739,11 +842,9 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
     });
 
     // Titles of the stars nearest the camera, as it closes in on them.
-    const labelled = new Set([cur, ...doors.map((d) => d.j)]);
     const near: { i: number; d: number }[] = [];
     const within = sph.r * 1.2;
-    const p: Vec3 = [0, 0, 0];
-    for (let i = 0; i < N && sph.r < 60; i++) {
+    for (let i = 0; i < N && sph.r < 60 && named(); i++) {
       if (labelled.has(i)) continue;
       const d = distance(eye, posOf(i, p));
       if (d > within) continue;
@@ -757,27 +858,10 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
     for (const { i, d } of near) {
       if (used >= NEAR_LABELS) break;
       const q = proj(posOf(i, p));
-      if (
-        q.behind ||
-        q.x < inner.x0 ||
-        q.x > inner.x1 ||
-        q.y < inner.y0 ||
-        q.y > inner.y1
-      )
-        continue;
+      if (!inside(q)) continue;
       const node = nearNodes[used];
-      if (node.dataset.star !== String(i)) {
-        node.dataset.star = String(i);
-        node.textContent = cut(sky.titles[i], 60);
-        node.dataset.w = String(node.offsetWidth);
-        node.dataset.h = String(node.offsetHeight);
-      }
-      const cand = {
-        x: q.x + 7,
-        y: q.y - Number(node.dataset.h) / 2,
-        w: Number(node.dataset.w),
-        h: Number(node.dataset.h),
-      };
+      const { w, h } = titled(node, i);
+      const cand = { x: q.x + 7, y: q.y - h / 2, w, h };
       if (cand.x + cand.w > W - 4 || !free(cand)) continue;
       show(node, cand, 1, clamp(1.1 - d / within, 0.25, 0.75));
       placed.push(cand);
@@ -823,6 +907,7 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
       }
     }
     const cur = walk.current();
+    if (cur < 0) return;
     const c = proj(posOf(cur));
     if (c.behind) return;
     const cx = c.x;
@@ -900,6 +985,8 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
       dirty = true;
     } else if (follow >= 0 && morph) {
       posOf(follow, target);
+    } else if (found.length && walk.current() < 0 && morph) {
+      target.splice(0, 3, ...foundMiddle());
     }
     if (!reduced && !dragging && now > idleUntil && !morph) {
       sph.th += dt * 0.00005;
@@ -998,14 +1085,21 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
       2400,
     );
   }
+  // From the whole sky, Play sets off from a star Find lit, else from any
+  // star with a note.
   function startPlay() {
-    play = { timer: 0, hops: 0, topics: new Set([sky.topic[walk.current()]]) };
+    if (!named()) return;
+    play = { timer: 0, hops: 0, topics: new Set() };
     playButton.setAttribute('aria-pressed', 'true');
     playButton.textContent = 'Pause';
     card.setAttribute('aria-live', 'off');
     quiet();
     idleUntil = 0;
-    schedule(reduced ? 3000 : 1200);
+    if (walk.current() < 0) {
+      const from = found.length ? found : noted;
+      walk.go(from[Math.floor(Math.random() * from.length)]);
+    } else schedule(reduced ? 3000 : 1200);
+    play.topics.add(sky.topic[walk.current()]);
   }
   function stopPlay() {
     if (!play) return;
@@ -1021,7 +1115,7 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
   const layoutButtons = [
     ...stage.querySelectorAll<HTMLButtonElement>('[data-layout]'),
   ];
-  function setLayout(name: string) {
+  function setLayout(name: string, instant = false) {
     const to = name === 'time' ? 1 : 0;
     for (const b of layoutButtons)
       b.setAttribute('aria-pressed', String(b.dataset.layout === name));
@@ -1030,13 +1124,15 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
     const angles = to
       ? { th: [sph.th, Math.PI / 2 + 0.45], ph: [sph.ph, 1.3] }
       : {};
-    if (reduced) {
+    if (reduced || instant) {
       mix = to;
       if (angles.th) {
         sph.th = angles.th[1];
         sph.ph = angles.ph![1];
       }
       if (follow >= 0) posOf(follow, target);
+      else if (found.length && walk.current() < 0)
+        target.splice(0, 3, ...foundMiddle());
       dirty = true;
       wake();
       return;
@@ -1052,13 +1148,6 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
   }
   for (const b of layoutButtons)
     b.addEventListener('click', () => setLayout(b.dataset.layout!));
-  $<HTMLButtonElement>('[data-whole]').addEventListener('click', () => {
-    stopPlay();
-    quiet();
-    follow = -1;
-    flyTo(() => [0, 0, 0], mix > 0.5 ? WHOLE + 60 : WHOLE);
-    wake();
-  });
 
   // Turning, moving closer, and choosing a star.
   const pointers = new Map<number, [number, number]>();
@@ -1115,7 +1204,7 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
   });
   canvas.addEventListener('pointermove', (e) => {
     if (!pointers.has(e.pointerId)) {
-      if (e.pointerType !== 'mouse' || fly || morph) return;
+      if (e.pointerType !== 'mouse' || fly || morph || !named()) return;
       const [x, y] = local(e);
       const i = nearest(x, y, 12);
       if (i < 0) {
@@ -1164,7 +1253,7 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
       if (e.type === 'pointerup' && moved < 6) {
         const [x, y] = local(e);
         const i = nearest(x, y, e.pointerType === 'mouse' ? 14 : 22);
-        if (i >= 0) walk.go(i);
+        if (i >= 0 && named()) walk.go(i);
       }
     }
   };
@@ -1228,12 +1317,15 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
       if (walk.current() >= 0) buildDoors(walk.current());
       wake();
     });
-  // The note arrives after the card opens, and the card grows.
-  new ResizeObserver(() => {
+  // The note arrives after the card opens, and the card grows; the whole
+  // sky's card changes with Find.
+  const grown = new ResizeObserver(() => {
     obstacles = measure();
     dirty = true;
     wake();
-  }).observe(card);
+  });
+  grown.observe(card);
+  grown.observe(home);
 
   let shown = false;
   return {
@@ -1241,10 +1333,24 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
       paint();
       const trail = walk.trail();
       const back = trail.length > 1 ? trail[trail.length - 2] : -1;
-      renderCard(card, sky, i, back, () => {
-        stopPlay();
-        walk.go(back);
-      });
+      const query = walk.query();
+      renderCard(
+        card,
+        sky,
+        i,
+        back,
+        () => {
+          stopPlay();
+          walk.go(back);
+        },
+        {
+          label: query ? `All of “${cut(query, 24)}”` : 'Whole sky',
+          go: () => {
+            stopPlay();
+            walk.leave();
+          },
+        },
+      );
       buildDoors(i);
       obstacles = measure();
       follow = i;
@@ -1256,6 +1362,27 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
       dirty = true;
       wake();
     },
+    whole() {
+      window.clearTimeout(opening);
+      clearDoors();
+      card.replaceChildren();
+      paint();
+      quiet();
+      frameWhole();
+      dirty = true;
+      wake();
+    },
+    light(next, frame) {
+      found = next ?? [];
+      paint();
+      if (frame && walk.current() < 0) {
+        stopPlay();
+        frameWhole();
+      }
+      dirty = true;
+      wake();
+    },
+    arrange: setLayout,
     resize() {
       resize();
       wake();

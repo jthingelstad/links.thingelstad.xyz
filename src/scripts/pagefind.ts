@@ -1,7 +1,7 @@
 // Pagefind's index, written after the build over the record pages only and
 // loaded from /pagefind/ on the first search with words, not with the page
-// (about 300 kB before the first result). /search/ (search.ts) and the home
-// page's live results (home.ts) share it, and the filters a query asks for.
+// (about 300 kB before the first result). /search/ (search.ts) and its
+// preview pane (preview.ts) share it, and the filters a query asks for.
 import { type Query } from '../lib/search-grammar.ts';
 
 export interface Data {

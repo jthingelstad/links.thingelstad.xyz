@@ -1,4 +1,4 @@
-// The search box's suggestion list, on /search/ and the home page
+// The search box's suggestion list, on /search/ and in the sky's Find
 // (src/lib/suggest.ts decides what it holds). The box is an ARIA combobox:
 // the list opens under it for the word at the cursor, the arrow keys move
 // through it, Enter or a click takes one, and Escape closes it. While it is
@@ -7,9 +7,9 @@
 // its own. A site's row carries small bars of its links by year. The list's
 // data, /search/suggest.json, loads on the first keystroke.
 //
-// The home page adds live results (home.ts): up to five links after the
-// suggestions, each a link to its record, then a row for all of them on the
-// search page, which submits the form.
+// The sky adds live results (sky.ts): up to five of the links Find lit
+// after the suggestions, each a link to its record that the sky can open in
+// place (`open`), then a row for the search page.
 import { tokenAt } from '../lib/search-grammar.ts';
 import {
   type Scope,
@@ -20,8 +20,9 @@ import {
   suggest,
 } from '../lib/suggest.ts';
 
-// The home page's live results: each a record's page, its title and where
-// it is from, then a row for all of them ("All 12 links").
+// The live results: each a record's page, its title and where it is from,
+// then a row for the search page, which follows `href` or else submits the
+// form.
 export interface LinkRow {
   href: string;
   title: string;
@@ -30,8 +31,15 @@ export interface LinkRow {
 export interface Links {
   rows: LinkRow[];
   all: string;
+  href?: string;
+  note?: string;
 }
-type Option = { suggestion: Suggestion } | { link: LinkRow } | { all: string };
+interface All {
+  all: string;
+  href?: string;
+  note?: string;
+}
+type Option = { suggestion: Suggestion } | { link: LinkRow } | All;
 const keyOf = (option?: Option) =>
   !option
     ? undefined
@@ -73,8 +81,10 @@ export function initSuggest(options: {
   taken: () => void;
   // What else on the page narrows the search, for the counts.
   scope?: () => Scope;
+  // A live result was taken: true when the page opened it in place.
+  open?: (href: string) => boolean;
 }) {
-  const { input, list, url, taken, scope = () => ({}) } = options;
+  const { input, list, url, taken, scope = () => ({}), open } = options;
   let data: SuggestData | undefined;
   let loading: Promise<void> | undefined;
   let suggestions: Suggestion[] = [];
@@ -143,8 +153,10 @@ export function initSuggest(options: {
       const all = document.createElement('span');
       all.className = 'suggest-insert';
       all.textContent = option.all;
-      note.textContent = 'on the search page';
-      item.append(all, note);
+      // An empty note (the row says where it goes itself) is left out.
+      note.textContent = option.note ?? 'on the search page';
+      item.append(all);
+      if (note.textContent) item.append(note);
     }
     return item;
   }
@@ -163,8 +175,11 @@ export function initSuggest(options: {
     if (document.activeElement !== input || dismissed) return close();
     shown = [
       ...suggestions.map((suggestion) => ({ suggestion })),
-      ...(links?.rows.length
-        ? [...links.rows.map((link) => ({ link })), { all: links.all }]
+      ...(links
+        ? [
+            ...links.rows.map((link) => ({ link })),
+            { all: links.all, href: links.href, note: links.note },
+          ]
         : []),
     ];
     if (!shown.length) return close();
@@ -195,8 +210,14 @@ export function initSuggest(options: {
   function take(i: number) {
     const option = shown[i];
     if (!option) return;
-    if ('link' in option) return location.assign(option.link.href);
-    if ('all' in option) return input.form?.requestSubmit();
+    if ('link' in option) {
+      if (open?.(option.link.href)) return close();
+      return location.assign(option.link.href);
+    }
+    if ('all' in option)
+      return option.href
+        ? location.assign(option.href)
+        : input.form?.requestSubmit();
     const at = token();
     if (!at) return;
     const { value, caret } = complete(
@@ -265,8 +286,23 @@ export function initSuggest(options: {
   list.addEventListener('mousedown', (event) => event.preventDefault());
   list.addEventListener('click', (event) => {
     const target = event.target as Element;
-    // A result's own link follows itself (and opens a new tab when asked).
-    if (target.closest('a')) return;
+    // A result's own link follows itself (and opens a new tab when asked),
+    // unless the page opens it in place.
+    const link = target.closest('a');
+    if (link) {
+      const plain = !(
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        event.button
+      );
+      if (plain && open?.(link.href)) {
+        event.preventDefault();
+        close();
+      }
+      return;
+    }
     const option = target.closest('[role="option"]');
     if (option) take([...list.children].indexOf(option));
   });

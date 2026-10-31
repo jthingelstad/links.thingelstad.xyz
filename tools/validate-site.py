@@ -42,10 +42,11 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
 - /links.json is every record exactly as data/links has it, plus its
   permalink and then its kind, the same as its JSON twin's; /hosts.json and
   /issues.json match the pages and the join;
-- /sky/stars.json (src/lib/stars.ts) holds each star once, each a record,
-  every list as long as the stars, every place, topic, site and neighbour
-  in range, and each star's day its link's Central day; each record lists
-  its star's first five neighbours under "Nearest in meaning";
+- /sky/places.json and /sky/stars.json (src/lib/stars.ts), where the stars
+  are and their names, are of one layout and hold each star once, each a
+  record, every list as long as the stars, every place, topic, site, kind
+  and neighbour in range, and each star's day its link's Central day; each
+  record lists its star's first five neighbours under "Nearest in meaning";
 - /search/suggest.json, what the search box suggests from, holds every host
   with its count as /hosts.json has them and its links in each Central year
   as its twins have them, every issue newest first with its
@@ -620,15 +621,24 @@ def check_suggest(data_links, twin_kinds, twin_hosts, problems):
 
 
 def check_sky(data_links, problems):
-    """/sky/stars.json: each star once and each a record (a link the nightly
-    has not placed yet has none), every list the stars' length and every
-    index in range, each day its link's Central day. Returns each star's id
-    (the fragments /sky/ takes) with its neighbours' ids, nearest first."""
-    sky = load_json("sky/stars.json", problems)
+    """The sky's two files, /sky/places.json (where the stars are) and
+    /sky/stars.json (their names), of the same layout: each star once and
+    each a record (a link the nightly has not placed yet has none), every
+    list the stars' length and every index in range, each day its link's
+    Central day. Returns each star's id (the fragments /sky/ takes) with its
+    neighbours' ids, nearest first."""
+    places = load_json("sky/places.json", problems)
+    names = load_json("sky/stars.json", problems)
+    where = "sky/places.json and sky/stars.json"
+    if places.get("layout") != names.get("layout"):
+        problems.append(f"{where}: of different layouts")
+    shared = set(places) & set(names) - {"layout"}
+    if shared:
+        problems.append(f"{where}: both hold {', '.join(sorted(shared))}")
+    sky = {**places, **names}
     ids = sky.get("ids", [])
     n = len(ids)
     by_id = {link["id"]: link for link in data_links}
-    where = "sky/stars.json"
     if not n:
         problems.append(f"{where}: no stars")
         return {}
@@ -637,8 +647,8 @@ def check_sky(data_links, problems):
     strays = [i for i in ids if i not in by_id]
     if strays:
         problems.append(f"{where}: {len(strays)} stars are no record (first {strays[0]})")
-    lengths = {"titles": n, "host": n, "day": n, "note": n, "topic": n, "neighbors": n,
-               "meaning": 3 * n, "time": 2 * n}
+    lengths = {"titles": n, "host": n, "kind": n, "day": n, "note": n, "topic": n,
+               "neighbors": n, "meaning": 3 * n, "time": 2 * n}
     for key, size in lengths.items():
         if len(sky.get(key, [])) != size:
             problems.append(f"{where}: {key} holds {len(sky.get(key, []))}, not {size}")
@@ -648,6 +658,8 @@ def check_sky(data_links, problems):
         problems.append(f"{where}: a topic out of range")
     if any(not 0 <= h < len(sky.get("hosts", [])) for h in sky["host"]):
         problems.append(f"{where}: a site out of range")
+    if any(not 0 <= k < len(KINDS) for k in sky["kind"]):
+        problems.append(f"{where}: a kind out of range")
     if sum(t["size"] for t in sky.get("topics", [])) != n:
         problems.append(f"{where}: the topics' sizes do not add up to the stars")
     for i, near in enumerate(sky["neighbors"]):
@@ -1257,7 +1269,7 @@ def main():
         f" {feed_pages} list h-feeds;"
         f" {feeds + 2 * len(kind_counts)} feeds, links.json, hosts.json, issues.json,"
         f" search/suggest.json ({suggested[0]} hosts, {suggested[1]} issues),"
-        f" sky/stars.json ({len(stars)} stars, each record's nearest five), llms.txt and"
+        f" the sky ({len(stars)} stars, each record's nearest five), llms.txt and"
         f" {len(year_files)} year llms files valid ({len(inside)} site URLs inside resolve);"
         f" /newest/ lists the newest {FEED_SIZE};"
         f" kinds {', '.join(f'{k} {n}' for k, n in kind_counts.items())};"

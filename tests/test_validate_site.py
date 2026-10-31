@@ -1,6 +1,7 @@
 """The built-site validator's microformats rule (tools/validate-site.py,
 check_microformats), its llms.txt shape rule (llms_shape_problems) and its
-check of /sky/stars.json (check_sky). Run:
+check of the sky's two files, /sky/places.json and /sky/stars.json
+(check_sky). Run:
 python3 -m unittest discover -s tests -v
 
 The rules are checked here on small pages and files, so each way they fail
@@ -185,18 +186,25 @@ class LlmsShape(unittest.TestCase):
 
 
 class Sky(unittest.TestCase):
-    """/sky/stars.json against the links: two stars, one site, one topic.
-    RECORD was saved 2026-10-25 02:37 UTC, still the 24th in Central."""
+    """The sky's two files against the links: two stars, one site, one topic.
+    RECORD was saved 2026-10-25 02:37 UTC, still the 24th in Central. The
+    places file holds the keys lib/sky.ts's PLACE_KEYS names; both hold the
+    layout."""
+
+    PLACES = {"layout", "day", "note", "topic", "meaning", "time", "topics", "families"}
 
     LINKS = [{"id": RECORD, "saved": SAVED[RECORD]}, {"id": OTHER, "saved": SAVED[OTHER]}]
 
-    def stars(self, **change):
+    def stars(self, names_change=None, **change):
+        names_change = names_change or {}
         day = 20750  # 2026-10-24
         sky = {
+            "layout": 1,
             "ids": [RECORD, OTHER],
             "titles": ["One", "Two"],
             "hosts": ["example.com"],
             "host": [0, 0],
+            "kind": [4, 7],
             "day": [day, day],
             "note": [1, 0],
             "topic": [0, 0],
@@ -205,11 +213,16 @@ class Sky(unittest.TestCase):
             "neighbors": [[1], [0]],
             "issues": {"0": [350]},
             "topics": [{"name": "Things", "size": 2}],
+            "families": [],
         }
         sky.update(change)
+        places = {k: v for k, v in sky.items() if k in self.PLACES}
+        names = {k: v for k, v in sky.items() if k not in self.PLACES or k == "layout"}
+        names.update(names_change)
         with tempfile.TemporaryDirectory() as dist:
             (Path(dist) / "sky").mkdir()
-            (Path(dist) / "sky/stars.json").write_text(json.dumps(sky))
+            (Path(dist) / "sky/places.json").write_text(json.dumps(places))
+            (Path(dist) / "sky/stars.json").write_text(json.dumps(names))
             before = validate_site.DIST
             validate_site.DIST = Path(dist)
             try:
@@ -224,7 +237,7 @@ class Sky(unittest.TestCase):
 
     def test_a_link_without_a_star_yet_passes(self):
         ids, problems = self.stars(
-            ids=[RECORD], titles=["One"], host=[0], day=[20750], note=[1], topic=[0],
+            ids=[RECORD], titles=["One"], host=[0], kind=[4], day=[20750], note=[1], topic=[0],
             meaning=[0, 0, 0], time=[0, 0], neighbors=[[]], topics=[{"name": "Things", "size": 1}],
         )
         self.assertEqual((ids, problems), ({RECORD: []}, []))
@@ -244,6 +257,13 @@ class Sky(unittest.TestCase):
 
     def test_topic_sizes_must_add_up(self):
         self.assertIn("sizes", self.stars(topics=[{"name": "Things", "size": 3}])[1][0])
+
+    def test_files_of_different_layouts_fail(self):
+        self.assertIn("different layouts", self.stars({"layout": 2})[1][0])
+
+    def test_a_kind_short_or_out_of_range_fails(self):
+        self.assertIn("kind holds 1, not 2", self.stars(kind=[4])[1][0])
+        self.assertIn("kind out of range", self.stars(kind=[4, 8])[1][0])
 
 
 class Nearest(unittest.TestCase):

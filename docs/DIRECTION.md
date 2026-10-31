@@ -102,7 +102,7 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 
 | URL | What |
 | --- | --- |
-| `/` | Built as a search box, like Google's front page (Jamie, 2026-10-23): the wordmark, the box, how many links are in the index and the years they span, and a row of ways in (Newest, Sky, Years, Hosts, Kinds, Issues, Stats, Feed; Topics goes first once topic pages exist). A quote of the day from `content/quotes.md` when it holds any; nothing while it is empty. The site header is left off this page. The box suggests as `/search/`'s does and shows the first five links that match as you type (section "Search"); Enter with nothing chosen goes to `/search/` |
+| `/` | The sky (2026-10-31, section "The sky", "The front page"): standing back over every star, with Find, Meaning and Time, Play and the ways in (Newest, Years, Issues, Sites, Kinds, Stats, About) in its bar, and a card saying what the sky is with the quote of the day from `content/quotes.md`. Doors on a phone or without WebGL. `/?q=<words>` opens with Find holding the words, `?view=time` in Time, `#<id>` on one link. The site header is left off this page. Without the script, or when the stars do not load, it is the plain search box it was from 2026-10-23 (the wordmark, the box, the count and the ways in) |
 | `/search/?q=` | Results: title, host, saved date, a snippet of the note, a WT chip; filters for topic, year, kind, in a Weekly Thing, has a note; sort by relevance or date. Built: `kind:video` keeps one kind and, with no other words, links that kind's page; the box suggests as an operator is typed; on a wide screen the result moved to shows in a pane beside the list (section "Search") |
 | `/search/suggest.json` | What the search box suggests from: every host with its count and its links in each Central year, every issue with its title, Central date and saved links, each year's and kind's count. The search page's own file, shaped for it and free to change with it; not part of the dataset |
 | `/links/<id>/` | The record (below). `<id>` is the first 12 hex characters of md5 of the saved URL, which is Pinboard's API `hash`; anyone can compute it from the URL |
@@ -115,7 +115,7 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 | `/years/<yyyy>/` | The year's links by month |
 | `/newest/` | Built: the newest 50 links, the site feed's links, as a page |
 | `/surprise/` | Built: Surprise me, a door that replaces itself with one record at random, drawn from the records with Jamie's own words or a Weekly Thing; noindex and out of the sitemap, but crawlable, so crawlers can read the noindex |
-| `/sky/` | Built (section "The sky"): every link a star in the Meaning and Time layouts, with Play; Doors on a phone or without WebGL. `/sky/#<id>` opens on one link, and each record page's Sky row links to its star. The page's own HTML is the constellations, every topic in its family with the links at its middle, for a reader without the script and for search engines. In the site header and the front page's ways in |
+| `/sky/` | Built (section "The sky"): every link a star in the Meaning and Time layouts, with Play; Doors on a phone or without WebGL. `/sky/#<id>` opens on one link, and each record page's Sky row links to its star. The page's own HTML is the constellations, every topic in its family with the links at its middle, for a reader without the script and for search engines. Since the sky became the front page (2026-10-31) it is out of the site header but stays, with its URL |
 | `/sky/stars.json` | The sky page's own file, as `suggest.json` is the search page's: every star's id, title, site, Central day, whether it has a note, topic, places in both layouts (to a tenth) and neighbours as indexes, then the topics and families. No notes: a card fetches the link's JSON twin. 2.9 MB, 1.1 MB gzipped, for 16,558 stars (2026-10-30). Shaped for the page and free to change with it; not part of the dataset |
 | `/stats/` | Linking volume along its dimensions (section "Statistics") |
 | `/about/` | The homage, in Jamie's words: what this is, why links matter, how it is made. Built from `content/about.md` (a `# ` title, then `## ` sections; the build fails on any other shape), a first draft in Jamie's voice from the Librarian for Jamie to edit. Linked from every page's footer |
@@ -293,9 +293,11 @@ were measured and left out: Pagefind's filter counts, loaded with
 none match) and know nothing of `site:` or `-word`, so they disagree with the results on
 the same page.
 
-**Live results on the home page, built 2026-10-24** (Jamie: "Approved: build
-links.thingelstad.xyz search typeahead PR 2, live results on the home page"). The home
-box is the same combobox (`src/scripts/home.ts`): its suggestions come first, then, once
+**Live results on the home page, built 2026-10-24, replaced 2026-10-31** by the sky's
+Find (section "The sky", "The front page"), which lights stars by their titles and sites
+in the browser instead of asking Pagefind. As it was (Jamie: "Approved: build
+links.thingelstad.xyz search typeahead PR 2, live results on the home page"): the home
+box was the same combobox (`src/scripts/home.ts`): its suggestions came first, then, once
 the box holds a word of three letters or a site and the word at the cursor is finished,
 the first five links that match (title over host and date, each a link to its record),
 then a row for all of them on the search page ("All 46 links", or "Up to" once the exact
@@ -548,6 +550,47 @@ star layout and Doors as the phone and no-WebGL view".
   of depth, about the layouts' width over the 22 years, and in the morph each star sets
   off by its own time, so the years peel away in order and arrive together. Beside a
   door's year and site, a reason when there is one: the same issue, or the same site.
+
+#### The front page
+
+Jamie, 2026-10-31, after the Claude Design session on the sky as the landing: "I love
+A, the sky is the site… The lenses are amazing… love that we still have the bar charts
+too. Super important that lenses update the URL so they can be shared", then "Approved:
+build Linking Things direction A in three phases (sky landing, lens pages at their own
+URLs with on-this-day and topic lenses, sky share cards after previews), Sites as the
+word for Hosts, quote of the day in the whole-sky card".
+
+- **Phase 1, the landing (built).** `/` is the sky, standing back over all of it, with
+  no star in view (`/sky/` still opens on the newest link with a note). The bar is a
+  glass panel: the wordmark, Find, Meaning and Time, Play, and the ways in. The whole
+  sky's card, where a star's card goes, says what the sky is, carries the quote of the
+  day cut to two lines (a click opens the rest), Surprise me and the newest links. A
+  star's card has a way back out to the whole sky, or to what Find lit. Phones and no
+  WebGL get Doors, on the newest link with a note, with Surprise me in the bar.
+- **Find.** Typing lights the stars whose titles or sites have the words (a word of
+  three letters or more starts a word, a shorter one is the whole word, a quoted one
+  whole; `site:`, `year:`, `wt:`, `kind:` and `-word` as on `/search/`), in a warm white,
+  with the titles of the best beside their stars and the camera taking in where most of
+  them lie. Under the box come the search box's own suggestions, the best five links
+  (whole-word title matches first, then the newest), and a last row taking the words to
+  `/search/`, which reads the notes too. A link chosen there opens on the sky. The card
+  says how many and the years they span. Find works in the browser, not through
+  Pagefind: lighting hundreds of stars would mean a request for each.
+- **The address is what is on the screen.** `?q=` what Find holds, `?view=time` the Time
+  layout, `#<id>` the star in view. Phase 2 moves a star to its own `/links/<id>/` and
+  adds the lens pages.
+- **Two files.** `/sky/places.json` (where the stars are: layout, day, note, topic,
+  both layouts' places, topics, families; about 180 KB gzipped) loads first and the sky
+  draws from it; `/sky/stars.json` (their names: ids, titles, sites, kinds, neighbours,
+  issues; about 960 KB) follows, and Find, the cards, Play and Doors wait for it. Both
+  carry the layout version, and `validate:site` checks they agree.
+- **Sites.** Hosts are Sites to a reader everywhere they are named; the URLs keep
+  `/hosts/`.
+- **Phase 2**: the lens pages (an issue, a year, a site, a link, on this day at
+  `/on/MM-DD/`, a topic at `/topics/<name>/`), each lighting its stars beside a panel
+  with its list and bar charts, the address following the reader. **Phase 3**: share
+  cards drawn from the sky, by a `sky` layout in the cards project, deployed after Jamie
+  sees previews.
 
 ## Topics
 
@@ -1028,7 +1071,7 @@ Jamie, 2026-10-23, with the design's response:
 | On this day | "I'm not sure on-this-day is meaningful for this data set?" | Removed: the 366 day pages, the grid, their checks and their helpers. |
 | Checking that links still work | "You don't need to validate the links. They just are." | No page promises a check. The "Link rot, measured" and "Then and now" ideas are dropped; the liveness and "now at" parts of sections "Enrichment" and "Connections" and of phase 2 were brought in line the same day. |
 | "Find it on Pinboard" on the record | "get rid of 'find it on pinboard' nobody needs to know pinboard exists." | Gone from every page, twin, feed and llms file; Elsewhere is the Wayback copy and the twins. The "Save to your Pinboard" idea is dropped. Maintainer docs still name Pinboard, as the source. |
-| The front page | "very much like Google's front page, where it's just a search box. I think there should be topics, so if you don't know what you want to search, you could do topics. Should show how many pages are in the index. I probably at some point will add like a quote from me on how amazing the hyperlink is. Maybe we have a collection of some quotes like that." | Built: the wordmark, the box and the count above the fold at 500 and 1200 px; a row of ways in, with Topics to go first once topic pages exist; quotes in `content/quotes.md`, one a day, nothing shown while it is empty. The newest links moved to `/newest/`. Surprise me under the count (Jamie, 2026-10-24: "a 'Surprise Me' button on the front page to go to a (sort of?) random link") goes to `/surprise/`. |
+| The front page | "very much like Google's front page, where it's just a search box. I think there should be topics, so if you don't know what you want to search, you could do topics. Should show how many pages are in the index. I probably at some point will add like a quote from me on how amazing the hyperlink is. Maybe we have a collection of some quotes like that." | Built: the wordmark, the box and the count above the fold at 500 and 1200 px; a row of ways in, with Topics to go first once topic pages exist; quotes in `content/quotes.md`, one a day, nothing shown while it is empty. The newest links moved to `/newest/`. Surprise me under the count (Jamie, 2026-10-24: "a 'Surprise Me' button on the front page to go to a (sort of?) random link") goes to `/surprise/`. Since 2026-10-31 the sky is the front page ("I love A, the sky is the site"; section "The sky", "The front page") and this page is its plain door, without the script. |
 
 Earlier, same day: the Librarian ingests the site; Tinylytics with kudos per link;
 RSS and JSON Feed; model cost at build only, never at serving. The name is Linking

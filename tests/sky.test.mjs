@@ -1,13 +1,16 @@
-// /sky/: the pure helpers the page draws with (src/lib/sky.ts), the topic
-// names (src/lib/topics.ts, content/topics.md) and the stars file as the
-// build writes it (src/lib/stars.ts). Run: npm test.
+// The sky: the pure helpers the page draws and finds with (src/lib/sky.ts),
+// the topic names (src/lib/topics.ts, content/topics.md) and the sky's two
+// files as the build writes them (src/lib/stars.ts). Run: npm test.
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import {
+  PLACE_KEYS,
   cut,
   dayLabel,
   dayOf,
   distribute,
+  findStars,
+  foundWords,
   lookAt,
   multiply,
   nextStop,
@@ -16,11 +19,15 @@ import {
   project,
   reason,
   shift,
+  splitSky,
+  spread,
   staggered,
   yearOf,
 } from '../src/lib/sky.ts';
+import { parse } from '../src/lib/search-grammar.ts';
+import { kinds } from '../src/lib/kinds.ts';
 import { checkTopics, parseTopics } from '../src/lib/topics.ts';
-import { constellations, skyDocument } from '../src/lib/stars.ts';
+import { constellations, skyDocument, skyFiles } from '../src/lib/stars.ts';
 import { links, nearestInMeaning, skyTopics, stars } from '../src/lib/data.ts';
 
 test('the morph: every star leaves at 0 and arrives at 1, the early years first', () => {
@@ -191,8 +198,17 @@ test('/sky/stars.json: one star per placed link, every index in range', () => {
   const n = sky.ids.length;
   assert.equal(n, stars.size);
   assert.equal(new Set(sky.ids).size, n);
-  for (const key of ['titles', 'host', 'day', 'note', 'topic', 'neighbors'])
+  for (const key of [
+    'titles',
+    'host',
+    'kind',
+    'day',
+    'note',
+    'topic',
+    'neighbors',
+  ])
     assert.equal(sky[key].length, n, key);
+  assert.ok(sky.kind.every((k) => k >= 0 && k < kinds.length));
   assert.equal(sky.meaning.length, 3 * n);
   assert.equal(sky.time.length, 2 * n);
   assert.ok(sky.host.every((h) => h >= 0 && h < sky.hosts.length));
@@ -236,4 +252,92 @@ test("a record's nearest in meaning: its star's first five, nearest first", () =
   }
   const placed = links.find((link) => stars.get(link.id)?.neighbors.length);
   assert.equal(nearestInMeaning(placed).length, 5);
+});
+
+// Four stars for Find: a Central day number for each date.
+const on = (y, m, d) => Date.UTC(y, m - 1, d) / 86_400_000;
+const FOUR = {
+  titles: [
+    'The Art of DNS',
+    'Kubb in the park',
+    'Dnsmasq notes',
+    'A day at the lake',
+  ],
+  hosts: ['example.com', 'kottke.org', 'blog.kottke.org'],
+  host: [0, 1, 2, 2],
+  kind: ['article', 'video', 'page', 'page'].map((k) => kinds.indexOf(k)),
+  day: [on(2012, 5, 1), on(2020, 1, 2), on(2012, 9, 9), on(2024, 12, 31)],
+  issues: { 1: [354], 3: [354, 355] },
+};
+const find = (text) => findStars(FOUR, parse(text));
+
+test('Find: nothing asked lights nothing, and a word lights its stars', () => {
+  assert.equal(find(''), null);
+  assert.equal(find('a'), null);
+  // A whole-word title match comes first, then the newest.
+  assert.deepEqual(find('dns'), [0, 2]);
+  assert.deepEqual(find('DNS'), [0, 2]);
+  // A word must start a word: "ark" is not in "park".
+  assert.deepEqual(find('ark'), []);
+  // A word of two letters must be the whole word.
+  assert.deepEqual(find('at'), [3]);
+  assert.deepEqual(find('ar'), []);
+  // Quoted, whole; excluded, gone.
+  assert.deepEqual(find('"dns"'), [0]);
+  assert.deepEqual(find('dns -dnsmasq'), [0]);
+  // A site's words are words too.
+  assert.deepEqual(find('kottke'), [3, 1, 2]);
+});
+
+test('Find: site:, year:, wt: and kind: narrow it, alone or with words', () => {
+  // site: takes in the hosts under it.
+  assert.deepEqual(find('site:kottke.org'), [3, 1, 2]);
+  assert.deepEqual(find('site:blog.kottke.org'), [3, 2]);
+  assert.deepEqual(find('year:2012'), [2, 0]);
+  assert.deepEqual(find('dns year:2012'), [0, 2]);
+  assert.deepEqual(find('wt:354'), [3, 1]);
+  assert.deepEqual(find('wt:355'), [3]);
+  assert.deepEqual(find('kind:video'), [1]);
+  assert.deepEqual(find('kubb kind:article'), []);
+});
+
+test('Find in words: how many, and the years they span', () => {
+  assert.equal(foundWords(FOUR, []), 'No titles or sites have those words.');
+  assert.equal(foundWords(FOUR, [0]), 'One link, in 2012.');
+  assert.equal(foundWords(FOUR, [0, 2]), '2 links, in 2012.');
+  assert.equal(foundWords(FOUR, [3, 0]), '2 links, from 2012 to 2024.');
+  // The year is the Central day's, not the UTC instant's.
+  assert.equal(foundWords(FOUR, [3]), 'One link, in 2024.');
+});
+
+test('the spread: the middle, and how far most of the points lie', () => {
+  const points = [
+    [1, 0, 0],
+    [-1, 0, 0],
+    [0, 1, 0],
+    [0, -1, 0],
+    [0, 0, 1],
+    [0, 0, -1],
+    [0, 0, 0],
+  ];
+  const near = spread(points);
+  assert.deepEqual(near.centre, [0, 0, 0]);
+  assert.equal(near.radius, 1);
+  // One stray far off moves the middle but not the distance most lie in.
+  const far = spread([...points, [70, 0, 0]], 0.75);
+  assert.ok(far.centre[0] > 8);
+  assert.ok(far.radius < 20);
+  assert.deepEqual(spread([]).centre, [0, 0, 0]);
+});
+
+test("the sky's two files: places first, names with the layout, nothing twice", () => {
+  const sky = skyDocument();
+  const { places, names } = splitSky(sky);
+  assert.deepEqual(Object.keys(places).sort(), [...PLACE_KEYS].sort());
+  assert.equal(names.layout, places.layout);
+  for (const key of Object.keys(names))
+    assert.ok(key === 'layout' || !(key in places), key);
+  assert.deepEqual({ ...places, ...names }, sky);
+  // The build serves the same split.
+  assert.deepEqual(skyFiles().places, places);
 });

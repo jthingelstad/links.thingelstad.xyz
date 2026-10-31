@@ -2,9 +2,12 @@
 // errors at desktop and phone widths, with a main landmark, a title and no
 // horizontal scroll; a search finds records, shows the one moved to in the
 // preview pane on the desktop (and asks for no twin on a phone), and kind:
-// links its page; Surprise me lands on a record and Back returns to the
+// links its page; /surprise/ lands on a record and Back returns to the
 // front page; the box suggests a site for site: and the keyboard takes it;
-// the home page's box shows live results and Enter opens one, and a site
+// the front page is the sky: Surprise me opens a star in place, Find lights
+// stars with up to five links under the box, the keyboard opens one on the
+// sky, the card's way out stands back to what Find lit, Enter stays and the
+// address carries the words, the last row searches on /search/, and a site
 // taken there is not offered again; a video facade asks nothing of YouTube
 // or Vimeo until it is clicked, then becomes the player; /sky/#<id> opens on
 // that link (in the sky on the desktop, or Doors where the browser has no
@@ -219,10 +222,10 @@ for (const [name, viewport] of [
     timeout: 15000,
   });
 
-  // Surprise me: the front page's button lands on one record, and /surprise/
+  // /surprise/ (the plain front door's Surprise me) lands on one record and
   // replaces itself, so Back is the front page again.
   await page.goto(`${base}/`, { waitUntil: 'networkidle' });
-  await page.click('a.home-surprise');
+  await page.goto(`${base}/surprise/`);
   await page.waitForURL(/\/links\/[0-9a-f]{12}\/$/, { timeout: 15000 });
   assert.ok(await page.locator('main').count(), 'the surprise is a record');
   await page.goBack({ waitUntil: 'networkidle' });
@@ -273,48 +276,137 @@ for (const [name, viewport] of [
   );
   await box.press('Escape');
 
-  // The home page's box: a word brings up to five links and a row for all
-  // of them; the down arrow and Enter open one; Enter with nothing chosen
-  // searches on /search/.
-  await page.goto(`${base}/`, { waitUntil: 'networkidle' });
-  const home = page.locator('#home-query');
-  await home.click();
-  await home.pressSequentially(word);
-  const links = page.locator('#home-suggest .suggest-link');
-  await links.first().waitFor({ timeout: 15000 });
-  assert.ok((await links.count()) <= 5, 'five links at most');
-  assert.match(
-    (await page.locator('#home-suggest .suggest-all').textContent()) ?? '',
-    /^(All|Up to) [\d,]+ links?/,
+  // The front page is the sky, standing back over the whole of it (Doors on
+  // a phone or without WebGL, on the newest link with a note). Surprise me
+  // opens a star in place, the address following.
+  const landing = async (query = '') => {
+    await page.goto(`${base}/${query}`, { waitUntil: 'networkidle' });
+    await page.locator('[data-sky][data-view]').waitFor({ timeout: 15000 });
+    await page
+      .locator('.sky-loading')
+      .waitFor({ state: 'detached', timeout: 15000 });
+    return page.locator('[data-sky]').getAttribute('data-view');
+  };
+  const sky = await landing();
+  assert.ok(
+    await page.locator('[data-sky-plain]').isHidden(),
+    'the sky, not the plain door',
   );
-  await page.screenshot({ path: shot(name, '/home-live') });
-  const options = page.locator('#home-suggest [role="option"]');
-  const at = await options.evaluateAll((all) =>
+  const starCard = sky === 'doors' ? '.doors-page' : '.sky-card';
+  const opens = async (href) => {
+    await page.waitForURL((url) => url.hash === `#${href.split('/')[2]}`);
+    assert.equal(
+      new URL(page.url()).pathname,
+      '/',
+      'the star opens on the front page',
+    );
+    await page
+      .locator(`${starCard} .sky-card-title a[href="${href}"]`)
+      .waitFor({ timeout: 5000 });
+  };
+  if (sky === 'sky') {
+    assert.equal(new URL(page.url()).hash, '', 'the whole sky, no star');
+    assert.ok(await page.locator('.sky-home [data-home-about]').isVisible());
+  }
+  await page.screenshot({ path: shot(name, '/sky-landing') });
+  // (Doors already has a star in the address.)
+  const before = new URL(page.url()).hash;
+  await page.locator('[data-surprise]:visible').first().click();
+  await page.waitForURL(
+    (url) => /^#[0-9a-f]{12}$/.test(url.hash) && url.hash !== before,
+  );
+  await opens(`/links/${new URL(page.url()).hash.slice(1)}/`);
+
+  // Find: a word lights stars, brings up to five links and a last row for the
+  // search page, and goes in the address; the down arrow and Enter open a
+  // link on the sky; its card's way out stands back to what was lit.
+  await landing();
+  const find = page.locator('#sky-find');
+  const found = page.locator('#sky-results .suggest-link');
+  const rows = page.locator('#sky-results [role="option"]');
+  await find.click();
+  await find.pressSequentially(word);
+  await found.first().waitFor({ timeout: 15000 });
+  assert.ok((await found.count()) <= 5, 'five links at most');
+  assert.equal(
+    (await page
+      .locator('#sky-results .suggest-all .suggest-insert')
+      .textContent()) ?? '',
+    `Search the notes for “${word}”`,
+  );
+  await page.waitForURL((url) => url.searchParams.get('q') === word);
+  if (sky === 'sky') {
+    const lit = page.locator('.sky-home [data-home-find]');
+    assert.equal(await lit.locator('.sky-home-title').textContent(), word);
+    assert.match(
+      (await lit.locator('.sky-home-lede').textContent()) ?? '',
+      /^(One link|[\d,]+ links), (in|from) \d{4}/,
+    );
+  }
+  await page.screenshot({ path: shot(name, '/sky-find') });
+  const at = await rows.evaluateAll((all) =>
     all.findIndex((option) => option.classList.contains('suggest-link')),
   );
-  for (let i = 0; i <= at; i++) await home.press('ArrowDown');
-  const href = await options.nth(at).locator('a').getAttribute('href');
+  for (let i = 0; i <= at; i++) await find.press('ArrowDown');
+  const href = await rows.nth(at).locator('a').getAttribute('href');
   assert.match(href ?? '', /^\/links\/[0-9a-f]{12}\/$/);
-  await Promise.all([page.waitForURL(`**${href}`), home.press('Enter')]);
-  await page.goto(`${base}/`, { waitUntil: 'networkidle' });
-  await home.click();
-  await home.pressSequentially(word);
-  await Promise.all([page.waitForURL(/\/search\/\?q=/), home.press('Enter')]);
-  // A site taken in the home box: the list that reopens with its links
-  // starts with them, not with the suggestion just taken.
-  await page.goto(`${base}/`, { waitUntil: 'networkidle' });
-  await home.click();
-  await home.pressSequentially(`site:${host.slice(0, -1)}`);
-  await options
+  await find.press('Enter');
+  await opens(href);
+  assert.equal(
+    new URL(page.url()).searchParams.get('q'),
+    word,
+    'Find stays lit',
+  );
+  if (sky === 'sky') {
+    const out = page.locator('.sky-card .sky-out');
+    assert.equal(await out.textContent(), `All of “${word}”`);
+    await out.click();
+    await page.waitForURL((url) => !url.hash);
+    assert.ok(await page.locator('.sky-home [data-home-find]').isVisible());
+    // Enter with nothing chosen stays on the sky.
+    await find.click();
+    await find.press('Enter');
+    assert.equal(new URL(page.url()).pathname, '/', 'Enter stays on the sky');
+  }
+
+  // The address is shareable: the words come back lit.
+  await landing(`?q=${encodeURIComponent(word)}`);
+  assert.equal(await find.inputValue(), word);
+  if (sky === 'sky')
+    assert.equal(
+      await page
+        .locator('.sky-home [data-home-find] .sky-home-title')
+        .textContent(),
+      word,
+    );
+  // The last row takes the words to /search/, notes and all.
+  await find.click();
+  await find.press('End');
+  await find.pressSequentially(' ');
+  // Past Find's pause, so the rows are the ones the keys move through.
+  await page.waitForTimeout(500);
+  await found.first().waitFor({ timeout: 15000 });
+  const all = await rows.evaluateAll((list) =>
+    list.findIndex((option) => option.classList.contains('suggest-all')),
+  );
+  for (let i = 0; i <= all; i++) await find.press('ArrowDown');
+  await Promise.all([page.waitForURL(/\/search\/\?q=/), find.press('Enter')]);
+
+  // A site taken in Find: the list that reopens with its links starts with
+  // them, not with the suggestion just taken.
+  await landing();
+  await find.click();
+  await find.pressSequentially(`site:${host.slice(0, -1)}`);
+  await rows
     .first()
     .locator('.suggest-insert', { hasText: `site:${host}` })
     .waitFor({ timeout: 15000 });
-  await home.press('ArrowDown');
-  await home.press('Enter');
-  assert.equal(await home.inputValue(), `site:${host} `);
-  await links.first().waitFor({ timeout: 15000 });
+  await find.press('ArrowDown');
+  await find.press('Enter');
+  assert.equal(await find.inputValue(), `site:${host} `);
+  await found.first().waitFor({ timeout: 15000 });
   assert.ok(
-    await options.first().evaluate((o) => o.classList.contains('suggest-link')),
+    await rows.first().evaluate((o) => o.classList.contains('suggest-link')),
     'the taken site is not offered again',
   );
 
@@ -411,5 +503,5 @@ if (production)
   );
 else assert.deepEqual(analytics, [], 'no Tinylytics requests during QA');
 console.log(
-  `Checked ${routes.length} routes, a search and its preview pane, a kind: search, Surprise me, a site: suggestion and the home page's live results, a walk in the sky at desktop and phone widths${video ? ', the video facade' : ' (no video facts to check the facade on)'}${edge ? ', /links.db, the redirects and the 404' : ''}; evidence in ${output}`,
+  `Checked ${routes.length} routes, a search and its preview pane, a kind: search, /surprise/, a site: suggestion, the sky on the front page (Surprise me, Find, the address) and a walk at /sky/ at desktop and phone widths${video ? ', the video facade' : ' (no video facts to check the facade on)'}${edge ? ', /links.db, the redirects and the 404' : ''}; evidence in ${output}`,
 );
