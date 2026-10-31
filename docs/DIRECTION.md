@@ -102,7 +102,7 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 
 | URL | What |
 | --- | --- |
-| `/` | Built as a search box, like Google's front page (Jamie, 2026-10-23): the wordmark, the box, how many links are in the index and the years they span, and a row of ways in (Newest, Years, Hosts, Kinds, Issues, Stats, Feed; Topics goes first once topic pages exist). A quote of the day from `content/quotes.md` when it holds any; nothing while it is empty. The site header is left off this page. The box suggests as `/search/`'s does and shows the first five links that match as you type (section "Search"); Enter with nothing chosen goes to `/search/` |
+| `/` | Built as a search box, like Google's front page (Jamie, 2026-10-23): the wordmark, the box, how many links are in the index and the years they span, and a row of ways in (Newest, Sky, Years, Hosts, Kinds, Issues, Stats, Feed; Topics goes first once topic pages exist). A quote of the day from `content/quotes.md` when it holds any; nothing while it is empty. The site header is left off this page. The box suggests as `/search/`'s does and shows the first five links that match as you type (section "Search"); Enter with nothing chosen goes to `/search/` |
 | `/search/?q=` | Results: title, host, saved date, a snippet of the note, a WT chip; filters for topic, year, kind, in a Weekly Thing, has a note; sort by relevance or date. Built: `kind:video` keeps one kind and, with no other words, links that kind's page; the box suggests as an operator is typed; on a wide screen the result moved to shows in a pane beside the list (section "Search") |
 | `/search/suggest.json` | What the search box suggests from: every host with its count and its links in each Central year, every issue with its title, Central date and saved links, each year's and kind's count. The search page's own file, shaped for it and free to change with it; not part of the dataset |
 | `/links/<id>/` | The record (below). `<id>` is the first 12 hex characters of md5 of the saved URL, which is Pinboard's API `hash`; anyone can compute it from the URL |
@@ -115,6 +115,8 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 | `/years/<yyyy>/` | The year's links by month |
 | `/newest/` | Built: the newest 50 links, the site feed's links, as a page |
 | `/surprise/` | Built: Surprise me, a door that replaces itself with one record at random, drawn from the records with Jamie's own words or a Weekly Thing; noindex and out of the sitemap, but crawlable, so crawlers can read the noindex |
+| `/sky/` | Built (section "The sky"): every link a star in the Meaning and Time layouts, with Play; Doors on a phone or without WebGL. `/sky/#<id>` opens on one link, and each record page's Sky row links to its star. The page's own HTML is the constellations, every topic in its family with the links at its middle, for a reader without the script and for search engines. In the site header and the front page's ways in |
+| `/sky/stars.json` | The sky page's own file, as `suggest.json` is the search page's: every star's id, title, site, Central day, whether it has a note, topic, places in both layouts (to a tenth) and neighbours as indexes, then the topics and families. No notes: a card fetches the link's JSON twin. 2.9 MB, 1.1 MB gzipped, for 16,558 stars (2026-10-30). Shaped for the page and free to change with it; not part of the dataset |
 | `/stats/` | Linking volume along its dimensions (section "Statistics") |
 | `/about/` | The homage, in Jamie's words: what this is, why links matter, how it is made. Built from `content/about.md` (a `# ` title, then `## ` sections; the build fails on any other shape), a first draft in Jamie's voice from the Librarian for Jamie to edit. Linked from every page's footer |
 | `/feed.xml`, `/feed.json` | The newest 50 links as RSS 2.0 and JSON Feed 1.1, the Link Thing feed reborn; every host, kind and topic page carries its own pair at `feed.xml` and `feed.json` under its path. Built for the site, all 7,064 host pages (the host's newest 50) and the eight kind pages (the kind's newest 50); topics with the topic pages. Each item is the record: its permalink as link and id, the destination and the note as content, Central dates with the real offset, tags as categories. Every page advertises the site pair; a host page advertises its own first |
@@ -521,16 +523,27 @@ star layout and Doors as the phone and no-WebGL view".
   hands the controls back. With reduced motion it steps from link to link without the
   flight.
 - **Names on things.** Topic names float at their densest point, and the titles of the
-  stars nearest the camera come up beside them as you approach (Atlas's labels). No
-  lookups.
+  stars nearest the camera come up beside them as you approach (Atlas's labels). The
+  ten neighbours carry their titles beside their stars, or wait at the edge with an
+  arrow when they are out of view. No lookups.
 - **Reading.** Choosing a star opens Doors' big-type card on it: the title, site, day,
   note and issues, its neighbours as doors, and the way to its record page.
 - **Phones and no WebGL.** The same address shows Doors: one link at a time, its
-  neighbours as doors, the Time map drawn flat behind. It is the view on a small screen
-  or where WebGL is missing; a wider screen with WebGL can switch to it and back.
+  neighbours as doors. On a wide screen each door stands on the side where its link
+  lies on the Time map, drawn flat behind; on a phone they are a list under the page,
+  with no map. It is the view on a small screen or where WebGL is missing; a wider
+  screen with WebGL can switch to it and back, keeping the star and the trail.
 - **Built from the site's own files.** One static file of stars (ids, titles, sites,
   days, topics, places, neighbours; no notes, which come from the link's JSON twin when
   its card opens), drawn with WebGL directly: no library, nothing from another host.
+- **As built** (2026-10-30). `src/scripts/sky.ts` loads `/sky/stars.json`, keeps the
+  walk (the star in view, the trail, the stars visited), finds a link by its title and
+  picks the view; `sky-gl.ts` is the sky (WebGL 1, one point per star, the morph in
+  the shader, Play), `sky-doors.ts` is Doors, and `sky-card.ts` the card both show.
+  The arithmetic they share is `src/lib/sky.ts`, with its tests. A year is ten units
+  of depth, about the layouts' width over the 22 years, and in the morph each star sets
+  off by its own time, so the years peel away in order and arrive together. Beside a
+  door's year and site, a reason when there is one: the same issue, or the same site.
 
 ## Topics
 

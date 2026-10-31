@@ -1,0 +1,775 @@
+/* /sky/ (src/pages/sky/index.astro). The sky is night whatever the page's
+   theme, and runs the full width of the window under the site header; Doors
+   is the page's own ground and type, light or dark. Nothing smaller than
+   --jt-size-label, and no italics. */
+html:has(.sky:not([hidden])) {
+  overflow-x: clip;
+}
+.sky-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 32px;
+  margin-bottom: 20px;
+}
+.sky-intro .page-title {
+  margin: 0;
+}
+.sky-intro .lede {
+  flex: 1 1 24rem;
+  max-width: 40rem;
+  margin: 0;
+}
+
+.sky {
+  --sky0: #04060c;
+  --sky1: #0c1428;
+  --sky-ink: #e9ecf5;
+  --sky-soft: #c3c9da;
+  --sky-muted: #9aa2b8;
+  --sky-link: #9fb4ff;
+  --sky-visited: #d2b0ff;
+  --sky-here: #ffcf7a;
+  --glass: rgba(9, 13, 26, 0.8);
+  --edge: rgba(160, 175, 220, 0.24);
+  --dot: #c3c3ca;
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: max(30rem, calc(100dvh - var(--sky-top, 10rem)));
+  overflow: hidden;
+  color: var(--sky-ink);
+  background: radial-gradient(
+    120% 90% at 60% 38%,
+    var(--sky1),
+    var(--sky0) 72%
+  );
+  background-color: var(--sky0);
+  font-size: var(--jt-size-small);
+  line-height: 1.45;
+}
+@media (prefers-color-scheme: dark) {
+  .sky {
+    --dot: #3c3c44;
+  }
+}
+.sky button,
+.sky input {
+  font: inherit;
+  color: inherit;
+}
+.sky :focus-visible {
+  outline: 2px solid var(--sky-here);
+  outline-offset: 3px;
+}
+.sky-gl,
+.sky-fx,
+.sky-labels {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.sky-gl {
+  display: block;
+  cursor: grab;
+  touch-action: none;
+}
+.sky-gl.drag {
+  cursor: grabbing;
+}
+.sky-fx,
+.sky-labels {
+  pointer-events: none;
+}
+.sky-labels {
+  overflow: hidden;
+}
+.sky-loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  color: var(--sky-muted);
+  font-family: var(--jt-font-heading);
+  font-size: var(--jt-size-h3);
+}
+
+/* Names on things: the doors (the ten nearest), the topics, and the titles
+   that come up near the camera. */
+.sky-door,
+.sky-topic,
+.sky-near {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 0;
+  background: none;
+  padding: 2px 4px;
+  text-align: left;
+  cursor: pointer;
+  pointer-events: auto;
+  transform-origin: 0 0;
+  transition: opacity 0.3s;
+  will-change: transform;
+  text-shadow:
+    0 0 8px var(--sky0),
+    0 0 3px var(--sky0),
+    0 0 1px var(--sky0);
+}
+.sky-door {
+  max-width: 15rem;
+  color: var(--sky-link);
+  font-weight: 500;
+  font-size: var(--jt-size-meta);
+  line-height: 1.25;
+}
+.sky-door .t {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+.sky-door .m {
+  display: block;
+  margin-top: 1px;
+  color: var(--sky-muted);
+  font-weight: 400;
+  font-size: var(--jt-size-label);
+}
+.sky-door .arr {
+  display: none;
+  margin-right: 5px;
+  transform: rotate(var(--a, 0rad));
+  font-family: system-ui, sans-serif;
+}
+.sky-door.pin .arr {
+  display: inline-block;
+}
+.sky-door.seen {
+  color: var(--sky-visited);
+}
+.sky-door:hover .t {
+  text-decoration-color: currentColor;
+}
+.sky-topic {
+  color: var(--sky-muted);
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: var(--jt-size-label);
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: opacity 0.45s;
+}
+.sky-topic.mine {
+  color: var(--sky-here);
+}
+.sky-topic:hover {
+  color: var(--sky-ink);
+}
+.sky-near {
+  max-width: 13rem;
+  color: var(--sky-soft);
+  font-size: var(--jt-size-label);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sky-near:hover {
+  color: var(--sky-ink);
+  text-decoration: underline;
+}
+.sky-ring {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  margin: -13px 0 0 -13px;
+  border-radius: 50%;
+  border: 1.5px solid var(--sky-here);
+  box-shadow: 0 0 18px rgba(255, 207, 122, 0.45);
+  pointer-events: none;
+  opacity: 0;
+}
+.sky-ring::after {
+  content: '';
+  position: absolute;
+  inset: -9px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 207, 122, 0.35);
+  animation: sky-pulse 2.8s ease-out infinite;
+}
+@keyframes sky-pulse {
+  from {
+    transform: scale(0.7);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+.sky-tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 8;
+  max-width: 17rem;
+  padding: 6px 9px;
+  border-radius: 8px;
+  pointer-events: none;
+  background: var(--glass);
+  border: 1px solid var(--edge);
+  font-size: var(--jt-size-label);
+  line-height: 1.3;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.sky-tip small {
+  display: block;
+  margin-top: 2px;
+  color: var(--sky-muted);
+  font-size: var(--jt-size-label);
+}
+
+/* The toolbar. */
+.sky-bar {
+  position: absolute;
+  z-index: 10;
+  top: 14px;
+  left: max(var(--jt-gutter), env(safe-area-inset-left, 0px));
+  right: max(var(--jt-gutter), env(safe-area-inset-right, 0px));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  pointer-events: none;
+}
+.sky-bar > * {
+  pointer-events: auto;
+}
+.sky-find {
+  position: relative;
+  flex: 0 1 18rem;
+  min-width: 0;
+}
+.sky-find input {
+  width: 100%;
+  background: var(--glass);
+  border: 1px solid var(--edge);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: var(--jt-size-meta);
+}
+.sky-find input::placeholder {
+  color: var(--sky-muted);
+}
+.sky-results {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  top: calc(100% + 4px);
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  background: #0b1020;
+  border: 1px solid var(--edge);
+  border-radius: 10px;
+  max-height: 60vh;
+  overflow: auto;
+}
+.sky-results [role='option'] {
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  line-height: 1.3;
+  font-size: var(--jt-size-meta);
+}
+.sky-results [role='option']:hover,
+.sky-results [aria-selected='true'] {
+  background: rgba(160, 175, 220, 0.14);
+}
+.sky-results small,
+.sky-results .none {
+  display: block;
+  color: var(--sky-muted);
+  font-size: var(--jt-size-label);
+}
+.sky-results .none {
+  padding: 6px 8px;
+}
+.sky-tool,
+.sky-switch button {
+  border: 1px solid var(--edge);
+  background: var(--glass);
+  border-radius: 999px;
+  padding: 5px 13px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--jt-size-label);
+}
+.sky-tool:hover,
+.sky-switch button:hover {
+  border-color: var(--sky-muted);
+}
+.sky-tool[aria-pressed='true'] {
+  border-color: var(--sky-here);
+  color: var(--sky-here);
+}
+.sky-switch {
+  display: inline-flex;
+}
+.sky-switch button:first-child {
+  border-radius: 999px 0 0 999px;
+}
+.sky-switch button:last-child {
+  border-radius: 0 999px 999px 0;
+  border-left: 0;
+}
+.sky-switch button[aria-pressed='true'] {
+  background: rgba(160, 175, 220, 0.22);
+  color: var(--sky-ink);
+}
+.sky-hint {
+  position: absolute;
+  z-index: 4;
+  right: var(--jt-gutter);
+  bottom: 20px;
+  margin: 0;
+  color: var(--sky-muted);
+  font-size: var(--jt-size-label);
+  transition: opacity 0.8s;
+  pointer-events: none;
+}
+
+/* The card on the star in view (src/scripts/sky-card.ts), and the same card
+   as Doors' page. */
+.sky-card {
+  position: absolute;
+  z-index: 5;
+  left: max(var(--jt-gutter), env(safe-area-inset-left, 0px));
+  bottom: 20px;
+  width: min(31rem, calc(100% - 2 * var(--jt-gutter)));
+  max-height: 48%;
+  overflow: auto;
+  padding: 18px 20px 16px;
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  backdrop-filter: blur(14px) saturate(1.2);
+  border: 1px solid var(--edge);
+  border-radius: 16px;
+}
+.sky-card:empty {
+  display: none;
+}
+.sky-card-body > * {
+  margin: 0;
+}
+.sky-card-topic {
+  font-weight: 600;
+  font-size: var(--jt-size-label);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sky-here);
+}
+.sky-card-title {
+  margin-top: 8px !important;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+.sky-card-title.long {
+  font-size: clamp(1.3rem, 1.8vw, 1.6rem);
+}
+.sky-card .sky-card-title a,
+.sky-card .sky-card-title a:visited {
+  color: var(--sky-ink);
+  text-decoration: none;
+}
+.sky-card-title a:hover {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px;
+}
+.sky-card-meta {
+  margin-top: 6px !important;
+  color: var(--sky-muted);
+  font-size: var(--jt-size-meta);
+}
+.sky-card-body .preview-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin-top: 10px;
+  font-size: var(--jt-size-label);
+}
+.sky-card-body .preview-note {
+  margin-top: 12px;
+}
+.sky-card-body .preview-note .note {
+  font-size: var(--jt-size-small);
+  line-height: 1.5;
+}
+.sky-card-body .preview-note .note > :first-child {
+  margin-top: 0;
+}
+.sky-card-body .preview-note .note > :last-child {
+  margin-bottom: 0;
+}
+.sky-card-body .record-label {
+  margin: 0 0 4px;
+  font-size: var(--jt-size-label);
+}
+.sky-card .preview-note,
+.sky-card .note-label,
+.sky-card .note-cite,
+.sky-card .record-label {
+  color: var(--sky-soft);
+}
+.sky-card a {
+  color: var(--sky-link);
+}
+.sky-card a:visited {
+  color: var(--sky-visited);
+}
+.sky-card .chip {
+  color: var(--sky-link);
+  border-color: var(--edge);
+  background: none;
+}
+.sky-card-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: baseline;
+  margin-top: 14px !important;
+  font-size: var(--jt-size-meta);
+}
+.sky-back {
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  color: var(--sky-visited);
+}
+.sky-back:hover {
+  text-decoration: underline;
+}
+.sky-card-failed {
+  margin-top: 10px !important;
+  color: var(--sky-muted);
+}
+
+/* Doors: the page's own colours. */
+.sky[data-view='doors'] {
+  --sky-ink: var(--ink);
+  --sky-soft: var(--text-soft);
+  --sky-muted: var(--muted);
+  --sky-link: var(--link);
+  --sky-visited: var(--visited);
+  --sky-here: var(--ink);
+  --glass: var(--ground);
+  --edge: var(--line);
+  --ground: var(--jt-ground);
+  /* As tall as its page and doors need, and the window at least. */
+  height: auto;
+  min-height: max(30rem, calc(100dvh - var(--sky-top, 10rem)));
+  color: var(--ink);
+  background: var(--ground);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.sky[data-view='doors'] .sky-only,
+.sky[data-view='doors'] .sky-gl,
+.sky[data-view='doors'] .sky-fx,
+.sky[data-view='doors'] .sky-labels,
+.sky[data-view='doors'] .sky-ring,
+.sky[data-view='doors'] .sky-tip {
+  display: none;
+}
+.sky[data-view='doors'] .sky-results {
+  background: var(--ground);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+}
+.sky[data-view='doors'] .sky-results [role='option']:hover,
+.sky[data-view='doors'] .sky-results [aria-selected='true'] {
+  background: color-mix(in srgb, var(--ink) 7%, transparent);
+}
+.doors {
+  position: relative;
+  min-height: inherit;
+}
+.doors-map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.doors-stage {
+  position: relative;
+  z-index: 1;
+  min-height: inherit;
+  display: grid;
+  gap: 14px 32px;
+  grid-template-columns: minmax(10rem, 15rem) minmax(0, 1fr) minmax(
+      10rem,
+      15rem
+    );
+  grid-template-rows: auto auto auto;
+  align-content: space-between;
+  grid-template-areas: 'top top top' 'left page right' 'bottom bottom bottom';
+  padding: 72px var(--jt-gutter) 52px;
+}
+.doors-side {
+  display: flex;
+  gap: 14px 28px;
+  min-width: 0;
+}
+.doors-side.top {
+  grid-area: top;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.doors-side.bottom {
+  grid-area: bottom;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.doors-side.left {
+  grid-area: left;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.doors-side.right {
+  grid-area: right;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  text-align: right;
+}
+.doors-around {
+  display: none;
+}
+.door {
+  display: block;
+  max-width: 15rem;
+  text-decoration: none;
+  color: var(--link);
+  text-shadow:
+    0 0 6px var(--ground),
+    0 0 2px var(--ground);
+}
+.doors-side.top .door,
+.doors-side.bottom .door {
+  max-width: 14rem;
+}
+.door .t {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: var(--jt-font-heading);
+  font-weight: 600;
+  font-size: calc(var(--jt-size-meta) + var(--s, 0.5) * 0.3rem);
+  line-height: 1.2;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.door .arr {
+  display: inline-block;
+  transform: rotate(var(--a, 0rad));
+  font:
+    600 0.95rem/1 system-ui,
+    sans-serif;
+  margin-bottom: 3px;
+}
+.door .m {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--jt-size-label);
+  color: var(--muted);
+}
+.door.seen {
+  color: var(--visited);
+}
+.door:hover .t {
+  text-decoration-thickness: 2px;
+}
+.doors-page {
+  grid-area: page;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+  max-width: 40rem;
+}
+.doors-page .sky-card-topic {
+  color: var(--muted);
+}
+.doors-page .sky-card-title {
+  font-size: clamp(1.9rem, 3.4vw, 3.1rem);
+  line-height: 1.04;
+}
+.doors-page .sky-card-title.long {
+  font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+}
+.doors-page .sky-card-title a,
+.doors-page .sky-card-title a:visited {
+  color: var(--ink);
+  text-decoration: none;
+}
+.doors-page .preview-note .note {
+  font-size: var(--jt-size-base);
+}
+.doors-path {
+  position: absolute;
+  z-index: 2;
+  left: var(--jt-gutter);
+  right: var(--jt-gutter);
+  bottom: 12px;
+  display: flex;
+  gap: 6px 8px;
+  align-items: baseline;
+  overflow-x: auto;
+  white-space: nowrap;
+  font-size: var(--jt-size-label);
+  color: var(--muted);
+}
+.doors-path .lab {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--jt-tracking-label);
+}
+.doors-path a {
+  color: var(--visited);
+}
+.doors-path .now {
+  color: var(--ink);
+  font-weight: 500;
+}
+@media (max-width: 900px) {
+  .doors-map {
+    display: none;
+  }
+  .doors-stage {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas: 'page' 'around' 'top' 'right' 'bottom' 'left';
+    gap: 18px;
+    padding: 112px var(--jt-gutter) 64px;
+  }
+  .doors-around {
+    display: block;
+    grid-area: around;
+    margin: 18px 0 0;
+    font-size: var(--jt-size-label);
+    text-transform: uppercase;
+    letter-spacing: var(--jt-tracking-label);
+    color: var(--muted);
+  }
+  .doors-side,
+  .doors-side.top,
+  .doors-side.bottom,
+  .doors-side.left,
+  .doors-side.right {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 16px;
+  }
+  .door,
+  .doors-side.top .door,
+  .doors-side.bottom .door {
+    max-width: none;
+    display: grid;
+    grid-template-columns: 1.5em minmax(0, 1fr);
+    align-items: baseline;
+  }
+  .door .arr {
+    margin: 0;
+  }
+  .door .t {
+    font-size: var(--jt-size-ui);
+  }
+  .door .t,
+  .door .m {
+    grid-column: 2;
+  }
+  .doors-path {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 8px var(--jt-gutter);
+    background: var(--ground);
+    border-top: 1px solid var(--line);
+  }
+  .sky-find {
+    order: 5;
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .sky-card {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+/* The constellations: the page's own list of every topic. */
+.constellations {
+  margin-top: 48px;
+}
+.constellations > h2 {
+  font-size: var(--jt-size-h2);
+}
+.constellations-lede {
+  max-width: var(--jt-measure);
+  color: var(--text-soft);
+}
+.constellation-family {
+  margin-top: 32px;
+}
+.constellation-family h3 {
+  font-size: var(--jt-size-h3);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.constellation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 8px 32px;
+}
+.constellation-list > li {
+  padding-top: 14px;
+}
+.constellation-name {
+  margin: 0 0 4px;
+  font-family: var(--jt-font-heading);
+  font-weight: var(--jt-weight-strong);
+  font-size: var(--jt-size-ui);
+}
+.constellation-name .count {
+  margin-left: 8px;
+  font-family: var(--jt-font-body);
+  font-weight: 400;
+  font-size: var(--jt-size-label);
+  color: var(--muted);
+}

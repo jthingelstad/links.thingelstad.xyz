@@ -10,7 +10,8 @@ test('the static reader publishes fast arrivals and a later snapshot controls ed
   const root = await mkdtemp(join(tmpdir(), 'links-bookmarks-'));
   try {
     await mkdir(join(root, 'data/links'), { recursive: true });
-    await mkdir(join(root, 'data/derived'), { recursive: true });
+    await mkdir(join(root, 'data/derived/sky'), { recursive: true });
+    await mkdir(join(root, 'content'), { recursive: true });
     const hash = createHash('md5')
       .update('https://example.com/new')
       .digest('hex');
@@ -36,6 +37,16 @@ test('the static reader publishes fast arrivals and a later snapshot controls ed
     await json('data/links/2026.json', []);
     await json('data/sync.json', state);
     await json('data/derived/issues.json', { issues: [] });
+    // The sky before the nightly places an arrival: one topic, no stars.
+    await json('data/derived/sky.json', {
+      layout: 1,
+      neighbors: 10,
+      topics: [{ id: 0, meaning: [0, 0, 0], time: [0, 0, 2026, 2026] }],
+    });
+    await writeFile(
+      join(root, 'content/topics.md'),
+      '# Topics\n\n## Everything\n\n- 0: Everything\n',
+    );
     await json('data/derived/bookmarks.json', {
       version: 1,
       captures: {

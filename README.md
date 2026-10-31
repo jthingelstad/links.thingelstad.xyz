@@ -35,6 +35,9 @@ Everything a page shows is also data, built with the pages:
   that year (Central), newest first, as a slim row with the note in full. The largest
   year is under 1 MB.
 - `/newest/` is the newest 50 as a page.
+- `/sky/` is every link as a star, placed by what it says, its ten nearest in meaning a
+  click away; `/sky/#<id>` opens on one link. On a phone, or without WebGL, it is one
+  link at a time with its neighbours as doors.
 - `/mcp` is a read-only MCP server with no authentication: add
   `https://links.thingelstad.xyz/mcp` to a client as a remote (Streamable HTTP) server.
   Seven tools: `links_search` (the site's own grammar and index: words, `site:`,
