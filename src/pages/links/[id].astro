@@ -4,12 +4,16 @@
 // link is the same page with fewer rows, never an empty heading: with no
 // note and no facts card, "About this link" runs across the page instead of
 // sitting beside nothing. Pagefind indexes the title (weighted), the note and
-// the host; everything else is marked out of the index.
+// the host; everything else is marked out of the index. A lens (Lens.astro):
+// the sky beside it stands on the link, its ten nearest round it.
 import Layout from '../../layouts/Layout.astro';
 import LinkList from '../../components/LinkList.astro';
 import Kudos from '../../components/Kudos.astro';
 import FactsCard from '../../components/FactsCard.astro';
 import RecordFacts from '../../components/RecordFacts.astro';
+import Lens from '../../components/Lens.astro';
+import type { Lens as LensFacts } from '../../lib/lens';
+import { cut as cutTo } from '../../lib/sky';
 import {
   type Link,
   absolute,
@@ -82,6 +86,11 @@ const description = link.hasNote
 // Its share card, drawn from this page's h-entry (lib/card.ts): p-host and
 // p-voice are there for it, and p-issue on each issue chip.
 const card = cardOf(link);
+const lens: LensFacts = {
+  kind: 'star',
+  star: link.id,
+  label: `Nearest to ${cutTo(link.shown, 44)}`,
+};
 ---
 
 <Layout
@@ -93,205 +102,212 @@ const card = cardOf(link);
     { type: 'application/json', href: linkJsonPath(link.id) },
     { type: 'text/markdown', href: linkMarkdownPath(link.id) },
   ]}
+  lens
 >
-  <article class="record h-entry" data-pagefind-body>
-    <header class="record-hero">
-      <h1 class="record-title p-name" data-pagefind-weight="10">
-        <a class="u-bookmark-of" href={link.url}>
-          {link.shown}
-          <svg
-            class="out"
-            viewBox="0 0 12 12"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            aria-hidden="true"
-          >
-            <path d="M4 2h6v6M10 2 2.5 9.5" />
-          </svg>
-        </a>
-      </h1>
-      {dropped && (
-        <p hidden data-pagefind-weight="10">
-          {dropped}
-        </p>
-      )}
-      <p class="record-url" data-pagefind-ignore title={link.url}>
-        <b>{shownHost}</b>
-        {shownPath}
-      </p>
-      {/* The entry's own address. The title's u-bookmark-of is the saved
-          link, and an explicit u-* stops the parser implying a url. */}
-      <data class="u-url" value={absolute(linkPath(link.id))}></data>
-      <data class="p-host" value={link.host}></data>
-      {link.voice && <data class="p-voice" value={link.voice}></data>}
-      <div class="record-byline" data-pagefind-ignore="all">
-        <span>
-          Saved{' '}
-          <time class="dt-published" datetime={link.saved}>
-            {link.clock
-              ? `${weekdayDateLabel(link.saved)}, ${timeLabel(link.saved)}`
-              : weekdayDateLabel(link.saved)}
-          </time>
-        </span>
-        {appears.map((a) => (
-          <a class="chip" href={issuePath(a.issue)}>
-            In <span class="p-issue">{issueLabel(a.issue)}</span>
+  <Lens lens={lens}>
+    <article class="record h-entry" data-pagefind-body>
+      <header class="record-hero">
+        <h1 class="record-title p-name" data-pagefind-weight="10">
+          <a class="u-bookmark-of" href={link.url}>
+            {link.shown}
+            <svg
+              class="out"
+              viewBox="0 0 12 12"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <path d="M4 2h6v6M10 2 2.5 9.5" />
+            </svg>
           </a>
-        ))}
-        <Kudos path={linkPath(link.id)} />
-      </div>
-    </header>
-
-    {facts || link.hasNote ? (
-      <div class="record-body">
-        <div class="record-main">
-          {facts && <FactsCard facts={facts} />}
-          {link.hasNote && (
-            <section class="record-note">
-              {excerpt && (
-                <>
-                  <h2 class="record-label" data-pagefind-ignore>
-                    From the page
-                  </h2>
-                  <p class="note-label" data-pagefind-ignore>
-                    A quotation saved with the link.
-                  </p>
-                </>
-              )}
-              {agent && (
-                <>
-                  <h2 class="record-label" data-pagefind-ignore>
-                    From an agent
-                  </h2>
-                  <p class="note-label" data-pagefind-ignore>
-                    A summary an agent wrote for Jamie's reading queue, not
-                    Jamie's words.
-                  </p>
-                </>
-              )}
-              <div
-                class:list={['note', 'e-content', { excerpt, short }]}
-                set:html={noteHtml(link)}
-              />
-              {excerpt && (
-                <p class="note-cite" data-pagefind-ignore>
-                  {link.host}
-                </p>
-              )}
-            </section>
-          )}
+        </h1>
+        {dropped && (
+          <p hidden data-pagefind-weight="10">
+            {dropped}
+          </p>
+        )}
+        <p class="record-url" data-pagefind-ignore title={link.url}>
+          <b>{shownHost}</b>
+          {shownPath}
+        </p>
+        {/* The entry's own address. The title's u-bookmark-of is the saved
+          link, and an explicit u-* stops the parser implying a url. */}
+        <data class="u-url" value={absolute(linkPath(link.id))}></data>
+        <data class="p-host" value={link.host}></data>
+        {link.voice && <data class="p-voice" value={link.voice}></data>}
+        <div class="record-byline" data-pagefind-ignore="all">
+          <span>
+            Saved{' '}
+            <time class="dt-published" datetime={link.saved}>
+              {link.clock
+                ? `${weekdayDateLabel(link.saved)}, ${timeLabel(link.saved)}`
+                : weekdayDateLabel(link.saved)}
+            </time>
+          </span>
+          {appears.map((a) => (
+            <a class="chip" href={issuePath(a.issue)}>
+              In <span class="p-issue">{issueLabel(a.issue)}</span>
+            </a>
+          ))}
+          <Kudos path={linkPath(link.id)} />
         </div>
-        <RecordFacts link={link} layout="card" />
+      </header>
+
+      {facts || link.hasNote ? (
+        <div class="record-body">
+          <div class="record-main">
+            {facts && <FactsCard facts={facts} />}
+            {link.hasNote && (
+              <section class="record-note">
+                {excerpt && (
+                  <>
+                    <h2 class="record-label" data-pagefind-ignore>
+                      From the page
+                    </h2>
+                    <p class="note-label" data-pagefind-ignore>
+                      A quotation saved with the link.
+                    </p>
+                  </>
+                )}
+                {agent && (
+                  <>
+                    <h2 class="record-label" data-pagefind-ignore>
+                      From an agent
+                    </h2>
+                    <p class="note-label" data-pagefind-ignore>
+                      A summary an agent wrote for Jamie's reading queue, not
+                      Jamie's words.
+                    </p>
+                  </>
+                )}
+                <div
+                  class:list={['note', 'e-content', { excerpt, short }]}
+                  set:html={noteHtml(link)}
+                />
+                {excerpt && (
+                  <p class="note-cite" data-pagefind-ignore>
+                    {link.host}
+                  </p>
+                )}
+              </section>
+            )}
+          </div>
+          <RecordFacts link={link} layout="card" />
+        </div>
+      ) : (
+        <RecordFacts link={link} layout="band" />
+      )}
+
+      <div class="record-related" data-pagefind-ignore="all">
+        {sameVideo.length > 0 && (
+          <section class="section">
+            <h2>Also saved as</h2>
+            <LinkList links={sameVideo} compact />
+          </section>
+        )}
+        {c.savedTwice.length > 0 && (
+          <section class="section">
+            <h2>Saved twice</h2>
+            <LinkList links={c.savedTwice} compact />
+          </section>
+        )}
+        {c.mentionedBy.length > 0 && (
+          <section class="section">
+            <h2>Mentioned by</h2>
+            <LinkList links={c.mentionedBy} compact />
+          </section>
+        )}
+        {nearest.length > 0 && (
+          <section class="section meaning">
+            <h2>Nearest in meaning</h2>
+            <LinkList links={nearest} compact />
+            {neighbours > nearest.length && (
+              <p class="more">
+                <a href={starPath(link.id)}>All {neighbours} in the sky</a>
+              </p>
+            )}
+          </section>
+        )}
+        {c.sameHost.total > 0 && (
+          <section class="section">
+            <h2>
+              More from <span class="host">{link.host}</span>{' '}
+              <span class="count">
+                · {plural(c.sameHost.total + 1, 'link')}
+              </span>
+            </h2>
+            <LinkList links={c.sameHost.nearest} compact host={false} />
+            {c.sameHost.total > c.sameHost.nearest.length && (
+              <p class="more">
+                <a href={hostPath(link.host)}>
+                  All {plural(c.sameHost.total + 1, 'link')} from {link.host}
+                </a>
+              </p>
+            )}
+          </section>
+        )}
+        {c.sameWeek.total > 0 && (
+          <section class="section">
+            <h2>
+              Saved the same week{' '}
+              <span class="count">
+                · {plural(c.sameWeek.total + 1, 'link')}
+              </span>
+            </h2>
+            <LinkList links={c.sameWeek.nearest} compact />
+            {c.sameWeek.total > c.sameWeek.nearest.length && (
+              <p class="more">
+                <a href={monthPath(link.year, link.month)}>
+                  Everything saved in {monthNames[link.month - 1]} {link.year}
+                </a>
+              </p>
+            )}
+          </section>
+        )}
       </div>
-    ) : (
-      <RecordFacts link={link} layout="band" />
-    )}
 
-    <div class="record-related" data-pagefind-ignore="all">
-      {sameVideo.length > 0 && (
-        <section class="section">
-          <h2>Also saved as</h2>
-          <LinkList links={sameVideo} compact />
-        </section>
-      )}
-      {c.savedTwice.length > 0 && (
-        <section class="section">
-          <h2>Saved twice</h2>
-          <LinkList links={c.savedTwice} compact />
-        </section>
-      )}
-      {c.mentionedBy.length > 0 && (
-        <section class="section">
-          <h2>Mentioned by</h2>
-          <LinkList links={c.mentionedBy} compact />
-        </section>
-      )}
-      {nearest.length > 0 && (
-        <section class="section meaning">
-          <h2>Nearest in meaning</h2>
-          <LinkList links={nearest} compact />
-          {neighbours > nearest.length && (
-            <p class="more">
-              <a href={starPath(link.id)}>All {neighbours} in the sky</a>
-            </p>
-          )}
-        </section>
-      )}
-      {c.sameHost.total > 0 && (
-        <section class="section">
-          <h2>
-            More from <span class="host">{link.host}</span>{' '}
-            <span class="count">· {plural(c.sameHost.total + 1, 'link')}</span>
-          </h2>
-          <LinkList links={c.sameHost.nearest} compact host={false} />
-          {c.sameHost.total > c.sameHost.nearest.length && (
-            <p class="more">
-              <a href={hostPath(link.host)}>
-                All {plural(c.sameHost.total + 1, 'link')} from {link.host}
-              </a>
-            </p>
-          )}
-        </section>
-      )}
-      {c.sameWeek.total > 0 && (
-        <section class="section">
-          <h2>
-            Saved the same week{' '}
-            <span class="count">· {plural(c.sameWeek.total + 1, 'link')}</span>
-          </h2>
-          <LinkList links={c.sameWeek.nearest} compact />
-          {c.sameWeek.total > c.sameWeek.nearest.length && (
-            <p class="more">
-              <a href={monthPath(link.year, link.month)}>
-                Everything saved in {monthNames[link.month - 1]} {link.year}
-              </a>
-            </p>
-          )}
-        </section>
-      )}
-    </div>
-
-    <span
-      hidden
-      data-pagefind-meta="host[data-host], date[data-date]"
-      data-host={link.host}
-      data-date={shortDateLabel(link.saved)}
-    ></span>
-    {appears.length > 0 && (
       <span
         hidden
-        data-pagefind-meta="issue[data-issue]"
-        data-issue={appears.map((a) => issueLabel(a.issue)).join(', ')}
-      />
-    )}
-    <span
-      hidden
-      data-pagefind-filter="year[data-year]"
-      data-year={String(link.year)}
-    ></span>
-    {appears.map((a) => (
+        data-pagefind-meta="host[data-host], date[data-date]"
+        data-host={link.host}
+        data-date={shortDateLabel(link.saved)}
+      ></span>
+      {appears.length > 0 && (
+        <span
+          hidden
+          data-pagefind-meta="issue[data-issue]"
+          data-issue={appears.map((a) => issueLabel(a.issue)).join(', ')}
+        />
+      )}
       <span
         hidden
-        data-pagefind-filter="issue[data-issue]"
-        data-issue={String(a.issue.number ?? 'special')}
-      />
-    ))}
-    {appears.length > 0 && (
-      <span hidden data-pagefind-filter="wt[data-wt]" data-wt="yes" />
-    )}
-    {link.hasNote && (
-      <span hidden data-pagefind-filter="note[data-note]" data-note="yes" />
-    )}
-    <span
-      hidden
-      data-pagefind-filter="kind[data-kind]"
-      data-kind={link.kind}
-    ></span>
-    <span
-      hidden
-      data-pagefind-sort="date[data-sort]"
-      data-sort={link.saved}
-    ></span>
-  </article>
+        data-pagefind-filter="year[data-year]"
+        data-year={String(link.year)}
+      ></span>
+      {appears.map((a) => (
+        <span
+          hidden
+          data-pagefind-filter="issue[data-issue]"
+          data-issue={String(a.issue.number ?? 'special')}
+        />
+      ))}
+      {appears.length > 0 && (
+        <span hidden data-pagefind-filter="wt[data-wt]" data-wt="yes" />
+      )}
+      {link.hasNote && (
+        <span hidden data-pagefind-filter="note[data-note]" data-note="yes" />
+      )}
+      <span
+        hidden
+        data-pagefind-filter="kind[data-kind]"
+        data-kind={link.kind}
+      ></span>
+      <span
+        hidden
+        data-pagefind-sort="date[data-sort]"
+        data-sort={link.saved}
+      ></span>
+    </article>
+  </Lens>
 </Layout>

@@ -585,8 +585,8 @@ word for Hosts, quote of the day in the whole-sky card".
   says how many and the years they span. Find works in the browser, not through
   Pagefind: lighting hundreds of stars would mean a request for each.
 - **The address is what is on the screen.** `?q=` what Find holds, `?view=time` the Time
-  layout, `#<id>` the star in view. Phase 2 moves a star to its own `/links/<id>/` and
-  adds the lens pages.
+  layout, `#<id>` the star in view. A star's card links to its own page, which is a
+  lens.
 - **Two files.** `/sky/places.json` (where the stars are: layout, day, note, topic,
   both layouts' places, topics, families; about 180 KB gzipped) loads first and the sky
   draws from it; `/sky/stars.json` (their names: ids, titles, sites, kinds, neighbours,
@@ -594,11 +594,31 @@ word for Hosts, quote of the day in the whole-sky card".
   carry the layout version, and `validate:site` checks they agree.
 - **Sites.** Hosts are Sites to a reader everywhere they are named; the URLs keep
   `/hosts/`.
-- **Phase 2**: the lens pages (an issue, a year, a site, a link, on this day at
-  `/on/MM-DD/`, a topic at `/topics/<name>/`), each lighting its stars beside a panel
-  with its list and bar charts, the address following the reader. **Phase 3**: share
-  cards drawn from the sky, by a `sky` layout in the cards project, deployed after Jamie
-  sees previews.
+- **Phase 2, the lens pages (an issue, a year, a site, a kind and a link built).** Each
+  is its own page at its own URL: the page in a night panel on the right, the sky
+  filling the window to its left and staying as the panel scrolls (on a phone, a strip
+  of sky above the page; across turns it, up and down scroll the page). The sky lights
+  what the panel lists (a kind's newest thousand, as its page does), or on a link's page
+  stands on it with its ten nearest round it; a year opens in Time. A gold chip at the
+  foot of the sky names the lens, with × back to the whole sky, beside the lenses either
+  side (the issue before and after, the year before and after). The bar is the front
+  page's, its ways in marking where the lens belongs; no Doors, Play or full screen
+  there, and no card, since the page is the card. Choosing a star opens its page. Find
+  lights its words over the lens, and cleared gives the lens back; the address keeps
+  `?q=`, and the layout when it is not the lens's own, never a star.
+- **A lens is a whole page.** Moving between lenses loads the page, so Tinylytics
+  counts it, the facts card and Kudos start as on any page, and the back button is the
+  browser's. The sky stays one sky across them: where the camera stood is kept for the
+  tab (sessionStorage), and the next page's sky opens there and flies to its own lens.
+  The places revalidate with an etag and the scripts are immutable, so a second lens
+  costs a 304. Layout's `lens` marks `<html>` before anything draws, so the page opens
+  at night beside the sky rather than turning into it; without the script or WebGL, or
+  when the stars do not load, the page is as it always was, with the site header.
+- **Still to come in Phase 2:** on this day at `/on/MM-DD/`, a topic at
+  `/topics/<name>/`, the year's bar charts (saved each month, most saved topics and
+  sites) in its panel, and lens chips on the front page. **Phase 3**: share cards drawn
+  from the sky, by a `sky` layout in the cards project, deployed after Jamie sees
+  previews.
 
 ## Topics
 

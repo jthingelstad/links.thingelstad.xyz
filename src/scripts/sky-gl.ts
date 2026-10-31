@@ -51,12 +51,29 @@ export interface View {
   stopPlay: () => void;
 }
 
+// Where the camera stands, so the next page's sky can open where this one
+// left off (sky.ts keeps it for the tab).
+export interface Camera {
+  target: Vec3;
+  r: number;
+  th: number;
+  ph: number;
+  // 0 Meaning, 1 Time.
+  mix: number;
+}
+
 // The sky has a whole sky to show, stars to light, and its two layouts.
 export interface SkyView extends View {
   whole: () => void;
-  // The stars Find lit, best first, or null; `frame` flies to take them in.
+  // The stars Find lit (or a lens, lib/lens.ts), best first, or null;
+  // `frame` flies to take them in.
   light: (found: number[] | null, frame: boolean) => void;
   arrange: (name: string, instant?: boolean) => void;
+  camera: () => Camera;
+  // Stand where a camera stood, at once.
+  place: (camera: Camera) => void;
+  // The next flight lands at once.
+  jump: () => void;
 }
 
 const VERTEX = `
@@ -186,6 +203,8 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
   const bar = $<HTMLElement>('.sky-bar');
   const playButton = $<HTMLButtonElement>('[data-play]');
   const fullButton = $<HTMLButtonElement>('[data-full]');
+  // A lens page (Lens.astro): its chips at the foot of the sky, and no card.
+  const lens = stage.querySelector<HTMLElement>('.sky-lens');
 
   // Places. Time's depth is the day saved, the middle of the years at 0;
   // each star sets off for the other layout at its own moment in time.
@@ -385,6 +404,7 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
     done?: () => void;
   }
   let fly: Flight | null = null;
+  let jumping = false;
   // The first flight waits while the whole sky shows; any flight sooner
   // (another star, Whole sky, Play) replaces it.
   let opening = 0;
@@ -398,9 +418,11 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
   }
   let morph: Morph | null = null;
 
+  // Right of the middle, clear of the card; in the middle on a lens page,
+  // which has none.
   function anchor(): [number, number] {
     const top = bar.offsetTop + bar.offsetHeight;
-    return [W * 0.6, top + (H - top) * 0.42];
+    return [W * (lens ? 0.5 : 0.6), top + (H - top) * 0.42];
   }
   function resize() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -469,7 +491,9 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
     window.clearTimeout(opening);
     const end = to();
     const dist = distance(target, end);
-    if (reduced) {
+    if (reduced || jumping) {
+      jumping = false;
+      fly = null;
       target.splice(0, 3, ...end);
       sph.r = r1;
       dirty = true;
@@ -490,13 +514,19 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
     };
   }
 
-  // What Find lit: the middle of the best of them, live, so a change of
-  // layout carries the camera with them; and back far enough to take most
-  // of them in.
-  const foundMiddle = (): Vec3 =>
-    spread(found.slice(0, 400).map((i) => posOf(i))).centre;
+  // What Find lit: their middle, live, so a change of layout carries the
+  // camera with them; and back far enough to take most of them in. Four
+  // hundred of them, taken evenly, stand for a thousand (a year's lens).
+  const sample = () => {
+    const step = Math.max(1, found.length / 400);
+    const out: Vec3[] = [];
+    for (let k = 0; k < found.length; k += step)
+      out.push(posOf(found[Math.floor(k)]));
+    return out;
+  };
+  const foundMiddle = (): Vec3 => spread(sample()).centre;
   function frameFound() {
-    const { radius } = spread(found.slice(0, 400).map((i) => posOf(i)));
+    const { radius } = spread(sample());
     follow = -1;
     flyTo(
       foundMiddle,
@@ -654,7 +684,7 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
     // The hint, while it shows, is in the way too.
     const hint = stage.querySelector<HTMLElement>('.sky-hint')!;
     const shown = hint.style.opacity === '0' ? [] : [hint];
-    for (const node of [bar, card, home, ...shown]) {
+    for (const node of [bar, card, home, ...shown, ...(lens ? [lens] : [])]) {
       const r = node.getBoundingClientRect();
       if (r.width)
         out.push({
@@ -1440,6 +1470,31 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
       wake();
     },
     arrange: setLayout,
+    // Where a flight under way is going, not where it is.
+    camera: () => ({
+      target: fly ? fly.to() : ([...target] as Vec3),
+      r: fly ? fly.r1 : sph.r,
+      th: sph.th,
+      ph: sph.ph,
+      mix: morph ? morph.to : mix,
+    }),
+    place(c) {
+      const sane = [...c.target, c.r, c.th, c.ph, c.mix].every(Number.isFinite);
+      if (!sane) return;
+      setLayout(c.mix > 0.5 ? 'time' : 'meaning', true);
+      window.clearTimeout(opening);
+      fly = null;
+      target.splice(0, 3, ...c.target);
+      sph.r = clamp(c.r, 2, 320);
+      sph.th = c.th;
+      sph.ph = clamp(c.ph, 0.15, Math.PI - 0.15);
+      shown = true;
+      dirty = true;
+      wake();
+    },
+    jump() {
+      jumping = true;
+    },
     resize() {
       resize();
       wake();

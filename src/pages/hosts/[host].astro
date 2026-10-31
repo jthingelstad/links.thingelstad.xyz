@@ -1,11 +1,15 @@
 ---
 // Every link from one host, newest first, with the host's facts, and the
-// host's own RSS and JSON Feed pair (src/lib/feeds.ts). The facts are what
+// host's own RSS and JSON Feed pair (src/lib/feeds.ts). A host is a Site to a
+// reader (Jamie, 2026-10-31); the URLs keep /hosts/. A lens (Lens.astro): the
+// sky beside it lights the site's links. The facts are what
 // RDAP and the host's home page say (src/lib/enrichment.ts): when the domain
 // was registered, the feeds and open-web signals the home page advertises.
 // Never whether the host still answers.
 import Layout from '../../layouts/Layout.astro';
 import LinkList from '../../components/LinkList.astro';
+import Lens from '../../components/Lens.astro';
+import type { Lens as LensFacts } from '../../lib/lens';
 import {
   dateLabel,
   hosts,
@@ -49,6 +53,11 @@ const openWeb = facts
       facts.webmention && 'accepts Webmentions',
     ].filter((s): s is string => !!s)
   : [];
+const lens: LensFacts = {
+  kind: 'set',
+  label: `Lens: ${host.host}`,
+  section: '/hosts/',
+};
 ---
 
 <Layout
@@ -57,55 +66,58 @@ const openWeb = facts
   description={`${plural(host.count, 'link')} Jamie Thingelstad saved from ${host.host}, ${span}.`}
   alternates={feeds}
   feed
+  lens
 >
-  <p class="kicker">Host</p>
-  <h1 class="page-title">{host.host}</h1>
-  <p class="lede">
-    {plural(host.count, 'link')}, {span}.
-  </p>
-  {facts && (
-    <section class="host-facts" aria-labelledby="host-facts">
-      <h2 id="host-facts">About the host</h2>
-      <dl class="facts">
-        {registered && (
-          <div>
-            <dt>Registered</dt>
-            <dd>{registered}</dd>
-          </div>
-        )}
-        {facts.homeTitle && (
-          <div>
-            <dt>Home page</dt>
-            <dd>{facts.homeTitle}</dd>
-          </div>
-        )}
-        {facts.generator && (
-          <div>
-            <dt>Generator</dt>
-            <dd>{facts.generator}</dd>
-          </div>
-        )}
-        {facts.feeds.length > 0 && (
-          <div>
-            <dt>{facts.feeds.length === 1 ? 'Feed' : 'Feeds'}</dt>
-            <dd>
-              {facts.feeds.map((feed, i) => (
-                <>
-                  {i > 0 && ', '}
-                  <a href={feed.url}>{feedLabel(feed)}</a>
-                </>
-              ))}
-            </dd>
-          </div>
-        )}
-        {openWeb.length > 0 && (
-          <div>
-            <dt>Open web</dt>
-            <dd>{openWeb.join(', ')}</dd>
-          </div>
-        )}
-      </dl>
-    </section>
-  )}
-  <LinkList links={list} host={false} snippet entries />
+  <Lens lens={lens}>
+    <p class="kicker">Site</p>
+    <h1 class="page-title">{host.host}</h1>
+    <p class="lede">
+      {plural(host.count, 'link')}, {span}.
+    </p>
+    {facts && (
+      <section class="host-facts" aria-labelledby="host-facts">
+        <h2 id="host-facts">About the site</h2>
+        <dl class="facts">
+          {registered && (
+            <div>
+              <dt>Registered</dt>
+              <dd>{registered}</dd>
+            </div>
+          )}
+          {facts.homeTitle && (
+            <div>
+              <dt>Home page</dt>
+              <dd>{facts.homeTitle}</dd>
+            </div>
+          )}
+          {facts.generator && (
+            <div>
+              <dt>Generator</dt>
+              <dd>{facts.generator}</dd>
+            </div>
+          )}
+          {facts.feeds.length > 0 && (
+            <div>
+              <dt>{facts.feeds.length === 1 ? 'Feed' : 'Feeds'}</dt>
+              <dd>
+                {facts.feeds.map((feed, i) => (
+                  <>
+                    {i > 0 && ', '}
+                    <a href={feed.url}>{feedLabel(feed)}</a>
+                  </>
+                ))}
+              </dd>
+            </div>
+          )}
+          {openWeb.length > 0 && (
+            <div>
+              <dt>Open web</dt>
+              <dd>{openWeb.join(', ')}</dd>
+            </div>
+          )}
+        </dl>
+      </section>
+    )}
+    <LinkList links={list} host={false} snippet entries />
+  </Lens>
 </Layout>

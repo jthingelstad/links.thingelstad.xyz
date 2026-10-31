@@ -15,7 +15,11 @@
 // or Vimeo until it is clicked, then becomes the player; /sky/#<id> opens on
 // that link (in the sky on the desktop, or Doors where the browser has no
 // WebGL; Doors on a phone), a door walks to a neighbour and Back returns, the
-// address following; and no request reaches Tinylytics.
+// address following; a lens page (an issue, a link, a year) opens beside
+// the sky without the header, lights what it lists, takes Find with the
+// words in the address, opens a chosen star's page, whose doors walk on, and
+// a year opens in Time (or, without WebGL, is the plain page with the
+// header); and no request reaches Tinylytics.
 // SITE_TEST_URL defaults to the dev server; tools/test-built-site.mjs
 // runs this against dist/ behind the edge function (SITE_TEST_EDGE=1), which
 // adds the redirect and 404 checks. Evidence goes to SITE_QA_DIR
@@ -501,6 +505,88 @@ for (const [name, viewport] of [
   await shows(path(record.record));
   await page.screenshot({ path: shot(name, '/sky/walk') });
 
+  // Lens pages (src/components/Lens.astro): where the script and WebGL are,
+  // an issue opens beside the sky, at night, with no site header, and the
+  // sky lights the links it lists; Find lights over the lens with the words
+  // in the address, and clearing it gives the lens back; a star chosen there
+  // opens its page, which stands on its link with its neighbours as doors; a
+  // year opens in Time. Without WebGL it is the plain page with the header.
+  const lensAt = async (route) => {
+    await page.goto(base + route, { waitUntil: 'networkidle' });
+    await page
+      .locator('[data-sky][data-view], [data-sky][hidden]')
+      .waitFor({ state: 'attached', timeout: 15000 });
+    return page.evaluate(() =>
+      document.documentElement.hasAttribute('data-lens'),
+    );
+  };
+  const issueLens = path(record.issues[0].page);
+  if (await lensAt(issueLens)) {
+    assert.ok(
+      await page.locator('.site-header').isHidden(),
+      'a lens has no site header',
+    );
+    assert.match(
+      (await page.locator('.sky-lens-now').textContent()) ?? '',
+      /Lens: /,
+      'the gold chip names the lens',
+    );
+    const lit = page.locator('.sky-found[data-star]');
+    await lit.first().waitFor({ state: 'attached', timeout: 15000 });
+    const lensFind = page.locator('#sky-find');
+    await lensFind.fill(word);
+    await page.waitForURL((url) => url.searchParams.get('q') === word);
+    assert.equal(
+      new URL(page.url()).pathname,
+      issueLens,
+      'Find stays on the lens',
+    );
+    await lensFind.fill('');
+    await page.waitForURL((url) => !url.searchParams.has('q'));
+    await lit.first().waitFor({ state: 'attached', timeout: 15000 });
+    await page.screenshot({ path: shot(name, `${issueLens}lens`) });
+    await lit.first().dispatchEvent('click');
+    await page.waitForURL((url) =>
+      /^\/links\/[0-9a-f]{12}\/$/.test(url.pathname),
+    );
+    const chosen = new URL(page.url()).pathname;
+    assert.ok(
+      await lensAt(chosen),
+      'a star chosen on a lens opens its page as a lens',
+    );
+    assert.match(
+      (await page.locator('.sky-lens-now').textContent()) ?? '',
+      /Nearest to /,
+      'the lens on a link is its nearest',
+    );
+    const lensDoor = page.locator('.sky-door');
+    await lensDoor.first().waitFor({ state: 'attached', timeout: 15000 });
+    await page.screenshot({ path: shot(name, `${chosen}lens`) });
+    await lensDoor.first().dispatchEvent('click');
+    await page.waitForURL(
+      (url) =>
+        /^\/links\/[0-9a-f]{12}\/$/.test(url.pathname) &&
+        url.pathname !== chosen,
+    );
+    const year = `/years/${record.saved.slice(0, 4)}/`;
+    assert.ok(await lensAt(year), 'a year is a lens');
+    const timeButton = page.locator('[data-layout="time"]');
+    assert.equal(
+      await timeButton.getAttribute('aria-pressed'),
+      'true',
+      'a year opens in Time',
+    );
+    assert.equal(new URL(page.url()).search, '', 'with nothing to say so');
+    await page.locator('[data-layout="meaning"]').click();
+    await page.waitForURL((url) => url.searchParams.get('view') === 'meaning');
+  } else {
+    assert.ok(
+      await page.locator('.site-header').isVisible(),
+      'without the sky a lens page keeps its header',
+    );
+    assert.ok(await page.locator('[data-sky]').isHidden(), 'and shows no sky');
+  }
+
   if (edge) {
     const missing = await page.goto(`${base}/links/not-a-link/`);
     assert.equal(missing?.status(), 404, 'a missing page is a 404');
@@ -550,5 +636,5 @@ if (production)
   );
 else assert.deepEqual(analytics, [], 'no Tinylytics requests during QA');
 console.log(
-  `Checked ${routes.length} routes, a search and its preview pane, a kind: search, /surprise/, a site: suggestion, the sky on the front page (Surprise me, Find, the address) and a walk at /sky/ at desktop and phone widths${video ? ', the video facade' : ' (no video facts to check the facade on)'}${edge ? ', /links.db, the redirects and the 404' : ''}; evidence in ${output}`,
+  `Checked ${routes.length} routes, a search and its preview pane, a kind: search, /surprise/, a site: suggestion, the sky on the front page (Surprise me, Find, the address), a walk at /sky/ and the lens pages at desktop and phone widths${video ? ', the video facade' : ' (no video facts to check the facade on)'}${edge ? ', /links.db, the redirects and the 404' : ''}; evidence in ${output}`,
 );

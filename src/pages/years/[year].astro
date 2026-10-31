@@ -1,8 +1,11 @@
 ---
 // One year of saving, by month, oldest first: the date spine, kept to a page
-// per year.
+// per year. A lens (Lens.astro): the sky beside it lights the year's links,
+// laid out by Time, with the years either side as chips.
 import Layout from '../../layouts/Layout.astro';
 import LinkList from '../../components/LinkList.astro';
+import Lens from '../../components/Lens.astro';
+import type { Lens as LensFacts } from '../../lib/lens';
 import {
   type Link,
   appearances,
@@ -31,32 +34,61 @@ const notes = list.filter((link) => link.hasNote).length;
 const inIssues = list.filter((link) => appearances.has(link.id)).length;
 const day = (link: Link) =>
   `${monthNames[link.month - 1].slice(0, 3)} ${Number(link.day.slice(8))}`;
+const lens: LensFacts = {
+  kind: 'set',
+  label: `Lens: ${year}`,
+  view: 'time',
+  section: '/years/',
+  chips: [
+    ...(years.includes(year - 1)
+      ? [
+          {
+            href: yearPath(year - 1),
+            label: String(year - 1),
+            rel: 'prev' as const,
+          },
+        ]
+      : []),
+    ...(years.includes(year + 1)
+      ? [
+          {
+            href: yearPath(year + 1),
+            label: String(year + 1),
+            rel: 'next' as const,
+          },
+        ]
+      : []),
+  ],
+};
 ---
 
 <Layout
   title={`${year} · Linking Things`}
   description={`The ${plural(list.length, 'link')} Jamie Thingelstad saved in ${year}, by month.`}
   feed
+  lens
 >
-  <p class="kicker">Year</p>
-  <h1 class="page-title">{year}</h1>
-  <p class="lede">
-    {plural(list.length, 'link')} saved in {year}; {number(notes)} with a note
-    {inIssues > 0 && `, ${number(inIssues)} in a Weekly Thing`}.
-  </p>
-  <nav class="year-nav" aria-label="Years">
-    {years.map((y) => (
-      <a href={yearPath(y)} aria-current={y === year ? 'page' : undefined}>
-        {y}
-      </a>
+  <Lens lens={lens}>
+    <p class="kicker">Year</p>
+    <h1 class="page-title">{year}</h1>
+    <p class="lede">
+      {plural(list.length, 'link')} saved in {year}; {number(notes)} with a note
+      {inIssues > 0 && `, ${number(inIssues)} in a Weekly Thing`}.
+    </p>
+    <nav class="year-nav" aria-label="Years">
+      {years.map((y) => (
+        <a href={yearPath(y)} aria-current={y === year ? 'page' : undefined}>
+          {y}
+        </a>
+      ))}
+    </nav>
+    {months.map((m) => (
+      <section class="month" id={monthAnchor(year, m.month)}>
+        <h2>
+          {m.name} <span class="meta">{plural(m.links.length, 'link')}</span>
+        </h2>
+        <LinkList links={m.links} compact date={day} entries />
+      </section>
     ))}
-  </nav>
-  {months.map((m) => (
-    <section class="month" id={monthAnchor(year, m.month)}>
-      <h2>
-        {m.name} <span class="meta">{plural(m.links.length, 'link')}</span>
-      </h2>
-      <LinkList links={m.links} compact date={day} entries />
-    </section>
-  ))}
+  </Lens>
 </Layout>

@@ -9,6 +9,13 @@
 // line in the whole-sky card is good"), cut to two lines until it is opened,
 // every quote in the page and the day's shown, since the page may be days old
 // (the script in index.astro turns to today's).
+//
+// On a lens page (Lens.astro, lib/lens.ts) the stage is the sky beside the
+// page: the wordmark and the ways in, Find, Meaning and Time, and the lens's
+// chips (the gold one names it, with × back to the whole sky; the others are
+// the lenses either side). No Doors, Play or full screen there, and no card:
+// the page beside it is the card.
+import type { Lens } from '../lib/lens';
 import {
   aboutPath,
   newestPath,
@@ -23,8 +30,11 @@ interface Props {
   // The front page: the wordmark and the ways in, the quote, and the whole
   // sky to start on.
   home?: boolean;
+  // A lens page: the sky beside it.
+  lens?: Lens;
 }
-const { home = false } = Astro.props;
+const { home = false, lens } = Astro.props;
+const bar = home || !!lens;
 const pick = home && quotes.length ? dayIndex(quotes.length) : -1;
 const waysIn = [
   [newestPath, 'Newest'],
@@ -41,6 +51,9 @@ const waysIn = [
   class:list={['sky', { 'sky-home-page': home }]}
   data-sky
   data-start={home ? 'whole' : undefined}
+  data-lens={lens?.kind}
+  data-lens-star={lens?.star}
+  data-lens-view={lens?.view}
   hidden
 >
   <canvas
@@ -52,40 +65,47 @@ const waysIn = [
   <div class="sky-labels"></div>
   <div class="sky-ring" aria-hidden="true"></div>
   <div class="sky-tip" aria-hidden="true"></div>
-  <p class="doors-about doors-only">
-    One link at a time, and the ten nearest it in meaning as doors to step
-    through
-    <span class="doors-wide">
-      , each on the side where it lies on the map behind
-    </span>
-    . The path you take is kept as you go.
-  </p>
-  <div class="doors" hidden>
-    <canvas class="doors-map" aria-hidden="true"></canvas>
-    <div class="doors-stage">
-      <nav
-        class="doors-side top"
-        aria-label="Nearest links that lie above"
-      ></nav>
-      <nav
-        class="doors-side left"
-        aria-label="Nearest links that lie left"
-      ></nav>
-      <article class="doors-page sky-card-body" aria-live="polite"></article>
-      <nav
-        class="doors-side right"
-        aria-label="Nearest links that lie right"
-      ></nav>
-      <nav
-        class="doors-side bottom"
-        aria-label="Nearest links that lie below"
-      ></nav>
-      <h2 class="doors-around">Nearest in meaning</h2>
-    </div>
-    <nav class="doors-path" aria-label="Your path"></nav>
-  </div>
+  {!lens && (
+    <>
+      <p class="doors-about doors-only">
+        One link at a time, and the ten nearest it in meaning as doors to step
+        through
+        <span class="doors-wide">
+          , each on the side where it lies on the map behind
+        </span>
+        . The path you take is kept as you go.
+      </p>
+      <div class="doors" hidden>
+        <canvas class="doors-map" aria-hidden="true"></canvas>
+        <div class="doors-stage">
+          <nav
+            class="doors-side top"
+            aria-label="Nearest links that lie above"
+          ></nav>
+          <nav
+            class="doors-side left"
+            aria-label="Nearest links that lie left"
+          ></nav>
+          <article
+            class="doors-page sky-card-body"
+            aria-live="polite"
+          ></article>
+          <nav
+            class="doors-side right"
+            aria-label="Nearest links that lie right"
+          ></nav>
+          <nav
+            class="doors-side bottom"
+            aria-label="Nearest links that lie below"
+          ></nav>
+          <h2 class="doors-around">Nearest in meaning</h2>
+        </div>
+        <nav class="doors-path" aria-label="Your path"></nav>
+      </div>
+    </>
+  )}
   <div class="sky-bar">
-    {home && (
+    {bar && (
       <a class="sky-wordmark" href="/">
         Linking Things
       </a>
@@ -160,14 +180,46 @@ const waysIn = [
     <button class="sky-tool" type="button" hidden data-toggle-view>
       Doors
     </button>
-    {home && (
+    {bar && (
       <nav class="sky-ways" aria-label="Ways in">
         {waysIn.map(([href, label]) => (
-          <a href={href}>{label}</a>
+          <a
+            href={href}
+            aria-current={lens?.section === href ? 'page' : undefined}
+          >
+            {label}
+          </a>
         ))}
       </nav>
     )}
   </div>
+  {lens && (
+    <nav class="sky-lens" aria-label="Lens">
+      <p class="sky-lens-now">
+        <span>{lens.label}</span>
+        <a
+          class="sky-lens-close"
+          href="/"
+          aria-label="Close the lens: the whole sky"
+          title="The whole sky"
+        >
+          <svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true">
+            <path
+              d="M2 2l8 8M10 2l-8 8"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            ></path>
+          </svg>
+        </a>
+      </p>
+      {lens.chips?.map((chip) => (
+        <a class="sky-lens-chip" href={chip.href} rel={chip.rel}>
+          {chip.label}
+        </a>
+      ))}
+    </nav>
+  )}
   <aside class="sky-card sky-card-body sky-only" aria-live="polite"></aside>
   <aside class="sky-home sky-card-body sky-only" aria-label="The whole sky">
     <div data-home-about>

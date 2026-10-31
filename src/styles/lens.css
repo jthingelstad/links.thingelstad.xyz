@@ -1,0 +1,238 @@
+/* Lens pages (src/components/Lens.astro): the sky to the left of the window,
+   the page in a night panel to the right of it; on a phone, a strip of sky
+   above the page. Only while <html> carries data-lens (Layout's `lens`,
+   which the sky's script takes away if the stars do not load); otherwise
+   the page is as it always was. The night is the sky's (sky.css), not the
+   site's dark mode, whatever the reader's system asks for. Nothing smaller
+   than --jt-size-label, and no italics. */
+.lens-sky {
+  display: none;
+}
+
+html[data-lens] {
+  color-scheme: dark;
+  --lens-panel: min(36rem, 44vw);
+  --jt-ground: #0c1428;
+  --jt-ink: #e9ecf5;
+  --jt-text-soft: #c3c9da;
+  --jt-text-muted: #9aa2b8;
+  --jt-strip: #080d1c;
+  --jt-weekly-text: #78acf2;
+  --jt-weekly-soft: #162338;
+  --jt-another-text: #f58aa3;
+  --jt-another-soft: #2b1820;
+  --jt-thingy-text: #f3a274;
+  --jt-thingy-soft: #2c1f17;
+  --jt-xyz-text: #74d3a0;
+  --jt-xyz-soft: #14261c;
+  --line: rgba(160, 175, 220, 0.2);
+  --card: rgba(160, 175, 220, 0.1);
+  --link: #9fb4ff;
+  --visited: #d2b0ff;
+  --mark: #4a4012;
+  --viz-axis: #39425e;
+  --viz-q1: #184f95;
+  --viz-q2: #256abf;
+  --viz-q3: #3987e5;
+  --viz-q4: #6da7ec;
+  --viz-q5: #b7d3f6;
+}
+
+/* The strip at night, as the site's dark mode draws it. */
+html[data-lens] .sites-strip {
+  background: var(--jt-strip);
+}
+html[data-lens] .sites-strip__label {
+  color: #9aa2b8;
+}
+html[data-lens] .sites-strip a,
+html[data-lens] .sites-strip a:visited,
+html[data-lens] .sites-strip a:hover {
+  color: #e9ecf5;
+}
+html[data-lens] .sites-strip a:focus-visible {
+  outline-color: #e9ecf5;
+}
+html[data-lens] .sites-strip__item--weekly a,
+html[data-lens] .sites-strip__item--weekly a:visited {
+  color: #78acf2;
+}
+html[data-lens] .sites-strip__item--another a,
+html[data-lens] .sites-strip__item--another a:visited {
+  color: #f58aa3;
+}
+html[data-lens] .sites-strip__item--thingy a,
+html[data-lens] .sites-strip__item--thingy a:visited {
+  color: #f3a274;
+}
+html[data-lens] .sites-strip__item--xyz a,
+html[data-lens] .sites-strip__item--xyz a:visited {
+  color: #74d3a0;
+}
+
+/* The bar's sky takes the header's place. No auto margins: in the panel's
+   grid they would size the page to its content rather than to the panel. */
+html[data-lens] .site-header {
+  display: none;
+}
+html[data-lens] .site-main,
+html[data-lens] .site-footer {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+html[data-lens] .lens-sky {
+  display: block;
+  background: #04060c;
+}
+html[data-lens] .lens-sky .sky {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* A wide screen: the sky holds the window left of the panel, and the strip,
+   the panel and the footer run down the right. */
+@media (min-width: 901px) {
+  html[data-lens] body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--lens-panel);
+  }
+  html[data-lens] body > * {
+    grid-column: 2;
+    min-width: 0;
+  }
+  html[data-lens] .lens-sky {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - var(--lens-panel));
+    border-right: 1px solid rgba(195, 201, 218, 0.16);
+  }
+  html[data-lens] .sites-strip__inner {
+    max-width: none;
+  }
+  html[data-lens] .site-main {
+    padding-top: 28px;
+  }
+}
+
+/* A phone: a strip of sky over the page. Up and down on it scroll the page;
+   across turns the sky. */
+@media (max-width: 900px) {
+  html[data-lens] .lens-sky {
+    height: min(30rem, 64svh);
+    margin: -8px calc(-1 * var(--jt-gutter)) 24px;
+  }
+  html[data-lens] .lens-sky .sky-gl {
+    touch-action: pan-y;
+  }
+}
+
+/* On the sky: no card (the page is the card), no Play, no full screen, and
+   no hint where the chips are. */
+.sky[data-lens] .sky-card,
+.sky[data-lens] .sky-home,
+.sky[data-lens] .sky-hint,
+.sky[data-lens] [data-play],
+.sky[data-lens] [data-full] {
+  display: none;
+}
+
+/* The lens's chips, at the foot of the sky: the gold one names the lens,
+   with × back to the whole sky; the others are the lenses either side. */
+.sky-lens {
+  position: absolute;
+  z-index: 6;
+  left: max(var(--jt-gutter), env(safe-area-inset-left, 0px));
+  right: max(var(--jt-gutter), env(safe-area-inset-right, 0px));
+  bottom: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+  font-size: var(--jt-size-meta);
+  line-height: 1.2;
+}
+.sky-lens > * {
+  pointer-events: auto;
+}
+.sky-lens-now {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 40px;
+  margin: 0;
+  padding: 4px 4px 4px 16px;
+  border-radius: 20px;
+  color: #04060c;
+  background: var(--sky-here);
+  font-weight: 600;
+}
+.sky-lens-now span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sky-lens-close,
+.sky-lens-close:visited {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #04060c;
+}
+.sky-lens-close:hover {
+  background: rgb(4 6 12 / 12%);
+}
+.sky-lens .sky-lens-close:focus-visible {
+  outline-color: #04060c;
+  outline-offset: 0;
+}
+.sky-lens-chip,
+.sky-lens-chip:visited {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 4px 16px;
+  border: 1px solid var(--edge);
+  border-radius: 20px;
+  color: var(--sky-soft);
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  backdrop-filter: blur(14px) saturate(1.2);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.sky-lens-chip:hover {
+  color: var(--sky-ink);
+  border-color: var(--sky-muted);
+}
+
+/* The page in the panel: a column, its titles to the panel's size. */
+html[data-lens] .lens-panel .page-title {
+  font-size: var(--jt-size-h2);
+}
+html[data-lens] .lens-panel .record-title {
+  font-size: var(--jt-size-h2);
+}
+html[data-lens] .lens-panel .record-body,
+html[data-lens] .lens-panel .record-related {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* The ways in mark the part of the site the lens is in. */
+.sky-ways a[aria-current='page'] {
+  color: var(--sky-ink);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}

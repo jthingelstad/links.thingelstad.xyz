@@ -18,6 +18,15 @@
 //
 // The address is what is on the screen: ?q= what Find holds, ?view=time the
 // Time layout, #<id> the star in view.
+//
+// On a lens page (Lens.astro, lib/lens.ts) it is the sky alone, beside the
+// page: it lights the links the page lists, or stands on the page's own link
+// with its ten nearest round it, and a star chosen opens its page, which is a
+// lens too. Find lights its words over the lens, and cleared gives the lens
+// back. The address keeps ?q= and the layout (?view=, when it is not the
+// lens's own), never a star. Where the camera stood is kept for the tab
+// (sessionStorage), so the next page's sky opens there and flies to its own
+// lens: one sky, page to page.
 import { linkPath, skyPlacesPath, skyStarsPath } from '../lib/paths.ts';
 import { parse } from '../lib/search-grammar.ts';
 import {
@@ -29,11 +38,23 @@ import {
 } from '../lib/sky.ts';
 import { element, metaOf } from './sky-card.ts';
 import { startDoors } from './sky-doors.ts';
-import { type SkyView, type View, type Walk, startSky } from './sky-gl.ts';
+import {
+  type Camera,
+  type SkyView,
+  type View,
+  type Walk,
+  startSky,
+} from './sky-gl.ts';
 import { initSuggest } from './suggest.ts';
 
 // The most of a walk the trail keeps.
 const TRAIL = 60;
+// Where the camera stood on the last page, and how long that holds.
+const CAMERA = 'links-sky-camera';
+const CAMERA_HOLDS = 30 * 60_000;
+// Names that come this soon after the places open a lens at once; later
+// ones fly to it from the whole sky.
+const QUICK = 400;
 
 async function load<T>(url: string) {
   const response = await fetch(url);
@@ -45,6 +66,9 @@ export async function initSky() {
   const root = document.querySelector<HTMLElement>('[data-sky]');
   if (!root) return;
   const stage = root;
+  // A lens page: light what the page lists ('set'), or stand on its link.
+  const lens = stage.dataset.lens as 'set' | 'star' | undefined;
+  const lensView = stage.dataset.lensView === 'time' ? 'time' : 'meaning';
   // The front page's plain door, for a reader without the script, gives way
   // to the sky, and comes back if the stars do not load.
   const plain = document.querySelector<HTMLElement>('[data-sky-plain]');
@@ -58,7 +82,15 @@ export async function initSky() {
   fit();
   const loading = stage.querySelector<HTMLElement>('.sky-loading')!;
   const failed = () => {
-    if (plain) {
+    // A lens page goes back to being the page.
+    if (lens) {
+      stage.hidden = true;
+      document.documentElement.removeAttribute('data-lens');
+      for (const meta of document.querySelectorAll<HTMLMetaElement>(
+        'meta[data-day]',
+      ))
+        meta.content = meta.dataset.day!;
+    } else if (plain) {
       plain.hidden = false;
       stage.hidden = true;
     } else
@@ -98,7 +130,13 @@ export async function initSky() {
   const visited = new Set<number>();
   let query = '';
   let found: number[] | null = null;
-  let arranged = params.get('view') === 'time' ? 'time' : 'meaning';
+  const layoutAsked = params.get('view');
+  let arranged =
+    layoutAsked === 'time' || layoutAsked === 'meaning'
+      ? layoutAsked
+      : lens
+        ? lensView
+        : 'meaning';
   const walk: Walk = {
     sky,
     current: () => cur,
@@ -110,6 +148,8 @@ export async function initSky() {
   };
 
   const sky3d: SkyView | null = startSky(stage, walk);
+  // A lens is the sky's alone.
+  if (lens && !sky3d) return failed();
   let doors: View | null = null;
   // The reader's own choice of view on a wide screen with WebGL.
   let chosen: 'sky' | 'doors' = 'sky';
@@ -118,8 +158,9 @@ export async function initSky() {
   let view: View | null = null;
   const noted = sky.note.flatMap((n, i) => (n ? [i] : []));
   function use(instant = false) {
-    const next = !sky3d || small() || chosen === 'doors' ? doors : sky3d;
-    toggle.hidden = !sky3d || !doors || small();
+    const next =
+      !lens && (!sky3d || small() || chosen === 'doors') ? doors : sky3d;
+    toggle.hidden = !!lens || !sky3d || !doors || small();
     toggle.textContent = next === sky3d ? 'Doors' : 'Sky';
     // Doors waits for the names.
     if (!next || next === view) return;
@@ -141,21 +182,57 @@ export async function initSky() {
     chosen = view === sky3d ? 'doors' : 'sky';
     use();
   });
-  if (sky3d && params.get('view') === 'time') sky3d.arrange('time', true);
-  if (sky3d && !small()) {
+  // The camera the last page left, on a lens page.
+  let restored = false;
+  if (lens && sky3d)
+    try {
+      const kept = JSON.parse(sessionStorage.getItem(CAMERA) ?? 'null') as
+        (Camera & { at: number; layout: number }) | null;
+      if (
+        kept &&
+        kept.layout === places.layout &&
+        Date.now() - kept.at < CAMERA_HOLDS
+      ) {
+        sky3d.place(kept);
+        restored = true;
+      }
+    } catch {
+      // No storage: the sky opens on its own.
+    }
+  if (sky3d && (arranged === 'time' || restored))
+    sky3d.arrange(arranged, !restored);
+  if (sky3d && (lens || !small())) {
     loading.remove();
     use();
   }
+  const placed = performance.now();
+  if (sky3d)
+    addEventListener('pagehide', () => {
+      try {
+        sessionStorage.setItem(
+          CAMERA,
+          JSON.stringify({
+            ...sky3d.camera(),
+            at: Date.now(),
+            layout: places.layout,
+          }),
+        );
+      } catch {
+        // Not kept: the next page opens on its own.
+      }
+    });
 
   function address() {
     const search = new URLSearchParams();
     if (found && query) search.set('q', query);
-    if (arranged === 'time') search.set('view', 'time');
+    if (arranged !== (lens ? lensView : 'meaning'))
+      search.set('view', arranged);
     const rest = search.toString();
+    const star = !lens && cur >= 0 ? `#${sky.ids[cur]}` : '';
     history.replaceState(
       null,
       '',
-      `${location.pathname}${rest ? `?${rest}` : ''}${cur >= 0 ? `#${sky.ids[cur]}` : ''}`,
+      `${location.pathname}${rest ? `?${rest}` : ''}${star}`,
     );
   }
 
@@ -168,6 +245,8 @@ export async function initSky() {
       return;
     }
     if (j === cur || j < 0) return;
+    // On a lens page, a star is its page.
+    if (lens) return location.assign(linkPath(sky.ids[j]));
     if (cur >= 0) visited.add(cur);
     if (trail[trail.length - 1] === j) {
       // Already cut back to it (the path in Doors).
@@ -183,7 +262,7 @@ export async function initSky() {
   }
   // Back out to the whole sky (the sky only; Doors always has a star).
   function leave() {
-    if (cur < 0 || view !== sky3d) return;
+    if (lens || cur < 0 || view !== sky3d) return;
     visited.add(cur);
     cur = -1;
     trail.length = 0;
@@ -256,7 +335,7 @@ export async function initSky() {
     if (next && !sure && !suggestions.settled()) return;
     found = next;
     query = next ? text : '';
-    sky3d?.light(found, frame);
+    sky3d?.light(found ?? (lens === 'set' ? lensSet : null), frame);
     suggestions.links(
       found
         ? {
@@ -279,6 +358,9 @@ export async function initSky() {
     clearTimeout(typing);
     typing = setTimeout(() => run(true), 160);
   });
+  // The links a set lens lights: those the page lists, in its order, the
+  // ones with a note first (theirs are the titles the sky names).
+  let lensSet: number[] = [];
   // Enter with nothing chosen stays on the sky: it takes in what is lit, or
   // in Doors goes to the best of it.
   form.addEventListener('submit', (event) => {
@@ -326,8 +408,9 @@ export async function initSky() {
   if (names.layout !== places.layout || names.ids.length !== N) return failed();
   Object.assign(sky, names);
   index = new Map(sky.ids.map((id, i) => [id, i]));
-  doors = startDoors(stage, walk);
   loading.remove();
+  if (lens) return openLens();
+  doors = startDoors(stage, walk);
   addEventListener('hashchange', () => {
     const i = index.get(location.hash.slice(1));
     if (i !== undefined) go(i);
@@ -360,4 +443,35 @@ export async function initSky() {
   if (now && now === was && cur >= 0) now.show(cur, true);
   address();
   card();
+
+  // A lens page, once the names are here: its stars lit, or its link in
+  // view; at once if the names came quickly and no page came before, else
+  // flown to.
+  function openLens() {
+    const quick = performance.now() - placed < QUICK;
+    if (lens === 'set') {
+      const listed = new Set<number>();
+      for (const a of document.querySelectorAll<HTMLAnchorElement>(
+        '[data-lens-panel] .link-list a.title',
+      )) {
+        const i = starOf(a.href);
+        if (i !== undefined) listed.add(i);
+      }
+      lensSet = [...listed].sort(
+        (a, b) => Number(!sky.note[a]) - Number(!sky.note[b]),
+      );
+    }
+    const star = index.get(stage.dataset.lensStar ?? '') ?? -1;
+    if (quick && !restored) sky3d!.jump();
+    if (params.get('q') && !input.value) input.value = params.get('q')!;
+    if (lens === 'star' && star >= 0) {
+      cur = star;
+      trail.push(star);
+      visited.add(star);
+      sky3d!.show(star, false);
+      if (input.value.trim()) run(false);
+    } else if (input.value.trim()) run(true);
+    else sky3d!.light(lensSet, true);
+    address();
+  }
 }

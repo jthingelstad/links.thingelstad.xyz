@@ -4,8 +4,11 @@
 // (src/lib/feeds.ts). A page lists at most KIND_PAGE_LIMIT links: "page",
 // everything that is no other kind, holds most of the archive, and all of it
 // on one page would be megabytes. Every link is still on its year's page.
+// A lens (Lens.astro): the sky beside it lights the links the page lists.
 import Layout from '../../layouts/Layout.astro';
 import LinkList from '../../components/LinkList.astro';
+import Lens from '../../components/Lens.astro';
+import type { Lens as LensFacts } from '../../lib/lens';
 import {
   type Kind,
   feedPath,
@@ -34,6 +37,11 @@ const byYear = new Map<number, typeof list>();
 for (const link of shown)
   byYear.set(link.year, [...(byYear.get(link.year) ?? []), link]);
 const feed = kindFeed(kind);
+const lens: LensFacts = {
+  kind: 'set',
+  label: `Lens: ${words.title}`,
+  section: '/kinds/',
+};
 ---
 
 <Layout
@@ -41,43 +49,46 @@ const feed = kindFeed(kind);
   description={`${plural(list.length, 'link')} of the kind ${words.name.toLowerCase()} that Jamie Thingelstad has saved. ${words.about}`}
   alternates={feedAlternates(feed)}
   feed
+  lens
 >
-  <p class="kicker">
-    <a href="/kinds/">Kind</a>
-  </p>
-  <h1 class="page-title">{words.title}</h1>
-  <p
-    class="lede"
-    data-count={String(list.length)}
-    data-shown={String(shown.length)}
-  >
-    {words.about}{' '}
-    {shown.length < list.length ? (
-      <>
-        {plural(list.length, 'link')}; the newest {number(shown.length)} are
-        here, and every one is on its year's page in <a href="/years/">Years</a>
-        .
-      </>
-    ) : (
-      <>{plural(list.length, 'link')}, newest first.</>
-    )}{' '}
-    The newest are also a feed (
-    <a href={feedPath('rss', kindPath(kind))}>RSS</a> or{' '}
-    <a href={feedPath('json', kindPath(kind))}>JSON Feed</a>).
-  </p>
-  <nav class="year-nav" aria-label="Kinds">
-    {kinds.map((k) => (
-      <a href={kindPath(k)} aria-current={k === kind ? 'page' : undefined}>
-        {kindWords[k].title}
-      </a>
+  <Lens lens={lens}>
+    <p class="kicker">
+      <a href="/kinds/">Kind</a>
+    </p>
+    <h1 class="page-title">{words.title}</h1>
+    <p
+      class="lede"
+      data-count={String(list.length)}
+      data-shown={String(shown.length)}
+    >
+      {words.about}{' '}
+      {shown.length < list.length ? (
+        <>
+          {plural(list.length, 'link')}; the newest {number(shown.length)} are
+          here, and every one is on its year's page in{' '}
+          <a href="/years/">Years</a>.
+        </>
+      ) : (
+        <>{plural(list.length, 'link')}, newest first.</>
+      )}{' '}
+      The newest are also a feed (
+      <a href={feedPath('rss', kindPath(kind))}>RSS</a> or{' '}
+      <a href={feedPath('json', kindPath(kind))}>JSON Feed</a>).
+    </p>
+    <nav class="year-nav" aria-label="Kinds">
+      {kinds.map((k) => (
+        <a href={kindPath(k)} aria-current={k === kind ? 'page' : undefined}>
+          {kindWords[k].title}
+        </a>
+      ))}
+    </nav>
+    {[...byYear].map(([year, links]) => (
+      <section class="month" id={String(year)}>
+        <h2>
+          {year} <span class="meta">{plural(links.length, 'link')}</span>
+        </h2>
+        <LinkList links={links} compact entries />
+      </section>
     ))}
-  </nav>
-  {[...byYear].map(([year, links]) => (
-    <section class="month" id={String(year)}>
-      <h2>
-        {year} <span class="meta">{plural(links.length, 'link')}</span>
-      </h2>
-      <LinkList links={links} compact entries />
-    </section>
-  ))}
+  </Lens>
 </Layout>

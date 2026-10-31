@@ -1,11 +1,15 @@
 ---
 // The links one Weekly Thing carried, in issue order and by section. A link
 // that was never saved to Pinboard is listed as the plain external link.
+// A lens (Lens.astro): the sky beside it lights the issue's links, with the
+// issues either side as chips.
 // The page is an h-feed (Layout's `feed`): each saved link's row is an
 // h-entry, as LinkList's rows are. A link not in the collection has no
 // record here, so its row is not an entry, and an issue with no saved link
 // is no feed.
 import Layout from '../../layouts/Layout.astro';
+import Lens from '../../components/Lens.astro';
+import type { Lens as LensFacts } from '../../lib/lens';
 import {
   type Issue,
   dateLabel,
@@ -43,62 +47,90 @@ for (const row of rows) {
   else sections.push({ name, rows: [row] });
 }
 const saved = rows.filter((row) => row.id && linkById.has(row.id)).length;
+const lens: LensFacts = {
+  kind: 'set',
+  label: `Lens: ${issue.number === null ? issueTitle(issue) : issueLabel(issue)}`,
+  section: '/issues/',
+  chips: [
+    ...(previous
+      ? [
+          {
+            href: issuePath(previous),
+            label: `Older: ${issueLabel(previous)}`,
+            rel: 'prev' as const,
+          },
+        ]
+      : []),
+    ...(next
+      ? [
+          {
+            href: issuePath(next),
+            label: `Newer: ${issueLabel(next)}`,
+            rel: 'next' as const,
+          },
+        ]
+      : []),
+  ],
+};
 ---
 
 <Layout
   title={`${issueTitle(issue)} · Linking Things`}
   description={`The ${plural(rows.length, 'link')} in ${issueTitle(issue)}, ${dateLabel(issue.date)}.`}
   feed={saved > 0}
+  lens
 >
-  <p class="kicker">Weekly Thing · {dateLabel(issue.date)}</p>
-  <h1 class="page-title">{issueTitle(issue)}</h1>
-  <p class="lede">
-    {plural(rows.length, 'link')}
-    {saved === 0
-      ? ', none of them in the collection'
-      : saved < rows.length && `, ${saved} of them in the collection`}
-    .{' '}
-    <a href={siteRef(issue.url, 'issue')}>
-      Read {issueLabel(issue)} on Weekly Thing
-    </a>
-    .
-  </p>
-  {sections.map((section) => (
-    <section class="section">
-      <h2>{section.name}</h2>
-      <ul class="link-list">
-        {section.rows.map((row) => {
-          const link = row.id ? linkById.get(row.id) : undefined;
-          return link ? (
-            <li class="h-entry">
-              <a class="title p-name u-url" href={linkPath(link.id)}>
-                {link.shown}
-              </a>
-              <span class="meta">
-                {link.host} · saved{' '}
-                <time class="dt-published" datetime={link.saved}>
-                  {shortDateLabel(link.saved)}
-                </time>
-              </span>
-            </li>
-          ) : (
-            <li>
-              <a class="title" href={row.url}>
-                {row.text || row.url}
-              </a>
-              <span class="meta">
-                {hostOf(row.url)} ·{' '}
-                <span class="not-saved">not in the collection</span>
-              </span>
-            </li>
-          );
-        })}
-      </ul>
-    </section>
-  ))}
-  <nav class="year-nav" aria-label="Issues">
-    {previous && <a href={issuePath(previous)}>← {issueLabel(previous)}</a>}
-    <a href="/issues/">All issues</a>
-    {next && <a href={issuePath(next)}>{issueLabel(next)} →</a>}
-  </nav>
+  <Lens lens={lens}>
+    <p class="kicker">Weekly Thing · {dateLabel(issue.date)}</p>
+    <h1 class="page-title">{issueTitle(issue)}</h1>
+    <p class="lede">
+      {plural(rows.length, 'link')}
+      {saved === 0
+        ? ', none of them in the collection'
+        : saved < rows.length && `, ${saved} of them in the collection`}
+      .{' '}
+      <a href={siteRef(issue.url, 'issue')}>
+        Read {issueLabel(issue)} on Weekly Thing
+      </a>
+      .
+    </p>
+    {sections.map((section) => (
+      <section class="section">
+        <h2>{section.name}</h2>
+        <ul class="link-list">
+          {section.rows.map((row) => {
+            const link = row.id ? linkById.get(row.id) : undefined;
+            return link ? (
+              <li class="h-entry">
+                <a class="title p-name u-url" href={linkPath(link.id)}>
+                  {link.shown}
+                </a>
+                <span class="meta">
+                  {link.host} · saved{' '}
+                  <time class="dt-published" datetime={link.saved}>
+                    {shortDateLabel(link.saved)}
+                  </time>
+                </span>
+              </li>
+            ) : (
+              <li>
+                <a class="title" href={row.url}>
+                  {row.text || row.url}
+                </a>
+                <span class="meta">
+                  {hostOf(row.url)} ·{' '}
+                  <span class="not-saved">not in the collection</span>
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    ))}
+    <nav class="year-nav" aria-label="Issues">
+      {previous && <a href={issuePath(previous)}>← {issueLabel(previous)}</a>}
+      <a href="/issues/">All issues</a>
+      {next && <a href={issuePath(next)}>{issueLabel(next)} →</a>}
+    </nav>
+  </Lens>
 </Layout>
