@@ -1,5 +1,6 @@
 """The built-site validator's microformats rule (tools/validate-site.py,
-check_microformats) and its llms.txt shape rule (llms_shape_problems). Run:
+check_microformats), its llms.txt shape rule (llms_shape_problems) and its
+check of /sky/stars.json (check_sky). Run:
 python3 -m unittest discover -s tests -v
 
 The rules are checked here on small pages and files, so each way they fail
@@ -7,6 +8,8 @@ stays pinned; npm run validate:site runs them on every built page and on the
 built llms.txt."""
 
 import importlib.util
+import json
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -179,6 +182,68 @@ class LlmsShape(unittest.TestCase):
         self.assertTrue(llms_problems(LLMS.replace("Prose is allowed", "# Prose is allowed")))
         self.assertTrue(llms_problems(LLMS + "\n## Data\n\n- [Hosts](" + SITE + "/hosts.json)\n"))
         self.assertTrue(llms_problems("Linking Things\n\n## Data\n"))
+
+
+class Sky(unittest.TestCase):
+    """/sky/stars.json against the links: two stars, one site, one topic.
+    RECORD was saved 2026-10-25 02:37 UTC, still the 24th in Central."""
+
+    LINKS = [{"id": RECORD, "saved": SAVED[RECORD]}, {"id": OTHER, "saved": SAVED[OTHER]}]
+
+    def stars(self, **change):
+        day = 20750  # 2026-10-24
+        sky = {
+            "ids": [RECORD, OTHER],
+            "titles": ["One", "Two"],
+            "hosts": ["example.com"],
+            "host": [0, 0],
+            "day": [day, day],
+            "note": [1, 0],
+            "topic": [0, 0],
+            "meaning": [0, 0, 0, 1, 1, 1],
+            "time": [0, 0, 1, 1],
+            "neighbors": [[1], [0]],
+            "issues": {"0": [350]},
+            "topics": [{"name": "Things", "size": 2}],
+        }
+        sky.update(change)
+        with tempfile.TemporaryDirectory() as dist:
+            (Path(dist) / "sky").mkdir()
+            (Path(dist) / "sky/stars.json").write_text(json.dumps(sky))
+            before = validate_site.DIST
+            validate_site.DIST = Path(dist)
+            try:
+                problems = []
+                ids = validate_site.check_sky(self.LINKS, problems)
+            finally:
+                validate_site.DIST = before
+        return ids, problems
+
+    def test_stars_that_agree_pass_and_name_the_fragments(self):
+        self.assertEqual(self.stars(), ({RECORD, OTHER}, []))
+
+    def test_a_link_without_a_star_yet_passes(self):
+        ids, problems = self.stars(
+            ids=[RECORD], titles=["One"], host=[0], day=[20750], note=[1], topic=[0],
+            meaning=[0, 0, 0], time=[0, 0], neighbors=[[]], topics=[{"name": "Things", "size": 1}],
+        )
+        self.assertEqual((ids, problems), ({RECORD}, []))
+
+    def test_a_star_that_is_no_record_fails(self):
+        self.assertIn("no record", self.stars(ids=[RECORD, "ffffffffffff"])[1][0])
+
+    def test_a_short_list_fails(self):
+        self.assertIn("time holds 2, not 4", self.stars(time=[0, 0])[1][0])
+
+    def test_a_neighbour_out_of_range_or_itself_fails(self):
+        self.assertIn("neighbours", self.stars(neighbors=[[2], [0]])[1][0])
+        self.assertIn("neighbours", self.stars(neighbors=[[0], [0]])[1][0])
+
+    def test_a_utc_day_in_place_of_the_central_day_fails(self):
+        self.assertIn("Central day", self.stars(day=[20751, 20750])[1][0])
+
+    def test_topic_sizes_must_add_up(self):
+        self.assertIn("sizes", self.stars(topics=[{"name": "Things", "size": 3}])[1][0])
 
 
 if __name__ == "__main__":

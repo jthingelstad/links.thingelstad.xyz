@@ -16,6 +16,7 @@ import { type Kind, kindOf, kinds } from './kinds.ts';
 import { hostOf, normalizeUrl } from './normalize.ts';
 import { AGENT_TAG, type Voice, voiceOf } from './voice.ts';
 import { shownTitle, titleEndings } from './titles.ts';
+import { checkTopics, topicNames } from './topics.ts';
 import {
   absolute,
   hostPath,
@@ -501,6 +502,56 @@ export const unindexed = new Set([
     .map((host) => absolute(hostPath(host.host))),
   absolute(surprisePath),
 ]);
+
+// The sky (docs/DATA.md, "The sky"): each link's star, made by tools/sky.py,
+// and the topics they fall in, named in content/topics.md (topics.ts). A
+// link merged in from the bookmark ledger after the night's run has no star
+// until the next one, and a neighbour that has since left is dropped.
+export interface SkyTopic {
+  id: number;
+  name: string;
+  family: number;
+  meaning: [x: number, y: number, z: number];
+  // Where its name sits across the Time layout, and the decimal years the
+  // middle 80% of its links span.
+  time: [x: number, y: number, from: number, to: number];
+}
+export interface Star {
+  topic: number;
+  meaning: [x: number, y: number, z: number];
+  // The depth is the day saved.
+  time: [x: number, y: number];
+  neighbors: string[];
+}
+const skyHead = read<{
+  layout: number;
+  neighbors: number;
+  topics: Omit<SkyTopic, 'name' | 'family'>[];
+}>('data/derived/sky.json');
+checkTopics(topicNames, skyHead.topics.length);
+export const skyFamilies = topicNames.families;
+export const skyTopics: SkyTopic[] = skyHead.topics.map((topic) => ({
+  ...topic,
+  ...topicNames.topics.get(topic.id)!,
+}));
+export const skyLayout = skyHead.layout;
+const starFiles = new Map<string, Star>(
+  readdirSync(join(root, 'data/derived/sky'))
+    .filter((name) => /^\d{4}\.json$/.test(name))
+    .flatMap((name) =>
+      Object.entries(read<Record<string, Star>>(`data/derived/sky/${name}`)),
+    ),
+);
+// Every link that has a star, in the links' order.
+export const stars = new Map<string, Star>();
+for (const link of links) {
+  const star = starFiles.get(link.id);
+  if (star)
+    stars.set(link.id, {
+      ...star,
+      neighbors: star.neighbors.filter((id) => linkById.has(id)),
+    });
+}
 
 export const counts = {
   links: links.length,

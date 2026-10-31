@@ -1,0 +1,151 @@
+---
+// /sky/ (docs/DIRECTION.md, "The sky"): every link a star, placed by what it
+// says, its nearest in meaning a click away. The sky and Doors are drawn by
+// src/scripts/sky.ts from /sky/stars.json, in the stage, which stays hidden
+// until the script runs. The page's own HTML is the constellations, every
+// topic with the links at its middle, for a reader without the script and
+// for search engines; /sky/#<id> opens on one link.
+import Layout from '../../layouts/Layout.astro';
+import LinkList from '../../components/LinkList.astro';
+import { number, plural, skyTopics, starPath, stars } from '../../lib/data';
+import { constellations } from '../../lib/stars';
+import '../../styles/sky.css';
+
+const families = constellations();
+---
+
+<Layout
+  title="Sky · Linking Things"
+  description={`Every link Jamie Thingelstad has saved, ${number(stars.size)} of them, as a sky of stars placed by what each one says, in ${skyTopics.length} constellations.`}
+>
+  <div class="sky-intro">
+    <h1 class="page-title">Sky</h1>
+    <p class="lede">
+      Every link a star, {number(stars.size)} of them, placed by what it says,
+      its ten nearest in meaning a click away. Time lays the same sky out by
+      year, 2005 farthest away.
+    </p>
+  </div>
+
+  <div class="sky" data-sky hidden>
+    <canvas
+      class="sky-gl"
+      tabindex="0"
+      aria-label="A sky of saved links. Drag or use the arrow keys to turn it, scroll, pinch or use plus and minus to move closer, and choose a star to go there."
+    ></canvas>
+    <canvas class="sky-fx" aria-hidden="true"></canvas>
+    <div class="sky-labels"></div>
+    <div class="sky-ring" aria-hidden="true"></div>
+    <div class="sky-tip" aria-hidden="true"></div>
+    <div class="doors" hidden>
+      <canvas class="doors-map" aria-hidden="true"></canvas>
+      <div class="doors-stage">
+        <nav
+          class="doors-side top"
+          aria-label="Nearest links that lie above"
+        ></nav>
+        <nav
+          class="doors-side left"
+          aria-label="Nearest links that lie left"
+        ></nav>
+        <article class="doors-page sky-card-body" aria-live="polite"></article>
+        <nav
+          class="doors-side right"
+          aria-label="Nearest links that lie right"
+        ></nav>
+        <nav
+          class="doors-side bottom"
+          aria-label="Nearest links that lie below"
+        ></nav>
+        <h2 class="doors-around">Nearest in meaning</h2>
+      </div>
+      <nav class="doors-path" aria-label="Your path"></nav>
+    </div>
+    <div class="sky-bar">
+      <div class="sky-find">
+        <label class="sr-only" for="sky-find">
+          Find a link by its title
+        </label>
+        <input
+          id="sky-find"
+          type="search"
+          placeholder="Find a link"
+          autocomplete="off"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-controls="sky-results"
+          data-find
+        />
+        <ul
+          id="sky-results"
+          class="sky-results"
+          role="listbox"
+          aria-label="Links whose titles match"
+          hidden
+          data-results
+        ></ul>
+      </div>
+      <button
+        class="sky-tool sky-only"
+        type="button"
+        aria-pressed="false"
+        data-play
+      >
+        Play
+      </button>
+      <div class="sky-switch sky-only" role="group" aria-label="Layout">
+        <button type="button" aria-pressed="true" data-layout="meaning">
+          Meaning
+        </button>
+        <button type="button" aria-pressed="false" data-layout="time">
+          Time
+        </button>
+      </div>
+      <button class="sky-tool sky-only" type="button" data-whole>
+        Whole sky
+      </button>
+      <button class="sky-tool" type="button" data-surprise>
+        Surprise me
+      </button>
+      <button class="sky-tool" type="button" hidden data-toggle-view>
+        Doors
+      </button>
+    </div>
+    <aside class="sky-card sky-card-body sky-only" aria-live="polite"></aside>
+    <p class="sky-hint sky-only">
+      Drag to turn the sky · scroll or pinch to move · choose any star to go
+      there
+    </p>
+    <p class="sky-loading">Turning on the stars…</p>
+  </div>
+
+  <section class="constellations" aria-labelledby="constellations">
+    <h2 id="constellations">Constellations</h2>
+    <p class="constellations-lede">
+      The {skyTopics.length} topics the links fall into, each family a colour in
+      the sky, largest first, with the links nearest the middle of each.
+    </p>
+    {families.map(({ family, topics }) => (
+      <section class="constellation-family">
+        <h3>{family}</h3>
+        <ul class="constellation-list">
+          {topics.map((topic) => (
+            <li>
+              <p class="constellation-name">
+                <a href={starPath(topic.centre.id)}>{topic.name}</a>
+                <span class="count">{plural(topic.size, 'link')}</span>
+              </p>
+              <LinkList links={topic.links} compact />
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </section>
+</Layout>
+
+<script>
+  import { initSky } from '../../scripts/sky';
+  initSky();
+</script>

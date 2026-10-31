@@ -7,8 +7,8 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
 
 - Built with Astro and TypeScript on the POAP pattern (`poap.thingelstad.xyz`): static
   output, Pagefind over the record pages only, minimal JavaScript (search and its preview
-  pane, the home page's live results, the Kudos status line on record pages, and turning
-  the home page to today's quote), no
+  pane, the home page's live results, the Kudos status line on record pages, turning
+  the home page to today's quote, and the sky at `/sky/`, WebGL with no library), no
   frameworks, nothing fetched at serve time from another host. The exceptions are the
   footer photo, `owner.avatar` from `shared/sites.json`, and Tinylytics, one script in
   production builds only (`PUBLIC_TINYLYTICS_ENABLED=true`, set by the deploy
@@ -30,7 +30,10 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   click-to-play facade: no player request until the click.
 - **The sky** (`docs/DATA.md`, "The sky"; DIRECTION.md, "The sky"): every public link
   as a star with a topic, a place in the Meaning and Time layouts and ten nearest
-  neighbours, in `data/derived/sky.json` and `sky/<yyyy>.json`. **The layout is
+  neighbours, in `data/derived/sky.json` and `sky/<yyyy>.json`, drawn at `/sky/` from
+  `/sky/stars.json` (`src/lib/stars.ts`): the sky with WebGL on a wide screen, Doors on
+  a phone or without it (`src/scripts/sky*.ts`; the shared arithmetic, tested, is
+  `src/lib/sky.ts`). **The layout is
   fixed** (Jamie, 2026-10-30: "with a fixed star layout"): the nightly's `tools/sky.py`
   places a new link beside its neighbours and never moves a star; only
   `tools/one-shot/sky_layout.py`, run by hand from its own venv when the model or text
@@ -60,7 +63,8 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
 - **URLs are fixed** (DIRECTION.md, "Pages"): `/links/<id>/` with its `.json` and `.md`
   twins, `/hosts/<host>/`, `/kinds/`, `/kinds/<kind>/`, `/issues/<n>/` (the Weekly
   Thing archive key, `140-special` for the special issue), `/years/<yyyy>/` with its
-  `llms.txt`, `/newest/`, `/search/`, `/surprise/` (a noindex door to a random
+  `llms.txt`, `/newest/`, `/search/`, `/sky/` (with `/sky/#<id>` on one link, which every record
+  links), `/surprise/` (a noindex door to a random
   record), `/about/`, the feeds (`feed.xml` and
   `feed.json` at the root and under each host and kind page) and `/links.json`,
   `/hosts.json`, `/issues.json`, `/links.db`, `/llms.txt`, `/mcp` and `/mcp/health`. Kudos,

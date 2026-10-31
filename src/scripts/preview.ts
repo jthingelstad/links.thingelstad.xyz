@@ -7,7 +7,9 @@
 // this module, and markdown-it with it, the first time a wide screen shows
 // a result; a narrow screen never does. Everything is built with
 // createElement and textContent: the note from markdown-it's tokens
-// (noteTree), with only the attributes noteAttribute lets through.
+// (noteTree), with only the attributes noteAttribute lets through. The sky's
+// card (src/scripts/sky-card.ts) loads it the same way for the twin, the
+// note and the issue chips.
 import { kindWords, kinds } from '../lib/kinds.ts';
 import { type NoteNode, noteTags, noteTree } from '../lib/markdown.ts';
 import {
@@ -30,7 +32,7 @@ import type { Data } from './pagefind.ts';
 
 // One fetch a record; a failed one is forgotten, so the next move tries again.
 const twins = new Map<string, Promise<Twin>>();
-function twinOf(id: string) {
+export function twinOf(id: string) {
   let twin = twins.get(id);
   if (!twin) {
     twin = fetch(linkJsonPath(id)).then((response) => {
@@ -72,7 +74,7 @@ function build(nodes: NoteNode[]): Node[] {
 }
 
 // The kind, then a chip for each issue that carried it, as on the record.
-function facts(twin: Twin) {
+export function facts(twin: Twin) {
   const row = element('p', 'preview-facts');
   const kind = kinds.find((k) => k === twin.kind);
   if (kind)
@@ -89,7 +91,7 @@ function facts(twin: Twin) {
   return row;
 }
 
-function note(twin: Twin) {
+export function note(twin: Twin) {
   const section = element('section', 'preview-note');
   const excerpt = twin.voice === 'excerpt';
   const voice = Object.hasOwn(voiceLabels, twin.voice)

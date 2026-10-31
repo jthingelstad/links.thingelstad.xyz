@@ -18,6 +18,7 @@ import {
   feedPath,
   newestPath,
   number,
+  skyPath,
   suggestPath,
   surprisePath,
   years,
@@ -27,6 +28,7 @@ import { quotes } from '../lib/quotes';
 const pick = quotes.length ? dayIndex(quotes.length) : -1;
 const entries = [
   [newestPath, 'Newest'],
+  [skyPath, 'Sky'],
   ['/years/', 'Years'],
   ['/hosts/', 'Hosts'],
   ['/kinds/', 'Kinds'],

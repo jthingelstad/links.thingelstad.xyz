@@ -6,8 +6,10 @@
 // front page; the box suggests a site for site: and the keyboard takes it;
 // the home page's box shows live results and Enter opens one, and a site
 // taken there is not offered again; a video facade asks nothing of YouTube
-// or Vimeo until it is clicked, then becomes the player; and no request
-// reaches Tinylytics.
+// or Vimeo until it is clicked, then becomes the player; /sky/#<id> opens on
+// that link (in the sky on the desktop, or Doors where the browser has no
+// WebGL; Doors on a phone), a door walks to a neighbour and Back returns, the
+// address following; and no request reaches Tinylytics.
 // SITE_TEST_URL defaults to the dev server; tools/test-built-site.mjs
 // runs this against dist/ behind the edge function (SITE_TEST_EDGE=1), which
 // adds the redirect and 404 checks. Evidence goes to SITE_QA_DIR
@@ -52,6 +54,7 @@ const routes = [
   '/kinds/',
   '/kinds/video/',
   '/about/',
+  '/sky/',
   path(record.record),
   path(record.connections.same_host?.page ?? `${base}/hosts/`),
   `/years/${record.saved.slice(0, 4)}/`,
@@ -333,6 +336,32 @@ for (const [name, viewport] of [
     assert.ok(players.length > 0, 'the player is requested after the click');
   }
 
+  // The sky: the address is the star in view.
+  await page.goto(`${base}/sky/#${record.id}`, { waitUntil: 'networkidle' });
+  const stage = page.locator('[data-sky][data-view]');
+  await stage.waitFor({ timeout: 15000 });
+  const view = await stage.getAttribute('data-view');
+  if (name === 'phone') assert.equal(view, 'doors', 'a phone gets Doors');
+  const card = view === 'doors' ? '.doors-page' : '.sky-card';
+  // Doors turns the page after a short animation, so wait for the card.
+  const shows = (href) =>
+    page
+      .locator(`${card} .sky-card-title a[href="${href}"]`)
+      .waitFor({ timeout: 5000 });
+  await shows(path(record.record));
+  await page
+    .locator(view === 'doors' ? '.door' : '.sky-door')
+    .first()
+    .dispatchEvent('click');
+  await page.waitForURL((url) => url.hash && url.hash !== `#${record.id}`);
+  const near = new URL(page.url()).hash.slice(1);
+  assert.match(near, /^[0-9a-f]{12}$/, 'a door walks to a neighbour');
+  await shows(`/links/${near}/`);
+  await page.locator(`${card} .sky-back`).click();
+  await page.waitForURL((url) => url.hash === `#${record.id}`);
+  await shows(path(record.record));
+  await page.screenshot({ path: shot(name, '/sky/walk') });
+
   if (edge) {
     const missing = await page.goto(`${base}/links/not-a-link/`);
     assert.equal(missing?.status(), 404, 'a missing page is a 404');
@@ -382,5 +411,5 @@ if (production)
   );
 else assert.deepEqual(analytics, [], 'no Tinylytics requests during QA');
 console.log(
-  `Checked ${routes.length} routes, a search and its preview pane, a kind: search, Surprise me, a site: suggestion and the home page's live results at desktop and phone widths${video ? ', the video facade' : ' (no video facts to check the facade on)'}${edge ? ', /links.db, the redirects and the 404' : ''}; evidence in ${output}`,
+  `Checked ${routes.length} routes, a search and its preview pane, a kind: search, Surprise me, a site: suggestion and the home page's live results, a walk in the sky at desktop and phone widths${video ? ', the video facade' : ' (no video facts to check the facade on)'}${edge ? ', /links.db, the redirects and the 404' : ''}; evidence in ${output}`,
 );

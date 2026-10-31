@@ -8,7 +8,7 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   and the one share image (tools/share-image.mjs) on every other;
 - every internal href and src resolves to a built file (or to /mcp, which
   CloudFront sends to the MCP server), and every #fragment on an internal
-  link names an id on the target page;
+  link names an id on the target page, or on /sky/ a star;
 - nothing is fetched at serve time from another host (scripts, styles, fonts,
   images, frames, and URLs inside inline scripts), except owner.avatar from
   shared/sites.json, the photo the family's h-card contract names, and, in a
@@ -42,6 +42,9 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
 - /links.json is every record exactly as data/links has it, plus its
   permalink and then its kind, the same as its JSON twin's; /hosts.json and
   /issues.json match the pages and the join;
+- /sky/stars.json (src/lib/stars.ts) holds each star once, each a record,
+  every list as long as the stars, every place, topic, site and neighbour
+  in range, and each star's day its link's Central day;
 - /search/suggest.json, what the search box suggests from, holds every host
   with its count as /hosts.json has them and its links in each Central year
   as its twins have them, every issue newest first with its
@@ -615,6 +618,57 @@ def check_suggest(data_links, twin_kinds, twin_hosts, problems):
     return len(suggest["hosts"]), len(suggest["issues"])
 
 
+def check_sky(data_links, problems):
+    """/sky/stars.json: each star once and each a record (a link the nightly
+    has not placed yet has none), every list the stars' length and every
+    index in range, each day its link's Central day. Returns the stars' ids,
+    the fragments /sky/ takes."""
+    sky = load_json("sky/stars.json", problems)
+    ids = sky.get("ids", [])
+    n = len(ids)
+    by_id = {link["id"]: link for link in data_links}
+    where = "sky/stars.json"
+    if not n:
+        problems.append(f"{where}: no stars")
+        return set()
+    if len(set(ids)) != n:
+        problems.append(f"{where}: a star twice")
+    strays = [i for i in ids if i not in by_id]
+    if strays:
+        problems.append(f"{where}: {len(strays)} stars are no record (first {strays[0]})")
+    lengths = {"titles": n, "host": n, "day": n, "note": n, "topic": n, "neighbors": n,
+               "meaning": 3 * n, "time": 2 * n}
+    for key, size in lengths.items():
+        if len(sky.get(key, [])) != size:
+            problems.append(f"{where}: {key} holds {len(sky.get(key, []))}, not {size}")
+            return set(ids)
+    topics = len(sky.get("topics", []))
+    if any(not 0 <= t < topics for t in sky["topic"]):
+        problems.append(f"{where}: a topic out of range")
+    if any(not 0 <= h < len(sky.get("hosts", [])) for h in sky["host"]):
+        problems.append(f"{where}: a site out of range")
+    if sum(t["size"] for t in sky.get("topics", [])) != n:
+        problems.append(f"{where}: the topics' sizes do not add up to the stars")
+    for i, near in enumerate(sky["neighbors"]):
+        if len(near) > 10 or len(set(near)) != len(near) or any(
+            not 0 <= j < n or j == i for j in near
+        ):
+            problems.append(f"{where}: {ids[i]}'s neighbours are out of range")
+            break
+    if any(not 0 <= int(i) < n for i in sky.get("issues", {})):
+        problems.append(f"{where}: an issue list on no star")
+    epoch = datetime(1970, 1, 1).date()
+    for i, star in enumerate(ids):
+        link = by_id.get(star)
+        if not link:
+            continue
+        saved = datetime.fromisoformat(link["saved"].replace("Z", "+00:00"))
+        if sky["day"][i] != (saved.astimezone(CENTRAL).date() - epoch).days:
+            problems.append(f"{where}: {star}'s day is not its Central day")
+            break
+    return set(ids)
+
+
 RECORD_LINE = re.compile(r"^- Record: (\S+)$", re.M)
 
 # llmstxt.org's reference parser (the llms-txt package, parse_llms_file) splits
@@ -1025,9 +1079,13 @@ def main():
                 path = base + path
             links.append((rel, ref, path, unquote(parts.fragment)))
 
+    stars = check_sky(data_links, problems)
     for rel, ref, path, fragment in links:
         if not built(path):
             problems.append(f"{rel}: broken link {ref}")
+        elif fragment and path == "/sky/":
+            if fragment not in stars:
+                problems.append(f"{rel}: {ref} names no star")
         elif fragment and path in ids and fragment not in ids[path]:
             problems.append(f"{rel}: {ref} names an id the page does not have")
 
@@ -1170,7 +1228,8 @@ def main():
         f" links, metadata and sitemap valid; {len(records)} record h-entries and"
         f" {feed_pages} list h-feeds;"
         f" {feeds + 2 * len(kind_counts)} feeds, links.json, hosts.json, issues.json,"
-        f" search/suggest.json ({suggested[0]} hosts, {suggested[1]} issues), llms.txt and"
+        f" search/suggest.json ({suggested[0]} hosts, {suggested[1]} issues),"
+        f" sky/stars.json ({len(stars)} stars), llms.txt and"
         f" {len(year_files)} year llms files valid ({len(inside)} site URLs inside resolve);"
         f" /newest/ lists the newest {FEED_SIZE};"
         f" kinds {', '.join(f'{k} {n}' for k, n in kind_counts.items())};"
