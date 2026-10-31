@@ -52,6 +52,14 @@ const waysIn = [
   <div class="sky-labels"></div>
   <div class="sky-ring" aria-hidden="true"></div>
   <div class="sky-tip" aria-hidden="true"></div>
+  <p class="doors-about doors-only">
+    One link at a time, and the ten nearest it in meaning as doors to step
+    through
+    <span class="doors-wide">
+      , each on the side where it lies on the map behind
+    </span>
+    . The path you take is kept as you go.
+  </p>
   <div class="doors" hidden>
     <canvas class="doors-map" aria-hidden="true"></canvas>
     <div class="doors-stage">
@@ -128,6 +136,23 @@ const waysIn = [
       data-play
     >
       Play
+    </button>
+    <button
+      class="sky-tool sky-icon sky-only"
+      type="button"
+      aria-label="Full screen"
+      title="Full screen"
+      hidden
+      data-full
+    >
+      <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+        <path
+          d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        ></path>
+      </svg>
     </button>
     <button class="sky-tool doors-only" type="button" data-surprise>
       Surprise me

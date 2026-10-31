@@ -32,6 +32,9 @@ import { startDoors } from './sky-doors.ts';
 import { type SkyView, type View, type Walk, startSky } from './sky-gl.ts';
 import { initSuggest } from './suggest.ts';
 
+// The most of a walk the trail keeps.
+const TRAIL = 60;
+
 async function load<T>(url: string) {
   const response = await fetch(url);
   if (!response.ok) throw new Error(`${url}: ${response.status}`);
@@ -170,6 +173,8 @@ export async function initSky() {
       // Already cut back to it (the path in Doors).
     } else if (trail.length > 1 && trail[trail.length - 2] === j) trail.pop();
     else trail.push(j);
+    // Play left on for hours (full screen) keeps its last stretch drawn.
+    if (trail.length > TRAIL) trail.splice(0, trail.length - TRAIL);
     cur = j;
     visited.add(j);
     address();
