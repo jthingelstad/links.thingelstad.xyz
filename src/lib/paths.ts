@@ -78,6 +78,10 @@ export const skyPath = '/sky/';
 export const starPath = (id: string) => `${skyPath}#${id}`;
 export const skyPlacesPath = '/sky/places.json';
 export const skyStarsPath = '/sky/stars.json';
+// On this day: every link saved on one Central calendar day, in any year,
+// at /on/MM-DD/ (02-29 too).
+export const onPath = (month: number, day: number) =>
+  `/on/${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}/`;
 // A topic (content/topics.md) is a lens on the sky at its name as a slug,
 // so renaming a topic moves its page; /topics/ lists them all.
 export const topicsPath = '/topics/';

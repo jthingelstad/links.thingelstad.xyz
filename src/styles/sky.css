@@ -971,3 +971,41 @@ html:has(.sky:not([hidden])) {
 .sky[data-fullscreen][data-playing]:not([data-stirred]) .sky-bar > * {
   pointer-events: none;
 }
+
+/* A lens's chip (lens.css), on a lens page beside the gold one and on the
+   front page in the whole-sky card. */
+.sky-lens-chip,
+.sky-lens-chip:visited {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 4px 16px;
+  border: 1px solid var(--edge);
+  border-radius: 20px;
+  color: var(--sky-soft);
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  backdrop-filter: blur(14px) saturate(1.2);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.sky-lens-chip:hover {
+  color: var(--sky-ink);
+  border-color: var(--sky-muted);
+}
+.sky-home-lenses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 0;
+  font-size: var(--jt-size-meta);
+  line-height: 1.2;
+}
+.sky-home .sky-lens-chip,
+.sky-home .sky-lens-chip:visited {
+  color: var(--sky-soft);
+}
+.sky-home .sky-lens-chip:hover {
+  color: var(--sky-ink);
+}

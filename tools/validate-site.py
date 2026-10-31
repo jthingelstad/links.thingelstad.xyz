@@ -338,7 +338,7 @@ def record_id(url):
 
 
 # The pages that list records, and so are an h-feed of them.
-FEED_PAGE = re.compile(r"/newest/|/(hosts|kinds|years|issues|topics)/[^/]+/")
+FEED_PAGE = re.compile(r"/newest/|/(hosts|kinds|years|issues|topics|on)/[^/]+/")
 
 
 def check_microformats(rel, url, parser, saved, problems):

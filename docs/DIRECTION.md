@@ -102,7 +102,7 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 
 | URL | What |
 | --- | --- |
-| `/` | The sky (2026-10-31, section "The sky", "The front page"): standing back over every star, with Find, Meaning and Time, Play and the ways in (Newest, Years, Issues, Sites, Kinds, Stats, About) in its bar, and a card saying what the sky is with the quote of the day from `content/quotes.md`. Doors on a phone or without WebGL. `/?q=<words>` opens with Find holding the words, `?view=time` in Time, `#<id>` on one link. The site header is left off this page. Without the script, or when the stars do not load, it is the plain search box it was from 2026-10-23 (the wordmark, the box, the count and the ways in) |
+| `/` | The sky (2026-10-31, section "The sky", "The front page"): standing back over every star, with Find, Meaning and Time, Play and the ways in (Newest, Years, Issues, Topics, Sites, Kinds, Stats, About) in its bar, and a card saying what the sky is with the quote of the day from `content/quotes.md` and three lens chips (On this day, the reader's own Central today; the latest issue; Topics). Doors on a phone or without WebGL. `/?q=<words>` opens with Find holding the words, `?view=time` in Time, `#<id>` on one link. The site header is left off this page. Without the script, or when the stars do not load, it is the plain search box it was from 2026-10-23 (the wordmark, the box, the count and the ways in) |
 | `/search/?q=` | Results: title, host, saved date, a snippet of the note, a WT chip; filters for topic, year, kind, in a Weekly Thing, has a note; sort by relevance or date. Built: `kind:video` keeps one kind and, with no other words, links that kind's page; the box suggests as an operator is typed; on a wide screen the result moved to shows in a pane beside the list (section "Search") |
 | `/search/suggest.json` | What the search box suggests from: every host with its count and its links in each Central year, every issue with its title, Central date and saved links, each year's and kind's count. The search page's own file, shaped for it and free to change with it; not part of the dataset |
 | `/links/<id>/` | The record (below). `<id>` is the first 12 hex characters of md5 of the saved URL, which is Pinboard's API `hash`; anyone can compute it from the URL |
@@ -114,6 +114,7 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 | `/topics/` | Built (2026-10-31): every topic in its family, largest first, with its count; a lens on the whole sky, where each topic's name opens its page |
 | `/topics/<slug>/` | Built (2026-10-31): a topic's links, newest year first, with the sites most present in it, the issues that carried most of it, the topics beside it (those its links' nearest neighbours most often fall in) and its feed pair; a lens lighting its links. The slug is the topic's name (`content/topics.md`) |
 | `/years/<yyyy>/` | The year's links by month |
+| `/on/MM-DD/` | Built (2026-10-31, back as a lens): every link saved on one Central calendar day in any year, newest year first, each with its weekday and, where the time saved is real, the time; a lens lighting them in Time, with the day before and after as chips. 366 pages, `/on/02-29/` among them. Each record's saved date links its day |
 | `/newest/` | Built: the newest 50 links, the site feed's links, as a page |
 | `/surprise/` | Built: Surprise me, a door that replaces itself with one record at random, drawn from the records with Jamie's own words or a Weekly Thing; noindex and out of the sitemap, but crawlable, so crawlers can read the noindex |
 | `/sky/` | Built (section "The sky"): every link a star in the Meaning and Time layouts, with Play; Doors on a phone or without WebGL. `/sky/#<id>` opens on one link, and each record page's Sky row links to its star. The page's own HTML is the constellations, every topic in its family with the links at its middle, for a reader without the script and for search engines. Since the sky became the front page (2026-10-31) it is out of the site header but stays, with its URL |
@@ -573,7 +574,9 @@ word for Hosts, quote of the day in the whole-sky card".
   no star in view (`/sky/` still opens on the newest link with a note). The bar is a
   glass panel: the wordmark, Find, Meaning and Time, Play, and the ways in. The whole
   sky's card, where a star's card goes, says what the sky is, carries the quote of the
-  day cut to two lines (a click opens the rest), Surprise me and the newest links. A
+  day cut to two lines (a click opens the rest), the lens chips (On this day, which the
+  page's script points at the reader's own today in Central, the latest issue, and
+  Topics), Surprise me and the newest links. A
   star's card has a way back out to the whole sky, or to what Find lit. Phones and no
   WebGL get Doors, on the newest link with a note, with Surprise me in the bar.
 - **Find.** Typing lights the stars whose titles or sites have the words (a word of
@@ -595,14 +598,15 @@ word for Hosts, quote of the day in the whole-sky card".
   carry the layout version, and `validate:site` checks they agree.
 - **Sites.** Hosts are Sites to a reader everywhere they are named; the URLs keep
   `/hosts/`.
-- **Phase 2, the lens pages (an issue, a year, a site, a kind, a link and a topic built).** Each
+- **Phase 2, the lens pages (an issue, a year, a site, a kind, a link, a topic and a day built).** Each
   is its own page at its own URL: the page in a night panel on the right, the sky
   filling the window to its left and staying as the panel scrolls (on a phone, a strip
   of sky above the page; across turns it, up and down scroll the page). The sky lights
   what the panel lists (a kind's newest thousand, as its page does), or on a link's page
-  stands on it with its ten nearest round it; a year opens in Time. A gold chip at the
+  stands on it with its ten nearest round it; a year and a day open in Time. A gold chip at the
   foot of the sky names the lens, with × back to the whole sky, beside the lenses either
-  side (the issue before and after, the year before and after, the two topics nearest).
+  side (the issue before and after, the year before and after, the day before and after,
+  the two topics nearest).
   A topic's name on the sky opens its page there, as a star does. The bar is the front
   page's, its ways in marking where the lens belongs; no Doors, Play or full screen
   there, and no card, since the page is the card. Choosing a star opens its page. Find
@@ -616,8 +620,8 @@ word for Hosts, quote of the day in the whole-sky card".
   costs a 304. Layout's `lens` marks `<html>` before anything draws, so the page opens
   at night beside the sky rather than turning into it; without the script or WebGL, or
   when the stars do not load, the page is as it always was, with the site header.
-- **Still to come in Phase 2:** on this day at `/on/MM-DD/`, the year's bar charts (saved each month, most saved topics and
-  sites) in its panel, and lens chips on the front page. **Phase 3**: share cards drawn
+- **Still to come in Phase 2:** the year's bar charts (saved each month, most saved
+  topics and sites) in its panel. **Phase 3**: share cards drawn
   from the sky, by a `sky` layout in the cards project, deployed after Jamie sees
   previews.
 
@@ -902,9 +906,9 @@ milliseconds.
 No model at serve time (Jamie's rule: "serving the site should be public and not
 having model cost"), no state, no keys; public data needs no auth, and the endpoint's
 own limit (100 requests a second and two environments, the smallest it takes) is the
-guard. `links_on_this_day` stands against the decision that removed the On this day
-pages ("I'm not sure on-this-day is meaningful for this data set?"): it is one tool
-with no page to maintain, and it goes if Jamie says so.
+guard. `links_on_this_day` outlived the decision that removed the On this day pages
+("I'm not sure on-this-day is meaningful for this data set?"); since the day came back
+as a lens on 2026-10-31 (`/on/MM-DD/`), the tool and the page answer the same question.
 
 **And the Librarian.** Once links are a source there (section "The Librarian"), its
 MCP answers "what did Jamie say about X" across everything at once. Both can be true:
@@ -1047,7 +1051,9 @@ marked. None is in a phase until Jamie says so.
   posts in all but name. A page of the hundred longest, newest first.
 - **Surprise me.** A random record, one more way in on the home page. (On this day
   was built and then removed on 2026-10-23: Jamie was "not sure on-this-day is
-  meaningful for this data set". The Librarian's `on_this_day` still answers it.)
+  meaningful for this data set". It came back on 2026-10-31 as a lens, `/on/MM-DD/`, in
+  Jamie's approval of direction A: "lens pages at their own URLs with on-this-day and
+  topic lenses".)
 
 **People**
 
@@ -1098,7 +1104,7 @@ Jamie, 2026-10-23, with the design's response:
 | Where the weekly sync runs | Defer; consider the Librarian's timing | Decided 2026-10-23: nightly on the Mac at 00:30 Central (`tools/nightly.sh`, launchd); the `links-published` dispatch settles the ordering with the Librarian either way. |
 | A private Like, or a public count | "The kudos button (let's use that name instead of like) is of course public. That is how that feature of tinylytics works." | Named Kudos everywhere. The count shows: the embed's `?kudos=custom` writes it into a button the site draws, and `validate:site` fails a private one. `design/tinylytics.md`. |
 | `llms-full.txt` at 36 MB | "Trim. Probably by year or even year month?" | By year: `/years/<yyyy>/llms.txt`, slim rows, 22 files and 10.6 MB together, the largest 0.8 MB, so no month split; `llms.txt` lists them with counts and sizes. A year past 4 MB fails validation and would split by month. |
-| On this day | "I'm not sure on-this-day is meaningful for this data set?" | Removed: the 366 day pages, the grid, their checks and their helpers. |
+| On this day | "I'm not sure on-this-day is meaningful for this data set?"; then, 2026-10-31, "lens pages at their own URLs with on-this-day and topic lenses" | Removed 2026-10-23: the 366 day pages, the grid, their checks and their helpers. Back 2026-10-31 as a lens on the sky, `/on/MM-DD/` (section "The sky", Phase 2), with no grid. |
 | Checking that links still work | "You don't need to validate the links. They just are." | No page promises a check. The "Link rot, measured" and "Then and now" ideas are dropped; the liveness and "now at" parts of sections "Enrichment" and "Connections" and of phase 2 were brought in line the same day. |
 | "Find it on Pinboard" on the record | "get rid of 'find it on pinboard' nobody needs to know pinboard exists." | Gone from every page, twin, feed and llms file; Elsewhere is the Wayback copy and the twins. The "Save to your Pinboard" idea is dropped. Maintainer docs still name Pinboard, as the source. |
 | The front page | "very much like Google's front page, where it's just a search box. I think there should be topics, so if you don't know what you want to search, you could do topics. Should show how many pages are in the index. I probably at some point will add like a quote from me on how amazing the hyperlink is. Maybe we have a collection of some quotes like that." | Built: the wordmark, the box and the count above the fold at 500 and 1200 px; a row of ways in, with Topics to go first once topic pages exist; quotes in `content/quotes.md`, one a day, nothing shown while it is empty. The newest links moved to `/newest/`. Surprise me under the count (Jamie, 2026-10-24: "a 'Surprise Me' button on the front page to go to a (sort of?) random link") goes to `/surprise/`. Since 2026-10-31 the sky is the front page ("I love A, the sky is the site"; section "The sky", "The front page") and this page is its plain door, without the script. |

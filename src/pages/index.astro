@@ -109,3 +109,14 @@ const entries = [
     figures.forEach((figure, i) => (figure.hidden = i !== today));
   }
 </script>
+
+<script>
+  // On this day is the reader's today, in Central.
+  import { centralDate } from '../lib/day';
+  import { onPath } from '../lib/paths';
+  const day = centralDate(new Date());
+  for (const link of document.querySelectorAll<HTMLAnchorElement>(
+    '[data-today]',
+  ))
+    link.href = onPath(Number(day.slice(5, 7)), Number(day.slice(8)));
+</script>

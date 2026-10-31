@@ -18,13 +18,18 @@
 import type { Lens } from '../lib/lens';
 import {
   aboutPath,
+  issueLabel,
+  issuePath,
+  issues,
   newestPath,
   number,
+  onPath,
   stars,
   suggestPath,
+  topicsPath,
   years,
 } from '../lib/data';
-import { dayIndex } from '../lib/day';
+import { centralDate, dayIndex } from '../lib/day';
 import { quotes } from '../lib/quotes';
 interface Props {
   // The front page: the wordmark and the ways in, the quote, and the whole
@@ -35,6 +40,13 @@ interface Props {
 }
 const { home = false, lens } = Astro.props;
 const bar = home || !!lens;
+// The front page's lenses: today in every year (the page's script turns it
+// to the reader's today, since the page may be days old), the newest issue
+// with links, and the topics.
+const today = centralDate(new Date());
+const latest = [...issues]
+  .filter((issue) => issue.links.some((row) => row.id))
+  .sort((a, b) => b.date.localeCompare(a.date))[0];
 const pick = home && quotes.length ? dayIndex(quotes.length) : -1;
 const waysIn = [
   [newestPath, 'Newest'],
@@ -242,6 +254,25 @@ const waysIn = [
             </figcaption>
           </figure>
         ))}
+      {home && (
+        <nav class="sky-home-lenses" aria-label="Lenses">
+          <a
+            class="sky-lens-chip"
+            href={onPath(Number(today.slice(5, 7)), Number(today.slice(8)))}
+            data-today
+          >
+            On this day
+          </a>
+          {latest && (
+            <a class="sky-lens-chip" href={issuePath(latest)}>
+              Latest: {issueLabel(latest)}
+            </a>
+          )}
+          <a class="sky-lens-chip" href={topicsPath}>
+            Topics
+          </a>
+        </nav>
+      )}
       <p class="sky-card-foot">
         <button class="sky-out" type="button" data-surprise>
           Surprise me

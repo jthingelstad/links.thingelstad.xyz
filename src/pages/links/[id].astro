@@ -25,6 +25,7 @@ import {
   indexedRecord,
   issueLabel,
   issuePath,
+  onPath,
   linkJsonPath,
   linkMarkdownPath,
   linkPath,
@@ -139,11 +140,17 @@ const lens: LensFacts = {
         <div class="record-byline" data-pagefind-ignore="all">
           <span>
             Saved{' '}
-            <time class="dt-published" datetime={link.saved}>
-              {link.clock
-                ? `${weekdayDateLabel(link.saved)}, ${timeLabel(link.saved)}`
-                : weekdayDateLabel(link.saved)}
-            </time>
+            <a
+              class="record-day"
+              href={onPath(link.month, Number(link.day.slice(8)))}
+              title="Every link saved on this day, in any year"
+            >
+              <time class="dt-published" datetime={link.saved}>
+                {link.clock
+                  ? `${weekdayDateLabel(link.saved)}, ${timeLabel(link.saved)}`
+                  : weekdayDateLabel(link.saved)}
+              </time>
+            </a>
           </span>
           {appears.map((a) => (
             <a class="chip" href={issuePath(a.issue)}>

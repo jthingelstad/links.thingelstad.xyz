@@ -1,0 +1,94 @@
+---
+// On this day (DIRECTION.md, "The sky", Phase 2): every link saved on one
+// Central calendar day, in any year, newest year first, with the time of day
+// where it is real. A lens (Lens.astro): the sky beside it lights them in
+// Time, years as depth, with the day before and after as chips. 366 pages,
+// 29 February among them.
+import Layout from '../../layouts/Layout.astro';
+import LinkList from '../../components/LinkList.astro';
+import Lens from '../../components/Lens.astro';
+import type { Lens as LensFacts } from '../../lib/lens';
+import {
+  type Link,
+  appearances,
+  calendarDays,
+  dayKey,
+  linksByDayOfYear,
+  monthNames,
+  number,
+  onPath,
+  plural,
+  timeLabel,
+  weekdayDateLabel,
+} from '../../lib/data';
+
+export function getStaticPaths() {
+  return calendarDays.map(({ month, day }, i) => ({
+    params: { day: dayKey(month, day) },
+    props: { i },
+  }));
+}
+const { i } = Astro.props as { i: number };
+const { month, day } = calendarDays[i];
+const name = (d: { month: number; day: number }) =>
+  `${monthNames[d.month - 1]} ${d.day}`;
+const title = name({ month, day });
+const list = [...(linksByDayOfYear.get(dayKey(month, day)) ?? [])].reverse();
+const yearOf = (link: Link) => Number(link.day.slice(0, 4));
+const years = [...new Set(list.map(yearOf))];
+const byYear = years.map((year) => ({
+  year,
+  links: list.filter((link) => yearOf(link) === year),
+}));
+const notes = list.filter((link) => link.hasNote).length;
+const inIssues = list.filter((link) => appearances.has(link.id)).length;
+const lede = list.length
+  ? `${plural(list.length, 'link')} saved on ${title} in ${plural(years.length, 'year')}; ${number(notes)} with a note${inIssues > 0 ? `, ${number(inIssues)} in a Weekly Thing` : ''}.`
+  : `Nothing saved on ${title} yet.`;
+// The weekday it fell on, and the time where the time saved is real.
+const when = (link: Link) => {
+  const weekday = weekdayDateLabel(link.saved).split(',')[0];
+  return link.clock ? `${weekday}, ${timeLabel(link.saved)}` : weekday;
+};
+const before = calendarDays[(i + 365) % 366];
+const after = calendarDays[(i + 1) % 366];
+const lens: LensFacts = {
+  kind: 'set',
+  label: `Lens: ${title}`,
+  view: 'time',
+  chips: [
+    {
+      href: onPath(before.month, before.day),
+      label: name(before),
+      rel: 'prev',
+    },
+    { href: onPath(after.month, after.day), label: name(after), rel: 'next' },
+  ],
+};
+---
+
+<Layout
+  title={`On ${title} · Linking Things`}
+  description={
+    list.length
+      ? `The ${plural(list.length, 'link')} Jamie Thingelstad saved on ${title}, in every year since ${years[years.length - 1]}.`
+      : `Links Jamie Thingelstad saved on ${title}, in any year.`
+  }
+  feed
+  lens
+>
+  <Lens lens={lens}>
+    <p class="kicker">On this day</p>
+    <h1 class="page-title">{title}</h1>
+    <p class="lede">{lede}</p>
+    {byYear.map((group) => (
+      <section class="month">
+        <h2>
+          {group.year}{' '}
+          <span class="meta">{plural(group.links.length, 'link')}</span>
+        </h2>
+        <LinkList links={group.links} compact date={when} entries />
+      </section>
+    ))}
+  </Lens>
+</Layout>

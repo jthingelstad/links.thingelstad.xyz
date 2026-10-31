@@ -426,6 +426,21 @@ for (const link of links) {
   linksByWeek.set(link.week, week);
 }
 export const years = [...linksByYear.keys()].sort((a, b) => a - b);
+// A calendar day of the year as "10-31", the key below and /on/'s address.
+export const dayKey = (month: number, day: number) =>
+  `${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+// Every link by its Central calendar day of the year ("10-31"), oldest first.
+export const linksByDayOfYear = new Map<string, Link[]>();
+for (const link of links) {
+  const key = link.day.slice(5);
+  if (!linksByDayOfYear.has(key)) linksByDayOfYear.set(key, []);
+  linksByDayOfYear.get(key)!.push(link);
+}
+// Every day a year can have, 1 January to 31 December with 29 February.
+export const calendarDays = Array.from({ length: 366 }, (_, i) => {
+  const date = new Date(Date.UTC(2024, 0, 1 + i));
+  return { month: date.getUTCMonth() + 1, day: date.getUTCDate() };
+});
 
 // Kinds, each with its links oldest first; every kind is listed, even one
 // with no links (it has a page saying so).
