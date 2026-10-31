@@ -8,7 +8,9 @@
 // stars with up to five links under the box, the keyboard opens one on the
 // sky, the card's way out stands back to what Find lit, Enter stays and the
 // address carries the words, the last row searches on /search/, and a site
-// taken there is not offered again; a video facade asks nothing of YouTube
+// taken there is not offered again; Enter takes an unknown site as it
+// stands, lighting nothing; Doors from the whole sky puts its star in the
+// address; a video facade asks nothing of YouTube
 // or Vimeo until it is clicked, then becomes the player; /sky/#<id> opens on
 // that link (in the sky on the desktop, or Doors where the browser has no
 // WebGL; Doors on a phone), a door walks to a neighbour and Back returns, the
@@ -409,6 +411,26 @@ for (const [name, viewport] of [
     await rows.first().evaluate((o) => o.classList.contains('suggest-link')),
     'the taken site is not offered again',
   );
+
+  // Enter takes the words as they stand: a site no link is from lights
+  // nothing, in place of what was lit before.
+  const nowhere = 'site:nowhere.invalid';
+  await landing(`?q=${encodeURIComponent(word)}`);
+  await find.fill(nowhere);
+  await find.press('Enter');
+  await page.waitForURL((url) => url.searchParams.get('q') === nowhere);
+  if (sky === 'sky') {
+    assert.equal(
+      await page
+        .locator('.sky-home [data-home-find] .sky-home-lede')
+        .textContent(),
+      'No titles or sites have those words.',
+    );
+    // Doors from the whole sky takes a star, and the address says which.
+    await landing();
+    await page.locator('[data-toggle-view]').click();
+    await page.waitForURL((url) => /^#[0-9a-f]{12}$/.test(url.hash));
+  }
 
   // The video facade: nothing from the player's host until the click.
   if (video) {

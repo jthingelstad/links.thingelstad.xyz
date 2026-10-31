@@ -129,6 +129,7 @@ export async function initSky() {
       cur = noted[noted.length - 1] ?? N - 1;
       trail.push(cur);
       visited.add(cur);
+      address();
     }
     card();
     if (cur >= 0) view.show(cur, instant);
@@ -241,13 +242,13 @@ export async function initSky() {
     go(i);
   };
   // What the words light: the stars, the card, the address, and the best
-  // five under the box.
-  function run(frame: boolean) {
+  // five under the box. Enter (`sure`) takes the words as they stand.
+  function run(frame: boolean, sure = false) {
     if (!sky.ids.length) return;
     const text = input.value.trim();
     const next = findStars(sky, parse(text));
-    // A half-typed operator (site:kot) holds what is lit.
-    if (next && !suggestions.settled()) return;
+    // A half-typed operator (site:kot) holds what is lit while typing.
+    if (next && !sure && !suggestions.settled()) return;
     found = next;
     query = next ? text : '';
     sky3d?.light(found, frame);
@@ -278,7 +279,7 @@ export async function initSky() {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     clearTimeout(typing);
-    run(true);
+    run(true, true);
     if (view === doors && found?.length) stopAndGo(found[0]);
   });
 
