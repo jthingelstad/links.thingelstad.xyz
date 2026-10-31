@@ -38,10 +38,10 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   (`src/scripts/sky*.ts`; the shared arithmetic and Find, tested, are `src/lib/sky.ts`).
   Find lights stars by title and site in the browser with the search grammar, never
   Pagefind. The front page's address carries `?q=`, `?view=time` and `#<id>`. **Lens
-  pages** (an issue, a year, a site, a kind, a link; `src/components/Lens.astro`,
+  pages** (an issue, a year, a site, a kind, a link, a topic and `/topics/`; `src/components/Lens.astro`,
   `src/lib/lens.ts`, `src/styles/lens.css`) put the page in a night panel beside the
   sky, which lights what the panel lists (`.link-list a.title`) or stands on the
-  page's link; a star chosen there opens its page. Layout's `lens` marks `<html>`
+  page's link; a star chosen there opens its page, and a topic's name its topic. Layout's `lens` marks `<html>`
   before anything draws; without the script, WebGL or the stars it is the plain page
   with the header. Hosts are "Sites" to a reader (Jamie, 2026-10-31); the URLs keep
   `/hosts/`. **The layout is
@@ -75,9 +75,10 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   twins, `/hosts/<host>/`, `/kinds/`, `/kinds/<kind>/`, `/issues/<n>/` (the Weekly
   Thing archive key, `140-special` for the special issue), `/years/<yyyy>/` with its
   `llms.txt`, `/newest/`, `/search/`, `/sky/` (with `/sky/#<id>` on one link, which every record
-  links), `/surprise/` (a noindex door to a random
+  links), `/topics/` and `/topics/<slug>/` (the topic's name in `content/topics.md`, so a
+  rename moves it), `/surprise/` (a noindex door to a random
   record), `/about/`, the feeds (`feed.xml` and
-  `feed.json` at the root and under each host and kind page) and `/links.json`,
+  `feed.json` at the root and under each host, kind and topic page) and `/links.json`,
   `/hosts.json`, `/issues.json`, `/links.db`, `/llms.txt`, `/mcp` and `/mcp/health`. Kudos,
   feed readers, the Librarian, WT Builder and MCP clients depend on them.
   `src/lib/paths.ts` is the one place they are formed; `src/lib/data.ts` re-exports

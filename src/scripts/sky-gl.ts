@@ -41,6 +41,9 @@ export interface Walk {
   leave: () => void;
   // What Find holds, when it has lit stars.
   query: () => string;
+  // A topic's name chosen: on a lens page it opens the topic's page; without
+  // this the sky flies to the topic's middle.
+  topic?: (k: number) => void;
 }
 
 export interface View {
@@ -581,7 +584,8 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
     node.style.opacity = '0';
     node.addEventListener('click', () => {
       stopPlay();
-      if (named()) walk.go(centreOf(k));
+      if (walk.topic) walk.topic(k);
+      else if (named()) walk.go(centreOf(k));
     });
     return node;
   });

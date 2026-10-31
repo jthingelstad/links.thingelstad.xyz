@@ -1,0 +1,60 @@
+---
+// Every topic (content/topics.md), in its family, largest first, with its
+// count. A lens (Lens.astro) on the whole sky, which lights nothing: each
+// name there, as here, opens its topic.
+import Layout from '../../layouts/Layout.astro';
+import Lens from '../../components/Lens.astro';
+import type { Lens as LensFacts } from '../../lib/lens';
+import {
+  number,
+  plural,
+  skyFamilies,
+  skyTopics,
+  stars,
+  topicPath,
+} from '../../lib/data';
+import { topicLinks } from '../../lib/stars';
+
+const families = skyFamilies.map((family, f) => ({
+  family,
+  topics: skyTopics
+    .filter((topic) => topic.family === f)
+    .map((topic) => ({ ...topic, size: topicLinks(topic.id).length }))
+    .filter((topic) => topic.size)
+    .sort((a, b) => b.size - a.size || a.name.localeCompare(b.name)),
+}));
+const shown = families.reduce((n, f) => n + f.topics.length, 0);
+const lens: LensFacts = {
+  kind: 'set',
+  label: 'Lens: Topics',
+  section: '/topics/',
+};
+---
+
+<Layout
+  title="Topics · Linking Things"
+  description={`The ${shown} topics Jamie Thingelstad's ${number(stars.size)} saved links fall into, by what each one says.`}
+  lens
+>
+  <Lens lens={lens}>
+    <p class="kicker">Sky</p>
+    <h1 class="page-title">Topics</h1>
+    <p class="lede">
+      The {shown} topics the links fall into, by what each one says, in{' '}
+      {skyFamilies.length} families, each a colour in the sky. Largest first.
+    </p>
+    {families.map(({ family, topics }) => (
+      <section class="topic-family">
+        <h2>{family}</h2>
+        <ul class="topic-list">
+          {topics.map((topic) => (
+            <li>
+              <a href={topicPath(topic.name)}>{topic.name}</a>{' '}
+              <span class="meta">{plural(topic.size, 'link')}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </Lens>
+</Layout>

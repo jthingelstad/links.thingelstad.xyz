@@ -27,7 +27,12 @@
 // lens's own), never a star. Where the camera stood is kept for the tab
 // (sessionStorage), so the next page's sky opens there and flies to its own
 // lens: one sky, page to page.
-import { linkPath, skyPlacesPath, skyStarsPath } from '../lib/paths.ts';
+import {
+  linkPath,
+  skyPlacesPath,
+  skyStarsPath,
+  topicPath,
+} from '../lib/paths.ts';
 import { parse } from '../lib/search-grammar.ts';
 import {
   type SkyData,
@@ -145,6 +150,10 @@ export async function initSky() {
     go,
     leave,
     query: () => (found ? query : ''),
+    // On a lens page a topic is a lens of its own.
+    topic: lens
+      ? (k) => location.assign(topicPath(sky.topics[k].name))
+      : undefined,
   };
 
   const sky3d: SkyView | null = startSky(stage, walk);
