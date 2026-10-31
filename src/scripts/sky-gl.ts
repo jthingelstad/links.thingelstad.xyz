@@ -1150,7 +1150,7 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
   }
   document.addEventListener('fullscreenchange', () => {
     const on = full();
-    stage.toggleAttribute('data-full', on);
+    stage.toggleAttribute('data-fullscreen', on);
     const label = on ? 'Leave full screen' : 'Full screen';
     fullButton.setAttribute('aria-label', label);
     fullButton.title = label;

@@ -440,8 +440,15 @@ for (const [name, viewport] of [
     await page.locator('[data-full]').click();
     await page.waitForFunction(() =>
       document.fullscreenElement?.matches(
-        '[data-sky][data-full][data-playing]',
+        '[data-sky][data-fullscreen][data-playing]',
       ),
+    );
+    // A touch on the sky takes the controls back, in full screen too.
+    await page.locator('.sky-gl').click({ position: { x: 40, y: 200 } });
+    assert.equal(
+      await page.locator('[data-sky]').getAttribute('data-playing'),
+      null,
+      'a click on the sky stops Play',
     );
     await page.evaluate(() => document.exitFullscreen());
   } else

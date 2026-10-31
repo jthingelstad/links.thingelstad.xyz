@@ -949,19 +949,21 @@ html:has(.sky:not([hidden])) {
 .sky-icon[hidden] {
   display: none;
 }
-.sky[data-full] .sky-hint {
+.sky[data-fullscreen] .sky-hint {
   display: none;
 }
 .sky-bar {
   transition: opacity 0.6s;
 }
-.sky[data-full][data-playing]:not([data-stirred]) {
+/* The canvas and the names set their own pointers, so all of it. */
+.sky[data-fullscreen][data-playing]:not([data-stirred]),
+.sky[data-fullscreen][data-playing]:not([data-stirred]) * {
   cursor: none;
 }
-.sky[data-full][data-playing]:not([data-stirred]) .sky-bar {
+.sky[data-fullscreen][data-playing]:not([data-stirred]) .sky-bar {
   opacity: 0;
   pointer-events: none;
 }
-.sky[data-full][data-playing]:not([data-stirred]) .sky-bar > * {
+.sky[data-fullscreen][data-playing]:not([data-stirred]) .sky-bar > * {
   pointer-events: none;
 }
