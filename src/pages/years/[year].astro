@@ -8,6 +8,7 @@ import LinkList from '../../components/LinkList.astro';
 import Lens from '../../components/Lens.astro';
 import YearBars from '../../components/YearBars.astro';
 import type { Lens as LensFacts } from '../../lib/lens';
+import { centralDate } from '../../lib/day';
 import {
   type Link,
   appearances,
@@ -33,6 +34,9 @@ const months = monthNames
   }))
   .filter((m) => m.links.length);
 const notes = list.filter((link) => link.hasNote).length;
+// The year's count is on its card once the year is over (Jamie: "counts on
+// issues and finished years only").
+const finished = year < Number(centralDate(new Date()).slice(0, 4));
 const inIssues = list.filter((link) => appearances.has(link.id)).length;
 const day = (link: Link) =>
   `${monthNames[link.month - 1].slice(0, 3)} ${Number(link.day.slice(8))}`;
@@ -68,6 +72,12 @@ const lens: LensFacts = {
   title={`${year} · Linking Things`}
   description={`The ${plural(list.length, 'link')} Jamie Thingelstad saved in ${year}, by month.`}
   feed
+  card={{
+    kicker: 'Year',
+    headline: String(year),
+    count: finished ? list.length : 0,
+    ids: list.map((link) => link.id),
+  }}
   lens
 >
   <Lens lens={lens}>

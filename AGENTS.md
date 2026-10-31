@@ -139,14 +139,28 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   and the note only when `p-voice` is `jamie`. `src/lib/card.ts` forms the card's URL,
   with `v` a hash of what the card shows, and is the only place `v` is computed; the
   card maker's own rules are in `../thingelstad.com/cards.thingelstad.com/AGENTS.md`.
-  Changing what a record's h-entry carries changes its card, so check both. Every other
-  page's `og:image` is `/share.jpg` (the SEO scan, 2026-10-25), the live front page at
+  Changing what a record's h-entry carries changes its card, so check both. A lens page
+  (an issue, a year, a site, a kind, a topic, `/topics/`, a day), the front page and
+  `/sky/` name a sky card (2026-10-31; Jamie: "Approved: build Linking Things sky cards
+  (a sky layout on cards.thingelstad.com, then og:image on every lens page), counts on
+  issues and finished years only, the whole-sky card on the front page and /sky/"):
+  the page passes Layout a `card` (kicker, name, count, the ids it lists), Layout writes
+  it into main's h-feed (`p-kicker`, `p-headline`, `p-link-count` on an issue and a
+  finished year only, `u-sky`), and `skyCardOf` in `card.ts` names the card, its `v` a
+  hash of the words, the count, the sky's layout and the listed ids that have a star.
+  The card is drawn over `/sky/card.json` (`cardSky` in `src/lib/stars.ts`: every star
+  projected onto the card as the front page first shows it, its light from `starLight`
+  in `src/lib/sky.ts`, which the sky's own colours use too), with the page's h-entries
+  lit; the front page, `/sky/` and `/topics/` light nothing. Every other page's
+  `og:image` (About, Search, Newest, Stats) is `/share.jpg` (the SEO scan, 2026-10-25), the live front page at
   1200 x 630 with a large Twitter card: `npm run share-image` (`tools/share-image.mjs`)
   redraws it by hand, with Tinylytics blocked; the count on it is a point in time.
   `SHARE_URL` points it at a local build (`npx astro preview`) when a change redraws
   the front page, so the image ships with it.
-  `tools/validate-site.py` fails a record that doesn't name its card and any other page
-  that names another image.
+  `tools/validate-site.py` fails a record or a lens page that doesn't name its card,
+  a lens page's h-feed that doesn't say what the card shows (or counts where the number
+  still changes), a `/sky/card.json` that isn't the sky's stars, and any other page that
+  names another image.
 - **Secrets.** `.env`, `pinboard/` and `archive/` are never committed.
   `pinboard/posts_all.json` holds private bookmarks and must never be published or
   copied into `data/`. Never print the Pinboard token.

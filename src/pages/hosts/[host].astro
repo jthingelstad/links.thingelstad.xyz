@@ -66,6 +66,11 @@ const lens: LensFacts = {
   description={`${plural(host.count, 'link')} Jamie Thingelstad saved from ${host.host}, ${span}.`}
   alternates={feeds}
   feed
+  card={{
+    kicker: 'Site',
+    headline: host.host,
+    ids: list.map((link) => link.id),
+  }}
   lens
 >
   <Lens lens={lens}>

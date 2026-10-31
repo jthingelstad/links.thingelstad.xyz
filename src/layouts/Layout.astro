@@ -13,6 +13,8 @@ import interTight from '../../shared/fonts/inter-tight-latin-wght-normal.woff2?u
 import { owner, sitesStrip } from '../lib/sites';
 import { siteFeedAlternates } from '../lib/feeds';
 import Analytics from '../components/Analytics.astro';
+import { type SkyCardFacts, skyCardOf } from '../lib/card';
+import { absolute, skyCardPath } from '../lib/paths';
 interface Props {
   title?: string;
   description?: string;
@@ -29,9 +31,13 @@ interface Props {
   // night, without the header (the sky's bar holds the wordmark and the
   // ways in), rather than turning into it once the script runs.
   lens?: boolean;
-  // A record's own share card (lib/card.ts); every other page shares the
-  // front page.
+  // A record's own share card (lib/card.ts); a page with neither this nor
+  // `card` shares the front page.
   image?: { url: string; alt: string };
+  // A lens page's sky card (lib/card.ts, skyCardOf), and the front page's
+  // and /sky/'s: main is an h-feed carrying what the card says, read by
+  // cards.thingelstad.com, whose rows (if any) are the stars it lights.
+  card?: SkyCardFacts;
   // A page that lists records (newest, a host, a kind, a year, an issue):
   // main is an h-feed, named by the title, whose rows are h-entries
   // (LinkList's `entries`). Never on a record, which is an h-entry itself.
@@ -47,12 +53,16 @@ const {
   home = false,
   lens = false,
   feed = false,
-  image = {
+  card,
+  image: given = {
     url: new URL('/share.jpg', Astro.site).href,
     alt: 'The Linking Things front page: every link Jamie Thingelstad has saved since 2005 as a sky of stars, placed by what each one says',
   },
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const sky = card && skyCardOf(Astro.url.pathname, card);
+const image = sky ? { url: sky.url, alt: sky.alt } : given;
+const hfeed = feed || Boolean(sky);
 // The sky is the front page, so the wordmark goes to it; /sky/ stays, with
 // its constellations, but leaves the header. Hosts are Sites to a reader
 // (Jamie, 2026-10-31); the URLs keep /hosts/.
@@ -107,7 +117,8 @@ const current = (href: string) =>
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE_NAME} />
     {!notFound && <meta property="og:url" content={canonical} />}
-    {/* A record's card, or the front page (tools/share-image.mjs) for the rest. */}
+    {/* A record's card, a lens page's sky card, or the front page
+        (tools/share-image.mjs) for the rest. */}
     <meta property="og:image" content={image.url} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -180,12 +191,22 @@ const current = (href: string) =>
         </nav>
       </header>
     )}
-    <main id="main" class:list={['site-main', { 'h-feed': feed }]}>
+    <main id="main" class:list={['site-main', { 'h-feed': hfeed }]}>
       <slot />
-      {feed && (
+      {hfeed && (
         <>
           <data class="p-name" value={title}></data>
           <data class="u-url" value={canonical}></data>
+        </>
+      )}
+      {sky && (
+        <>
+          <data class="p-kicker" value={sky.kicker}></data>
+          <data class="p-headline" value={sky.headline}></data>
+          {sky.count > 0 && (
+            <data class="p-link-count" value={String(sky.count)}></data>
+          )}
+          <data class="u-sky" value={absolute(skyCardPath)}></data>
         </>
       )}
     </main>

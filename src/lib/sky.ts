@@ -78,6 +78,39 @@ export function splitSky(sky: SkyData): {
   };
 }
 
+// The glow under each topic, by family.
+export const GLOWS = [
+  '#5d7bff',
+  '#b07cff',
+  '#4fb8c9',
+  '#7f9dff',
+  '#9b6bff',
+  '#46a6ff',
+  '#c58cff',
+  '#5fc4b0',
+];
+
+// Each star's light, the same on every load: how bright it is (a link with a
+// note brighter) and how warm, from a seeded random. The sky colours its
+// stars with it (src/scripts/sky-gl.ts), and the lens pages' share cards
+// draw the same stars (/sky/card.json, src/lib/stars.ts).
+export function starLight(note: number[]) {
+  let seed = 7;
+  const random = () => {
+    seed = (seed + 0x6d2b79f5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  const bright: number[] = [];
+  const warm: number[] = [];
+  for (let i = 0; i < note.length; i++) {
+    warm.push(random());
+    bright.push((0.55 + 0.45 * Math.pow(random(), 1.4)) * (note[i] ? 1 : 0.65));
+  }
+  return { bright, warm };
+}
+
 export type Vec3 = [number, number, number];
 // A 4x4 matrix, column-major, as WebGL takes it.
 export type Mat4 = Float32Array;

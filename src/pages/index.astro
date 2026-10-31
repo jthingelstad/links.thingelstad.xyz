@@ -26,6 +26,7 @@ import {
 } from '../lib/data';
 import { dayIndex } from '../lib/day';
 import { quotes } from '../lib/quotes';
+import { WHOLE_SKY } from '../lib/card';
 import '../styles/sky.css';
 const pick = quotes.length ? dayIndex(quotes.length) : -1;
 const entries = [
@@ -39,7 +40,7 @@ const entries = [
 ];
 ---
 
-<Layout home>
+<Layout home card={WHOLE_SKY}>
   <h1 class="sr-only">Linking Things</h1>
   <SkyStage home />
   <div class="home" data-sky-plain>

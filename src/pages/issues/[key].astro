@@ -10,6 +10,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Lens from '../../components/Lens.astro';
 import type { Lens as LensFacts } from '../../lib/lens';
+import { issueCard } from '../../lib/card';
 import {
   type Issue,
   dateLabel,
@@ -46,7 +47,10 @@ for (const row of rows) {
   if (last?.name === name) last.rows.push(row);
   else sections.push({ name, rows: [row] });
 }
-const saved = rows.filter((row) => row.id && linkById.has(row.id)).length;
+const savedIds = rows
+  .map((row) => row.id)
+  .filter((id): id is string => !!id && linkById.has(id));
+const saved = savedIds.length;
 const lens: LensFacts = {
   kind: 'set',
   label: `Lens: ${issue.number === null ? issueTitle(issue) : issueLabel(issue)}`,
@@ -78,6 +82,7 @@ const lens: LensFacts = {
   title={`${issueTitle(issue)} · Linking Things`}
   description={`The ${plural(rows.length, 'link')} in ${issueTitle(issue)}, ${dateLabel(issue.date)}.`}
   feed={saved > 0}
+  card={{ ...issueCard(issue), count: saved, ids: savedIds }}
   lens
 >
   <Lens lens={lens}>

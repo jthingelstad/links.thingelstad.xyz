@@ -10,6 +10,7 @@ import LinkList from '../../components/LinkList.astro';
 import SkyStage from '../../components/SkyStage.astro';
 import { number, plural, skyTopics, stars, topicPath } from '../../lib/data';
 import { constellations } from '../../lib/stars';
+import { WHOLE_SKY } from '../../lib/card';
 import '../../styles/sky.css';
 
 const families = constellations();
@@ -18,6 +19,7 @@ const families = constellations();
 <Layout
   title="Sky · Linking Things"
   description={`Every link Jamie Thingelstad has saved, ${number(stars.size)} of them, as a sky of stars placed by what each one says, in ${skyTopics.length} constellations.`}
+  card={WHOLE_SKY}
 >
   <div class="sky-intro">
     <h1 class="page-title">Sky</h1>

@@ -75,6 +75,11 @@ const lens: LensFacts = {
       : `Links Jamie Thingelstad saved on ${title}, in any year.`
   }
   feed
+  card={{
+    kicker: 'On this day',
+    headline: title,
+    ids: list.map((link) => link.id),
+  }}
   lens
 >
   <Lens lens={lens}>

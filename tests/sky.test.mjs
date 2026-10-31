@@ -22,12 +22,18 @@ import {
   splitSky,
   spread,
   staggered,
+  starLight,
   yearOf,
 } from '../src/lib/sky.ts';
 import { parse } from '../src/lib/search-grammar.ts';
 import { kinds } from '../src/lib/kinds.ts';
 import { checkTopics, parseTopics } from '../src/lib/topics.ts';
-import { constellations, skyDocument, skyFiles } from '../src/lib/stars.ts';
+import {
+  cardSky,
+  constellations,
+  skyDocument,
+  skyFiles,
+} from '../src/lib/stars.ts';
 import { links, nearestInMeaning, skyTopics, stars } from '../src/lib/data.ts';
 
 test('the morph: every star leaves at 0 and arrives at 1, the early years first', () => {
@@ -340,4 +346,39 @@ test("the sky's two files: places first, names with the layout, nothing twice", 
   assert.deepEqual({ ...places, ...names }, sky);
   // The build serves the same split.
   assert.deepEqual(skyFiles().places, places);
+});
+
+test("each star's light: the same every load, brighter with a note", () => {
+  const note = [1, 0, 1, 0, 0, 1];
+  const a = starLight(note);
+  assert.deepEqual(starLight(note), a);
+  for (const list of [a.bright, a.warm])
+    assert.ok(
+      list.length === note.length && list.every((v) => v >= 0 && v <= 1),
+    );
+  assert.ok(a.bright.every((b, i) => (note[i] ? b >= 0.55 : b <= 0.65)));
+});
+
+test('/sky/card.json: every star of the sky, on the card, and every topic a glow', () => {
+  const card = cardSky();
+  const { names, places } = skyFiles();
+  assert.equal(card.width, 1200);
+  assert.equal(card.height, 562);
+  assert.deepEqual(card.ids, names.ids);
+  assert.equal(card.stars.length, 4 * names.ids.length);
+  assert.ok(card.stars.every(Number.isFinite));
+  assert.equal(card.glows.length, places.topics.length);
+  assert.ok(
+    card.glows.every(
+      (g) =>
+        /^#[0-9a-f]{6}$/.test(g[3]) && g.slice(0, 3).every(Number.isFinite),
+    ),
+  );
+  // Most of the sky lands on the card as the front page first shows it.
+  let on = 0;
+  for (let i = 0; i < card.ids.length; i++) {
+    const [x, y] = card.stars.slice(4 * i, 4 * i + 2);
+    on += x >= 0 && x <= card.width && y >= 0 && y <= card.height;
+  }
+  assert.ok(on / card.ids.length > 0.9, `${on} of ${card.ids.length}`);
 });

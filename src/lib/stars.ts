@@ -16,9 +16,22 @@ import {
   skyTopics,
   stars,
 } from './data.ts';
-import { type SkyData, dayOf, splitSky } from './sky.ts';
+import {
+  GLOWS,
+  type SkyData,
+  type Vec3,
+  dayOf,
+  lookAt,
+  multiply,
+  perspective,
+  project,
+  shift,
+  splitSky,
+  starLight,
+} from './sky.ts';
 
 const tenth = (n: number) => Math.round(n * 10) / 10;
+const hundredth = (n: number) => Math.round(n * 100) / 100;
 
 let files: ReturnType<typeof splitSky> | undefined;
 export const skyFiles = () => (files ??= splitSky(skyDocument()));
@@ -130,4 +143,78 @@ export function nearTopics(topic: number, limit = 4) {
     .sort((a, b) => b[1] - a[1] || a[0] - b[0])
     .slice(0, limit)
     .map(([id]) => skyTopics[id]);
+}
+
+// /sky/card.json (src/pages/sky/card.json.ts): the sky as a lens page's share
+// card draws it (cards.thingelstad.com, its `sky` layout; Jamie, 2026-10-31:
+// "Approved: build Linking Things sky cards ..."). Every star in the Meaning
+// layout, seen as the front page first shows it but nearer and set right of
+// the card's words, projected onto the card above its band (1200 x 562):
+// four numbers a star in the order of `ids` (x, y, its light from
+// starLight, its warmth), and each topic's glow as [x, y, r, colour]. The
+// card maker turns the view toward the stars a page lists; it never sees a
+// title. No build time in it, so it uploads only when the stars change.
+export const CARD_SKY = {
+  width: 1200,
+  height: 562,
+  fov: (55 * Math.PI) / 180,
+  // The camera, as the sky's own (sky-gl.ts: radius, theta, phi), nearer.
+  r: 150,
+  th: 0.7,
+  ph: 1.15,
+  // Where the middle of the sky lands on the card.
+  ax: 0.66,
+  ay: 0.47,
+};
+
+export function cardSky() {
+  const { places, names } = skyFiles();
+  const { width: W, height: H, fov, r, th, ph, ax, ay } = CARD_SKY;
+  const s = Math.sin(ph);
+  const eye: Vec3 = [
+    r * s * Math.cos(th),
+    r * Math.cos(ph),
+    r * s * Math.sin(th),
+  ];
+  const vp = multiply(
+    shift(perspective(fov, W / H, 0.1, 3000), W * ax, H * ay, W, H),
+    lookAt(eye, [0, 0, 0]),
+  );
+  const scale = H / (2 * Math.tan(fov / 2));
+  const at = { x: 0, y: 0, w: 0, behind: false };
+  // A star behind the camera (none, while the sky is smaller than the
+  // camera's distance) is left far off the card, never drawn.
+  const place = (p: Vec3) => {
+    project(vp, p, W, H, at);
+    return at.behind
+      ? [-10 * W, -10 * H]
+      : [
+          tenth(Math.max(-10 * W, Math.min(10 * W, at.x))),
+          tenth(Math.max(-10 * H, Math.min(10 * H, at.y))),
+        ];
+  };
+  const light = starLight(places.note);
+  const stars: number[] = [];
+  for (let i = 0; i < names.ids.length; i++) {
+    const [x, y] = place(places.meaning.slice(3 * i, 3 * i + 3) as Vec3);
+    stars.push(x, y, hundredth(light.bright[i]), hundredth(light.warm[i]));
+  }
+  const glows = places.topics.map((topic) => {
+    const [x, y] = place(topic.meaning);
+    const depth = Math.max(at.w, 1);
+    return [
+      Math.round(x),
+      Math.round(y),
+      Math.round(((10 + Math.sqrt(topic.size) * 1.4) * scale) / depth),
+      GLOWS[topic.family % GLOWS.length],
+    ] as [number, number, number, string];
+  });
+  return {
+    layout: places.layout,
+    width: W,
+    height: H,
+    ids: names.ids,
+    stars,
+    glows,
+  };
 }
