@@ -119,6 +119,7 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 | `/surprise/` | Built: Surprise me, a door that replaces itself with one record at random, drawn from the records with Jamie's own words or a Weekly Thing; noindex and out of the sitemap, but crawlable, so crawlers can read the noindex |
 | `/sky/` | Built (section "The sky"): every link a star in the Meaning and Time layouts, with Play; Doors on a phone or without WebGL. `/sky/#<id>` opens on one link, and each record page's Sky row links to its star. The page's own HTML is the constellations, every topic in its family with the links at its middle, for a reader without the script and for search engines. Since the sky became the front page (2026-10-31) it is out of the site header but stays, with its URL |
 | `/sky/stars.json` | The sky page's own file, as `suggest.json` is the search page's: every star's id, title, site, Central day, whether it has a note, topic, places in both layouts (to a tenth) and neighbours as indexes, then the topics and families. No notes: a card fetches the link's JSON twin. 2.9 MB, 1.1 MB gzipped, for 16,558 stars (2026-10-30). Shaped for the page and free to change with it; not part of the dataset |
+| `/sky/card.json` | Built (2026-10-31, Phase 3): the sky the lens pages' share cards are drawn over, read only by cards.thingelstad.com: every star's place projected onto the card as the front page first shows it (x and y on a 1200 x 562 card), its light and warmth, in `/sky/stars.json`'s order, and each topic's glow. About 600 KB. Shaped for the cards and free to change with them; not part of the dataset |
 | `/stats/` | Linking volume along its dimensions (section "Statistics") |
 | `/about/` | The homage, in Jamie's words: what this is, why links matter, how it is made. Built from `content/about.md` (a `# ` title, then `## ` sections; the build fails on any other shape), a first draft in Jamie's voice from the Librarian for Jamie to edit. Linked from every page's footer |
 | `/feed.xml`, `/feed.json` | The newest 50 links as RSS 2.0 and JSON Feed 1.1, the Link Thing feed reborn; every host, kind and topic page carries its own pair at `feed.xml` and `feed.json` under its path. Built for the site, all 7,064 host pages (the host's newest 50) and the eight kind pages (the kind's newest 50); topics with the topic pages. Each item is the record: its permalink as link and id, the destination and the note as content, Central dates with the real offset, tags as categories. Every page advertises the site pair; a host page advertises its own first |
@@ -625,9 +626,19 @@ word for Hosts, quote of the day in the whole-sky card".
   most saved that year, each a link. They are HTML, not the statistics page's SVG,
   so their text keeps its size in the narrow panel and on a phone; the same in the
   plain page.
-- **Next, Phase 3**: share cards drawn
-  from the sky, by a `sky` layout in the cards project, deployed after Jamie sees
-  previews.
+- **Phase 3, the sky cards (built 2026-10-31).** Jamie saw the previews and approved:
+  "Approved: build Linking Things sky cards (a sky layout on cards.thingelstad.com, then
+  og:image on every lens page), counts on issues and finished years only, the whole-sky
+  card on the front page and /sky/". Each lens page's `og:image` is its own card from
+  cards.thingelstad.com's `sky` layout: the sky the front page opens on, the links the
+  page lists lit in gold and the view turned toward them, the page's kicker and name on
+  the left over the night, and a count only where the number is fixed (an issue's links,
+  a finished year's). An issue's card reads "Weekly Thing 354 · October 24, 2026" over
+  what it was about, or "Weekly Thing 50" over its day when it was titled only with
+  that. The front page and `/sky/` share the whole-sky card, "Every link since 2005"
+  over "Linking Things", nothing lit; `/topics/` is the whole sky too. A record keeps its
+  link card; About, Search, Newest and Stats keep `/share.jpg`. The card maker reads the
+  page's h-feed and draws over `/sky/card.json`.
 
 ## Topics
 
@@ -1004,7 +1015,10 @@ the mirror is kept lossless and Pinboard-shaped, not merely sufficient for pages
   the share card reads. The pages that list records (`/newest/`, host, kind, year and
   issue pages) are an h-feed on their `<main>`, named by the page title, of one
   h-entry per record row (`p-name` and `u-url` the record, `dt-published` the time
-  saved); an issue with no saved link is no feed. LinkList writes the rows only when
+  saved). A page with a sky card (Phase 3) is an h-feed too, with what its card shows
+  as invisible `<data>` (`p-kicker`, `p-headline`, `p-link-count`, `u-sky`): an issue
+  with no saved link is one with no entries, and so are the front page, `/sky/` and
+  `/topics/`, whose cards light nothing. LinkList writes the rows only when
   asked (`entries`), because the record page lists links inside its own h-entry.
   Nothing a reader sees changes. `validate:site` checks both.
 

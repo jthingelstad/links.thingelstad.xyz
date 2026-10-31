@@ -117,11 +117,18 @@ class Lists(unittest.TestCase):
 
 class OtherPages(unittest.TestCase):
     def test_a_page_listing_no_records_carries_neither(self):
-        # An issue whose links are none of them saved, and /about/.
-        self.assertTrue(problems("/issues/213/", list_page([], url="/issues/213/")))
         self.assertTrue(problems("/about/", list_page([row(RECORD)], url="/about/")))
+        self.assertTrue(problems("/about/", list_page([], url="/about/")))
         plain = f'<main id="main" class="site-main"><h1>About</h1></main>{FOOTER}'
         self.assertEqual(problems("/about/", plain), [])
+
+    def test_a_lens_listing_no_records_is_an_empty_h_feed(self):
+        # An issue whose links are none of them saved still has its card, so
+        # its main is the h-feed the card's words ride on, with no entry.
+        self.assertEqual(problems("/issues/213/", list_page([], url="/issues/213/")), [])
+        plain = f'<main id="main" class="site-main"><h1>Issue 213</h1></main>{FOOTER}'
+        self.assertTrue(problems("/issues/213/", plain))
+        self.assertTrue(problems("/issues/213/", list_page([], url="/issues/214/")))
 
 
 # An llms.txt the reference parser reads: prose only above the first section,

@@ -78,6 +78,8 @@ export const skyPath = '/sky/';
 export const starPath = (id: string) => `${skyPath}#${id}`;
 export const skyPlacesPath = '/sky/places.json';
 export const skyStarsPath = '/sky/stars.json';
+// The sky as a lens page's share card draws it (src/lib/stars.ts, cardSky).
+export const skyCardPath = '/sky/card.json';
 // On this day: every link saved on one Central calendar day, in any year,
 // at /on/MM-DD/ (02-29 too).
 export const onPath = (month: number, day: number) =>

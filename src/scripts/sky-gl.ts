@@ -14,6 +14,7 @@ import {
   type Projected,
   type SkyData,
   type Vec3,
+  GLOWS,
   cut,
   depthOf,
   lookAt,
@@ -26,6 +27,7 @@ import {
   shift,
   spread,
   staggered,
+  starLight,
   yearOf,
 } from '../lib/sky.ts';
 import { element, renderCard } from './sky-card.ts';
@@ -129,17 +131,6 @@ void main() {
 const HERE: Vec3 = [1, 0.81, 0.48];
 const LINK: Vec3 = [0.62, 0.71, 1];
 const SEEN: Vec3 = [0.82, 0.69, 1];
-// The glow under each topic, by family.
-const GLOWS = [
-  '#5d7bff',
-  '#b07cff',
-  '#4fb8c9',
-  '#7f9dff',
-  '#9b6bff',
-  '#46a6ff',
-  '#c58cff',
-  '#5fc4b0',
-];
 const FOV = (55 * Math.PI) / 180;
 const WHOLE = 175;
 const NEAR_LABELS = 14;
@@ -251,19 +242,12 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
   };
 
   // Buffers: the places once, the light on each move.
-  let seed = 7;
-  const random = () => {
-    seed = (seed + 0x6d2b79f5) | 0;
-    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
+  const light = starLight(sky.note);
   const baseColor = new Float32Array(N * 3);
   const baseSize = new Float32Array(N * 3);
   for (let i = 0; i < N; i++) {
-    const warm = random();
-    const b =
-      (0.55 + 0.45 * Math.pow(random(), 1.4)) * (sky.note[i] ? 1 : 0.65);
+    const warm = light.warm[i];
+    const b = light.bright[i];
     baseColor.set(
       [
         b * (0.78 + 0.22 * warm),

@@ -49,6 +49,11 @@ const lens: LensFacts = {
   description={`${plural(list.length, 'link')} of the kind ${words.name.toLowerCase()} that Jamie Thingelstad has saved. ${words.about}`}
   alternates={feedAlternates(feed)}
   feed
+  card={{
+    kicker: 'Kind',
+    headline: words.title,
+    ids: shown.map((link) => link.id),
+  }}
   lens
 >
   <Lens lens={lens}>

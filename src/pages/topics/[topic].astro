@@ -84,6 +84,11 @@ const lens: LensFacts = {
   description={`${plural(list.length, 'link')} Jamie Thingelstad saved in the topic ${topic.name}, ${span}.`}
   alternates={feedAlternates(topicFeed(topic))}
   feed
+  card={{
+    kicker: `Topic · ${skyFamilies[topic.family]}`,
+    headline: topic.name,
+    ids: list.map((link) => link.id),
+  }}
   lens
 >
   <Lens lens={lens}>

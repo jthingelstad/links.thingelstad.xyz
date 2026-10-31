@@ -4,8 +4,11 @@
 Adapted from poap.thingelstad.xyz's validator. It checks:
 
 - every page has a title, a canonical link to its own URL, a main landmark,
-  and as its og:image its record's card (src/lib/card.ts) on a record page
-  and the one share image (tools/share-image.mjs) on every other;
+  and as its og:image its record's card (src/lib/card.ts) on a record page,
+  its sky card on a lens page, the front page and /sky/ (whose h-feed says
+  what the card shows: p-kicker, p-headline, u-sky the sky's card map, and
+  p-link-count on an issue and a finished year only), and the one share
+  image (tools/share-image.mjs) on every other;
 - every internal href and src resolves to a built file (or to /mcp, which
   CloudFront sends to the MCP server), and every #fragment on an internal
   link names an id on the target page, or on /sky/ a star;
@@ -47,6 +50,8 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   record, every list as long as the stars, every place, topic, site, kind
   and neighbour in range, and each star's day its link's Central day; each
   record lists its star's first five neighbours under "Nearest in meaning";
+  /sky/card.json, the sky the share cards draw, holds the same stars, four
+  finite numbers each, and a glow for each topic;
 - /search/suggest.json, what the search box suggests from, holds every host
   with its count as /hosts.json has them and its links in each Central year
   as its twins have them, every issue newest first with its
@@ -82,6 +87,7 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
 """
 
 import json
+import math
 import os
 import re
 import sqlite3
@@ -106,6 +112,11 @@ SHARE_IMAGE = "/share.jpg"
 # A record's card, from cards.thingelstad.com: /links/<id>/ draws at
 # /links/links/<id>.png, at the v the page hashed from what the card shows.
 RECORD_CARD = re.compile(r"https://cards\.thingelstad\.com/links/links/([0-9a-f]{12})\.png\?v=[0-9a-f]{10}")
+# A lens page's sky card: /issues/354/ draws at /links/issues/354.png, the
+# front page at /links/index.png; the card maker reads its h-feed.
+SKY_CARD = re.compile(r"https://cards\.thingelstad\.com/links/([a-z0-9./-]+)\.png\?v=[0-9a-f]{10}")
+SKY_PAGE = re.compile(r"/|/sky/|/topics/|/(hosts|kinds|years|issues|topics|on)/[^/]+/")
+SKY_MAP = "https://links.thingelstad.xyz/sky/card.json"
 # The one script from another host, production builds only (Analytics.astro).
 TINYLYTICS = "https://tinylytics.app/embed/x4A9AVd_xma4hyT9xLZw.js?kudos=custom"
 PRODUCTION = os.environ.get("PUBLIC_TINYLYTICS_ENABLED") == "true"
@@ -199,6 +210,8 @@ class Page(HTMLParser):
         self.entries = []
         self.feed_urls = []
         self.row_records = []
+        # What a sky card says, from main's <data> outside any entry.
+        self.card_data = {}
         self._entry_depth = 0
         self._in_main = False
 
@@ -272,6 +285,9 @@ class Page(HTMLParser):
                 entry["published"].append(data.get("datetime"))
         elif self._in_main and tag == "data" and "u-url" in classes:
             self.feed_urls.append(data.get("value"))
+        elif self._in_main and tag == "data":
+            for name in classes & {"p-kicker", "p-headline", "p-link-count", "u-sky"}:
+                self.card_data.setdefault(name, []).append(data.get("value"))
         if tag == "a" and "title" in classes and record_id(data.get("href", "")):
             self.row_records.append(record_id(data["href"]))
 
@@ -341,9 +357,64 @@ def record_id(url):
 FEED_PAGE = re.compile(r"/newest/|/(hosts|kinds|years|issues|topics|on)/[^/]+/")
 
 
+def check_sky_card(rel, url, parser, problems):
+    """A lens page, the front page and /sky/ name their own sky card, and
+    their h-feed says what it shows: one kicker, one name, the sky's card map,
+    and a count only on an issue and a finished year (Jamie, 2026-10-31:
+    "counts on issues and finished years only")."""
+    card = SKY_CARD.fullmatch(parser.og_image or "")
+    expected = "index" if url == "/" else url.strip("/")
+    if not card or card.group(1) != expected:
+        problems.append(f"{rel}: og:image {parser.og_image} is not its sky card")
+    said = parser.card_data
+    for name in ("p-kicker", "p-headline"):
+        if len(said.get(name, [])) != 1 or not (said[name][0] or "").strip():
+            problems.append(f"{rel}: the sky card has no one {name}")
+    if said.get("u-sky") != [SKY_MAP]:
+        problems.append(f"{rel}: the sky card's u-sky is {said.get('u-sky')}, not {SKY_MAP}")
+    counts = said.get("p-link-count", [])
+    year = re.fullmatch(r"/years/(\d{4})/", url)
+    fixed = url.startswith("/issues/") or (
+        year and int(year.group(1)) < datetime.now(CENTRAL).year
+    )
+    if counts and (not fixed or len(counts) != 1 or not re.fullmatch(r"[1-9]\d*", counts[0] or "")):
+        problems.append(f"{rel}: a count {counts} on a sky card whose number is not fixed")
+    if fixed and not counts and parser.row_records:
+        problems.append(f"{rel}: no count on the sky card of an issue or a finished year")
+
+
+def check_card_map(ids, topics, problems):
+    """/sky/card.json, what the sky cards are drawn over: the stars of
+    /sky/stars.json in its order, four finite numbers each (x, y, light and
+    warmth, the last two from 0 to 1), and one glow a topic, its colour a hex
+    colour."""
+    where = "sky/card.json"
+    card = load_json(where, problems)
+    if card.get("width") != 1200 or card.get("height") != 562:
+        problems.append(f"{where}: not 1200 x 562")
+    if card.get("ids") != ids:
+        problems.append(f"{where}: its stars are not /sky/stars.json's")
+    stars = card.get("stars", [])
+    if len(stars) != 4 * len(ids) or not all(
+        isinstance(v, (int, float)) and math.isfinite(v) for v in stars
+    ):
+        problems.append(f"{where}: not four finite numbers a star")
+    elif any(not 0 <= v <= 1 for k, v in enumerate(stars) if k % 4 >= 2):
+        problems.append(f"{where}: a star's light or warmth out of 0 to 1")
+    glows = card.get("glows", [])
+    if len(glows) != topics or not all(
+        isinstance(g, list) and len(g) == 4
+        and all(isinstance(v, (int, float)) and math.isfinite(v) for v in g[:3])
+        and isinstance(g[3], str) and re.fullmatch(r"#[0-9a-f]{6}", g[3])
+        for g in glows
+    ):
+        problems.append(f"{where}: not one glow a topic, [x, y, r, #colour]")
+
+
 def check_microformats(rel, url, parser, saved, problems):
     """A record is one h-entry with its permalink as u-url; a page listing
-    records is an h-feed (its main) of one h-entry per record row; no other
+    records, or naming a sky card, is an h-feed (its main) of one h-entry per
+    record row (none, on a sky card's page that lists no records); no other
     page has either. saved maps a record id to its saved time."""
     if any(entry["nested"] for entry in parser.entries):
         problems.append(f"{rel}: an h-entry inside an h-entry")
@@ -353,7 +424,14 @@ def check_microformats(rel, url, parser, saved, problems):
         return
     rows = parser.row_records
     if not (FEED_PAGE.fullmatch(url) and rows):
-        if parser.feeds or parser.entries:
+        # A lens page that lists no record (the whole sky, /topics/, an issue
+        # none of whose links were saved) still has its card, so its main is
+        # the h-feed the card's words ride on, with no entry, even where /sky/
+        # lists links.
+        if SKY_PAGE.fullmatch(url):
+            if parser.feeds != ["main"] or parser.feed_urls != [SITE + url] or parser.entries:
+                problems.append(f"{rel}: main is not its one h-feed, with the page as u-url and no entry")
+        elif parser.feeds or parser.entries:
             problems.append(f"{rel}: an h-feed or h-entry on a page that lists no records")
         return
     if parser.feeds != ["main"] or parser.feed_urls != [SITE + url]:
@@ -1088,6 +1166,8 @@ def main():
             card = RECORD_CARD.fullmatch(parser.og_image or "")
             if not card or card.group(1) != record.group(1):
                 problems.append(f"{rel}: og:image {parser.og_image} is not its card")
+        elif SKY_PAGE.fullmatch(url):
+            check_sky_card(rel, url, parser, problems)
         elif parser.og_image != SITE + SHARE_IMAGE:
             problems.append(f"{rel}: og:image {parser.og_image} is not {SITE + SHARE_IMAGE}")
         if rel != "404.html":
@@ -1119,6 +1199,11 @@ def main():
             links.append((rel, ref, path, unquote(parts.fragment)))
 
     stars = check_sky(data_links, problems)
+    check_card_map(
+        list(stars),
+        len(load_json("sky/places.json", problems).get("topics", [])),
+        problems,
+    )
     check_nearest(nearest, stars, problems)
     for rel, ref, path, fragment in links:
         if not built(path):
