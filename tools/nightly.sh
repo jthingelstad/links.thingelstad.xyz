@@ -1,7 +1,8 @@
 #!/bin/bash
 # The nightly job (docs/deployment.md, "The nightly job"): sync Pinboard, join
-# the issues, run the three enrichment tools one after another, validate data/,
-# then commit data/ and public/media/ and push to main, which deploys.
+# the issues, bring the sky up to date, run the three enrichment tools one after
+# another, validate data/, then commit data/ and public/media/ and push to main,
+# which deploys.
 #
 #   tools/nightly.sh [--dry-run] [--hosts N] [--facts N] [--wayback N] [repo]
 #
@@ -195,6 +196,13 @@ step() {
 if ((DRY_RUN)); then
 	log "plan: load .env and GITHUB_TOKEN from gh auth token (not read in a dry run)"
 	log "plan: tools/sync.py (exit 3, rate limited, is logged and the run goes on), then tools/join_issues.py from isolated pinned Weekly main (not fetched in a dry run)"
+	code=0
+	python3 -I -B tools/sky.py --dry-run >"$WORK/plan.out" 2>&1 || code=$?
+	last="$(tail -n 1 "$WORK/plan.out")"
+	if ((code)); then
+		last="its dry run exited $code: $last"
+	fi
+	log "plan: tools/sky.py (Bedrock as cloud-engineer; exit 1 is logged and the run goes on): $last"
 	# The enrichment tools' own dry runs: offline, no writes (-B: no bytecode either).
 	for planned in "enrich_hosts.py --limit $HOSTS_LIMIT" "enrich_facts.py --limit $FACTS_LIMIT" \
 		"enrich_pages.py --wayback-only --limit $WAYBACK_LIMIT"; do
@@ -234,6 +242,10 @@ elif ((STEP_CODE != 0)); then
 fi
 step join "0" "${PY[@]}" tools/join_issues.py
 ((STEP_CODE == 0)) || fail "tools/join_issues.py exited $STEP_CODE; nothing committed"
+
+# New links become stars. Exit 1 (Bedrock or the identity check failed) still
+# takes removed links out of the sky; the new ones wait for the next night.
+step sky "0,1" "${PY[@]}" tools/sky.py
 
 # One after another, never in parallel. A tool that stops early (a rate limit,
 # a bot wall, Wayback refusing) has already written what it learned; the

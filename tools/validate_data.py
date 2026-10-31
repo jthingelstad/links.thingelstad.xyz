@@ -7,7 +7,8 @@ exist, positions, order), data/sync.json, the enrichment shards (keys that are
 public hosts or ids, filed in the right shard, only the contract's fields, no
 string over 2,000 characters, images that exist) and public/media/ (only images
 a facts record names), and scans every data file for anything that looks like
-a credential. With the raw export at hand (pinboard/posts_all.json), also
+a credential, and the sky (every star a public link's, its neighbours public
+links too). With the raw export at hand (pinboard/posts_all.json), also
 proves no record is a private bookmark.
 """
 
@@ -54,6 +55,7 @@ def main(argv=None):
         f"{summary['issues']:,} issues, {summary['linked_ids']:,} linked ids, "
         f"{summary['unmatched']:,} unmatched rows; enrichment {summary['hosts']:,} hosts, "
         f"{summary['pages']:,} pages, {summary['facts']:,} facts, {summary['images']:,} images; "
+        f"sky {summary['stars']:,} stars, {summary['starless']:,} waiting; "
         f"private bookmarks {private}"
     )
     return 0 if report.ok else 1
