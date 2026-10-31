@@ -606,6 +606,15 @@ for (const [name, viewport] of [
     const month = `#${record.saved.slice(0, 7)}`;
     assert.ok(await lensAt(year + month), 'a year is a lens');
     assert.equal(new URL(page.url()).hash, month, 'and keeps its month');
+    assert.equal(
+      await page.locator('.month-cols li').count(),
+      12,
+      'the year in bars has its twelve months',
+    );
+    assert.ok(
+      await page.locator('.bar-rows a[href^="/topics/"]').count(),
+      'and its most saved topics, each a link',
+    );
     const timeButton = page.locator('[data-layout="time"]');
     assert.equal(
       await timeButton.getAttribute('aria-pressed'),

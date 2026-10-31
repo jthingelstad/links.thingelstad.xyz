@@ -1,10 +1,12 @@
 ---
 // One year of saving, by month, oldest first: the date spine, kept to a page
-// per year. A lens (Lens.astro): the sky beside it lights the year's links,
-// laid out by Time, with the years either side as chips.
+// per year, with the year in bars at its head (YearBars.astro). A lens
+// (Lens.astro): the sky beside it lights the year's links, laid out by Time,
+// with the years either side as chips.
 import Layout from '../../layouts/Layout.astro';
 import LinkList from '../../components/LinkList.astro';
 import Lens from '../../components/Lens.astro';
+import YearBars from '../../components/YearBars.astro';
 import type { Lens as LensFacts } from '../../lib/lens';
 import {
   type Link,
@@ -82,6 +84,7 @@ const lens: LensFacts = {
         </a>
       ))}
     </nav>
+    <YearBars year={year} links={list} />
     {months.map((m) => (
       <section class="month" id={monthAnchor(year, m.month)}>
         <h2>
