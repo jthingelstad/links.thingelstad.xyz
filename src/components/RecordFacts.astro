@@ -22,6 +22,7 @@ import {
   plural,
   skyTopics,
   starPath,
+  topicPath,
   stars,
   waybackUrl,
   weekdayDateLabel,
@@ -121,8 +122,8 @@ const star = stars.get(link.id);
 const topic = star && skyTopics[star.topic];
 const near = star?.neighbors.length ?? 0;
 const nearest = near
-  ? `Its star, and the ${near === 1 ? 'link' : `${count(near)} links`} nearest it in meaning`
-  : 'Its star';
+  ? `and the ${near === 1 ? 'link' : `${count(near)} links`} nearest it in meaning`
+  : '';
 
 const wayback = waybackOf(link.id);
 const captured = wayback && wayback.count > 0 ? wayback : undefined;
@@ -216,10 +217,13 @@ const firstCapture =
     <div>
       <dt>Sky</dt>
       <dd>
-        <a class="lead" href={starPath(link.id)}>
+        <a class="lead" href={topicPath(topic.name)}>
           {topic.name}
         </a>
-        <span class="sub">{nearest}</span>
+        <span class="sub">
+          <a href={starPath(link.id)}>Its star</a>
+          {nearest}
+        </span>
       </dd>
     </div>
   )}

@@ -78,6 +78,17 @@ export const skyPath = '/sky/';
 export const starPath = (id: string) => `${skyPath}#${id}`;
 export const skyPlacesPath = '/sky/places.json';
 export const skyStarsPath = '/sky/stars.json';
+// A topic (content/topics.md) is a lens on the sky at its name as a slug,
+// so renaming a topic moves its page; /topics/ lists them all.
+export const topicsPath = '/topics/';
+export const topicSlug = (name: string) =>
+  name
+    .normalize('NFKD')
+    .replace(/\p{M}/gu, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+export const topicPath = (name: string) => `${topicsPath}${topicSlug(name)}/`;
 
 // Elsewhere: the Wayback Machine's copies of the destination.
 export const waybackUrl = (url: string) =>

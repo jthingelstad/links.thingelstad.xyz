@@ -15,11 +15,11 @@
 // or Vimeo until it is clicked, then becomes the player; /sky/#<id> opens on
 // that link (in the sky on the desktop, or Doors where the browser has no
 // WebGL; Doors on a phone), a door walks to a neighbour and Back returns, the
-// address following; a lens page (an issue, a link, a year) opens beside
-// the sky without the header, lights what it lists, takes Find with the
-// words in the address, opens a chosen star's page, whose doors walk on, and
-// a year opens in Time (or, without WebGL, is the plain page with the
-// header); and no request reaches Tinylytics.
+// address following; a lens page (an issue, a link, a topic, a year) opens
+// beside the sky without the header, lights what it lists, takes Find with the
+// words in the address, opens a chosen star's page, whose doors walk on, and a
+// topic's name opens the topic; a year opens in Time (or, without WebGL, is the
+// plain page with the header); and no request reaches Tinylytics.
 // SITE_TEST_URL defaults to the dev server; tools/test-built-site.mjs
 // runs this against dist/ behind the edge function (SITE_TEST_EDGE=1), which
 // adds the redirect and 404 checks. Evidence goes to SITE_QA_DIR
@@ -65,6 +65,7 @@ const routes = [
   '/kinds/video/',
   '/about/',
   '/sky/',
+  '/topics/',
   path(record.record),
   path(record.connections.same_host?.page ?? `${base}/hosts/`),
   `/years/${record.saved.slice(0, 4)}/`,
@@ -568,6 +569,16 @@ for (const [name, viewport] of [
         /^\/links\/[0-9a-f]{12}\/$/.test(url.pathname) &&
         url.pathname !== chosen,
     );
+    // A topic's name on the sky opens the topic, a lens too.
+    await page.locator('.sky-topic').first().dispatchEvent('click');
+    await page.waitForURL((url) =>
+      /^\/topics\/[a-z0-9-]+\/$/.test(url.pathname),
+    );
+    assert.ok(await lensAt(new URL(page.url()).pathname), 'a topic is a lens');
+    await page
+      .locator('.sky-found[data-star]')
+      .first()
+      .waitFor({ state: 'attached', timeout: 15000 });
     const year = `/years/${record.saved.slice(0, 4)}/`;
     const month = `#${record.saved.slice(0, 7)}`;
     assert.ok(await lensAt(year + month), 'a year is a lens');

@@ -7,6 +7,7 @@
 // the sky has exactly once, fails the build with its line number.
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { topicSlug } from './paths.ts';
 
 export interface Topics {
   families: string[];
@@ -75,6 +76,18 @@ export function checkTopics(parsed: Topics, count: number, file = TOPICS_FILE) {
     if (!parsed.topics.has(id)) missing.push(id);
   if (missing.length)
     throw new Error(`${file}: no name for topic ${missing.join(', ')}`);
+  // Each topic's page is its name as a slug (paths.ts), so no two may share
+  // one and every name needs a letter or digit.
+  const slugs = new Map<string, string>();
+  for (const { name } of parsed.topics.values()) {
+    const slug = topicSlug(name);
+    if (!slug) throw new Error(`${file}: "${name}" makes no page address`);
+    if (slugs.has(slug))
+      throw new Error(
+        `${file}: "${name}" and "${slugs.get(slug)}" share the address /topics/${slug}/`,
+      );
+    slugs.set(slug, name);
+  }
   return parsed;
 }
 

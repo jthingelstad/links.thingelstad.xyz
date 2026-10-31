@@ -32,10 +32,14 @@ import {
   newestPath,
   savedTwice,
   skyPath,
+  skyTopics,
   linkById,
+  topicPath,
+  topicsPath,
   yearPath,
   type Link,
 } from './data.ts';
+import { topicLinks } from './stars.ts';
 
 const newest = (dates: (string | null | undefined)[]) => {
   let best = 0;
@@ -94,6 +98,11 @@ for (const [host, list] of linksByHost)
   pages.set(hostPath(host), listDate(list));
 for (const [year, list] of linksByYear)
   pages.set(yearPath(year), listDate(list));
+pages.set(topicsPath, everything);
+for (const topic of skyTopics) {
+  const list = topicLinks(topic.id);
+  if (list.length) pages.set(topicPath(topic.name), listDate(list));
+}
 for (const [kind, list] of linksByKind)
   pages.set(kindPath(kind), list.length ? listDate(list) : everything);
 for (const issue of issues)

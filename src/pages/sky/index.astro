@@ -8,7 +8,7 @@
 import Layout from '../../layouts/Layout.astro';
 import LinkList from '../../components/LinkList.astro';
 import SkyStage from '../../components/SkyStage.astro';
-import { number, plural, skyTopics, starPath, stars } from '../../lib/data';
+import { number, plural, skyTopics, stars, topicPath } from '../../lib/data';
 import { constellations } from '../../lib/stars';
 import '../../styles/sky.css';
 
@@ -43,7 +43,7 @@ const families = constellations();
           {topics.map((topic) => (
             <li>
               <p class="constellation-name">
-                <a href={starPath(topic.centre.id)}>{topic.name}</a>
+                <a href={topicPath(topic.name)}>{topic.name}</a>
                 <span class="count">{plural(topic.size, 'link')}</span>
               </p>
               <LinkList links={topic.links} compact />

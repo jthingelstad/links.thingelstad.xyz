@@ -5,7 +5,9 @@ The names of the sky's topics (src/lib/topics.ts reads this file; /sky/ shows
 them as the names of its constellations). The topics themselves, which link
 belongs to which, are made from the links' vectors by
 tools/one-shot/sky_layout.py and kept in data/derived/sky/; this file only
-names them, so a name can be changed here by hand and nothing else moves.
+names them, so a name can be changed here by hand and nothing else moves but
+the topic's page: /topics/<its name as a slug>/ (src/lib/paths.ts), so a
+renamed topic's old address stops working. Two names may not share a slug.
 
 Each "## " heading is a family, the group of topics that share a colour in
 the sky, in the order the colours are given out. Under it, one line per

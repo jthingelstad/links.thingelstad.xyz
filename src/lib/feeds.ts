@@ -1,5 +1,5 @@
 // RSS 2.0 and JSON Feed 1.1 (DIRECTION.md, "Feeds"): the newest links for the
-// site, and the same pair for every host and every kind. An item is the record: its
+// site, and the same pair for every host, kind and topic. An item is the record: its
 // permalink is the item's link and id, the destination URL opens the content,
 // and the note follows, rendered as on the record page with record links made
 // absolute. Dates are Central with their real offset. Every feed path comes
@@ -9,6 +9,7 @@ import {
   type Host,
   type Kind,
   type Link,
+  type SkyTopic,
   absolute,
   feedPath,
   hostPath,
@@ -21,10 +22,12 @@ import {
   rfc3339Central,
   rfc822Central,
   linkPath,
+  topicPath,
 } from './data.ts';
 import { kindWords } from './kinds.ts';
 import { prepare } from './markdown.ts';
 import { owner } from './sites.ts';
+import { topicLinks } from './stars.ts';
 
 export const FEED_SIZE = 50;
 const SITE_NAME = 'Linking Things';
@@ -70,6 +73,16 @@ export function kindFeed(kind: Kind): Feed {
     description: `${words.title} Jamie Thingelstad has saved, newest first. ${words.about}`,
     page: kindPath(kind),
     links: [...(linksByKind.get(kind) ?? [])].reverse().slice(0, FEED_SIZE),
+  };
+}
+
+// And every topic page (/topics/<slug>/feed.xml).
+export function topicFeed(topic: SkyTopic): Feed {
+  return {
+    title: `${topic.name} · ${SITE_NAME}`,
+    description: `Links Jamie Thingelstad has saved in the topic ${topic.name}, newest first.`,
+    page: topicPath(topic.name),
+    links: [...topicLinks(topic.id)].reverse().slice(0, FEED_SIZE),
   };
 }
 

@@ -111,7 +111,8 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 | `/kinds/` | Built: the eight kinds (section "Special hosts and kinds"), each with its count and a line on what it holds. Linked from the site header and the front page |
 | `/kinds/<kind>/` | Built: a kind's links by year, newest first, with its feed pair. A page lists at most the newest 1,000 and says so when it stops; only "page" (15,690 links) is that large, and every link is on its year's page |
 | `/issues/<n>/` | The links that appeared in Weekly Thing n, in issue order, pointing at weekly.thingelstad.com/archive/n/ |
-| `/topics/<slug>/` | Links in a topic, co-topics, the hosts and issues most present in it (phase 3) |
+| `/topics/` | Built (2026-10-31): every topic in its family, largest first, with its count; a lens on the whole sky, where each topic's name opens its page |
+| `/topics/<slug>/` | Built (2026-10-31): a topic's links, newest year first, with the sites most present in it, the issues that carried most of it, the topics beside it (those its links' nearest neighbours most often fall in) and its feed pair; a lens lighting its links. The slug is the topic's name (`content/topics.md`) |
 | `/years/<yyyy>/` | The year's links by month |
 | `/newest/` | Built: the newest 50 links, the site feed's links, as a page |
 | `/surprise/` | Built: Surprise me, a door that replaces itself with one record at random, drawn from the records with Jamie's own words or a Weekly Thing; noindex and out of the sitemap, but crawlable, so crawlers can read the noindex |
@@ -594,14 +595,15 @@ word for Hosts, quote of the day in the whole-sky card".
   carry the layout version, and `validate:site` checks they agree.
 - **Sites.** Hosts are Sites to a reader everywhere they are named; the URLs keep
   `/hosts/`.
-- **Phase 2, the lens pages (an issue, a year, a site, a kind and a link built).** Each
+- **Phase 2, the lens pages (an issue, a year, a site, a kind, a link and a topic built).** Each
   is its own page at its own URL: the page in a night panel on the right, the sky
   filling the window to its left and staying as the panel scrolls (on a phone, a strip
   of sky above the page; across turns it, up and down scroll the page). The sky lights
   what the panel lists (a kind's newest thousand, as its page does), or on a link's page
   stands on it with its ten nearest round it; a year opens in Time. A gold chip at the
   foot of the sky names the lens, with × back to the whole sky, beside the lenses either
-  side (the issue before and after, the year before and after). The bar is the front
+  side (the issue before and after, the year before and after, the two topics nearest).
+  A topic's name on the sky opens its page there, as a star does. The bar is the front
   page's, its ways in marking where the lens belongs; no Doors, Play or full screen
   there, and no card, since the page is the card. Choosing a star opens its page. Find
   lights its words over the lens, and cleared gives the lens back; the address keeps
@@ -614,8 +616,7 @@ word for Hosts, quote of the day in the whole-sky card".
   costs a 304. Layout's `lens` marks `<html>` before anything draws, so the page opens
   at night beside the sky rather than turning into it; without the script or WebGL, or
   when the stars do not load, the page is as it always was, with the site header.
-- **Still to come in Phase 2:** on this day at `/on/MM-DD/`, a topic at
-  `/topics/<name>/`, the year's bar charts (saved each month, most saved topics and
+- **Still to come in Phase 2:** on this day at `/on/MM-DD/`, the year's bar charts (saved each month, most saved topics and
   sites) in its panel, and lens chips on the front page. **Phase 3**: share cards drawn
   from the sky, by a `sky` layout in the cards project, deployed after Jamie sees
   previews.
@@ -639,8 +640,9 @@ model-proposed vocabulary with every link classified into it by a model, is repl
    back with." The first vocabulary's names are the spike's, checked again by Claude
    against the same evidence on 2026-10-30, and they live in `content/topics.md`: eight
    families (the groups that share a colour in the sky), each topic a `- <id>: <name>`
-   line under its family. A word can be changed there by hand and nothing else moves;
-   a missing, repeated or unknown topic fails the build with its line.
+   line under its family. A word can be changed there by hand and nothing else moves
+   but the topic's page, whose address is its name as a slug; a missing, repeated or
+   unknown topic, or two names with one slug, fails the build with its line.
 3. **A name sits where its topic is densest** on the map (the member with the most
    topic-mates close by), not at its average, which can fall in empty space or on
    another topic when the map splits a topic in two.
@@ -650,7 +652,7 @@ model-proposed vocabulary with every link classified into it by a model, is repl
    `data/derived/sky.json`, and named again, so a topic's URL does not move under a
    reader.
 5. **Topic pages** list links newest first, show neighbouring topics, the hosts and
-   issues most present, and a feed.
+   issues most present, and a feed. Built 2026-10-31 as lenses (section "The sky").
 
 Naming 100 topics is one small batch, cents. Jamie accepted model cost at ingestion and
 build on 2026-10-23; none of it reaches serving. The key is `CLAUDE_API_KEY` in the

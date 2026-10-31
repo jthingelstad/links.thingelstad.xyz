@@ -102,3 +102,32 @@ export function constellations(per = 3) {
       .sort((a, b) => b.size - a.size || a.name.localeCompare(b.name)),
   }));
 }
+
+// A topic's links, in the links' order (oldest first), and the topics its
+// links' nearest neighbours most often fall in: the topics beside it.
+let byTopic: Map<number, Link[]> | undefined;
+export function topicLinks(topic: number) {
+  if (!byTopic) {
+    byTopic = new Map();
+    for (const link of links) {
+      const star = stars.get(link.id);
+      if (!star) continue;
+      if (!byTopic.has(star.topic)) byTopic.set(star.topic, []);
+      byTopic.get(star.topic)!.push(link);
+    }
+  }
+  return byTopic.get(topic) ?? [];
+}
+export function nearTopics(topic: number, limit = 4) {
+  const edges = new Map<number, number>();
+  for (const link of topicLinks(topic))
+    for (const id of stars.get(link.id)!.neighbors) {
+      const other = stars.get(id)?.topic;
+      if (other !== undefined && other !== topic)
+        edges.set(other, (edges.get(other) ?? 0) + 1);
+    }
+  return [...edges]
+    .sort((a, b) => b[1] - a[1] || a[0] - b[0])
+    .slice(0, limit)
+    .map(([id]) => skyTopics[id]);
+}

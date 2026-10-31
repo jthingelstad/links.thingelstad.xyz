@@ -1,0 +1,144 @@
+---
+// A topic (content/topics.md; DIRECTION.md, "Topics"): the links that fall in
+// it, newest year first, with the sites most present in it and the topics
+// beside it (those its links' nearest neighbours most often fall in). A lens
+// (Lens.astro): the sky beside it lights the topic's links, with the two
+// topics nearest it as chips. Its address is its name as a slug (paths.ts).
+import Layout from '../../layouts/Layout.astro';
+import LinkList from '../../components/LinkList.astro';
+import Lens from '../../components/Lens.astro';
+import type { Lens as LensFacts } from '../../lib/lens';
+import {
+  type Issue,
+  type Link,
+  appearances,
+  hostPath,
+  issueLabel,
+  issuePath,
+  monthNames,
+  number,
+  plural,
+  skyFamilies,
+  skyTopics,
+  topicPath,
+  topicSlug,
+} from '../../lib/data';
+import { nearTopics, topicLinks } from '../../lib/stars';
+import { feedAlternates, topicFeed } from '../../lib/feeds';
+
+export function getStaticPaths() {
+  return skyTopics
+    .filter((topic) => topicLinks(topic.id).length)
+    .map((topic) => ({ params: { topic: topicSlug(topic.name) } }));
+}
+const topic = skyTopics.find((t) => topicSlug(t.name) === Astro.params.topic)!;
+const list = [...topicLinks(topic.id)].reverse();
+const yearOf = (link: Link) => Number(link.day.slice(0, 4));
+const years = [...new Set(list.map(yearOf))];
+const byYear = years.map((year) => ({
+  year,
+  links: list.filter((link) => yearOf(link) === year),
+}));
+const span =
+  years.length > 1
+    ? `${years[years.length - 1]} to ${years[0]}`
+    : `in ${years[0]}`;
+const notes = list.filter((link) => link.hasNote).length;
+const inIssues = list.filter((link) => appearances.has(link.id)).length;
+const counts = new Map<string, number>();
+for (const link of list)
+  counts.set(link.host, (counts.get(link.host) ?? 0) + 1);
+const sites = [...counts]
+  .filter(([, n]) => n > 1)
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .slice(0, 5);
+const lede = `${plural(list.length, 'link')} saved ${years.length > 1 ? 'from ' : ''}${span}; ${number(notes)} with a note${inIssues > 0 ? `, ${number(inIssues)} in a Weekly Thing` : ''}.`;
+// The Weekly Thing issues that carried the most of its links.
+const carried = new Map<string, { issue: Issue; n: number }>();
+for (const link of list)
+  for (const { issue } of appearances.get(link.id) ?? []) {
+    const key = issuePath(issue);
+    const row = carried.get(key) ?? { issue, n: 0 };
+    row.n += 1;
+    carried.set(key, row);
+  }
+const issuesMost = [...carried.values()]
+  .filter((row) => row.n > 1)
+  .sort((a, b) => b.n - a.n || b.issue.date.localeCompare(a.issue.date))
+  .slice(0, 5);
+const near = nearTopics(topic.id);
+const day = (link: Link) =>
+  `${monthNames[link.month - 1].slice(0, 3)} ${Number(link.day.slice(8))}`;
+const lens: LensFacts = {
+  kind: 'set',
+  label: `Lens: ${topic.name}`,
+  section: '/topics/',
+  chips: near
+    .slice(0, 2)
+    .map((t) => ({ href: topicPath(t.name), label: t.name })),
+};
+---
+
+<Layout
+  title={`${topic.name} · Linking Things`}
+  description={`${plural(list.length, 'link')} Jamie Thingelstad saved in the topic ${topic.name}, ${span}.`}
+  alternates={feedAlternates(topicFeed(topic))}
+  feed
+  lens
+>
+  <Lens lens={lens}>
+    <p class="kicker">Topic · {skyFamilies[topic.family]}</p>
+    <h1 class="page-title">{topic.name}</h1>
+    <p class="lede">{lede}</p>
+    <dl class="facts topic-facts">
+      {sites.length > 0 && (
+        <div>
+          <dt>Most from</dt>
+          <dd>
+            {sites.map(([host, n], i) => (
+              <>
+                {i > 0 && ', '}
+                <a href={hostPath(host)}>{host}</a> {number(n)}
+              </>
+            ))}
+          </dd>
+        </div>
+      )}
+      {issuesMost.length > 0 && (
+        <div>
+          <dt>Most in</dt>
+          <dd>
+            {issuesMost.map(({ issue, n }, i) => (
+              <>
+                {i > 0 && ', '}
+                <a href={issuePath(issue)}>{issueLabel(issue)}</a> {number(n)}
+              </>
+            ))}
+          </dd>
+        </div>
+      )}
+      {near.length > 0 && (
+        <div>
+          <dt>Beside it</dt>
+          <dd>
+            {near.map((t, i) => (
+              <>
+                {i > 0 && ', '}
+                <a href={topicPath(t.name)}>{t.name}</a>
+              </>
+            ))}
+          </dd>
+        </div>
+      )}
+    </dl>
+    {byYear.map((group) => (
+      <section class="month">
+        <h2>
+          {group.year}{' '}
+          <span class="meta">{plural(group.links.length, 'link')}</span>
+        </h2>
+        <LinkList links={group.links} compact date={day} entries />
+      </section>
+    ))}
+  </Lens>
+</Layout>
