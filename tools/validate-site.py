@@ -44,7 +44,8 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   /issues.json match the pages and the join;
 - /sky/stars.json (src/lib/stars.ts) holds each star once, each a record,
   every list as long as the stars, every place, topic, site and neighbour
-  in range, and each star's day its link's Central day;
+  in range, and each star's day its link's Central day; each record lists
+  its star's first five neighbours under "Nearest in meaning";
 - /search/suggest.json, what the search box suggests from, holds every host
   with its count as /hosts.json has them and its links in each Central year
   as its twins have them, every issue newest first with its
@@ -621,8 +622,8 @@ def check_suggest(data_links, twin_kinds, twin_hosts, problems):
 def check_sky(data_links, problems):
     """/sky/stars.json: each star once and each a record (a link the nightly
     has not placed yet has none), every list the stars' length and every
-    index in range, each day its link's Central day. Returns the stars' ids,
-    the fragments /sky/ takes."""
+    index in range, each day its link's Central day. Returns each star's id
+    (the fragments /sky/ takes) with its neighbours' ids, nearest first."""
     sky = load_json("sky/stars.json", problems)
     ids = sky.get("ids", [])
     n = len(ids)
@@ -630,7 +631,7 @@ def check_sky(data_links, problems):
     where = "sky/stars.json"
     if not n:
         problems.append(f"{where}: no stars")
-        return set()
+        return {}
     if len(set(ids)) != n:
         problems.append(f"{where}: a star twice")
     strays = [i for i in ids if i not in by_id]
@@ -641,7 +642,7 @@ def check_sky(data_links, problems):
     for key, size in lengths.items():
         if len(sky.get(key, [])) != size:
             problems.append(f"{where}: {key} holds {len(sky.get(key, []))}, not {size}")
-            return set(ids)
+            return dict.fromkeys(ids, [])
     topics = len(sky.get("topics", []))
     if any(not 0 <= t < topics for t in sky["topic"]):
         problems.append(f"{where}: a topic out of range")
@@ -666,7 +667,31 @@ def check_sky(data_links, problems):
         if sky["day"][i] != (saved.astimezone(CENTRAL).date() - epoch).days:
             problems.append(f"{where}: {star}'s day is not its Central day")
             break
-    return set(ids)
+    return {
+        star: [ids[j] for j in near if 0 <= j < n]
+        for star, near in zip(ids, sky["neighbors"])
+    }
+
+
+NEAREST = re.compile(r'<section class="section meaning">(.*?)</section>', re.S)
+
+
+def nearest_listed(text):
+    """The records a record page lists under "Nearest in meaning", in order."""
+    found = NEAREST.search(text)
+    return re.findall(r'href="/links/([0-9a-f]{12})/"', found.group(1)) if found else []
+
+
+def check_nearest(listed, stars, problems):
+    """Each record lists its star's first five neighbours, nearest first; a
+    link the nightly has not placed yet lists none."""
+    for record, ids in listed.items():
+        expected = stars.get(record, [])[:5]
+        if ids != expected:
+            problems.append(
+                f"links/{record}/index.html: lists {len(ids)} nearest in meaning,"
+                f" not its star's first {len(expected)}"
+            )
 
 
 RECORD_LINE = re.compile(r"^- Record: (\S+)$", re.M)
@@ -989,6 +1014,7 @@ def main():
     without_about = []
     words = liveness_words(data_links)
     listed_records = {}  # host pages and /newest/ to the records they list, in order
+    nearest = {}  # record id to the records it lists as nearest in meaning
     loaders = 0
     noindex = set()  # pages marked noindex, by URL
     for page in pages:
@@ -1010,6 +1036,7 @@ def main():
             ]
         if record_id(url):
             record_kinds[record_id(url)] = parser.kind
+            nearest[record_id(url)] = nearest_listed(text)
         if url.startswith("/kinds/"):
             kind_pages[url] = parser
         if url == "/about/":
@@ -1080,6 +1107,7 @@ def main():
             links.append((rel, ref, path, unquote(parts.fragment)))
 
     stars = check_sky(data_links, problems)
+    check_nearest(nearest, stars, problems)
     for rel, ref, path, fragment in links:
         if not built(path):
             problems.append(f"{rel}: broken link {ref}")
@@ -1229,7 +1257,7 @@ def main():
         f" {feed_pages} list h-feeds;"
         f" {feeds + 2 * len(kind_counts)} feeds, links.json, hosts.json, issues.json,"
         f" search/suggest.json ({suggested[0]} hosts, {suggested[1]} issues),"
-        f" sky/stars.json ({len(stars)} stars), llms.txt and"
+        f" sky/stars.json ({len(stars)} stars, each record's nearest five), llms.txt and"
         f" {len(year_files)} year llms files valid ({len(inside)} site URLs inside resolve);"
         f" /newest/ lists the newest {FEED_SIZE};"
         f" kinds {', '.join(f'{k} {n}' for k, n in kind_counts.items())};"

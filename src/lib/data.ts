@@ -552,6 +552,10 @@ for (const link of links) {
       neighbors: star.neighbors.filter((id) => linkById.has(id)),
     });
 }
+// A record's nearest in meaning: its star's first neighbours, nearest first,
+// and none until the nightly has placed it.
+export const nearestInMeaning = (link: Link, limit = 5) =>
+  linksOf(stars.get(link.id)?.neighbors.slice(0, limit));
 
 export const counts = {
   links: links.length,

@@ -27,10 +27,13 @@ import {
   links,
   monthNames,
   monthPath,
+  nearestInMeaning,
   noteHtml,
   noteText,
   plural,
   shortDateLabel,
+  starPath,
+  stars,
   timeLabel,
   weekdayDateLabel,
 } from '../../lib/data';
@@ -70,6 +73,9 @@ const dropped = link.title.trim().slice(link.shown.length).trim();
 // normalise alike already.
 const twice = new Set(c.savedTwice.map((other) => other.id));
 const sameVideo = alsoSavedAs(link).filter((other) => !twice.has(other.id));
+// Its five nearest in meaning, and the sky for all its neighbours.
+const nearest = nearestInMeaning(link);
+const neighbours = stars.get(link.id)?.neighbors.length ?? 0;
 const description = link.hasNote
   ? noteText(link, 155)
   : `A link from ${link.host}, saved by Jamie Thingelstad on ${dateLabel(link.saved)}.`;
@@ -199,6 +205,17 @@ const card = cardOf(link);
         <section class="section">
           <h2>Mentioned by</h2>
           <LinkList links={c.mentionedBy} compact />
+        </section>
+      )}
+      {nearest.length > 0 && (
+        <section class="section meaning">
+          <h2>Nearest in meaning</h2>
+          <LinkList links={nearest} compact />
+          {neighbours > nearest.length && (
+            <p class="more">
+              <a href={starPath(link.id)}>All {neighbours} in the sky</a>
+            </p>
+          )}
         </section>
       )}
       {c.sameHost.total > 0 && (
