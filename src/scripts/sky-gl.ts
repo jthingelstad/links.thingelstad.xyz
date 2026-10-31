@@ -355,6 +355,9 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
     done?: () => void;
   }
   let fly: Flight | null = null;
+  // The first flight waits while the whole sky shows; any flight sooner
+  // (another star, Whole sky, Play) replaces it.
+  let opening = 0;
   interface Morph {
     from: number;
     to: number;
@@ -433,6 +436,7 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
     return clamp((d[Math.min(5, d.length - 1)] ?? 10) * 1.6, 8, 70);
   }
   function flyTo(to: () => Vec3, r1: number, done?: () => void, dur?: number) {
+    window.clearTimeout(opening);
     const end = to();
     const dist = distance(target, end);
     if (reduced) {
@@ -1246,7 +1250,7 @@ export function startSky(stage: HTMLElement, walk: Walk): View | null {
       follow = i;
       const go = () => flyTo(() => posOf(i), frameRadius(i), landed);
       // The first star: the whole sky first, then down to it.
-      if (!shown && arrive && !reduced) setTimeout(go, 900);
+      if (!shown && arrive && !reduced) opening = window.setTimeout(go, 900);
       else go();
       shown = true;
       dirty = true;
