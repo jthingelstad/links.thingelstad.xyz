@@ -9,6 +9,7 @@ from pathlib import Path
 from . import issues as issues_mod
 from . import jsonio
 from .check_enrichment import check_enrichment
+from .check_sky import check_sky
 from .pinboard import RECORD_FIELDS, STATE_FIELDS
 from .urls import md5_hex
 from .bookmarks import merge_bookmarks
@@ -296,6 +297,9 @@ def validate(data_dir, raw_path=None, token=None, media_dir=None):
     media_dir = Path(media_dir) if media_dir is not None else data_dir.parent / "public" / "media"
     report = Report()
     by_id = check_links(report, data_dir / "links")
+    # The sky is made from data/links alone: a capture waiting in the bookmark
+    # ledger gets its star once a sync has brought it into the year files.
+    stars, starless = check_sky(report, data_dir, dict(by_id))
     # The account-wide checkpoint continues to describe the full snapshot.
     check_state(report, data_dir / "sync.json", len(by_id))
     capture_path = data_dir / "derived" / "bookmarks.json"
@@ -329,6 +333,8 @@ def validate(data_dir, raw_path=None, token=None, media_dir=None):
         "linked_ids": linked,
         "unmatched": unmatched,
         "private_checked": private_checked,
+        "stars": stars,
+        "starless": starless,
         **enrichment,
     }
     return report, summary

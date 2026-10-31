@@ -14,8 +14,8 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   production builds only (`PUBLIC_TINYLYTICS_ENABLED=true`, set by the deploy
   workflow; `design/tinylytics.md`). Never send a hit or a kudos from QA.
 - **Data.** `data/` is written only by the Python tools (`tools/sync.py`,
-  `tools/join_issues.py`, `tools/import_bookmarks.py`, `tools/enrich_*.py`; `tools/README.md`). Never edit it by
-  hand. `src/lib/data.ts` is the only module that reads `data/links` and
+  `tools/join_issues.py`, `tools/import_bookmarks.py`, `tools/sky.py`, `tools/enrich_*.py`;
+  `tools/README.md`). Never edit it by hand. `src/lib/data.ts` is the only module that reads `data/links` and
   `data/derived`, and everything derived (hosts, years, weeks, appearances, mentions,
   saved twice, kinds) is derived there, in memory.
 - **Public bookmark path.** `docs/BOOKMARKS.md` and hop 23 cover Feedbin-confirmed public captures and the private S3 inbox. The single `links-publisher` CodeBuild job combines the approved canonical snapshot with the full durable inbox into a build-local `data/derived/bookmarks.json`. Content arrivals make no Git commits. Canonical records and newer full snapshots control edits, privacy and deletion. This path never runs enrichment or the issue join. GitHub main promotes tested versioned source packages using OIDC; only the AWS publisher deploys the website and MCP. `tools/publication-context.mjs` verifies its role, project and current approved release before writes.
@@ -28,6 +28,16 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   sees it; `validate:site` fails if one gets through. Images are the tools' copies
   under `public/media/`, never hotlinked and never committed from here. A video is a
   click-to-play facade: no player request until the click.
+- **The sky** (`docs/DATA.md`, "The sky"; DIRECTION.md, "The sky"): every public link
+  as a star with a topic, a place in the Meaning and Time layouts and ten nearest
+  neighbours, in `data/derived/sky.json` and `sky/<yyyy>.json`. **The layout is
+  fixed** (Jamie, 2026-10-30: "with a fixed star layout"): the nightly's `tools/sky.py`
+  places a new link beside its neighbours and never moves a star; only
+  `tools/one-shot/sky_layout.py`, run by hand from its own venv when the model or text
+  recipe changes, moves them all. Vectors come from Cohere on Bedrock as
+  `cloud-engineer` and stay out of git, in
+  `~/Library/Application Support/links.thingelstad.xyz/vectors/`. Topic names are
+  `content/topics.md`.
 - **Kinds** (`src/lib/kinds.ts`): every link has one, from its host and path alone,
   first rule wins, "page" is the rest. The browser search and the MCP server import
   the same file, so it takes no Node imports. Adding a kind adds a `/kinds/<kind>/`

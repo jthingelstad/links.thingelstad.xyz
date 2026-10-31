@@ -140,7 +140,7 @@ class ValidateTest(Base):
         self.assertEqual(
             summary,
             {"links": 3, "years": 2, "issues": 2, "linked_ids": 2, "unmatched": 1, "private_checked": True,
-             "hosts": 0, "pages": 0, "facts": 0, "images": 0},
+             "stars": 0, "starless": 3, "hosts": 0, "pages": 0, "facts": 0, "images": 0},
         )
 
     def test_without_the_raw_export_the_private_check_is_skipped(self):
@@ -496,6 +496,7 @@ class CommandTest(unittest.TestCase):
                 out,
                 "validate_data: ok: 3 links, 2 years, 2 issues, 2 linked ids, 1 unmatched rows; "
                 "enrichment 0 hosts, 0 pages, 0 facts, 0 images; "
+                "sky 0 stars, 3 waiting; "
                 "private bookmarks checked against the raw export\n",
             )
             fixture.years["2019"][0] = dict(A, id="0123456789ab")

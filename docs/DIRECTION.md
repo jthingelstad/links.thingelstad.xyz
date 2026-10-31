@@ -411,8 +411,9 @@ file are shaped to accept the rest.
 Jamie likes this one. Every record shows its five nearest neighbours, with the reason
 shown beside each ("same topic", "same issue", "same host", or nothing, which is the
 interesting case: two links from different years and hosts that are about the same
-thing). The top ten per link are kept in `neighbors.json` with the model and the text
-recipe's version. No runtime cost: the page is static and the neighbours are text.
+thing). The top ten per link are kept with its star in `data/derived/sky/<yyyy>.json`,
+under a head that names the model and the text recipe's version (`docs/DATA.md`, "The
+sky"). No runtime cost: the page is static and the neighbours are text.
 
 **Our own vectors.** Linking Things embeds its links itself rather than reading the
 Librarian's. The Librarian's links corpus puts the date, the host and the issue in the
@@ -431,10 +432,15 @@ Things, never the other way round (its `AGENTS.md`). Same model, different input
 - **Neighbours.** Cosine similarity, the top ten per link, skipping the link itself and
   a second save of the same URL (same host and path), which would otherwise be every
   saved-twice link's first neighbour.
-- **Upkeep.** New links are embedded as they arrive and the neighbour lists recomputed
-  whole, which takes seconds. Everything is embedded again only when the model or the
-  text recipe changes. The vectors (68 MB) stay on the Mac, out of git; they cost $0.13
-  to make again, so they need no backup.
+- **Upkeep.** The nightly job embeds each new link, and each link whose title or note
+  changed, and works out only the lists that can have changed: the new and edited
+  links' own, any list that held an edited or removed link, and any list a new link now
+  beats the tenth place of. That gives exactly what recomputing every list would
+  (checked against it, 2026-10-30) in a few seconds. A link made private leaves every
+  list the same night, even when Bedrock is down. Everything is embedded again only
+  when the model or the text recipe changes. The vectors (68 MB) stay on the Mac, out
+  of git, in `~/Library/Application Support/links.thingelstad.xyz/vectors/`; they cost
+  $0.13 to make again, so they need no backup.
 
 **What the spike found** (2026-10-30, every public link, shown to Jamie as a private
 prototype; nothing reached the site):
@@ -477,13 +483,54 @@ is what I had in mind", then "yeah… this is the direction".
 - **No lookups.** A label sits on the thing it names. No numbered markers with a
   numbered list beside them to decode (Jamie, 2026-10-30: "we should avoid lookups like
   maps with numbers and then the numbers being listed on the side").
-- **A design spike settles the visuals.** A few distinct concepts, rendered and
-  compared, before any of it is built into the site. Where it lives (a page of its own,
-  or the record page opening into it) is part of that.
+- **A design spike settled the visuals** (2026-10-30): three concepts, rendered on
+  every public link. Atlas, a flat map with names that come up as you near them; Doors,
+  one link at a time in big type with its neighbours as doors out and the map behind;
+  Sky, every link a star in three dimensions that you fly through. Jamie: "my gosh --
+  these are all so good. I think I like Sky the best…". Sky is built (below), and Doors
+  is its view on phones.
 - **Serving.** The prototype ran from one static file of every public link with its
   place, topic and ten neighbours (5.5 MB), so it fits "serving runs nothing". Jamie,
   2026-10-30, is open to more: "if we need a server to do it we can explore that for
   sure". The file's size is the number to watch.
+
+### The sky
+
+Jamie, 2026-10-30: "It is also just really impressive… I wonder if the time could be
+used to determine things are further back or forward… like if the years were a macro
+Z-index… I also think Sky would have a really cool "auto" mode where I hit "play" and
+you fly and jump around. Approved: build Sky into links.thingelstad.xyz, with a fixed
+star layout and Doors as the phone and no-WebGL view".
+
+- **Where.** `/sky/`, a page of its own; `/sky/#<id>` opens on one link, and each
+  record page links to its star.
+- **Two layouts.** Meaning: every link in three dimensions, links that say similar
+  things close together (the vectors, PCA to 50, UMAP to three). Time: meaning flattened
+  across the screen and the day saved as depth, 2005 farthest and the newest nearest,
+  so each topic is a tube through the years and its name rides the tube where most of
+  its links fall. A switch moves between them, and the stars fly from one place to the
+  other.
+- **The layout is fixed.** A star never moves. Both layouts were made once, from the
+  vectors, by `tools/one-shot/sky_layout.py`; the nightly places each new link beside
+  its nearest neighbours in both, and an edited note changes a link's neighbours but
+  not its place. A topic keeps its links the same way. Only new vectors (a new model or
+  text recipe) make the sky again, every star at once, as a new layout version.
+- **Play.** Press play and the sky flies itself: from a link to one of its neighbours
+  not yet visited, the far ones first, resting a few seconds on each, and every few
+  hops pulling back and crossing to another constellation. Any touch, key or click
+  hands the controls back. With reduced motion it steps from link to link without the
+  flight.
+- **Names on things.** Topic names float at their densest point, and the titles of the
+  stars nearest the camera come up beside them as you approach (Atlas's labels). No
+  lookups.
+- **Reading.** Choosing a star opens Doors' big-type card on it: the title, site, day,
+  note and issues, its neighbours as doors, and the way to its record page.
+- **Phones and no WebGL.** The same address shows Doors: one link at a time, its
+  neighbours as doors, the Time map drawn flat behind. It is the view on a small screen
+  or where WebGL is missing; a wider screen with WebGL can switch to it and back.
+- **Built from the site's own files.** One static file of stars (ids, titles, sites,
+  days, topics, places, neighbours; no notes, which come from the link's JSON twin when
+  its card opens), drawn with WebGL directly: no library, nothing from another host.
 
 ## Topics
 
@@ -501,15 +548,18 @@ model-proposed vocabulary with every link classified into it by a model, is repl
    "Kubb and games", with a few catch-alls ("Miscellany", "Bare links, mixed") that show
    where the clustering gives out. The model's names stand. Jamie, 2026-10-23: "it
    isn't realistic for me to prune it. i think you should go with what the model comes
-   back with." They are written to `content/topics.yaml` (id, title, description), the
-   Things I've built shape, so a word can still be changed by hand later, but nothing
-   waits on that.
+   back with." The first vocabulary's names are the spike's, checked again by Claude
+   against the same evidence on 2026-10-30, and they live in `content/topics.md`: eight
+   families (the groups that share a colour in the sky), each topic a `- <id>: <name>`
+   line under its family. A word can be changed there by hand and nothing else moves;
+   a missing, repeated or unknown topic fails the build with its line.
 3. **A name sits where its topic is densest** on the map (the member with the most
    topic-mates close by), not at its average, which can fall in empty space or on
    another topic when the map splits a topic in two.
-4. **Topics hold still.** A new link joins the nearest topic centre. Topics are made
-   again only with the vectors (a new model or text recipe), as a new vocabulary
-   version in `data/derived/topics.json`, so a topic's URL does not move under a
+4. **Topics hold still.** A new link joins the nearest topic centre (the mean vector of
+   its links), and an edited one keeps its topic. Topics are made again only with the
+   vectors (a new model or text recipe), with the sky's new layout version in
+   `data/derived/sky.json`, and named again, so a topic's URL does not move under a
    reader.
 5. **Topic pages** list links newest first, show neighbouring topics, the hosts and
    issues most present, and a feed.
@@ -931,9 +981,10 @@ entry. Connections from existing data only.
 archive, kinds, and the first adapters (YouTube, GitHub, Wikipedia, Amazon books).
 
 **3. Browse.** The vectors, neighbours and "similar" on every record, topics (clusters
-named by a model batch) and their pages, and the walk through the graph once its
-design spike settles the visuals (section "Inside the graph"). Nothing in it waits on
-the archive since 2026-10-30.
+named by a model) and their pages, and the sky, the walk through the graph (sections
+"Inside the graph" and "The sky"). Nothing in it waits on the archive since
+2026-10-30. The vectors, neighbours, topics and fixed places came first, in
+`data/derived/sky*` (2026-10-30), then `/sky/`.
 
 **4. The Librarian.** The SQLite download, `links.json` in its final shape, and the
 Librarian ingesting it (section "The Librarian"), and a links MCP of its own (built
@@ -978,6 +1029,11 @@ neighbours is lifted, and a neighbours and map spike ran on every public link th
 day (sections "Nearest neighbours", "Inside the graph" and "Topics"). Jamie:
 "Approved: write the neighbours and map design into Linking Things DIRECTION.md and
 lift the Pinboard archive gate".
+
+Then, the same evening: a design spike of three concepts (Atlas, Doors, Sky), Jamie's
+pick of Sky, years as depth and a play mode, and "Approved: build Sky into
+links.thingelstad.xyz, with a fixed star layout and Doors as the phone and no-WebGL
+view" (section "The sky").
 
 Still open: which of the ideas beyond the brief earn a phase. The GitHub repository and
 the Tinylytics site exist.

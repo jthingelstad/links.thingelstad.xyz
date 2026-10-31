@@ -97,6 +97,70 @@ issue's `permalink` on weekly.thingelstad.com (`/archive/<n>/`, and
 `/archive/140-special/` for the special issue; slug paths there are redirects), not
 Buttondown. Issues are sorted by `date` then `slug`.
 
+## The sky: `data/derived/sky.json` and `data/derived/sky/<yyyy>.json`
+
+Every public link as a star: its topic, its place in the two layouts, and its ten
+nearest neighbours (`docs/DIRECTION.md`, "Nearest neighbours", "Topics" and "The
+sky"). The places are fixed: `tools/one-shot/sky_layout.py` made them once from the
+vectors, and `tools/sky.py`, the nightly step, gives each new link a place beside its
+neighbours and never moves a star that has one.
+
+`sky.json` is the head, with these fields in this order:
+
+| Field | Value |
+| --- | --- |
+| `method`, `version` | `tools/sky.py`, `1` |
+| `model` | `cohere.embed-english-v3` |
+| `recipe` | the version of the text each vector is made from, `1` |
+| `layout` | the version of the layouts and topics, `1`; a new one moves every star |
+| `neighbors` | how long a full neighbour list is, `10` |
+| `topics` | one object per topic, ids `0` to `99` in order: `id`, `meaning` (where its name sits in the Meaning layout, `[x, y, z]`) and `time` (`[x, y, from, to]`: where its name sits across the Time layout, and the decimal years its middle 80% of links span, which is where the name rides along the depth) |
+
+`sky/<yyyy>.json` holds the stars of the links saved that year (the year of the
+link's file under `data/links/`), one object keyed by link id, keys sorted:
+
+| Field | Value |
+| --- | --- |
+| `topic` | an id from the head |
+| `meaning` | `[x, y, z]`, the place in the Meaning layout |
+| `time` | `[x, y]`, the place across the Time layout; its depth is the link's own `saved`, so it is not stored |
+| `neighbors` | at most `neighbors` link ids, nearest first: cosine similarity of the vectors, never the link itself or another save of the same URL (the join key of "URL normalisation"), ties to the earlier saved |
+
+Both layouts are centred and scaled so that 98% of stars lie within 100 units of the
+middle; places carry two decimals. A list is shorter than `neighbors` only after a
+night when a link left while another waited for its vector (below), until the next
+run that embeds it refills the list.
+
+**Vectors.** Not in the repository:
+`~/Library/Application Support/links.thingelstad.xyz/vectors/` on the Mac (`LINKS_VECTORS` moves it), `vectors.f32`
+(little-endian float32 rows of unit length, 1,024 each) and `vectors.json` (`model`,
+`recipe`, `dims`, `sha256` of `vectors.f32`, and `rows`, one `[id, digest]` per row,
+where `digest` is the first 16 hex characters of the SHA-256 of the text embedded). A row whose digest is not its
+link's current text is embedded again. The text (recipe 1) is the title, a trailing
+" | Site" of 30 characters or fewer trimmed, and the note with Markdown links reduced
+to their words and bare URLs, `>` marks and HTML tags dropped, at most 1,800
+characters; a link with no note gets the words of its URL's path instead, at most 20,
+junk segments dropped. Never the date, the host or an issue. A different `model`,
+`recipe` or `dims`, or rows that do not match `sha256`, make the cache start empty.
+
+**Upkeep.** Each night `tools/sky.py` embeds the links that have no current vector
+(Bedrock, the `cloud-engineer` identity, batches of 96), takes every link that is no
+longer public out of the sky and out of every list, works out the lists that can have
+changed (the new and edited links', those shorter than `neighbors`, those that held an
+edited link) and enters a new or edited link into any other list it now beats the last
+of, which gives exactly what recomputing every list would. A new link joins the topic
+whose mean vector is nearest and takes, in each layout, the point of its five nearest
+neighbours that is closest to the other four, moved 0.3 of the way to their mean and a
+fixed step of 1 unit off it in a direction from its id. An edited link keeps its topic
+and both places. When Bedrock fails, the removals are still written and the new links
+wait, without a star, for the next night.
+
+`tools/validate_data.py` fails a head or shard not in the canonical format, a star for
+a link that is not public, a star filed in the wrong year, a topic the head does not
+have, a place that is not finite numbers, and a neighbour list that is too long,
+repeats an id, names the link itself or names a link that is not public. A public link
+without a star is allowed and counted as waiting.
+
 ## URL normalisation (for joins only)
 
 Used to match an issue link, a note mention, or an archived page's outbound link to
@@ -341,5 +405,6 @@ Rechecks: every 90 days, an error after 30, and at once when the record's method
 or version is not the adapter's. A request that times out or gets a 429 or 5xx
 keeps the record's earlier facts.
 
-Later derived files, each with `method` and `version`: `data/derived/topics.json`,
-`data/derived/neighbors.json`.
+The neighbours and topics once planned as `data/derived/neighbors.json` and
+`data/derived/topics.json` are the sky's (above); the topics' names are
+`content/topics.md`.

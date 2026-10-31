@@ -1,15 +1,18 @@
 # Data tools
 
 Three commands write and check `data/links/`, `data/derived/` and `data/sync.json`;
-three more write `data/enrichment/` (and `public/media/`), and `tools/nightly.sh` runs
-them all once a night. They are Python 3 with the standard library only (no venv, no
-installs) and run under `python3 -I`. Run them from the repository root. `docs/DATA.md` is the contract they keep; this file covers how
+`tools/sky.py` keeps the sky in `data/derived/sky*`; three more write
+`data/enrichment/` (and `public/media/`), and `tools/nightly.sh` runs them all once a
+night. They are Python 3 with the standard library only (no venv, no installs) and run
+under `python3 -I`. The one exception is `tools/one-shot/sky_layout.py`, run by hand
+from a venv of its own on the rare day the sky is made again (below). Run them from the repository root. `docs/DATA.md` is the contract they keep; this file covers how
 to run them and the details a reimplementation needs.
 
 | Command | npm script | Reads | Writes |
 | --- | --- | --- | --- |
 | `python3 tools/sync.py` | `npm run sync` | Pinboard API, or a saved export | `data/links/<yyyy>.json`, `data/sync.json`, `pinboard/posts_all.json` |
 | `python3 tools/join_issues.py` | `npm run join` | Weekly Thing issue files, `data/links/` | `data/derived/issues.json` |
+| `python3 -I tools/sky.py` | | `data/links/`, the vector cache, Bedrock | `data/derived/sky.json`, `data/derived/sky/`, the vector cache |
 | `python3 tools/validate_data.py` | `npm run validate:data` | `data/`, `public/media/`, `pinboard/posts_all.json` | nothing |
 | `python3 -I tools/enrich_hosts.py` | | `data/links/`, DNS, the hosts' home pages, RDAP | `data/enrichment/hosts/` |
 | `python3 -I tools/enrich_pages.py` | | `data/links/`, the saved URLs, the Wayback CDX API | `data/enrichment/pages/` |
@@ -18,7 +21,8 @@ to run them and the details a reimplementation needs.
 
 The shared code is the `tools/linking/` package: `urls` (normalise, ids, md5),
 `pinboard` (API client and sharding), `frontmatter` (the YAML reader), `issues` (the
-join), `validate` and `check_enrichment` (the checks), `jsonio` (output format and
+join), `vectors` and `sky` (the embedding, the neighbours and the stars), `validate`,
+`check_sky` and `check_enrichment` (the checks), `jsonio` (output format and
 atomic writes), and for the enrichment `shards`, `web`, `dns`, `rdap`, `wayback`,
 `hosts`, `home`, `pages`, `facts` and `adapters/` (one module per special host).
 
@@ -168,7 +172,7 @@ python3 -I tools/validate_data.py --data DIR --raw FILE --media DIR
 Exit 0 and a summary line when everything holds:
 
 ```
-validate_data: ok: 16,524 links, 22 years, 354 issues, 6,867 linked ids, 66 unmatched rows; enrichment 69 hosts, 155 pages, 616 facts, 292 images; private bookmarks checked against the raw export
+validate_data: ok: 16,558 links, 22 years, 355 issues, 6,890 linked ids, 66 unmatched rows; enrichment 7,078 hosts, 4,959 pages, 618 facts, 294 images; sky 16,558 stars, 0 waiting; private bookmarks checked against the raw export
 ```
 
 Exit 1 when anything fails, with each problem on stderr (the first 50, then a
@@ -203,6 +207,13 @@ count), and `FAILED with N problem(s)` in the summary line. It checks:
   `image` is `/media/<the adapter's directory>/<name>.jpg` and the file exists, and
   every file there is an image a facts record names (`enrich_facts.py` is the only
   writer and removes the rest).
+- the sky (`data/derived/sky.json`, `sky/<yyyy>.json`): the head's fields in order,
+  its method and version, a whole number of neighbours and topics numbered from 0 with
+  finite places; shards named by year, canonical, keys sorted; every star a public
+  link's, in its saved year's shard, with the contract's fields in order, a topic the
+  head has, finite places, and at most the head's number of neighbours, distinct, not
+  itself, each a public link. A public link without a star is counted as waiting, not
+  failed: it has no vector yet.
 - credentials: every file under `data/` is scanned for `auth_token=`, a run of 20 or
   more hex characters after the word token, a Pinboard `user:HEX` token, and the
   `PINBOARD_API_TOKEN` value when it is set. Messages name the file, line and
@@ -293,6 +304,66 @@ WHATWG `URL` class for the host, since it applies IDNA and drops default ports.
 Ids are never normalised: `id` is the first 12 hex characters of md5 of the URL's
 UTF-8 bytes exactly as saved, so `http://wheregoes.com/` (`5029bebcaf78`) and
 `https://wheregoes.com/` (`6d35b392e063`) are two links.
+
+## sky.py: the sky
+
+```sh
+python3 -I tools/sky.py                 # the nightly step
+python3 -I tools/sky.py --dry-run       # what a run would do; no network, no writes
+python3 -I tools/sky.py --embed-only    # fill the vector cache and stop
+python3 -I tools/sky.py --data DIR --vectors DIR
+```
+
+Keeps `data/derived/sky.json` and `data/derived/sky/<yyyy>.json` (docs/DATA.md, "The
+sky") up to date with `data/links/`: embeds every link that has no vector for its
+current text, then gives each new link its neighbours, a topic and a place in both
+layouts, enters it into the lists it now belongs in, refills the lists that lost a
+link, and takes every link that is no longer public out. The last line is the summary
+the nightly commit carries:
+
+```
+sky: 12 new, 1 re-embedded, 0 removed; 16,570 stars
+```
+
+**Bedrock.** `cohere.embed-english-v3`, `input_type` `clustering`, through the AWS CLI
+(`aws bedrock-runtime invoke-model`) with the `cloud-engineer` profile in `us-east-1`
+(`LINKS_AWS_PROFILE` changes the profile, for tests). Before the first call it checks
+`aws sts get-caller-identity`: account 999153317627 and an ARN with
+`assumed-role/ProjectsCloudEngineer/projects-cloud-engineer`, or it stops. Batches of
+96 texts; a night's few new links are one call, a fraction of a cent.
+
+**The cache** is outside the repository, since the nightly needs a clean checkout:
+`~/Library/Application Support/links.thingelstad.xyz/vectors/` (`--vectors` or
+`LINKS_VECTORS` moves it). It is written only after a run that embedded something,
+`vectors.json` last, with the SHA-256 of the rows. A missing or mismatched cache
+(another model, recipe or size, or rows the head does not describe) is treated as
+empty, so the next run embeds everything again: about 1.3 million tokens, $0.13.
+
+Exit codes: 0 done; 1 Bedrock or the identity check failed (the removals are still
+written, and the new links wait for the next run) or the sky on disk is broken; 64 a
+bad argument. With no `sky.json` it stops with exit 1: the first sky is made by hand.
+
+### sky_layout.py: making the sky again
+
+`tools/one-shot/sky_layout.py` made the first sky (2026-10-30) and is run again only
+when the vectors change (a new model or text recipe), because it moves every star and
+makes the topics again. It needs numpy, scikit-learn and umap-learn, so it runs from a
+venv of its own with the versions the first sky was made with:
+
+```sh
+python3 -m venv ~/.venvs/links-sky
+~/.venvs/links-sky/bin/pip install numpy==2.5.4 scikit-learn==1.9.1 umap-learn==0.5.12
+python3 -I tools/sky.py --embed-only
+~/.venvs/links-sky/bin/python tools/one-shot/sky_layout.py
+```
+
+It refuses while any link lacks a current vector. In about 30 seconds it writes the
+neighbour lists (by the same rule as `sky.py`), 100 k-means topics (`random_state`
+7), the Meaning layout (PCA to 50, then UMAP to 3, `n_neighbors` 20, `min_dist` 0.12,
+cosine, seed 7) and the Time layout (the same to 2, `min_dist` 0.08, turned to lie as
+the Meaning layout does seen from the front), and each topic's label points. Bump
+`LAYOUT` in `tools/linking/sky.py` first, and name the new topics in
+`content/topics.md`: a topic number there that the head does not have fails the build.
 
 ## Enrichment: enrich_hosts.py, enrich_pages.py and enrich_facts.py
 
@@ -594,14 +665,17 @@ has the install. In order, each step's output going to the log:
    `GITHUB_TOKEN` from `gh auth token`, into the environment only; never echoed.
 3. **Sync.** `sync.py` (exit 3, rate limited, is logged and the run goes on; any
    other failure exits 1), then `join_issues.py`.
-4. **Enrichment**, one after another: `enrich_hosts.py --limit 1000`,
+4. **Sky.** `sky.py`: new links become stars. Exit 1 (Bedrock or the identity check
+   failed) is logged and the run goes on; removed links have still left the sky, and
+   the new ones wait for the next night.
+5. **Enrichment**, one after another: `enrich_hosts.py --limit 1000`,
    `enrich_facts.py --limit 500`, `enrich_pages.py --wayback-only --limit 800`
    (`--hosts`, `--facts`, `--wayback` change the limits). A tool that stops early
    (a Wayback refusal, a GitHub rate limit) has saved what it learned; the exit is
    logged and the run goes on.
-5. **Validation.** `validate_data.py`. A failure exits 1 and leaves the tree as it
+6. **Validation.** `validate_data.py`. A failure exits 1 and leaves the tree as it
    is for a look (the next night's preflight then refuses until it is cleaned up).
-6. **Commit and push.** `git add data public/media`, a commit as `Linking Things
+7. **Commit and push.** `git add data public/media`, a commit as `Linking Things
    nightly <links-nightly@thingelstad.com>` titled `Nightly: sync and enrichment,
    <YYYY-MM-DD>` whose body is each step's summary line, and a push to main with
    retries after 2, 4, 8 and 16 s. If main moved meanwhile, the commit is rebased
@@ -611,7 +685,7 @@ has the install. In order, each step's output going to the log:
 The log is `~/Library/Logs/links/nightly.log`, every line stamped in US Central;
 the lock is `~/Library/Logs/links/nightly.lock` (with the holder's pid; a lock
 whose pid is gone is removed). `--dry-run` runs the preflight without fetching,
-runs the enrichment tools' own offline `--dry-run`s, prints the plan, and writes
+runs `sky.py`'s and the enrichment tools' own offline `--dry-run`s, prints the plan, and writes
 nothing (no log, no lock, no bytecode), reads no secret and makes no request.
 Exit codes: 0 done or nothing to commit, 1 a step failed, 2 the preflight refused,
 64 a bad argument.

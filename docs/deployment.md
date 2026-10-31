@@ -319,12 +319,16 @@ Mac every night and commits what changed; its push to main is the deploy.
 `main` and clean, fetches and fast-forwards (pushing an earlier run's commit first);
 loads `.env` and `GITHUB_TOKEN` from `gh auth token` without echoing either; runs
 `sync.py` and `join_issues.py` (an isolated, freshly fetched and pinned Weekly main
-archive, never the active local Weekly checkout); then, one after another, `enrich_hosts.py --limit 1000`,
+archive, never the active local Weekly checkout); `sky.py`, which embeds the new links
+on Bedrock as `cloud-engineer` (the profile's `credential_process` needs no login) and
+makes them stars, keeping the vectors in
+`~/Library/Application Support/links.thingelstad.xyz/vectors/`; then, one after another, `enrich_hosts.py --limit 1000`,
 `enrich_facts.py --limit 500` and `enrich_pages.py --wayback-only --limit 800`;
 validates `data/`; commits `data/` and `public/media/` as `Linking Things nightly` with
 the message `Nightly: sync and enrichment, <YYYY-MM-DD>` and each step's summary in the
 body; and pushes to main with retries after 2, 4, 8 and 16 seconds. A Pinboard rate
-limit, a Wayback refusal or a GitHub rate limit is logged and the run goes on; a failed
+limit, a Bedrock failure, a Wayback refusal or a GitHub rate limit is logged and the
+run goes on (after a Bedrock failure the new links wait a night for their stars); a failed
 validation exits 1 and leaves the tree as it is for a look.
 
 **When:** 00:30 Mac time (US Central), from
