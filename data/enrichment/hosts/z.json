@@ -706,9 +706,9 @@
   }
  },
  "zenhabits.net": {
-  "checked": "2026-10-23T21:28:24Z",
+  "checked": "2026-10-31T05:32:07Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -730,6 +730,21 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:07Z",
+   "title": "Welcome to Zen Habits - Zen Habits Website",
+   "generator": "Hugo 0.118.2",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://zenhabits.net/index.xml",
+     "title": "Zen Habits Website"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "zenhabits.net",

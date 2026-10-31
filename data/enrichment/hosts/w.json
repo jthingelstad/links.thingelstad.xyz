@@ -903,16 +903,16 @@
   }
  },
  "washingtonpost.com": {
-  "checked": "2026-10-23T21:27:50Z",
+  "checked": "2026-10-31T05:31:34Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "65.8.27.11",
-    "65.8.27.58",
-    "65.8.27.92",
-    "65.8.27.121"
+    "13.32.164.9",
+    "13.32.164.18",
+    "13.32.164.28",
+    "13.32.164.111"
    ],
    "aaaa": [],
    "cname": null,
@@ -932,6 +932,16 @@
    "reachable": false,
    "redirects_http": true,
    "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-31T05:31:34Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
    "error": "timeout"
   },
   "rdap": {
@@ -6979,9 +6989,9 @@
   }
  },
  "withoutbullshit.com": {
-  "checked": "2026-10-23T21:28:38Z",
+  "checked": "2026-10-31T05:32:23Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -7000,6 +7010,26 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:23Z",
+   "title": "Home - Josh Bernoff",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://bernoff.com/feed",
+     "title": "Josh Bernoff » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://bernoff.com/comments/feed",
+     "title": "Josh Bernoff » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "withoutbullshit.com",

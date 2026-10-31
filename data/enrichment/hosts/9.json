@@ -330,9 +330,9 @@
   }
  },
  "9to5mac.com": {
-  "checked": "2026-10-23T21:26:39Z",
+  "checked": "2026-10-31T05:30:33Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -351,6 +351,31 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:30:33Z",
+   "title": "9to5Mac - Apple News & Mac Rumors Breaking All Day",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://9to5mac.com/feed/",
+     "title": "9to5Mac » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://9to5mac.com/comments/feed/",
+     "title": "9to5Mac » Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://9to5mac.com/web-stories/feed/",
+     "title": "9to5Mac » Stories Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "9to5mac.com",

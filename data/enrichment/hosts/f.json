@@ -1143,9 +1143,9 @@
   }
  },
  "fastcompany.com": {
-  "checked": "2026-10-23T21:28:33Z",
+  "checked": "2026-10-31T05:32:18Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -1168,6 +1168,16 @@
    "reachable": true,
    "redirects_http": true,
    "status": 403
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:18Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403 (DataDome)"
   },
   "rdap": {
    "domain": "fastcompany.com",

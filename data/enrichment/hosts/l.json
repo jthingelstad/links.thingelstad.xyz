@@ -2075,9 +2075,9 @@
   }
  },
  "leadershipfreak.blog": {
-  "checked": "2026-10-23T21:27:45Z",
+  "checked": "2026-10-31T05:31:29Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -2097,6 +2097,31 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:31:29Z",
+   "title": "Leadership Freak - Empowering Leaders 300 Words at a Time",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://leadershipfreak.blog/feed/",
+     "title": "Leadership Freak » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://leadershipfreak.blog/comments/feed/",
+     "title": "Leadership Freak » Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://leadershipfreak.blog/feed/podcast",
+     "title": "Podcast RSS feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "leadershipfreak.blog",
@@ -3827,9 +3852,9 @@
   }
  },
  "lethain.com": {
-  "checked": "2026-10-23T21:27:13Z",
+  "checked": "2026-10-31T05:31:12Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -3857,6 +3882,21 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:31:12Z",
+   "title": "Irrational Exuberance",
+   "generator": "Hugo 0.169.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://lethain.com/feeds.xml",
+     "title": "Irrational Exuberance"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "lethain.com",
@@ -4924,9 +4964,9 @@
   }
  },
  "lifehacker.com": {
-  "checked": "2026-10-23T21:27:00Z",
+  "checked": "2026-10-31T05:30:58Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -4948,6 +4988,21 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:30:58Z",
+   "title": "Lifehacker | Do everything better",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://lifehacker.com/feed/rss",
+     "title": "Lifehacker - All stories"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "lifehacker.com",
@@ -5965,9 +6020,9 @@
   }
  },
  "linkedin.com": {
-  "checked": "2026-10-23T21:28:34Z",
+  "checked": "2026-10-31T05:32:19Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -5993,6 +6048,15 @@
    "reachable": true,
    "redirects_http": false,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:19Z",
+   "title": "Log In or Sign Up | LinkedIn",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "linkedin.com",

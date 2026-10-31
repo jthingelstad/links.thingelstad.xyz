@@ -3306,20 +3306,20 @@
   }
  },
  "scripting.com": {
-  "checked": "2026-10-23T21:30:56Z",
+  "checked": "2026-10-31T05:33:27Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "16.15.164.114",
-    "16.15.212.22",
-    "16.15.246.37",
-    "16.15.255.205",
-    "16.182.34.29",
-    "52.217.165.13",
-    "52.217.165.53",
-    "52.217.232.181"
+    "16.15.160.228",
+    "16.15.161.254",
+    "16.15.165.64",
+    "16.15.236.206",
+    "16.182.96.181",
+    "52.216.60.157",
+    "54.231.165.189",
+    "54.231.169.213"
    ],
    "aaaa": [],
    "cname": null,
@@ -3335,6 +3335,16 @@
    "reachable": false,
    "redirects_http": false,
    "status": null,
+   "error": "connection reset"
+  },
+  "home": {
+   "checked": "2026-10-31T05:33:27Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
    "error": "connection reset"
   },
   "rdap": {
@@ -6003,9 +6013,9 @@
   }
  },
  "seths.blog": {
-  "checked": "2026-10-23T21:26:33Z",
+  "checked": "2026-10-31T05:30:28Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -6025,6 +6035,15 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:30:28Z",
+   "title": "Seth's Blog",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "seths.blog",
@@ -9557,9 +9576,9 @@
   }
  },
  "simonwillison.net": {
-  "checked": "2026-10-23T21:26:25Z",
+  "checked": "2026-10-31T05:30:22Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -9581,6 +9600,25 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:30:22Z",
+   "title": "Simon Willison’s Weblog",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://simonwillison.net/atom/everything/",
+     "title": "Atom"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://github.com/simonw",
+    "https://twitter.com/simonw",
+    "https://fedi.simonwillison.net/@simon"
+   ],
+   "webmention": "https://webmention.io/simonwillison.net/webmention"
   },
   "rdap": {
    "domain": "simonwillison.net",
@@ -10737,9 +10775,9 @@
   }
  },
  "sixcolors.com": {
-  "checked": "2026-10-23T21:27:05Z",
+  "checked": "2026-10-31T05:31:04Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -10761,6 +10799,26 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:31:04Z",
+   "title": "Six Colors – Apple, technology, and other stuff",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "http://feedpress.me/sixcolors",
+     "title": "RSS"
+    },
+    {
+     "type": "json",
+     "url": "https://sixcolors.com/feed/json/",
+     "title": "Six Colors » JSON Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "sixcolors.com",
@@ -11445,9 +11503,9 @@
   }
  },
  "slate.com": {
-  "checked": "2026-10-23T21:29:58Z",
+  "checked": "2026-10-31T05:33:23Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -11470,6 +11528,15 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:33:23Z",
+   "title": "Slate Magazine - Politics, Business, Technology, and the Arts",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "slate.com",
@@ -20465,9 +20532,9 @@
   }
  },
  "stratechery.com": {
-  "checked": "2026-10-23T21:26:30Z",
+  "checked": "2026-10-31T05:30:24Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -20487,6 +20554,15 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:30:24Z",
+   "title": "Stratechery by Ben Thompson – On the business, strategy, and impact of technology.",
+   "generator": "Site Kit by Google 1.190.0",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "stratechery.com",

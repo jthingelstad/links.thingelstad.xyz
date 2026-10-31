@@ -781,9 +781,9 @@
   }
  },
  "economist.com": {
-  "checked": "2026-10-23T21:27:12Z",
+  "checked": "2026-10-31T05:31:11Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -804,6 +804,16 @@
    "reachable": true,
    "redirects_http": true,
    "status": 403
+  },
+  "home": {
+   "checked": "2026-10-31T05:31:11Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 403 (DataDome)"
   },
   "rdap": {
    "domain": "economist.com",
@@ -4136,16 +4146,16 @@
   }
  },
  "en.wikipedia.org": {
-  "checked": "2026-10-23T21:26:44Z",
+  "checked": "2026-10-31T05:30:38Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "208.80.154.224"
+    "208.80.153.224"
    ],
    "aaaa": [
-    "2620:0:861:ed1a::1"
+    "2620:0:860:ed1a::1"
    ],
    "cname": "dyna.wikimedia.org",
    "ns": [],
@@ -4155,6 +4165,36 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:30:38Z",
+   "title": "Wikipedia, the free encyclopedia",
+   "generator": "MediaWiki 1.48.0-wmf.1",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://en.wikipedia.org/w/api.php?action=featuredfeed&feed=potd&feedformat=atom",
+     "title": "Wikipedia picture of the day feed"
+    },
+    {
+     "type": "atom",
+     "url": "https://en.wikipedia.org/w/api.php?action=featuredfeed&feed=featured&feedformat=atom",
+     "title": "Wikipedia featured articles feed"
+    },
+    {
+     "type": "atom",
+     "url": "https://en.wikipedia.org/w/api.php?action=featuredfeed&feed=onthisday&feedformat=atom",
+     "title": "Wikipedia &quot;On this day...&quot; feed"
+    },
+    {
+     "type": "atom",
+     "url": "https://en.wikipedia.org/w/index.php?title=Special:RecentChanges&feed=atom",
+     "title": "Wikipedia Atom feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "wikipedia.org",

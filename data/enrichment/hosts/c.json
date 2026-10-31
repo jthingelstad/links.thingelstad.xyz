@@ -604,9 +604,9 @@
   }
  },
  "calnewport.com": {
-  "checked": "2026-10-23T21:27:43Z",
+  "checked": "2026-10-31T05:31:26Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -628,6 +628,15 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:31:26Z",
+   "title": "Author of Deep Work, Study Hacks Blog - Cal Newport",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "calnewport.com",

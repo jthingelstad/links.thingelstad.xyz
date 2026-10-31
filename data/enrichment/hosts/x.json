@@ -344,9 +344,9 @@
   }
  },
  "xkcd.com": {
-  "checked": "2026-10-23T21:28:51Z",
+  "checked": "2026-10-31T05:32:36Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -374,6 +374,26 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:36Z",
+   "title": "xkcd: Earth Sized Planets",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://xkcd.com/atom.xml",
+     "title": "Atom 1.0"
+    },
+    {
+     "type": "rss",
+     "url": "https://xkcd.com/rss.xml",
+     "title": "RSS 2.0"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "xkcd.com",

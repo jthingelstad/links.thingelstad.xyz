@@ -3540,9 +3540,9 @@
   }
  },
  "krebsonsecurity.com": {
-  "checked": "2026-10-23T21:27:16Z",
+  "checked": "2026-10-31T05:31:15Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -3562,6 +3562,28 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:31:15Z",
+   "title": "Krebs on Security – In-depth security news and investigation",
+   "generator": "WordPress 6.6.9",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://krebsonsecurity.com/feed/",
+     "title": "Krebs on Security » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://krebsonsecurity.com/comments/feed/",
+     "title": "Krebs on Security » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://infosec.exchange/@briankrebs"
+   ],
+   "webmention": null
   },
   "rdap": {
    "domain": "krebsonsecurity.com",

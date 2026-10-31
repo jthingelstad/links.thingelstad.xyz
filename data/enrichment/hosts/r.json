@@ -1955,9 +1955,9 @@
   }
  },
  "readwrite.com": {
-  "checked": "2026-10-23T21:26:36Z",
+  "checked": "2026-10-31T05:30:30Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -1979,6 +1979,26 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:30:30Z",
+   "title": "ReadWrite - iGaming News, Reviews & Strategy Guides",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://readwrite.com/feed/",
+     "title": "ReadWrite » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://readwrite.com/comments/feed/",
+     "title": "ReadWrite » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "readwrite.com",

@@ -6267,14 +6267,14 @@
   }
  },
  "bizjournals.com": {
-  "checked": "2026-10-23T21:27:07Z",
+  "checked": "2026-10-31T05:31:07Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "3.82.90.37",
-    "34.237.162.142"
+    "3.222.11.79",
+    "54.226.201.195"
    ],
    "aaaa": [],
    "cname": null,
@@ -6290,6 +6290,21 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:31:07Z",
+   "title": "The Business Journals",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://feeds.bizjournals.com/bizjournals",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "bizjournals.com",
@@ -9005,9 +9020,9 @@
   }
  },
  "blog.cloudflare.com": {
-  "checked": "2026-10-23T21:26:52Z",
+  "checked": "2026-10-31T05:30:46Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -9030,6 +9045,21 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:30:46Z",
+   "title": "Cloudflare Blog",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://blog.cloudflare.com/rss/",
+     "title": "Cloudflare Blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "cloudflare.com",
@@ -11762,9 +11792,9 @@
   }
  },
  "blog.google": {
-  "checked": "2026-10-23T21:28:27Z",
+  "checked": "2026-10-31T05:32:12Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -11792,6 +11822,15 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:12Z",
+   "title": "News from Google | Google Product and Technology News and Stories",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "blog.google",
@@ -19958,9 +19997,9 @@
   }
  },
  "bloomberg.com": {
-  "checked": "2026-10-23T21:26:57Z",
+  "checked": "2026-10-31T05:30:51Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -19984,6 +20023,15 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:30:51Z",
+   "title": "Bloomberg - Business News, Stock Markets, Finance, Breaking & World News",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "bloomberg.com",

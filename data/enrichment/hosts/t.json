@@ -1315,9 +1315,9 @@
   }
  },
  "tbray.org": {
-  "checked": "2026-10-23T21:26:42Z",
+  "checked": "2026-10-31T05:30:36Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -1335,6 +1335,15 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:30:36Z",
+   "title": "tbray.org",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "tbray.org",
@@ -1422,9 +1431,9 @@
   }
  },
  "tcbmag.com": {
-  "checked": "2026-10-23T21:29:18Z",
+  "checked": "2026-10-31T05:32:44Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -1445,6 +1454,21 @@
    "reachable": true,
    "redirects_http": false,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:44Z",
+   "title": "Homepage | Twin Cities Business",
+   "generator": "WordPress 6.8.12",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://tcbmag.com/feed/",
+     "title": "Twin Cities Business » Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "tcbmag.com",
@@ -1965,14 +1989,14 @@
   }
  },
  "tech.mn": {
-  "checked": "2026-10-23T21:30:54Z",
+  "checked": "2026-10-31T05:33:25Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "174.129.6.29",
-    "184.196.180.154"
+    "54.158.97.79",
+    "100.62.190.180"
    ],
    "aaaa": [],
    "cname": "park.io",
@@ -1983,6 +2007,16 @@
    "reachable": false,
    "redirects_http": false,
    "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'tech.mn'"
+  },
+  "home": {
+   "checked": "2026-10-31T05:33:25Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
    "error": "tls: Hostname mismatch, certificate is not valid for 'tech.mn'"
   },
   "rdap": null,
@@ -3342,14 +3376,14 @@
   }
  },
  "ted.com": {
-  "checked": "2026-10-23T21:28:48Z",
+  "checked": "2026-10-31T05:32:33Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "54.237.107.19",
-    "98.91.173.106"
+    "34.236.199.38",
+    "54.158.136.236"
    ],
    "aaaa": [],
    "cname": null,
@@ -3365,6 +3399,15 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:33Z",
+   "title": "TED: Ideas change everything",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "ted.com",
@@ -10488,9 +10531,9 @@
   }
  },
  "thesweetsetup.com": {
-  "checked": "2026-10-23T21:27:36Z",
+  "checked": "2026-10-31T05:31:18Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -10512,6 +10555,26 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:31:18Z",
+   "title": "Discover the best apps and workflows for your iPhone, Mac, and iPad — The Sweet Setup",
+   "generator": "WordPress 6.6.11",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://thesweetsetup.com/feed/",
+     "title": "The Sweet Setup"
+    },
+    {
+     "type": "rss",
+     "url": "https://thesweetsetup.com/home/feed/",
+     "title": "The Sweet Setup » Home Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "thesweetsetup.com",
@@ -13140,9 +13203,9 @@
   }
  },
  "tidbits.com": {
-  "checked": "2026-10-23T21:28:36Z",
+  "checked": "2026-10-31T05:32:21Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -13164,6 +13227,31 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:21Z",
+   "title": "TidBITS - Thoughtful, detailed coverage of everything Apple for 36 years",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://tidbits.com/feed/",
+     "title": "TidBITS » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://tidbits.com/comments/feed/",
+     "title": "TidBITS » Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://tidbits.com/feed/podcast/",
+     "title": "TidBITS Podcast"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "tidbits.com",
@@ -16729,9 +16817,9 @@
   }
  },
  "toolsandtoys.net": {
-  "checked": "2026-10-23T21:28:30Z",
+  "checked": "2026-10-31T05:32:15Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -16753,6 +16841,21 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:15Z",
+   "title": "Tools and Toys — Hand-Picked for Work and Play",
+   "generator": "WordPress 6.6.10",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://toolsandtoys.net/feed/",
+     "title": "Tools and Toys RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "toolsandtoys.net",

@@ -4605,9 +4605,9 @@
   }
  },
  "newyorker.com": {
-  "checked": "2026-10-23T21:28:22Z",
+  "checked": "2026-10-31T05:32:06Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -4631,6 +4631,21 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:06Z",
+   "title": "The New Yorker",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.newyorker.com/feed/rss",
+     "title": null
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "newyorker.com",
@@ -8942,9 +8957,9 @@
   }
  },
  "npr.org": {
-  "checked": "2026-10-23T21:29:22Z",
+  "checked": "2026-10-31T05:32:49Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -8967,6 +8982,16 @@
    "reachable": false,
    "redirects_http": true,
    "status": null,
+   "error": "timeout"
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:49Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
    "error": "timeout"
   },
   "rdap": {

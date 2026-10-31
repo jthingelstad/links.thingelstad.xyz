@@ -236,9 +236,9 @@
   }
  },
  "ma.tt": {
-  "checked": "2026-10-23T21:29:20Z",
+  "checked": "2026-10-31T05:32:46Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -256,6 +256,26 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:46Z",
+   "title": "Matt Mullenweg | Unlucky in Cards",
+   "generator": "WordPress 7.2-beta3-65115",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://ma.tt/feed/",
+     "title": "Matt Mullenweg » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://ma.tt/comments/feed/",
+     "title": "Matt Mullenweg » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": null,
   "rdap_error": "no RDAP service for .tt"
@@ -556,9 +576,9 @@
   }
  },
  "macdailynews.com": {
-  "checked": "2026-10-23T21:28:45Z",
+  "checked": "2026-10-31T05:32:30Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -580,6 +600,26 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:30Z",
+   "title": "MacDailyNews - Welcome Home! Apple and Mac News",
+   "generator": "Site Kit by Google 1.190.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://macdailynews.com/feed/",
+     "title": "MacDailyNews » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://macdailynews.com/comments/feed/",
+     "title": "MacDailyNews » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "macdailynews.com",
@@ -1296,18 +1336,18 @@
   }
  },
  "macsparky.com": {
-  "checked": "2026-10-23T21:26:49Z",
+  "checked": "2026-10-31T05:30:43Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.21.37.125",
-    "172.67.208.29"
+    "162.159.134.42",
+    "162.159.135.42"
    ],
    "aaaa": [
-    "2606:4700:3031::6815:257d",
-    "2606:4700:3037::ac43:d01d"
+    "2606:4700:7::a29f:862a",
+    "2606:4700:7::a29f:872a"
    ],
    "cname": null,
    "ns": [
@@ -1320,6 +1360,26 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:30:43Z",
+   "title": "MacSparky - Get More Productive with Your Apple Gear",
+   "generator": "WordPress 7.1.4",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.macsparky.com/feed/",
+     "title": "MacSparky » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.macsparky.com/comments/feed/",
+     "title": "MacSparky » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
   },
   "rdap": {
    "domain": "macsparky.com",
@@ -3784,9 +3844,9 @@
   }
  },
  "marco.org": {
-  "checked": "2026-10-23T21:29:54Z",
+  "checked": "2026-10-31T05:33:20Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -3808,6 +3868,23 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:33:20Z",
+   "title": "Marco.org",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://marco.org/rss",
+     "title": "RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@marcoarment"
+   ],
+   "webmention": null
   },
   "rdap": {
    "domain": "marco.org",
@@ -5055,9 +5132,9 @@
   }
  },
  "martinfowler.com": {
-  "checked": "2026-10-23T21:29:16Z",
+  "checked": "2026-10-31T05:32:41Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -5077,6 +5154,17 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:32:41Z",
+   "title": "martinfowler.com",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://toot.thoughtworks.com/@mfowler"
+   ],
+   "webmention": null
   },
   "rdap": {
    "domain": "martinfowler.com",
@@ -8240,16 +8328,16 @@
   }
  },
  "mediawiki.org": {
-  "checked": "2026-10-23T21:27:39Z",
+  "checked": "2026-10-31T05:31:22Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "208.80.154.224"
+    "208.80.153.224"
    ],
    "aaaa": [
-    "2620:0:861:ed1a::1"
+    "2620:0:860:ed1a::1"
    ],
    "cname": null,
    "ns": [
@@ -8263,6 +8351,23 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:31:22Z",
+   "title": "MediaWiki",
+   "generator": "MediaWiki 1.48.0-wmf.1",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.mediawiki.org/w/index.php?title=Special:RecentChanges&feed=atom",
+     "title": "MediaWiki Atom feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://wikis.world/@mediawiki"
+   ],
+   "webmention": null
   },
   "rdap": {
    "domain": "mediawiki.org",
@@ -13610,9 +13715,9 @@
   }
  },
  "mjtsai.com": {
-  "checked": "2026-10-23T21:27:48Z",
+  "checked": "2026-10-31T05:31:32Z",
   "method": "enrich_hosts",
-  "version": 1,
+  "version": 2,
   "dns": {
    "resolves": true,
    "a": [
@@ -13633,6 +13738,33 @@
    "reachable": true,
    "redirects_http": true,
    "status": 200
+  },
+  "home": {
+   "checked": "2026-10-31T05:31:32Z",
+   "title": "Michael Tsai - Good Evening",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://mjtsai.com/blog/feed/",
+     "title": "Blog Posts RSS"
+    },
+    {
+     "type": "rss",
+     "url": "https://mjtsai.com/blog/comments/feed/",
+     "title": "Comments RSS"
+    },
+    {
+     "type": "rss",
+     "url": "https://mastodon.social/tags/mjtsaiupdate.rss",
+     "title": "Updated Posts RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://mastodon.social/@mjtsai"
+   ],
+   "webmention": null
   },
   "rdap": {
    "domain": "mjtsai.com",
