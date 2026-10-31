@@ -354,6 +354,11 @@ html:has(.sky:not([hidden])) {
 /* The card on the star in view (src/scripts/sky-card.ts), and the same card
    as Doors' page. */
 .sky-card {
+  /* The note's own styles (global.css) read the site's tokens; at night
+     they read the sky's. */
+  --text-soft: var(--sky-soft);
+  --muted: var(--sky-muted);
+  --line: var(--edge);
   position: absolute;
   z-index: 5;
   left: max(var(--jt-gutter), env(safe-area-inset-left, 0px));
