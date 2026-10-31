@@ -253,11 +253,12 @@ def update(links, sky_head, stars, cache, embed_texts=None):
                 continue
             me = row[link_id]
             current = star["neighbors"]
-            last = math.sumprod(vecs[me], vecs[row[current[-1]]])
+            # Ranked as vectors.nearest ranks: nearer first, then saved earlier.
+            last = (math.sumprod(vecs[me], vecs[row[current[-1]]]), -row[current[-1]])
             entering = [
                 e
                 for e, sims in entrant_sims.items()
-                if e != link_id and sims[me] > last and keys[row[e]] != keys[me] and e not in current
+                if e != link_id and (sims[me], -row[e]) > last and keys[row[e]] != keys[me] and e not in current
             ]
             if entering:
                 pool = current + entering

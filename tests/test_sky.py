@@ -11,7 +11,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
 
-from linking import jsonio, sky, vectors  # noqa: E402
+from linking import sky, vectors  # noqa: E402
 from linking.check_sky import check_sky  # noqa: E402
 from linking.urls import link_id, md5_hex  # noqa: E402
 from linking.validate import Report  # noqa: E402
@@ -130,6 +130,18 @@ class Update(unittest.TestCase):
         self.assertIn(NEW[0]["id"], stars[a1]["neighbors"])
         # The full computation agrees with the incremental one everywhere.
         expected_links, _, expected, _ = world(LINKS + [NEW])
+        for i in expected:
+            self.assertEqual(stars[i]["neighbors"], expected[i]["neighbors"], i)
+
+    def test_a_tie_goes_to_the_earlier_saved_link_as_in_a_full_compute(self):
+        # A backfilled link saved before everything, with the same vector as a
+        # list's last neighbour: the full computation ranks it ahead, so the
+        # incremental one must let it in too.
+        links, head, stars, cache = world()
+        early = (record("https://a0.example/", "2018-01-01T00:00:00Z", note="early"), vec(1.0, 0.2, 0.0))
+        links[early[0]["id"]] = early[0]
+        sky.update(links, head, stars, cache, embed_texts=lambda texts: [early[1]])
+        _, _, expected, _ = world(LINKS + [early])
         for i in expected:
             self.assertEqual(stars[i]["neighbors"], expected[i]["neighbors"], i)
 
