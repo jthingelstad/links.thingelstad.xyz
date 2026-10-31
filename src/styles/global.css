@@ -435,6 +435,18 @@ img {
   color: var(--muted);
   font-size: var(--jt-size-small);
 }
+/* The day saved opens that day in every year (/on/MM-DD/): the byline's
+   own colour, underlined lightly. */
+.record-day,
+.record-day:visited {
+  color: inherit;
+  text-decoration-color: var(--line);
+  text-underline-offset: 4px;
+}
+.record-day:hover {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}
 .record-byline .chip {
   line-height: 26px;
   padding: 0 9px;

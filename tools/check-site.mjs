@@ -54,6 +54,19 @@ for (const name of twins) {
   if (record && video) break;
 }
 const path = (url) => new URL(url).pathname;
+// A day as /on/ names it: month and day in Central.
+const onDay = (date) => {
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Chicago',
+      month: '2-digit',
+      day: '2-digit',
+    })
+      .formatToParts(date)
+      .map((p) => [p.type, p.value]),
+  );
+  return `/on/${parts.month}-${parts.day}/`;
+};
 const routes = [
   '/',
   '/search/',
@@ -69,6 +82,7 @@ const routes = [
   path(record.record),
   path(record.connections.same_host?.page ?? `${base}/hosts/`),
   `/years/${record.saved.slice(0, 4)}/`,
+  onDay(new Date(record.saved)),
   ...record.issues.slice(0, 1).map((issue) => path(issue.page)),
   ...(video ? [path(video.record)] : []),
 ];
@@ -316,6 +330,12 @@ for (const [name, viewport] of [
     assert.equal(new URL(page.url()).hash, '', 'the whole sky, no star');
     assert.ok(await page.locator('.sky-home [data-home-about]').isVisible());
   }
+  // On this day is the reader's today, whatever day the page was built.
+  assert.equal(
+    await page.locator('[data-today]').first().getAttribute('href'),
+    onDay(new Date()),
+    'On this day opens today',
+  );
   await page.screenshot({ path: shot(name, '/sky-landing') });
   // (Doors already has a star in the address.)
   const before = new URL(page.url()).hash;
@@ -510,8 +530,9 @@ for (const [name, viewport] of [
   // an issue opens beside the sky, at night, with no site header, and the
   // sky lights the links it lists; Find lights over the lens with the words
   // in the address, and clearing it gives the lens back; a star chosen there
-  // opens its page, which stands on its link with its neighbours as doors; a
-  // year opens in Time. Without WebGL it is the plain page with the header.
+  // opens its page, which stands on its link with its neighbours as doors,
+  // and whose date opens its day; a year and a day open in Time. Without
+  // WebGL it is the plain page with the header.
   const lensAt = async (route) => {
     await page.goto(base + route, { waitUntil: 'networkidle' });
     await page
@@ -563,6 +584,8 @@ for (const [name, viewport] of [
     const lensDoor = page.locator('.sky-door');
     await lensDoor.first().waitFor({ state: 'attached', timeout: 15000 });
     await page.screenshot({ path: shot(name, `${chosen}lens`) });
+    const day = await page.locator('.record-day').getAttribute('href');
+    assert.match(day ?? '', /^\/on\/\d\d-\d\d\/$/, 'its date opens its day');
     await lensDoor.first().dispatchEvent('click');
     await page.waitForURL(
       (url) =>
@@ -594,6 +617,18 @@ for (const [name, viewport] of [
     await page.waitForURL(
       (url) => url.searchParams.get('view') === 'meaning' && url.hash === month,
     );
+    // A day of the year is a lens in Time, on every link saved that day.
+    assert.ok(await lensAt(day), 'a day is a lens');
+    assert.equal(
+      await timeButton.getAttribute('aria-pressed'),
+      'true',
+      'a day opens in Time',
+    );
+    await page
+      .locator('.sky-found[data-star]')
+      .first()
+      .waitFor({ state: 'attached', timeout: 15000 });
+    await page.screenshot({ path: shot(name, `${day}lens`) });
   } else {
     assert.ok(
       await page.locator('.site-header').isVisible(),

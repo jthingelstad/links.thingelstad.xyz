@@ -34,6 +34,10 @@ import {
   skyPath,
   skyTopics,
   linkById,
+  calendarDays,
+  dayKey,
+  linksByDayOfYear,
+  onPath,
   topicPath,
   topicsPath,
   yearPath,
@@ -99,6 +103,10 @@ for (const [host, list] of linksByHost)
 for (const [year, list] of linksByYear)
   pages.set(yearPath(year), listDate(list));
 pages.set(topicsPath, everything);
+for (const { month, day } of calendarDays) {
+  const list = linksByDayOfYear.get(dayKey(month, day)) ?? [];
+  pages.set(onPath(month, day), list.length ? listDate(list) : everything);
+}
 for (const topic of skyTopics) {
   const list = topicLinks(topic.id);
   if (list.length) pages.set(topicPath(topic.name), listDate(list));
