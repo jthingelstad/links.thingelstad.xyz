@@ -228,11 +228,13 @@ export async function initSky() {
     if (arranged !== (lens ? lensView : 'meaning'))
       search.set('view', arranged);
     const rest = search.toString();
-    const star = !lens && cur >= 0 ? `#${sky.ids[cur]}` : '';
+    // On a lens page the fragment is the page's own (a year's month), never
+    // a star, so it stays as the reader had it.
+    const hash = lens ? location.hash : cur >= 0 ? `#${sky.ids[cur]}` : '';
     history.replaceState(
       null,
       '',
-      `${location.pathname}${rest ? `?${rest}` : ''}${star}`,
+      `${location.pathname}${rest ? `?${rest}` : ''}${hash}`,
     );
   }
 

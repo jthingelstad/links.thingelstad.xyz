@@ -569,7 +569,9 @@ for (const [name, viewport] of [
         url.pathname !== chosen,
     );
     const year = `/years/${record.saved.slice(0, 4)}/`;
-    assert.ok(await lensAt(year), 'a year is a lens');
+    const month = `#${record.saved.slice(0, 7)}`;
+    assert.ok(await lensAt(year + month), 'a year is a lens');
+    assert.equal(new URL(page.url()).hash, month, 'and keeps its month');
     const timeButton = page.locator('[data-layout="time"]');
     assert.equal(
       await timeButton.getAttribute('aria-pressed'),
@@ -578,7 +580,9 @@ for (const [name, viewport] of [
     );
     assert.equal(new URL(page.url()).search, '', 'with nothing to say so');
     await page.locator('[data-layout="meaning"]').click();
-    await page.waitForURL((url) => url.searchParams.get('view') === 'meaning');
+    await page.waitForURL(
+      (url) => url.searchParams.get('view') === 'meaning' && url.hash === month,
+    );
   } else {
     assert.ok(
       await page.locator('.site-header').isVisible(),
