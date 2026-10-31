@@ -527,8 +527,13 @@ star layout and Doors as the phone and no-WebGL view".
   not yet visited, the far ones first, resting a few seconds on each, and every few
   hops pulling back and crossing to another constellation. Any touch, key or click
   hands the controls back. With reduced motion it steps from link to link without the
-  flight.
-- **Names on things.** Topic names float at their densest point, and the titles of the
+  flight. **Full screen** (2026-10-31, Jamie: "It begs for a full screen option to use
+  as a screen saver"), the button beside Play, fills the screen with the sky alone and
+  plays: while it flies the bar and the pointer go until the mouse moves, the screen
+  is kept awake where the browser allows, and the trail keeps its last 60 stops.
+  Escape or the button leaves.
+- **Names on things.** Topic names float at their densest point, as they are written
+  and light (not in capitals: Jamie, 2026-10-31, "all caps seems odd"), and the titles of the
   stars nearest the camera come up beside them as you approach (Atlas's labels). The
   ten neighbours carry their titles beside their stars, or wait at the edge with an
   arrow when they are out of view. No lookups.
@@ -538,7 +543,10 @@ star layout and Doors as the phone and no-WebGL view".
   neighbours as doors. On a wide screen each door stands on the side where its link
   lies on the Time map, drawn flat behind; on a phone they are a list under the page,
   with no map. It is the view on a small screen or where WebGL is missing; a wider
-  screen with WebGL can switch to it and back, keeping the star and the trail.
+  screen with WebGL can switch to it and back, keeping the star and the trail. Doors
+  is night, as the sky is, with a line under the bar saying what it is (Jamie,
+  2026-10-31: "it is jarring that it goes from a dark background to white… it should
+  be a dark background and it needs an explainer").
 - **Built from the site's own files.** One static file of stars (ids, titles, sites,
   days, topics, places, neighbours; no notes, which come from the link's JSON twin when
   its card opens), drawn with WebGL directly: no library, nothing from another host.

@@ -10,7 +10,8 @@
 // address carries the words, the last row searches on /search/, and a site
 // taken there is not offered again; Enter takes an unknown site as it
 // stands, lighting nothing; Doors from the whole sky puts its star in the
-// address; a video facade asks nothing of YouTube
+// address and says what Doors is; Full screen plays the sky alone; a video
+// facade asks nothing of YouTube
 // or Vimeo until it is clicked, then becomes the player; /sky/#<id> opens on
 // that link (in the sky on the desktop, or Doors where the browser has no
 // WebGL; Doors on a phone), a door walks to a neighbour and Back returns, the
@@ -430,7 +431,24 @@ for (const [name, viewport] of [
     await landing();
     await page.locator('[data-toggle-view]').click();
     await page.waitForURL((url) => /^#[0-9a-f]{12}$/.test(url.hash));
-  }
+    assert.ok(
+      await page.locator('.doors-about').isVisible(),
+      'Doors says what it is',
+    );
+    // Full screen is the sky alone, flying itself.
+    await landing();
+    await page.locator('[data-full]').click();
+    await page.waitForFunction(() =>
+      document.fullscreenElement?.matches(
+        '[data-sky][data-full][data-playing]',
+      ),
+    );
+    await page.evaluate(() => document.exitFullscreen());
+  } else
+    assert.ok(
+      await page.locator('.doors-about').isVisible(),
+      'Doors says what it is',
+    );
 
   // The video facade: nothing from the player's host until the click.
   if (video) {

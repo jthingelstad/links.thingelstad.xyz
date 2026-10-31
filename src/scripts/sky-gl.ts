@@ -185,6 +185,7 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
   const home = $<HTMLElement>('.sky-home');
   const bar = $<HTMLElement>('.sky-bar');
   const playButton = $<HTMLButtonElement>('[data-play]');
+  const fullButton = $<HTMLButtonElement>('[data-full]');
 
   // Places. Time's depth is the day saved, the middle of the years at 0;
   // each star sets off for the other layout at its own moment in time.
@@ -1090,6 +1091,7 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
   function startPlay() {
     if (!named()) return;
     play = { timer: 0, hops: 0, topics: new Set() };
+    stage.toggleAttribute('data-playing', true);
     playButton.setAttribute('aria-pressed', 'true');
     playButton.textContent = 'Pause';
     card.setAttribute('aria-live', 'off');
@@ -1105,11 +1107,61 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
     if (!play) return;
     clearTimeout(play.timer);
     play = null;
+    stage.toggleAttribute('data-playing', false);
     playButton.setAttribute('aria-pressed', 'false');
     playButton.textContent = 'Play';
     card.setAttribute('aria-live', 'polite');
   }
   playButton.addEventListener('click', () => (play ? stopPlay() : startPlay()));
+
+  // Full screen: the sky alone, flying itself, for a screen left on (Jamie,
+  // 2026-10-31: "It begs for a full screen option to use as a screen
+  // saver"). It starts Play; while Play flies, the bar and the pointer go
+  // until the mouse moves, and the screen is kept awake where the browser
+  // can. Escape, or the button again, leaves.
+  const full = () => document.fullscreenElement === stage;
+  fullButton.hidden = !document.fullscreenEnabled;
+  fullButton.addEventListener('click', () => {
+    if (full()) void document.exitFullscreen();
+    else
+      stage.requestFullscreen().then(
+        () => play || startPlay(),
+        () => undefined,
+      );
+  });
+  let still = 0;
+  function stir() {
+    stage.toggleAttribute('data-stirred', true);
+    clearTimeout(still);
+    still = window.setTimeout(
+      () => stage.toggleAttribute('data-stirred', false),
+      2500,
+    );
+  }
+  stage.addEventListener('pointermove', () => full() && stir());
+  let awake: WakeLockSentinel | null = null;
+  async function keepAwake() {
+    if (!full() || document.hidden || (awake && !awake.released)) return;
+    try {
+      awake = (await navigator.wakeLock?.request('screen')) ?? null;
+    } catch {
+      awake = null;
+    }
+  }
+  document.addEventListener('fullscreenchange', () => {
+    const on = full();
+    stage.toggleAttribute('data-full', on);
+    const label = on ? 'Leave full screen' : 'Full screen';
+    fullButton.setAttribute('aria-label', label);
+    fullButton.title = label;
+    if (on) {
+      stir();
+      void keepAwake();
+    } else {
+      void awake?.release();
+      awake = null;
+    }
+  });
 
   // Meaning and Time.
   const layoutButtons = [
@@ -1280,13 +1332,17 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
   stage.addEventListener(
     'pointerdown',
     (e) => {
-      if (!(e.target as Element).closest('[data-play]')) stopPlay();
+      if (!(e.target as Element).closest('[data-play], [data-full]'))
+        stopPlay();
     },
     true,
   );
   stage.addEventListener('keydown', (e) => {
     const target = e.target as Element;
-    if (target.closest('[data-play]') || ['Tab', 'Shift'].includes(e.key))
+    if (
+      target.closest('[data-play], [data-full]') ||
+      ['Tab', 'Shift'].includes(e.key)
+    )
       return;
     stopPlay();
     if (target !== canvas || e.metaKey || e.ctrlKey || e.altKey) return;
@@ -1309,6 +1365,7 @@ export function startSky(stage: HTMLElement, walk: Walk): SkyView | null {
   });
   document.addEventListener('visibilitychange', () => {
     if (play && !document.hidden) schedule(dwell());
+    void keepAwake();
   });
   if (document.fonts)
     document.fonts.ready.then(() => {
