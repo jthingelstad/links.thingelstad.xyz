@@ -220,14 +220,14 @@ class Sky(unittest.TestCase):
         return ids, problems
 
     def test_stars_that_agree_pass_and_name_the_fragments(self):
-        self.assertEqual(self.stars(), ({RECORD, OTHER}, []))
+        self.assertEqual(self.stars(), ({RECORD: [OTHER], OTHER: [RECORD]}, []))
 
     def test_a_link_without_a_star_yet_passes(self):
         ids, problems = self.stars(
             ids=[RECORD], titles=["One"], host=[0], day=[20750], note=[1], topic=[0],
             meaning=[0, 0, 0], time=[0, 0], neighbors=[[]], topics=[{"name": "Things", "size": 1}],
         )
-        self.assertEqual((ids, problems), ({RECORD}, []))
+        self.assertEqual((ids, problems), ({RECORD: []}, []))
 
     def test_a_star_that_is_no_record_fails(self):
         self.assertIn("no record", self.stars(ids=[RECORD, "ffffffffffff"])[1][0])
@@ -244,6 +244,44 @@ class Sky(unittest.TestCase):
 
     def test_topic_sizes_must_add_up(self):
         self.assertIn("sizes", self.stars(topics=[{"name": "Things", "size": 3}])[1][0])
+
+
+class Nearest(unittest.TestCase):
+    """A record page's "Nearest in meaning": its star's first five neighbours."""
+
+    @staticmethod
+    def page(ids):
+        rows = "".join(f'<li><a class="title" href="/links/{i}/">x</a></li>' for i in ids)
+        return (
+            '<section class="section meaning"><h2>Nearest in meaning</h2>'
+            f'<ul class="link-list compact">{rows}</ul>'
+            '<p class="more"><a href="/sky/#aaaaaaaaaaaa">All 10 in the sky</a></p>'
+            '</section><section class="section"><a href="/links/ffffffffffff/">y</a></section>'
+        )
+
+    def check(self, listed, near):
+        problems = []
+        validate_site.check_nearest({RECORD: listed}, {RECORD: near}, problems)
+        return problems
+
+    def test_reads_only_its_own_section(self):
+        ids = [f"{n:012x}" for n in range(7)]
+        self.assertEqual(validate_site.nearest_listed(self.page(ids[:5])), ids[:5])
+        self.assertEqual(validate_site.nearest_listed("<main></main>"), [])
+
+    def test_the_first_five_in_order_pass(self):
+        near = [f"{n:012x}" for n in range(10)]
+        self.assertEqual(self.check(near[:5], near), [])
+        self.assertEqual(self.check(near[:2], near[:2]), [])
+
+    def test_out_of_order_or_short_fails(self):
+        near = [f"{n:012x}" for n in range(10)]
+        self.assertIn("not its star's first 5", self.check(near[1:6], near)[0])
+        self.assertIn("lists 4", self.check(near[:4], near)[0])
+
+    def test_a_link_without_a_star_lists_none(self):
+        self.assertEqual(self.check([], []), [])
+        self.assertIn("first 0", self.check([OTHER], [])[0])
 
 
 if __name__ == "__main__":

@@ -21,7 +21,7 @@ import {
 } from '../src/lib/sky.ts';
 import { checkTopics, parseTopics } from '../src/lib/topics.ts';
 import { constellations, skyDocument } from '../src/lib/stars.ts';
-import { skyTopics, stars } from '../src/lib/data.ts';
+import { links, nearestInMeaning, skyTopics, stars } from '../src/lib/data.ts';
 
 test('the morph: every star leaves at 0 and arrives at 1, the early years first', () => {
   for (const delay of [0, 0.3, 1]) {
@@ -224,4 +224,16 @@ test('the constellations list every topic once, in its family, with links from i
     for (const link of topic.links)
       assert.equal(stars.get(link.id).topic, id, topic.name);
   }
+});
+
+test("a record's nearest in meaning: its star's first five, nearest first", () => {
+  for (const link of links.slice(0, 2000)) {
+    const near = stars.get(link.id)?.neighbors ?? [];
+    assert.deepEqual(
+      nearestInMeaning(link).map((l) => l.id),
+      near.slice(0, 5),
+    );
+  }
+  const placed = links.find((link) => stars.get(link.id)?.neighbors.length);
+  assert.equal(nearestInMeaning(placed).length, 5);
 });

@@ -410,10 +410,14 @@ file are shaped to accept the rest.
 
 ### Nearest neighbours
 
-Jamie likes this one. Every record shows its five nearest neighbours, with the reason
-shown beside each ("same topic", "same issue", "same host", or nothing, which is the
-interesting case: two links from different years and hosts that are about the same
-thing). The top ten per link are kept with its star in `data/derived/sky/<yyyy>.json`,
+Jamie likes this one. Every record shows its five nearest neighbours under "Nearest in
+meaning", built 2026-10-31 on Jamie's line ("Approved: add the five nearest-in-meaning
+links to every Linking Things record page"). Each row is the site's usual one, so the
+reason is beside it already: the host, the year and the Weekly Thing chip show a shared
+site, year or issue, and a row that shares none is the interesting case, two links
+from different years and hosts that are about the same thing. A link to the sky with
+all ten follows. `validate-site` holds each record to its star's first five, nearest
+first. The top ten per link are kept with its star in `data/derived/sky/<yyyy>.json`,
 under a head that names the model and the text recipe's version (`docs/DATA.md`, "The
 sky"). No runtime cost: the page is static and the neighbours are text.
 
