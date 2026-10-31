@@ -1,0 +1,34 @@
+---
+// A lens page (docs/DIRECTION.md, "Lenses"; lib/lens.ts): the page's own
+// content in a night panel beside the sky, which lights what the panel lists
+// or stands on its link. The sky fills the window to the left of the panel
+// and stays as the panel scrolls; on a phone it is a strip above it. Choosing
+// a star opens its page, which is a lens too.
+//
+// The page opens as a lens only where the script and WebGL are (Layout's
+// `lens`, which marks <html> before anything draws); without them, or when
+// the stars do not load, it is the page as it always was, with the site
+// header, and src/scripts/sky.ts takes the mark away again.
+import SkyStage from './SkyStage.astro';
+import type { Lens } from '../lib/lens';
+import '../styles/sky.css';
+import '../styles/lens.css';
+interface Props {
+  lens: Lens;
+}
+const { lens } = Astro.props;
+---
+
+<div class="lens">
+  <div class="lens-sky">
+    <SkyStage lens={lens} />
+  </div>
+  <div class="lens-panel" data-lens-panel>
+    <slot />
+  </div>
+</div>
+
+<script>
+  import { initSky } from '../scripts/sky';
+  initSky();
+</script>

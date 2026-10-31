@@ -37,8 +37,14 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   sky with WebGL on a wide screen, Doors on a phone or without it
   (`src/scripts/sky*.ts`; the shared arithmetic and Find, tested, are `src/lib/sky.ts`).
   Find lights stars by title and site in the browser with the search grammar, never
-  Pagefind. The front page's address carries `?q=`, `?view=time` and `#<id>`. Hosts
-  are "Sites" to a reader (Jamie, 2026-10-31); the URLs keep `/hosts/`. **The layout is
+  Pagefind. The front page's address carries `?q=`, `?view=time` and `#<id>`. **Lens
+  pages** (an issue, a year, a site, a kind, a link; `src/components/Lens.astro`,
+  `src/lib/lens.ts`, `src/styles/lens.css`) put the page in a night panel beside the
+  sky, which lights what the panel lists (`.link-list a.title`) or stands on the
+  page's link; a star chosen there opens its page. Layout's `lens` marks `<html>`
+  before anything draws; without the script, WebGL or the stars it is the plain page
+  with the header. Hosts are "Sites" to a reader (Jamie, 2026-10-31); the URLs keep
+  `/hosts/`. **The layout is
   fixed** (Jamie, 2026-10-30: "with a fixed star layout"): the nightly's `tools/sky.py`
   places a new link beside its neighbours and never moves a star; only
   `tools/one-shot/sky_layout.py`, run by hand from its own venv when the model or text

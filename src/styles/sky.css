@@ -541,12 +541,14 @@ html:has(.sky:not([hidden])) {
 }
 
 /* The front page: the sky from under the strip to the foot of the window,
-   its bar a glass panel with the wordmark and the ways in. */
+   its bar a glass panel with the wordmark and the ways in, as on a lens
+   page (lens.css). */
 .site-main:has(> .sky-home-page:not([hidden])) {
   padding-top: 0;
   padding-bottom: 0;
 }
-.sky-home-page .sky-bar {
+.sky-home-page .sky-bar,
+.sky[data-lens] .sky-bar {
   top: 12px;
   padding: 8px 10px 8px 18px;
   background: var(--glass);
@@ -570,7 +572,8 @@ html:has(.sky:not([hidden])) {
 .sky-wordmark:hover {
   text-decoration: underline;
 }
-.sky-home-page .sky-find {
+.sky-home-page .sky-find,
+.sky[data-lens] .sky-find {
   flex: 1 1 12rem;
   max-width: 26rem;
 }
@@ -867,7 +870,8 @@ html:has(.sky:not([hidden])) {
     border-top: 1px solid var(--line);
   }
   .sky-find,
-  .sky-home-page .sky-find {
+  .sky-home-page .sky-find,
+  .sky[data-lens] .sky-find {
     order: 5;
     flex-basis: 100%;
     max-width: none;

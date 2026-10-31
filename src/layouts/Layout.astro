@@ -4,7 +4,8 @@
 // the wordmark and the ways in), and the footer with Jamie's h-card and the About link. The site's
 // feeds are advertised on every page, a page's own feeds before them. No
 // script runs here but Tinylytics, in the production build only
-// (Analytics.astro); the search page adds Pagefind's.
+// (Analytics.astro), and a lens page's mark (`lens`); the search page adds
+// Pagefind's.
 import '../../shared/tokens.css';
 import '../styles/global.css';
 import inter from '../../shared/fonts/inter-latin-wght-normal.woff2?url';
@@ -23,6 +24,11 @@ interface Props {
   noindex?: boolean;
   // The front page: the sky is the page, so no site header.
   home?: boolean;
+  // A lens page (Lens.astro): where the script and WebGL are, <html> is
+  // marked before anything draws, so the page opens beside the sky, at
+  // night, without the header (the sky's bar holds the wordmark and the
+  // ways in), rather than turning into it once the script runs.
+  lens?: boolean;
   // A record's own share card (lib/card.ts); every other page shares the
   // front page.
   image?: { url: string; alt: string };
@@ -39,6 +45,7 @@ const {
   notFound = false,
   noindex = false,
   home = false,
+  lens = false,
   feed = false,
   image = {
     url: new URL('/share.jpg', Astro.site).href,
@@ -118,6 +125,17 @@ const current = (href: string) =>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     {/* Tinylytics loads at the end of the body (Analytics.astro). */}
+    {lens && <script is:inline>
+      if ('WebGLRenderingContext' in window) {
+        document.documentElement.setAttribute('data-lens', '');
+        for (const meta of document.querySelectorAll(
+          'meta[name="theme-color"]',
+        )) {
+          meta.dataset.day = meta.content;
+          meta.content = '#0c1428';
+        }
+      }
+    </script>}
   </head>
   <body>
     <a href="#main" class="skip-link">
