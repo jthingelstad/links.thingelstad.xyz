@@ -113,7 +113,7 @@ URL through `find_links`), so "appears in" can extend to blog posts and episodes
 | `/issues/<n>/` | The links that appeared in Weekly Thing n, in issue order, pointing at weekly.thingelstad.com/archive/n/ |
 | `/topics/` | Built (2026-10-31): every topic in its family, largest first, with its count; a lens on the whole sky, where each topic's name opens its page |
 | `/topics/<slug>/` | Built (2026-10-31): a topic's links, newest year first, with the sites most present in it, the issues that carried most of it, the topics beside it (those its links' nearest neighbours most often fall in) and its feed pair; a lens lighting its links. The slug is the topic's name (`content/topics.md`) |
-| `/years/<yyyy>/` | The year's links by month |
+| `/years/<yyyy>/` | The year's links by month, with the year in bars at its head (2026-10-31): the links saved each month, each column opening its month, and the five topics and five sites with the most of the year's links, each opening its page |
 | `/on/MM-DD/` | Built (2026-10-31, back as a lens): every link saved on one Central calendar day in any year, newest year first, each with its weekday and, where the time saved is real, the time; a lens lighting them in Time, with the day before and after as chips. 366 pages, `/on/02-29/` among them. Each record's saved date links its day |
 | `/newest/` | Built: the newest 50 links, the site feed's links, as a page |
 | `/surprise/` | Built: Surprise me, a door that replaces itself with one record at random, drawn from the records with Jamie's own words or a Weekly Thing; noindex and out of the sitemap, but crawlable, so crawlers can read the noindex |
@@ -620,8 +620,12 @@ word for Hosts, quote of the day in the whole-sky card".
   costs a 304. Layout's `lens` marks `<html>` before anything draws, so the page opens
   at night beside the sky rather than turning into it; without the script or WebGL, or
   when the stars do not load, the page is as it always was, with the site header.
-- **Still to come in Phase 2:** the year's bar charts (saved each month, most saved
-  topics and sites) in its panel. **Phase 3**: share cards drawn
+- **The year in bars.** A year's page opens with its bar charts ("love that we still
+  have the bar charts too"): the links saved each month, and the topics and sites
+  most saved that year, each a link. They are HTML, not the statistics page's SVG,
+  so their text keeps its size in the narrow panel and on a phone; the same in the
+  plain page.
+- **Next, Phase 3**: share cards drawn
   from the sky, by a `sky` layout in the cards project, deployed after Jamie sees
   previews.
 

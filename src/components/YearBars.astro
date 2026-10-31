@@ -1,0 +1,157 @@
+---
+// The year in bars, at the head of a year's page (DIRECTION.md, "The sky",
+// Phase 2; Jamie: "love that we still have the bar charts too"): the links
+// saved each month, each column opening its month below, and the topics and
+// sites that hold most of the year, each opening its own page. Drawn in
+// HTML rather than the statistics page's SVG so the text keeps its size in
+// the lens panel and on a phone, and the names can be links. One series, in
+// the statistics page's first colour (it clears 3:1 on the lens's night
+// ground too); values in ink, never the series colour; 4px round data ends
+// on the baseline. A column's title is its tooltip, and the month list below
+// is its table, each month with its count.
+import {
+  type Link,
+  hostPath,
+  monthAnchor,
+  monthNames,
+  number,
+  plural,
+  skyTopics,
+  stars,
+  topicPath,
+} from '../lib/data';
+
+interface Props {
+  year: number;
+  links: Link[];
+}
+const { year, links } = Astro.props;
+
+const months = monthNames.map((name, i) => ({
+  name,
+  short: name.slice(0, 3),
+  month: i + 1,
+  count: links.filter((link) => link.month === i + 1).length,
+}));
+const most = Math.max(...months.map((m) => m.count));
+const busiest = months.find((m) => m.count === most)!;
+
+// The five with the most of the year's links, a name with one link not
+// counting as most.
+function top<K>(
+  keyOf: (link: Link) => K | undefined,
+  label: (key: K) => string,
+  href: (key: K) => string,
+) {
+  const counts = new Map<K, number>();
+  for (const link of links) {
+    const key = keyOf(link);
+    if (key !== undefined) counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return [...counts]
+    .filter(([, count]) => count > 1)
+    .map(([key, count]) => ({ label: label(key), href: href(key), count }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label))
+    .slice(0, 5);
+}
+const topics = top(
+  (link) => stars.get(link.id)?.topic,
+  (id) => skyTopics[id].name,
+  (id) => topicPath(skyTopics[id].name),
+);
+const sites = top(
+  (link) => link.host,
+  (host) => host,
+  (host) => hostPath(host),
+);
+const share = (rows: { count: number }[]) =>
+  `${Math.round((rows.reduce((sum, row) => sum + row.count, 0) / links.length) * 100)}%`;
+const these = (n: number) =>
+  n === 1
+    ? 'This one holds'
+    : `These ${['', '', 'two', 'three', 'four', 'five'][n]} hold`;
+const lists = [
+  { title: 'Most saved topics', rows: topics },
+  { title: 'Most saved sites', rows: sites },
+].filter((list) => list.rows.length);
+---
+
+{links.length > 0 && (
+  <div class="year-bars">
+    <figure>
+      <figcaption>
+        <h2>Each month</h2>
+        <p>
+          {`The most in ${busiest.name}: ${plural(busiest.count, 'link')}.`}
+        </p>
+      </figcaption>
+      <ol class="month-cols" aria-label={`Links saved each month of ${year}`}>
+        {months.map((m) => {
+          const tip = `${m.name} ${year}: ${m.count ? plural(m.count, 'link') : 'none'}`;
+          const inner = (
+            <>
+              <span class="month-plot">
+                {m === busiest && (
+                  <span class="month-cap">{number(m.count)}</span>
+                )}
+                {m.count > 0 && (
+                  <span
+                    class="month-bar"
+                    style={`--h:${(m.count / most).toFixed(3)}`}
+                  />
+                )}
+              </span>
+              <span class="month-label" aria-hidden="true">
+                {m.short}
+              </span>
+            </>
+          );
+          return (
+            <li>
+              {m.count > 0 ? (
+                <a
+                  href={`#${monthAnchor(year, m.month)}`}
+                  title={tip}
+                  aria-label={tip}
+                >
+                  {inner}
+                </a>
+              ) : (
+                <span class="month-none" title={tip}>
+                  <span class="sr-only">{tip}</span>
+                  {inner}
+                </span>
+              )}
+            </li>
+          );
+        })}
+      </ol>
+    </figure>
+    {lists.length > 0 && (
+      <div class="bars-pair">
+        {lists.map((list) => (
+          <figure>
+            <figcaption>
+              <h2>{list.title}</h2>
+              <p>{`${these(list.rows.length)} ${share(list.rows)} of the year's links.`}</p>
+            </figcaption>
+            <ol class="bar-rows">
+              {list.rows.map((row) => (
+                <li
+                  title={`${row.label}: ${plural(row.count, 'link')} in ${year}`}
+                >
+                  <a href={row.href}>{row.label}</a>
+                  <span class="bar-value">{number(row.count)}</span>
+                  <span
+                    class="bar"
+                    style={`--w:${(row.count / list.rows[0].count).toFixed(3)}`}
+                  />
+                </li>
+              ))}
+            </ol>
+          </figure>
+        ))}
+      </div>
+    )}
+  </div>
+)}

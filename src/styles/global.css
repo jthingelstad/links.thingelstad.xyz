@@ -1136,6 +1136,115 @@ img {
   font-size: var(--jt-size-h3);
   margin-bottom: 8px;
 }
+/* The year in bars (YearBars.astro), at the head of a year: HTML bars, so
+   the text keeps its size in a narrow panel. One series in --viz-1 with a
+   4px round data end on the baseline, values in ink, the axis recessive.
+   Where the columns are narrow, every third month is named. */
+.year-bars {
+  display: grid;
+  gap: 32px;
+  margin: 0 0 48px;
+}
+.year-bars figure {
+  min-width: 0;
+  margin: 0;
+}
+.year-bars h2 {
+  font-size: var(--jt-size-h3);
+  margin-bottom: 4px;
+}
+.year-bars figcaption p {
+  margin: 0 0 12px;
+  color: var(--text-soft);
+  font-size: var(--jt-size-small);
+}
+.bars-pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 32px;
+}
+.month-cols {
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.month-cols a,
+.month-none {
+  display: grid;
+  justify-items: center;
+  color: var(--muted);
+  text-decoration: none;
+}
+.month-plot {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 140px;
+  border-bottom: 1px solid var(--viz-axis);
+}
+.month-bar {
+  width: min(24px, 62%);
+  height: calc(var(--h) * 112px);
+  min-height: 2px;
+  border-radius: 4px 4px 0 0;
+  background: var(--viz-1);
+}
+.month-cols a:hover .month-bar {
+  opacity: 0.75;
+}
+.month-cap {
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-size: var(--jt-size-label);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.month-label {
+  padding-top: 6px;
+  font-size: var(--jt-size-label);
+}
+@container (max-width: 26rem) {
+  .month-cols li:not(:nth-child(3n + 1)) .month-label {
+    visibility: hidden;
+  }
+}
+.bar-rows {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--jt-size-small);
+}
+.bar-rows li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: 12px;
+}
+.bar-rows a {
+  overflow-wrap: anywhere;
+}
+.bar-value {
+  color: var(--ink);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.bar-rows .bar {
+  grid-column: 1 / -1;
+  width: calc(var(--w) * 100%);
+  min-width: 2px;
+  height: 8px;
+  margin-top: 4px;
+  border-radius: 0 4px 4px 0;
+  background: var(--viz-1);
+}
 /* Topics (/topics/): each family's topics, a name and its count a line; a
    topic's page has the sites most present in it and the topics beside it. */
 .topic-family {
