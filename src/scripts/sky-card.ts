@@ -30,13 +30,15 @@ export const metaOf = (sky: SkyData, i: number) =>
 let shown = 0;
 
 // Fills `card` with star i. `back` is the star before it on the walk, if
-// any, and `goBack` takes the reader there.
+// any, and `goBack` takes the reader there; `out`, in the sky, steps back
+// out to the whole sky (or to what Find lit).
 export async function renderCard(
   card: HTMLElement,
   sky: SkyData,
   i: number,
   back: number,
   goBack: () => void,
+  out?: { label: string; go: () => void },
 ) {
   const mine = ++shown;
   const record = linkPath(sky.ids[i]);
@@ -53,6 +55,12 @@ export async function renderCard(
     );
     button.type = 'button';
     button.addEventListener('click', goBack);
+    foot.append(button);
+  }
+  if (out) {
+    const button = element('button', 'sky-out', out.label);
+    button.type = 'button';
+    button.addEventListener('click', out.go);
     foot.append(button);
   }
   card.replaceChildren(

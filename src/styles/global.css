@@ -716,15 +716,20 @@ img {
   display: none;
 }
 
-/* Home: the front door is a search box, after Google's front page (Jamie,
-   2026-10-23). Everything is centred under the wordmark; the first screen
-   holds the wordmark, the box and the count at phone and desktop widths. */
+/* The plain front door (index.astro, data-sky-plain), for a reader without
+   the script or when the stars do not load: a search box after Google's
+   front page (Jamie, 2026-10-23). Everything is centred under the wordmark;
+   the first screen holds the wordmark, the box and the count at phone and
+   desktop widths. */
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: clamp(32px, 14vh, 150px) 0 clamp(24px, 8vh, 96px);
   text-align: center;
+}
+.home[hidden] {
+  display: none;
 }
 .home-wordmark {
   margin: 0 0 28px;
@@ -892,12 +897,9 @@ img {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* The home page's live results (src/scripts/home.ts): up to five links
-   after the suggestions, title over host and date, then a row for all of
-   them on the search page. */
-.home-search .search-suggest {
-  text-align: left;
-}
+/* The sky's Find (src/scripts/sky.ts): up to five links after the
+   suggestions, title over host and date, then a row for all of them on the
+   search page. */
 .search-suggest li.suggest-link {
   flex-direction: column;
   gap: 2px;

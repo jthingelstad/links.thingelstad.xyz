@@ -1,7 +1,7 @@
 ---
 // Every page: the shared type (shared/tokens.css, vendored), the "Jamie's
-// sites" strip, the header (not on the front page, whose wordmark is its
-// title), and the footer with Jamie's h-card and the About link. The site's
+// sites" strip, the header (not on the front page, where the sky's bar holds
+// the wordmark and the ways in), and the footer with Jamie's h-card and the About link. The site's
 // feeds are advertised on every page, a page's own feeds before them. No
 // script runs here but Tinylytics, in the production build only
 // (Analytics.astro); the search page adds Pagefind's.
@@ -21,7 +21,7 @@ interface Props {
   // A page too thin for a search engine (data.ts, unindexed): readers keep
   // it, crawlers follow its links but leave it out of their index.
   noindex?: boolean;
-  // The front page: the search box is the page, so no site header.
+  // The front page: the sky is the page, so no site header.
   home?: boolean;
   // A record's own share card (lib/card.ts); every other page shares the
   // front page.
@@ -42,16 +42,18 @@ const {
   feed = false,
   image = {
     url: new URL('/share.jpg', Astro.site).href,
-    alt: 'The Linking Things front page: its search box over every link Jamie Thingelstad has saved since 2005',
+    alt: 'The Linking Things front page: every link Jamie Thingelstad has saved since 2005 as a sky of stars, placed by what each one says',
   },
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+// The sky is the front page, so the wordmark goes to it; /sky/ stays, with
+// its constellations, but leaves the header. Hosts are Sites to a reader
+// (Jamie, 2026-10-31); the URLs keep /hosts/.
 const sections = [
   ['/search/', 'Search'],
-  ['/sky/', 'Sky'],
   ['/years/', 'Years'],
   ['/issues/', 'Issues'],
-  ['/hosts/', 'Hosts'],
+  ['/hosts/', 'Sites'],
   ['/kinds/', 'Kinds'],
   ['/stats/', 'Stats'],
 ];

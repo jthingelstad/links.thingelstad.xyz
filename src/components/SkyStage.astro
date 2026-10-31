@@ -1,0 +1,180 @@
+---
+// The sky's stage (docs/DIRECTION.md, "The sky"), on the front page and at
+// /sky/: the canvases, the labels, Doors, the bar and the cards, drawn by
+// src/scripts/sky.ts, and hidden until it runs. The bar holds Find (a search
+// form, so the search page is where it goes without the script), Meaning and
+// Time, and Play; on the front page also the wordmark and the ways in. The
+// whole sky's card says what the sky is, or what Find lit; on the front page
+// it carries the quote of the day (content/quotes.md; Jamie, 2026-10-31: "One
+// line in the whole-sky card is good"), cut to two lines until it is opened,
+// every quote in the page and the day's shown, since the page may be days old
+// (the script in index.astro turns to today's).
+import {
+  aboutPath,
+  newestPath,
+  number,
+  stars,
+  suggestPath,
+  years,
+} from '../lib/data';
+import { dayIndex } from '../lib/day';
+import { quotes } from '../lib/quotes';
+interface Props {
+  // The front page: the wordmark and the ways in, the quote, and the whole
+  // sky to start on.
+  home?: boolean;
+}
+const { home = false } = Astro.props;
+const pick = home && quotes.length ? dayIndex(quotes.length) : -1;
+const waysIn = [
+  [newestPath, 'Newest'],
+  ['/years/', 'Years'],
+  ['/issues/', 'Issues'],
+  ['/hosts/', 'Sites'],
+  ['/kinds/', 'Kinds'],
+  ['/stats/', 'Stats'],
+  [aboutPath, 'About'],
+];
+---
+
+<div
+  class:list={['sky', { 'sky-home-page': home }]}
+  data-sky
+  data-start={home ? 'whole' : undefined}
+  hidden
+>
+  <canvas
+    class="sky-gl"
+    tabindex="0"
+    aria-label="A sky of saved links. Drag or use the arrow keys to turn it, scroll, pinch or use plus and minus to move closer, and choose a star to go there."
+  ></canvas>
+  <canvas class="sky-fx" aria-hidden="true"></canvas>
+  <div class="sky-labels"></div>
+  <div class="sky-ring" aria-hidden="true"></div>
+  <div class="sky-tip" aria-hidden="true"></div>
+  <div class="doors" hidden>
+    <canvas class="doors-map" aria-hidden="true"></canvas>
+    <div class="doors-stage">
+      <nav
+        class="doors-side top"
+        aria-label="Nearest links that lie above"
+      ></nav>
+      <nav
+        class="doors-side left"
+        aria-label="Nearest links that lie left"
+      ></nav>
+      <article class="doors-page sky-card-body" aria-live="polite"></article>
+      <nav
+        class="doors-side right"
+        aria-label="Nearest links that lie right"
+      ></nav>
+      <nav
+        class="doors-side bottom"
+        aria-label="Nearest links that lie below"
+      ></nav>
+      <h2 class="doors-around">Nearest in meaning</h2>
+    </div>
+    <nav class="doors-path" aria-label="Your path"></nav>
+  </div>
+  <div class="sky-bar">
+    {home && (
+      <a class="sky-wordmark" href="/">
+        Linking Things
+      </a>
+    )}
+    <form
+      class="sky-find"
+      role="search"
+      action="/search/"
+      data-find
+      data-suggest={suggestPath}
+    >
+      <label class="sr-only" for="sky-find">
+        Find links by the words of their titles and sites
+      </label>
+      <input
+        id="sky-find"
+        name="q"
+        type="search"
+        placeholder={`Find in ${number(stars.size)} links`}
+        autocomplete="off"
+        spellcheck="false"
+        role="combobox"
+        aria-autocomplete="list"
+        aria-expanded="false"
+        aria-controls="sky-results"
+      />
+      <ul
+        id="sky-results"
+        class="search-suggest sky-results"
+        role="listbox"
+        aria-label="Suggestions and links"
+        hidden
+        data-results
+      ></ul>
+    </form>
+    <div class="sky-switch sky-only" role="group" aria-label="Layout">
+      <button type="button" aria-pressed="true" data-layout="meaning">
+        Meaning
+      </button>
+      <button type="button" aria-pressed="false" data-layout="time">
+        Time
+      </button>
+    </div>
+    <button
+      class="sky-tool sky-only"
+      type="button"
+      aria-pressed="false"
+      data-play
+    >
+      Play
+    </button>
+    <button class="sky-tool doors-only" type="button" data-surprise>
+      Surprise me
+    </button>
+    <button class="sky-tool" type="button" hidden data-toggle-view>
+      Doors
+    </button>
+    {home && (
+      <nav class="sky-ways" aria-label="Ways in">
+        {waysIn.map(([href, label]) => (
+          <a href={href}>{label}</a>
+        ))}
+      </nav>
+    )}
+  </div>
+  <aside class="sky-card sky-card-body sky-only" aria-live="polite"></aside>
+  <aside class="sky-home sky-card-body sky-only" aria-label="The whole sky">
+    <div data-home-about>
+      <p class="sky-home-lede">
+        <b>{number(stars.size)}</b> links saved since {years[0]}. Each is a
+        star, set beside the links it is most like. Choose one to open it, or
+        find some by their words.
+      </p>
+      {home &&
+        quotes.map((quote, i) => (
+          <figure class="sky-quote" data-quote hidden={i !== pick}>
+            <details>
+              <summary>
+                <q cite={quote.source}>{quote.words.join(' ')}</q>
+              </summary>
+            </details>
+            <figcaption>
+              <a href={quote.source}>{quote.who}</a>
+            </figcaption>
+          </figure>
+        ))}
+      <p class="sky-card-foot">
+        <button class="sky-out" type="button" data-surprise>
+          Surprise me
+        </button>
+        <a href={newestPath}>The newest links</a>
+      </p>
+    </div>
+    <div data-home-find hidden aria-live="polite"></div>
+  </aside>
+  <p class="sky-hint sky-only">
+    Drag to turn the sky · scroll or pinch to move · choose any star to go there
+  </p>
+  <p class="sky-loading">Turning on the stars…</p>
+</div>

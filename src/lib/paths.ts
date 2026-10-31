@@ -70,11 +70,13 @@ export const aboutPath = '/about/';
 export const yearLlmsPath = (year: number) => `${yearPath(year)}llms.txt`;
 // The newest links as a page, the site feed's links.
 export const newestPath = '/newest/';
-// The sky (DIRECTION.md, "The sky"): every link a star. A link's star is the
-// page with its id as the fragment; the stars are the page's own file, shaped
-// for it, not part of the dataset.
+// The sky (DIRECTION.md, "The sky"): every link a star, on the front page
+// and at /sky/. A link's star is /sky/ with its id as the fragment; the stars
+// are the page's own two files, shaped for it, not part of the dataset:
+// where they are, then their names.
 export const skyPath = '/sky/';
 export const starPath = (id: string) => `${skyPath}#${id}`;
+export const skyPlacesPath = '/sky/places.json';
 export const skyStarsPath = '/sky/stars.json';
 
 // Elsewhere: the Wayback Machine's copies of the destination.

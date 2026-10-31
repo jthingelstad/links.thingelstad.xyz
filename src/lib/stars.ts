@@ -1,11 +1,14 @@
-// /sky/stars.json (src/pages/sky/stars.json.ts): every star for /sky/, in
-// the shape src/lib/sky.ts gives as SkyData. Titles, sites, days, topics,
-// places and neighbours; never a note, which the card fetches from the link's
-// JSON twin when it opens. A link without a star (the nightly has not reached
-// it) is left out, and so are neighbours that are.
+// The stars the sky draws, on the front page and at /sky/, in the shape
+// src/lib/sky.ts gives as SkyData, as two files (splitSky):
+// /sky/places.json (src/pages/sky/places.json.ts), what drawing needs, and
+// /sky/stars.json (src/pages/sky/stars.json.ts), the titles, sites, kinds,
+// issues and neighbours. Never a note, which the card fetches from the
+// link's JSON twin when it opens. A link without a star (the nightly has not
+// reached it) is left out, and so are neighbours that are.
 import {
   type Link,
   appearances,
+  kinds,
   linkById,
   links,
   skyFamilies,
@@ -13,9 +16,12 @@ import {
   skyTopics,
   stars,
 } from './data.ts';
-import { type SkyData, dayOf } from './sky.ts';
+import { type SkyData, dayOf, splitSky } from './sky.ts';
 
 const tenth = (n: number) => Math.round(n * 10) / 10;
+
+let files: ReturnType<typeof splitSky> | undefined;
+export const skyFiles = () => (files ??= splitSky(skyDocument()));
 
 export function skyDocument(): SkyData {
   const shown = links.filter((link) => stars.has(link.id));
@@ -37,6 +43,7 @@ export function skyDocument(): SkyData {
     titles: shown.map((link) => link.shown),
     hosts,
     host: shown.map((link) => hostIndex.get(link.host)!),
+    kind: shown.map((link) => kinds.indexOf(link.kind)),
     day: shown.map((link) => dayOf(link.day)),
     note: shown.map((link) => (link.hasNote ? 1 : 0)),
     topic: shown.map((link) => stars.get(link.id)!.topic),

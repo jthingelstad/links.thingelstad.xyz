@@ -126,7 +126,7 @@ const issueTicks = [1, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500].filter(
   (n) => n <= lastIssue.number,
 );
 
-// Hosts and the web.
+// Sites and the web (hosts, to the code).
 const mostHosts = maxBy(rows, (row) => row.hosts);
 const mostNewHosts = maxBy(rows, (row) => row.newHosts);
 const hostCuts = breaks(s.topHosts.flatMap((host) => host.perYear));
@@ -148,7 +148,7 @@ const tiles = [
     sub: `${firstYear} to ${lastYear}`,
   },
   {
-    label: 'Hosts',
+    label: 'Sites',
     value: number(s.hosts),
     sub: `${number(s.singles)} with a single link`,
   },
@@ -229,13 +229,13 @@ const sections = [
   ['when', 'When'],
   ['notes', 'Notes'],
   ['weekly', 'The Weekly Thing'],
-  ['hosts', 'Hosts and the web'],
+  ['hosts', 'Sites and the web'],
 ];
 ---
 
 <Layout
   title="Statistics · Linking Things"
-  description="Linking volume along a number of dimensions: Jamie Thingelstad's links by year, month, weekday and hour, notes, Weekly Thing issues and hosts."
+  description="Linking volume along a number of dimensions: Jamie Thingelstad's links by year, month, weekday and hour, notes, Weekly Thing issues and sites."
 >
   <h1 class="page-title">Statistics</h1>
   <p class="lede">
@@ -658,20 +658,20 @@ const sections = [
   </section>
 
   <section class="stats-section" id="hosts">
-    <h2>Hosts and the web</h2>
-    <p>A host is the site's name in the link, without a leading www.</p>
+    <h2>Sites and the web</h2>
+    <p>A site is the name in the link, without a leading www.</p>
     <div class="stats-grid">
       <Figure
         id="hosts-per-year"
-        title="Hosts linked per year"
-        caption={`${number(s.hosts)} hosts in all. The most in one year: ${number(mostHosts.hosts)}, in ${mostHosts.year}; the most linked for the first time: ${number(mostNewHosts.newHosts)}, in ${mostNewHosts.year}.`}
+        title="Sites linked per year"
+        caption={`${number(s.hosts)} sites in all. The most in one year: ${number(mostHosts.hosts)}, in ${mostHosts.year}; the most linked for the first time: ${number(mostNewHosts.newHosts)}, in ${mostNewHosts.year}.`}
         legend={[
           { cls: 's1', label: 'First linked that year' },
           { cls: 's2', label: 'Linked in an earlier year' },
         ]}
       >
         <Columns
-          label="Hosts linked per year, first linked that year and linked before"
+          label="Sites linked per year, first linked that year and linked before"
           categories={yearCats}
           xLabels={yearTicks}
           series={[
@@ -680,14 +680,14 @@ const sections = [
           ]}
           tips={rows.map(
             (row) =>
-              `${row.year}: ${plural(row.hosts, 'host')}, ${number(row.newHosts)} first linked that year`,
+              `${row.year}: ${plural(row.hosts, 'site')}, ${number(row.newHosts)} first linked that year`,
           )}
           caps={capsAt(rows, [mostHosts], (row) => number(row.hosts))}
         />
         <DataTable
           slot="table"
-          label="Hosts linked per year"
-          head={['Year', 'Hosts', 'First linked', 'Linked before']}
+          label="Sites linked per year"
+          head={['Year', 'Sites', 'First linked', 'Linked before']}
           rows={rows.map((row) => [
             yearCell(row.year),
             row.hosts,
@@ -700,25 +700,25 @@ const sections = [
       <Figure
         id="concentration"
         title="How concentrated the linking is"
-        caption={`${topTen ? `The 10 most-linked hosts hold ${percent(topTen.links, s.links)} of all links` : ''}${topHundred ? `, the top 100 ${percent(topHundred.links, s.links)}` : ''}. The ${number(s.singles)} hosts with a single link hold ${percent(s.singles, s.links)}.`}
+        caption={`${topTen ? `The 10 most-linked sites hold ${percent(topTen.links, s.links)} of all links` : ''}${topHundred ? `, the top 100 ${percent(topHundred.links, s.links)}` : ''}. The ${number(s.singles)} sites with a single link hold ${percent(s.singles, s.links)}.`}
       >
         <HBars
-          label="Share of all links held by the most-linked hosts"
+          label="Share of all links held by the most-linked sites"
           max={1}
           rows={s.concentration.map((c) => ({
-            label: c.top === 1 ? 'Top host' : `Top ${number(c.top)}`,
+            label: c.top === 1 ? 'Top site' : `Top ${number(c.top)}`,
             value: c.share,
             text: percent(c.links, s.links),
-            tip: `The ${c.top === 1 ? 'most-linked host' : `${number(c.top)} most-linked hosts`}: ${plural(c.links, 'link')}, ${percent(c.links, s.links)} of all`,
+            tip: `The ${c.top === 1 ? 'most-linked site' : `${number(c.top)} most-linked sites`}: ${plural(c.links, 'link')}, ${percent(c.links, s.links)} of all`,
           }))}
         />
         <DataTable
           slot="table"
-          label="Share of all links held by the most-linked hosts"
-          head={['Hosts', 'Links', 'Share of all']}
+          label="Share of all links held by the most-linked sites"
+          head={['Sites', 'Links', 'Share of all']}
           rows={[
             ...s.concentration.map((c) => [
-              c.top === 1 ? 'The top host' : `The top ${number(c.top)}`,
+              c.top === 1 ? 'The top site' : `The top ${number(c.top)}`,
               c.links,
               percent(c.links, s.links),
             ]),
@@ -733,11 +733,11 @@ const sections = [
 
       <Figure
         id="top-hosts"
-        title={`The ${topHostsShown} most-linked hosts, by year`}
+        title={`The ${topHostsShown} most-linked sites, by year`}
         caption={`Ranked by links in all, from ${s.topHosts[0].host} with ${number(s.topHosts[0].count)} to ${s.topHosts[topHostsShown - 1].host} with ${number(s.topHosts[topHostsShown - 1].count)}. Each cell is one year.`}
       >
         <Heatmap
-          label={`Links per year for the ${topHostsShown} most-linked hosts`}
+          label={`Links per year for the ${topHostsShown} most-linked sites`}
           rows={s.topHosts.map((host) => ({
             label: host.host,
             href: hostPath(host.host),
@@ -755,8 +755,8 @@ const sections = [
         />
         <DataTable
           slot="table"
-          label={`Links per year for the ${topHostsShown} most-linked hosts`}
-          head={['Host', 'All', ...years.map(String)]}
+          label={`Links per year for the ${topHostsShown} most-linked sites`}
+          head={['Site', 'All', ...years.map(String)]}
           rows={s.topHosts.map((host) => [
             { text: host.host, href: hostPath(host.host) },
             host.count,

@@ -1,4 +1,6 @@
 ---
+// Sites (the word a reader sees for hosts since 2026-10-31; the URL keeps
+// /hosts/).
 import Layout from '../../layouts/Layout.astro';
 import { centralDay, hostPath, hosts, number, plural } from '../../lib/data';
 const year = (iso: string) => centralDay(iso).slice(0, 4);
@@ -8,13 +10,13 @@ const max = shown[0]?.count ?? 1;
 ---
 
 <Layout
-  title="Hosts · Linking Things"
+  title="Sites · Linking Things"
   description="The sites Jamie Thingelstad has linked most, by number of links saved."
 >
-  <h1 class="page-title">Hosts</h1>
+  <h1 class="page-title">Sites</h1>
   <p class="lede">
-    {number(hosts.length)} hosts in all; {number(single)} of them have a single
-    link. These are the {shown.length} with ten or more. Every host has its own
+    {number(hosts.length)} sites in all; {number(single)} of them have a single
+    link. These are the {shown.length} with ten or more. Every site has its own
     page, reached from any of its links.
   </p>
   <ul class="bars">

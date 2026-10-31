@@ -1,53 +1,52 @@
 ---
-// The front door is a search box (Jamie, 2026-10-23: "very much like
-// Google's front page, where it's just a search box"): the wordmark, the
-// box, how many links are in the index, a row of ways in for someone who
-// does not know what to search for, and a quote of the day from
-// content/quotes.md when it has one. The box suggests as /search/'s does and
-// shows the first five links that match under it (src/scripts/home.ts);
-// Enter with nothing chosen searches on /search/, and without JavaScript it
-// is a plain form. The newest links are on /newest/. Surprise me, under the
-// count, goes to one record at random (surprise.astro).
+// The front page is the sky (Jamie, 2026-10-31: "Approved: build Linking
+// Things direction A in three phases (sky landing, ...)"; docs/DIRECTION.md,
+// "The front page"): every link a star, standing back over the whole sky,
+// with Find in the bar lighting the stars whose titles and sites have the
+// words, Meaning and Time, Play, and the ways in. The whole sky's card says
+// what it is and carries the quote of the day from content/quotes.md. On a
+// phone, or without WebGL, it is Doors, opening on the newest link with a
+// note. The stage is src/components/SkyStage.astro, drawn by
+// src/scripts/sky.ts.
 //
+// Without the script, or when the stars do not load, the page is the plain
+// front door (data-sky-plain): the wordmark, a search form that goes to
+// /search/, the count, Surprise me and the ways in, and the day's quote.
 // Every quote is in the page and the build shows the day it runs; the script
-// turns to today's (day.ts), since the page may be days old. With no quotes
-// nothing renders and the script finds nothing to do.
+// below turns to today's (day.ts), since the page may be days old.
 import Layout from '../layouts/Layout.astro';
+import SkyStage from '../components/SkyStage.astro';
 import {
+  aboutPath,
   counts,
-  feedPath,
   newestPath,
   number,
-  skyPath,
-  suggestPath,
   surprisePath,
   years,
 } from '../lib/data';
 import { dayIndex } from '../lib/day';
 import { quotes } from '../lib/quotes';
+import '../styles/sky.css';
 const pick = quotes.length ? dayIndex(quotes.length) : -1;
 const entries = [
   [newestPath, 'Newest'],
-  [skyPath, 'Sky'],
   ['/years/', 'Years'],
-  ['/hosts/', 'Hosts'],
-  ['/kinds/', 'Kinds'],
   ['/issues/', 'Issues'],
+  ['/hosts/', 'Sites'],
+  ['/kinds/', 'Kinds'],
   ['/stats/', 'Stats'],
-  [feedPath('rss'), 'Feed'],
+  [aboutPath, 'About'],
 ];
 ---
 
 <Layout home>
-  <div class="home">
-    <h1 class="home-wordmark">Linking Things</h1>
-    <form
-      class="search-form home-search"
-      role="search"
-      action="/search/"
-      data-home-search
-      data-suggest={suggestPath}
-    >
+  <h1 class="sr-only">Linking Things</h1>
+  <SkyStage home />
+  <div class="home" data-sky-plain>
+    <p class="home-wordmark" aria-hidden="true">
+      Linking Things
+    </p>
+    <form class="search-form home-search" role="search" action="/search/">
       <label class="sr-only" for="home-query">
         Search the links
       </label>
@@ -56,26 +55,12 @@ const entries = [
           id="home-query"
           name="q"
           type="search"
-          autocomplete="off"
           spellcheck="false"
           placeholder="DNS, Stratechery, site:kottke.org, year:2012"
-          role="combobox"
-          aria-autocomplete="list"
-          aria-expanded="false"
-          aria-controls="home-suggest"
         />
-        <ul
-          id="home-suggest"
-          class="search-suggest"
-          role="listbox"
-          aria-label="Suggestions and links"
-          hidden
-          data-search-suggest
-        ></ul>
       </div>
       <button type="submit">Search</button>
     </form>
-    <p class="sr-only" aria-live="polite" data-home-status></p>
     <p class="home-count">
       Searching <b>{number(counts.links)}</b> links saved from {years[0]} to{' '}
       {years[years.length - 1]}
@@ -85,9 +70,6 @@ const entries = [
     </a>
     <nav class="home-entries" aria-label="Ways in">
       <ul>
-        {/* Topics: a later phase (DIRECTION.md, "Topics"). When /topics/ is
-             built its entry goes first in this row, as Topics; until then
-             nothing renders for it. */}
         {entries.map(([href, label]) => (
           <li>
             <a href={href}>{label}</a>
@@ -111,13 +93,19 @@ const entries = [
 </Layout>
 
 <script>
-  import { initHome } from '../scripts/home';
-  initHome();
+  import { initSky } from '../scripts/sky';
+  initSky();
 </script>
 
 <script>
+  // Today's quote, in the sky's card and the plain door alike: each holds
+  // every quote in the same order.
   import { dayIndex } from '../lib/day';
-  const figures = document.querySelectorAll<HTMLElement>('[data-quote]');
-  const today = figures.length ? dayIndex(figures.length) : -1;
-  figures.forEach((figure, i) => (figure.hidden = i !== today));
+  for (const holder of document.querySelectorAll<HTMLElement>(
+    '[data-sky], [data-sky-plain]',
+  )) {
+    const figures = holder.querySelectorAll<HTMLElement>('[data-quote]');
+    const today = figures.length ? dayIndex(figures.length) : -1;
+    figures.forEach((figure, i) => (figure.hidden = i !== today));
+  }
 </script>

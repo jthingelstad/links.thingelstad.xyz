@@ -304,18 +304,22 @@ test('the box is a combobox over the list, and the page names the file', () => {
   assert.doesNotMatch(script, /innerHTML|insertAdjacentHTML/);
 });
 
-test('the home box is a combobox too, with live results', () => {
+test("the sky's Find is a combobox too, lighting stars, with links under it", () => {
+  const stage = readFileSync('src/components/SkyStage.astro', 'utf8');
+  assert.match(stage, /action="\/search\/"/, 'still a plain form');
+  assert.match(stage, /role="combobox"/);
+  assert.match(stage, /aria-controls="sky-results"/);
+  assert.match(stage, /id="sky-results"[\s\S]*role="listbox"/);
+  assert.match(stage, /data-suggest=\{suggestPath\}/);
+  assert.match(stage, /data-home-find hidden aria-live="polite"/);
   const page = readFileSync('src/pages/index.astro', 'utf8');
-  assert.match(page, /action="\/search\/"/, 'still a plain form');
-  assert.match(page, /role="combobox"/);
-  assert.match(page, /aria-controls="home-suggest"/);
-  assert.match(page, /id="home-suggest"[\s\S]*role="listbox"/);
-  assert.match(page, /data-suggest=\{suggestPath\}/);
-  assert.match(page, /aria-live="polite"[^>]*data-home-status/);
-  assert.match(page, /initHome\(\)/);
-  const script = readFileSync('src/scripts/home.ts', 'utf8');
-  assert.match(script, /from '\.\/pagefind\.ts'/, 'one Pagefind loader');
+  assert.match(page, /<SkyStage home \/>/);
+  assert.match(page, /initSky\(\)/);
+  assert.match(page, /data-sky-plain/, 'a plain door without the script');
+  const script = readFileSync('src/scripts/sky.ts', 'utf8');
+  assert.match(script, /from '\.\/suggest\.ts'/, 'the same suggestions');
   assert.match(script, /from '\.\.\/lib\/search-grammar\.ts'/);
+  assert.doesNotMatch(script, /pagefind/, 'Find lights stars without Pagefind');
   assert.doesNotMatch(script, /innerHTML|insertAdjacentHTML/);
   assert.match(
     readFileSync('src/scripts/search.ts', 'utf8'),

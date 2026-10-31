@@ -7,8 +7,8 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
 
 - Built with Astro and TypeScript on the POAP pattern (`poap.thingelstad.xyz`): static
   output, Pagefind over the record pages only, minimal JavaScript (search and its preview
-  pane, the home page's live results, the Kudos status line on record pages, turning
-  the home page to today's quote, and the sky at `/sky/`, WebGL with no library), no
+  pane, the Kudos status line on record pages, turning the front page to today's quote,
+  and the sky on the front page and at `/sky/`, WebGL with no library), no
   frameworks, nothing fetched at serve time from another host. The exceptions are the
   footer photo, `owner.avatar` from `shared/sites.json`, and Tinylytics, one script in
   production builds only (`PUBLIC_TINYLYTICS_ENABLED=true`, set by the deploy
@@ -30,10 +30,15 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   click-to-play facade: no player request until the click.
 - **The sky** (`docs/DATA.md`, "The sky"; DIRECTION.md, "The sky"): every public link
   as a star with a topic, a place in the Meaning and Time layouts and ten nearest
-  neighbours, in `data/derived/sky.json` and `sky/<yyyy>.json`, drawn at `/sky/` from
-  `/sky/stars.json` (`src/lib/stars.ts`): the sky with WebGL on a wide screen, Doors on
-  a phone or without it (`src/scripts/sky*.ts`; the shared arithmetic, tested, is
-  `src/lib/sky.ts`). **The layout is
+  neighbours, in `data/derived/sky.json` and `sky/<yyyy>.json`, drawn on the front page
+  and at `/sky/` (the stage is `src/components/SkyStage.astro`) from two files
+  (`src/lib/stars.ts`): `/sky/places.json`, where the stars are, which loads first, and
+  `/sky/stars.json`, their names (the split is `PLACE_KEYS` in `src/lib/sky.ts`). The
+  sky with WebGL on a wide screen, Doors on a phone or without it
+  (`src/scripts/sky*.ts`; the shared arithmetic and Find, tested, are `src/lib/sky.ts`).
+  Find lights stars by title and site in the browser with the search grammar, never
+  Pagefind. The front page's address carries `?q=`, `?view=time` and `#<id>`. Hosts
+  are "Sites" to a reader (Jamie, 2026-10-31); the URLs keep `/hosts/`. **The layout is
   fixed** (Jamie, 2026-10-30: "with a fixed star layout"): the nightly's `tools/sky.py`
   places a new link beside its neighbours and never moves a star; only
   `tools/one-shot/sky_layout.py`, run by hand from its own venv when the model or text
@@ -112,7 +117,7 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   know pinboard exists"): pages, twins, feeds, llms files and the MCP server's tools,
   notes and page. Code comments and the docs may. Nor does any page say whether a
   link still works; links are not checked.
-- **Prose is content.** The home page's quotes are `content/quotes.md` (format at the
+- **Prose is content.** The front page's quotes are `content/quotes.md` (format at the
   top of the file); a malformed entry fails the build with its line number. `/about/`
   is `content/about.md`, Jamie's words to edit: one `# ` title, then `## ` sections,
   or the build fails with the line.
@@ -130,6 +135,8 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   page's `og:image` is `/share.jpg` (the SEO scan, 2026-10-25), the live front page at
   1200 x 630 with a large Twitter card: `npm run share-image` (`tools/share-image.mjs`)
   redraws it by hand, with Tinylytics blocked; the count on it is a point in time.
+  `SHARE_URL` points it at a local build (`npx astro preview`) when a change redraws
+  the front page, so the image ships with it.
   `tools/validate-site.py` fails a record that doesn't name its card and any other page
   that names another image.
 - **Secrets.** `.env`, `pinboard/` and `archive/` are never committed.

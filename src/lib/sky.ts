@@ -1,12 +1,16 @@
-// The sky at /sky/ (docs/DIRECTION.md, "The sky"), the parts that need no
-// page: the shape of /sky/stars.json (src/pages/sky/stars.json.ts writes it),
-// where a star stands in each layout and between them, the camera's
-// matrices, the sides Doors puts each neighbour on, and what Play does next.
-// No DOM and no Node imports: src/scripts/sky.ts loads this in the browser,
-// and tests/sky.test.mjs checks it.
+// The sky on the front page and at /sky/ (docs/DIRECTION.md, "The sky"),
+// the parts that need no page: the shape of the stars files (src/lib/stars.ts
+// writes them), where a star stands in each layout and between them, the
+// camera's matrices, the sides Doors puts each neighbour on, what Play does
+// next, and Find, the stars a query lights. No DOM and no Node imports:
+// src/scripts/sky.ts loads this in the browser, and tests/sky.test.mjs checks
+// it.
+import { type Query, onHost } from './search-grammar.ts';
+import { kinds } from './kinds.ts';
 
-// /sky/stars.json: one entry a star in each column, in the links' order
-// (oldest saved first), so a star is its index everywhere.
+// The stars: one entry a star in each column, in the links' order (oldest
+// saved first), so a star is its index everywhere. It comes in two files
+// (PLACE_KEYS), so the sky draws before the names arrive.
 export interface SkyData {
   layout: number;
   ids: string[];
@@ -15,6 +19,8 @@ export interface SkyData {
   hosts: string[];
   // The star's site, an index into hosts.
   host: number[];
+  // The star's kind, an index into kinds (kinds.ts).
+  kind: number[];
   // The Central day saved, as days since 1970-01-01.
   day: number[];
   // 1 when the link has a note.
@@ -38,6 +44,40 @@ export interface SkyData {
   families: string[];
 }
 
+// /sky/places.json holds what the sky needs to draw, about a sixth of the
+// whole (175 KB gzipped of 1.1 MB in October 2026); /sky/stars.json holds the
+// rest: the ids, titles, sites, kinds, issues and neighbours. Both carry
+// `layout`, so a reader caught by a deploy between the two can tell.
+export const PLACE_KEYS = [
+  'layout',
+  'day',
+  'note',
+  'topic',
+  'meaning',
+  'time',
+  'topics',
+  'families',
+] as const;
+export type SkyPlaces = Pick<SkyData, (typeof PLACE_KEYS)[number]>;
+export type SkyNames = Omit<
+  SkyData,
+  Exclude<(typeof PLACE_KEYS)[number], 'layout'>
+>;
+export function splitSky(sky: SkyData): {
+  places: SkyPlaces;
+  names: SkyNames;
+} {
+  const places: Record<string, unknown> = {};
+  const names: Record<string, unknown> = { layout: sky.layout };
+  for (const [key, value] of Object.entries(sky))
+    if ((PLACE_KEYS as readonly string[]).includes(key)) places[key] = value;
+    else names[key] = value;
+  return {
+    places: places as unknown as SkyPlaces,
+    names: names as unknown as SkyNames,
+  };
+}
+
 export type Vec3 = [number, number, number];
 // A 4x4 matrix, column-major, as WebGL takes it.
 export type Mat4 = Float32Array;
@@ -56,6 +96,9 @@ export function yearOf(day: number) {
   const start = Date.UTC(year, 0, 1);
   return year + (day * DAY - start) / (Date.UTC(year + 1, 0, 1) - start);
 }
+// The calendar year of a day (Central, like the day itself).
+export const calendarYear = (day: number) =>
+  new Date(day * DAY).getUTCFullYear();
 export const dayLabel = (day: number) =>
   new Date(day * DAY).toLocaleDateString('en-US', {
     timeZone: 'UTC',
@@ -304,3 +347,99 @@ export const cut = (text: string, max: number) =>
   text.length <= max
     ? text
     : `${text.slice(0, max - 1).replace(/\s+\S*$/, '')}…`;
+
+// Find on the sky: the stars a query lights as it is typed. The search
+// grammar (search-grammar.ts) read against the stars file alone, with no
+// index to load: every bare word starts a word of the title or the site (a
+// word of one or two letters must be the whole word, so "AI" is not "air"),
+// every "quoted" word is whole, no -word is there, and the site, year, issue
+// and kind are the ones asked for. Notes are not in the file; the search
+// page finds those. Nothing to find (no word of two letters, no quoted word,
+// no operator) is null. Whole-word title matches come first, then the newest.
+const wordsOf = (text: string) =>
+  text
+    .toLowerCase()
+    .split(/[^\p{L}\p{N}]+/u)
+    .filter(Boolean);
+const startsWord = (word: string) =>
+  new RegExp(`(?:^|[^\\p{L}\\p{N}])${word}`, 'u');
+const wholeWord = (word: string) =>
+  new RegExp(`(?:^|[^\\p{L}\\p{N}])${word}(?:$|[^\\p{L}\\p{N}])`, 'u');
+
+export function findStars(sky: SkyData, query: Query): number[] | null {
+  const quoted = wordsOf(
+    [...query.text.matchAll(/"([^"]*)"/g)].map((m) => m[1]).join(' '),
+  );
+  const bare = wordsOf(query.text.replace(/"[^"]*"/g, ' ')).filter(
+    (word) => word.length >= 2,
+  );
+  const issue = query.issue === undefined ? undefined : Number(query.issue);
+  const kind = query.kind === undefined ? -1 : kinds.indexOf(query.kind);
+  const asked =
+    bare.length ||
+    quoted.length ||
+    query.site ||
+    query.year ||
+    query.issue !== undefined ||
+    query.kind;
+  if (!asked) return null;
+  const tests = [
+    ...bare.map((word) => (word.length < 3 ? wholeWord : startsWord)(word)),
+    ...quoted.map(wholeWord),
+  ];
+  const whole = [...bare, ...quoted].map(wholeWord);
+  const year = query.year ? Number(query.year) : undefined;
+  const found: { i: number; whole: boolean }[] = [];
+  for (let i = 0; i < sky.titles.length; i++) {
+    const host = sky.hosts[sky.host[i]];
+    if (query.site && !onHost(host, query.site)) continue;
+    if (year !== undefined && calendarYear(sky.day[i]) !== year) continue;
+    if (issue !== undefined && !sky.issues[i]?.includes(issue)) continue;
+    if (query.kind && sky.kind[i] !== kind) continue;
+    const title = sky.titles[i].toLowerCase();
+    const text = `${title} ${host}`;
+    if (!tests.every((test) => test.test(text))) continue;
+    if (query.exclude.some((word) => text.includes(word))) continue;
+    found.push({ i, whole: whole.every((test) => test.test(title)) });
+  }
+  return found
+    .sort(
+      (a, b) =>
+        Number(b.whole) - Number(a.whole) ||
+        sky.day[b.i] - sky.day[a.i] ||
+        b.i - a.i,
+    )
+    .map((f) => f.i);
+}
+
+// A found set in words for the card: how many, and the years they span.
+export function foundWords(sky: SkyData, found: number[]) {
+  if (!found.length) return 'No titles or sites have those words.';
+  const years = found.map((i) => calendarYear(sky.day[i]));
+  const first = Math.min(...years);
+  const last = Math.max(...years);
+  const span = first === last ? `in ${first}` : `from ${first} to ${last}`;
+  return found.length === 1
+    ? `One link, ${span}.`
+    : `${found.length.toLocaleString('en-US')} links, ${span}.`;
+}
+
+// Where to stand to take in a set of points: their middle, and the distance
+// within which most of them (`share`) lie, so a few strays do not pull the
+// camera back to the whole sky.
+export function spread(points: Vec3[], share = 0.85) {
+  const n = points.length || 1;
+  const centre: Vec3 = [0, 0, 0];
+  for (const p of points) for (let k = 0; k < 3; k++) centre[k] += p[k] / n;
+  const d = points
+    .map((p) =>
+      Math.hypot(p[0] - centre[0], p[1] - centre[1], p[2] - centre[2]),
+    )
+    .sort((a, b) => a - b);
+  return {
+    centre,
+    radius: d.length
+      ? d[Math.min(d.length - 1, Math.floor(d.length * share))]
+      : 0,
+  };
+}
