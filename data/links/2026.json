@@ -5218,15 +5218,15 @@
   "meta": "313b5417f361b2bfe453a6538350304e"
  },
  {
-  "id": "a2772c92c828",
-  "hash": "a2772c92c828b6f54312246f23b71cb2",
-  "url": "http://antirez.com/news/168",
+  "id": "79ba10f6d670",
+  "hash": "79ba10f6d6704a75443c45036f43ea47",
+  "url": "https://antirez.com/news/168",
   "title": "A new era for software testing",
   "note": "",
   "saved": "2026-06-11T23:35:00Z",
   "tags": [],
   "toread": false,
-  "meta": "b03c035fb2320e4e19ee0d6187faae5e"
+  "meta": "0688d7c56421c8c5e38267e09f7c4ec4"
  },
  {
   "id": "747716a293e8",
@@ -7438,23 +7438,23 @@
   "id": "464ce25070a6",
   "hash": "464ce25070a69a4e3e0301ea849b470a",
   "url": "https://daringfireball.net/2026/10/the_iphone_duo",
-  "title": "★ The iPhone Duo",
+  "title": "The iPhone Duo",
   "note": "",
   "saved": "2026-10-24T03:55:17Z",
   "tags": [],
   "toread": false,
-  "meta": "de0b1fe48087296e056e4367ee2cd8f2"
+  "meta": "73826f8ef15d25185e8ff03dff7cb69c"
  },
  {
   "id": "6bbd877191af",
   "hash": "6bbd877191afd8d50d23e32dfab06f0e",
   "url": "https://daringfireball.net/2026/10/homeview_thoughts_and_observations",
-  "title": "★ HomeView Thoughts and Observations",
+  "title": "HomeView Thoughts and Observations",
   "note": "",
   "saved": "2026-10-24T03:58:08Z",
   "tags": [],
   "toread": false,
-  "meta": "d6daa750d7db41237d5fb4d1b9106962"
+  "meta": "c14ae4b9b8e032640223f6326e22cd13"
  },
  {
   "id": "9984715da456",
@@ -7482,89 +7482,91 @@
   "id": "e57d28b149d7",
   "hash": "e57d28b149d72b9d17762f33280a9754",
   "url": "https://www.a16z.news/p/patch-or-die",
-  "title": "Charts of the Week: Attention is All You Need",
-  "note": "AI is impacting security in a big way.\r\n\r\n> Significantly increase resources for security work. The average enterprise allocates roughly 10% of its tech spend to security. Consider doubling that. There are likely thousands of vulnerabilities that need fixing in your environments. Security through obscurity no longer works, all that can be exploited will be exploited.\r\n\r\nThis issue is a very very real one. Three things I think about:\r\n\r\n1. Historically you metric security investment as a % of all technology spend. That moves by industry of course. AI changes these numbers and we aren’t sure where they land but they are more, and not just a little.\r\n2. If you are investing 1M in AI you should be considering what % of that new investment is going to be allocated to security concerns that come from AI adoption. Every new AI dollar should have some new security cents. \r\n3. If you start hosting your own models and running on your own hardware that also comes with unique security matters that need to be factored into the cost. \r\n\r\nAI has given nearly anyone “close to” nation state attack capabilities. ",
+  "title": "Attention is All You Need",
+  "note": "AI is impacting security in a big way.\r\n\r\n> Significantly increase resources for security work. The average enterprise allocates roughly 10% of its tech spend to security. Consider doubling that. There are likely thousands of vulnerabilities that need fixing in your environments. Security through obscurity no longer works, all that can be exploited will be exploited.\r\n\r\nThis issue is a very very real one. Three things I think about:\r\n\r\n1. Historically you metric security investment as a % of all technology spend. That moves by industry of course. AI changes these numbers and we aren’t sure where they land but they are more, and not just a little.\r\n2. If you are investing 1M in AI you should be considering what % of that new investment is going to be allocated to security concerns that come from AI adoption. Every new AI dollar should have some new security cents. \r\n3. If you start hosting your own models and running on your own hardware that also comes with unique security matters that need to be factored into the cost. \r\n\r\nAI has given nearly anyone “close to” nation state attack capabilities.",
   "saved": "2026-10-25T01:47:23Z",
   "tags": [],
   "toread": false,
-  "meta": "ef815142980fc26b8e69664fcdf72206"
+  "meta": "ea4ce8f5ec2dafdb9a2f4c2ca58a2d7d"
  },
  {
   "id": "09bee76c7174",
   "hash": "09bee76c7174be1a266dc1b5b25048b3",
   "url": "https://www.youtube.com/watch?v=QstEkNJhJKo",
-  "title": "We Designed the Most Advanced Storage System || 3D Printed - YouTube",
+  "title": "We Designed the Most Advanced Storage System",
   "note": "Incredible video of a super cool 3D printing modular storage system. [Back it on Kickstarter](https://www.kickstarter.com/projects/ussa/vault-modular-stacking-toolbox-system). I did! 👍 They also have a [permanent website](https://www.ussadesign.com/pages/vault).",
   "saved": "2026-10-25T02:37:37Z",
-  "tags": [],
+  "tags": [
+   "_brief"
+  ],
   "toread": false,
-  "meta": "cf833531977d01ed5428a09d91876013"
+  "meta": "32523b8f057684cc8fc700443ad4e350"
  },
  {
   "id": "cbc3e91a780e",
   "hash": "cbc3e91a780e08a419d855c718592989",
   "url": "https://www.caseyaccidental.com/p/how-pm-work-is-changing-in-the-ai",
-  "title": "How PM Work Is Changing in the AI Era - Casey Winters",
+  "title": "How PM Work Is Changing in the AI Era",
   "note": "",
   "saved": "2026-10-26T02:21:57Z",
   "tags": [],
   "toread": false,
-  "meta": "51f10bb232b7a9ae95c8ec50f54492fb"
+  "meta": "bbe3a0ca3a2f738b4672de572a59d87d"
  },
  {
   "id": "ceefbe3161ef",
   "hash": "ceefbe3161ef0fe8f10b07e9c966d97b",
   "url": "https://danluu.com/ambitious/",
-  "title": "“We should be more ambitious with the software we build”",
+  "title": "We should be more ambitious with the software we build",
   "note": "",
   "saved": "2026-10-26T11:52:13Z",
   "tags": [],
   "toread": false,
-  "meta": "a616ba6c48b9fa7dbfc3d15d82b5d5d4"
+  "meta": "589663f977cdd4d713518a2f1ef041d2"
  },
  {
   "id": "75891430f0ca",
   "hash": "75891430f0cacbefbb2a56e4c946ece2",
   "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
-  "title": "Anthropic, PBC - S-1 (Q2)",
+  "title": "Anthropic S-1 (Q2)",
   "note": "",
   "saved": "2026-10-26T17:24:36Z",
   "tags": [],
   "toread": false,
-  "meta": "a1e3811cb47693ff42b0fa9da3523301"
+  "meta": "7d2306c093741c7754660b1a9cdc0069"
  },
  {
   "id": "b50a61183267",
   "hash": "b50a61183267358d6b9dfcfdf22bd85c",
   "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openais-isolated-red-team-ai-agents-built-a-hidden-cpu-cache-channel-to-talk-with-no-network-or-shared-files-exploited-cpu-cache-timing-to-bypass-microvm-sandboxes",
-  "title": "OpenAI's isolated red-team AI agents built a hidden CPU cache channel to talk with no network or shared files — exploited CPU cache timing to bypass microVM sandboxes | Tom's Hardware",
+  "title": "OpenAI's isolated red-team AI agents built a hidden CPU cache channel to talk with no network or shared files",
   "note": "",
   "saved": "2026-10-26T17:29:38Z",
   "tags": [],
   "toread": false,
-  "meta": "464fc709d088639abd4303546fb200db"
+  "meta": "8f8b75cb3d067c29111809c4585153ef"
  },
  {
   "id": "b18803333fa5",
   "hash": "b18803333fa555093afb4716c937c085",
   "url": "https://www.youtube.com/watch?v=kspZP5BgkEU",
-  "title": "AI Writes the Code. So What's Left for Engineers? - Laurie Voss, Arize AI - YouTube",
+  "title": "AI Writes the Code. So What's Left for Engineers?",
   "note": "",
   "saved": "2026-10-26T17:30:47Z",
   "tags": [],
   "toread": false,
-  "meta": "9e59064afe8eee92fcb17c550a6a4784"
+  "meta": "586e6455059362872db5f21951bab83b"
  },
  {
   "id": "989750ed4a62",
   "hash": "989750ed4a620318d40abed5161ed798",
   "url": "https://pollen-robotics.com/microduck/",
-  "title": "Microduck - A tiny biped robot you can teach new tricks | Pollen Robotics",
+  "title": "Microduck - A tiny biped robot you can teach new tricks",
   "note": "",
   "saved": "2026-10-26T17:31:17Z",
   "tags": [],
   "toread": false,
-  "meta": "7df029eb00bf94af96108471993ef248"
+  "meta": "2190e58dc8aea39020eb12b60162a75b"
  },
  {
   "id": "04d071a497d7",
@@ -7576,6 +7578,17 @@
   "tags": [],
   "toread": false,
   "meta": "61af4e4773effd63a0869f642ea0c775"
+ },
+ {
+  "id": "1ff2a7ca48ea",
+  "hash": "1ff2a7ca48ea19f92a9cf20b90147c54",
+  "url": "https://antirez.com/news/171",
+  "title": "Being Linux Torvalds",
+  "note": "",
+  "saved": "2026-10-27T14:24:12Z",
+  "tags": [],
+  "toread": false,
+  "meta": "91999a65459da4babd07b58501d84ab9"
  },
  {
   "id": "7832d4d7980d",
@@ -7592,45 +7605,34 @@
   "id": "79b6ca584a93",
   "hash": "79b6ca584a93046e636ee324205e32aa",
   "url": "https://www.fastmail.com/blog/the-future-of-email/",
-  "title": "The future of email | Fastmail",
+  "title": "The future of email",
   "note": "",
   "saved": "2026-10-27T14:24:12Z",
   "tags": [],
   "toread": false,
-  "meta": "1ec6779222d229e72e402804423aeb7c"
+  "meta": "c2c061f28e8e2c0d1f876a90b7adb88d"
  },
  {
   "id": "7f3a627640ac",
   "hash": "7f3a627640ac513b6d14ac329749e478",
   "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.startribune.com/meet-the-japanese-building-owner-doubling-down-on-a-downtown-minneapolis-office-tower/601787071&ct=ga&cd=CAIyGmQ2ZjFmYzgyMjQwNWY4MmQ6Y29tOmVuOlVT&usg=AOvVaw1OYkNP8V56QvOSsmGrR122",
-  "title": "Meet the Japanese firm betting on a downtown Minneapolis office tower - Star Tribune",
+  "title": "Meet the Japanese firm betting on a downtown Minneapolis office tower",
   "note": "",
   "saved": "2026-10-27T14:24:12Z",
   "tags": [],
   "toread": false,
-  "meta": "9d169a97fcf63575d6cba4c420053547"
+  "meta": "730958b9e0fda1a248b032886af585f9"
  },
  {
-  "id": "99acb94678d1",
-  "hash": "99acb94678d17bb11fa180ea66a3a027",
-  "url": "http://antirez.com/news/171",
-  "title": "Being Linux Torvalds",
-  "note": "",
-  "saved": "2026-10-27T14:24:12Z",
-  "tags": [],
-  "toread": false,
-  "meta": "55ffe6fa7f2f43e794b089d7acb069ea"
- },
- {
-  "id": "df7d9d2802df",
-  "hash": "df7d9d2802dfb2ee0871f455f8c5f6e8",
-  "url": "http://antirez.com/news/170",
+  "id": "c0ee34a195f6",
+  "hash": "c0ee34a195f6fc0bfd3aa86bbf689a7e",
+  "url": "https://antirez.com/news/170",
   "title": "Not just development, distribution of software may change as well",
   "note": "",
   "saved": "2026-10-27T14:24:12Z",
   "tags": [],
   "toread": false,
-  "meta": "787e927c88ffb8949affdcb7d04239b6"
+  "meta": "0c2d70a7432ed31d5d3bbe7f7781b87f"
  },
  {
   "id": "38199c9b333a",
@@ -7669,23 +7671,23 @@
   "id": "765845eefc4d",
   "hash": "765845eefc4df4409b0715e4dd973695",
   "url": "https://j11g.com/the-mythical-man-month-in-the-age-of-ai",
-  "title": "The Mythical Man-Month in the age of AI - Jan van den Berg",
+  "title": "The Mythical Man-Month in the age of AI",
   "note": "",
   "saved": "2026-10-30T03:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "f818dc9c5c83ce0cbe6489ca3b048def"
+  "meta": "00a0e30d04ad6672f50527d4e2d6fe25"
  },
  {
   "id": "9e705eaa0133",
   "hash": "9e705eaa01331e4277d66de91a11c02a",
   "url": "https://carmelitegothic.com/cnc-stone-carving/",
-  "title": "CNC Stone Carving - Carmelite Gothic",
+  "title": "CNC Stone Carving",
   "note": "",
   "saved": "2026-10-30T03:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "523d47853ae4412e1deaf109fa9d0607"
+  "meta": "e5a2b0e3c20c725471fac3c1b452fa38"
  },
  {
   "id": "d2ec03524fc9",
@@ -7713,12 +7715,12 @@
   "id": "1edef0168d56",
   "hash": "1edef0168d56cf43f4f52235618d3af4",
   "url": "https://aardappel.github.io/goose/",
-  "title": "The Goose Programming Language · Goose",
+  "title": "The Goose Programming Language",
   "note": "",
   "saved": "2026-10-30T04:04:25Z",
   "tags": [],
   "toread": false,
-  "meta": "e4fcea9649962364081d46852c6feb3e"
+  "meta": "ab58a265d9dbb1df22ac950252ee5704"
  },
  {
   "id": "9853f0fbcb7b",
@@ -7746,12 +7748,12 @@
   "id": "c6e80b486296",
   "hash": "c6e80b48629602de7678d3e33d7eee2d",
   "url": "https://toolbox.rss.here.now/",
-  "title": "The RSS Universe — Readers, Tools &amp; Standards",
+  "title": "The RSS Universe — Readers, Tools and Standards",
   "note": "",
   "saved": "2026-10-30T04:04:25Z",
   "tags": [],
   "toread": false,
-  "meta": "2f08e80ee5c2838a82ba1baa3352062e"
+  "meta": "c5411c2f5dd5545f5f4ab200cb496d52"
  },
  {
   "id": "e3ba545312b7",
