@@ -172,7 +172,9 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   Lambda Web Function behind the same distribution (`infra/`), plus `links-publisher`,
   the single AWS CodeBuild publisher. GitHub main promotes tested source packages
   through its OIDC role; only CodeBuild deploys the site and MCP; `docs/deployment.md` has the stacks, the
-  bootstrap, the DNS records and what a deploy uploads, removes and invalidates. A new
+  bootstrap, the DNS records and what a deploy uploads, removes and invalidates. The
+  `links-site` distribution uses the shared `edge` web ACL (projects-sysadmin `edge-waf`
+  stack; rules count only until tuned). A new
   file extension needs its Content-Type in `tools/delivery-plan.mjs` or the deploy
   stops. The sync and the enrichment run on the Mac as the nightly launchd job
   `com.thingelstad.links-nightly` (`tools/nightly.sh` at 00:30 Central; the plist is in
