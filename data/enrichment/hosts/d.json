@@ -433,6 +433,42 @@
    "webmention": null
   }
  },
+ "dagu.sh": {
+  "checked": "2026-11-02T06:30:15Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.75.164",
+    "172.67.178.190"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:4ba4",
+    "2606:4700:3035::ac43:b2be"
+   ],
+   "cname": null,
+   "ns": [
+    "amy.ns.cloudflare.com",
+    "rodney.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-02T06:30:15Z",
+   "title": "Dagu: Local-first workflow orchestration that just works",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "dailycoffeenews.com": {
   "checked": "2026-10-26T06:03:51Z",
   "method": "enrich_hosts",
