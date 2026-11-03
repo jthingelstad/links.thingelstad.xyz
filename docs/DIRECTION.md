@@ -991,8 +991,9 @@ the mirror is kept lossless and Pinboard-shaped, not merely sufficient for pages
   newest 50; a public Kudos button on every record; each record an h-entry with its
   permalink as `u-url`, each list of records an h-feed of h-entry rows; Tinylytics
   only in a production build), browser tests at three widths with analytics blocked.
-- **Analytics and kudos**: Tinylytics, one script in the layout with `?kudos=custom`,
-  production host only; a public Kudos button on every record
+- **Analytics and kudos**: Tinylytics, one script in the layout (the shared
+  `js/script.js` with `data-site`, custom kudos set in the site's Tinylytics settings;
+  `?kudos=custom` on the old embed URL until 2026-11-02), production host only; a public Kudos button on every record
   (`class="tinylytics_kudos"`, the POAP `Kudos.astro` pattern, never `data-private`)
   keyed on `/links/<id>/`, the count written in by the embed. QA never
   sends a hit or a kudos, and the site check fails if a request reaches

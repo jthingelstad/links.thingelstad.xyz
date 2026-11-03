@@ -18,8 +18,8 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
   production build only, the one Tinylytics script (design/tinylytics.md);
 - Tinylytics: a build without PUBLIC_TINYLYTICS_ENABLED=true mentions
   tinylytics.app nowhere in dist/; a build with it (validate it with the same
-  variable set) loads exactly that one script on every page and mentions
-  tinylytics.app nowhere else; every record has one Kudos button keyed on its
+  variable set) loads exactly that one script, keyed to this site by
+  data-site, on every page and mentions tinylytics.app nowhere else; every record has one Kudos button keyed on its
   permalink, with a public count (no data-private, Jamie's call 2026-10-23);
 - the sitemap index lists sitemaps that exist, every sitemap URL is a built
   page, and every page but the 404 and those marked noindex is in the
@@ -118,7 +118,9 @@ SKY_CARD = re.compile(r"https://cards\.thingelstad\.com/links/([a-z0-9./-]+)\.pn
 SKY_PAGE = re.compile(r"/|/sky/|/topics/|/(hosts|kinds|years|issues|topics|on)/[^/]+/")
 SKY_MAP = "https://links.thingelstad.xyz/sky/card.json"
 # The one script from another host, production builds only (Analytics.astro).
-TINYLYTICS = "https://tinylytics.app/embed/x4A9AVd_xma4hyT9xLZw.js?kudos=custom"
+TINYLYTICS = "https://tinylytics.app/js/script.js"
+# The loader keys the shared script to this site by data-site.
+TINYLYTICS_SITE = "script.dataset.site = 'x4A9AVd_xma4hyT9xLZw'"
 PRODUCTION = os.environ.get("PUBLIC_TINYLYTICS_ENABLED") == "true"
 FEED_SIZE = 50
 # A year's llms.txt past this would be split by month (src/lib/dataset.ts).
@@ -1151,6 +1153,8 @@ def main():
         loaders += loaded
         if PRODUCTION and loaded != 1:
             problems.append(f"{rel}: loads the Tinylytics script {loaded} times, not once")
+        if PRODUCTION and loaded and text.count(TINYLYTICS_SITE) != 1:
+            problems.append(f"{rel}: the Tinylytics loader does not set data-site to this site once")
         if mentions and not content_names_tinylytics and (
             not PRODUCTION or mentions != text.count(TINYLYTICS) or mentions != loaded
         ):
