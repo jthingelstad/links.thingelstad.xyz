@@ -2,8 +2,9 @@
 // One Kudos button per record (design/tinylytics.md), after the POAP site's
 // Kudos.astro. Tinylytics finds the button by its class and counts it under
 // data-path, the record's permalink /links/<id>/, so the id must never
-// change. The count is public (Jamie, 2026-10-23): the layout loads the embed
-// with ?kudos=custom, which writes only the count into the empty button
+// change. The count is public (Jamie, 2026-10-23): the site's Tinylytics
+// settings use custom kudos (once ?kudos=custom on the old embed URL), which
+// writes only the count into the empty button
 // (https://tinylytics.app/docs/widgets/kudos, "Emoji and custom markup"), so
 // the button stays empty here and the heart is drawn in CSS. Tinylytics adds
 // .did_select and disables the button once a visitor has given kudos.

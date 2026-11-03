@@ -1,8 +1,19 @@
 # Tinylytics
 
-Site 3842, "Linking Things", created 2026-10-23 on Jamie's go. Embed uid
+Site 3842, "Linking Things", created 2026-10-23 on Jamie's go. Site uid
 `x4A9AVd_xma4hyT9xLZw` (public, like every embed script on the web). Stats page
 private.
+
+Since 2026-11-02 Tinylytics serves one script for every site
+(https://tinylytics.app/docs/getting-started/embed):
+
+```html
+<script defer src="https://tinylytics.app/js/script.js" data-site="x4A9AVd_xma4hyT9xLZw"></script>
+```
+
+Only `data-site` changes between sites, and the tag takes no query parameters.
+Widgets and options (custom kudos here) are the site's settings in the Tinylytics
+dashboard, not the URL; Jamie set them to match the old `?kudos=custom`.
 
 The pattern is poap.thingelstad.xyz's (`design/tinylytics.md` there). Built
 2026-10-23:
@@ -10,9 +21,9 @@ The pattern is poap.thingelstad.xyz's (`design/tinylytics.md` there). Built
 - **One script, production builds only.** `src/components/Analytics.astro`, placed at
   the end of the body by `src/layouts/Layout.astro`, writes the loader only when
   `import.meta.env.PROD && import.meta.env.PUBLIC_TINYLYTICS_ENABLED === 'true'`. At
-  run time the loader adds
-  `https://tinylytics.app/embed/x4A9AVd_xma4hyT9xLZw.js?kudos=custom` only when the
-  page is on `links.thingelstad.xyz`, so a production build served on 127.0.0.1 or on
+  run time the loader creates the script, sets `defer`, `src` to
+  `https://tinylytics.app/js/script.js` and `dataset.site` to `x4A9AVd_xma4hyT9xLZw`,
+  and appends it, only when the page is on `links.thingelstad.xyz`, so a production build served on 127.0.0.1 or on
   a CloudFront preview URL loads nothing either. It marks the page with
   `data-tinylytics="on"` when it does.
 - **The deploy workflow sets `PUBLIC_TINYLYTICS_ENABLED=true`** for the production
@@ -31,9 +42,9 @@ The pattern is poap.thingelstad.xyz's (`design/tinylytics.md` there). Built
   <span class="kudos-label" id="kudos-links-<id>-label" aria-hidden="true">Kudos</span>
   ```
 
-  The embed is loaded with `?kudos=custom`, which "returns only the count"
-  (https://tinylytics.app/docs/widgets/kudos, "Emoji and custom markup"; the
-  parameters are in the table at https://tinylytics.app/docs/widgets): the script
+  The site's Tinylytics settings use custom kudos (`?kudos=custom` on the old embed
+  URL), which "returns only the count"
+  (https://tinylytics.app/docs/widgets/kudos, "Emoji and custom markup"): the script
   writes the public count into the empty button, and the site draws the heart in CSS
   before it. There is no `data-private`, which would hide the count. After a click
   Tinylytics adds `.did_select` and disables the button; the CSS turns the ring and
@@ -45,7 +56,8 @@ The pattern is poap.thingelstad.xyz's (`design/tinylytics.md` there). Built
 - **`npm run validate:site` checks it.** Without the variable: no file in `dist/`
   mentions tinylytics.app at all (HTML, script, JSON, XML, text and Markdown alike),
   and a loader found there fails with "validate it with the same setting". With it:
-  every page carries exactly one loader for exactly that URL, and tinylytics.app is the
+  every page carries exactly one loader for exactly that URL, keyed to this site by
+  `dataset.site`, and tinylytics.app is the
   one off-site fetch allowed, for that URL only. Either way every record has exactly
   one Kudos button keyed on its own permalink, and a `data-private` on it fails: the
   count is public.
