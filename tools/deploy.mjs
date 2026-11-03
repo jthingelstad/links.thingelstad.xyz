@@ -154,7 +154,7 @@ const summary = {
   unchanged: plan.unchanged,
   removePages: stalePages.length,
   removeAssets: staleAssets.length,
-  invalidate: paths.length === 1 && paths[0] === '/*' ? '/*' : paths.length,
+  invalidate: paths[0] ?? null,
 };
 // IndexNow takes the pages whose bytes changed, never a headers-only
 // re-upload, so compare without force.

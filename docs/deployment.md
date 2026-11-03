@@ -138,10 +138,10 @@ writes nothing.
    live pages stops before writing anything and prints the first few keys. If the
    removal is intended, run the workflow by hand (Actions, Validate and deploy, Run
    workflow on main) with `allow_removals` set to the exact count it printed.
-5. **Invalidate** the changed and removed paths (both `/x/` and `/x/index.html` for a
-   page), or `/*` when there are more than 50. CloudFront's first 1,000 paths a month are
-   free across the whole account, then $0.005 a path, and `/*` counts as one. A data sync
-   changes hundreds of pages, so it invalidates `/*`.
+5. **Invalidate** `/*`, one path, when the deploy changed or removed anything but
+   content-addressed assets; nothing otherwise. CloudFront's first 1,000 paths a month
+   are free across the whole account, then $0.005 a path, and `/*` counts as one (Jamie,
+   2026-11-03: one wildcard invalidation per deploy).
 6. **Verify** `/`, `/revision.json` and one record's page, `.json` and `.md` twins from
    CloudFront: same bytes and the Content-Type the deploy stored; and that
    `/links/<id>` redirects to `/links/<id>/`.
@@ -378,7 +378,7 @@ Markdown files, and 16,687 Pagefind files.
 - **First deploy:** one PUT per object, about 73,700 at $0.005 per 1,000: about $0.37.
   Listing, the invalidation and the checks are fractions of a cent.
 - **A no-change push:** about six uploads (the few Pagefind files that differ from build
-  to build, and `revision.json`) and two or three invalidation paths: nothing measurable.
+  to build, and `revision.json`) and one invalidation path (`/*`): nothing measurable.
 - **A sync or a template change:** a template change rewrites every page, about 24,000
   PUTs, about $0.12; a nightly sync and enrichment commit is hundreds to a few thousand
   PUTs, about a cent (the first full facts run added 292 images, 6 MB).
