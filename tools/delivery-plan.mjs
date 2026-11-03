@@ -156,20 +156,10 @@ export const removalLimit = (livePages) =>
 // CloudFront's first 1,000 invalidation paths a month are free across the
 // whole account (every distribution Jamie has), then $0.005 a path, and /*
 // counts as one. A warm edge cache is worth nothing at this site's traffic, so
-// anything beyond a handful of paths becomes /*.
-export const invalidationLimit = 50;
-
-export function invalidationPaths(keys, limit = invalidationLimit) {
-  const paths = new Set();
-  for (const key of keys) {
-    if (isHashedAsset(key)) continue;
-    const url = encodeURI(`/${key}`);
-    paths.add(url);
-    // The edge function serves /x/ from x/index.html; clear both forms.
-    if (key === 'index.html' || key.endsWith('/index.html'))
-      paths.add(url.slice(0, -'index.html'.length));
-  }
-  return paths.size > limit ? ['/*'] : [...paths].sort();
+// a deploy that changed or removed any page invalidates /* and nothing else;
+// one that changed only content-addressed assets invalidates nothing.
+export function invalidationPaths(keys) {
+  return keys.some((key) => !isHashedAsset(key)) ? ['/*'] : [];
 }
 
 // ETags cover bodies only. When the header rules above change, this

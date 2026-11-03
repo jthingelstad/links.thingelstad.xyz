@@ -12,7 +12,6 @@ import {
   eachLimit,
   etag,
   headersFingerprint,
-  invalidationLimit,
   invalidationPaths,
   isHashedAsset,
   keyFor,
@@ -202,7 +201,7 @@ test('the removal guard scales with the site', () => {
   assert.equal(removalLimit(57000), 1140);
 });
 
-test('a small deploy invalidates its paths; a large one invalidates /*', () => {
+test('a deploy that changed a page invalidates /* and nothing else', () => {
   assert.deepEqual(
     invalidationPaths([
       'index.html',
@@ -213,28 +212,21 @@ test('a small deploy invalidates its paths; a large one invalidates /*', () => {
       'hosts/café.example/index.html',
       'revision.json',
     ]),
-    [
-      '/',
-      '/hosts/caf%C3%A9.example/',
-      '/hosts/caf%C3%A9.example/index.html',
-      '/index.html',
-      '/links/0123456789ab.json',
-      '/links/0123456789ab/',
-      '/links/0123456789ab/index.html',
-      '/revision.json',
-    ],
+    ['/*'],
   );
+  assert.deepEqual(
+    invalidationPaths(
+      Array.from(
+        { length: 5000 },
+        (_, i) => `links/${String(i).padStart(12, '0')}.md`,
+      ),
+    ),
+    ['/*'],
+  );
+  assert.deepEqual(invalidationPaths(['years/2008/llms.txt']), ['/*']);
+  assert.deepEqual(invalidationPaths(['links.db']), ['/*']);
+  // Nothing changed, or only content-addressed assets: no invalidation.
   assert.deepEqual(invalidationPaths([]), []);
-  const many = Array.from(
-    { length: invalidationLimit + 1 },
-    (_, i) => `links/${String(i).padStart(12, '0')}.md`,
-  );
-  assert.deepEqual(invalidationPaths(many), ['/*']);
-  assert.equal(
-    invalidationPaths(many.slice(0, invalidationLimit)).length,
-    invalidationLimit,
-  );
-  // Content-addressed assets never count toward the limit.
   assert.deepEqual(
     invalidationPaths(
       Array.from({ length: 500 }, (_, i) => `_astro/a${i}.css`),
@@ -252,9 +244,6 @@ test('a year llms file is plain text that revalidates', () => {
     assert.ok(!shadowedByRedirect(key), key);
     assert.deepEqual(publicationGroups([key]), [[], [key], [], []]);
   }
-  assert.deepEqual(invalidationPaths(['years/2008/llms.txt']), [
-    '/years/2008/llms.txt',
-  ]);
 });
 
 test('links.db is SQLite that revalidates, published before the pages', () => {
@@ -268,7 +257,6 @@ test('links.db is SQLite that revalidates, published before the pages', () => {
     ['about/index.html'],
     [],
   ]);
-  assert.deepEqual(invalidationPaths(['links.db']), ['/links.db']);
 });
 
 test('only the hosts index may sit directly under hosts/', () => {
