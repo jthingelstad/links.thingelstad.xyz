@@ -302,41 +302,6 @@
           "RateLimit": 100
         }
       }
-    },
-    "Endpoint5xxAlarm": {
-      "Type": "AWS::CloudWatch::Alarm",
-      "Condition": "NativeWebActive",
-      "Properties": {
-        "AlarmName": {
-          "Fn::Sub": "${AWS::StackName}-5xx"
-        },
-        "AlarmDescription": "The links MCP endpoint returned a server error.",
-        "Namespace": "AWS/Lambda/Web",
-        "MetricName": "HTTPResponseStatusClass5XX",
-        "Dimensions": [
-          {
-            "Name": "FunctionName",
-            "Value": {
-              "Fn::Sub": "${AWS::StackName}"
-            }
-          },
-          {
-            "Name": "EndpointName",
-            "Value": "live"
-          }
-        ],
-        "Statistic": "Sum",
-        "Period": 300,
-        "EvaluationPeriods": 1,
-        "Threshold": 1,
-        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
-        "TreatMissingData": "notBreaching",
-        "AlarmActions": [
-          {
-            "Fn::Sub": "arn:${AWS::Partition}:sns:${AWS::Region}:${AWS::AccountId}:weekly-thing-librarian-alarms"
-          }
-        ]
-      }
     }
   },
   "Outputs": {

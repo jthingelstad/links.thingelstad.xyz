@@ -15,10 +15,10 @@ distribution (section "The MCP server").
 | ------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `links-certificate` | `infra/certificate.json` | ACM certificate for `links.thingelstad.xyz`, DNS validated                                                                                                                                                                                                                   |
 | `links-storage`     | `infra/storage.json`     | `links-storage-web-999153317627`: private, SSE-S3, versioned (replaced and removed objects kept 30 days), retained if the stack goes                                                                                                                                         |
-| `links-site`        | `infra/site.json`        | Distribution with origin access control, cache and header policies, the index and crawler functions, a 24-month access log without client addresses, 5xx alarm to the family topic; the `/mcp*` behaviour to the `links-mcp` endpoint through a second origin access control |
+| `links-site`        | `infra/site.json`        | Distribution with origin access control, cache and header policies, the index and crawler functions, a 24-month access log without client addresses, no alarm (retired 2026-11-03); the `/mcp*` behaviour to the `links-mcp` endpoint through a second origin access control |
 | `links-delivery`    | `infra/delivery.json`    | Main-only GitHub OIDC role: promote one approved source package and start/watch the AWS publisher                                                                                                                                                                            |
 | `links-publisher`   | `infra/publisher.json`   | One serialized CodeBuild project, its scoped site/MCP role, logs and EventBridge bookmark trigger                                                                                                                                                                            |
-| `links-mcp`         | `infra/mcp.json`         | The MCP server: `links-mcp-code-999153317627` (private, versioned, the packaged server), an execution role that writes its own logs and nothing else, 30-day logs, the `links-mcp` web function, its revision and `live` endpoint (IAM auth), 5xx alarm to the family topic  |
+| `links-mcp`         | `infra/mcp.json`         | The MCP server: `links-mcp-code-999153317627` (private, versioned, the packaged server), an execution role that writes its own logs and nothing else, 30-day logs, the `links-mcp` web function, its revision and `live` endpoint (IAM auth), no alarm (retired 2026-11-03)  |
 
 Live ids and ARNs are in `infra/deployment.json`; `tools/bootstrap-infra.mjs` writes them.
 `npm run validate:infra` pins what the templates promise (one private bucket, HTTPS
@@ -223,7 +223,8 @@ failed fetch keeps what it has and tries again a minute later), and searches the
 published Pagefind index with Pagefind's client, packaged beside it from the same build.
 It logs one line a request (request id, HTTP method, path, JSON-RPC method, tool, status,
 milliseconds, and the error message if any), never argument values.
-The 5xx alarm `links-mcp-5xx` goes to the family topic.
+The 5xx alarm `links-mcp-5xx` was retired on 2026-11-03 (Jamie kept a handful of
+alarms account-wide, none here); the per-request log line is the record.
 
 Locally, after `npm run build`:
 
@@ -249,7 +250,7 @@ npm run infra:apply                  # the grant, links-site (/mcp), links-deliv
 2. **Upload:** `apply` packages the server (`npm run mcp:package`), puts the zip with
    its SHA-256 and takes the object version.
 3. **links-mcp, second half:** the function, its first revision on that version, the
-   `live` endpoint and the 5xx alarm. `--mcp-only` stops here.
+   `live` endpoint and the 5xx alarm (retired 2026-11-03). `--mcp-only` stops here.
 4. **The distribution's grant:** CloudFormation has no resource for a web function's
    resource policy, so the bootstrap sets it with `PutResourcePolicy`, one statement:
    `cloudfront.amazonaws.com` may `lambda:InvokeWebFunctionEndpoint` on the `live`

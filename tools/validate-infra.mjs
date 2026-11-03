@@ -203,11 +203,13 @@ export function validate({
     'The access log records no client addresses, cookies or referrers',
   );
   assert.equal(site.Resources.AccessLogGroup.Properties.RetentionInDays, 731);
-  const alarm = site.Resources.Distribution5xxAlarm.Properties;
-  assert.equal(alarm.MetricName, '5xxErrorRate');
-  assert.equal(
-    alarm.AlarmActions[0]['Fn::Sub'].split(':').at(-1),
-    deployment.alarmTopic.split(':').at(-1),
+  // No CloudWatch alarm since November 3, 2026 (Jamie kept a handful
+  // account-wide, none here).
+  assert.deepEqual(
+    Object.values(site.Resources).filter(
+      (r) => r.Type === 'AWS::CloudWatch::Alarm',
+    ),
+    [],
   );
 
   // One role, assumable only from this repository's main branch, that can
@@ -411,7 +413,7 @@ export function validateMcp({ site, publisher, deployment, mcp }) {
   }
 
   // Compute exists only with code: an empty CodeKey is phase one.
-  for (const name of ['Function', 'Revision', 'Endpoint', 'Endpoint5xxAlarm'])
+  for (const name of ['Function', 'Revision', 'Endpoint'])
     assert.equal(r[name].Condition, active, `${name} waits for code`);
   assert.equal(
     mcp.Parameters.CodeKey.AllowedPattern,
@@ -456,11 +458,10 @@ export function validateMcp({ site, publisher, deployment, mcp }) {
   // environments (the WebFunctionEndpoint template reference).
   assert.deepEqual(endpoint.ThrottleConfig, { RateLimit: 100 });
   assert.deepEqual(endpoint.ScalingConfig, { MaxEnvironments: 2 });
-  const alarm = r.Endpoint5xxAlarm.Properties;
-  assert.equal(alarm.MetricName, 'HTTPResponseStatusClass5XX');
-  assert.equal(
-    alarm.AlarmActions[0]['Fn::Sub'].split(':').at(-1),
-    deployment.alarmTopic.split(':').at(-1),
+  // The links-mcp-5xx alarm was retired November 3, 2026 too.
+  assert.deepEqual(
+    Object.values(r).filter((x) => x.Type === 'AWS::CloudWatch::Alarm'),
+    [],
   );
 
   // The site reaches it at /mcp* through a lambda OAC that signs every
