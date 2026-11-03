@@ -65,4 +65,10 @@ The pattern is poap.thingelstad.xyz's (`design/tinylytics.md` there). Built
   from 127.0.0.1 (where the hostname gate keeps the loader out) with requests to
   tinylytics.app blocked as well. Never create events, hits or kudos from tools or the
   Tinylytics MCP.
-- Nothing else is tracked: no per-visitor identity, no search terms.
+- Nothing else is tracked: no per-visitor identity, no events. Since the shared
+  script (2026-11-02), Tinylytics also counts a `replaceState` that changes the
+  address (not just its hash) as a page view and sends that full URL, so the
+  addresses `/search/` (`src/scripts/search.ts`) and the sky (`src/scripts/sky.ts`)
+  write as a visitor searches, `?q=` included, reach Tinylytics as views. The old
+  embed sent only the address a page loaded with. Whether to keep search terms out
+  is Jamie's call (PR #49); the script has no switch for it.
