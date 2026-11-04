@@ -28,7 +28,7 @@ nightly mirror and enrichment. Feedbin discovery remains a half-hour poll.
    A partially published build has no success marker and must finish on retry.
 
 The inbox and versioned approved source packages share the existing private
-`links-storage-inbox-999153317627` bucket with separate IAM prefixes. Sync
+`links-storage-inbox-<account>` bucket with separate IAM prefixes. Sync
 can write only `bookmarks/*`. GitHub main can write only `releases/current.zip`
 and start/watch this one project. Only the CodeBuild role can publish site
 objects, invalidate this distribution and update the existing MCP code revision.

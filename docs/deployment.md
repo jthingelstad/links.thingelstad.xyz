@@ -9,16 +9,16 @@ object is in `dist/`, the video thumbnails and book covers under `media/` includ
 that is not a file is `/mcp`, the MCP server: a Lambda Web Function behind the same
 distribution (section "The MCP server").
 
-## Stacks (us-east-1, account 999153317627)
+## Stacks (us-east-1, account `<account>`)
 
 | Stack               | Template                 | Holds                                                                                                                                                                                                                                                                        |
 | ------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `links-certificate` | `infra/certificate.json` | ACM certificate for `links.thingelstad.xyz`, DNS validated                                                                                                                                                                                                                   |
-| `links-storage`     | `infra/storage.json`     | `links-storage-web-999153317627`: private, SSE-S3, versioned (replaced and removed objects kept 30 days), retained if the stack goes                                                                                                                                         |
+| `links-storage`     | `infra/storage.json`     | `links-storage-web-<account>`: private, SSE-S3, versioned (replaced and removed objects kept 30 days), retained if the stack goes                                                                                                                                            |
 | `links-site`        | `infra/site.json`        | Distribution with origin access control, cache and header policies, the index and crawler functions, a 24-month access log without client addresses, no alarm (retired 2026-11-03); the `/mcp*` behaviour to the `links-mcp` endpoint through a second origin access control |
 | `links-delivery`    | `infra/delivery.json`    | Main-only GitHub OIDC role: promote one approved source package and start/watch the AWS publisher                                                                                                                                                                            |
 | `links-publisher`   | `infra/publisher.json`   | One serialized CodeBuild project, its scoped site/MCP role, logs and EventBridge bookmark trigger                                                                                                                                                                            |
-| `links-mcp`         | `infra/mcp.json`         | The MCP server: `links-mcp-code-999153317627` (private, versioned, the packaged server), an execution role that writes its own logs and nothing else, 30-day logs, the `links-mcp` web function, its revision and `live` endpoint (IAM auth), no alarm (retired 2026-11-03)  |
+| `links-mcp`         | `infra/mcp.json`         | The MCP server: `links-mcp-code-<account>` (private, versioned, the packaged server), an execution role that writes its own logs and nothing else, 30-day logs, the `links-mcp` web function, its revision and `live` endpoint (IAM auth), no alarm (retired 2026-11-03)     |
 
 Live ids and ARNs are in `infra/deployment.json`; `tools/bootstrap-infra.mjs` writes them.
 `npm run validate:infra` pins what the templates promise (one private bucket, HTTPS
