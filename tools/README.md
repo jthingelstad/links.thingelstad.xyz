@@ -328,7 +328,7 @@ sky: 12 new, 1 re-embedded, 0 removed; 16,570 stars
 **Bedrock.** `cohere.embed-english-v3`, `input_type` `clustering`, through the AWS CLI
 (`aws bedrock-runtime invoke-model`) with the `cloud-engineer` profile in `us-east-1`
 (`LINKS_AWS_PROFILE` changes the profile, for tests). Before the first call it checks
-`aws sts get-caller-identity`: account 999153317627 and an ARN with
+`aws sts get-caller-identity`: account `<account>` and an ARN with
 `assumed-role/ProjectsCloudEngineer/projects-cloud-engineer`, or it stops. Batches of
 96 texts; a night's few new links are one call, a fraction of a cent.
 
