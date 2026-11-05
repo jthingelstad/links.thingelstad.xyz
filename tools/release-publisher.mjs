@@ -59,7 +59,12 @@ for (const entry of git('ls-tree', '-r', '-z', 'HEAD')
     name.startsWith('archive/') ||
     name
       .split('/')
-      .some((part) => part.startsWith('.env') && part !== '.env.example')
+      .some(
+        (part) =>
+          part.startsWith('.env') &&
+          part !== '.env.example' &&
+          part !== '.env.tpl',
+      )
   )
     throw new Error('Private or unsupported file in the release source');
   files.push({ name, data: await fs.readFile(name) });
