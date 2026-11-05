@@ -8001,6 +8001,49 @@
    "webmention": null
   }
  },
+ "blog.bambulab.com": {
+  "checked": "2026-11-05T06:30:17Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "151.101.3.7",
+    "151.101.67.7",
+    "151.101.131.7",
+    "151.101.195.7"
+   ],
+   "aaaa": [
+    "2a04:4e42::775",
+    "2a04:4e42:200::775",
+    "2a04:4e42:400::775",
+    "2a04:4e42:600::775"
+   ],
+   "cname": "bambulab.ghost.io",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-05T06:30:17Z",
+   "title": "Bambu Lab Blog",
+   "generator": "Ghost 6.74",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://blog.bambulab.com/rss/",
+     "title": "Bambu Lab Blog"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": "https://blog.bambulab.com/webmentions/receive/"
+  }
+ },
  "blog.basimhennawi.com": {
   "checked": "2026-10-25T06:23:29Z",
   "method": "enrich_hosts",
