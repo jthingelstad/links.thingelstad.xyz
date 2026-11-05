@@ -1,5 +1,6 @@
 .env*
 !.env.example
+!.env.tpl
 pinboard/
 archive/
 node_modules/
