@@ -6,7 +6,7 @@
 #
 #   tools/nightly.sh [--dry-run] [--hosts N] [--facts N] [--wayback N] [repo]
 #
-# repo defaults to /Users/otto/Projects/links.thingelstad.xyz. The checkout must
+# repo defaults to the checkout this script is in. The checkout must
 # be on main and clean; anything else exits 2 before a file is touched.
 # --dry-run checks the checkout and prints the plan: no network, no writes (not
 # even the log or the lock), and no secret is read.
@@ -21,7 +21,7 @@
 
 set -euo pipefail
 
-REPO="/Users/otto/Projects/links.thingelstad.xyz"
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
 HOSTS_LIMIT=1000
 FACTS_LIMIT=500
 WAYBACK_LIMIT=800
