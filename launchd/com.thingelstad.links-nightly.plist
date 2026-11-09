@@ -15,10 +15,10 @@
   <key>ProgramArguments</key>
   <array>
     <string>/bin/bash</string>
-    <string>/Users/otto/Projects/links.thingelstad.xyz/tools/nightly.sh</string>
+    <string>/Users/otto/Projects/thingelstad.com/links.thingelstad.xyz/tools/nightly.sh</string>
   </array>
   <key>WorkingDirectory</key>
-  <string>/Users/otto/Projects/links.thingelstad.xyz</string>
+  <string>/Users/otto/Projects/thingelstad.com/links.thingelstad.xyz</string>
   <key>StartCalendarInterval</key>
   <dict>
     <key>Hour</key>

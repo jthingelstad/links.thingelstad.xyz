@@ -8,7 +8,12 @@ import { existsSync, readdirSync } from 'node:fs';
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
-const source = process.env.SHARED_SOURCE || '../thingelstad.com/shared';
+// The default is ../shared, since this repository sits inside the thingelstad.com
+// tree (2026-11-09); ../thingelstad.com/shared, the layout before that, still works.
+const source =
+  process.env.SHARED_SOURCE ||
+  ['../shared', '../thingelstad.com/shared'].find((dir) => existsSync(dir)) ||
+  '../shared';
 const target = 'shared';
 const wanted = (dir) => [
   'sites.json',

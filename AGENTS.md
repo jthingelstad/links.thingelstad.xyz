@@ -131,14 +131,14 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   or the build fails with the line.
 - **Jamie's sites.** The strip, the footer h-card, the rel=me links and the shared type
   (`shared/sites.json`, `shared/tokens.css`, `shared/fonts/`) are vendored from
-  `../thingelstad.com/shared/` by `npm run sites:sync`; `npm run sites:check` fails on
+  `../shared/` (thingelstad.com's) by `npm run sites:sync`; `npm run sites:check` fails on
   drift. Never edit `shared/` here. No italics on sans-serif type.
 - **Share images.** A record's `og:image` is its own card (2026-10-25; Jamie: "Linking
   Things link cards with Jamie-voice notes only"), drawn by cards.thingelstad.com from the
   record's h-entry: the title, `p-host`, the day saved, a `p-issue` on each issue chip,
   and the note only when `p-voice` is `jamie`. `src/lib/card.ts` forms the card's URL,
   with `v` a hash of what the card shows, and is the only place `v` is computed; the
-  card maker's own rules are in `../thingelstad.com/cards.thingelstad.com/AGENTS.md`.
+  card maker's own rules are in `../cards.thingelstad.com/AGENTS.md`.
   Changing what a record's h-entry carries changes its card, so check both. A lens page
   (an issue, a year, a site, a kind, a topic, `/topics/`, a day), the front page and
   `/sky/` name a sky card (2026-10-31; Jamie: "Approved: build Linking Things sky cards

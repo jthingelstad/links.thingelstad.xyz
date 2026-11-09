@@ -653,7 +653,7 @@ tools/nightly.sh [--hosts N] [--facts N] [--wayback N] [repo]
 ```
 
 `launchd/com.thingelstad.links-nightly.plist` runs it at 00:30 Mac time (US
-Central) against `/Users/otto/Projects/links.thingelstad.xyz`; docs/deployment.md
+Central) against `/Users/otto/Projects/thingelstad.com/links.thingelstad.xyz`; docs/deployment.md
 has the install. In order, each step's output going to the log:
 
 1. **Preflight.** The checkout must be on `main` with a clean tree (no change, no
