@@ -207,18 +207,31 @@ img {
     color: #74d3a0;
   }
 }
+/* Phones: one row without the label. The list scrolls sideways inside it and
+   All Things stays at the row's right end, never scrolled out of sight. The
+   list's padding, taken back by its margin, keeps the focus ring inside the
+   scrolling box, where it is not cut off. */
 @media (max-width: 40rem) {
   .sites-strip__inner {
     flex-wrap: nowrap;
-    overflow-x: auto;
+    gap: 18px;
+    white-space: nowrap;
   }
   .sites-strip__label {
     display: none;
   }
   .sites-strip__list {
+    flex: 1 1 auto;
     flex-wrap: nowrap;
     gap: 18px;
+    min-width: 0;
+    margin: -6px;
+    padding: 6px;
+    overflow-x: auto;
     white-space: nowrap;
+  }
+  .sites-strip__all {
+    flex: none;
   }
 }
 

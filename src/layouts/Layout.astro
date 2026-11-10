@@ -10,7 +10,7 @@ import '../../shared/tokens.css';
 import '../styles/global.css';
 import inter from '../../shared/fonts/inter-latin-wght-normal.woff2?url';
 import interTight from '../../shared/fonts/inter-tight-latin-wght-normal.woff2?url';
-import { owner, sitesStrip } from '../lib/sites';
+import { owner, sitesStrip, stripAll } from '../lib/sites';
 import { siteFeedAlternates } from '../lib/feeds';
 import Analytics from '../components/Analytics.astro';
 import { type SkyCardFacts, skyCardOf } from '../lib/card';
@@ -175,6 +175,13 @@ const current = (href: string) =>
             </li>
           ))}
         </ul>
+        <a
+          class="sites-strip__all"
+          href={stripAll.href}
+          title={stripAll.description}
+        >
+          {stripAll.label}
+        </a>
       </div>
     </nav>
     {!home && (

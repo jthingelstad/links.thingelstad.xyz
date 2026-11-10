@@ -132,7 +132,9 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
 - **Jamie's sites.** The strip, the footer h-card, the rel=me links and the shared type
   (`shared/sites.json`, `shared/tokens.css`, `shared/fonts/`) are vendored from
   `../shared/` (thingelstad.com's) by `npm run sites:sync`; `npm run sites:check` fails on
-  drift. Never edit `shared/` here. No italics on sans-serif type.
+  drift. Never edit `shared/` here. No italics on sans-serif type. The strip ends with
+  All Things (`strip_all`, 2026-11-10), after the list; on a phone the list scrolls
+  sideways and All Things stays at the row's right end (`tools/check-site.mjs` checks it).
 - **Share images.** A record's `og:image` is its own card (2026-10-25; Jamie: "Linking
   Things link cards with Jamie-voice notes only"), drawn by cards.thingelstad.com from the
   record's h-entry: the title, `p-host`, the day saved, a `p-issue` on each issue chip,

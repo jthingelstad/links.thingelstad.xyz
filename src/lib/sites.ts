@@ -20,9 +20,40 @@ interface Owner {
   rel_me: string[];
 }
 
-const shared = JSON.parse(
+// The link that ends the strip on every site, after the list: All Things, the
+// list of everything live on thingelstad.xyz (2026-11-10).
+interface StripAll {
+  label: string;
+  url: string;
+  description: string;
+}
+interface Shared {
+  owner: Owner;
+  sites: SharedSite[];
+  strip_all: StripAll;
+}
+
+// Reads sites.json and fails the build on a strip_all the strip cannot draw:
+// a missing one, an empty label or description, or a URL that is not HTTPS.
+export function parseSites(text: string, path = 'shared/sites.json'): Shared {
+  const data = JSON.parse(text) as Partial<Shared> & {
+    strip_all?: Partial<StripAll>;
+  };
+  const all = data.strip_all;
+  if (!all || typeof all !== 'object')
+    throw new Error(`${path} has no strip_all.`);
+  for (const field of ['label', 'url', 'description'] as const) {
+    if (typeof all[field] !== 'string' || !all[field])
+      throw new Error(`${path}: strip_all has no ${field}.`);
+  }
+  if (!all.url!.startsWith('https://'))
+    throw new Error(`${path}: strip_all's url must be HTTPS.`);
+  return data as Shared;
+}
+
+const shared = parseSites(
   readFileSync(join(process.cwd(), 'shared/sites.json'), 'utf8'),
-) as { owner: Owner; sites: SharedSite[] };
+);
 
 // This site's id for refs. Linking Things joined sites.json and the strip on
 // 2026-10-23 under this id, so the strip marks it current.
@@ -47,6 +78,17 @@ export const sitesStrip = shared.sites
     label: s.strip_label,
     current: s.id === currentSite,
   }));
+
+// All Things, after the list and outside it. It is no site, so it has no id
+// and no mark, and it is never current here; it carries the same ref.
+export function sitesStripAll(all: StripAll, current = currentSite) {
+  return {
+    href: withRef(all.url, `sites-strip-${current}`),
+    label: all.label,
+    description: all.description,
+  };
+}
+export const stripAll = sitesStripAll(shared.strip_all);
 
 // A template link to another strip site carries ?ref=links-<placement>; any
 // other URL comes back as it was. Identity links never pass through here.

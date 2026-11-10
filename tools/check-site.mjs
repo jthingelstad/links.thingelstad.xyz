@@ -1,6 +1,7 @@
 // Browser checks: a route of each kind renders without console or page
 // errors at desktop and phone widths, with a main landmark, a title and no
-// horizontal scroll; a search finds records, shows the one moved to in the
+// horizontal scroll, and the sites strip ends with All Things, which stays in
+// view on a phone; a search finds records, shows the one moved to in the
 // preview pane on the desktop (and asks for no twin on a phone), and kind:
 // links its page; /surprise/ lands on a record and Back returns to the
 // front page; the box suggests a site for site: and the keyboard takes it;
@@ -91,6 +92,71 @@ const host = record.host;
 const word =
   record.title.split(/[^\p{L}\p{N}]+/u).find((w) => w.length >= 3) ?? host;
 
+// The sites strip (thingelstad.com's AGENTS.md, "The sites strip"): the
+// shared sites, then All Things after the list, in the strip's ink (Linking
+// Things' own link has the same, so a lens page's night ink counts too), with
+// this site's ref. On a phone the list scrolls sideways under All Things,
+// which stays whole at the row's right end.
+const shared = JSON.parse(await fs.readFile('shared/sites.json', 'utf8'));
+const stripSites = shared.sites.filter((site) => site.in_sites_strip);
+async function checkStrip(page, route, name) {
+  const strip = page.locator('nav.sites-strip');
+  const links = strip.getByRole('link');
+  assert.equal(
+    await links.count(),
+    stripSites.length + 1,
+    `${route}: the strip's sites and All Things`,
+  );
+  const all = strip.locator('.sites-strip__list + a.sites-strip__all');
+  assert.equal(await all.count(), 1, `${route}: All Things follows the list`);
+  assert.equal(await links.last().getAttribute('class'), 'sites-strip__all');
+  assert.equal(await all.textContent(), shared.strip_all.label);
+  assert.equal(await all.textContent(), 'All Things');
+  assert.equal(
+    await all.getAttribute('href'),
+    'https://thingelstad.xyz/all/?ref=sites-strip-links',
+  );
+  assert.equal(await all.getAttribute('title'), shared.strip_all.description);
+  assert.equal(await all.getAttribute('aria-current'), null);
+  const style = (locator) =>
+    locator.evaluate((el) => {
+      const css = getComputedStyle(el);
+      return {
+        color: css.color,
+        weight: css.fontWeight,
+        line: css.textDecorationLine,
+        lens: document.documentElement.hasAttribute('data-lens'),
+      };
+    });
+  const own = await style(strip.locator('.sites-strip__item--links a'));
+  const mine = await style(all);
+  assert.deepEqual(
+    { color: mine.color, weight: mine.weight, line: mine.line },
+    { color: own.color, weight: '600', line: 'underline' },
+    `${route}: All Things takes the strip's ink`,
+  );
+  if (!mine.lens) assert.equal(mine.color, 'rgb(22, 22, 26)');
+  if (name !== 'phone') return;
+  const list = strip.locator('.sites-strip__list');
+  await list.evaluate((el) => (el.scrollLeft = el.scrollWidth));
+  const listBox = await list.boundingBox();
+  const allBox = await all.boundingBox();
+  const width = page.viewportSize().width;
+  assert.ok(
+    allBox.x >= listBox.x + listBox.width - 7,
+    `${route}: All Things sits right of the list on a phone`,
+  );
+  assert.ok(
+    allBox.x >= 0 && allBox.x + allBox.width <= width,
+    `${route}: All Things stays in the viewport on a phone`,
+  );
+  const rows = await strip
+    .locator('.sites-strip__item')
+    .evaluateAll((items) => items.map((i) => i.getBoundingClientRect().top));
+  assert.equal(new Set(rows).size, 1, `${route}: one row on a phone`);
+  await list.evaluate((el) => (el.scrollLeft = 0));
+}
+
 const browser = await chromium.launch({
   headless: true,
   executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined,
@@ -141,6 +207,7 @@ for (const [name, viewport] of [
       `${route} has a main landmark`,
     );
     assert.ok((await page.title()).length > 0, `${route} has a title`);
+    await checkStrip(page, route, name);
     const { overflow, height } = await page.evaluate(() => ({
       overflow:
         document.documentElement.scrollWidth >
