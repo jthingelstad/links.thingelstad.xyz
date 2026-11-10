@@ -1,4 +1,37 @@
 {
+ "00fd4e80166e": {
+  "checked": "2026-11-10T08:07:30Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-18T22:27:16Z",
+   "last": "2024-09-13T09:28:09Z",
+   "count": 5,
+   "checked": "2026-11-10T08:07:30Z"
+  }
+ },
+ "0aec3274f72e": {
+  "checked": "2026-11-10T08:09:17Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-24T10:14:41Z",
+   "last": "2026-10-27T12:53:09Z",
+   "count": 34,
+   "checked": "2026-11-10T08:09:17Z"
+  }
+ },
+ "0bed041245c5": {
+  "checked": "2026-11-10T08:10:26Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-26T18:40:22Z",
+   "last": "2023-11-28T15:08:07Z",
+   "count": 158,
+   "checked": "2026-11-10T08:10:26Z"
+  }
+ },
  "0cd51fbc50ef": {
   "checked": "2026-10-23T21:39:52Z",
   "method": "enrich_pages",
@@ -7,7 +40,189 @@
   "alive": true,
   "final_url": "https://www.engadget.com/opera-is-making-a-dedicated-crypto-browser-112602524.html",
   "redirects": [],
-  "content_type": "text/html"
+  "content_type": "text/html",
+  "wayback": {
+   "first": "2022-01-19T13:38:08Z",
+   "last": "2025-01-01T05:24:06Z",
+   "count": 60,
+   "checked": "2026-11-10T08:08:12Z"
+  }
+ },
+ "0f43efc982f7": {
+  "checked": "2026-11-10T08:04:55Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-05T18:58:31Z",
+   "last": "2026-06-04T03:24:17Z",
+   "count": 74,
+   "checked": "2026-11-10T08:04:55Z"
+  }
+ },
+ "13c5801e704a": {
+  "checked": "2026-11-10T08:09:04Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-19T08:55:11Z",
+   "last": "2026-10-29T08:43:53Z",
+   "count": 43,
+   "checked": "2026-11-10T08:09:04Z"
+  }
+ },
+ "179022406b3d": {
+  "checked": "2026-11-10T08:06:46Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-12T12:14:26Z",
+   "last": "2025-12-28T15:09:20Z",
+   "count": 28,
+   "checked": "2026-11-10T08:06:46Z"
+  }
+ },
+ "190b90acf99a": {
+  "checked": "2026-11-10T08:10:40Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-27T04:30:08Z",
+   "last": "2023-02-02T07:46:31Z",
+   "count": 5,
+   "checked": "2026-11-10T08:10:40Z"
+  }
+ },
+ "1c18d5b2f6fe": {
+  "checked": "2026-11-10T08:08:44Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-22T03:49:09Z",
+   "last": "2026-08-23T00:19:09Z",
+   "count": 25,
+   "checked": "2026-11-10T08:08:44Z"
+  }
+ },
+ "1e9f42782647": {
+  "checked": "2026-11-10T08:10:47Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-24T12:43:17Z",
+   "last": "2026-04-30T00:36:07Z",
+   "count": 68,
+   "checked": "2026-11-10T08:10:47Z"
+  }
+ },
+ "233edbde8045": {
+  "checked": "2026-11-10T08:02:19Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2021-12-29T20:01:27Z",
+   "last": "2026-03-12T08:08:21Z",
+   "count": 42,
+   "checked": "2026-11-10T08:02:19Z"
+  }
+ },
+ "25616bffd662": {
+  "checked": "2026-11-10T08:02:25Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": null,
+   "last": null,
+   "count": 0,
+   "checked": "2026-11-10T08:02:25Z"
+  }
+ },
+ "25978360be06": {
+  "checked": "2026-11-10T08:06:20Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2020-10-19T10:33:30Z",
+   "last": "2026-10-14T15:23:04Z",
+   "count": 396,
+   "checked": "2026-11-10T08:06:20Z"
+  }
+ },
+ "2d02cd4c6507": {
+  "checked": "2026-11-10T08:04:42Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2019-07-15T18:17:00Z",
+   "last": "2026-10-30T02:58:58Z",
+   "count": 737,
+   "checked": "2026-11-10T08:04:42Z"
+  }
+ },
+ "3608c18711e0": {
+  "checked": "2026-11-10T08:05:54Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-10T16:06:32Z",
+   "last": "2026-02-02T00:40:50Z",
+   "count": 7,
+   "checked": "2026-11-10T08:05:54Z"
+  }
+ },
+ "3955f1edca0e": {
+  "checked": "2026-11-10T08:11:21Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2021-12-20T12:32:38Z",
+   "last": "2025-01-22T19:05:28Z",
+   "count": 18,
+   "checked": "2026-11-10T08:11:21Z"
+  }
+ },
+ "3de555d4ae8b": {
+  "checked": "2026-11-10T08:04:35Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-03T14:09:31Z",
+   "last": "2026-05-17T00:08:20Z",
+   "count": 26,
+   "checked": "2026-11-10T08:04:35Z"
+  }
+ },
+ "3f3c80c558bb": {
+  "checked": "2026-11-10T08:10:02Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-25T13:51:38Z",
+   "last": "2026-07-16T16:40:08Z",
+   "count": 33,
+   "checked": "2026-11-10T08:10:02Z"
+  }
+ },
+ "4568bf0010a8": {
+  "checked": "2026-11-10T08:08:25Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-20T20:18:14Z",
+   "last": "2026-10-26T23:22:18Z",
+   "count": 180,
+   "checked": "2026-11-10T08:08:25Z"
+  }
+ },
+ "482e11113096": {
+  "checked": "2026-11-10T08:03:17Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2007-07-01T20:51:01Z",
+   "last": "2026-10-29T17:56:04Z",
+   "count": 2180,
+   "checked": "2026-11-10T08:03:17Z"
+  }
  },
  "4cbd6f39319f": {
   "checked": "2026-10-23T21:39:53Z",
@@ -19,6 +234,50 @@
   "redirects": [],
   "content_type": "text/html"
  },
+ "4cfc2296b881": {
+  "checked": "2026-11-10T08:10:33Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-27T05:42:22Z",
+   "last": "2026-06-16T09:21:49Z",
+   "count": 13,
+   "checked": "2026-11-10T08:10:33Z"
+  }
+ },
+ "4dbf02879a7e": {
+  "checked": "2026-11-10T08:04:28Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2021-10-11T16:40:42Z",
+   "last": "2025-11-16T17:56:05Z",
+   "count": 310,
+   "checked": "2026-11-10T08:04:28Z"
+  }
+ },
+ "56512ca5a530": {
+  "checked": "2026-11-10T08:07:39Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-18T16:14:41Z",
+   "last": "2026-11-02T23:26:16Z",
+   "count": 349,
+   "checked": "2026-11-10T08:07:39Z"
+  }
+ },
+ "5fbdb93e1e34": {
+  "checked": "2026-11-10T08:08:05Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-19T18:28:07Z",
+   "last": "2026-03-15T21:26:50Z",
+   "count": 18,
+   "checked": "2026-11-10T08:08:05Z"
+  }
+ },
  "6189c5d1e067": {
   "checked": "2026-10-23T21:39:53Z",
   "method": "enrich_pages",
@@ -28,6 +287,215 @@
   "final_url": "https://www.eff.org/deeplinks/2022/08/inside-fog-data-science-secretive-company-selling-mass-surveillance-local-police",
   "redirects": [],
   "content_type": "text/html"
+ },
+ "6384d70408ec": {
+  "checked": "2026-11-10T08:05:21Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-06T03:18:16Z",
+   "last": "2026-08-16T08:34:40Z",
+   "count": 143,
+   "checked": "2026-11-10T08:05:21Z"
+  }
+ },
+ "63e3bd963759": {
+  "checked": "2026-11-10T08:06:33Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-11T15:21:18Z",
+   "last": "2026-04-01T11:31:59Z",
+   "count": 32,
+   "checked": "2026-11-10T08:06:33Z"
+  }
+ },
+ "6ae469424e89": {
+  "checked": "2026-11-10T08:05:28Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-07T19:44:25Z",
+   "last": "2026-05-15T00:56:53Z",
+   "count": 15,
+   "checked": "2026-11-10T08:05:28Z"
+  }
+ },
+ "6ca52fae97bd": {
+  "checked": "2026-11-10T08:09:56Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2025-05-20T07:17:36Z",
+   "last": "2025-09-14T11:32:52Z",
+   "count": 2,
+   "checked": "2026-11-10T08:09:56Z"
+  }
+ },
+ "6ed68a93e0ce": {
+  "checked": "2026-11-10T08:02:33Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-01T21:09:29Z",
+   "last": "2025-11-07T18:31:56Z",
+   "count": 16,
+   "checked": "2026-11-10T08:02:33Z"
+  }
+ },
+ "727b7d79c7a6": {
+  "checked": "2026-11-10T08:04:11Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-03T05:17:04Z",
+   "last": "2026-07-29T10:19:07Z",
+   "count": 10,
+   "checked": "2026-11-10T08:04:11Z"
+  }
+ },
+ "79168852ed3b": {
+  "checked": "2026-11-10T08:08:18Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-20T09:47:31Z",
+   "last": "2026-08-08T21:34:11Z",
+   "count": 31,
+   "checked": "2026-11-10T08:08:18Z"
+  }
+ },
+ "7a46a1b47f19": {
+  "checked": "2026-11-10T08:11:00Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-27T20:15:55Z",
+   "last": "2026-10-31T08:36:05Z",
+   "count": 327,
+   "checked": "2026-11-10T08:11:00Z"
+  }
+ },
+ "80bffa17a893": {
+  "checked": "2026-11-10T08:03:59Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2021-10-15T04:54:45Z",
+   "last": "2026-11-01T10:30:20Z",
+   "count": 7394,
+   "checked": "2026-11-10T08:03:59Z"
+  }
+ },
+ "814170163d66": {
+  "checked": "2026-11-10T08:03:10Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-01T00:52:39Z",
+   "last": "2025-01-16T10:56:58Z",
+   "count": 8,
+   "checked": "2026-11-10T08:03:10Z"
+  }
+ },
+ "866c13f3d8b8": {
+  "checked": "2026-11-10T08:06:27Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-14T00:31:08Z",
+   "last": "2026-03-05T17:42:46Z",
+   "count": 38,
+   "checked": "2026-11-10T08:06:27Z"
+  }
+ },
+ "87012c6dcd4b": {
+  "checked": "2026-11-10T08:06:59Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-18T21:40:52Z",
+   "last": "2026-07-08T18:12:02Z",
+   "count": 13,
+   "checked": "2026-11-10T08:06:59Z"
+  }
+ },
+ "8860d71c6f72": {
+  "checked": "2026-11-10T08:08:32Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-19T14:41:54Z",
+   "last": "2026-07-15T13:25:00Z",
+   "count": 57,
+   "checked": "2026-11-10T08:08:32Z"
+  }
+ },
+ "8ae13ea8d1f6": {
+  "checked": "2026-11-10T08:08:51Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2021-10-17T03:57:55Z",
+   "last": "2025-07-17T05:40:53Z",
+   "count": 37,
+   "checked": "2026-11-10T08:08:51Z"
+  }
+ },
+ "8b4b6c608bf5": {
+  "checked": "2026-11-10T08:07:12Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-18T14:25:13Z",
+   "last": "2026-10-16T18:26:48Z",
+   "count": 94,
+   "checked": "2026-11-10T08:07:12Z"
+  }
+ },
+ "8f72ea0ce4d9": {
+  "checked": "2026-11-10T08:03:39Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2001-11-29T23:47:43Z",
+   "last": "2026-10-30T02:44:24Z",
+   "count": 3913,
+   "checked": "2026-11-10T08:03:39Z"
+  }
+ },
+ "907d554a4a75": {
+  "checked": "2026-11-10T08:10:53Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-25T15:48:54Z",
+   "last": "2026-10-15T10:19:27Z",
+   "count": 57,
+   "checked": "2026-11-10T08:10:53Z"
+  }
+ },
+ "9301359ed417": {
+  "checked": "2026-11-10T08:03:25Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2021-12-30T11:16:37Z",
+   "last": "2026-10-29T11:03:19Z",
+   "count": 143,
+   "checked": "2026-11-10T08:03:25Z"
+  }
+ },
+ "943a18f0a46a": {
+  "checked": "2026-11-10T08:06:07Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-02T15:55:17Z",
+   "last": "2026-08-11T01:39:04Z",
+   "count": 97,
+   "checked": "2026-11-10T08:06:07Z"
+  }
  },
  "99c6e6a1461f": {
   "checked": "2026-10-23T21:39:53Z",
@@ -39,6 +507,292 @@
   "redirects": [],
   "content_type": "text/html"
  },
+ "9fc8186aaf66": {
+  "checked": "2026-11-10T08:07:06Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-17T18:25:57Z",
+   "last": "2026-07-16T08:28:23Z",
+   "count": 89,
+   "checked": "2026-11-10T08:07:06Z"
+  }
+ },
+ "a019bf762a02": {
+  "checked": "2026-11-10T08:02:56Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2021-12-29T15:26:00Z",
+   "last": "2026-10-27T13:28:00Z",
+   "count": 629,
+   "checked": "2026-11-10T08:02:56Z"
+  }
+ },
+ "a11f723e1e68": {
+  "checked": "2026-11-10T08:05:08Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-06T10:58:10Z",
+   "last": "2026-02-23T23:02:17Z",
+   "count": 48,
+   "checked": "2026-11-10T08:05:08Z"
+  }
+ },
+ "a1f52a69e856": {
+  "checked": "2026-11-10T08:03:45Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-03T09:21:26Z",
+   "last": "2026-10-27T15:01:16Z",
+   "count": 36,
+   "checked": "2026-11-10T08:03:45Z"
+  }
+ },
+ "a31127235210": {
+  "checked": "2026-11-10T08:11:27Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-31T21:42:07Z",
+   "last": "2026-10-31T09:52:30Z",
+   "count": 206,
+   "checked": "2026-11-10T08:11:27Z"
+  }
+ },
+ "a9848b0abe06": {
+  "checked": "2026-11-10T08:11:06Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-27T17:15:56Z",
+   "last": "2026-09-29T15:42:46Z",
+   "count": 137,
+   "checked": "2026-11-10T08:11:06Z"
+  }
+ },
+ "ad84f7e4cf8a": {
+  "checked": "2026-11-10T08:09:24Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-24T17:20:29Z",
+   "last": "2026-05-11T00:29:10Z",
+   "count": 17,
+   "checked": "2026-11-10T08:09:24Z"
+  }
+ },
+ "ae0fc57aa621": {
+  "checked": "2026-11-10T08:03:03Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2021-12-30T14:08:29Z",
+   "last": "2026-09-24T15:20:14Z",
+   "count": 49,
+   "checked": "2026-11-10T08:03:03Z"
+  }
+ },
+ "b154672b8310": {
+  "checked": "2026-11-10T08:10:09Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-24T20:57:48Z",
+   "last": "2026-10-16T10:57:58Z",
+   "count": 109,
+   "checked": "2026-11-10T08:10:09Z"
+  }
+ },
+ "b25978c7ec12": {
+  "checked": "2026-11-10T08:09:34Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2004-04-30T11:44:14Z",
+   "last": "2026-10-20T18:20:50Z",
+   "count": 1112,
+   "checked": "2026-11-10T08:09:34Z"
+  }
+ },
+ "b5ddfbe12b8e": {
+  "checked": "2026-11-10T08:02:42Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2021-06-25T22:23:23Z",
+   "last": "2026-10-17T00:22:36Z",
+   "count": 2094,
+   "checked": "2026-11-10T08:02:42Z"
+  }
+ },
+ "b67af41ca495": {
+  "checked": "2026-11-10T08:06:52Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-17T10:24:31Z",
+   "last": "2026-02-17T19:52:48Z",
+   "count": 18,
+   "checked": "2026-11-10T08:06:52Z"
+  }
+ },
+ "bc94bd31aa7b": {
+  "checked": "2026-11-10T08:03:32Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2021-12-29T14:25:42Z",
+   "last": "2026-09-26T10:52:53Z",
+   "count": 121,
+   "checked": "2026-11-10T08:03:32Z"
+  }
+ },
+ "bcf3cfe1ce19": {
+  "checked": "2026-11-10T08:07:52Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-18T15:48:43Z",
+   "last": "2026-08-27T03:01:54Z",
+   "count": 81,
+   "checked": "2026-11-10T08:07:52Z"
+  }
+ },
+ "be1ed03c199f": {
+  "checked": "2026-11-10T08:09:40Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-24T13:51:16Z",
+   "last": "2026-04-22T09:18:11Z",
+   "count": 28,
+   "checked": "2026-11-10T08:09:40Z"
+  }
+ },
+ "beb0efc639a4": {
+  "checked": "2026-11-10T08:10:17Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-24T08:21:37Z",
+   "last": "2026-10-03T20:38:56Z",
+   "count": 170,
+   "checked": "2026-11-10T08:10:17Z"
+  }
+ },
+ "bed5683da47d": {
+  "checked": "2026-11-10T08:11:14Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2016-01-10T21:07:48Z",
+   "last": "2026-10-11T02:50:31Z",
+   "count": 336,
+   "checked": "2026-11-10T08:11:14Z"
+  }
+ },
+ "cc08218b781e": {
+  "checked": "2026-11-10T08:02:49Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2020-03-20T23:12:33Z",
+   "last": "2026-11-10T03:47:39Z",
+   "count": 9730,
+   "checked": "2026-11-10T08:02:49Z"
+  }
+ },
+ "cf7ac2bde600": {
+  "checked": "2026-11-10T08:05:41Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2021-11-01T09:53:23Z",
+   "last": "2026-10-25T01:22:50Z",
+   "count": 321,
+   "checked": "2026-11-10T08:05:41Z"
+  }
+ },
+ "d27fcdb7cbc8": {
+  "checked": "2026-11-10T08:07:58Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-17T13:56:37Z",
+   "last": "2026-01-16T07:25:03Z",
+   "count": 78,
+   "checked": "2026-11-10T08:07:58Z"
+  }
+ },
+ "d3ec419bf41a": {
+  "checked": "2026-11-10T08:08:38Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-20T20:50:45Z",
+   "last": "2026-08-27T03:03:10Z",
+   "count": 149,
+   "checked": "2026-11-10T08:08:38Z"
+  }
+ },
+ "d423ec47863c": {
+  "checked": "2026-11-10T08:08:57Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-20T13:00:30Z",
+   "last": "2026-09-28T20:07:35Z",
+   "count": 139,
+   "checked": "2026-11-10T08:08:57Z"
+  }
+ },
+ "d4f8f8a98d9e": {
+  "checked": "2026-11-10T08:07:21Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-07T08:01:43Z",
+   "last": "2026-11-01T06:06:31Z",
+   "count": 214,
+   "checked": "2026-11-10T08:07:21Z"
+  }
+ },
+ "d51baa0ee803": {
+  "checked": "2026-11-10T08:03:52Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-03T00:31:22Z",
+   "last": "2026-01-29T00:29:51Z",
+   "count": 36,
+   "checked": "2026-11-10T08:03:52Z"
+  }
+ },
+ "d71e52a71670": {
+  "checked": "2026-11-10T08:05:14Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-07T02:06:19Z",
+   "last": "2025-09-26T19:41:00Z",
+   "count": 11,
+   "checked": "2026-11-10T08:05:14Z"
+  }
+ },
+ "ddebf692ff09": {
+  "checked": "2026-11-10T08:06:14Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-05T14:20:24Z",
+   "last": "2026-03-12T14:25:56Z",
+   "count": 68,
+   "checked": "2026-11-10T08:06:14Z"
+  }
+ },
  "e06fa03a4636": {
   "checked": "2026-10-23T21:39:54Z",
   "method": "enrich_pages",
@@ -49,6 +803,72 @@
   "redirects": [],
   "content_type": "text/html"
  },
+ "e1c51ee45a4d": {
+  "checked": "2026-11-10T08:06:00Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2021-11-18T19:07:07Z",
+   "last": "2026-10-09T10:59:53Z",
+   "count": 67,
+   "checked": "2026-11-10T08:06:00Z"
+  }
+ },
+ "e943833c1ec6": {
+  "checked": "2026-11-10T08:05:01Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-05T02:52:07Z",
+   "last": "2026-09-23T20:17:56Z",
+   "count": 83,
+   "checked": "2026-11-10T08:05:01Z"
+  }
+ },
+ "ea6b931f934b": {
+  "checked": "2026-11-10T08:09:47Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2015-04-29T21:48:20Z",
+   "last": "2026-08-22T05:12:35Z",
+   "count": 298,
+   "checked": "2026-11-10T08:09:47Z"
+  }
+ },
+ "ead87b9fbf2f": {
+  "checked": "2026-11-10T08:07:45Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-18T18:55:48Z",
+   "last": "2025-12-06T13:49:08Z",
+   "count": 5,
+   "checked": "2026-11-10T08:07:45Z"
+  }
+ },
+ "ec81a0a0b862": {
+  "checked": "2026-11-10T08:05:34Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2021-12-31T07:09:28Z",
+   "last": "2023-02-01T17:07:17Z",
+   "count": 2,
+   "checked": "2026-11-10T08:05:34Z"
+  }
+ },
+ "ecee39d5f590": {
+  "checked": "2026-11-10T08:04:48Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2000-04-07T18:41:12Z",
+   "last": "2026-11-09T04:09:33Z",
+   "count": 2425,
+   "checked": "2026-11-10T08:04:48Z"
+  }
+ },
  "f22b23d27380": {
   "checked": "2026-10-23T21:39:54Z",
   "method": "enrich_pages",
@@ -58,6 +878,28 @@
   "final_url": "https://lethain.com/twitter/",
   "redirects": [],
   "content_type": "text/html"
+ },
+ "f9d93d1297e7": {
+  "checked": "2026-11-10T08:09:11Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": "2022-01-19T22:02:37Z",
+   "last": "2026-06-17T17:00:44Z",
+   "count": 31,
+   "checked": "2026-11-10T08:09:11Z"
+  }
+ },
+ "fbcd9518c70b": {
+  "checked": "2026-11-10T08:04:21Z",
+  "method": "enrich_pages",
+  "version": 1,
+  "wayback": {
+   "first": null,
+   "last": null,
+   "count": 0,
+   "checked": "2026-11-10T08:04:21Z"
+  }
  },
  "fdfba8e475a6": {
   "checked": "2026-10-23T21:39:53Z",
