@@ -45,6 +45,9 @@ Adapted from poap.thingelstad.xyz's validator. It checks:
 - /links.json is every record exactly as data/links has it, plus its
   permalink and then its kind, the same as its JSON twin's; /hosts.json and
   /issues.json match the pages and the join;
+- /on/MM-DD.json, each of the 366 day pages' JSON twin, lists every link saved
+  on that Central calendar day in any year, newest first, each with its note,
+  a voice exactly when it has one, and its record;
 - /sky/places.json and /sky/stars.json (src/lib/stars.ts), where the stars
   are and their names, are of one layout and hold each star once, each a
   record, every list as long as the stars, every place, topic, site, kind
@@ -93,7 +96,7 @@ import re
 import sqlite3
 import sys
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
 from pathlib import Path
@@ -645,6 +648,53 @@ def check_dataset(data_links, newest, host_pages, twin_kinds, problems):
         for row in issue.get("links", []):
             if row.get("permalink") != (f"{SITE}/links/{row['id']}/" if row.get("id") else None):
                 problems.append(f"issues.json: {source['slug']} link {row.get('position')}")
+
+
+def check_on_days(data_links, newest, problems):
+    """/on/MM-DD.json, the JSON twin of each of the 366 day pages: every link
+    saved on that Central calendar day in any year, newest first, each with its
+    note, the note's voice and its record. Returns how many were checked."""
+    by_id = {link["id"]: link for link in data_links}
+    day_of = {
+        link["id"]: datetime.fromisoformat(link["saved"].replace("Z", "+00:00"))
+        .astimezone(CENTRAL)
+        .date()
+        .isoformat()
+        for link in data_links
+    }
+    expected = {}
+    for link_id in newest:
+        expected.setdefault(day_of[link_id][5:], []).append(link_id)
+    files = sorted((DIST / "on").glob("*.json"))
+    leap = [date(2024, 1, 1) + timedelta(n) for n in range(366)]
+    days = [f"{d.month:02}-{d.day:02}" for d in leap]
+    if [file.stem for file in files] != days:
+        problems.append(f"on/: {len(files)} day JSON files, not the 366 days of a year")
+    fields = ["id", "title", "url", "note", "voice", "saved", "day", "record", "json", "issues"]
+    for key in days:
+        body = load_json(f"on/{key}.json", problems)
+        rows = body.get("links", [])
+        if (
+            body.get("day") != key
+            or body.get("page") != f"{SITE}/on/{key}/"
+            or body.get("count") != len(rows)
+        ):
+            problems.append(f"on/{key}.json: day, page or count wrong")
+        if [row.get("id") for row in rows] != expected.get(key, []):
+            problems.append(f"on/{key}.json: not every link saved on {key}, newest first")
+            continue
+        for row in rows:
+            link = by_id[row["id"]]
+            if (
+                list(row) != fields
+                or any(row[f] != link[f] for f in ("title", "url", "note", "saved"))
+                or row["day"] != day_of[row["id"]]
+                or row["record"] != f"{SITE}/links/{row['id']}/"
+                or row["json"] != f"{SITE}/links/{row['id']}.json"
+                or (row["voice"] is None) != (link["note"].strip() == "")
+            ):
+                problems.append(f"on/{key}.json: {row['id']} is not its record")
+    return len(files)
 
 
 def central_year(saved):
@@ -1330,6 +1380,7 @@ def main():
     host_pages = sorted((DIST / "hosts").glob("*/index.html"))
     feeds = check_feeds(newest, host_pages, alternates, listed_records, problems)
     check_dataset(data_links, newest, host_pages, twin_kinds, problems)
+    on_days = check_on_days(data_links, newest, problems)
     suggested = check_suggest(data_links, twin_kinds, twin_hosts, problems) or (0, 0)
     year_files = check_llms(data_links, problems)
     inside = check_site_urls(problems)
@@ -1357,6 +1408,7 @@ def main():
         f" links, metadata and sitemap valid; {len(records)} record h-entries and"
         f" {feed_pages} list h-feeds;"
         f" {feeds + 2 * len(kind_counts)} feeds, links.json, hosts.json, issues.json,"
+        f" {on_days} on-this-day JSON files,"
         f" search/suggest.json ({suggested[0]} hosts, {suggested[1]} issues),"
         f" the sky ({len(stars)} stars, each record's nearest five), llms.txt and"
         f" {len(year_files)} year llms files valid ({len(inside)} site URLs inside resolve);"

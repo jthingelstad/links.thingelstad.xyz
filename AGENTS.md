@@ -76,7 +76,8 @@ is `docs/DATA.md`; read them before changing structure, URLs or data.
   Thing archive key, `140-special` for the special issue), `/years/<yyyy>/` with its
   `llms.txt`, `/newest/`, `/search/`, `/sky/` (with `/sky/#<id>` on one link, which every record
   links), `/topics/` and `/topics/<slug>/` (the topic's name in `content/topics.md`, so a
-  rename moves it), `/on/MM-DD/` (a Central calendar day in any year, 366 of them),
+  rename moves it), `/on/MM-DD/` (a Central calendar day in any year, 366 of them) with its `.json`
+  twin (`/on/MM-DD.json`, which thingelstad.xyz's Linking Things gadget reads),
   `/surprise/` (a noindex door to a random
   record), `/about/`, the feeds (`feed.xml` and
   `feed.json` at the root and under each host, kind and topic page) and `/links.json`,

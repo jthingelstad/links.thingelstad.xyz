@@ -84,6 +84,10 @@ export const skyCardPath = '/sky/card.json';
 // at /on/MM-DD/ (02-29 too).
 export const onPath = (month: number, day: number) =>
   `/on/${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}/`;
+// Its JSON twin, /on/MM-DD.json: the same links, small enough for a browser
+// to fetch on a visit (thingelstad.xyz's Linking Things gadget reads it).
+export const onJsonPath = (month: number, day: number) =>
+  `${onPath(month, day).slice(0, -1)}.json`;
 // A topic (content/topics.md) is a lens on the sky at its name as a slug,
 // so renaming a topic moves its page; /topics/ lists them all.
 export const topicsPath = '/topics/';
