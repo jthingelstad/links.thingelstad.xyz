@@ -9022,6 +9022,41 @@
    "webmention": null
   }
  },
+ "rouseclock.com": {
+  "checked": "2026-11-13T06:30:41Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns53.domaincontrol.com",
+    "ns54.domaincontrol.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-13T06:30:41Z",
+   "title": "Rouse · The bedside alarm clock you build yourself",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "routine.co": {
   "checked": "2026-10-29T06:07:53Z",
   "method": "enrich_hosts",

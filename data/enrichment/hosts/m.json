@@ -7397,6 +7397,42 @@
    "webmention": null
   }
  },
+ "mcp-explained.com": {
+  "checked": "2026-11-13T06:30:35Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.75.25",
+    "172.67.166.252"
+   ],
+   "aaaa": [
+    "2606:4700:3032::ac43:a6fc",
+    "2606:4700:3037::6815:4b19"
+   ],
+   "cname": null,
+   "ns": [
+    "benedict.ns.cloudflare.com",
+    "lilyana.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-13T06:30:35Z",
+   "title": "MCP Explained · how the Model Context Protocol works",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "mcp.blockscout.com": {
   "checked": "2026-10-28T05:52:35Z",
   "method": "enrich_hosts",
@@ -18056,6 +18092,50 @@
    "feeds": [],
    "hcard": false,
    "rel_me": [],
+   "webmention": null
+  }
+ },
+ "muratbuffalo.blogspot.com": {
+  "checked": "2026-11-13T06:30:37Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "142.250.177.225"
+   ],
+   "aaaa": [
+    "2607:f8b0:4009:80e::2001"
+   ],
+   "cname": "blogspot.l.googleusercontent.com",
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-13T06:30:37Z",
+   "title": "Metadata",
+   "generator": "blogger",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://muratbuffalo.blogspot.com/feeds/posts/default",
+     "title": "Metadata - Atom"
+    },
+    {
+     "type": "rss",
+     "url": "https://muratbuffalo.blogspot.com/feeds/posts/default?alt=rss",
+     "title": "Metadata - RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [
+    "https://www.blogger.com/profile/07842046940394980130"
+   ],
    "webmention": null
   }
  },

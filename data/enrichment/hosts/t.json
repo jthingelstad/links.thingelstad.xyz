@@ -10415,6 +10415,48 @@
    "error": "does not resolve"
   }
  },
+ "thestateofai.com": {
+  "checked": "2026-11-13T06:30:44Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.65.167",
+    "172.67.147.68"
+   ],
+   "aaaa": [
+    "2606:4700:3034::6815:41a7",
+    "2606:4700:3034::ac43:9344"
+   ],
+   "cname": "state-of-ai.outlever.work",
+   "ns": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-13T06:30:44Z",
+   "title": "State of AI",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.thestateofai.com/rss.xml",
+     "title": "State of AI RSS"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "thestatus.com": {
   "checked": "2026-10-30T05:48:38Z",
   "method": "enrich_hosts",

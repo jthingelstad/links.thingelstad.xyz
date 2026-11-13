@@ -8149,6 +8149,45 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'ftp.arl.mil'"
   }
  },
+ "ftrain.com": {
+  "checked": "2026-11-13T06:30:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "161.210.92.184"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns-146-b.gandi.net",
+    "ns-231-c.gandi.net",
+    "ns-31-a.gandi.net"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-13T06:30:24Z",
+   "title": "Ftrain, by Paul Ford",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://ftrain.com/feed.xml",
+     "title": "Ftrain RSS Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "ftrain.medium.com": {
   "checked": "2026-10-24T06:27:36Z",
   "method": "enrich_hosts",

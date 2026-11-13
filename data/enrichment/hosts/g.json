@@ -1518,6 +1518,53 @@
    "webmention": null
   }
  },
+ "geeky-gadgets.com": {
+  "checked": "2026-11-13T06:30:28Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.39.100",
+    "172.67.144.49"
+   ],
+   "aaaa": [
+    "2606:4700:3032::6815:2764",
+    "2606:4700:3035::ac43:9031"
+   ],
+   "cname": null,
+   "ns": [
+    "kim.ns.cloudflare.com",
+    "kurt.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-13T06:30:28Z",
+   "title": "Geeky Gadgets - The Latest Technology News",
+   "generator": null,
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.geeky-gadgets.com/feed/",
+     "title": "Geeky Gadgets » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.geeky-gadgets.com/comments/feed/",
+     "title": "Geeky Gadgets » Comments Feed"
+    }
+   ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "gekk.info": {
   "checked": "2026-10-27T05:42:04Z",
   "method": "enrich_hosts",

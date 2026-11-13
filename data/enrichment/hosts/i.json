@@ -2016,6 +2016,44 @@
    "checked": "2026-10-24T05:32:03Z"
   }
  },
+ "impeccable.style": {
+  "checked": "2026-11-13T06:30:30Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.12.112",
+    "104.26.13.112",
+    "172.67.68.172"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:c70",
+    "2606:4700:20::681a:d70",
+    "2606:4700:20::ac43:44ac"
+   ],
+   "cname": null,
+   "ns": [
+    "langston.ns.cloudflare.com",
+    "maria.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-13T06:30:30Z",
+   "title": "Impeccable: The missing design vocabulary for agents",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "imperialviolet.org": {
   "checked": "2026-10-24T06:32:07Z",
   "method": "enrich_hosts",
@@ -6322,6 +6360,42 @@
      "title": "Ironic Software » Feed"
     }
    ],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
+ "isaacus.com": {
+  "checked": "2026-11-13T06:30:33Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.18.16.21",
+    "104.18.17.21"
+   ],
+   "aaaa": [
+    "2606:4700::6812:1015",
+    "2606:4700::6812:1115"
+   ],
+   "cname": null,
+   "ns": [
+    "darl.ns.cloudflare.com",
+    "lia.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-13T06:30:33Z",
+   "title": "Isaacus - legal AI research",
+   "generator": null,
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null

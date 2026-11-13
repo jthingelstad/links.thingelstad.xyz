@@ -8571,6 +8571,44 @@
    "error": "timeout"
   }
  },
+ "anoma.ly": {
+  "checked": "2026-11-13T06:30:20Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.26.4.58",
+    "104.26.5.58",
+    "172.67.68.118"
+   ],
+   "aaaa": [
+    "2606:4700:20::681a:43a",
+    "2606:4700:20::681a:53a",
+    "2606:4700:20::ac43:4476"
+   ],
+   "cname": null,
+   "ns": [
+    "alex.ns.cloudflare.com",
+    "elle.ns.cloudflare.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-13T06:30:20Z",
+   "title": "Anoma.ly",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "anomalily.net": {
   "checked": "2026-10-25T05:54:57Z",
   "method": "enrich_hosts",
@@ -14421,6 +14459,44 @@
    "rel_me": [],
    "webmention": null,
    "error": "HTTP 403"
+  }
+ },
+ "av.github.io": {
+  "checked": "2026-11-13T06:30:23Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
+   ],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 404
+  },
+  "home": {
+   "checked": "2026-11-13T06:30:23Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null,
+   "error": "HTTP 404"
   }
  },
  "avalovelace1.github.io": {
