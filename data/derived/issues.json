@@ -59196,6 +59196,240 @@
      "heading_context": "[People are using AI to make their smart TVs dumb again | TechCrunch](https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/)"
     }
    ]
+  },
+  {
+   "number": 355,
+   "slug": "355",
+   "title": "Writing, Building, and the Open Web",
+   "subject": "WT355 — Writing, Building, and the Open Web",
+   "date": "2026-11-14T12:00:00Z",
+   "url": "https://weekly.thingelstad.com/archive/355/",
+   "links": [
+    {
+     "position": 0,
+     "id": "82481ed31c2e",
+     "url": "https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html",
+     "text": "AWS Emulator and the engineer's job when agents write the code",
+     "section": "Notable",
+     "heading_context": "[AWS Emulator and the engineer's job when agents write the code](https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html)"
+    },
+    {
+     "position": 1,
+     "id": "90b9a34769f8",
+     "url": "https://www.anthropic.com/research/components-of-agent-memory",
+     "text": "The components of agent memory",
+     "section": "Notable",
+     "heading_context": "[The components of agent memory](https://www.anthropic.com/research/components-of-agent-memory)"
+    },
+    {
+     "position": 2,
+     "id": "963549c06b25",
+     "url": "https://www.svpg.com/ai-and-the-future-of-the-product-role/",
+     "text": "AI and the Future of the Product Role",
+     "section": "Notable",
+     "heading_context": "[AI and the Future of the Product Role](https://www.svpg.com/ai-and-the-future-of-the-product-role/)"
+    },
+    {
+     "position": 3,
+     "id": "4175c3082fb2",
+     "url": "https://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html",
+     "text": "Writing as a thinking tool",
+     "section": "Notable",
+     "heading_context": "[Writing as a thinking tool](https://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html)"
+    },
+    {
+     "position": 4,
+     "id": "2725c84973fe",
+     "url": "https://ftrain.com/aboard-the-web-is-more-than-enough",
+     "text": "The Web Is More Than Enough",
+     "section": "Notable",
+     "heading_context": "[The Web Is More Than Enough](https://ftrain.com/aboard-the-web-is-more-than-enough)"
+    },
+    {
+     "position": 5,
+     "id": "14b39e2399e0",
+     "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+     "text": "Making it easier for websites to express AI training preferences",
+     "section": "Notable",
+     "heading_context": "[Making it easier for websites to express AI training preferences](https://openai.com/index/helping-websites-express-ai-training-preferences)"
+    },
+    {
+     "position": 6,
+     "id": "3dd0acbbba9c",
+     "url": "https://dagu.sh/",
+     "text": "Dagu: Local-first workflow orchestration that just works",
+     "section": "Notable",
+     "heading_context": "[Dagu: Local-first workflow orchestration that just works](https://dagu.sh/)"
+    },
+    {
+     "position": 7,
+     "id": "0b3f875d0d42",
+     "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
+     "text": "Apple has new Mac app coming to make running local AI models easy - 9to5Mac",
+     "section": "Notable",
+     "heading_context": "[Apple has new Mac app coming to make running local AI models easy - 9to5Mac](https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/)"
+    },
+    {
+     "position": 8,
+     "id": "e3f16d29e1e1",
+     "url": "https://blog.bambulab.com/tool-changer-game-changer-bambu-lab-presents-h3c-the-defining-new-generation-of-3d-printers/",
+     "text": "Tool changer. Game changer. Bambu Lab presents H3C",
+     "section": "Notable",
+     "heading_context": "[Tool changer. Game changer. Bambu Lab presents H3C](https://blog.bambulab.com/tool-changer-game-changer-bambu-lab-presents-h3c-the-defining-new-generation-of-3d-printers/)"
+    },
+    {
+     "position": 9,
+     "id": "30e6dc65e337",
+     "url": "https://www.oneusefulthing.org/p/fable-52-and-jagged-agi",
+     "text": "Fable 5.2 and Jagged AGI",
+     "section": "Briefly",
+     "heading_context": "[Fable 5.2 and Jagged AGI](https://www.oneusefulthing.org/p/fable-52-and-jagged-agi)"
+    },
+    {
+     "position": 10,
+     "id": "c65c16754ea5",
+     "url": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
+     "text": "Quoting Prompting Claude Fable 5.2",
+     "section": "Briefly",
+     "heading_context": "[Quoting Prompting Claude Fable 5.2](https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/)"
+    },
+    {
+     "position": 11,
+     "id": "a0c591335685",
+     "url": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/",
+     "text": "Building a multiplayer game world with autonomous Fable-class models",
+     "section": "Briefly",
+     "heading_context": "[Building a multiplayer game world with autonomous Fable-class models](https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/)"
+    },
+    {
+     "position": 12,
+     "id": "9e37643e5fed",
+     "url": "https://palettevault.github.io/blog/ai-development-2026/",
+     "text": "How AI Is Changing Software Development in 2026",
+     "section": "Briefly",
+     "heading_context": "[How AI Is Changing Software Development in 2026](https://palettevault.github.io/blog/ai-development-2026/)"
+    },
+    {
+     "position": 13,
+     "id": "64b539777c9b",
+     "url": "https://openai.com/index/scaling-git-at-openai",
+     "text": "Scaling Git at OpenAI",
+     "section": "Briefly",
+     "heading_context": "[Scaling Git at OpenAI](https://openai.com/index/scaling-git-at-openai)"
+    },
+    {
+     "position": 14,
+     "id": "1a2e7b073314",
+     "url": "https://mcp-explained.com/",
+     "text": "how the Model Context Protocol works",
+     "section": "Briefly",
+     "heading_context": "[how the Model Context Protocol works](https://mcp-explained.com/)"
+    },
+    {
+     "position": 15,
+     "id": "592fc4198e88",
+     "url": "https://isaacus.com/blog/what-are-vector-embeddings",
+     "text": "What are vector embeddings? An interactive guide",
+     "section": "Briefly",
+     "heading_context": "[What are vector embeddings? An interactive guide](https://isaacus.com/blog/what-are-vector-embeddings)"
+    },
+    {
+     "position": 16,
+     "id": "cd21f33e2e3d",
+     "url": "https://krebsonsecurity.com/2026/11/microsoft-fixes-nearly-1100-security-vulnerabilities/",
+     "text": "Microsoft Fixes Nearly 1,100 Security Vulnerabilities",
+     "section": "Briefly",
+     "heading_context": "[Microsoft Fixes Nearly 1,100 Security Vulnerabilities](https://krebsonsecurity.com/2026/11/microsoft-fixes-nearly-1100-security-vulnerabilities/)"
+    },
+    {
+     "position": 17,
+     "id": "f500921cfcf0",
+     "url": "https://tcbmag.com/minneapolis-skyways-need-a-better-map/",
+     "text": "Minneapolis Skyways Need a Better Map",
+     "section": "Briefly",
+     "heading_context": "[Minneapolis Skyways Need a Better Map](https://tcbmag.com/minneapolis-skyways-need-a-better-map/)"
+    },
+    {
+     "position": 18,
+     "id": "edd636154b97",
+     "url": "https://mntech.org/2026-tekne-award-winners/",
+     "text": "2026 Tekne Award Winners",
+     "section": "Briefly",
+     "heading_context": "[2026 Tekne Award Winners](https://mntech.org/2026-tekne-award-winners/)"
+    },
+    {
+     "position": 19,
+     "id": "dd6465a72513",
+     "url": "https://www.youtube.com/watch?v=A7bjrE7ZfoM",
+     "text": "Vince Cabansag of Clockwork Wins the Public Service Tekne Award 2026",
+     "section": "Briefly",
+     "heading_context": "[Vince Cabansag of Clockwork Wins the Public Service Tekne Award 2026](https://www.youtube.com/watch?v=A7bjrE7ZfoM)"
+    },
+    {
+     "position": 20,
+     "id": "450605c2377a",
+     "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+     "text": "Introducing Claude Whiteboards, Claude Sheets, and Claude Data",
+     "section": "Briefly",
+     "heading_context": "[Introducing Claude Whiteboards, Claude Sheets, and Claude Data](https://claude.com/resources/articles/sheets-whiteboards-data)"
+    },
+    {
+     "position": 21,
+     "id": "590a5a240408",
+     "url": "https://www.geeky-gadgets.com/sub-agents/",
+     "text": "5 Token-Saving Strategies to Keep Claude Pro Users Off the Max Plan",
+     "section": "Briefly",
+     "heading_context": "[5 Token-Saving Strategies to Keep Claude Pro Users Off the Max Plan](https://www.geeky-gadgets.com/sub-agents/)"
+    },
+    {
+     "position": 22,
+     "id": "2686ec1eaed7",
+     "url": "https://simonwillison.net/2026/Oct/29/api-credits/",
+     "text": "API credits benefit for eligible ChatGPT subscriptions",
+     "section": "Briefly",
+     "heading_context": "[API credits benefit for eligible ChatGPT subscriptions](https://simonwillison.net/2026/Oct/29/api-credits/)"
+    },
+    {
+     "position": 23,
+     "id": "4dbccf41c6d4",
+     "url": "https://www.macstories.net/linked/openai-adds-icloud-calendar-and-mail-plugins-and-dot-texting/",
+     "text": "OpenAI Adds iCloud Calendar and Mail Plugins and Dot Texting",
+     "section": "Briefly",
+     "heading_context": "[OpenAI Adds iCloud Calendar and Mail Plugins and Dot Texting](https://www.macstories.net/linked/openai-adds-icloud-calendar-and-mail-plugins-and-dot-texting/)"
+    },
+    {
+     "position": 24,
+     "id": "b5ca90629e66",
+     "url": "https://bernoff.com/blog/two-things-that-surprised-me-about-my-own-chatbot",
+     "text": "Two things that surprised me about my own chatbot",
+     "section": "Briefly",
+     "heading_context": "[Two things that surprised me about my own chatbot](https://bernoff.com/blog/two-things-that-surprised-me-about-my-own-chatbot)"
+    },
+    {
+     "position": 25,
+     "id": "7d78274dcd39",
+     "url": "https://anoma.ly/labs/bank/",
+     "text": "Bank · a tiny currency for your Slack",
+     "section": "Briefly",
+     "heading_context": "[Bank · a tiny currency for your Slack](https://anoma.ly/labs/bank/)"
+    },
+    {
+     "position": 26,
+     "id": "26fa2341aafa",
+     "url": "https://rouseclock.com/",
+     "text": "Rouse · The bedside alarm clock you build yourself",
+     "section": "Briefly",
+     "heading_context": "[Rouse · The bedside alarm clock you build yourself](https://rouseclock.com/)"
+    },
+    {
+     "position": 27,
+     "id": "7c1c9e826d50",
+     "url": "https://av.github.io/safe-sand/",
+     "text": "Sand | Hyper-Realistic Sand Simulator in Your Browser",
+     "section": "Briefly",
+     "heading_context": "[Sand | Hyper-Realistic Sand Simulator in Your Browser](https://av.github.io/safe-sand/)"
+    }
+   ]
   }
  ]
 }

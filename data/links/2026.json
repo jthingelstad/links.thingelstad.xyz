@@ -7781,100 +7781,102 @@
   "id": "66e2b7612f0e",
   "hash": "66e2b7612f0ec048dc7569d5b35e7d03",
   "url": "https://help.micro.blog/t/json-api-themes/4517",
-  "title": "ℹ️ JSON API: Themes - Documentation - Micro.blog Help Center",
+  "title": "JSON API: Themes - Documentation - Micro.blog Help Center",
   "note": "",
   "saved": "2026-10-30T05:32:51Z",
-  "tags": [],
+  "tags": [
+   "_exclude"
+  ],
   "toread": false,
-  "meta": "d85846a08f8b7b7af5626f0ca01c2815"
+  "meta": "6645753f0715e9362700e0e00e561196"
  },
  {
   "id": "2686ec1eaed7",
   "hash": "2686ec1eaed7b5a28fbbf2024a139538",
   "url": "https://simonwillison.net/2026/Oct/29/api-credits/",
   "title": "API credits benefit for eligible ChatGPT subscriptions",
-  "note": "",
+  "note": "I have higher end accounts with both ChatGPT and Claude so this new API credit benefit is actually a big win for me and I would guess many other folks on the high-end of hobby projects.",
   "saved": "2026-10-30T05:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "399c12d64485f1eab651c4c60918dbc7"
+  "meta": "b74e08869aaaf09ff47b92e00ff38f9b"
  },
  {
   "id": "a0c591335685",
   "hash": "a0c591335685a06d80efbd7ccc28069c",
   "url": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/",
   "title": "Building a multiplayer game world with autonomous Fable-class models",
-  "note": "",
+  "note": "Super interesting to see these AI created worlds. For gaming this is a huge opportunity. It makes me wonder how long until this comes to movies. Sci-fi will be first.",
   "saved": "2026-10-30T05:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "1886b09ece1e7ec50c66915201aebfd4"
+  "meta": "1849d3c6b63d4bdcdf44eae4dd5fc022"
  },
  {
   "id": "4dbccf41c6d4",
   "hash": "4dbccf41c6d484fd9f742a6da94c8b4b",
   "url": "https://www.macstories.net/linked/openai-adds-icloud-calendar-and-mail-plugins-and-dot-texting/",
   "title": "OpenAI Adds iCloud Calendar and Mail Plugins and Dot Texting",
-  "note": "",
+  "note": "iCloud support lags behind Google on all these tools. Glad to see it added here.",
   "saved": "2026-10-30T06:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "a3ca37750482858c64b5a98d3aa673ee"
+  "meta": "5ef3f4fa42dbc1941ff389de70845cac"
  },
  {
   "id": "3dd0acbbba9c",
   "hash": "3dd0acbbba9c8ce5d0c1065f9de3efcb",
   "url": "https://dagu.sh/",
   "title": "Dagu: Local-first workflow orchestration that just works",
-  "note": "",
+  "note": "I found Dagu via Claude with a bewildering prompt asking it to help me get a handle on all the jobs that were going on between various projects. Claude wanted to use `launchd` even more and I said \"No please, I find `launchd` impossible to deal with and have no visibility to it.\" Claude recommended Dagu and now I have hundreds of workflows in Dagu that are running several hundred times a day. It is amazing and is really easy to integrate into other tools as well. If you need a hobby or hobby-plus scale job management tool this is a wonderful one. Easy to install with Homebrew too!",
   "saved": "2026-11-02T02:10:34Z",
   "tags": [],
   "toread": false,
-  "meta": "7006555e45c7ea2eb5fcef47e08108bd"
+  "meta": "62afdaa41f6d27f51fc3ff0fb10a5b35"
  },
  {
   "id": "dd6465a72513",
   "hash": "dd6465a725131a001697e86f785f47fc",
   "url": "https://www.youtube.com/watch?v=A7bjrE7ZfoM",
   "title": "Vince Cabansag of Clockwork Wins the Public Service Tekne Award 2026",
-  "note": "",
+  "note": "I've got to know Vince through the MN Technology Advisory Council, where he is chair. It is great to see him getting this recognition!",
   "saved": "2026-11-02T04:11:07Z",
   "tags": [],
   "toread": false,
-  "meta": "516845317f81893e4334f109e4d5815d"
+  "meta": "12ce0290674a3f21477eeac6db64b137"
  },
  {
   "id": "14b39e2399e0",
   "hash": "14b39e2399e0e210557f35fc56f05829",
   "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
   "title": "Making it easier for websites to express AI training preferences",
-  "note": "",
+  "note": "I can tell you that on any given day about 10% of the traffic to all of my websites is from malicious actors, and then depending on the day about 30-40% is from crawlers. The web is full of robots these days. There are also a lot of folks, particularly in the IndieWeb space that are actively working to fight away bots and don't want anyone indexing their sites.\n\nI'm going the complete other way. I have open `robots.txt` on all my sites. I've adopted the `llms.txt` standard for nearly every site I have. I even have many of my sites publishing static JSON objects to make it easier for agents and other code to interface with them. Check out the [full LLMs.txt for my Things I've Built](https://thingelstad.xyz/llms-full.txt).\n\nMy plan is to lean into discoverability. Lean into what I think of as the true sharing nature of the web. Regardless of who or _what_ is on the other side.",
   "saved": "2026-11-02T04:13:55Z",
   "tags": [],
   "toread": false,
-  "meta": "94237bf5bc7f8815b27fea01543414fe"
+  "meta": "8f319ef3b8dc00b2a811f44041aa1252"
  },
  {
   "id": "64b539777c9b",
   "hash": "64b539777c9b52d3f1618a43239fce43",
   "url": "https://openai.com/index/scaling-git-at-openai",
   "title": "Scaling Git at OpenAI",
-  "note": "",
+  "note": "Thankfully we have `git`. For those of us that have been around long enough to remember earlier version control systems we can imagine how miserably they would have failed with agents. But at agent speed even `git` may not get there.",
   "saved": "2026-11-03T10:04:25Z",
   "tags": [],
   "toread": false,
-  "meta": "d3cd9de7bff7629a31297458314ebbc5"
+  "meta": "ec009cb9113d50221de52816ef0f8915"
  },
  {
   "id": "b5ca90629e66",
   "hash": "b5ca90629e6637465487a033072e7fea",
   "url": "https://bernoff.com/blog/two-things-that-surprised-me-about-my-own-chatbot",
   "title": "Two things that surprised me about my own chatbot",
-  "note": "",
+  "note": "This one made me chuckle a bit. Some folks have had similar conversations with [Thingy](https://thingy.thingelstad.com).",
   "saved": "2026-11-03T11:04:24Z",
   "tags": [],
   "toread": false,
-  "meta": "f286a12ae879f074a37e5e4a327868c9"
+  "meta": "62cd12cf9e1ac8f5fa873d8aadedf988"
  },
  {
   "id": "757a13a52bcc",
@@ -7883,64 +7885,66 @@
   "title": "What H3C brings to Makers",
   "note": "",
   "saved": "2026-11-04T10:34:25Z",
-  "tags": [],
+  "tags": [
+   "_exclude"
+  ],
   "toread": false,
-  "meta": "019aef68eed9f2b8234d8817eac1b259"
+  "meta": "0e9832fb09ec90d13587b07b465dbd7b"
  },
  {
   "id": "e3f16d29e1e1",
   "hash": "e3f16d29e1e1d3e593dfa3c44e6f7003",
   "url": "https://blog.bambulab.com/tool-changer-game-changer-bambu-lab-presents-h3c-the-defining-new-generation-of-3d-printers/",
-  "title": "Tool changer. Game changer. Bambu Lab presents H3C - the defining new generation of 3D printers",
-  "note": "",
+  "title": "Tool changer. Game changer. Bambu Lab presents H3C",
+  "note": "I've learned a lot about 3D printers since we got the Bambu P2S. The next big change with printers is going to be \"tool changers\" and this newest model from Bambu looks incredible. This [article on things you can do with it](https://blog.bambulab.com/what-h3c-brings-to-makers/) is a great rundown of what can be done with these more advanced printers. Will tool changers make printers capable enough to get wider adoption? Maybe but cost is still really high.",
   "saved": "2026-11-04T10:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "6e72c826a602301f64b3d7269cb79b4d"
+  "meta": "edac10af74b5be772641706cd3286437"
  },
  {
   "id": "edd636154b97",
   "hash": "edd636154b97a947d88da9aa41d6fe5c",
   "url": "https://mntech.org/2026-tekne-award-winners/",
   "title": "2026 Tekne Award Winners",
-  "note": "",
+  "note": "Congrats to all the 2026 Tekne Award winners!",
   "saved": "2026-11-04T18:04:25Z",
   "tags": [],
   "toread": false,
-  "meta": "61be700971794eeed18fd587089f3b1a"
+  "meta": "383a22060d46a1d2d1f1624786634c97"
  },
  {
   "id": "963549c06b25",
   "hash": "963549c06b2599107cb9d98c11a593e4",
   "url": "https://www.svpg.com/ai-and-the-future-of-the-product-role/",
   "title": "AI and the Future of the Product Role",
-  "note": "",
+  "note": "AI is impacting the \"future\" definition of many roles. And if you aren't as close to this future means about tomorrow. This is all happening incredibly fast. Agents can help us with a lot when it comes to **building** things. They can even help with figuring out what you want to build. However I do think there is still something like \"art\" here. A sculptor chiseling away at a piece of stone to understand what the stone wants to be. Just because you can create code fast doesn't mean you can figure out what that code wants to be.\n\n> The primary responsibility of an empowered team product manager is to help _discover a solution that will solve the problem and achieve the outcome_.  In order to do this, the product team needs a cross-functional range of skills.\n\nI have a project I believe only now after about six months I've figured out what \"it\" wants to be. Crazy enough there is no way I could have discovered that by building it before. It would have been incredibly expensive. But now we can discover by experiencing it. This does change fundamentally how we think of product discovery. I actually think it is a whole team thing, not just something handed to the folks with the \"product\" title. \n\n> So long as the bottleneck is no longer product delivery, I expect the focus will necessarily be on the skills and techniques to determine the right product to build – the craft of product discovery.  And I expect this will continue to increase the demand for people with this knowledge and skills.\n\nI really want to see folks using the term \"building\". Building is the thing that we need and it is the thing that is a superpower with AI. In fact, there are plenty of product people that are not builders. You don't have to be a builder to continue a product that has been around for a few years. \n\nBut to take something from nothing to something. That is building. And that is what we need more of. I really don't care if that is called \"product\" or \"developer\" or whatever it is.",
   "saved": "2026-11-07T17:04:25Z",
   "tags": [],
   "toread": false,
-  "meta": "04cf19a41b0a03f91a3b457ab074d296"
+  "meta": "41b397b79b59f471fa5439366e3166c3"
  },
  {
   "id": "90b9a34769f8",
   "hash": "90b9a34769f8c63e341c256aa8134663",
   "url": "https://www.anthropic.com/research/components-of-agent-memory",
   "title": "The components of agent memory",
-  "note": "",
+  "note": "Agents need memory in order to know what they have done and how they have worked with you over time. Memory gets increasingly more sophisticated as the models get more sophisticated. This article does a good job going through the foundation elements and then the density of memory storage. I wasn't expecting so many \"dreaming\" references but the way that we use REM sleep to organize in our memory we can use LLM cycles when an agent is offline to organize and optimize memories. \n\n> When Claude writes memory notes, it sees only the context in _that_ particular session. Dreaming can search across many sessions to find common patterns or correct common mistakes.\n\nAs a fan of wikis I love how wiki structure is highlighted here.",
   "saved": "2026-11-08T02:04:25Z",
   "tags": [],
   "toread": false,
-  "meta": "39206e78d44ab331b1bdcfa7a81394e9"
+  "meta": "ae91cf54adfa1de561840f9d4b496526"
  },
  {
   "id": "30e6dc65e337",
   "hash": "30e6dc65e337d40db5232bd882201f6a",
   "url": "https://www.oneusefulthing.org/p/fable-52-and-jagged-agi",
   "title": "Fable 5.2 and Jagged AGI",
-  "note": "",
+  "note": "Mollick has written some fabulous books on AI that I think are must reads for nearly anybody. These examples he shares of Fable 5.2 are good outlines of the cutting edge of AI today. I was inspired to try a couple of prompts from seeing this.",
   "saved": "2026-11-10T09:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "3ec6dca8372fb02da353c19907c4a851"
+  "meta": "0512dc965aecb657cd81dcd38a9a9337"
  },
  {
   "id": "7b0bf1515c02",
@@ -7949,42 +7953,44 @@
   "title": "Better feedback for building with agents | AWS Insights",
   "note": "",
   "saved": "2026-11-12T15:52:22Z",
-  "tags": [],
+  "tags": [
+   "_exclude"
+  ],
   "toread": false,
-  "meta": "56978275461e8174bb5386893b0fb0a6"
+  "meta": "da2d1499cda81cf96ccc4c85bbe3720c"
  },
  {
   "id": "f500921cfcf0",
   "hash": "f500921cfcf088f63df2d989766a94c1",
   "url": "https://tcbmag.com/minneapolis-skyways-need-a-better-map/",
   "title": "Minneapolis Skyways Need a Better Map",
-  "note": "",
+  "note": "This is a lovely visual that is badly needed.",
   "saved": "2026-11-13T02:04:25Z",
   "tags": [],
   "toread": false,
-  "meta": "afbfb97c991fa0424da5c12971d930c0"
+  "meta": "13ad0af5b070f16ac9af9b72a7cd0331"
  },
  {
   "id": "82481ed31c2e",
   "hash": "82481ed31c2e32eb04ed6e7c5ee6668e",
   "url": "https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html",
-  "title": "AWS Emulator and the engineer's job when agents write the code | All Things Distributed",
-  "note": "",
+  "title": "AWS Emulator and the engineer's job when agents write the code",
+  "note": "This is super interesting for a few different reasons. Let me give you my read. \n\n1. It isn't disclosed but a huge amount of AWS usage must be agents at this time.\n2. Agents need cheap ways to make mistakes.\n3. AWS [built this using swarms of agents](https://www.aboutamazon.com/news/aws/how-autonomous-ai-agents-built-aws-emulator) committing very fast.\n\nIf you are reading this and you have never logged into something like the AWS console imagine an incredibly powerful tool surface with hundreds of products and incredible complexity. I'm pretty technical, and there is no way I can make my way around in the depths of AWS. However, Claude has changed all that. I have now moved nearly every project I run to AWS. Every website I have runs through it. There is no way I could have done this before but Claude knows AWS super well and can manage it. I'm not unique. I'm sure that a huge amount of AWS usage is now a coding agent on the other side. It will be great for them to use an emulator for the entire cloud to test.\n\nWhen agents are testing today they have to do it in AWS. With this emulator AWS is both reducing the time and risk of a mistake, but also making it cheaper for them. Nothing real is happening during those tests. They can simply shunt some percent of API calls to the emulator running on your laptop. That is a big win for them.\n\nLastly the story of how this was built by hundreds (thousands?) of agents working in parallel is mind blowing.",
   "saved": "2026-11-13T02:16:47Z",
   "tags": [],
   "toread": false,
-  "meta": "068614758708c6d72ec46526fc5b14ea"
+  "meta": "8cec9ccc973c45180ebe22fb9ee45cbe"
  },
  {
   "id": "450605c2377a",
   "hash": "450605c2377aa13e347edc249a5cc05a",
   "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
   "title": "Introducing Claude Whiteboards, Claude Sheets, and Claude Data",
-  "note": "",
+  "note": "There is a huge need to bring Claude into more collaboration spaces in companies. I'm glad to see them getting to this, the need is very real. They also now have [Claude Meetings](https://claude.com/resources/articles/claude-meetings).",
   "saved": "2026-11-13T02:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "050b9f15b9febe245e7fc0af8dd026a2"
+  "meta": "5011002298b895aee7d331e395e8a59d"
  },
  {
   "id": "690a44c21f9e",
@@ -7993,53 +7999,55 @@
   "title": "Introducing Claude Meetings",
   "note": "",
   "saved": "2026-11-13T02:34:25Z",
-  "tags": [],
+  "tags": [
+   "_exclude"
+  ],
   "toread": false,
-  "meta": "4094a9d89602785f34e6f00907b594d3"
+  "meta": "e536dff8e3e881a947a2e5b3176e4a52"
  },
  {
   "id": "c65c16754ea5",
   "hash": "c65c16754ea56ea138ff59b56ccb8795",
   "url": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
   "title": "Quoting Prompting Claude Fable 5.2",
-  "note": "",
+  "note": "I've given this \"You are the owner and long-term maintainer of this codebase, and its design is up to you.\" prompt to Claude in a number of my projects now. It is great how it changes its perspective on the code and leans on its own judgement more.",
   "saved": "2026-11-13T02:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "c9fb20669f579b4d3cca8de22ff1c5a9"
+  "meta": "710f243890a5b6c9da0c956d6da77cd4"
  },
  {
   "id": "cd21f33e2e3d",
   "hash": "cd21f33e2e3d647f789b06f5612e02a1",
   "url": "https://krebsonsecurity.com/2026/11/microsoft-fixes-nearly-1100-security-vulnerabilities/",
   "title": "Microsoft Fixes Nearly 1,100 Security Vulnerabilities",
-  "note": "",
+  "note": "The rate of vulnerabilities being identified and fixed is up 400% recently. Update all your stuff all the time.",
   "saved": "2026-11-13T02:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "269e70c456dfc8a097c8e4ac890f9444"
+  "meta": "87a094422dc19ea3977e3fca1cfbcc58"
  },
  {
   "id": "7d78274dcd39",
   "hash": "7d78274dcd3981be87630570dabbd28e",
   "url": "https://anoma.ly/labs/bank/",
   "title": "Bank · a tiny currency for your Slack",
-  "note": "",
+  "note": "Fun little way to send something around in Slack. The crypto part of me wants to highlight that this could be easily done with Bitcoin Lightning or any of a number of Ethereum tokens and be even better.",
   "saved": "2026-11-13T02:51:35Z",
   "tags": [],
   "toread": false,
-  "meta": "2cf79981e85a11e371c27998a5504fbb"
+  "meta": "b2bc4779cf8fff9a0e6714d1e8583045"
  },
  {
   "id": "0b3f875d0d42",
   "hash": "0b3f875d0d4294f94e58a39c74ba41ae",
   "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
   "title": "Apple has new Mac app coming to make running local AI models easy - 9to5Mac",
-  "note": "",
+  "note": "I'm going to continue to go on the record that I think Apple has a unique advantage because of their power per watt and local LLM processing. They control the design of the Apple Silicon chips and they are the only company I can think of that has a real chance to sell a machine I can put on a normal outlet, in a normal room in a house, and produce a reasonable amount of local LLM token generation. I fully expect within two to three years I will be generating a significant amount of my own LLM tokens in my own property with a capital investment instead of paying by the drink for a frontier model. Apple building special software to make that even easier makes a ton of sense.\n\n_As an aside it is ironic that the company who has the most sordid history with AI specifically because of Siri has the most potential for the silicon to run models economically for regular consumers._",
   "saved": "2026-11-13T03:04:25Z",
   "tags": [],
   "toread": false,
-  "meta": "60faf73733bef06cf2a4ea3bdc53941c"
+  "meta": "4aa2782a06ad1cb9b2dbdb682367e949"
  },
  {
   "id": "5332af4a4cfe",
@@ -8048,42 +8056,44 @@
   "title": "After 7-months, Glasswing Overwelms Maintainers with Underwhelming Findings | Blog | VulnCheck",
   "note": "",
   "saved": "2026-11-13T03:04:25Z",
-  "tags": [],
+  "tags": [
+   "_exclude"
+  ],
   "toread": false,
-  "meta": "955b22f742df2d5632f6217296c5b89d"
+  "meta": "2a81f124f6a409dce74ffb518d42f0c1"
  },
  {
   "id": "26fa2341aafa",
   "hash": "26fa2341aafa4eec40c88291e5e0235c",
   "url": "https://rouseclock.com/",
   "title": "Rouse · The bedside alarm clock you build yourself",
-  "note": "",
+  "note": "I love this kind of kit that allows you to print and build your own products.",
   "saved": "2026-11-13T03:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "ac38bf7d8895e195212bc269d3cdf68f"
+  "meta": "aa7e9d25f873d9ffbaae490c90bae783"
  },
  {
   "id": "590a5a240408",
   "hash": "590a5a2404087522957e94abb6f0ff19",
   "url": "https://www.geeky-gadgets.com/sub-agents/",
   "title": "5 Token-Saving Strategies to Keep Claude Pro Users Off the Max Plan",
-  "note": "",
+  "note": "Always good to get fresh strategies for token efficiency. My personal favorite is to just ask Claude every couple weeks what I could do better.",
   "saved": "2026-11-13T03:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "77eb6ffe2411f52358508c559b330168"
+  "meta": "cd6f54c60acfc40ae2c2a28235baafa5"
  },
  {
   "id": "7c1c9e826d50",
   "hash": "7c1c9e826d50ca96cc396f1a3f122b7c",
   "url": "https://av.github.io/safe-sand/",
   "title": "Sand | Hyper-Realistic Sand Simulator in Your Browser",
-  "note": "",
+  "note": "I find this oddly mesmerizing to play with.",
   "saved": "2026-11-13T03:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "2c33663f30d13fb80390576786ee3a21"
+  "meta": "f52b90dc0c3e803791755ef8f9122d2f"
  },
  {
   "id": "a5f23dd24d67",
@@ -8092,9 +8102,11 @@
   "title": "Goldman Sachs Is Pulling Claude Code From Its Bankers and Traders | State of AI",
   "note": "",
   "saved": "2026-11-13T03:34:25Z",
-  "tags": [],
+  "tags": [
+   "_exclude"
+  ],
   "toread": false,
-  "meta": "88163cc6e5a9e951ef0906002203fac9"
+  "meta": "8091fa1ca1556eaf9a71947e8b28acfc"
  },
  {
   "id": "c1c6fd7608bb",
@@ -8103,64 +8115,66 @@
   "title": "Impeccable: The missing upgrade to Anthropic's frontend-design skill",
   "note": "",
   "saved": "2026-11-13T04:04:25Z",
-  "tags": [],
+  "tags": [
+   "_exclude"
+  ],
   "toread": false,
-  "meta": "31d7b29d1aae09d14be04b4f25ec77fe"
+  "meta": "9b59b518c17f713875b86e700facfaa0"
  },
  {
   "id": "1a2e7b073314",
   "hash": "1a2e7b0733140d14b0098f7ccaaaaa1e",
   "url": "https://mcp-explained.com/",
   "title": "how the Model Context Protocol works",
-  "note": "",
+  "note": "Good technical explainer for a very important protocol.",
   "saved": "2026-11-13T04:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "178d114f74fc4553e5b9e6eab1d02819"
+  "meta": "1b916887ec9fc7e380bdb351b8d4d011"
  },
  {
   "id": "2725c84973fe",
   "hash": "2725c84973fe20d6fe5c250c4cb925c0",
   "url": "https://ftrain.com/aboard-the-web-is-more-than-enough",
   "title": "The Web Is More Than Enough",
-  "note": "",
+  "note": "I grew up with the web and it is my native platform. The web has transformed so much, and frankly modern browsers are incredible. \n\n> And on and on. The web is really the greatest distribution platform imaginable right now. It’s inherently multilingual—I released TinyLittleOffice in 21 languages (the most common NYC ones, which is why it has Creole and Yiddish), with lots of infrastructure for accessibility. Plus, of course, JavaScript is a full-featured programming language, and HTML can represent most things a document can do on a computer; if you need something more old-school, PDF.js lets you deal with PDFs in the browser. I think you can even hyphenate text reliably these days, although I refuse to believe it.\n\nI love what the web enables us to do.",
   "saved": "2026-11-13T04:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "ffc52f82d315482b5f3f8558ee9d7607"
+  "meta": "0f41fd0769c05aad0d1655614853fbcf"
  },
  {
   "id": "4175c3082fb2",
   "hash": "4175c3082fb2e37741cff4b45fc839eb",
   "url": "https://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html",
   "title": "Writing as a thinking tool",
-  "note": "",
+  "note": "I have shared many times that I think writing is thinking. Also, one of the many reasons I write this email every week is to become a better writer. Writing makes you a better writer. I also believe firmly that when I write it is my words. Even with my ample enthusiasm for what AI enables, I don't want it to write for me because I think that is starving me of my own creative process and critical thinking.\n\n> This is a real problem, and [it seems to be spreading quickly.](https://alifeengineered.substack.com/p/on-the-death-of-amazons-writing-culture) We have been celebrating Amazon's six-pager as a great example of writing-for-thinking. Bezos had said: \"There is no way to write a six-page, narratively structured memo and not have clear thinking.\" Unfortunately, with LLMs, that sentence has stopped being true. You can now produce six pages with no thinking at all, and the six pages still look like evidence that the thinking happened.\n\nI have tried to find ways to have an LLM \"assist me\" in writing and I haven't found one. Once you see something, you cannot unsee it. The structure that comes from a \"preview from AI\", at least for me, then forms how I think about the thing no matter what. \n\nSo I still am engaging with my brain first. I'm happy to get editorial feedback from AI on my writing, and there are some places where the writing really isn't personal or important and I can do something different. But when you are learning you aren't really learning if it isn't your brain doing the reps.",
   "saved": "2026-11-13T04:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "29cb072f8dbce7d2e1625fbfbdd98968"
+  "meta": "09c026f7ae146f72133e2789945785c5"
  },
  {
   "id": "592fc4198e88",
   "hash": "592fc4198e88297f341343cc6c639139",
   "url": "https://isaacus.com/blog/what-are-vector-embeddings",
-  "title": "What are vector embeddings? An interactive guide - Isaacus",
-  "note": "",
+  "title": "What are vector embeddings? An interactive guide",
+  "note": "Good explainer with visuals on how vectors actually work. You can see the [front page of my Linking Things](https://links.thingelstad.xyz) site to see vectors for 16,000 bookmarks I've kept.",
   "saved": "2026-11-13T04:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "f6838caf5473c5aca80c5ecbc42f24fc"
+  "meta": "ea698dfc0822a96b2a1c36d491227e4a"
  },
  {
   "id": "9e37643e5fed",
   "hash": "9e37643e5fedd0ba151ba0800d49998b",
   "url": "https://palettevault.github.io/blog/ai-development-2026/",
   "title": "How AI Is Changing Software Development in 2026",
-  "note": "",
+  "note": "It is hard to explain to folks outside of technology how drastic the changes have been in the last year. If you know anyone even remotely close to software development know that their craft has been completely reinvented. It is both exciting and exhausting.",
   "saved": "2026-11-13T04:34:25Z",
   "tags": [],
   "toread": false,
-  "meta": "1136ce76737a3df17365d402494a5106"
+  "meta": "92b8da423688eab63d1b7817a3c03017"
  },
  {
   "id": "f2c341f78a69",
@@ -8169,8 +8183,10 @@
   "title": "Proton's CTO wrote a manifesto for the AI coding age. It struck a nerve with engineers.",
   "note": "",
   "saved": "2026-11-13T04:34:25Z",
-  "tags": [],
+  "tags": [
+   "_exclude"
+  ],
   "toread": false,
-  "meta": "a3d460d29202a945c6eab380bdaa6069"
+  "meta": "4ed9b29b8c51dd8a6ed53ef6604cf8ee"
  }
 ]
