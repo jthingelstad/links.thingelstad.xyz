@@ -13813,6 +13813,39 @@
    "webmention": null
   }
  },
+ "ductus.sorenblank.com": {
+  "checked": "2026-11-17T06:30:53Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.54.183",
+    "172.67.141.8"
+   ],
+   "aaaa": [
+    "2606:4700:3030::ac43:8d08",
+    "2606:4700:3033::6815:36b7"
+   ],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-17T06:30:53Z",
+   "title": "Ductus · Your handwriting, as a font",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "duluthnewstribune.com": {
   "checked": "2026-10-26T06:23:11Z",
   "method": "enrich_hosts",

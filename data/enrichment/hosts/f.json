@@ -420,6 +420,42 @@
    "webmention": null
   }
  },
+ "facetypes.xyz": {
+  "checked": "2026-11-17T06:30:55Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "104.21.59.189",
+    "172.67.182.115"
+   ],
+   "aaaa": [
+    "2606:4700:3031::6815:3bbd",
+    "2606:4700:3032::ac43:b673"
+   ],
+   "cname": null,
+   "ns": [
+    "johnny.ns.cloudflare.com",
+    "teagan.ns.cloudflare.com"
+   ],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-17T06:30:55Z",
+   "title": "FaceTypes · Free and open-source, hand-picked fonts",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "fadingred.com": {
   "checked": "2026-10-26T06:56:02Z",
   "method": "enrich_hosts",
