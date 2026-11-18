@@ -6252,6 +6252,47 @@
    "webmention": "https://micro.blog/webmention"
   }
  },
+ "foss.life": {
+  "checked": "2026-11-18T06:31:24Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "95.217.237.55"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.hguy.co",
+    "ns2.hguy.co",
+    "ns3.hguy.co"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-18T06:31:24Z",
+   "title": "Code, Freedom, & Life - foss.life",
+   "generator": "Astro v5.13.7",
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [
+    "https://social.glitched.systems/@axel",
+    "https://foss.life/",
+    "https://foss.life/blog",
+    "https://git.glitched.systems/axel?tab=activity",
+    "https://github.com/AxelSilverdew",
+    "https://twitch.tv/AxelSilverdew",
+    "https://www.linkedin.com/in/abhiram-kuchibhotla"
+   ],
+   "webmention": null
+  }
+ },
  "fotoforensics.com": {
   "checked": "2026-10-27T05:36:38Z",
   "method": "enrich_hosts",

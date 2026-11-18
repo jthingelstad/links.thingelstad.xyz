@@ -5864,6 +5864,36 @@
    "webmention": null
   }
  },
+ "allo.joshpuckett.me": {
+  "checked": "2026-11-18T06:31:21Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "216.150.1.1",
+    "216.150.16.1"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [],
+   "mx": false
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-18T06:31:21Z",
+   "title": "Allo, your friendly neighborhood font",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "allthingsd.com": {
   "checked": "2026-10-24T05:46:35Z",
   "method": "enrich_hosts",

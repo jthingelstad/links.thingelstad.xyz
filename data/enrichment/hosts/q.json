@@ -1194,6 +1194,39 @@
    "webmention": null
   }
  },
+ "qwen.ai": {
+  "checked": "2026-11-18T06:31:29Z",
+  "method": "enrich_hosts",
+  "version": 2,
+  "dns": {
+   "resolves": true,
+   "a": [
+    "139.95.10.165",
+    "139.95.10.252"
+   ],
+   "aaaa": [],
+   "cname": null,
+   "ns": [
+    "ns1.alibabadns.com",
+    "ns2.alibabadns.com"
+   ],
+   "mx": true
+  },
+  "https": {
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
+  },
+  "home": {
+   "checked": "2026-11-18T06:31:29Z",
+   "title": "Qwen",
+   "generator": null,
+   "feeds": [],
+   "hcard": false,
+   "rel_me": [],
+   "webmention": null
+  }
+ },
  "qz.com": {
   "checked": "2026-10-24T01:46:47Z",
   "method": "enrich_hosts",
