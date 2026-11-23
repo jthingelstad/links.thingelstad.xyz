@@ -77,7 +77,7 @@
   }
  },
  "gabrielweinberg.com": {
-  "checked": "2026-10-24T06:27:43Z",
+  "checked": "2026-11-23T07:28:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -95,7 +95,7 @@
     "dns1.registrar-servers.com",
     "dns2.registrar-servers.com"
    ],
-   "mx": true
+   "mx": false
   },
   "https": {
    "reachable": true,
@@ -103,7 +103,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:27:43Z",
+   "checked": "2026-11-23T07:28:28Z",
    "title": "Gabriel Weinberg | yegg | Substack",
    "generator": null,
    "feeds": [
@@ -419,14 +419,14 @@
   }
  },
  "gapingvoid.com": {
-  "checked": "2026-10-24T06:27:45Z",
+  "checked": "2026-11-23T07:28:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "216.150.1.1",
-    "216.150.16.1"
+    "216.150.1.193",
+    "216.150.16.193"
    ],
    "aaaa": [],
    "cname": null,
@@ -442,7 +442,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:27:45Z",
+   "checked": "2026-11-23T07:28:30Z",
    "title": "Gapingvoid — Culture Design Group",
    "generator": null,
    "feeds": [],
@@ -611,7 +611,7 @@
   }
  },
  "garrickvanburen.com": {
-  "checked": "2026-10-24T05:30:16Z",
+  "checked": "2026-11-23T06:32:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -636,9 +636,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:30:16Z",
-   "title": "Garrick van Buren - Finding what's forgotten.",
-   "generator": "WordPress 7.1.3",
+   "checked": "2026-11-23T06:32:22Z",
+   "title": "Garrick van Buren - I am finite. Though, sometimes I forget.",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -712,7 +712,7 @@
   }
  },
  "gartner.com": {
-  "checked": "2026-10-24T06:27:48Z",
+  "checked": "2026-11-23T07:28:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -741,7 +741,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:27:48Z",
+   "checked": "2026-11-23T07:28:33Z",
    "title": "Gartner | Delivering Actionable, Objective Insight to Executives and Their Teams",
    "generator": null,
    "feeds": [],
@@ -861,7 +861,7 @@
   }
  },
  "gatesnotes.com": {
-  "checked": "2026-10-24T05:35:10Z",
+  "checked": "2026-11-23T06:36:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -886,7 +886,7 @@
    "error": "tls: unable to get local issuer certificate"
   },
   "home": {
-   "checked": "2026-10-24T05:35:10Z",
+   "checked": "2026-11-23T06:36:58Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -956,7 +956,7 @@
   }
  },
  "gawker.com": {
-  "checked": "2026-10-24T05:44:18Z",
+  "checked": "2026-11-23T06:45:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -980,7 +980,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:44:18Z",
+   "checked": "2026-11-23T06:45:57Z",
    "title": "Gawker | The Website",
    "generator": null,
    "feeds": [],
@@ -1216,7 +1216,7 @@
   }
  },
  "gearthblog.com": {
-  "checked": "2026-10-24T06:07:15Z",
+  "checked": "2026-11-23T07:07:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1238,9 +1238,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:07:15Z",
+   "checked": "2026-11-23T07:07:44Z",
    "title": "Google Earth Blog - The amazing things about Google Earth",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -1477,7 +1477,7 @@
   }
  },
  "geekwire.com": {
-  "checked": "2026-10-24T06:27:52Z",
+  "checked": "2026-11-23T07:28:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1503,9 +1503,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:27:52Z",
+   "checked": "2026-11-23T07:28:37Z",
    "title": "GeekWire – Breaking News in Technology & Business",
-   "generator": "Site Kit by Google 1.189.0",
+   "generator": "Site Kit by Google 1.191.0",
    "feeds": [
     {
      "type": "rss",
@@ -1760,7 +1760,7 @@
   }
  },
  "geni.com": {
-  "checked": "2026-10-24T06:27:54Z",
+  "checked": "2026-11-23T07:28:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1785,7 +1785,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:27:54Z",
+   "checked": "2026-11-23T07:28:38Z",
    "title": "Join the World Family Tree - Geni.com",
    "generator": null,
    "feeds": [],
@@ -2591,16 +2591,16 @@
   }
  },
  "getchef.com": {
-  "checked": "2026-10-24T06:27:57Z",
+  "checked": "2026-11-23T07:28:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "52.84.127.35",
-    "52.84.127.88",
-    "52.84.127.108",
-    "52.84.127.116"
+    "99.86.77.32",
+    "99.86.77.34",
+    "99.86.77.41",
+    "99.86.77.76"
    ],
    "aaaa": [],
    "cname": null,
@@ -2618,7 +2618,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:27:57Z",
+   "checked": "2026-11-23T07:28:41Z",
    "title": "DevOps Automation & Infrastructure Management Software | Chef",
    "generator": null,
    "feeds": [],
@@ -3187,7 +3187,7 @@
   }
  },
  "getoutline.org": {
-  "checked": "2026-10-24T06:28:01Z",
+  "checked": "2026-11-23T07:28:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3213,7 +3213,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:28:01Z",
+   "checked": "2026-11-23T07:28:45Z",
    "title": "Outline",
    "generator": "Docusaurus v3.9.2",
    "feeds": [],
@@ -3300,14 +3300,14 @@
   }
  },
  "getsatisfaction.com": {
-  "checked": "2026-10-24T06:28:03Z",
+  "checked": "2026-11-23T07:28:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "44.239.76.122",
-    "52.33.167.172"
+    "52.42.158.252",
+    "54.149.108.107"
    ],
    "aaaa": [],
    "cname": null,
@@ -3325,7 +3325,7 @@
    "status": 503
   },
   "home": {
-   "checked": "2026-10-24T06:28:03Z",
+   "checked": "2026-11-23T07:28:47Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3559,7 +3559,7 @@
   }
  },
  "getstream.io": {
-  "checked": "2026-10-24T06:28:27Z",
+  "checked": "2026-11-23T07:29:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3586,8 +3586,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:28:27Z",
-   "title": "Scalable Chat, Video & Activity Feed APIs and SDKs | Stream",
+   "checked": "2026-11-23T07:29:11Z",
+   "title": "Stream: Chat, Video, Feeds & Moderation APIs and SDKs",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -3596,7 +3596,7 @@
   }
  },
  "gettingthingsdone.com": {
-  "checked": "2026-10-24T05:41:47Z",
+  "checked": "2026-11-23T06:43:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3624,9 +3624,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:41:47Z",
+   "checked": "2026-11-23T06:43:33Z",
    "title": "Getting Things Done® - David Allen's GTD® Methodology",
-   "generator": "Elementor 4.3.5; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto",
+   "generator": "Elementor 4.4.1; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto",
    "feeds": [
     {
      "type": "rss",
@@ -3648,8 +3648,20 @@
    "rel_me": [],
    "webmention": null
   },
-  "rdap": null,
-  "rdap_error": "refused: rdap.verisign.com: network: Broken pipe"
+  "rdap": {
+   "domain": "gettingthingsdone.com",
+   "registrar": "Network Solutions, LLC",
+   "registered": "1999-11-15",
+   "expires": "2028-11-15",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "gina.ns.cloudflare.com",
+    "theo.ns.cloudflare.com"
+   ],
+   "checked": "2026-11-23T06:43:33Z"
+  }
  },
  "getvegucated.com": {
   "checked": "2026-10-27T05:45:33Z",
@@ -3718,7 +3730,7 @@
   }
  },
  "getworksimple.com": {
-  "checked": "2026-10-24T06:28:30Z",
+  "checked": "2026-11-23T07:29:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3744,7 +3756,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:28:30Z",
+   "checked": "2026-11-23T07:29:13Z",
    "title": "Technology Wallpaper",
    "generator": null,
    "feeds": [],
@@ -3928,7 +3940,7 @@
   }
  },
  "ghostery.com": {
-  "checked": "2026-10-24T06:28:31Z",
+  "checked": "2026-11-23T07:29:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3955,7 +3967,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:28:31Z",
+   "checked": "2026-11-23T07:29:14Z",
    "title": "Ghostery Ad Blocker | Best Free Ad Blocker & Privacy Tool | Ghostery",
    "generator": null,
    "feeds": [],
@@ -4298,7 +4310,7 @@
   }
  },
  "ginandtacos.com": {
-  "checked": "2026-10-24T05:44:21Z",
+  "checked": "2026-11-23T06:46:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4322,7 +4334,7 @@
    "error": "tls: self-signed certificate"
   },
   "home": {
-   "checked": "2026-10-24T05:44:21Z",
+   "checked": "2026-11-23T06:46:00Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4416,13 +4428,13 @@
   }
  },
  "gist.github.com": {
-  "checked": "2026-10-24T05:52:24Z",
+  "checked": "2026-11-23T06:53:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "140.82.114.4"
+    "140.82.112.3"
    ],
    "aaaa": [],
    "cname": "github.com",
@@ -4435,7 +4447,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:52:24Z",
+   "checked": "2026-11-23T06:53:42Z",
    "title": "Discover gists · GitHub",
    "generator": null,
    "feeds": [
@@ -4584,7 +4596,7 @@
   }
  },
  "github.blog": {
-  "checked": "2026-10-24T05:33:43Z",
+  "checked": "2026-11-23T06:35:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4608,9 +4620,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:33:43Z",
+   "checked": "2026-11-23T06:35:36Z",
    "title": "Home - The GitHub Blog",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -4707,7 +4719,7 @@
   }
  },
  "githubengineering.com": {
-  "checked": "2026-10-24T05:49:37Z",
+  "checked": "2026-11-23T06:51:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4739,7 +4751,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:49:37Z",
+   "checked": "2026-11-23T06:51:06Z",
    "title": "GitHub Engineering | The Blog of the GitHub Engineering Team",
    "generator": "Jekyll v3.9.0",
    "feeds": [
@@ -5150,7 +5162,7 @@
   }
  },
  "gizmodo.com": {
-  "checked": "2026-10-24T05:30:19Z",
+  "checked": "2026-11-23T06:32:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5178,7 +5190,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:30:19Z",
+   "checked": "2026-11-23T06:32:24Z",
    "title": "Gizmodo | The Future Is Here",
    "generator": null,
    "feeds": [
@@ -5516,7 +5528,7 @@
   }
  },
  "glyph.twistedmatrix.com": {
-  "checked": "2026-10-24T06:28:34Z",
+  "checked": "2026-11-23T07:29:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5535,7 +5547,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:28:34Z",
+   "checked": "2026-11-23T07:29:18Z",
    "title": "Deciphering Glyph :: index",
    "generator": null,
    "feeds": [
@@ -5690,7 +5702,7 @@
   }
  },
  "gnosis.io": {
-  "checked": "2026-10-24T06:28:37Z",
+  "checked": "2026-11-23T07:29:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5715,9 +5727,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:28:37Z",
+   "checked": "2026-11-23T07:29:22Z",
    "title": "Gnosis — Re-engineering finance for human agency and access",
-   "generator": "Framer 166c212",
+   "generator": "Framer ea0ac43",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -6425,7 +6437,7 @@
   }
  },
  "goldenhillsoftware.com": {
-  "checked": "2026-10-24T05:52:29Z",
+  "checked": "2026-11-23T06:53:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6452,7 +6464,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:52:29Z",
+   "checked": "2026-11-23T06:53:47Z",
    "title": "Unread: An RSS Reader",
    "generator": null,
    "feeds": [
@@ -6810,16 +6822,16 @@
   }
  },
  "google.com": {
-  "checked": "2026-10-24T05:44:23Z",
+  "checked": "2026-11-23T06:46:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.250.177.78"
+    "142.251.41.142"
    ],
    "aaaa": [
-    "2607:f8b0:4009:816::200e"
+    "2607:f8b0:4009:80c::200e"
    ],
    "cname": null,
    "ns": [
@@ -6836,7 +6848,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:44:23Z",
+   "checked": "2026-11-23T06:46:02Z",
    "title": "Google",
    "generator": null,
    "feeds": [],
@@ -6867,7 +6879,7 @@
   }
  },
  "google.github.io": {
-  "checked": "2026-10-24T05:57:15Z",
+  "checked": "2026-11-23T06:57:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6894,7 +6906,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:57:15Z",
+   "checked": "2026-11-23T06:57:49Z",
    "title": "Redirecting to https://github.com/google",
    "generator": null,
    "feeds": [],
@@ -6904,16 +6916,16 @@
   }
  },
  "googleblog.blogspot.com": {
-  "checked": "2026-10-24T01:46:20Z",
+  "checked": "2026-11-23T06:30:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.250.189.97"
+    "142.251.210.97"
    ],
    "aaaa": [
-    "2607:f8b0:4009:813::2001"
+    "2607:f8b0:4009:80e::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -6925,7 +6937,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:46:20Z",
+   "checked": "2026-11-23T06:30:06Z",
    "title": "News from Google | Google Product and Technology News and Stories",
    "generator": null,
    "feeds": [],
@@ -6956,16 +6968,16 @@
   }
  },
  "googlecloudplatform.blogspot.com": {
-  "checked": "2026-10-24T06:28:40Z",
+  "checked": "2026-11-23T07:29:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.250.189.129"
+    "142.251.34.225"
    ],
    "aaaa": [
-    "2607:f8b0:4009:80d::2001"
+    "2607:f8b0:4009:81e::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -6977,7 +6989,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:28:40Z",
+   "checked": "2026-11-23T07:29:25Z",
    "title": "Google Cloud | Google Cloud Blog",
    "generator": null,
    "feeds": [],
@@ -7071,16 +7083,16 @@
   }
  },
  "googlemapsapi.blogspot.com": {
-  "checked": "2026-10-24T06:28:43Z",
+  "checked": "2026-11-23T07:29:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.250.189.97"
+    "142.251.34.225"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81c::2001"
+    "2607:f8b0:4009:810::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -7092,7 +7104,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:28:43Z",
+   "checked": "2026-11-23T07:29:28Z",
    "title": "Official Google Maps API Blog",
    "generator": null,
    "feeds": [],
@@ -7170,16 +7182,16 @@
   }
  },
  "googlereader.blogspot.com": {
-  "checked": "2026-10-24T05:52:32Z",
+  "checked": "2026-11-23T06:53:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.250.188.161"
+    "142.251.214.65"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81d::2001"
+    "2607:f8b0:4009:803::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -7191,7 +7203,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:52:32Z",
+   "checked": "2026-11-23T06:53:49Z",
    "title": "Official Google Reader Blog",
    "generator": "blogger",
    "feeds": [
@@ -7726,7 +7738,7 @@
   }
  },
  "gq.com": {
-  "checked": "2026-10-24T05:57:16Z",
+  "checked": "2026-11-23T06:57:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7754,7 +7766,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:57:16Z",
+   "checked": "2026-11-23T06:57:51Z",
    "title": "GQ - Men's Fashion, Style, Grooming, Fitness, Entertainment, Lifestyle, News & Politics | GQ",
    "generator": null,
    "feeds": [
@@ -7813,7 +7825,7 @@
   }
  },
  "graemethickins.typepad.com": {
-  "checked": "2026-10-24T05:52:33Z",
+  "checked": "2026-11-23T06:53:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7836,7 +7848,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:52:33Z",
+   "checked": "2026-11-23T06:53:51Z",
    "title": "Typepad | Network Solutions",
    "generator": null,
    "feeds": [],
@@ -8068,7 +8080,7 @@
   }
  },
  "grantland.com": {
-  "checked": "2026-10-24T06:28:45Z",
+  "checked": "2026-11-23T07:29:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8091,9 +8103,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:28:45Z",
+   "checked": "2026-11-23T07:29:30Z",
    "title": "» Sports and Pop Culture from our rotating cast of writers – Grantland",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -8240,7 +8252,7 @@
   }
  },
  "graphics.reuters.com": {
-  "checked": "2026-10-24T06:28:48Z",
+  "checked": "2026-11-23T07:29:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8252,14 +8264,14 @@
     "65.8.27.106"
    ],
    "aaaa": [
-    "2600:9000:2123:1800:1e:1da0:4480:93a1",
-    "2600:9000:2123:4000:1e:1da0:4480:93a1",
-    "2600:9000:2123:4800:1e:1da0:4480:93a1",
-    "2600:9000:2123:4c00:1e:1da0:4480:93a1",
-    "2600:9000:2123:4e00:1e:1da0:4480:93a1",
-    "2600:9000:2123:8000:1e:1da0:4480:93a1",
-    "2600:9000:2123:8c00:1e:1da0:4480:93a1",
-    "2600:9000:2123:d600:1e:1da0:4480:93a1"
+    "2600:9000:21d4:4400:1e:1da0:4480:93a1",
+    "2600:9000:21d4:6400:1e:1da0:4480:93a1",
+    "2600:9000:21d4:7000:1e:1da0:4480:93a1",
+    "2600:9000:21d4:7200:1e:1da0:4480:93a1",
+    "2600:9000:21d4:7800:1e:1da0:4480:93a1",
+    "2600:9000:21d4:c000:1e:1da0:4480:93a1",
+    "2600:9000:21d4:d200:1e:1da0:4480:93a1",
+    "2600:9000:21d4:f400:1e:1da0:4480:93a1"
    ],
    "cname": "financial-graphics.prod.global.a201836.reutersmedia.net",
    "ns": [],
@@ -8271,7 +8283,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:28:48Z",
+   "checked": "2026-11-23T07:29:33Z",
    "title": "Reuters News | Latest Headlines & Stories | Reuters",
    "generator": null,
    "feeds": [],
@@ -9271,7 +9283,7 @@
   }
  },
  "grouplens.org": {
-  "checked": "2026-10-24T06:07:19Z",
+  "checked": "2026-11-23T07:07:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9289,20 +9301,26 @@
    "mx": true
   },
   "https": {
-   "reachable": false,
-   "redirects_http": false,
-   "status": null,
-   "error": "timeout"
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:07:19Z",
-   "title": null,
+   "checked": "2026-11-23T07:07:48Z",
+   "title": "GroupLens",
    "generator": null,
-   "feeds": [],
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://grouplens.org/feed/",
+     "title": "GroupLens Feed"
+    }
+   ],
    "hcard": false,
-   "rel_me": [],
-   "webmention": null,
-   "error": "timeout"
+   "rel_me": [
+    "https://twitter.com/grouplens"
+   ],
+   "webmention": null
   }
  },
  "grouplogic.com": {
@@ -9340,7 +9358,7 @@
   }
  },
  "groups.drupal.org": {
-  "checked": "2026-10-24T06:28:51Z",
+  "checked": "2026-11-23T07:29:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9362,7 +9380,7 @@
    "status": 503
   },
   "home": {
-   "checked": "2026-10-24T06:28:51Z",
+   "checked": "2026-11-23T07:29:35Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9373,24 +9391,24 @@
   }
  },
  "groups.google.com": {
-  "checked": "2026-10-24T06:29:14Z",
+  "checked": "2026-11-23T07:29:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "192.178.129.100",
-    "192.178.129.101",
-    "192.178.129.102",
-    "192.178.129.113",
-    "192.178.129.138",
-    "192.178.129.139"
+    "74.125.69.100",
+    "74.125.69.101",
+    "74.125.69.102",
+    "74.125.69.113",
+    "74.125.69.138",
+    "74.125.69.139"
    ],
    "aaaa": [
-    "2607:f8b0:4001:c00::64",
-    "2607:f8b0:4001:c00::66",
-    "2607:f8b0:4001:c00::71",
-    "2607:f8b0:4001:c00::8a"
+    "2001:4860:4802:32::177",
+    "2001:4860:4802:34::177",
+    "2001:4860:4802:36::177",
+    "2001:4860:4802:38::177"
    ],
    "cname": "groups-alv.google.com",
    "ns": [],
@@ -9402,7 +9420,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:29:14Z",
+   "checked": "2026-11-23T07:29:58Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9826,7 +9844,7 @@
   }
  },
  "gtdforcios.com": {
-  "checked": "2026-10-24T06:29:19Z",
+  "checked": "2026-11-23T07:30:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9851,7 +9869,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'gtdforcios.com'"
   },
   "home": {
-   "checked": "2026-10-24T06:29:19Z",
+   "checked": "2026-11-23T07:30:02Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9862,7 +9880,7 @@
   }
  },
  "guardian.co.uk": {
-  "checked": "2026-10-24T05:49:39Z",
+  "checked": "2026-11-23T06:51:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9893,7 +9911,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:49:39Z",
+   "checked": "2026-11-23T06:51:08Z",
    "title": "Latest news, sport and opinion from the Guardian",
    "generator": null,
    "feeds": [],
@@ -10024,7 +10042,7 @@
   }
  },
  "guernicamag.com": {
-  "checked": "2026-10-24T06:29:20Z",
+  "checked": "2026-11-23T07:30:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10048,9 +10066,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:29:20Z",
+   "checked": "2026-11-23T07:30:04Z",
    "title": "Guernica – A Magazine of Global Arts & Politics",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [
     {
      "type": "rss",
@@ -10184,7 +10202,7 @@
   }
  },
  "gun.io": {
-  "checked": "2026-10-24T06:29:23Z",
+  "checked": "2026-11-23T07:30:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10212,7 +10230,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:29:23Z",
+   "checked": "2026-11-23T07:30:06Z",
    "title": "The Technical Standard for High Stakes Engineering | Gun.io",
    "generator": null,
    "feeds": [],
@@ -10222,7 +10240,7 @@
   }
  },
  "gurwinder.blog": {
-  "checked": "2026-10-24T06:29:26Z",
+  "checked": "2026-11-23T07:30:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10245,7 +10263,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:29:26Z",
+   "checked": "2026-11-23T07:30:09Z",
    "title": "The Prism | Gurwinder | Substack",
    "generator": null,
    "feeds": [
@@ -10300,7 +10318,7 @@
   }
  },
  "guypo.com": {
-  "checked": "2026-10-24T06:29:30Z",
+  "checked": "2026-11-23T07:30:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10329,7 +10347,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'guypo.com'"
   },
   "home": {
-   "checked": "2026-10-24T06:29:30Z",
+   "checked": "2026-11-23T07:30:13Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -10378,7 +10396,7 @@
   }
  },
  "gwern.net": {
-  "checked": "2026-10-24T06:29:33Z",
+  "checked": "2026-11-23T07:30:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10406,7 +10424,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:29:33Z",
+   "checked": "2026-11-23T07:30:16Z",
    "title": "Essays · Gwern.net",
    "generator": "Hakyll",
    "feeds": [
@@ -10419,14 +10437,14 @@
    "hcard": false,
    "rel_me": [
     "https://gwern.net/index",
-    "https://www.patreon.com/gwern",
+    "https://www.patreon.com/cw/gwern",
     "https://gwern.substack.com/"
    ],
    "webmention": null
   }
  },
  "gybe.ca": {
-  "checked": "2026-10-24T06:29:36Z",
+  "checked": "2026-11-23T07:30:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10450,7 +10468,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:29:36Z",
+   "checked": "2026-11-23T07:30:20Z",
    "title": "cat /dev/brain – Random musings by Michael Hart",
    "generator": "WordPress 7.1.3",
    "feeds": [
@@ -10533,14 +10551,15 @@
   }
  },
  "gzeromedia.com": {
-  "checked": "2026-10-24T05:52:35Z",
+  "checked": "2026-11-23T06:53:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "54.243.223.181",
-    "54.243.223.182"
+    "3.146.128.146",
+    "3.149.226.85",
+    "18.219.138.131"
    ],
    "aaaa": [],
    "cname": null,
@@ -10556,13 +10575,13 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:52:35Z",
-   "title": "GZERO Media",
+   "checked": "2026-11-23T06:53:52Z",
+   "title": "GZERO Media: Global politics, world news, and analysis",
    "generator": null,
    "feeds": [
     {
      "type": "rss",
-     "url": "https://www.gzeromedia.com/feeds/feed.rss",
+     "url": "https://www.gzeromedia.com/feeds/feed.xml",
      "title": "GZERO Media"
     }
    ],

@@ -222,7 +222,7 @@
   }
  },
  "12ft.io": {
-  "checked": "2026-10-24T06:16:06Z",
+  "checked": "2026-11-23T07:15:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -245,7 +245,7 @@
    "error": "tls: self-signed certificate"
   },
   "home": {
-   "checked": "2026-10-24T06:16:06Z",
+   "checked": "2026-11-23T07:15:53Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -351,7 +351,7 @@
   }
  },
  "1843magazine.com": {
-  "checked": "2026-10-24T05:54:33Z",
+  "checked": "2026-11-23T06:55:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -379,7 +379,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-24T05:54:33Z",
+   "checked": "2026-11-23T06:55:39Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -390,19 +390,15 @@
   }
  },
  "1password.com": {
-  "checked": "2026-10-24T06:01:34Z",
+  "checked": "2026-11-23T07:02:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "162.159.141.147",
-    "172.66.1.143"
+    "64.239.109.1"
    ],
-   "aaaa": [
-    "2606:4700:7::18b",
-    "2a06:98c1:58::18b"
-   ],
+   "aaaa": [],
    "cname": null,
    "ns": [
     "ns-109.awsdns-13.com",
@@ -418,7 +414,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:01:34Z",
+   "checked": "2026-11-23T07:02:15Z",
    "title": "Password Manager, Secrets, and Access Management | 1Password",
    "generator": null,
    "feeds": [],

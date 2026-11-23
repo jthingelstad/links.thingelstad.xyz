@@ -288,7 +288,7 @@
   }
  },
  "kalzumeus.com": {
-  "checked": "2026-10-24T06:08:43Z",
+  "checked": "2026-11-23T07:08:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -312,7 +312,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:43Z",
+   "checked": "2026-11-23T07:08:42Z",
    "title": "Kalzumeus Software",
    "generator": null,
    "feeds": [
@@ -478,7 +478,7 @@
   }
  },
  "kare11.com": {
-  "checked": "2026-10-24T05:52:52Z",
+  "checked": "2026-11-23T06:54:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -503,7 +503,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:52:52Z",
+   "checked": "2026-11-23T06:54:09Z",
    "title": "Minneapolis St. Paul News, Weather, Traffic, Sports | Minneapolis, Minnesota | kare11.com",
    "generator": null,
    "feeds": [
@@ -634,7 +634,7 @@
   }
  },
  "karpathy.bearblog.dev": {
-  "checked": "2026-10-24T05:57:33Z",
+  "checked": "2026-11-23T06:58:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -659,7 +659,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:57:33Z",
+   "checked": "2026-11-23T06:58:08Z",
    "title": "karpathy",
    "generator": null,
    "feeds": [
@@ -1334,7 +1334,7 @@
   }
  },
  "kennethreitz.org": {
-  "checked": "2026-10-24T05:52:54Z",
+  "checked": "2026-11-23T06:54:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1345,10 +1345,8 @@
    "aaaa": [],
    "cname": null,
    "ns": [
-    "ns1.dnsimple-edge.com",
-    "ns2.dnsimple-edge.net",
-    "ns3.dnsimple-edge.io",
-    "ns4.dnsimple-edge.org"
+    "collins.ns.cloudflare.com",
+    "walt.ns.cloudflare.com"
    ],
    "mx": true
   },
@@ -1358,7 +1356,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:52:54Z",
+   "checked": "2026-11-23T06:54:10Z",
    "title": "Kenneth Reitz",
    "generator": null,
    "feeds": [
@@ -1476,7 +1474,7 @@
   }
  },
  "kernest.com": {
-  "checked": "2026-10-24T05:57:37Z",
+  "checked": "2026-11-23T06:58:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1499,16 +1497,17 @@
   "https": {
    "reachable": true,
    "redirects_http": true,
-   "status": 200
+   "status": 403
   },
   "home": {
-   "checked": "2026-10-24T05:57:37Z",
-   "title": "Kernest.com is for sale | HugeDomains",
+   "checked": "2026-11-23T06:58:11Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 403 (Cloudflare challenge)"
   }
  },
  "keunwoo.com": {
@@ -1771,14 +1770,14 @@
   }
  },
  "keybase.io": {
-  "checked": "2026-10-24T05:52:57Z",
+  "checked": "2026-11-23T06:54:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "34.231.216.169",
-    "184.196.203.76"
+    "34.196.50.204",
+    "52.86.91.102"
    ],
    "aaaa": [],
    "cname": null,
@@ -1796,7 +1795,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:52:57Z",
+   "checked": "2026-11-23T06:54:13Z",
    "title": "Keybase",
    "generator": null,
    "feeds": [],
@@ -2013,7 +2012,7 @@
   }
  },
  "kickstarter.com": {
-  "checked": "2026-10-24T05:31:40Z",
+  "checked": "2026-11-23T06:33:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2039,7 +2038,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:31:40Z",
+   "checked": "2026-11-23T06:33:43Z",
    "title": "Kickstarter",
    "generator": null,
    "feeds": [],
@@ -2446,7 +2445,7 @@
   }
  },
  "kitchensoap.com": {
-  "checked": "2026-10-24T05:57:39Z",
+  "checked": "2026-11-23T06:58:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2468,9 +2467,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:57:39Z",
+   "checked": "2026-11-23T06:58:13Z",
    "title": "Kitchen Soap – Thoughts on systems safety, software operations, and sociotechnical systems.",
-   "generator": null,
+   "generator": "Site Kit by Google 1.191.0",
    "feeds": [
     {
      "type": "rss",
@@ -2565,7 +2564,7 @@
   }
  },
  "kk.org": {
-  "checked": "2026-10-24T05:53:00Z",
+  "checked": "2026-11-23T06:54:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2589,7 +2588,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:53:00Z",
+   "checked": "2026-11-23T06:54:16Z",
    "title": "Kevin Kelly – Over the long term, the future is decided by optimists",
    "generator": "WordPress 5.9.19",
    "feeds": [],
@@ -3381,7 +3380,7 @@
   }
  },
  "kouroshdini.com": {
-  "checked": "2026-10-24T05:48:09Z",
+  "checked": "2026-11-23T06:49:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3404,7 +3403,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:48:09Z",
+   "checked": "2026-11-23T06:49:45Z",
    "title": "Kourosh Dini, MD Mind, Music, & Mastery",
    "generator": "HubSpot",
    "feeds": [],
@@ -3802,7 +3801,7 @@
   }
  },
  "kubbon.com": {
-  "checked": "2026-10-24T06:08:47Z",
+  "checked": "2026-11-23T07:08:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3824,9 +3823,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:47Z",
+   "checked": "2026-11-23T07:08:45Z",
    "title": "Kubb On | Your source for all things kubb",
-   "generator": "All in One SEO Pro (AIOSEO) 5.0.4",
+   "generator": "All in One SEO Pro (AIOSEO) 5.0.5.1",
    "feeds": [
     {
      "type": "rss",
@@ -4088,20 +4087,18 @@
   }
  },
  "kyivindependent.com": {
-  "checked": "2026-10-24T06:08:51Z",
+  "checked": "2026-11-23T07:08:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.26.10.32",
-    "104.26.11.32",
-    "172.67.72.104"
+    "104.20.46.1",
+    "172.66.144.97"
    ],
    "aaaa": [
-    "2606:4700:20::681a:a20",
-    "2606:4700:20::681a:b20",
-    "2606:4700:20::ac43:4868"
+    "2606:4700:10::6814:2e01",
+    "2606:4700:10::ac42:9061"
    ],
    "cname": null,
    "ns": [
@@ -4116,7 +4113,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:51Z",
+   "checked": "2026-11-23T07:08:49Z",
    "title": "The Kyiv Independent — News from Ukraine, Eastern Europe",
    "generator": null,
    "feeds": [
@@ -4132,7 +4129,7 @@
   }
  },
  "kyivpost.com": {
-  "checked": "2026-10-24T05:44:37Z",
+  "checked": "2026-11-23T06:46:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4160,7 +4157,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:44:37Z",
+   "checked": "2026-11-23T06:46:14Z",
    "title": "Get the Latest Ukraine News Today - Kyiv Post",
    "generator": null,
    "feeds": [],

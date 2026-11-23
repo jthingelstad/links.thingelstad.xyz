@@ -367,7 +367,7 @@
   }
  },
  "quantamagazine.org": {
-  "checked": "2026-10-24T05:59:24Z",
+  "checked": "2026-11-23T07:00:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -389,7 +389,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:59:24Z",
+   "checked": "2026-11-23T07:00:03Z",
    "title": "Science and Math News | Quanta Magazine",
    "generator": null,
    "feeds": [
@@ -603,7 +603,7 @@
   }
  },
  "queue.acm.org": {
-  "checked": "2026-10-24T05:48:26Z",
+  "checked": "2026-11-23T06:50:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -623,7 +623,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-24T05:48:26Z",
+   "checked": "2026-11-23T06:50:01Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1106,15 +1106,14 @@
   }
  },
  "quora.com": {
-  "checked": "2026-10-24T05:43:26Z",
+  "checked": "2026-11-23T06:45:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "52.23.119.86",
-    "98.90.59.145",
-    "100.55.108.229"
+    "162.159.152.17",
+    "162.159.153.247"
    ],
    "aaaa": [],
    "cname": null,
@@ -1132,7 +1131,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:43:26Z",
+   "checked": "2026-11-23T06:45:04Z",
    "title": "Quora - A place to share knowledge and better understand the world",
    "generator": null,
    "feeds": [],
@@ -1228,7 +1227,7 @@
   }
  },
  "qz.com": {
-  "checked": "2026-10-24T01:46:47Z",
+  "checked": "2026-11-23T06:30:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1256,7 +1255,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:46:47Z",
+   "checked": "2026-11-23T06:30:33Z",
    "title": "Home",
    "generator": null,
    "feeds": [],

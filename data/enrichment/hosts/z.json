@@ -423,7 +423,7 @@
   }
  },
  "zdnet.com": {
-  "checked": "2026-10-24T05:43:46Z",
+  "checked": "2026-11-23T06:45:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -447,9 +447,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:43:46Z",
+   "checked": "2026-11-23T06:45:28Z",
    "title": "News and Advice on the World's Latest Innovations | ZDNET - ZDNET",
-   "generator": "WordPress 6.9.10",
+   "generator": "WordPress 6.9.12",
    "feeds": [
     {
      "type": "atom",
@@ -477,7 +477,7 @@
   }
  },
  "zed.dev": {
-  "checked": "2026-10-24T06:01:29Z",
+  "checked": "2026-11-23T07:02:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -503,7 +503,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:01:29Z",
+   "checked": "2026-11-23T07:02:11Z",
    "title": "Zed — Your last next editor",
    "generator": null,
    "feeds": [
@@ -524,7 +524,7 @@
   }
  },
  "zeldman.com": {
-  "checked": "2026-10-24T05:54:30Z",
+  "checked": "2026-11-23T06:55:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -547,9 +547,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:30Z",
-   "title": "Homepage - Jeffrey Zeldman Presents",
-   "generator": "Site Kit by Google 1.190.0",
+   "checked": "2026-11-23T06:55:36Z",
+   "title": "Jeffrey Zeldman Presents: The Daily Report – Since 1995",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [
     {
      "type": "rss",
@@ -798,7 +798,7 @@
   }
  },
  "zephoria.org": {
-  "checked": "2026-10-24T06:01:32Z",
+  "checked": "2026-11-23T07:02:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -823,7 +823,7 @@
    "error": "connection refused"
   },
   "home": {
-   "checked": "2026-10-24T06:01:32Z",
+   "checked": "2026-11-23T07:02:13Z",
    "title": null,
    "generator": null,
    "feeds": [],

@@ -1,6 +1,6 @@
 {
  "404media.co": {
-  "checked": "2026-10-24T05:41:28Z",
+  "checked": "2026-11-23T06:43:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -22,9 +22,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:41:28Z",
+   "checked": "2026-11-23T06:43:15Z",
    "title": "404 Media",
-   "generator": "Ghost 6.73",
+   "generator": "Ghost 6.79",
    "feeds": [
     {
      "type": "rss",
@@ -42,7 +42,7 @@
   "rdap_error": "no RDAP service for .co"
  },
  "43folders.com": {
-  "checked": "2026-10-24T05:54:34Z",
+  "checked": "2026-11-23T06:55:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -68,7 +68,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:34Z",
+   "checked": "2026-11-23T06:55:41Z",
    "title": "Parked",
    "generator": null,
    "feeds": [],

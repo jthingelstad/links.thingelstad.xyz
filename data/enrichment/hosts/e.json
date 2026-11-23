@@ -32,7 +32,7 @@
   }
  },
  "earendil.com": {
-  "checked": "2026-10-24T06:25:28Z",
+  "checked": "2026-11-23T07:26:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -62,7 +62,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:25:28Z",
+   "checked": "2026-11-23T07:26:18Z",
    "title": "Earendil",
    "generator": null,
    "feeds": [
@@ -654,7 +654,7 @@
   }
  },
  "eclecticlight.co": {
-  "checked": "2026-10-24T05:49:31Z",
+  "checked": "2026-11-23T06:51:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -678,7 +678,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:49:31Z",
+   "checked": "2026-11-23T06:51:00Z",
    "title": "The Eclectic Light Company – Macs & painting – 🦉 No AI content",
    "generator": "WordPress.com",
    "feeds": [
@@ -836,7 +836,7 @@
   }
  },
  "economonitor.com": {
-  "checked": "2026-10-24T06:25:31Z",
+  "checked": "2026-11-23T07:26:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -862,8 +862,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:25:31Z",
-   "title": "EconoMonitor – Global financial data, structured",
+   "checked": "2026-11-23T07:26:20Z",
+   "title": "EconoMonitor: checked data on US banks and economies",
    "generator": null,
    "feeds": [
     {
@@ -918,7 +918,7 @@
   }
  },
  "edge.org": {
-  "checked": "2026-10-24T06:06:54Z",
+  "checked": "2026-11-23T07:07:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -936,20 +936,24 @@
    "mx": false
   },
   "https": {
-   "reachable": false,
+   "reachable": true,
    "redirects_http": false,
-   "status": null,
-   "error": "tls: certificate has expired"
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:06:54Z",
-   "title": null,
-   "generator": null,
-   "feeds": [],
+   "checked": "2026-11-23T07:07:25Z",
+   "title": "Edge.org",
+   "generator": "Drupal 7 (http://drupal.org)",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.edge.org/feed",
+     "title": "Front page feed"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
-   "webmention": null,
-   "error": "tls: certificate has expired"
+   "webmention": null
   }
  },
  "edgeandnode.com": {
@@ -1383,7 +1387,7 @@
   }
  },
  "edwardsnowden.substack.com": {
-  "checked": "2026-10-24T06:25:34Z",
+  "checked": "2026-11-23T07:26:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1406,7 +1410,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:25:34Z",
+   "checked": "2026-11-23T07:26:23Z",
    "title": "Continuing Ed — with Edward Snowden | Substack",
    "generator": null,
    "feeds": [
@@ -1422,7 +1426,7 @@
   }
  },
  "edwardtufte.com": {
-  "checked": "2026-10-24T05:56:46Z",
+  "checked": "2026-11-23T06:57:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1445,7 +1449,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:56:46Z",
+   "checked": "2026-11-23T06:57:20Z",
    "title": "The Work of Edward Tufte & Graphics Press",
    "generator": null,
    "feeds": [],
@@ -1690,7 +1694,7 @@
   }
  },
  "eggheadforum.com": {
-  "checked": "2026-10-24T06:25:37Z",
+  "checked": "2026-11-23T07:26:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1713,7 +1717,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-24T06:25:37Z",
+   "checked": "2026-11-23T07:26:26Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1826,7 +1830,7 @@
   }
  },
  "eieio.games": {
-  "checked": "2026-10-24T06:06:56Z",
+  "checked": "2026-11-23T07:07:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1854,7 +1858,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:06:56Z",
+   "checked": "2026-11-23T07:07:27Z",
    "title": "eieio.games",
    "generator": null,
    "feeds": [
@@ -2153,7 +2157,7 @@
   }
  },
  "electrek.co": {
-  "checked": "2026-10-24T05:52:09Z",
+  "checked": "2026-11-23T06:53:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2176,7 +2180,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:52:09Z",
+   "checked": "2026-11-23T06:53:29Z",
    "title": "Electrek | EV and Tesla News, Green Energy, Ebikes, and more",
    "generator": null,
    "feeds": [
@@ -2369,7 +2373,7 @@
   }
  },
  "elemental.medium.com": {
-  "checked": "2026-10-24T06:25:39Z",
+  "checked": "2026-11-23T07:26:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2392,7 +2396,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:25:39Z",
+   "checked": "2026-11-23T07:26:28Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -2516,7 +2520,7 @@
   }
  },
  "elezea.com": {
-  "checked": "2026-10-24T05:33:52Z",
+  "checked": "2026-11-23T06:35:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2542,7 +2546,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:33:52Z",
+   "checked": "2026-11-23T06:35:44Z",
    "title": "Elezea — Rian van der Merwe",
    "generator": null,
    "feeds": [
@@ -3352,7 +3356,7 @@
   }
  },
  "emarketer.com": {
-  "checked": "2026-10-24T06:25:43Z",
+  "checked": "2026-11-23T07:26:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3377,9 +3381,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:25:43Z",
+   "checked": "2026-11-23T07:26:33Z",
    "title": "Unlock digital opportunities with the world’s most trusted forecasts, analysis, and benchmarks. - EMARKETER",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -3699,7 +3703,7 @@
   }
  },
  "eminnetonka.com": {
-  "checked": "2026-10-24T06:25:45Z",
+  "checked": "2026-11-23T07:26:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3722,7 +3726,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-24T06:25:45Z",
+   "checked": "2026-11-23T07:26:35Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3929,7 +3933,7 @@
   }
  },
  "en.blog.doodle.com": {
-  "checked": "2026-10-24T05:56:50Z",
+  "checked": "2026-11-23T06:57:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3952,7 +3956,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:56:50Z",
+   "checked": "2026-11-23T06:57:24Z",
    "title": "Free online meeting scheduling tool | Doodle",
    "generator": null,
    "feeds": [],
@@ -3962,7 +3966,7 @@
   }
  },
  "en.blog.wordpress.com": {
-  "checked": "2026-10-24T06:06:58Z",
+  "checked": "2026-11-23T07:07:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3982,7 +3986,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:06:58Z",
+   "checked": "2026-11-23T07:07:29Z",
    "title": "WordPress.com Blog – News, Tips & Website Tutorials",
    "generator": "WordPress.com",
    "feeds": [
@@ -4391,7 +4395,7 @@
   }
  },
  "engadget.com": {
-  "checked": "2026-10-24T05:31:37Z",
+  "checked": "2026-11-23T06:33:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4418,7 +4422,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:31:37Z",
+   "checked": "2026-11-23T06:33:40Z",
    "title": "Engadget | Technology News & Expert Reviews",
    "generator": null,
    "feeds": [
@@ -4499,7 +4503,7 @@
   }
  },
  "engineering.foursquare.com": {
-  "checked": "2026-10-24T06:25:46Z",
+  "checked": "2026-11-23T07:26:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4521,9 +4525,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:25:46Z",
+   "checked": "2026-11-23T07:26:37Z",
    "title": "Location Intelligence Resources | Blog & Guides | Foursquare",
-   "generator": "WordPress 6.9.10",
+   "generator": "WordPress 6.9.12",
    "feeds": [
     {
      "type": "rss",
@@ -4704,7 +4708,7 @@
   }
  },
  "engineering.linkedin.com": {
-  "checked": "2026-10-24T05:56:53Z",
+  "checked": "2026-11-23T06:57:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4727,7 +4731,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:56:53Z",
+   "checked": "2026-11-23T06:57:27Z",
    "title": "LinkedIn Engineering",
    "generator": null,
    "feeds": [],
@@ -4829,13 +4833,13 @@
   }
  },
  "engineering.shopify.com": {
-  "checked": "2026-10-24T06:07:01Z",
+  "checked": "2026-11-23T07:07:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "34.128.177.21"
+    "23.227.39.20"
    ],
    "aaaa": [],
    "cname": "apps.tm.shopifysvc.com",
@@ -4848,7 +4852,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:07:01Z",
+   "checked": "2026-11-23T07:07:32Z",
    "title": "Work with us | Shopify Engineering - Shopify",
    "generator": null,
    "feeds": [
@@ -5177,7 +5181,7 @@
   }
  },
  "ens.domains": {
-  "checked": "2026-10-24T05:42:16Z",
+  "checked": "2026-11-23T06:43:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5203,7 +5207,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:42:16Z",
+   "checked": "2026-11-23T06:43:59Z",
    "title": "ENS",
    "generator": null,
    "feeds": [],
@@ -5228,7 +5232,7 @@
   }
  },
  "ens.mirror.xyz": {
-  "checked": "2026-10-24T06:07:04Z",
+  "checked": "2026-11-23T07:07:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5253,7 +5257,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:07:04Z",
+   "checked": "2026-11-23T07:07:35Z",
    "title": "ENS — Read ENS on Paragraph.",
    "generator": null,
    "feeds": [
@@ -5510,7 +5514,7 @@
   }
  },
  "entrepreneurshandbook.co": {
-  "checked": "2026-10-24T06:25:51Z",
+  "checked": "2026-11-23T07:26:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5533,7 +5537,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:25:51Z",
+   "checked": "2026-11-23T07:26:40Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -5911,7 +5915,7 @@
   }
  },
  "erikbern.com": {
-  "checked": "2026-10-24T05:56:56Z",
+  "checked": "2026-11-23T06:57:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5939,7 +5943,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:56:56Z",
+   "checked": "2026-11-23T06:57:30Z",
    "title": "Erik Bernhardsson",
    "generator": "Hugo 0.156.0",
    "feeds": [
@@ -6410,7 +6414,7 @@
   }
  },
  "espn.com": {
-  "checked": "2026-10-24T05:52:12Z",
+  "checked": "2026-11-23T06:53:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6422,14 +6426,14 @@
     "52.84.127.127"
    ],
    "aaaa": [
-    "2600:9000:200e:2400:d:ac18:e2c0:93a1",
-    "2600:9000:200e:2e00:d:ac18:e2c0:93a1",
-    "2600:9000:200e:5a00:d:ac18:e2c0:93a1",
-    "2600:9000:200e:6a00:d:ac18:e2c0:93a1",
-    "2600:9000:200e:8400:d:ac18:e2c0:93a1",
-    "2600:9000:200e:8800:d:ac18:e2c0:93a1",
-    "2600:9000:200e:a400:d:ac18:e2c0:93a1",
-    "2600:9000:200e:d600:d:ac18:e2c0:93a1"
+    "2600:9000:200e:1400:d:ac18:e2c0:93a1",
+    "2600:9000:200e:2000:d:ac18:e2c0:93a1",
+    "2600:9000:200e:3800:d:ac18:e2c0:93a1",
+    "2600:9000:200e:4800:d:ac18:e2c0:93a1",
+    "2600:9000:200e:7400:d:ac18:e2c0:93a1",
+    "2600:9000:200e:a000:d:ac18:e2c0:93a1",
+    "2600:9000:200e:be00:d:ac18:e2c0:93a1",
+    "2600:9000:200e:d200:d:ac18:e2c0:93a1"
    ],
    "cname": null,
    "ns": [
@@ -6446,7 +6450,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:52:12Z",
+   "checked": "2026-11-23T06:53:31Z",
    "title": "ESPN - Serving Sports Fans. Anytime. Anywhere.",
    "generator": null,
    "feeds": [],
@@ -6544,7 +6548,7 @@
   }
  },
  "esquire.com": {
-  "checked": "2026-10-24T05:47:51Z",
+  "checked": "2026-11-23T06:49:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6571,7 +6575,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:47:51Z",
+   "checked": "2026-11-23T06:49:29Z",
    "title": "Esquire - Men's Fashion, Cocktails, Politics, Interviews, and Women",
    "generator": null,
    "feeds": [],
@@ -7155,7 +7159,7 @@
   }
  },
  "etsy.com": {
-  "checked": "2026-10-24T06:07:07Z",
+  "checked": "2026-11-23T07:07:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7182,7 +7186,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-24T06:07:07Z",
+   "checked": "2026-11-23T07:07:36Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7350,15 +7354,15 @@
   }
  },
  "euronews.com": {
-  "checked": "2026-10-24T06:25:58Z",
+  "checked": "2026-11-23T07:26:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "54.228.172.88",
-    "63.32.41.101",
-    "108.132.114.174"
+    "34.242.202.140",
+    "54.194.101.53",
+    "54.220.37.151"
    ],
    "aaaa": [],
    "cname": null,
@@ -7376,7 +7380,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:25:58Z",
+   "checked": "2026-11-23T07:26:48Z",
    "title": "Latest breaking news available as free video on demand | Euronews",
    "generator": null,
    "feeds": [],
@@ -7486,7 +7490,7 @@
   }
  },
  "evanhahn.com": {
-  "checked": "2026-10-24T06:26:00Z",
+  "checked": "2026-11-23T07:26:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7511,7 +7515,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:26:00Z",
+   "checked": "2026-11-23T07:26:50Z",
    "title": "Evan Hahn (dot com)",
    "generator": null,
    "feeds": [
@@ -7770,7 +7774,7 @@
   }
  },
  "eventburn.com": {
-  "checked": "2026-10-24T06:26:02Z",
+  "checked": "2026-11-23T07:26:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7793,7 +7797,7 @@
    "error": "tls: unable to get local issuer certificate"
   },
   "home": {
-   "checked": "2026-10-24T06:26:02Z",
+   "checked": "2026-11-23T07:26:52Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7839,7 +7843,7 @@
   }
  },
  "events.umn.edu": {
-  "checked": "2026-10-24T06:26:06Z",
+  "checked": "2026-11-23T07:26:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7858,7 +7862,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-24T06:26:06Z",
+   "checked": "2026-11-23T07:26:56Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7905,7 +7909,7 @@
   }
  },
  "every.to": {
-  "checked": "2026-10-24T06:26:06Z",
+  "checked": "2026-11-23T07:26:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7933,7 +7937,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:26:06Z",
+   "checked": "2026-11-23T07:26:56Z",
    "title": "Every",
    "generator": null,
    "feeds": [],
@@ -8091,7 +8095,7 @@
   }
  },
  "everythingisaremix.info": {
-  "checked": "2026-10-24T06:26:10Z",
+  "checked": "2026-11-23T07:26:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8116,7 +8120,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:26:10Z",
+   "checked": "2026-11-23T07:26:59Z",
    "title": "Everything is a Remix",
    "generator": null,
    "feeds": [],
@@ -8168,7 +8172,7 @@
   }
  },
  "evidence.dev": {
-  "checked": "2026-10-24T06:26:12Z",
+  "checked": "2026-11-23T07:27:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8192,7 +8196,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:26:12Z",
+   "checked": "2026-11-23T07:27:01Z",
    "title": "Evidence - Business Intelligence as Code",
    "generator": null,
    "feeds": [],
@@ -8752,7 +8756,7 @@
   }
  },
  "extremetech.com": {
-  "checked": "2026-10-24T06:26:15Z",
+  "checked": "2026-11-23T07:27:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8778,7 +8782,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:26:15Z",
+   "checked": "2026-11-23T07:27:04Z",
    "title": "ExtremeTech",
    "generator": null,
    "feeds": [

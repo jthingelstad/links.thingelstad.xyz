@@ -256,7 +256,7 @@
   }
  },
  "obdev.at": {
-  "checked": "2026-10-24T05:53:25Z",
+  "checked": "2026-11-23T06:54:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -282,7 +282,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:53:25Z",
+   "checked": "2026-11-23T06:54:37Z",
    "title": "Objective Development — Network Monitoring & Productivity Software for macOS",
    "generator": null,
    "feeds": [
@@ -413,7 +413,7 @@
   }
  },
  "observablehq.com": {
-  "checked": "2026-10-24T06:10:21Z",
+  "checked": "2026-11-23T07:10:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -436,7 +436,7 @@
    "status": 429
   },
   "home": {
-   "checked": "2026-10-24T06:10:21Z",
+   "checked": "2026-11-23T07:10:37Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -478,7 +478,7 @@
   }
  },
  "observer.com": {
-  "checked": "2026-10-24T06:10:24Z",
+  "checked": "2026-11-23T07:10:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -501,9 +501,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:10:24Z",
+   "checked": "2026-11-23T07:10:39Z",
    "title": "News, data and insight about the powerful forces that shape the world. | Observer",
-   "generator": "WordPress 6.8.11",
+   "generator": "WordPress 6.8.13",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -2167,7 +2167,7 @@
   }
  },
  "onbeing.org": {
-  "checked": "2026-10-24T05:58:44Z",
+  "checked": "2026-11-23T06:59:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2193,9 +2193,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:58:44Z",
+   "checked": "2026-11-23T06:59:15Z",
    "title": "Home | The On Being Project",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -2489,7 +2489,7 @@
   }
  },
  "oneusefulthing.org": {
-  "checked": "2026-10-24T05:43:25Z",
+  "checked": "2026-11-23T06:45:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2512,7 +2512,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-24T05:43:25Z",
+   "checked": "2026-11-23T06:45:03Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2540,7 +2540,7 @@
   }
  },
  "onezero.medium.com": {
-  "checked": "2026-10-24T05:53:31Z",
+  "checked": "2026-11-23T06:54:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2563,7 +2563,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:53:31Z",
+   "checked": "2026-11-23T06:54:43Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -2660,7 +2660,7 @@
   }
  },
  "online.wsj.com": {
-  "checked": "2026-10-24T05:34:45Z",
+  "checked": "2026-11-23T06:36:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2672,14 +2672,14 @@
     "18.160.225.113"
    ],
    "aaaa": [
-    "2600:9000:24d3:200:19:29eb:8080:93a1",
-    "2600:9000:24d3:a00:19:29eb:8080:93a1",
-    "2600:9000:24d3:1400:19:29eb:8080:93a1",
-    "2600:9000:24d3:3200:19:29eb:8080:93a1",
-    "2600:9000:24d3:3600:19:29eb:8080:93a1",
-    "2600:9000:24d3:5e00:19:29eb:8080:93a1",
-    "2600:9000:24d3:9400:19:29eb:8080:93a1",
-    "2600:9000:24d3:fe00:19:29eb:8080:93a1"
+    "2600:9000:24d3:2800:19:29eb:8080:93a1",
+    "2600:9000:24d3:7a00:19:29eb:8080:93a1",
+    "2600:9000:24d3:8c00:19:29eb:8080:93a1",
+    "2600:9000:24d3:b200:19:29eb:8080:93a1",
+    "2600:9000:24d3:b600:19:29eb:8080:93a1",
+    "2600:9000:24d3:c400:19:29eb:8080:93a1",
+    "2600:9000:24d3:d000:19:29eb:8080:93a1",
+    "2600:9000:24d3:f200:19:29eb:8080:93a1"
    ],
    "cname": "d28vexa60c366a.cloudfront.net",
    "ns": [],
@@ -2691,7 +2691,7 @@
    "status": 401
   },
   "home": {
-   "checked": "2026-10-24T05:34:45Z",
+   "checked": "2026-11-23T06:36:33Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3036,7 +3036,7 @@
   }
  },
  "ooh.directory": {
-  "checked": "2026-10-24T06:10:26Z",
+  "checked": "2026-11-23T07:10:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3058,7 +3058,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:10:26Z",
+   "checked": "2026-11-23T07:10:42Z",
    "title": "ooh.directory: a place to find good blogs that interest you",
    "generator": null,
    "feeds": [
@@ -3280,7 +3280,7 @@
   }
  },
  "open.umn.edu": {
-  "checked": "2026-10-24T06:10:30Z",
+  "checked": "2026-11-23T07:10:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3299,7 +3299,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:10:30Z",
+   "checked": "2026-11-23T07:10:45Z",
    "title": "Center for Open Education",
    "generator": null,
    "feeds": [],
@@ -3567,7 +3567,7 @@
   }
  },
  "openculture.com": {
-  "checked": "2026-10-24T05:58:47Z",
+  "checked": "2026-11-23T06:59:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3593,7 +3593,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:58:47Z",
+   "checked": "2026-11-23T06:59:19Z",
    "title": "The best free cultural & educational media on the web - Open Culture",
    "generator": "WordPress 7.1.3",
    "feeds": [
@@ -4035,7 +4035,7 @@
   }
  },
  "opensea.io": {
-  "checked": "2026-10-24T05:49:59Z",
+  "checked": "2026-11-23T06:51:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4061,7 +4061,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:49:59Z",
+   "checked": "2026-11-23T06:51:26Z",
    "title": "OpenSea, exchange everything — token trading and NFT marketplace",
    "generator": null,
    "feeds": [],
@@ -4143,14 +4143,14 @@
   }
  },
  "opensource.com": {
-  "checked": "2026-10-24T05:50:02Z",
+  "checked": "2026-11-23T06:51:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.64.114.4",
-    "23.64.114.35"
+    "23.200.156.7",
+    "23.200.156.15"
    ],
    "aaaa": [
     "2600:1407:3c00:5::17d5:350d",
@@ -4171,7 +4171,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:50:02Z",
+   "checked": "2026-11-23T06:51:29Z",
    "title": "Opensource.com",
    "generator": "Drupal 10 (https://www.drupal.org)",
    "feeds": [],
@@ -4814,7 +4814,7 @@
   }
  },
  "opinionator.blogs.nytimes.com": {
-  "checked": "2026-10-24T05:53:34Z",
+  "checked": "2026-11-23T06:54:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4836,7 +4836,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:53:34Z",
+   "checked": "2026-11-23T06:54:47Z",
    "title": "Opinion - Opinionator - The New York Times",
    "generator": null,
    "feeds": [],
@@ -4941,7 +4941,7 @@
   }
  },
  "opticality.com": {
-  "checked": "2026-10-24T05:42:00Z",
+  "checked": "2026-11-23T06:43:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4965,7 +4965,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:42:00Z",
+   "checked": "2026-11-23T06:43:44Z",
    "title": "Opticality Ventures",
    "generator": null,
    "feeds": [],
@@ -5323,7 +5323,7 @@
   }
  },
  "oreilly.com": {
-  "checked": "2026-10-24T01:47:02Z",
+  "checked": "2026-11-23T06:30:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5349,7 +5349,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:47:02Z",
+   "checked": "2026-11-23T06:30:48Z",
    "title": "O'Reilly Media - Technology and Business Training",
    "generator": null,
    "feeds": [],
@@ -5919,13 +5919,13 @@
   }
  },
  "osxdaily.com": {
-  "checked": "2026-10-24T06:10:31Z",
+  "checked": "2026-11-23T07:10:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "207.244.74.236"
+    "162.210.199.153"
    ],
    "aaaa": [],
    "cname": null,
@@ -5943,7 +5943,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:10:31Z",
+   "checked": "2026-11-23T07:10:47Z",
    "title": "OS X Daily - News and Tips for Mac, iPhone, iPad, and Everything Apple OS X Daily - News, tips, tricks, apps, and more for Mac, iPhone, iPad, and the entire Apple ecosystem",
    "generator": "Site Kit by Google 1.187.0",
    "feeds": [
@@ -6147,7 +6147,7 @@
   }
  },
  "ouraring.wpengine.com": {
-  "checked": "2026-10-24T05:53:36Z",
+  "checked": "2026-11-23T06:54:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6166,9 +6166,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:53:36Z",
+   "checked": "2026-11-23T06:54:48Z",
    "title": "Home - The Pulse Blog",
-   "generator": "WPML ver:5.1.0 stt:5,70,68,9,12,37,1,18,4,3,13,20,21,23,27,28,29,67,40,69,2,50;",
+   "generator": "WPML ver:5.2.0 stt:5,70,68,9,12,37,1,18,4,3,13,20,21,23,27,28,29,67,40,69,2,50;",
    "feeds": [
     {
      "type": "rss",
@@ -6349,14 +6349,14 @@
   }
  },
  "outsideonline.com": {
-  "checked": "2026-10-24T05:44:48Z",
+  "checked": "2026-11-23T06:46:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "66.33.60.194",
-    "76.76.21.93"
+    "66.33.60.130",
+    "76.76.21.61"
    ],
    "aaaa": [],
    "cname": null,
@@ -6372,7 +6372,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:44:48Z",
+   "checked": "2026-11-23T06:46:25Z",
    "title": "Outside Magazine",
    "generator": null,
    "feeds": [],
@@ -6429,7 +6429,7 @@
   }
  },
  "overcast.fm": {
-  "checked": "2026-10-24T05:50:05Z",
+  "checked": "2026-11-23T06:51:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6452,7 +6452,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:50:05Z",
+   "checked": "2026-11-23T06:51:31Z",
    "title": "Overcast",
    "generator": null,
    "feeds": [],

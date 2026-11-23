@@ -674,16 +674,16 @@
   }
  },
  "salon.com": {
-  "checked": "2026-10-24T05:42:35Z",
+  "checked": "2026-11-23T06:44:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "65.8.27.55",
-    "65.8.27.59",
-    "65.8.27.95",
-    "65.8.27.111"
+    "52.84.127.48",
+    "52.84.127.55",
+    "52.84.127.60",
+    "52.84.127.106"
    ],
    "aaaa": [],
    "cname": null,
@@ -701,7 +701,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:42:35Z",
+   "checked": "2026-11-23T06:44:17Z",
    "title": "Salon.com - News, Politics, Culture, Science & Food",
    "generator": null,
    "feeds": [],
@@ -1829,16 +1829,16 @@
   }
  },
  "scaledagileframework.com": {
-  "checked": "2026-10-24T05:59:41Z",
+  "checked": "2026-11-23T07:00:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "65.8.27.55",
-    "65.8.27.61",
-    "65.8.27.72",
-    "65.8.27.117"
+    "13.249.141.77",
+    "13.249.141.112",
+    "13.249.141.116",
+    "13.249.141.126"
    ],
    "aaaa": [],
    "cname": null,
@@ -1856,7 +1856,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:59:41Z",
+   "checked": "2026-11-23T07:00:20Z",
    "title": "Framework - Scaled Agile Framework",
    "generator": "Powered by LayerSlider 8.2.0 - Build Heros, Sliders, and Popups. Create Animations and Beautiful, Rich Web Content as Easy as Never Before on WordPress.",
    "feeds": [
@@ -2139,7 +2139,7 @@
   }
  },
  "schneier.com": {
-  "checked": "2026-10-24T01:46:38Z",
+  "checked": "2026-11-23T06:30:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2162,7 +2162,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:46:38Z",
+   "checked": "2026-11-23T06:30:23Z",
    "title": "Schneier on Security -",
    "generator": null,
    "feeds": [
@@ -2265,7 +2265,7 @@
   }
  },
  "science.org": {
-  "checked": "2026-10-24T06:11:17Z",
+  "checked": "2026-11-23T07:11:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2289,7 +2289,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-24T06:11:17Z",
+   "checked": "2026-11-23T07:11:31Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2344,7 +2344,7 @@
   }
  },
  "sciencedirect.com": {
-  "checked": "2026-10-24T06:11:20Z",
+  "checked": "2026-11-23T07:11:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2369,7 +2369,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:11:20Z",
+   "checked": "2026-11-23T07:11:34Z",
    "title": "ScienceDirect.com | Science, health and medical journals, full text articles and books.",
    "generator": null,
    "feeds": [],
@@ -2446,26 +2446,26 @@
   }
  },
  "scientificamerican.com": {
-  "checked": "2026-10-24T05:46:16Z",
+  "checked": "2026-11-23T06:48:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "18.160.181.39",
-    "18.160.181.40",
-    "18.160.181.112",
-    "18.160.181.126"
+    "3.167.152.18",
+    "3.167.152.30",
+    "3.167.152.41",
+    "3.167.152.106"
    ],
    "aaaa": [
-    "2600:9000:27d7:600:12:7409:4340:93a1",
-    "2600:9000:27d7:a00:12:7409:4340:93a1",
-    "2600:9000:27d7:1400:12:7409:4340:93a1",
-    "2600:9000:27d7:2600:12:7409:4340:93a1",
-    "2600:9000:27d7:5600:12:7409:4340:93a1",
-    "2600:9000:27d7:a600:12:7409:4340:93a1",
-    "2600:9000:27d7:d000:12:7409:4340:93a1",
-    "2600:9000:27d7:de00:12:7409:4340:93a1"
+    "2600:9000:27d7:1000:12:7409:4340:93a1",
+    "2600:9000:27d7:3000:12:7409:4340:93a1",
+    "2600:9000:27d7:a800:12:7409:4340:93a1",
+    "2600:9000:27d7:b000:12:7409:4340:93a1",
+    "2600:9000:27d7:c200:12:7409:4340:93a1",
+    "2600:9000:27d7:ce00:12:7409:4340:93a1",
+    "2600:9000:27d7:ec00:12:7409:4340:93a1",
+    "2600:9000:27d7:fe00:12:7409:4340:93a1"
    ],
    "cname": null,
    "ns": [
@@ -2482,7 +2482,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:46:16Z",
+   "checked": "2026-11-23T06:48:00Z",
    "title": "Scientific American",
    "generator": null,
    "feeds": [
@@ -2566,7 +2566,7 @@
   }
  },
  "scobleizer.com": {
-  "checked": "2026-10-24T05:48:29Z",
+  "checked": "2026-11-23T06:50:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2591,7 +2591,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'scobleizer.com'"
   },
   "home": {
-   "checked": "2026-10-24T05:48:29Z",
+   "checked": "2026-11-23T06:50:03Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3235,7 +3235,7 @@
   }
  },
  "scribd.com": {
-  "checked": "2026-10-24T06:11:27Z",
+  "checked": "2026-11-23T07:11:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3262,7 +3262,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:11:27Z",
+   "checked": "2026-11-23T07:11:41Z",
    "title": "Scribd: Home to the world’s documents.",
    "generator": null,
    "feeds": [],
@@ -3889,16 +3889,16 @@
   }
  },
  "seattletimes.com": {
-  "checked": "2026-10-24T06:11:30Z",
+  "checked": "2026-11-23T07:11:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "65.8.27.68",
-    "65.8.27.109",
-    "65.8.27.111",
-    "65.8.27.119"
+    "108.156.91.18",
+    "108.156.91.41",
+    "108.156.91.68",
+    "108.156.91.99"
    ],
    "aaaa": [],
    "cname": null,
@@ -3916,7 +3916,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:11:30Z",
+   "checked": "2026-11-23T07:11:43Z",
    "title": "The Seattle Times | Local news, sports, business, politics, entertainment, travel, restaurants and opinion for Seattle and the Pacific Northwest.",
    "generator": null,
    "feeds": [
@@ -3969,7 +3969,7 @@
   }
  },
  "sec.gov": {
-  "checked": "2026-10-24T05:50:12Z",
+  "checked": "2026-11-23T06:51:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3978,8 +3978,8 @@
     "23.214.124.62"
    ],
    "aaaa": [
-    "2600:1418:1000:492::17b2",
-    "2600:1418:1000:498::17b2"
+    "2600:1418:1000:38d::17b2",
+    "2600:1418:1000:39b::17b2"
    ],
    "cname": null,
    "ns": [
@@ -4013,7 +4013,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:50:12Z",
+   "checked": "2026-11-23T06:51:38Z",
    "title": "SEC.gov | Home",
    "generator": null,
    "feeds": [],
@@ -4906,15 +4906,17 @@
   }
  },
  "semantic-mediawiki.org": {
-  "checked": "2026-10-24T05:43:35Z",
+  "checked": "2026-11-23T06:45:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "116.203.61.64"
+    "195.201.28.212"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2a01:4f8:1c1c:89d9::1"
+   ],
    "cname": null,
    "ns": [
     "ns.udag.de",
@@ -4924,20 +4926,26 @@
    "mx": true
   },
   "https": {
-   "reachable": false,
-   "redirects_http": false,
-   "status": null,
-   "error": "connection refused"
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:43:35Z",
-   "title": null,
-   "generator": null,
-   "feeds": [],
+   "checked": "2026-11-23T06:45:13Z",
+   "title": "semantic-mediawiki.org",
+   "generator": "MediaWiki 1.43.12",
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.semantic-mediawiki.org/w/index.php?title=Special:RecentChanges&feed=atom",
+     "title": "semantic-mediawiki.org Atom feed"
+    }
+   ],
    "hcard": false,
-   "rel_me": [],
-   "webmention": null,
-   "error": "connection refused"
+   "rel_me": [
+    "https://wikis.world/@smw"
+   ],
+   "webmention": null
   },
   "rdap": {
    "domain": "semantic-mediawiki.org",
@@ -5934,7 +5942,7 @@
   }
  },
  "sethgodin.typepad.com": {
-  "checked": "2026-10-24T06:11:33Z",
+  "checked": "2026-11-23T07:11:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5957,7 +5965,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:11:33Z",
+   "checked": "2026-11-23T07:11:46Z",
    "title": "Typepad | Network Solutions",
    "generator": null,
    "feeds": [],
@@ -6231,16 +6239,14 @@
   }
  },
  "sfgate.com": {
-  "checked": "2026-10-24T06:11:34Z",
+  "checked": "2026-11-23T07:11:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "34.197.233.251",
-    "34.198.86.45",
-    "34.204.119.243",
-    "34.235.224.231"
+    "34.234.132.118",
+    "54.144.200.95"
    ],
    "aaaa": [],
    "cname": null,
@@ -6260,7 +6266,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:11:34Z",
+   "checked": "2026-11-23T07:11:48Z",
    "title": "SFGATE: San Francisco Bay Area News, Sports, Culture, Travel, Food, California Parks",
    "generator": null,
    "feeds": [],
@@ -6485,7 +6491,7 @@
   }
  },
  "shapeof.com": {
-  "checked": "2026-10-24T06:11:36Z",
+  "checked": "2026-11-23T07:11:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6512,7 +6518,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:11:36Z",
+   "checked": "2026-11-23T07:11:50Z",
    "title": "The Shape of Everything",
    "generator": null,
    "feeds": [
@@ -6674,7 +6680,7 @@
   }
  },
  "shawnblanc.net": {
-  "checked": "2026-10-24T05:34:09Z",
+  "checked": "2026-11-23T06:36:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6700,9 +6706,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:34:09Z",
+   "checked": "2026-11-23T06:36:00Z",
    "title": "Shawn Blanc",
-   "generator": "WordPress 6.6.10",
+   "generator": "WordPress 6.6.12",
    "feeds": [
     {
      "type": "rss",
@@ -7523,7 +7529,7 @@
   }
  },
  "shopify.com": {
-  "checked": "2026-10-24T05:53:58Z",
+  "checked": "2026-11-23T06:55:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7546,7 +7552,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:53:58Z",
+   "checked": "2026-11-23T06:55:09Z",
    "title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
    "generator": null,
    "feeds": [],
@@ -8675,7 +8681,7 @@
   }
  },
  "signal.org": {
-  "checked": "2026-10-24T05:45:03Z",
+  "checked": "2026-11-23T06:46:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8701,7 +8707,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:45:03Z",
+   "checked": "2026-11-23T06:46:38Z",
    "title": "Signal >> Home",
    "generator": null,
    "feeds": [
@@ -8774,7 +8780,7 @@
   }
  },
  "signalvnoise.com": {
-  "checked": "2026-10-24T01:46:50Z",
+  "checked": "2026-11-23T06:30:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8797,7 +8803,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:46:50Z",
+   "checked": "2026-11-23T06:30:35Z",
    "title": "Signal v. Noise is closed. | SvN",
    "generator": null,
    "feeds": [],
@@ -9636,7 +9642,7 @@
   }
  },
  "simpable.com": {
-  "checked": "2026-10-24T05:54:00Z",
+  "checked": "2026-11-23T06:55:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9659,7 +9665,7 @@
    "error": "tls: unable to get local issuer certificate"
   },
   "home": {
-   "checked": "2026-10-24T05:54:00Z",
+   "checked": "2026-11-23T06:55:10Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -10105,7 +10111,7 @@
   }
  },
  "simplicitybliss.com": {
-  "checked": "2026-10-24T05:45:06Z",
+  "checked": "2026-11-23T06:46:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10131,9 +10137,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:45:06Z",
-   "title": "Simplicity Bliss | Home Decorating, Simple Living and Rug Design Inspirations",
-   "generator": null,
+   "checked": "2026-11-23T06:46:41Z",
+   "title": "Simplicity Bliss - Home Decorating, Simple Living and Rug Design Inspirations",
+   "generator": "All in One SEO (AIOSEO) 5.0.5.1",
    "feeds": [
     {
      "type": "rss",
@@ -10723,7 +10729,7 @@
   }
  },
  "sivers.org": {
-  "checked": "2026-10-24T05:46:19Z",
+  "checked": "2026-11-23T06:48:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10747,7 +10753,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:46:19Z",
+   "checked": "2026-11-23T06:48:02Z",
    "title": "Derek Sivers",
    "generator": null,
    "feeds": [],
@@ -11711,7 +11717,7 @@
   }
  },
  "slicehost.com": {
-  "checked": "2026-10-24T05:46:21Z",
+  "checked": "2026-11-23T06:48:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11735,7 +11741,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'slicehost.com'"
   },
   "home": {
-   "checked": "2026-10-24T05:46:21Z",
+   "checked": "2026-11-23T06:48:04Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -11744,8 +11750,20 @@
    "webmention": null,
    "error": "tls: Hostname mismatch, certificate is not valid for 'slicehost.com'"
   },
-  "rdap": null,
-  "rdap_error": "refused: rdap.verisign.com: network: Broken pipe"
+  "rdap": {
+   "domain": "slicehost.com",
+   "registrar": "CSC Corporate Domains, Inc.",
+   "registered": "2006-05-16",
+   "expires": "2027-05-16",
+   "status": [
+    "client transfer prohibited"
+   ],
+   "nameservers": [
+    "ns.rackspace.com",
+    "ns2.rackspace.com"
+   ],
+   "checked": "2026-11-23T06:48:04Z"
+  }
  },
  "slides.com": {
   "checked": "2026-10-29T06:26:45Z",
@@ -11783,7 +11801,7 @@
   }
  },
  "slideshare.net": {
-  "checked": "2026-10-24T05:31:48Z",
+  "checked": "2026-11-23T06:33:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11810,7 +11828,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:31:48Z",
+   "checked": "2026-11-23T06:33:51Z",
    "title": "Share & Discover Presentations | Slideshare",
    "generator": null,
    "feeds": [],
@@ -12714,7 +12732,7 @@
   }
  },
  "smashingmagazine.com": {
-  "checked": "2026-10-24T05:41:18Z",
+  "checked": "2026-11-23T06:43:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12742,7 +12760,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:41:18Z",
+   "checked": "2026-11-23T06:43:06Z",
    "title": "Smashing Magazine — For Web Designers And Developers",
    "generator": null,
    "feeds": [
@@ -13547,7 +13565,7 @@
   }
  },
  "snowflake.com": {
-  "checked": "2026-10-24T06:11:38Z",
+  "checked": "2026-11-23T07:11:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13572,7 +13590,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:11:38Z",
+   "checked": "2026-11-23T07:11:51Z",
    "title": "Snowflake AI Data Cloud",
    "generator": null,
    "feeds": [],
@@ -13788,7 +13806,7 @@
   }
  },
  "socialcommercetoday.com": {
-  "checked": "2026-10-24T06:11:42Z",
+  "checked": "2026-11-23T07:11:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13814,7 +13832,7 @@
    "status": 525
   },
   "home": {
-   "checked": "2026-10-24T06:11:42Z",
+   "checked": "2026-11-23T07:11:55Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -14075,7 +14093,7 @@
   }
  },
  "sockpuppet.org": {
-  "checked": "2026-10-24T06:12:54Z",
+  "checked": "2026-11-23T07:13:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14097,7 +14115,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:12:54Z",
+   "checked": "2026-11-23T07:13:07Z",
    "title": "A Final Ward — A Final Ward",
    "generator": "Hugo 0.154.0",
    "feeds": [
@@ -14968,7 +14986,7 @@
   }
  },
  "soundcloud.com": {
-  "checked": "2026-10-24T05:50:16Z",
+  "checked": "2026-11-23T06:51:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14995,7 +15013,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:50:16Z",
+   "checked": "2026-11-23T06:51:40Z",
    "title": "Stream and listen to music online for free with SoundCloud",
    "generator": null,
    "feeds": [],
@@ -15122,7 +15140,7 @@
   }
  },
  "sourceforge.net": {
-  "checked": "2026-10-24T05:59:44Z",
+  "checked": "2026-11-23T07:00:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -15152,7 +15170,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:59:44Z",
+   "checked": "2026-11-23T07:00:23Z",
    "title": "Compare B2B Software, Download, & Develop Open Source & Business Software - SourceForge",
    "generator": null,
    "feeds": [
@@ -15213,7 +15231,7 @@
   }
  },
  "southwestjournal.com": {
-  "checked": "2026-10-24T05:48:31Z",
+  "checked": "2026-11-23T06:50:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -15239,7 +15257,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:48:31Z",
+   "checked": "2026-11-23T06:50:04Z",
    "title": "Southwest Journal - Popular Web Magazine, News, US, Sports",
    "generator": "Elementor 4.3.4; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-disabled, font_display-swap",
    "feeds": [
@@ -15277,7 +15295,7 @@
   }
  },
  "southwestminneapolis.patch.com": {
-  "checked": "2026-10-24T05:50:19Z",
+  "checked": "2026-11-23T06:51:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -15299,7 +15317,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:50:19Z",
+   "checked": "2026-11-23T06:51:43Z",
    "title": "Southwest Minneapolis News, Breaking News in Southwest Minneapolis, MN",
    "generator": null,
    "feeds": [],
@@ -16057,7 +16075,7 @@
   }
  },
  "spectrum.ieee.org": {
-  "checked": "2026-10-24T05:32:40Z",
+  "checked": "2026-11-23T06:34:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16079,7 +16097,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:32:40Z",
+   "checked": "2026-11-23T06:34:38Z",
    "title": "IEEE Spectrum - The world's leading engineering magazine",
    "generator": null,
    "feeds": [
@@ -16177,7 +16195,7 @@
   }
  },
  "speirs.org": {
-  "checked": "2026-10-24T05:59:47Z",
+  "checked": "2026-11-23T07:00:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16203,7 +16221,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:59:47Z",
+   "checked": "2026-11-23T07:00:26Z",
    "title": "Fraser Speirs | Website of Fraser Speirs (not the harmonica guy).",
    "generator": "Jekyll v3.8.5",
    "feeds": [
@@ -16668,7 +16686,7 @@
   }
  },
  "spscommerce.com": {
-  "checked": "2026-10-24T05:34:12Z",
+  "checked": "2026-11-23T06:36:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16695,7 +16713,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:34:12Z",
+   "checked": "2026-11-23T06:36:03Z",
    "title": "SPS Commerce: Retail Solutions For You (EDI, Sales & Item Data)",
    "generator": "SPS Commerce 2016 v.3.0.0",
    "feeds": [
@@ -17433,7 +17451,7 @@
   }
  },
  "stackoverflow.blog": {
-  "checked": "2026-10-24T05:54:05Z",
+  "checked": "2026-11-23T06:55:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -17458,7 +17476,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:05Z",
+   "checked": "2026-11-23T06:55:14Z",
    "title": "The Stack Overflow Blog - Stack Overflow",
    "generator": null,
    "feeds": [
@@ -17490,7 +17508,7 @@
   }
  },
  "stackoverflow.com": {
-  "checked": "2026-10-24T05:54:08Z",
+  "checked": "2026-11-23T06:55:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -17512,7 +17530,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-24T05:54:08Z",
+   "checked": "2026-11-23T06:55:17Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -17650,7 +17668,7 @@
   }
  },
  "stallman.org": {
-  "checked": "2026-10-24T06:12:57Z",
+  "checked": "2026-11-23T07:13:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -17672,7 +17690,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:12:57Z",
+   "checked": "2026-11-23T07:13:10Z",
    "title": "Richard Stallman's Personal Page",
    "generator": null,
    "feeds": [
@@ -18514,7 +18532,7 @@
   }
  },
  "statnews.com": {
-  "checked": "2026-10-24T05:50:23Z",
+  "checked": "2026-11-23T06:51:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -18540,9 +18558,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:50:23Z",
+   "checked": "2026-11-23T06:51:48Z",
    "title": "STAT | Reporting from the frontiers of health and medicine",
-   "generator": "WordPress 7.0.7",
+   "generator": "WordPress 7.0.8",
    "feeds": [
     {
      "type": "rss",
@@ -19168,7 +19186,7 @@
   }
  },
  "steve-yegge.medium.com": {
-  "checked": "2026-10-24T05:59:50Z",
+  "checked": "2026-11-23T07:00:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -19191,7 +19209,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:59:50Z",
+   "checked": "2026-11-23T07:00:28Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -19207,7 +19225,7 @@
   }
  },
  "steveblank.com": {
-  "checked": "2026-10-24T05:41:21Z",
+  "checked": "2026-11-23T06:43:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -19231,7 +19249,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:41:21Z",
+   "checked": "2026-11-23T06:43:09Z",
    "title": "Steve Blank Innovation and Entrepreneurship",
    "generator": null,
    "feeds": [
@@ -19571,7 +19589,7 @@
   }
  },
  "stevenpressfield.com": {
-  "checked": "2026-10-24T06:13:00Z",
+  "checked": "2026-11-23T07:13:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -19597,7 +19615,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:13:00Z",
+   "checked": "2026-11-23T07:13:12Z",
    "title": "The Arcadian | Steven Pressfield",
    "generator": "All in One SEO (AIOSEO) 4.8.5",
    "feeds": [
@@ -19961,7 +19979,7 @@
   }
  },
  "stitcher.io": {
-  "checked": "2026-10-24T06:13:05Z",
+  "checked": "2026-11-23T07:13:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -19986,7 +20004,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:13:05Z",
+   "checked": "2026-11-23T07:13:17Z",
    "title": "Blog | stitcher.io",
    "generator": null,
    "feeds": [
@@ -20928,14 +20946,14 @@
   }
  },
  "stripe.com": {
-  "checked": "2026-10-24T05:32:43Z",
+  "checked": "2026-11-23T06:34:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "198.137.150.161",
-    "198.202.176.161"
+    "198.137.150.41",
+    "198.202.176.41"
    ],
    "aaaa": [],
    "cname": null,
@@ -20953,7 +20971,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:32:43Z",
+   "checked": "2026-11-23T06:34:41Z",
    "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
    "generator": null,
    "feeds": [],
@@ -21504,7 +21522,7 @@
   }
  },
  "sublimetext.com": {
-  "checked": "2026-10-24T06:13:10Z",
+  "checked": "2026-11-23T07:13:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -21526,7 +21544,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:13:10Z",
+   "checked": "2026-11-23T07:13:21Z",
    "title": "Sublime Text - Text Editing, Done Right",
    "generator": null,
    "feeds": [
@@ -21730,7 +21748,7 @@
   }
  },
  "subtraction.com": {
-  "checked": "2026-10-24T06:13:12Z",
+  "checked": "2026-11-23T07:13:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -21754,7 +21772,7 @@
    "error": "tls: TLS_ALERT_HANDSHAKE_FAILURE"
   },
   "home": {
-   "checked": "2026-10-24T06:13:12Z",
+   "checked": "2026-11-23T07:13:23Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -22094,7 +22112,7 @@
   }
  },
  "sumologic.com": {
-  "checked": "2026-10-24T05:54:13Z",
+  "checked": "2026-11-23T06:55:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -22116,9 +22134,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:13Z",
+   "checked": "2026-11-23T06:55:22Z",
    "title": "Cloud log management, monitoring, SIEM tools Sumo Logic",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -22561,18 +22579,18 @@
   }
  },
  "support.apple.com": {
-  "checked": "2026-10-24T05:59:53Z",
+  "checked": "2026-11-23T07:00:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.217.104.86",
-    "23.217.104.87"
+    "23.193.200.210",
+    "23.193.200.214"
    ],
    "aaaa": [
-    "2600:1407:3c00:1b2e::1701:fedb",
-    "2600:1407:3c00:1b2e::1701:fedd"
+    "2600:1418:1000:7::173b:a98c",
+    "2600:1418:1000:7::173b:a98f"
    ],
    "cname": "prod-support.apple-support.akadns.net",
    "ns": [],
@@ -22584,7 +22602,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:59:53Z",
+   "checked": "2026-11-23T07:00:36Z",
    "title": "Official Apple Support",
    "generator": null,
    "feeds": [],
@@ -22839,7 +22857,7 @@
   }
  },
  "surfingcomplexity.blog": {
-  "checked": "2026-10-24T06:13:13Z",
+  "checked": "2026-11-23T07:13:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -22863,7 +22881,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:13:13Z",
+   "checked": "2026-11-23T07:13:24Z",
    "title": "Surfing Complexity – Lorin Hochstein's ramblings about software, complex systems, and incidents.",
    "generator": "WordPress.com",
    "feeds": [
@@ -23164,7 +23182,7 @@
   }
  },
  "svpg.com": {
-  "checked": "2026-10-24T05:30:29Z",
+  "checked": "2026-11-23T06:32:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -23190,9 +23208,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:30:29Z",
+   "checked": "2026-11-23T06:32:33Z",
    "title": "SVPG: Learn the Product Operating Model : Silicon Valley Product Group",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.191.0",
    "feeds": [],
    "hcard": false,
    "rel_me": [],

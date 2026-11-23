@@ -1,6 +1,6 @@
 {
  "w3.org": {
-  "checked": "2026-10-24T06:00:44Z",
+  "checked": "2026-11-23T07:01:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -26,7 +26,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:00:44Z",
+   "checked": "2026-11-23T07:01:26Z",
    "title": "W3C",
    "generator": null,
    "feeds": [],
@@ -658,7 +658,7 @@
   }
  },
  "wapo.st": {
-  "checked": "2026-10-24T06:00:46Z",
+  "checked": "2026-11-23T07:01:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -682,7 +682,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-24T06:00:46Z",
+   "checked": "2026-11-23T07:01:27Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -755,7 +755,7 @@
   }
  },
  "warrenellis.ltd": {
-  "checked": "2026-10-24T05:54:21Z",
+  "checked": "2026-11-23T06:55:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -779,7 +779,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:21Z",
+   "checked": "2026-11-23T06:55:28Z",
    "title": "WARREN ELLIS LTD – a writer's notebook",
    "generator": null,
    "feeds": [
@@ -815,7 +815,7 @@
   }
  },
  "warzel.substack.com": {
-  "checked": "2026-10-24T06:15:25Z",
+  "checked": "2026-11-23T07:15:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -838,7 +838,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:15:25Z",
+   "checked": "2026-11-23T07:15:38Z",
    "title": "Galaxy Brain | Charlie Warzel | Substack",
    "generator": null,
    "feeds": [
@@ -854,7 +854,7 @@
   }
  },
  "washingtonmonthly.com": {
-  "checked": "2026-10-24T06:15:28Z",
+  "checked": "2026-11-23T07:15:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -877,9 +877,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:15:28Z",
+   "checked": "2026-11-23T07:15:41Z",
    "title": "Home | Washington Monthly",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [
     {
      "type": "rss",
@@ -1285,7 +1285,7 @@
   }
  },
  "waxy.org": {
-  "checked": "2026-10-24T05:48:41Z",
+  "checked": "2026-11-23T06:50:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1311,9 +1311,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:48:41Z",
+   "checked": "2026-11-23T06:50:13Z",
    "title": "Waxy.org - Andy Baio lives here",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -2067,7 +2067,7 @@
   }
  },
  "webkit.org": {
-  "checked": "2026-10-24T05:43:43Z",
+  "checked": "2026-11-23T06:45:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2093,9 +2093,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:43:43Z",
+   "checked": "2026-11-23T06:45:24Z",
    "title": "WebKit",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -2179,7 +2179,7 @@
   }
  },
  "weblog.rubyonrails.org": {
-  "checked": "2026-10-24T05:48:44Z",
+  "checked": "2026-11-23T06:50:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2198,7 +2198,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-24T05:48:44Z",
+   "checked": "2026-11-23T06:50:16Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2289,7 +2289,7 @@
   }
  },
  "weblogtoolscollection.com": {
-  "checked": "2026-10-24T05:54:24Z",
+  "checked": "2026-11-23T06:55:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2311,9 +2311,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:24Z",
+   "checked": "2026-11-23T06:55:31Z",
    "title": "Weblog Tools Collection",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -2777,40 +2777,39 @@
   }
  },
  "webstock.org.nz": {
-  "checked": "2026-10-24T06:15:31Z",
+  "checked": "2026-11-23T07:15:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.21.80.89",
-    "172.67.176.161"
+    "104.21.52.159",
+    "172.67.201.38"
    ],
    "aaaa": [
-    "2606:4700:3033::6815:5059",
-    "2606:4700:3036::ac43:b0a1"
+    "2606:4700:3034::6815:349f",
+    "2606:4700:3035::ac43:c926"
    ],
    "cname": null,
    "ns": [
-    "karl.ns.cloudflare.com",
-    "lily.ns.cloudflare.com"
+    "christian.ns.cloudflare.com",
+    "priscilla.ns.cloudflare.com"
    ],
    "mx": true
   },
   "https": {
    "reachable": true,
    "redirects_http": false,
-   "status": 503
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:15:31Z",
-   "title": null,
+   "checked": "2026-11-23T07:15:43Z",
+   "title": "Webstock - Coming soon",
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null,
-   "error": "HTTP 503"
+   "webmention": null
   }
  },
  "webtag.io": {
@@ -3561,16 +3560,16 @@
   }
  },
  "wesolver.blogspot.com": {
-  "checked": "2026-10-24T06:15:58Z",
+  "checked": "2026-11-23T07:15:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.211.1"
+    "142.251.210.193"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81c::2001"
+    "2607:f8b0:4009:802::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -3582,7 +3581,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-24T06:15:58Z",
+   "checked": "2026-11-23T07:15:45Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4158,7 +4157,7 @@
   }
  },
  "whereslou.com": {
-  "checked": "2026-10-24T06:01:17Z",
+  "checked": "2026-11-23T07:01:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4170,7 +4169,8 @@
     "dns1.registrar-servers.com",
     "dns2.registrar-servers.com"
    ],
-   "mx": true
+   "mx": true,
+   "error": "SERVFAIL"
   },
   "https": {
    "reachable": false,
@@ -4179,7 +4179,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-24T06:01:17Z",
+   "checked": "2026-11-23T07:01:59Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4190,7 +4190,7 @@
   }
  },
  "wheresyoured.at": {
-  "checked": "2026-10-24T06:16:00Z",
+  "checked": "2026-11-23T07:15:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4212,9 +4212,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:00Z",
+   "checked": "2026-11-23T07:15:46Z",
    "title": "Ed Zitron's Where's Your Ed At",
-   "generator": "Ghost 6.73",
+   "generator": "Ghost 6.79",
    "feeds": [
     {
      "type": "rss",
@@ -5853,7 +5853,7 @@
   }
  },
  "wikitribune.com": {
-  "checked": "2026-10-24T06:16:03Z",
+  "checked": "2026-11-23T07:15:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5877,7 +5877,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:03Z",
+   "checked": "2026-11-23T07:15:50Z",
    "title": "wt.social has moved to trustcafe.io",
    "generator": null,
    "feeds": [],
@@ -5918,7 +5918,7 @@
   }
  },
  "wikiworks.com": {
-  "checked": "2026-10-24T06:16:05Z",
+  "checked": "2026-11-23T07:15:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5942,7 +5942,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:05Z",
+   "checked": "2026-11-23T07:15:51Z",
    "title": "WikiWorks: MediaWiki Consulting",
    "generator": null,
    "feeds": [],
@@ -7165,16 +7165,16 @@
   }
  },
  "wnyc.org": {
-  "checked": "2026-10-24T06:01:17Z",
+  "checked": "2026-11-23T07:02:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "99.84.203.119",
-    "99.84.203.125",
-    "99.84.203.126",
-    "99.84.203.127"
+    "13.249.141.10",
+    "13.249.141.23",
+    "13.249.141.78",
+    "13.249.141.107"
    ],
    "aaaa": [],
    "cname": null,
@@ -7192,7 +7192,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:01:17Z",
+   "checked": "2026-11-23T07:02:00Z",
    "title": "WNYC | New York Public Radio, Podcasts, Live Streaming Radio, News",
    "generator": null,
    "feeds": [],
@@ -7405,7 +7405,7 @@
   }
  },
  "woothemes.com": {
-  "checked": "2026-10-24T05:50:37Z",
+  "checked": "2026-11-23T06:52:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7428,9 +7428,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:50:37Z",
+   "checked": "2026-11-23T06:52:00Z",
    "title": "WooCommerce",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -7544,7 +7544,7 @@
   }
  },
  "wordpress.org": {
-  "checked": "2026-10-24T01:48:10Z",
+  "checked": "2026-11-23T06:31:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7570,9 +7570,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:48:10Z",
-   "title": "Blog Tool, Publishing Platform, and CMS – WordPress.org",
-   "generator": "WordPress 7.2-beta1-64690",
+   "checked": "2026-11-23T06:31:55Z",
+   "title": "Blog Tool, Publishing Platform, and CMS | WordPress.org",
+   "generator": "WordPress 7.2-RC2-65733",
    "feeds": [
     {
      "type": "rss",
@@ -8008,7 +8008,7 @@
   }
  },
  "world.hey.com": {
-  "checked": "2026-10-24T05:30:32Z",
+  "checked": "2026-11-23T06:32:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8031,7 +8031,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:30:32Z",
+   "checked": "2026-11-23T06:32:35Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8453,7 +8453,7 @@
   }
  },
  "worrydream.com": {
-  "checked": "2026-10-24T06:01:24Z",
+  "checked": "2026-11-23T07:02:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8465,14 +8465,14 @@
     "99.84.203.113"
    ],
    "aaaa": [
-    "2600:9000:20c5:200:6:3fc6:26c0:93a1",
-    "2600:9000:20c5:400:6:3fc6:26c0:93a1",
-    "2600:9000:20c5:1600:6:3fc6:26c0:93a1",
-    "2600:9000:20c5:2e00:6:3fc6:26c0:93a1",
-    "2600:9000:20c5:4000:6:3fc6:26c0:93a1",
-    "2600:9000:20c5:6400:6:3fc6:26c0:93a1",
-    "2600:9000:20c5:de00:6:3fc6:26c0:93a1",
-    "2600:9000:20c5:f600:6:3fc6:26c0:93a1"
+    "2600:9000:2617:200:6:3fc6:26c0:93a1",
+    "2600:9000:2617:2e00:6:3fc6:26c0:93a1",
+    "2600:9000:2617:6a00:6:3fc6:26c0:93a1",
+    "2600:9000:2617:a000:6:3fc6:26c0:93a1",
+    "2600:9000:2617:ca00:6:3fc6:26c0:93a1",
+    "2600:9000:2617:d000:6:3fc6:26c0:93a1",
+    "2600:9000:2617:d200:6:3fc6:26c0:93a1",
+    "2600:9000:2617:fa00:6:3fc6:26c0:93a1"
    ],
    "cname": null,
    "ns": [
@@ -8489,7 +8489,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:01:24Z",
+   "checked": "2026-11-23T07:02:06Z",
    "title": "Bret Victor, human being",
    "generator": null,
    "feeds": [
@@ -9074,7 +9074,7 @@
   }
  },
  "writings.stephenwolfram.com": {
-  "checked": "2026-10-24T05:54:27Z",
+  "checked": "2026-11-23T06:55:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9093,7 +9093,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:27Z",
+   "checked": "2026-11-23T06:55:34Z",
    "title": "Stephen Wolfram Writings",
    "generator": null,
    "feeds": [
@@ -9128,7 +9128,7 @@
   }
  },
  "wsj.com": {
-  "checked": "2026-10-24T05:34:18Z",
+  "checked": "2026-11-23T06:36:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9155,7 +9155,7 @@
    "status": 401
   },
   "home": {
-   "checked": "2026-10-24T05:34:18Z",
+   "checked": "2026-11-23T06:36:08Z",
    "title": null,
    "generator": null,
    "feeds": [],

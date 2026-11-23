@@ -1,6 +1,6 @@
 {
  "cacm.acm.org": {
-  "checked": "2026-10-24T05:51:36Z",
+  "checked": "2026-11-23T06:52:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -20,9 +20,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:51:36Z",
+   "checked": "2026-11-23T06:52:55Z",
    "title": "Communications of the ACM",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -735,7 +735,7 @@
   }
  },
  "calpaterson.com": {
-  "checked": "2026-10-24T06:20:56Z",
+  "checked": "2026-11-23T07:21:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -761,7 +761,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:20:56Z",
+   "checked": "2026-11-23T07:21:50Z",
    "title": "Cal Paterson",
    "generator": null,
    "feeds": [
@@ -1547,7 +1547,7 @@
   }
  },
  "canonrumors.com": {
-  "checked": "2026-10-24T05:47:36Z",
+  "checked": "2026-11-23T06:49:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1571,9 +1571,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:47:36Z",
+   "checked": "2026-11-23T06:49:16Z",
    "title": "Canon Rumors - Your Best Source for Canon News, Rumors and More",
-   "generator": "Elementor 4.3.5; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap",
+   "generator": "Elementor 4.4.1; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap",
    "feeds": [
     {
      "type": "rss",
@@ -1783,14 +1783,14 @@
   }
  },
  "carbon.now.sh": {
-  "checked": "2026-10-24T06:20:59Z",
+  "checked": "2026-11-23T07:21:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "64.29.17.195",
-    "216.198.79.195"
+    "64.29.17.131",
+    "216.198.79.131"
    ],
    "aaaa": [],
    "cname": null,
@@ -1803,7 +1803,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:20:59Z",
+   "checked": "2026-11-23T07:21:53Z",
    "title": "Carbon | Create and share beautiful images of your source code",
    "generator": null,
    "feeds": [],
@@ -2117,7 +2117,7 @@
   }
  },
  "caringbridge.org": {
-  "checked": "2026-10-24T05:56:07Z",
+  "checked": "2026-11-23T06:56:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2141,7 +2141,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:56:07Z",
+   "checked": "2026-11-23T06:56:43Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2353,7 +2353,7 @@
   }
  },
  "carpeaqua.com": {
-  "checked": "2026-10-24T06:21:01Z",
+  "checked": "2026-11-23T07:21:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2379,9 +2379,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:21:01Z",
+   "checked": "2026-11-23T07:21:56Z",
    "title": "Justin Williams",
-   "generator": "Ghost 6.73",
+   "generator": "Ghost 6.79",
    "feeds": [
     {
      "type": "rss",
@@ -2617,7 +2617,7 @@
   }
  },
  "caseyaccidental.com": {
-  "checked": "2026-10-24T05:51:39Z",
+  "checked": "2026-11-23T06:52:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2639,7 +2639,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:51:39Z",
+   "checked": "2026-11-23T06:52:58Z",
    "title": "Casey Accidental | Substack",
    "generator": null,
    "feeds": [
@@ -2890,7 +2890,7 @@
   }
  },
  "catalogchoice.org": {
-  "checked": "2026-10-24T06:21:03Z",
+  "checked": "2026-11-23T07:21:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2916,7 +2916,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:21:03Z",
+   "checked": "2026-11-23T07:21:57Z",
    "title": "Catalog Choice",
    "generator": null,
    "feeds": [],
@@ -2926,7 +2926,7 @@
   }
  },
  "catb.org": {
-  "checked": "2026-10-24T06:21:05Z",
+  "checked": "2026-11-23T07:22:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2949,7 +2949,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'catb.org'"
   },
   "home": {
-   "checked": "2026-10-24T06:21:05Z",
+   "checked": "2026-11-23T07:22:00Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3455,7 +3455,7 @@
   }
  },
  "cbsnews.com": {
-  "checked": "2026-10-24T05:45:33Z",
+  "checked": "2026-11-23T06:47:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3484,7 +3484,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:45:33Z",
+   "checked": "2026-11-23T06:47:18Z",
    "title": "CBS News | Breaking News, Top Stories & Exclusive Coverage",
    "generator": null,
    "feeds": [
@@ -3726,14 +3726,14 @@
   }
  },
  "cdc.gov": {
-  "checked": "2026-10-24T06:21:07Z",
+  "checked": "2026-11-23T07:22:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.59.169.46",
-    "23.59.169.53"
+    "23.200.156.4",
+    "23.200.156.18"
    ],
    "aaaa": [
     "2600:1418:1000:5::17d9:379f",
@@ -3756,7 +3756,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:21:07Z",
+   "checked": "2026-11-23T07:22:15Z",
    "title": "Centers for Disease Control and Prevention | CDC",
    "generator": null,
    "feeds": [],
@@ -3810,7 +3810,7 @@
   }
  },
  "cdixon.org": {
-  "checked": "2026-10-24T06:21:11Z",
+  "checked": "2026-11-23T07:22:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3836,7 +3836,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:21:11Z",
+   "checked": "2026-11-23T07:22:19Z",
    "title": "cdixon",
    "generator": null,
    "feeds": [
@@ -4261,7 +4261,7 @@
   }
  },
  "centernetworks.com": {
-  "checked": "2026-10-24T06:21:14Z",
+  "checked": "2026-11-23T07:22:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4288,7 +4288,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-24T06:21:14Z",
+   "checked": "2026-11-23T07:22:22Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4366,20 +4366,19 @@
   }
  },
  "cfenollosa.com": {
-  "checked": "2026-10-24T06:21:47Z",
+  "checked": "2026-11-23T07:22:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "46.101.100.7"
+    "185.253.152.198"
    ],
    "aaaa": [],
    "cname": null,
    "ns": [
-    "ns1.digitalocean.com",
-    "ns2.digitalocean.com",
-    "ns3.digitalocean.com"
+    "ns1.clouding.io",
+    "ns2.clouding.io"
    ],
    "mx": true
   },
@@ -4389,10 +4388,16 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:21:47Z",
-   "title": "Carlos Fenollosa",
+   "checked": "2026-11-23T07:22:54Z",
+   "title": "Blog de Carlos Fenollosa",
    "generator": null,
-   "feeds": [],
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "http://cfenollosa.com/blog/feed.rss",
+     "title": "Suscribirse mediante RSS..."
+    }
+   ],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -4715,7 +4720,7 @@
   }
  },
  "changelog.com": {
-  "checked": "2026-10-24T06:05:35Z",
+  "checked": "2026-11-23T07:06:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4741,7 +4746,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:05:35Z",
+   "checked": "2026-11-23T07:06:08Z",
    "title": "Podcasts for developers",
    "generator": null,
    "feeds": [
@@ -4828,7 +4833,7 @@
   }
  },
  "channel9.msdn.com": {
-  "checked": "2026-10-24T06:05:37Z",
+  "checked": "2026-11-23T07:06:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4849,7 +4854,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:05:37Z",
+   "checked": "2026-11-23T07:06:11Z",
    "title": "Shows - Event & Video Content | Microsoft Learn",
    "generator": null,
    "feeds": [],
@@ -4937,7 +4942,7 @@
   }
  },
  "charity.wtf": {
-  "checked": "2026-10-24T05:44:09Z",
+  "checked": "2026-11-23T06:45:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4955,7 +4960,7 @@
     "dns1.registrar-servers.com",
     "dns2.registrar-servers.com"
    ],
-   "mx": true
+   "mx": false
   },
   "https": {
    "reachable": true,
@@ -4963,7 +4968,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:44:09Z",
+   "checked": "2026-11-23T06:45:49Z",
    "title": "Charity Majors | Substack",
    "generator": null,
    "feeds": [
@@ -5337,7 +5342,7 @@
   }
  },
  "chartscss.org": {
-  "checked": "2026-10-24T06:21:50Z",
+  "checked": "2026-11-23T07:23:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5362,7 +5367,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:21:50Z",
+   "checked": "2026-11-23T07:23:01Z",
    "title": "Charts.css",
    "generator": "VuePress 1.9.10",
    "feeds": [],
@@ -6254,7 +6259,7 @@
   }
  },
  "chipwreck.de": {
-  "checked": "2026-10-24T06:21:52Z",
+  "checked": "2026-11-23T07:23:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6278,9 +6283,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:21:52Z",
+   "checked": "2026-11-23T07:23:03Z",
    "title": "chipwreck – The guide is definitive. Reality is frequently inaccurate.",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -6465,7 +6470,7 @@
   }
  },
  "chrisbowler.com": {
-  "checked": "2026-10-24T06:05:44Z",
+  "checked": "2026-11-23T07:06:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6491,7 +6496,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:05:44Z",
+   "checked": "2026-11-23T07:06:17Z",
    "title": "Home.md - chrisbowler.com",
    "generator": null,
    "feeds": [],
@@ -6827,7 +6832,7 @@
   }
  },
  "chrisshort.net": {
-  "checked": "2026-10-24T06:21:59Z",
+  "checked": "2026-11-23T07:23:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6853,7 +6858,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:21:59Z",
+   "checked": "2026-11-23T07:23:10Z",
    "title": "Chris Short",
    "generator": "Hugo 0.161.1",
    "feeds": [
@@ -7303,7 +7308,7 @@
   }
  },
  "ci.minneapolis.mn.us": {
-  "checked": "2026-10-24T06:22:02Z",
+  "checked": "2026-11-23T07:23:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7315,14 +7320,14 @@
     "99.84.203.124"
    ],
    "aaaa": [
-    "2600:9000:20c5:400:1a:5ad9:2dc0:93a1",
-    "2600:9000:20c5:c00:1a:5ad9:2dc0:93a1",
-    "2600:9000:20c5:1800:1a:5ad9:2dc0:93a1",
-    "2600:9000:20c5:1c00:1a:5ad9:2dc0:93a1",
-    "2600:9000:20c5:3200:1a:5ad9:2dc0:93a1",
-    "2600:9000:20c5:3c00:1a:5ad9:2dc0:93a1",
-    "2600:9000:20c5:9600:1a:5ad9:2dc0:93a1",
-    "2600:9000:20c5:e600:1a:5ad9:2dc0:93a1"
+    "2600:9000:20c5:2e00:1a:5ad9:2dc0:93a1",
+    "2600:9000:20c5:7200:1a:5ad9:2dc0:93a1",
+    "2600:9000:20c5:8e00:1a:5ad9:2dc0:93a1",
+    "2600:9000:20c5:a200:1a:5ad9:2dc0:93a1",
+    "2600:9000:20c5:b800:1a:5ad9:2dc0:93a1",
+    "2600:9000:20c5:d000:1a:5ad9:2dc0:93a1",
+    "2600:9000:20c5:e000:1a:5ad9:2dc0:93a1",
+    "2600:9000:20c5:fc00:1a:5ad9:2dc0:93a1"
    ],
    "cname": null,
    "ns": [
@@ -7338,7 +7343,7 @@
    "error": "tls: TLS_ALERT_HANDSHAKE_FAILURE"
   },
   "home": {
-   "checked": "2026-10-24T06:22:02Z",
+   "checked": "2026-11-23T07:23:13Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7349,7 +7354,7 @@
   }
  },
  "ciaobambino.com": {
-  "checked": "2026-10-24T06:22:03Z",
+  "checked": "2026-11-23T07:23:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7372,7 +7377,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:22:03Z",
+   "checked": "2026-11-23T07:23:14Z",
    "title": "Ciao Bambino! | Luxury Family Travel Agency Since 2004",
    "generator": null,
    "feeds": [
@@ -7393,7 +7398,7 @@
   }
  },
  "ciechanow.ski": {
-  "checked": "2026-10-24T05:51:42Z",
+  "checked": "2026-11-23T06:53:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7418,7 +7423,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:51:42Z",
+   "checked": "2026-11-23T06:53:00Z",
    "title": "Bartosz Ciechanowski",
    "generator": null,
    "feeds": [
@@ -7450,7 +7455,7 @@
   }
  },
  "cio.com": {
-  "checked": "2026-10-24T06:22:06Z",
+  "checked": "2026-11-23T07:23:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7476,7 +7481,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:22:06Z",
+   "checked": "2026-11-23T07:23:17Z",
    "title": "CIO.com - The voice of IT leadership",
    "generator": null,
    "feeds": [
@@ -7578,7 +7583,7 @@
   }
  },
  "citationneeded.news": {
-  "checked": "2026-10-24T06:05:48Z",
+  "checked": "2026-11-23T07:06:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7603,7 +7608,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:05:48Z",
+   "checked": "2026-11-23T07:06:20Z",
    "title": "Citation Needed by Molly White",
    "generator": "Ghost 6.67",
    "feeds": [
@@ -7663,7 +7668,7 @@
   }
  },
  "citizenlab.ca": {
-  "checked": "2026-10-24T06:22:10Z",
+  "checked": "2026-11-23T07:23:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7689,9 +7694,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:22:10Z",
+   "checked": "2026-11-23T07:23:21Z",
    "title": "The Citizen Lab - The Citizen Lab",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -7847,7 +7852,7 @@
   }
  },
  "citypages.com": {
-  "checked": "2026-10-24T06:22:26Z",
+  "checked": "2026-11-23T07:23:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7874,7 +7879,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-24T06:22:26Z",
+   "checked": "2026-11-23T07:23:22Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7955,7 +7960,7 @@
   }
  },
  "cjchilvers.com": {
-  "checked": "2026-10-24T05:41:41Z",
+  "checked": "2026-11-23T06:43:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7977,9 +7982,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:41:41Z",
+   "checked": "2026-11-23T06:43:27Z",
    "title": "CJ Chilvers",
-   "generator": "Ghost 6.73",
+   "generator": "Ghost 6.79",
    "feeds": [
     {
      "type": "rss",
@@ -8007,7 +8012,7 @@
   }
  },
  "cjr.org": {
-  "checked": "2026-10-24T05:45:34Z",
+  "checked": "2026-11-23T06:47:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8030,10 +8035,16 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:45:34Z",
+   "checked": "2026-11-23T06:47:20Z",
    "title": "Columbia Journalism Review",
    "generator": null,
-   "feeds": [],
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.cjr.org/index.xml",
+     "title": "RSS 2.0"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
    "webmention": null
@@ -8054,15 +8065,15 @@
   }
  },
  "ckarchive.com": {
-  "checked": "2026-10-24T05:56:10Z",
+  "checked": "2026-11-23T06:56:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "3.133.222.229",
-    "18.116.229.1",
-    "18.117.207.238"
+    "3.135.253.96",
+    "3.136.10.180",
+    "18.216.154.33"
    ],
    "aaaa": [],
    "cname": null,
@@ -8080,7 +8091,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:56:10Z",
+   "checked": "2026-11-23T06:56:46Z",
    "title": "Kit: The Platform for Creators - Email Marketing, Automation & Newsletters to Grow Your Business",
    "generator": null,
    "feeds": [],
@@ -8128,7 +8139,7 @@
   }
  },
  "cl.cam.ac.uk": {
-  "checked": "2026-10-24T06:22:29Z",
+  "checked": "2026-11-23T07:23:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8154,7 +8165,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-24T06:22:29Z",
+   "checked": "2026-11-23T07:23:25Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8242,7 +8253,7 @@
   }
  },
  "clarkware.com": {
-  "checked": "2026-10-24T06:05:50Z",
+  "checked": "2026-11-23T07:06:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8266,17 +8277,17 @@
    "reachable": false,
    "redirects_http": false,
    "status": null,
-   "error": "tls: Hostname mismatch, certificate is not valid for 'clarkware.com'"
+   "error": "tls: TLSV1_UNRECOGNIZED_NAME"
   },
   "home": {
-   "checked": "2026-10-24T06:05:50Z",
+   "checked": "2026-11-23T07:06:23Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "tls: Hostname mismatch, certificate is not valid for 'clarkware.com'"
+   "error": "tls: TLSV1_UNRECOGNIZED_NAME"
   }
  },
  "classicprogrammerpaintings.tumblr.com": {
@@ -8311,7 +8322,7 @@
   }
  },
  "claude.com": {
-  "checked": "2026-10-24T05:45:37Z",
+  "checked": "2026-11-23T06:47:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8335,8 +8346,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:45:37Z",
-   "title": "Claude",
+   "checked": "2026-11-23T06:47:22Z",
+   "title": "Claude by Anthropic | The AI for problem solvers",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -8791,7 +8802,7 @@
   }
  },
  "clkoerner.com": {
-  "checked": "2026-10-24T06:05:52Z",
+  "checked": "2026-11-23T07:06:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8813,9 +8824,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:05:52Z",
+   "checked": "2026-11-23T07:06:25Z",
    "title": "Chris Koerner – Cliché Tagline about being a Dreamer, a Thinker, a Husband and a Father",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -8836,13 +8847,13 @@
   }
  },
  "cloud.google.com": {
-  "checked": "2026-10-24T05:33:29Z",
+  "checked": "2026-11-23T06:35:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.214.78"
+    "142.251.210.110"
    ],
    "aaaa": [
     "2607:f8b0:4009:813::200e"
@@ -8857,7 +8868,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:33:29Z",
+   "checked": "2026-11-23T06:35:25Z",
    "title": "AI and Cloud Computing Services | Google Cloud",
    "generator": null,
    "feeds": [],
@@ -9179,16 +9190,16 @@
   }
  },
  "cloudplatform.googleblog.com": {
-  "checked": "2026-10-24T05:43:00Z",
+  "checked": "2026-11-23T06:44:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.41.129"
+    "142.251.32.1"
    ],
    "aaaa": [
-    "2607:f8b0:4009:812::2001"
+    "2607:f8b0:4009:813::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -9200,7 +9211,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:43:00Z",
+   "checked": "2026-11-23T06:44:40Z",
    "title": "Google Cloud | Google Cloud Blog",
    "generator": null,
    "feeds": [],
@@ -9373,17 +9384,21 @@
   }
  },
  "cnbc.com": {
-  "checked": "2026-10-24T01:46:30Z",
+  "checked": "2026-11-23T06:30:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "52.86.15.12",
-    "52.203.38.227",
-    "98.95.101.60"
+    "54.157.108.158",
+    "98.83.184.133",
+    "100.28.104.175"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2600:1f18:297:ba0e:7900:f622:48a8:f266",
+    "2600:1f18:297:ba18:6ddc:5d8f:6053:f003",
+    "2600:1f18:297:ba24:b508:76de:f4a:df34"
+   ],
    "cname": null,
    "ns": [
     "dns1.p05.nsone.net",
@@ -9399,7 +9414,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:46:30Z",
+   "checked": "2026-11-23T06:30:16Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9430,7 +9445,7 @@
   }
  },
  "cncf.io": {
-  "checked": "2026-10-24T05:56:13Z",
+  "checked": "2026-11-23T06:56:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9457,7 +9472,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:56:13Z",
+   "checked": "2026-11-23T06:56:49Z",
    "title": "Cloud Native Computing Foundation",
    "generator": null,
    "feeds": [],
@@ -9467,7 +9482,7 @@
   }
  },
  "cnet.com": {
-  "checked": "2026-10-24T05:45:40Z",
+  "checked": "2026-11-23T06:47:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9493,9 +9508,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:45:40Z",
+   "checked": "2026-11-23T06:47:25Z",
    "title": "CNET: Product reviews, advice, how-tos and the latest news - CNET",
-   "generator": "WordPress 6.9.10",
+   "generator": "WordPress 6.9.12",
    "feeds": [
     {
      "type": "atom",
@@ -9553,7 +9568,7 @@
   }
  },
  "cnn.com": {
-  "checked": "2026-10-24T05:47:41Z",
+  "checked": "2026-11-23T06:49:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9585,7 +9600,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:47:41Z",
+   "checked": "2026-11-23T06:49:20Z",
    "title": "Breaking News, Latest News and Videos | CNN",
    "generator": null,
    "feeds": [],
@@ -9831,7 +9846,7 @@
   }
  },
  "cocomsp.com": {
-  "checked": "2026-10-24T06:22:29Z",
+  "checked": "2026-11-23T07:23:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9857,9 +9872,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:22:29Z",
-   "title": "Coco – Minneapolis' Original Coworking & Office Workspace",
-   "generator": "Elementor 4.1.4; settings: css_print_method-external, google_font-enabled, font_display-auto",
+   "checked": "2026-11-23T07:23:25Z",
+   "title": "Coco Northeast Minneapolis | Coworking, Offices & Meeting Rooms",
+   "generator": "Elementor 4.3.5; settings: css_print_method-external, google_font-enabled, font_display-auto",
    "feeds": [
     {
      "type": "rss",
@@ -9958,7 +9973,7 @@
   }
  },
  "coda.io": {
-  "checked": "2026-10-24T06:22:32Z",
+  "checked": "2026-11-23T07:23:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9985,7 +10000,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:22:32Z",
+   "checked": "2026-11-23T07:23:27Z",
    "title": "Coda: Your all-in-one collaborative workspace.",
    "generator": null,
    "feeds": [],
@@ -9995,7 +10010,7 @@
   }
  },
  "codahale.com": {
-  "checked": "2026-10-24T06:22:34Z",
+  "checked": "2026-11-23T07:23:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10018,7 +10033,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-24T06:22:34Z",
+   "checked": "2026-11-23T07:23:30Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -10029,7 +10044,7 @@
   }
  },
  "code.claude.com": {
-  "checked": "2026-10-24T06:05:56Z",
+  "checked": "2026-11-23T07:06:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10050,8 +10065,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:05:56Z",
-   "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+   "checked": "2026-11-23T07:06:28Z",
+   "title": "Claude Code by Anthropic | AI coding agent and assistant",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -10060,16 +10075,16 @@
   }
  },
  "code.facebook.com": {
-  "checked": "2026-10-24T05:56:15Z",
+  "checked": "2026-11-23T06:56:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "157.240.26.18"
+    "57.144.204.141"
    ],
    "aaaa": [
-    "2a03:2880:f38a:8d:face:b00c:0:2"
+    "2a03:2880:f03a:12:face:b00c:0:2"
    ],
    "cname": "star.c10r.facebook.com",
    "ns": [],
@@ -10081,9 +10096,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:56:15Z",
+   "checked": "2026-11-23T06:56:50Z",
    "title": "Engineering at Meta - Engineering at Meta Blog",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -10133,16 +10148,16 @@
   }
  },
  "code.google.com": {
-  "checked": "2026-10-24T05:30:14Z",
+  "checked": "2026-11-23T06:32:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.41.78"
+    "142.251.210.110"
    ],
    "aaaa": [
-    "2607:f8b0:4009:810::200e"
+    "2607:f8b0:4009:815::200e"
    ],
    "cname": "code.l.google.com",
    "ns": [],
@@ -10154,7 +10169,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:30:14Z",
+   "checked": "2026-11-23T06:32:20Z",
    "title": "Google Code",
    "generator": null,
    "feeds": [],
@@ -10253,7 +10268,7 @@
   }
  },
  "codeascraft.com": {
-  "checked": "2026-10-24T05:49:24Z",
+  "checked": "2026-11-23T06:50:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10277,7 +10292,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-24T05:49:24Z",
+   "checked": "2026-11-23T06:50:54Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -10372,7 +10387,7 @@
   }
  },
  "codebetter.com": {
-  "checked": "2026-10-24T06:22:34Z",
+  "checked": "2026-11-23T07:23:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10398,7 +10413,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:22:34Z",
+   "checked": "2026-11-23T07:23:30Z",
    "title": "CodeBetter — micro-bounties",
    "generator": null,
    "feeds": [],
@@ -11113,7 +11128,7 @@
   }
  },
  "codingsans.com": {
-  "checked": "2026-10-24T06:22:37Z",
+  "checked": "2026-11-23T07:23:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11135,7 +11150,7 @@
    "status": 402
   },
   "home": {
-   "checked": "2026-10-24T06:22:37Z",
+   "checked": "2026-11-23T07:23:33Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -11403,7 +11418,7 @@
   }
  },
  "cogmap.com": {
-  "checked": "2026-10-24T05:47:43Z",
+  "checked": "2026-11-23T06:49:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11426,7 +11441,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-24T05:47:43Z",
+   "checked": "2026-11-23T06:49:22Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -11605,7 +11620,7 @@
   }
  },
  "coindesk.com": {
-  "checked": "2026-10-24T05:43:03Z",
+  "checked": "2026-11-23T06:44:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11624,16 +11639,17 @@
   "https": {
    "reachable": true,
    "redirects_http": true,
-   "status": 200
+   "status": 429
   },
   "home": {
-   "checked": "2026-10-24T05:43:03Z",
-   "title": "CoinDesk: Bitcoin, Ethereum, XRP, Crypto News and Price Data",
+   "checked": "2026-11-23T06:44:43Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 429 (Vercel challenge)"
   },
   "rdap": {
    "domain": "coindesk.com",
@@ -11724,7 +11740,7 @@
   }
  },
  "coinmetrics.substack.com": {
-  "checked": "2026-10-24T05:33:32Z",
+  "checked": "2026-11-23T06:35:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11747,7 +11763,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:33:32Z",
+   "checked": "2026-11-23T06:35:27Z",
    "title": "Coin Metrics State of the Network | Substack",
    "generator": null,
    "feeds": [
@@ -11777,7 +11793,7 @@
   }
  },
  "cointelegraph.com": {
-  "checked": "2026-10-24T05:51:46Z",
+  "checked": "2026-11-23T06:53:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11803,7 +11819,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:51:46Z",
+   "checked": "2026-11-23T06:53:04Z",
    "title": "Cointelegraph Bitcoin & Ethereum Blockchain News",
    "generator": null,
    "feeds": [
@@ -12195,7 +12211,7 @@
   }
  },
  "collabfund.com": {
-  "checked": "2026-10-24T06:22:40Z",
+  "checked": "2026-11-23T07:23:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12222,7 +12238,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:22:40Z",
+   "checked": "2026-11-23T07:23:36Z",
    "title": "Collaborative Fund",
    "generator": "Jekyll v4.3.4",
    "feeds": [
@@ -12454,7 +12470,7 @@
   }
  },
  "colterreed.com": {
-  "checked": "2026-10-24T06:22:43Z",
+  "checked": "2026-11-23T07:23:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12480,7 +12496,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:22:43Z",
+   "checked": "2026-11-23T07:23:39Z",
    "title": "Colter Reed",
    "generator": null,
    "feeds": [
@@ -12895,13 +12911,13 @@
   }
  },
  "commoncog.com": {
-  "checked": "2026-10-24T05:51:49Z",
+  "checked": "2026-11-23T06:53:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "128.199.145.30"
+    "146.190.102.40"
    ],
    "aaaa": [],
    "cname": null,
@@ -12918,7 +12934,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:51:49Z",
+   "checked": "2026-11-23T06:53:06Z",
    "title": "Commoncog",
    "generator": "Ghost 6.61",
    "feeds": [
@@ -13354,7 +13370,7 @@
   }
  },
  "computer-darkroom.com": {
-  "checked": "2026-10-24T06:22:45Z",
+  "checked": "2026-11-23T07:23:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13376,7 +13392,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:22:45Z",
+   "checked": "2026-11-23T07:23:41Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -13455,7 +13471,7 @@
   }
  },
  "computerhistory.org": {
-  "checked": "2026-10-24T06:22:49Z",
+  "checked": "2026-11-23T07:23:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13481,7 +13497,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:22:49Z",
+   "checked": "2026-11-23T07:23:45Z",
    "title": "Home - CHM",
    "generator": null,
    "feeds": [],
@@ -13531,7 +13547,7 @@
   }
  },
  "computerworld.com": {
-  "checked": "2026-10-24T05:51:56Z",
+  "checked": "2026-11-23T06:53:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13553,9 +13569,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:51:56Z",
+   "checked": "2026-11-23T06:53:12Z",
    "title": "Computerworld",
-   "generator": "WordPress 6.8.11",
+   "generator": "WordPress 6.8.13",
    "feeds": [
     {
      "type": "rss",
@@ -13942,7 +13958,7 @@
   }
  },
  "consumerreports.org": {
-  "checked": "2026-10-24T06:22:52Z",
+  "checked": "2026-11-23T07:23:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13969,7 +13985,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:22:52Z",
+   "checked": "2026-11-23T07:23:47Z",
    "title": "Product Reviews and Ratings, Buying Advice and Consumer Advocacy - Consumer Reports",
    "generator": null,
    "feeds": [],
@@ -14044,7 +14060,7 @@
   }
  },
  "content.time.com": {
-  "checked": "2026-10-24T06:05:58Z",
+  "checked": "2026-11-23T07:06:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14066,7 +14082,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-24T06:05:58Z",
+   "checked": "2026-11-23T07:06:31Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -14570,14 +14586,14 @@
   }
  },
  "cookbook.openai.com": {
-  "checked": "2026-10-24T06:06:01Z",
+  "checked": "2026-11-23T07:06:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "66.33.60.130",
-    "76.76.21.61"
+    "66.33.60.34",
+    "76.76.21.164"
    ],
    "aaaa": [],
    "cname": "cname.vercel-dns.com",
@@ -14590,9 +14606,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:06:01Z",
+   "checked": "2026-11-23T07:06:33Z",
    "title": "Cookbook",
-   "generator": "Astro v7.3.1",
+   "generator": "Astro v7.4.7",
    "feeds": [
     {
      "type": "rss",
@@ -15205,7 +15221,7 @@
   }
  },
  "coryd.dev": {
-  "checked": "2026-10-24T06:06:04Z",
+  "checked": "2026-11-23T07:06:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -15229,7 +15245,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:06:04Z",
+   "checked": "2026-11-23T07:06:36Z",
    "title": "Cory Dransfeldt",
    "generator": "Go",
    "feeds": [
@@ -15978,7 +15994,7 @@
   }
  },
  "craigmod.com": {
-  "checked": "2026-10-24T05:51:59Z",
+  "checked": "2026-11-23T06:53:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16006,7 +16022,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:51:59Z",
+   "checked": "2026-11-23T06:53:15Z",
    "title": "Craig Mod — Writer + Photographer",
    "generator": "Hugo 0.166.0",
    "feeds": [
@@ -16069,15 +16085,15 @@
   }
  },
  "craphound.com": {
-  "checked": "2026-10-24T06:22:55Z",
+  "checked": "2026-11-23T07:23:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "51.77.117.40",
-    "142.132.196.168",
-    "172.104.232.45"
+    "135.181.131.152",
+    "172.104.232.45",
+    "185.196.61.178"
    ],
    "aaaa": [],
    "cname": null,
@@ -16093,7 +16109,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:22:55Z",
+   "checked": "2026-11-23T07:23:50Z",
    "title": "Cory Doctorow's craphound.com | Cory Doctorow's Literary Works",
    "generator": null,
    "feeds": [],
@@ -16135,7 +16151,7 @@
   }
  },
  "crazystupidtech.com": {
-  "checked": "2026-10-24T05:56:18Z",
+  "checked": "2026-11-23T06:56:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16158,7 +16174,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:56:18Z",
+   "checked": "2026-11-23T06:56:53Z",
    "title": "Crazy Stupid Tech – Crazy Stupid Tech is a weekly newsletter about innovation and new technologies",
    "generator": null,
    "feeds": [
@@ -16222,7 +16238,7 @@
   }
  },
  "creativecommons.org": {
-  "checked": "2026-10-24T05:56:20Z",
+  "checked": "2026-11-23T06:56:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16248,7 +16264,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:56:20Z",
+   "checked": "2026-11-23T06:56:56Z",
    "title": "Building tools for shared knowledge - Creative Commons",
    "generator": null,
    "feeds": [],
@@ -16530,7 +16546,7 @@
   }
  },
  "cringely.com": {
-  "checked": "2026-10-24T06:23:00Z",
+  "checked": "2026-11-23T07:23:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16553,9 +16569,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:23:00Z",
+   "checked": "2026-11-23T07:23:54Z",
    "title": "I, Cringely",
-   "generator": "All in One SEO (AIOSEO) 5.0.3",
+   "generator": "All in One SEO (AIOSEO) 5.0.5.1",
    "feeds": [
     {
      "type": "rss",
@@ -16738,7 +16754,7 @@
   }
  },
  "crookedtimber.org": {
-  "checked": "2026-10-24T06:23:03Z",
+  "checked": "2026-11-23T07:23:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16761,7 +16777,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:23:03Z",
+   "checked": "2026-11-23T07:23:57Z",
    "title": "Crooked Timber — Out of the crooked timber of humanity, no straight thing was ever made",
    "generator": null,
    "feeds": [
@@ -16842,7 +16858,7 @@
   }
  },
  "cruciallearning.com": {
-  "checked": "2026-10-24T06:23:06Z",
+  "checked": "2026-11-23T07:24:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16864,9 +16880,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:23:06Z",
+   "checked": "2026-11-23T07:24:00Z",
    "title": "Crucial Learning | The Human Side of High Performance",
-   "generator": "WordPress 7.0.7",
+   "generator": "WordPress 7.0.9",
    "feeds": [
     {
      "type": "rss",
@@ -16962,7 +16978,7 @@
   }
  },
  "crummy.com": {
-  "checked": "2026-10-24T06:23:09Z",
+  "checked": "2026-11-23T07:24:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16987,7 +17003,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:23:09Z",
+   "checked": "2026-11-23T07:24:03Z",
    "title": "Swear not by the wiki, the fickle wiki, the inconstant wiki",
    "generator": "Markov Approximation 1.4 (module: leonardr)",
    "feeds": [
@@ -17145,7 +17161,7 @@
   }
  },
  "cryptodrftng.substack.com": {
-  "checked": "2026-10-24T06:23:12Z",
+  "checked": "2026-11-23T07:24:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -17168,7 +17184,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:23:12Z",
+   "checked": "2026-11-23T07:24:07Z",
    "title": "Drftng with Ukraine | Alona / cryptodrftng | Substack",
    "generator": null,
    "feeds": [
@@ -17294,7 +17310,7 @@
   }
  },
  "cryptohayes.medium.com": {
-  "checked": "2026-10-24T06:23:15Z",
+  "checked": "2026-11-23T07:24:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -17317,7 +17333,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:23:15Z",
+   "checked": "2026-11-23T07:24:09Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -17501,7 +17517,7 @@
   }
  },
  "cs.umn.edu": {
-  "checked": "2026-10-24T06:06:21Z",
+  "checked": "2026-11-23T07:06:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -17528,7 +17544,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:06:21Z",
+   "checked": "2026-11-23T07:06:53Z",
    "title": "Department of Computer Science & Engineering | College of Science and Engineering",
    "generator": "Drupal 11 (https://www.drupal.org)",
    "feeds": [],
@@ -17605,7 +17621,7 @@
   }
  },
  "cse.umn.edu": {
-  "checked": "2026-10-24T06:23:19Z",
+  "checked": "2026-11-23T07:24:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -17632,7 +17648,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:23:19Z",
+   "checked": "2026-11-23T07:24:13Z",
    "title": "College of Science & Engineering",
    "generator": "Drupal 11 (https://www.drupal.org)",
    "feeds": [],
@@ -18165,7 +18181,7 @@
   }
  },
  "cunningleah.com": {
-  "checked": "2026-10-24T06:23:21Z",
+  "checked": "2026-11-23T07:24:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -18188,7 +18204,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-24T06:23:21Z",
+   "checked": "2026-11-23T07:24:16Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -18267,7 +18283,7 @@
   }
  },
  "curbed.com": {
-  "checked": "2026-10-24T06:23:22Z",
+  "checked": "2026-11-23T07:24:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -18294,7 +18310,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:23:22Z",
+   "checked": "2026-11-23T07:24:16Z",
    "title": "Curbed | A site for city people",
    "generator": null,
    "feeds": [],
@@ -18498,7 +18514,7 @@
   }
  },
  "curtclifton.net": {
-  "checked": "2026-10-24T06:23:25Z",
+  "checked": "2026-11-23T07:24:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -18524,7 +18540,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:23:25Z",
+   "checked": "2026-11-23T07:24:20Z",
    "title": "curtclifton.net",
    "generator": null,
    "feeds": [

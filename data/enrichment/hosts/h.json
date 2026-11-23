@@ -389,7 +389,7 @@
   }
  },
  "hackernoon.com": {
-  "checked": "2026-10-24T05:52:36Z",
+  "checked": "2026-11-23T06:53:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -417,7 +417,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:52:36Z",
+   "checked": "2026-11-23T06:53:54Z",
    "title": "HackerNoon - read, write and learn about any technology",
    "generator": null,
    "feeds": [],
@@ -441,7 +441,7 @@
   }
  },
  "hackingdistributed.com": {
-  "checked": "2026-10-24T06:29:37Z",
+  "checked": "2026-11-23T07:30:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -464,7 +464,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-24T06:29:37Z",
+   "checked": "2026-11-23T07:30:21Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -475,7 +475,7 @@
   }
  },
  "hacks.mozilla.org": {
-  "checked": "2026-10-24T05:57:18Z",
+  "checked": "2026-11-23T06:57:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -495,7 +495,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:57:18Z",
+   "checked": "2026-11-23T06:57:52Z",
    "title": "Home - Mozilla Hacks - the Web developer blog",
    "generator": null,
    "feeds": [
@@ -845,26 +845,26 @@
   }
  },
  "hamberg.no": {
-  "checked": "2026-10-24T06:07:51Z",
+  "checked": "2026-11-23T07:07:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "3.166.118.10",
-    "3.166.118.20",
-    "3.166.118.27",
-    "3.166.118.38"
+    "18.172.134.2",
+    "18.172.134.75",
+    "18.172.134.76",
+    "18.172.134.89"
    ],
    "aaaa": [
-    "2600:9000:279b:4e00:a:7f3f:1d40:93a1",
-    "2600:9000:279b:6000:a:7f3f:1d40:93a1",
-    "2600:9000:279b:7600:a:7f3f:1d40:93a1",
-    "2600:9000:279b:8200:a:7f3f:1d40:93a1",
+    "2600:9000:279b:1800:a:7f3f:1d40:93a1",
+    "2600:9000:279b:2e00:a:7f3f:1d40:93a1",
+    "2600:9000:279b:5400:a:7f3f:1d40:93a1",
     "2600:9000:279b:8800:a:7f3f:1d40:93a1",
-    "2600:9000:279b:9a00:a:7f3f:1d40:93a1",
-    "2600:9000:279b:d000:a:7f3f:1d40:93a1",
-    "2600:9000:279b:d600:a:7f3f:1d40:93a1"
+    "2600:9000:279b:9200:a:7f3f:1d40:93a1",
+    "2600:9000:279b:b400:a:7f3f:1d40:93a1",
+    "2600:9000:279b:dc00:a:7f3f:1d40:93a1",
+    "2600:9000:279b:f600:a:7f3f:1d40:93a1"
    ],
    "cname": null,
    "ns": [
@@ -881,7 +881,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:07:51Z",
+   "checked": "2026-11-23T07:07:52Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -993,16 +993,16 @@
   }
  },
  "hanselman.com": {
-  "checked": "2026-10-24T05:49:44Z",
+  "checked": "2026-11-23T06:51:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "150.171.110.194"
+    "150.171.110.210"
    ],
    "aaaa": [
-    "2603:1061:14:b1::1"
+    "2603:1061:14:1c1::1"
    ],
    "cname": null,
    "ns": [
@@ -1019,7 +1019,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:49:44Z",
+   "checked": "2026-11-23T06:51:12Z",
    "title": "Scott Hanselman - Coder, Blogger, Teacher, Speaker, Author",
    "generator": null,
    "feeds": [
@@ -1407,7 +1407,7 @@
   }
  },
  "hashicorp.com": {
-  "checked": "2026-10-24T06:07:54Z",
+  "checked": "2026-11-23T07:07:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1431,7 +1431,7 @@
    "status": 429
   },
   "home": {
-   "checked": "2026-10-24T06:07:54Z",
+   "checked": "2026-11-23T07:07:55Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2229,7 +2229,7 @@
   }
  },
  "heavytable.com": {
-  "checked": "2026-10-24T06:07:56Z",
+  "checked": "2026-11-23T07:07:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2253,9 +2253,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:07:56Z",
+   "checked": "2026-11-23T07:07:58Z",
    "title": "Heavy Table – Minneapolis-St. Paul and Upper Midwest Food Magazine // Feasting on the Bounty of the Upper Midwest",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [
     {
      "type": "rss",
@@ -3100,7 +3100,7 @@
   }
  },
  "herman.bearblog.dev": {
-  "checked": "2026-10-24T06:08:00Z",
+  "checked": "2026-11-23T07:08:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3125,7 +3125,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:00Z",
+   "checked": "2026-11-23T07:08:01Z",
    "title": "Herman's blog",
    "generator": null,
    "feeds": [
@@ -3577,7 +3577,7 @@
   }
  },
  "highline.huffingtonpost.com": {
-  "checked": "2026-10-24T06:08:02Z",
+  "checked": "2026-11-23T07:08:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3599,7 +3599,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:02Z",
+   "checked": "2026-11-23T07:08:03Z",
    "title": "HuffPost | Highline",
    "generator": null,
    "feeds": [],
@@ -3609,7 +3609,7 @@
   }
  },
  "highscalability.com": {
-  "checked": "2026-10-24T05:31:57Z",
+  "checked": "2026-11-23T06:33:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3639,9 +3639,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:31:57Z",
+   "checked": "2026-11-23T06:33:59Z",
    "title": "High Scalability",
-   "generator": "Ghost 6.73",
+   "generator": "Ghost 6.79",
    "feeds": [
     {
      "type": "rss",
@@ -4022,7 +4022,7 @@
   }
  },
  "hivelogic.com": {
-  "checked": "2026-10-24T05:52:38Z",
+  "checked": "2026-11-23T06:53:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4048,7 +4048,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:52:38Z",
+   "checked": "2026-11-23T06:53:56Z",
    "title": "Dan Benjamin",
    "generator": null,
    "feeds": [],
@@ -4323,7 +4323,7 @@
   }
  },
  "hodinkee.com": {
-  "checked": "2026-10-24T05:44:25Z",
+  "checked": "2026-11-23T06:46:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4349,7 +4349,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:44:25Z",
+   "checked": "2026-11-23T06:46:03Z",
    "title": "Hodinkee",
    "generator": null,
    "feeds": [
@@ -4556,7 +4556,7 @@
   }
  },
  "hollywoodreporter.com": {
-  "checked": "2026-10-24T06:08:05Z",
+  "checked": "2026-11-23T07:08:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4580,7 +4580,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:05Z",
+   "checked": "2026-11-23T07:08:06Z",
    "title": "The Hollywood Reporter – Movie news, TV news, awards news, lifestyle news, business news and more from The Hollywood Reporter.",
    "generator": null,
    "feeds": [],
@@ -4979,15 +4979,15 @@
   }
  },
  "honeycomb.io": {
-  "checked": "2026-10-24T05:48:05Z",
+  "checked": "2026-11-23T06:49:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "32.195.254.91",
-    "54.221.122.137",
-    "100.56.47.185"
+    "34.200.162.241",
+    "35.172.52.136",
+    "107.23.91.114"
    ],
    "aaaa": [],
    "cname": null,
@@ -5005,7 +5005,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:48:05Z",
+   "checked": "2026-11-23T06:49:41Z",
    "title": "Honeycomb: AI-Ready Observability Platform",
    "generator": null,
    "feeds": [],
@@ -5614,7 +5614,7 @@
   }
  },
  "howtogeek.com": {
-  "checked": "2026-10-24T05:57:20Z",
+  "checked": "2026-11-23T06:57:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5640,7 +5640,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:57:20Z",
+   "checked": "2026-11-23T06:57:55Z",
    "title": "How-To Geek - We Explain Technology",
    "generator": null,
    "feeds": [],
@@ -6486,7 +6486,7 @@
   }
  },
  "huffingtonpost.com": {
-  "checked": "2026-10-24T05:43:08Z",
+  "checked": "2026-11-23T06:44:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6513,7 +6513,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:43:08Z",
+   "checked": "2026-11-23T06:44:46Z",
    "title": "HuffPost - Breaking News, Politics, Entertainment & Opinion",
    "generator": null,
    "feeds": [],
@@ -6576,7 +6576,7 @@
   }
  },
  "huggingface.co": {
-  "checked": "2026-10-24T06:08:07Z",
+  "checked": "2026-11-23T07:08:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6588,14 +6588,14 @@
     "18.160.102.110"
    ],
    "aaaa": [
-    "2600:9000:254b:800:17:b174:6d00:93a1",
-    "2600:9000:254b:2000:17:b174:6d00:93a1",
-    "2600:9000:254b:8c00:17:b174:6d00:93a1",
-    "2600:9000:254b:9e00:17:b174:6d00:93a1",
-    "2600:9000:254b:a800:17:b174:6d00:93a1",
-    "2600:9000:254b:d600:17:b174:6d00:93a1",
-    "2600:9000:254b:e800:17:b174:6d00:93a1",
-    "2600:9000:254b:f400:17:b174:6d00:93a1"
+    "2600:9000:254b:1000:17:b174:6d00:93a1",
+    "2600:9000:254b:5a00:17:b174:6d00:93a1",
+    "2600:9000:254b:8800:17:b174:6d00:93a1",
+    "2600:9000:254b:a000:17:b174:6d00:93a1",
+    "2600:9000:254b:c000:17:b174:6d00:93a1",
+    "2600:9000:254b:cc00:17:b174:6d00:93a1",
+    "2600:9000:254b:e200:17:b174:6d00:93a1",
+    "2600:9000:254b:ea00:17:b174:6d00:93a1"
    ],
    "cname": null,
    "ns": [
@@ -6612,7 +6612,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:07Z",
+   "checked": "2026-11-23T07:08:08Z",
    "title": "Hugging Face – The AI community building the future.",
    "generator": null,
    "feeds": [
@@ -7645,7 +7645,7 @@
   }
  },
  "hypercritical.co": {
-  "checked": "2026-10-24T05:57:22Z",
+  "checked": "2026-11-23T06:57:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7671,7 +7671,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:57:22Z",
+   "checked": "2026-11-23T06:57:56Z",
    "title": "Hypercritical",
    "generator": null,
    "feeds": [

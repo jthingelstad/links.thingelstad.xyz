@@ -1,6 +1,6 @@
 {
  "m.imore.com": {
-  "checked": "2026-10-24T06:09:13Z",
+  "checked": "2026-11-23T07:09:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -20,7 +20,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:09:13Z",
+   "checked": "2026-11-23T07:09:25Z",
    "title": "iMore - Apple News, Reviews, Deals, & Help | Learn more. Be more.",
    "generator": null,
    "feeds": [
@@ -36,7 +36,7 @@
   }
  },
  "m.paidcontent.org": {
-  "checked": "2026-10-24T06:09:16Z",
+  "checked": "2026-11-23T07:09:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -55,7 +55,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-24T06:09:16Z",
+   "checked": "2026-11-23T07:09:28Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -96,7 +96,7 @@
   }
  },
  "m.signalvnoise.com": {
-  "checked": "2026-10-24T05:32:08Z",
+  "checked": "2026-11-23T06:34:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -116,7 +116,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:32:08Z",
+   "checked": "2026-11-23T06:34:08Z",
    "title": "Signal v. Noise is closed. | SvN",
    "generator": null,
    "feeds": [],
@@ -501,7 +501,7 @@
   }
  },
  "macapper.com": {
-  "checked": "2026-10-24T05:34:31Z",
+  "checked": "2026-11-23T06:36:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -518,17 +518,17 @@
    "reachable": false,
    "redirects_http": false,
    "status": null,
-   "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
+   "error": "connection reset"
   },
   "home": {
-   "checked": "2026-10-24T05:34:31Z",
+   "checked": "2026-11-23T06:36:21Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
+   "error": "connection reset"
   },
   "rdap": {
    "domain": "macapper.com",
@@ -643,7 +643,7 @@
   }
  },
  "macdrifter.com": {
-  "checked": "2026-10-24T01:46:58Z",
+  "checked": "2026-11-23T06:30:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -666,7 +666,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:46:58Z",
+   "checked": "2026-11-23T06:30:43Z",
    "title": "Macdrifter",
    "generator": "Hugo 0.88.1",
    "feeds": [
@@ -1278,7 +1278,7 @@
   }
  },
  "macrumors.com": {
-  "checked": "2026-10-24T05:42:19Z",
+  "checked": "2026-11-23T06:44:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1304,7 +1304,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:42:19Z",
+   "checked": "2026-11-23T06:44:01Z",
    "title": "MacRumors: Apple News and Rumors",
    "generator": null,
    "feeds": [
@@ -1531,7 +1531,7 @@
   }
  },
  "macworld.com": {
-  "checked": "2026-10-24T05:44:45Z",
+  "checked": "2026-11-23T06:46:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1553,7 +1553,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:44:45Z",
+   "checked": "2026-11-23T06:46:21Z",
    "title": "Macworld - News, Tips & Reviews from the Apple Experts",
    "generator": null,
    "feeds": [
@@ -2533,7 +2533,7 @@
   }
  },
  "mailchi.mp": {
-  "checked": "2026-10-24T05:53:09Z",
+  "checked": "2026-11-23T06:54:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2559,7 +2559,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:53:09Z",
+   "checked": "2026-11-23T06:54:22Z",
    "title": "Email & SMS Marketing Platform | Mailchimp",
    "generator": null,
    "feeds": [],
@@ -2943,7 +2943,7 @@
   }
  },
  "makeuseof.com": {
-  "checked": "2026-10-24T05:45:58Z",
+  "checked": "2026-11-23T06:47:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2969,7 +2969,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:45:58Z",
+   "checked": "2026-11-23T06:47:41Z",
    "title": "MUO - Technology, Simplified.",
    "generator": null,
    "feeds": [],
@@ -3264,7 +3264,7 @@
   }
  },
  "manton.org": {
-  "checked": "2026-10-24T05:33:57Z",
+  "checked": "2026-11-23T06:35:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3288,7 +3288,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:33:57Z",
+   "checked": "2026-11-23T06:35:48Z",
    "title": "Manton Reece",
    "generator": "Hugo 0.158.0",
    "feeds": [
@@ -3368,7 +3368,7 @@
   }
  },
  "manuelmoreale.com": {
-  "checked": "2026-10-24T05:46:00Z",
+  "checked": "2026-11-23T06:47:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3390,8 +3390,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:46:00Z",
-   "title": "Thinking about privacy and webmentions – Manu",
+   "checked": "2026-11-23T06:47:43Z",
+   "title": "The expectation of effort – Manu",
    "generator": null,
    "feeds": [
     {
@@ -3902,7 +3902,7 @@
   }
  },
  "marcorogers.com": {
-  "checked": "2026-10-24T06:09:16Z",
+  "checked": "2026-11-23T07:09:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3928,7 +3928,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:09:16Z",
+   "checked": "2026-11-23T07:09:28Z",
    "title": "Marco Rogers",
    "generator": null,
    "feeds": [],
@@ -4016,7 +4016,7 @@
   }
  },
  "marginalrevolution.com": {
-  "checked": "2026-10-24T05:31:42Z",
+  "checked": "2026-11-23T06:33:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4042,7 +4042,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:31:42Z",
+   "checked": "2026-11-23T06:33:45Z",
    "title": "Marginal REVOLUTION - Small Steps Toward A Much Better World",
    "generator": null,
    "feeds": [],
@@ -4536,16 +4536,16 @@
   }
  },
  "marketwatch.com": {
-  "checked": "2026-10-24T01:46:22Z",
+  "checked": "2026-11-23T06:30:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "99.86.77.35",
-    "99.86.77.47",
-    "99.86.77.54",
-    "99.86.77.63"
+    "99.84.203.8",
+    "99.84.203.67",
+    "99.84.203.74",
+    "99.84.203.99"
    ],
    "aaaa": [],
    "cname": null,
@@ -4563,7 +4563,7 @@
    "status": 401
   },
   "home": {
-   "checked": "2026-10-24T01:46:22Z",
+   "checked": "2026-11-23T06:30:09Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5185,7 +5185,7 @@
   }
  },
  "martinheinz.dev": {
-  "checked": "2026-10-24T06:09:21Z",
+  "checked": "2026-11-23T07:09:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5204,11 +5204,11 @@
   },
   "https": {
    "reachable": true,
-   "redirects_http": false,
+   "redirects_http": true,
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:09:21Z",
+   "checked": "2026-11-23T07:09:34Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5375,7 +5375,7 @@
   }
  },
  "mashable.com": {
-  "checked": "2026-10-24T01:48:21Z",
+  "checked": "2026-11-23T06:32:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5401,7 +5401,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:48:21Z",
+   "checked": "2026-11-23T06:32:06Z",
    "title": "Mashable",
    "generator": null,
    "feeds": [
@@ -6287,7 +6287,7 @@
   }
  },
  "mattgemmell.com": {
-  "checked": "2026-10-24T05:57:50Z",
+  "checked": "2026-11-23T06:58:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6312,7 +6312,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:57:50Z",
+   "checked": "2026-11-23T06:58:24Z",
    "title": "Matt Gemmell — Thriller, Horror, and Suspense author",
    "generator": null,
    "feeds": [
@@ -6592,7 +6592,7 @@
   }
  },
  "mattnorman.com": {
-  "checked": "2026-10-24T01:46:34Z",
+  "checked": "2026-11-23T06:30:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6614,9 +6614,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:46:34Z",
+   "checked": "2026-11-23T06:30:20Z",
    "title": "Home - Matt Norman",
-   "generator": "WordPress 7.0.7",
+   "generator": "WordPress 7.0.9",
    "feeds": [
     {
      "type": "rss",
@@ -7258,7 +7258,7 @@
   }
  },
  "mckinsey.com": {
-  "checked": "2026-10-24T05:57:53Z",
+  "checked": "2026-11-23T06:58:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7285,7 +7285,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-24T05:57:53Z",
+   "checked": "2026-11-23T06:58:26Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7469,7 +7469,7 @@
   }
  },
  "mcsweeneys.net": {
-  "checked": "2026-10-24T05:34:00Z",
+  "checked": "2026-11-23T06:35:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7495,7 +7495,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:34:00Z",
+   "checked": "2026-11-23T06:35:52Z",
    "title": "McSweeney’s Internet Tendency",
    "generator": null,
    "feeds": [
@@ -8640,7 +8640,7 @@
   }
  },
  "medium.freecodecamp.org": {
-  "checked": "2026-10-24T06:09:24Z",
+  "checked": "2026-11-23T07:09:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8665,7 +8665,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:09:24Z",
+   "checked": "2026-11-23T07:09:38Z",
    "title": "freeCodeCamp Programming Tutorials: Python, JavaScript, Git & More",
    "generator": "Eleventy",
    "feeds": [
@@ -8681,7 +8681,7 @@
   }
  },
  "medium.learningbyshipping.com": {
-  "checked": "2026-10-24T06:09:27Z",
+  "checked": "2026-11-23T07:09:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8701,7 +8701,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:09:27Z",
+   "checked": "2026-11-23T07:09:41Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -9618,7 +9618,7 @@
   }
  },
  "mesosphere.com": {
-  "checked": "2026-10-24T05:43:20Z",
+  "checked": "2026-11-23T06:44:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9644,7 +9644,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:43:20Z",
+   "checked": "2026-11-23T06:44:59Z",
    "title": "D2iQ joins Nutanix, DKP becomes NKP",
    "generator": null,
    "feeds": [],
@@ -9776,7 +9776,7 @@
   }
  },
  "meta.wikimedia.org": {
-  "checked": "2026-10-24T06:09:33Z",
+  "checked": "2026-11-23T07:09:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9797,9 +9797,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:09:33Z",
+   "checked": "2026-11-23T07:09:50Z",
    "title": "Main Page - Meta-Wiki",
-   "generator": "MediaWiki 1.47.0-wmf.24",
+   "generator": "MediaWiki 1.48.0-wmf.5",
    "feeds": [
     {
      "type": "atom",
@@ -10182,7 +10182,7 @@
   }
  },
  "meyerweb.com": {
-  "checked": "2026-10-24T06:09:39Z",
+  "checked": "2026-11-23T07:09:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10204,7 +10204,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:09:39Z",
+   "checked": "2026-11-23T07:09:56Z",
    "title": "meyerweb.com",
    "generator": null,
    "feeds": [
@@ -11205,7 +11205,7 @@
   }
  },
  "microsoft.com": {
-  "checked": "2026-10-24T05:46:07Z",
+  "checked": "2026-11-23T06:47:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11214,7 +11214,7 @@
     "150.171.110.210"
    ],
    "aaaa": [
-    "2603:1061:14:1c1::1"
+    "2603:1061:14:1d0::1"
    ],
    "cname": null,
    "ns": [
@@ -11231,7 +11231,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:46:07Z",
+   "checked": "2026-11-23T06:47:50Z",
    "title": "Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps",
    "generator": null,
    "feeds": [],
@@ -11940,7 +11940,7 @@
   }
  },
  "mindnode.com": {
-  "checked": "2026-10-24T06:09:42Z",
+  "checked": "2026-11-23T07:09:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11962,7 +11962,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:09:42Z",
+   "checked": "2026-11-23T07:09:59Z",
    "title": "MindNode",
    "generator": null,
    "feeds": [
@@ -12242,7 +12242,7 @@
   }
  },
  "minigirl.typepad.com": {
-  "checked": "2026-10-24T06:09:45Z",
+  "checked": "2026-11-23T07:10:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12265,7 +12265,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:09:45Z",
+   "checked": "2026-11-23T07:10:02Z",
    "title": "Typepad | Network Solutions",
    "generator": null,
    "feeds": [],
@@ -12503,7 +12503,7 @@
   }
  },
  "minneapolismn.gov": {
-  "checked": "2026-10-24T06:09:46Z",
+  "checked": "2026-11-23T07:10:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12515,14 +12515,14 @@
     "99.84.203.124"
    ],
    "aaaa": [
-    "2600:9000:2015:1600:1a:5ad9:2dc0:93a1",
-    "2600:9000:2015:3800:1a:5ad9:2dc0:93a1",
-    "2600:9000:2015:4600:1a:5ad9:2dc0:93a1",
-    "2600:9000:2015:4e00:1a:5ad9:2dc0:93a1",
-    "2600:9000:2015:6a00:1a:5ad9:2dc0:93a1",
-    "2600:9000:2015:7600:1a:5ad9:2dc0:93a1",
-    "2600:9000:2015:9400:1a:5ad9:2dc0:93a1",
-    "2600:9000:2015:f800:1a:5ad9:2dc0:93a1"
+    "2600:9000:20c5:1800:1a:5ad9:2dc0:93a1",
+    "2600:9000:20c5:2a00:1a:5ad9:2dc0:93a1",
+    "2600:9000:20c5:6400:1a:5ad9:2dc0:93a1",
+    "2600:9000:20c5:7e00:1a:5ad9:2dc0:93a1",
+    "2600:9000:20c5:8200:1a:5ad9:2dc0:93a1",
+    "2600:9000:20c5:8800:1a:5ad9:2dc0:93a1",
+    "2600:9000:20c5:ba00:1a:5ad9:2dc0:93a1",
+    "2600:9000:20c5:ea00:1a:5ad9:2dc0:93a1"
    ],
    "cname": null,
    "ns": [
@@ -12537,7 +12537,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:09:46Z",
+   "checked": "2026-11-23T07:10:03Z",
    "title": "City of Minneapolis",
    "generator": "TERMINALFOUR",
    "feeds": [],
@@ -12577,7 +12577,7 @@
   }
  },
  "minnesotabusiness.com": {
-  "checked": "2026-10-24T06:09:48Z",
+  "checked": "2026-11-23T07:10:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12600,7 +12600,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:09:48Z",
+   "checked": "2026-11-23T07:10:04Z",
    "title": "News, Triumphs, Challenges, Next",
    "generator": null,
    "feeds": [
@@ -12734,7 +12734,7 @@
   }
  },
  "minnestar.org": {
-  "checked": "2026-10-24T05:41:50Z",
+  "checked": "2026-11-23T06:43:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12756,7 +12756,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:41:50Z",
+   "checked": "2026-11-23T06:43:35Z",
    "title": "Minnestar – Connecting the MN Tech Community",
    "generator": null,
    "feeds": [
@@ -12791,7 +12791,7 @@
   }
  },
  "minnov8.com": {
-  "checked": "2026-10-24T05:41:53Z",
+  "checked": "2026-11-23T06:43:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12813,7 +12813,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:41:53Z",
+   "checked": "2026-11-23T06:43:38Z",
    "title": "Minnov8 — Showcasing Minnesota Technology Innovation",
    "generator": null,
    "feeds": [],
@@ -12837,7 +12837,7 @@
   }
  },
  "minnpost.com": {
-  "checked": "2026-10-24T05:35:15Z",
+  "checked": "2026-11-23T06:37:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12860,9 +12860,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:35:15Z",
+   "checked": "2026-11-23T06:37:03Z",
    "title": "MinnPost — Nonprofit, independent journalism",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [
     {
      "type": "rss",
@@ -13219,7 +13219,7 @@
   }
  },
  "mirror.xyz": {
-  "checked": "2026-10-24T06:09:50Z",
+  "checked": "2026-11-23T07:10:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13247,7 +13247,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:09:50Z",
+   "checked": "2026-11-23T07:10:07Z",
    "title": "A media engine for your company | Paragraph",
    "generator": null,
    "feeds": [],
@@ -13257,7 +13257,7 @@
   }
  },
  "mirrorofjustice.blogs.com": {
-  "checked": "2026-10-24T05:58:24Z",
+  "checked": "2026-11-23T06:58:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13280,7 +13280,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:58:24Z",
+   "checked": "2026-11-23T06:58:57Z",
    "title": "Typepad | Network Solutions",
    "generator": null,
    "feeds": [],
@@ -14463,7 +14463,7 @@
   }
  },
  "mnot.net": {
-  "checked": "2026-10-24T05:58:25Z",
+  "checked": "2026-11-23T06:58:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14487,7 +14487,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:58:25Z",
+   "checked": "2026-11-23T06:58:58Z",
    "title": "mnot",
    "generator": null,
    "feeds": [
@@ -14507,7 +14507,7 @@
   }
  },
  "mntech.org": {
-  "checked": "2026-10-24T05:43:22Z",
+  "checked": "2026-11-23T06:45:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14535,9 +14535,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:43:22Z",
+   "checked": "2026-11-23T06:45:01Z",
    "title": "MnTech | Fueling the Success of Minnesota’s Tech Ecosystem » MnTech",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -15119,7 +15119,7 @@
   }
  },
  "modernretail.co": {
-  "checked": "2026-10-24T06:09:52Z",
+  "checked": "2026-11-23T07:10:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -15143,9 +15143,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:09:52Z",
+   "checked": "2026-11-23T07:10:08Z",
    "title": "Modern Retail – Authority and honesty on the reinvention of retail",
-   "generator": "WordPress 6.9.10",
+   "generator": "WordPress 6.9.12",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -15606,7 +15606,7 @@
   }
  },
  "mondaynote.com": {
-  "checked": "2026-10-24T05:35:17Z",
+  "checked": "2026-11-23T06:37:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -15641,7 +15641,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-24T05:35:17Z",
+   "checked": "2026-11-23T06:37:04Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -15667,7 +15667,7 @@
   }
  },
  "money.cnn.com": {
-  "checked": "2026-10-24T05:58:28Z",
+  "checked": "2026-11-23T06:59:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -15694,7 +15694,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:58:28Z",
+   "checked": "2026-11-23T06:59:01Z",
    "title": "Business News - Latest Headlines on CNN Business | CNN Business",
    "generator": null,
    "feeds": [],
@@ -16865,7 +16865,7 @@
   }
  },
  "motherboard.vice.com": {
-  "checked": "2026-10-24T05:44:48Z",
+  "checked": "2026-11-23T06:46:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16884,7 +16884,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-24T05:44:48Z",
+   "checked": "2026-11-23T06:46:25Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -16911,7 +16911,7 @@
   }
  },
  "motherjones.com": {
-  "checked": "2026-10-24T05:49:56Z",
+  "checked": "2026-11-23T06:51:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16937,9 +16937,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:49:56Z",
+   "checked": "2026-11-23T06:51:24Z",
    "title": "Mother Jones – Smart, fearless journalism",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -17370,7 +17370,7 @@
   }
  },
  "mprnews.org": {
-  "checked": "2026-10-24T05:41:57Z",
+  "checked": "2026-11-23T06:43:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -17392,7 +17392,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:41:57Z",
+   "checked": "2026-11-23T06:43:42Z",
    "title": "MPR News — Minnesota News, Politics, Weather, Podcasts & Public Radio",
    "generator": null,
    "feeds": [
@@ -17694,7 +17694,7 @@
   }
  },
  "mspmag.com": {
-  "checked": "2026-10-24T05:58:29Z",
+  "checked": "2026-11-23T06:59:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -17719,7 +17719,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:58:29Z",
+   "checked": "2026-11-23T06:59:02Z",
    "title": "Best of the Twin Cities - Mpls.St.Paul Magazine",
    "generator": "Metro Publisher (www.metropublisher.com)",
    "feeds": [
@@ -18913,7 +18913,7 @@
   }
  },
  "myproductivemac.com": {
-  "checked": "2026-10-24T05:34:03Z",
+  "checked": "2026-11-23T06:35:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -18938,7 +18938,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:34:03Z",
+   "checked": "2026-11-23T06:35:54Z",
    "title": "MyProductiveMac",
    "generator": null,
    "feeds": [

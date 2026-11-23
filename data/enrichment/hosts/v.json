@@ -269,7 +269,7 @@
   }
  },
  "vanityfair.com": {
-  "checked": "2026-10-24T01:48:08Z",
+  "checked": "2026-11-23T06:31:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -297,7 +297,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:48:08Z",
+   "checked": "2026-11-23T06:31:54Z",
    "title": "Vanity Fair - Entertainment, Politics, and Fashion News | Vanity Fair",
    "generator": null,
    "feeds": [
@@ -1583,7 +1583,7 @@
   }
  },
  "vice.com": {
-  "checked": "2026-10-24T05:34:52Z",
+  "checked": "2026-11-23T06:36:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1607,9 +1607,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:34:52Z",
+   "checked": "2026-11-23T06:36:42Z",
    "title": "VICE - VICE is the definitive guide to enlightening information.",
-   "generator": "WordPress 7.0.7",
+   "generator": "WordPress 7.0.9",
    "feeds": [
     {
      "type": "rss",
@@ -1644,7 +1644,7 @@
   }
  },
  "vickiboykis.com": {
-  "checked": "2026-10-24T06:15:23Z",
+  "checked": "2026-11-23T07:15:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1671,7 +1671,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:15:23Z",
+   "checked": "2026-11-23T07:15:35Z",
    "title": "Tech Blog | ✰Vicki Boykis✰",
    "generator": null,
    "feeds": [
@@ -2950,7 +2950,7 @@
   }
  },
  "visualcapitalist.com": {
-  "checked": "2026-10-24T06:00:08Z",
+  "checked": "2026-11-23T07:00:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2978,7 +2978,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:00:08Z",
+   "checked": "2026-11-23T07:00:50Z",
    "title": "Visual Capitalist",
    "generator": "performance-lab 4.2.0; plugins: webp-uploads",
    "feeds": [
@@ -3026,7 +3026,7 @@
   }
  },
  "vitalik.ca": {
-  "checked": "2026-10-24T05:42:38Z",
+  "checked": "2026-11-23T06:44:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3047,7 +3047,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-24T05:42:38Z",
+   "checked": "2026-11-23T06:44:20Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3072,7 +3072,7 @@
   }
  },
  "vitalik.eth.limo": {
-  "checked": "2026-10-24T05:34:15Z",
+  "checked": "2026-11-23T06:36:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3097,7 +3097,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:34:15Z",
+   "checked": "2026-11-23T06:36:06Z",
    "title": "Vitalik Buterin's website",
    "generator": null,
    "feeds": [
@@ -3130,7 +3130,7 @@
   }
  },
  "vitalsmarts.com": {
-  "checked": "2026-10-24T06:00:11Z",
+  "checked": "2026-11-23T07:00:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3156,9 +3156,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:00:11Z",
+   "checked": "2026-11-23T07:00:53Z",
    "title": "Crucial Learning | The Human Side of High Performance",
-   "generator": "WordPress 7.0.7",
+   "generator": "WordPress 7.0.9",
    "feeds": [
     {
      "type": "rss",
@@ -3323,14 +3323,14 @@
   }
  },
  "voices.washingtonpost.com": {
-  "checked": "2026-10-24T06:00:13Z",
+  "checked": "2026-11-23T07:00:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.220.144.70",
-    "23.220.144.73"
+    "23.52.42.160",
+    "23.52.42.166"
    ],
    "aaaa": [],
    "cname": "50237.edgekey.net",
@@ -3344,7 +3344,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-24T06:00:13Z",
+   "checked": "2026-11-23T07:00:55Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3486,7 +3486,7 @@
   }
  },
  "vox.com": {
-  "checked": "2026-10-24T01:48:33Z",
+  "checked": "2026-11-23T06:32:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3500,10 +3500,10 @@
    "aaaa": [],
    "cname": null,
    "ns": [
-    "ns-1283.awsdns-32.org",
-    "ns-1679.awsdns-17.co.uk",
-    "ns-221.awsdns-27.com",
-    "ns-762.awsdns-31.net"
+    "ns-1532.awsdns-63.org",
+    "ns-1632.awsdns-12.co.uk",
+    "ns-474.awsdns-59.com",
+    "ns-689.awsdns-22.net"
    ],
    "mx": true
   },
@@ -3513,7 +3513,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:48:33Z",
+   "checked": "2026-11-23T06:32:18Z",
    "title": "Vox",
    "generator": null,
    "feeds": [

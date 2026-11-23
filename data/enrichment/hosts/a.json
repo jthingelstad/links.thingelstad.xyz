@@ -32,7 +32,7 @@
   }
  },
  "a.wholelottanothing.org": {
-  "checked": "2026-10-24T05:42:39Z",
+  "checked": "2026-11-23T06:44:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -59,9 +59,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:42:39Z",
+   "checked": "2026-11-23T06:44:20Z",
    "title": "A Whole Lotta Nothing",
-   "generator": "Ghost 6.73",
+   "generator": "Ghost 6.79",
    "feeds": [
     {
      "type": "rss",
@@ -96,7 +96,7 @@
   }
  },
  "a16z.com": {
-  "checked": "2026-10-24T05:33:21Z",
+  "checked": "2026-11-23T06:35:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -122,7 +122,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:33:21Z",
+   "checked": "2026-11-23T06:35:17Z",
    "title": "Andreessen Horowitz | Software Is Eating the World",
    "generator": null,
    "feeds": [],
@@ -196,7 +196,7 @@
   }
  },
  "a16zcrypto.com": {
-  "checked": "2026-10-24T05:54:36Z",
+  "checked": "2026-11-23T06:55:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -222,7 +222,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:36Z",
+   "checked": "2026-11-23T06:55:42Z",
    "title": "a16z Frontier",
    "generator": null,
    "feeds": [
@@ -463,13 +463,13 @@
   }
  },
  "aaronparecki.com": {
-  "checked": "2026-10-24T06:16:08Z",
+  "checked": "2026-11-23T07:15:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "45.79.83.22"
+    "23.239.2.96"
    ],
    "aaaa": [],
    "cname": null,
@@ -488,7 +488,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:08Z",
+   "checked": "2026-11-23T07:15:54Z",
    "title": "Aaron Parecki",
    "generator": null,
    "feeds": [
@@ -600,7 +600,7 @@
   }
  },
  "abc.net.au": {
-  "checked": "2026-10-24T06:01:39Z",
+  "checked": "2026-11-23T07:02:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -628,7 +628,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:01:39Z",
+   "checked": "2026-11-23T07:02:20Z",
    "title": "ABC News & Headlines – Australian Broadcasting Corporation",
    "generator": "PL NEWS WEB",
    "feeds": [],
@@ -748,7 +748,7 @@
   }
  },
  "about.gitlab.com": {
-  "checked": "2026-10-24T06:16:12Z",
+  "checked": "2026-11-23T07:15:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -774,7 +774,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:12Z",
+   "checked": "2026-11-23T07:15:57Z",
    "title": "GitLab - Speed with control for agentic software engineering",
    "generator": null,
    "feeds": [
@@ -1009,7 +1009,7 @@
   }
  },
  "abovethecrowd.com": {
-  "checked": "2026-10-24T06:16:14Z",
+  "checked": "2026-11-23T07:16:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1032,7 +1032,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:14Z",
+   "checked": "2026-11-23T07:16:00Z",
    "title": "Above the Crowd - By Bill GurleyAbove the Crowd | By Bill Gurley",
    "generator": null,
    "feeds": [
@@ -1462,7 +1462,7 @@
   }
  },
  "acko.net": {
-  "checked": "2026-10-24T06:16:17Z",
+  "checked": "2026-11-23T07:16:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1489,7 +1489,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:17Z",
+   "checked": "2026-11-23T07:16:02Z",
    "title": "Hackery, Math & Design — Acko.net",
    "generator": null,
    "feeds": [
@@ -1805,7 +1805,7 @@
   }
  },
  "activewin.com": {
-  "checked": "2026-10-24T05:48:45Z",
+  "checked": "2026-11-23T06:50:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1829,7 +1829,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:48:45Z",
+   "checked": "2026-11-23T06:50:16Z",
    "title": "ActiveWin.com - The Most Activated Windows Resource",
    "generator": null,
    "feeds": [
@@ -1972,7 +1972,7 @@
   }
  },
  "adactio.com": {
-  "checked": "2026-10-24T06:01:41Z",
+  "checked": "2026-11-23T07:02:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1998,7 +1998,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:01:41Z",
+   "checked": "2026-11-23T07:02:22Z",
    "title": "Adactio: Jeremy Keith",
    "generator": null,
    "feeds": [
@@ -2060,23 +2060,23 @@
   }
  },
  "adage.com": {
-  "checked": "2026-10-24T05:54:39Z",
+  "checked": "2026-11-23T06:55:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.59.169.198",
-    "23.59.169.203"
+    "23.217.104.72",
+    "23.217.104.92"
    ],
    "aaaa": [
-    "2600:1418:1000:d::17d9:686c",
-    "2600:1418:1000:d::17d9:6875"
+    "2600:1407:3c00:1868::17dc:9017",
+    "2600:1407:3c00:1868::17dc:901d"
    ],
    "cname": null,
    "ns": [
-    "connie.ns.cloudflare.com",
-    "kurt.ns.cloudflare.com"
+    "beth.ns.cloudflare.com",
+    "pranab.ns.cloudflare.com"
    ],
    "mx": true
   },
@@ -2086,7 +2086,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-24T05:54:39Z",
+   "checked": "2026-11-23T06:55:45Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2372,7 +2372,7 @@
   }
  },
  "addons.mozilla.org": {
-  "checked": "2026-10-24T06:01:44Z",
+  "checked": "2026-11-23T07:02:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2404,7 +2404,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:01:44Z",
+   "checked": "2026-11-23T07:02:25Z",
    "title": "Add-ons for Firefox (en-US)",
    "generator": null,
    "feeds": [],
@@ -2498,7 +2498,7 @@
   }
  },
  "addyosmani.com": {
-  "checked": "2026-10-24T06:16:20Z",
+  "checked": "2026-11-23T07:16:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2523,7 +2523,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:20Z",
+   "checked": "2026-11-23T07:16:05Z",
    "title": "Addy Osmani — Engineering, AI and Web Performance",
    "generator": null,
    "feeds": [
@@ -2688,18 +2688,18 @@
   }
  },
  "adobe.com": {
-  "checked": "2026-10-24T06:16:23Z",
+  "checked": "2026-11-23T07:16:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.217.104.230",
-    "23.217.104.235"
+    "23.40.99.74",
+    "23.40.99.83"
    ],
    "aaaa": [
-    "2600:1407:e800:1904::b819:3b53",
-    "2600:1407:e800:1904::b819:3b59"
+    "2600:1418:1000:d::17d9:686d",
+    "2600:1418:1000:d::17d9:686f"
    ],
    "cname": null,
    "ns": [
@@ -2718,7 +2718,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:23Z",
+   "checked": "2026-11-23T07:16:08Z",
    "title": "Adobe: Creative, marketing and document management solutions",
    "generator": null,
    "feeds": [],
@@ -3129,7 +3129,7 @@
   }
  },
  "aeon.co": {
-  "checked": "2026-10-24T06:01:50Z",
+  "checked": "2026-11-23T07:02:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3153,7 +3153,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:01:50Z",
+   "checked": "2026-11-23T07:02:31Z",
    "title": "Aeon | a world of ideas",
    "generator": null,
    "feeds": [
@@ -3472,7 +3472,7 @@
   }
  },
  "agiliq.com": {
-  "checked": "2026-10-24T06:16:26Z",
+  "checked": "2026-11-23T07:16:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3498,7 +3498,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:26Z",
+   "checked": "2026-11-23T07:16:11Z",
    "title": "Agiliq – Webapp and API development with Python, Django and more",
    "generator": null,
    "feeds": [
@@ -3586,16 +3586,16 @@
   }
  },
  "ai.googleblog.com": {
-  "checked": "2026-10-24T05:54:40Z",
+  "checked": "2026-11-23T06:55:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.250.188.161"
+    "142.251.211.1"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81d::2001"
+    "2607:f8b0:4009:803::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -3607,7 +3607,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:40Z",
+   "checked": "2026-11-23T06:55:47Z",
    "title": "Latest News from Google Research Blog - Google Research",
    "generator": null,
    "feeds": [],
@@ -4046,7 +4046,7 @@
   }
  },
  "aiso.net": {
-  "checked": "2026-10-24T06:16:27Z",
+  "checked": "2026-11-23T07:16:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4063,18 +4063,20 @@
    "mx": true
   },
   "https": {
-   "reachable": true,
+   "reachable": false,
    "redirects_http": true,
-   "status": 200
+   "status": null,
+   "error": "tls: certificate has expired"
   },
   "home": {
-   "checked": "2026-10-24T06:16:27Z",
-   "title": "Green Hosting - Web Hosting as Nature Intended | AISO.Net",
-   "generator": "Kopage",
+   "checked": "2026-11-23T07:16:12Z",
+   "title": null,
+   "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "tls: certificate has expired"
   }
  },
  "aiweirdness.com": {
@@ -4118,7 +4120,7 @@
   }
  },
  "ajaxian.com": {
-  "checked": "2026-10-24T05:34:21Z",
+  "checked": "2026-11-23T06:36:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4145,7 +4147,7 @@
    "error": "tls: UNEXPECTED_EOF_WHILE_READING"
   },
   "home": {
-   "checked": "2026-10-24T05:34:21Z",
+   "checked": "2026-11-23T06:36:11Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5200,7 +5202,7 @@
   }
  },
  "alexwlchan.net": {
-  "checked": "2026-10-24T06:01:52Z",
+  "checked": "2026-11-23T07:02:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5222,7 +5224,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:01:52Z",
+   "checked": "2026-11-23T07:02:33Z",
    "title": "alexwlchan",
    "generator": null,
    "feeds": [
@@ -5598,7 +5600,7 @@
   }
  },
  "alistapart.com": {
-  "checked": "2026-10-24T06:01:56Z",
+  "checked": "2026-11-23T07:02:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5624,7 +5626,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:01:56Z",
+   "checked": "2026-11-23T07:02:36Z",
    "title": "A List Apart – For people who make websites",
    "generator": null,
    "feeds": [
@@ -5676,25 +5678,19 @@
   }
  },
  "allenpike.com": {
-  "checked": "2026-10-24T05:31:51Z",
+  "checked": "2026-11-23T06:33:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "18.208.88.157",
-    "98.84.224.111"
+    "75.2.60.5"
    ],
-   "aaaa": [
-    "2600:1f18:16e:df01::258",
-    "2600:1f18:16e:df01::259"
-   ],
+   "aaaa": [],
    "cname": null,
    "ns": [
-    "dns1.p05.nsone.net",
-    "dns2.p05.nsone.net",
-    "dns3.p05.nsone.net",
-    "dns4.p05.nsone.net"
+    "justin.ns.cloudflare.com",
+    "marjory.ns.cloudflare.com"
    ],
    "mx": true
   },
@@ -5704,7 +5700,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:31:51Z",
+   "checked": "2026-11-23T06:33:54Z",
    "title": "Allen Pike, pixel crafter",
    "generator": null,
    "feeds": [
@@ -5741,7 +5737,7 @@
   }
  },
  "allfacebook.com": {
-  "checked": "2026-10-24T01:46:45Z",
+  "checked": "2026-11-23T06:30:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5767,9 +5763,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:46:45Z",
+   "checked": "2026-11-23T06:30:30Z",
    "title": "Performance Marketing: Latest Trends, Agency Strategies & More",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -5895,7 +5891,7 @@
   }
  },
  "allthingsd.com": {
-  "checked": "2026-10-24T05:46:35Z",
+  "checked": "2026-11-23T06:48:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5922,7 +5918,7 @@
    "status": 401
   },
   "home": {
-   "checked": "2026-10-24T05:46:35Z",
+   "checked": "2026-11-23T06:48:15Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5949,16 +5945,16 @@
   }
  },
  "allthingsdistributed.com": {
-  "checked": "2026-10-24T05:34:55Z",
+  "checked": "2026-11-23T06:36:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "3.162.163.38",
-    "3.162.163.58",
-    "3.162.163.98",
-    "3.162.163.108"
+    "99.84.203.12",
+    "99.84.203.43",
+    "99.84.203.87",
+    "99.84.203.123"
    ],
    "aaaa": [],
    "cname": null,
@@ -5976,7 +5972,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:34:55Z",
+   "checked": "2026-11-23T06:36:45Z",
    "title": "All Things Distributed",
    "generator": "Hugo 0.163.1",
    "feeds": [
@@ -6298,7 +6294,7 @@
   }
  },
  "amazon.com": {
-  "checked": "2026-10-24T05:43:52Z",
+  "checked": "2026-11-23T06:45:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6324,8 +6320,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:43:52Z",
-   "title": "Amazon.com",
+   "checked": "2026-11-23T06:45:33Z",
+   "title": "Amazon.com. Spend less. Smile more.",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -6674,7 +6670,7 @@
   }
  },
  "amitgawande.com": {
-  "checked": "2026-10-24T06:01:58Z",
+  "checked": "2026-11-23T07:02:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6700,7 +6696,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:01:58Z",
+   "checked": "2026-11-23T07:02:39Z",
    "title": "Amit Gawande",
    "generator": null,
    "feeds": [
@@ -6950,16 +6946,16 @@
   }
  },
  "analytics.blogspot.com": {
-  "checked": "2026-10-24T06:02:00Z",
+  "checked": "2026-11-23T07:02:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.41.129"
+    "142.250.177.65"
    ],
    "aaaa": [
-    "2607:f8b0:4009:816::2001"
+    "2607:f8b0:4009:810::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -6971,7 +6967,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:02:00Z",
+   "checked": "2026-11-23T07:02:41Z",
    "title": "Google Analytics Solutions",
    "generator": "blogger",
    "feeds": [
@@ -7033,7 +7029,7 @@
   }
  },
  "anandtech.com": {
-  "checked": "2026-10-24T05:54:43Z",
+  "checked": "2026-11-23T06:55:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7058,7 +7054,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:43Z",
+   "checked": "2026-11-23T06:55:50Z",
    "title": "Checking your browser",
    "generator": null,
    "feeds": [],
@@ -7347,7 +7343,7 @@
   }
  },
  "andonlabs.com": {
-  "checked": "2026-10-24T06:16:32Z",
+  "checked": "2026-11-23T07:16:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7373,7 +7369,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:32Z",
+   "checked": "2026-11-23T07:16:15Z",
    "title": "Andon Labs",
    "generator": null,
    "feeds": [],
@@ -7545,7 +7541,7 @@
   }
  },
  "andrewchen.co": {
-  "checked": "2026-10-24T06:16:35Z",
+  "checked": "2026-11-23T07:16:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7567,9 +7563,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:35Z",
+   "checked": "2026-11-23T07:16:18Z",
    "title": "andrewchen",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -7853,7 +7849,7 @@
   }
  },
  "androidcentral.com": {
-  "checked": "2026-10-24T06:16:38Z",
+  "checked": "2026-11-23T07:16:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7878,7 +7874,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:38Z",
+   "checked": "2026-11-23T07:16:21Z",
    "title": "Android Central - News, Reviews, Deals & Help on all Android devices",
    "generator": null,
    "feeds": [
@@ -8165,7 +8161,7 @@
   }
  },
  "anildash.com": {
-  "checked": "2026-10-24T05:34:23Z",
+  "checked": "2026-11-23T06:36:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8189,7 +8185,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:34:23Z",
+   "checked": "2026-11-23T06:36:13Z",
    "title": "Home - Anil Dash",
    "generator": "Eleventy v3.1.2",
    "feeds": [
@@ -8302,7 +8298,7 @@
   }
  },
  "annashipman.co.uk": {
-  "checked": "2026-10-24T06:16:39Z",
+  "checked": "2026-11-23T07:16:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8328,7 +8324,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:39Z",
+   "checked": "2026-11-23T07:16:22Z",
    "title": "Anna Shipman",
    "generator": null,
    "feeds": [],
@@ -8370,7 +8366,7 @@
   }
  },
  "annehelen.substack.com": {
-  "checked": "2026-10-24T05:54:48Z",
+  "checked": "2026-11-23T06:55:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8393,7 +8389,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:48Z",
+   "checked": "2026-11-23T06:55:55Z",
    "title": "Culture Study | Anne Helen Petersen | Substack",
    "generator": null,
    "feeds": [
@@ -8489,7 +8485,7 @@
   }
  },
  "anniemueller.com": {
-  "checked": "2026-10-24T05:34:58Z",
+  "checked": "2026-11-23T06:36:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8514,7 +8510,7 @@
    "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
   },
   "home": {
-   "checked": "2026-10-24T05:34:58Z",
+   "checked": "2026-11-23T06:36:47Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8786,7 +8782,7 @@
   }
  },
  "ansible.com": {
-  "checked": "2026-10-24T05:54:51Z",
+  "checked": "2026-11-23T06:55:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8809,7 +8805,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:51Z",
+   "checked": "2026-11-23T06:55:57Z",
    "title": "Ansible Collaborative",
    "generator": "Drupal 10 (https://www.drupal.org)",
    "feeds": [],
@@ -9016,7 +9012,7 @@
   }
  },
  "antipope.org": {
-  "checked": "2026-10-24T06:16:42Z",
+  "checked": "2026-11-23T07:16:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9038,7 +9034,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-24T06:16:42Z",
+   "checked": "2026-11-23T07:16:25Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9049,7 +9045,7 @@
   }
  },
  "antirez.com": {
-  "checked": "2026-10-24T05:41:31Z",
+  "checked": "2026-11-23T06:43:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9073,7 +9069,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:41:31Z",
+   "checked": "2026-11-23T06:43:18Z",
    "title": "List of posts - <antirez>",
    "generator": null,
    "feeds": [
@@ -9190,7 +9186,7 @@
   }
  },
  "anvaka.github.io": {
-  "checked": "2026-10-24T06:02:03Z",
+  "checked": "2026-11-23T07:02:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9217,7 +9213,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-24T06:02:03Z",
+   "checked": "2026-11-23T07:02:44Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9334,7 +9330,7 @@
   }
  },
  "aosabook.org": {
-  "checked": "2026-10-24T06:02:05Z",
+  "checked": "2026-11-23T07:02:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9360,7 +9356,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:02:05Z",
+   "checked": "2026-11-23T07:02:45Z",
    "title": "Redirecting…",
    "generator": null,
    "feeds": [],
@@ -9370,7 +9366,7 @@
   }
  },
  "apcupsd.com": {
-  "checked": "2026-10-24T06:16:43Z",
+  "checked": "2026-11-23T07:16:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9394,7 +9390,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'apcupsd.com'"
   },
   "home": {
-   "checked": "2026-10-24T06:16:43Z",
+   "checked": "2026-11-23T07:16:25Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9405,7 +9401,7 @@
   }
  },
  "apenwarr.ca": {
-  "checked": "2026-10-24T05:48:49Z",
+  "checked": "2026-11-23T06:50:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9430,7 +9426,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:48:49Z",
+   "checked": "2026-11-23T06:50:21Z",
    "title": "thundersnap 0.01: an undo button for everything - apenwarr",
    "generator": null,
    "feeds": [
@@ -9498,7 +9494,7 @@
   }
  },
  "aphotoeditor.com": {
-  "checked": "2026-10-24T05:50:47Z",
+  "checked": "2026-11-23T06:52:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9520,9 +9516,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:50:47Z",
+   "checked": "2026-11-23T06:52:11Z",
    "title": "A Photo Editor – Former Photography Director Rob Haggart",
-   "generator": "WordPress 6.9.10",
+   "generator": "WordPress 6.9.12",
    "feeds": [
     {
      "type": "rss",
@@ -9539,8 +9535,23 @@
    "rel_me": [],
    "webmention": null
   },
-  "rdap": null,
-  "rdap_error": "refused: rdap.verisign.com: network: Broken pipe"
+  "rdap": {
+   "domain": "aphotoeditor.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2007-08-21",
+   "expires": "2027-08-21",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "ns.rackspace.com",
+    "ns2.rackspace.com"
+   ],
+   "checked": "2026-11-23T06:52:11Z"
+  }
  },
  "api-platform.com": {
   "checked": "2026-10-25T05:56:07Z",
@@ -9646,7 +9657,7 @@
   }
  },
  "apnews.com": {
-  "checked": "2026-10-24T05:54:52Z",
+  "checked": "2026-11-23T06:55:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9672,7 +9683,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:52Z",
+   "checked": "2026-11-23T06:55:59Z",
    "title": "Associated Press News: Breaking News, Latest Headlines and Videos | AP News",
    "generator": null,
    "feeds": [
@@ -9688,7 +9699,7 @@
   }
  },
  "apod.nasa.gov": {
-  "checked": "2026-10-24T06:16:46Z",
+  "checked": "2026-11-23T07:16:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9707,9 +9718,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:46Z",
+   "checked": "2026-11-23T07:16:28Z",
    "title": "APOD - NASA Science",
-   "generator": "WordPress 7.0.7",
+   "generator": "WordPress 7.0.9",
    "feeds": [
     {
      "type": "rss",
@@ -10088,7 +10099,7 @@
   }
  },
  "apple.stackexchange.com": {
-  "checked": "2026-10-24T06:02:08Z",
+  "checked": "2026-11-23T07:02:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10107,7 +10118,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:02:08Z",
+   "checked": "2026-11-23T07:02:48Z",
    "title": "Ask Different",
    "generator": null,
    "feeds": [
@@ -10197,7 +10208,7 @@
   }
  },
  "appleinsider.com": {
-  "checked": "2026-10-24T01:48:13Z",
+  "checked": "2026-11-23T06:31:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10225,7 +10236,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:48:13Z",
+   "checked": "2026-11-23T06:31:58Z",
    "title": "Apple News, Rumors, Reviews, Prices & Deals | AppleInsider",
    "generator": null,
    "feeds": [],
@@ -10293,7 +10304,7 @@
   }
  },
  "appletvhacks.net": {
-  "checked": "2026-10-24T06:02:10Z",
+  "checked": "2026-11-23T07:02:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10321,7 +10332,7 @@
    "status": 502
   },
   "home": {
-   "checked": "2026-10-24T06:02:10Z",
+   "checked": "2026-11-23T07:02:50Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -10362,7 +10373,7 @@
   }
  },
  "appleworld.today": {
-  "checked": "2026-10-24T01:46:17Z",
+  "checked": "2026-11-23T06:30:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10385,9 +10396,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T01:46:17Z",
+   "checked": "2026-11-23T06:30:03Z",
    "title": "Apple World Today – A news site about Apple, Inc. products",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -10529,20 +10540,19 @@
   }
  },
  "apps.apple.com": {
-  "checked": "2026-10-24T06:16:48Z",
+  "checked": "2026-11-23T07:16:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.14.140.29"
+    "23.214.124.24"
    ],
    "aaaa": [
-    "2600:1418:1000:284::2a1",
-    "2600:1418:1000:286::2a1",
-    "2600:1418:1000:28b::2a1",
-    "2600:1418:1000:296::2a1",
-    "2600:1418:1000:299::2a1"
+    "2a04:4e42::774",
+    "2a04:4e42:200::774",
+    "2a04:4e42:400::774",
+    "2a04:4e42:600::774"
    ],
    "cname": "apps-cdn.itunes-apple.com.akadns.net",
    "ns": [],
@@ -10554,7 +10564,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:48Z",
+   "checked": "2026-11-23T07:16:31Z",
    "title": "‎Today for iPhone - App Store",
    "generator": null,
    "feeds": [],
@@ -10952,7 +10962,7 @@
   }
  },
  "arcana.computer": {
-  "checked": "2026-10-24T06:16:53Z",
+  "checked": "2026-11-23T07:16:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10971,27 +10981,17 @@
   "https": {
    "reachable": true,
    "redirects_http": true,
-   "status": 200
+   "status": 402
   },
   "home": {
-   "checked": "2026-10-24T06:16:53Z",
-   "title": "Applied Cartography | Justin Duke",
+   "checked": "2026-11-23T07:16:36Z",
+   "title": null,
    "generator": null,
-   "feeds": [
-    {
-     "type": "rss",
-     "url": "https://www.jmduke.com/feed.xml",
-     "title": "RSS Feed"
-    },
-    {
-     "type": "rss",
-     "url": "https://www.jmduke.com/essays.xml",
-     "title": "Essays Feed"
-    }
-   ],
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 402"
   }
  },
  "architosh.com": {
@@ -11104,7 +11104,7 @@
   }
  },
  "archive.org": {
-  "checked": "2026-10-24T05:54:56Z",
+  "checked": "2026-11-23T06:56:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11130,7 +11130,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:56Z",
+   "checked": "2026-11-23T06:56:01Z",
    "title": "Internet Archive: Digital Library of Free & Borrowable Texts, Movies, Music & Wayback Machine",
    "generator": null,
    "feeds": [],
@@ -11180,7 +11180,7 @@
   }
  },
  "archive.wired.com": {
-  "checked": "2026-10-24T06:04:13Z",
+  "checked": "2026-11-23T07:04:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11207,7 +11207,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:04:13Z",
+   "checked": "2026-11-23T07:04:52Z",
    "title": "Wired",
    "generator": null,
    "feeds": [],
@@ -11370,7 +11370,7 @@
   }
  },
  "are.na": {
-  "checked": "2026-10-24T06:16:56Z",
+  "checked": "2026-11-23T07:16:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11396,7 +11396,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:16:56Z",
+   "checked": "2026-11-23T07:16:38Z",
    "title": "Are.na",
    "generator": null,
    "feeds": [],
@@ -11830,7 +11830,7 @@
   }
  },
  "arp242.net": {
-  "checked": "2026-10-24T06:16:59Z",
+  "checked": "2026-11-23T07:16:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11853,7 +11853,7 @@
    "error": "network: Network is unreachable"
   },
   "home": {
-   "checked": "2026-10-24T06:16:59Z",
+   "checked": "2026-11-23T07:16:41Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -12154,7 +12154,7 @@
   }
  },
  "arthurventures.com": {
-  "checked": "2026-10-24T06:17:14Z",
+  "checked": "2026-11-23T07:16:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12177,7 +12177,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:17:14Z",
+   "checked": "2026-11-23T07:16:55Z",
    "title": "Arthur Ventures | Early Growth Capital Firm | Arthur Ventures",
    "generator": "HubSpot",
    "feeds": [],
@@ -12249,7 +12249,7 @@
   }
  },
  "articles.latimes.com": {
-  "checked": "2026-10-24T06:17:15Z",
+  "checked": "2026-11-23T07:16:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12261,14 +12261,14 @@
     "52.84.127.117"
    ],
    "aaaa": [
-    "2600:9000:2203:200:1c:9bb3:b9c0:93a1",
-    "2600:9000:2203:1e00:1c:9bb3:b9c0:93a1",
-    "2600:9000:2203:5e00:1c:9bb3:b9c0:93a1",
+    "2600:9000:2203:0:1c:9bb3:b9c0:93a1",
+    "2600:9000:2203:600:1c:9bb3:b9c0:93a1",
+    "2600:9000:2203:1200:1c:9bb3:b9c0:93a1",
+    "2600:9000:2203:2800:1c:9bb3:b9c0:93a1",
+    "2600:9000:2203:6e00:1c:9bb3:b9c0:93a1",
     "2600:9000:2203:7800:1c:9bb3:b9c0:93a1",
-    "2600:9000:2203:9e00:1c:9bb3:b9c0:93a1",
-    "2600:9000:2203:c000:1c:9bb3:b9c0:93a1",
-    "2600:9000:2203:ca00:1c:9bb3:b9c0:93a1",
-    "2600:9000:2203:e800:1c:9bb3:b9c0:93a1"
+    "2600:9000:2203:b200:1c:9bb3:b9c0:93a1",
+    "2600:9000:2203:f600:1c:9bb3:b9c0:93a1"
    ],
    "cname": "di5cyxcqtus4n.cloudfront.net",
    "ns": [],
@@ -12280,7 +12280,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:17:15Z",
+   "checked": "2026-11-23T07:16:56Z",
    "title": "News from California, across the nation and world - Los Angeles Times",
    "generator": null,
    "feeds": [
@@ -12337,16 +12337,16 @@
   }
  },
  "artnudes.blogspot.com": {
-  "checked": "2026-10-24T06:17:18Z",
+  "checked": "2026-11-23T07:16:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.32.1"
+    "142.251.214.65"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81c::2001"
+    "2607:f8b0:4009:802::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -12358,7 +12358,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:17:18Z",
+   "checked": "2026-11-23T07:16:59Z",
    "title": "Art Nudes",
    "generator": "blogger",
    "feeds": [
@@ -12579,7 +12579,7 @@
   }
  },
  "arun.is": {
-  "checked": "2026-10-24T06:17:20Z",
+  "checked": "2026-11-23T07:17:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12603,7 +12603,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:17:20Z",
+   "checked": "2026-11-23T07:17:00Z",
    "title": "Arun Venkatesan",
    "generator": "Astro v5.17.2",
    "feeds": [],
@@ -12613,7 +12613,7 @@
   }
  },
  "arxiv.org": {
-  "checked": "2026-10-24T05:46:39Z",
+  "checked": "2026-11-23T06:48:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12640,7 +12640,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:46:39Z",
+   "checked": "2026-11-23T06:48:19Z",
    "title": "arXiv.org e-Print archive",
    "generator": null,
    "feeds": [],
@@ -12666,7 +12666,7 @@
   }
  },
  "aschmelyun.com": {
-  "checked": "2026-10-24T06:17:23Z",
+  "checked": "2026-11-23T07:17:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12692,7 +12692,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:17:23Z",
+   "checked": "2026-11-23T07:17:03Z",
    "title": "Home - Andrew Schmelyun",
    "generator": null,
    "feeds": [],
@@ -12767,7 +12767,7 @@
   }
  },
  "ascii.textfiles.com": {
-  "checked": "2026-10-24T06:17:25Z",
+  "checked": "2026-11-23T07:17:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12786,9 +12786,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:17:25Z",
+   "checked": "2026-11-23T07:17:06Z",
    "title": "ASCII by Jason Scott",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -12991,7 +12991,7 @@
   }
  },
  "asianefficiency.com": {
-  "checked": "2026-10-24T06:17:28Z",
+  "checked": "2026-11-23T07:17:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13014,7 +13014,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:17:28Z",
+   "checked": "2026-11-23T07:17:09Z",
    "title": "Time Management and Productivity - Asian Efficiency",
    "generator": null,
    "feeds": [],
@@ -13247,7 +13247,7 @@
   }
  },
  "assembled.com": {
-  "checked": "2026-10-24T06:17:31Z",
+  "checked": "2026-11-23T07:17:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13271,7 +13271,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:17:31Z",
+   "checked": "2026-11-23T07:17:11Z",
    "title": "Assembled | Workforce Management Built for the AI Era",
    "generator": null,
    "feeds": [],
@@ -13313,7 +13313,7 @@
   }
  },
  "astralcodexten.com": {
-  "checked": "2026-10-24T06:17:34Z",
+  "checked": "2026-11-23T07:17:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13335,7 +13335,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:17:34Z",
+   "checked": "2026-11-23T07:17:14Z",
    "title": "Astral Codex Ten | Scott Alexander | Substack",
    "generator": null,
    "feeds": [
@@ -13424,7 +13424,7 @@
   }
  },
  "asymco.com": {
-  "checked": "2026-10-24T05:50:50Z",
+  "checked": "2026-11-23T06:52:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13450,7 +13450,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:50:50Z",
+   "checked": "2026-11-23T06:52:14Z",
    "title": "Asymco – Asymmetric Intelligence",
    "generator": null,
    "feeds": [
@@ -13640,7 +13640,7 @@
   }
  },
  "atlasobscura.com": {
-  "checked": "2026-10-24T06:17:36Z",
+  "checked": "2026-11-23T07:17:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13668,7 +13668,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:17:36Z",
+   "checked": "2026-11-23T07:17:16Z",
    "title": "Curious and Wondrous Travel Destinations - Atlas Obscura",
    "generator": null,
    "feeds": [
@@ -13684,16 +13684,16 @@
   }
  },
  "atlassian.com": {
-  "checked": "2026-10-24T05:48:56Z",
+  "checked": "2026-11-23T06:50:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "52.84.127.19",
-    "52.84.127.74",
-    "52.84.127.90",
-    "52.84.127.98"
+    "54.192.55.3",
+    "54.192.55.30",
+    "54.192.55.51",
+    "54.192.55.78"
    ],
    "aaaa": [],
    "cname": null,
@@ -13711,7 +13711,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:48:56Z",
+   "checked": "2026-11-23T06:50:27Z",
    "title": "Collaboration software for software, IT and business teams | Atlassian",
    "generator": null,
    "feeds": [],
@@ -14112,7 +14112,7 @@
   }
  },
  "austinkleon.com": {
-  "checked": "2026-10-24T06:17:37Z",
+  "checked": "2026-11-23T07:17:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14134,7 +14134,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:17:37Z",
+   "checked": "2026-11-23T07:17:17Z",
    "title": "Dont Call it Art is out now! - Austin Kleon",
    "generator": null,
    "feeds": [
@@ -14155,14 +14155,14 @@
   }
  },
  "austinmann.com": {
-  "checked": "2026-10-24T05:35:01Z",
+  "checked": "2026-11-23T06:36:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "216.150.1.193",
-    "216.150.16.193"
+    "216.150.1.1",
+    "216.150.16.1"
    ],
    "aaaa": [],
    "cname": null,
@@ -14178,7 +14178,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:35:01Z",
+   "checked": "2026-11-23T06:36:50Z",
    "title": "Austin Mann — Travel Photographer",
    "generator": null,
    "feeds": [],
@@ -14186,8 +14186,23 @@
    "rel_me": [],
    "webmention": null
   },
-  "rdap": null,
-  "rdap_error": "refused: rdap.verisign.com: network: Broken pipe"
+  "rdap": {
+   "domain": "austinmann.com",
+   "registrar": "GoDaddy.com, LLC",
+   "registered": "2005-03-14",
+   "expires": "2027-03-14",
+   "status": [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited"
+   ],
+   "nameservers": [
+    "gabe.ns.cloudflare.com",
+    "leah.ns.cloudflare.com"
+   ],
+   "checked": "2026-11-23T06:36:50Z"
+  }
  },
  "auth0.com": {
   "checked": "2026-10-25T06:01:10Z",
@@ -14568,7 +14583,7 @@
   }
  },
  "avc.blogs.com": {
-  "checked": "2026-10-24T05:54:58Z",
+  "checked": "2026-11-23T06:56:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14591,7 +14606,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:54:58Z",
+   "checked": "2026-11-23T06:56:03Z",
    "title": "Typepad | Network Solutions",
    "generator": null,
    "feeds": [],
@@ -14665,7 +14680,7 @@
   }
  },
  "avc.xyz": {
-  "checked": "2026-10-24T06:04:16Z",
+  "checked": "2026-11-23T07:04:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14687,7 +14702,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:04:16Z",
+   "checked": "2026-11-23T07:04:55Z",
    "title": "AVC",
    "generator": null,
    "feeds": [],
@@ -14984,7 +14999,7 @@
   }
  },
  "aws.typepad.com": {
-  "checked": "2026-10-24T05:50:53Z",
+  "checked": "2026-11-23T06:52:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -15007,7 +15022,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:50:53Z",
+   "checked": "2026-11-23T06:52:17Z",
    "title": "Typepad | Network Solutions",
    "generator": null,
    "feeds": [],
@@ -15166,26 +15181,26 @@
   }
  },
  "axios.com": {
-  "checked": "2026-10-24T05:46:42Z",
+  "checked": "2026-11-23T06:48:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "52.84.127.8",
-    "52.84.127.60",
-    "52.84.127.84",
-    "52.84.127.119"
+    "52.85.40.2",
+    "52.85.40.53",
+    "52.85.40.80",
+    "52.85.40.94"
    ],
    "aaaa": [
-    "2600:9000:200e:a00:f:2743:2840:93a1",
-    "2600:9000:200e:1600:f:2743:2840:93a1",
-    "2600:9000:200e:5a00:f:2743:2840:93a1",
-    "2600:9000:200e:9a00:f:2743:2840:93a1",
-    "2600:9000:200e:bc00:f:2743:2840:93a1",
-    "2600:9000:200e:ce00:f:2743:2840:93a1",
-    "2600:9000:200e:da00:f:2743:2840:93a1",
-    "2600:9000:200e:e200:f:2743:2840:93a1"
+    "2600:9000:2203:e00:f:2743:2840:93a1",
+    "2600:9000:2203:1000:f:2743:2840:93a1",
+    "2600:9000:2203:3e00:f:2743:2840:93a1",
+    "2600:9000:2203:8a00:f:2743:2840:93a1",
+    "2600:9000:2203:9800:f:2743:2840:93a1",
+    "2600:9000:2203:a200:f:2743:2840:93a1",
+    "2600:9000:2203:a800:f:2743:2840:93a1",
+    "2600:9000:2203:e800:f:2743:2840:93a1"
    ],
    "cname": null,
    "ns": [
@@ -15202,7 +15217,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:46:42Z",
+   "checked": "2026-11-23T06:48:21Z",
    "title": "Axios - Breaking news, U.S. news and politics, and local news",
    "generator": null,
    "feeds": [],
@@ -15479,17 +15494,17 @@
   }
  },
  "azure.microsoft.com": {
-  "checked": "2026-10-24T05:46:45Z",
+  "checked": "2026-11-23T06:48:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.197.194.123"
+    "2.16.234.149"
    ],
    "aaaa": [
-    "2600:1418:1000:48e::439b",
-    "2600:1418:1000:493::439b"
+    "2600:1407:3c00:880::439b",
+    "2600:1407:3c00:8a3::439b"
    ],
    "cname": "azure.microsoft.com.edgekey.net",
    "ns": [],
@@ -15501,7 +15516,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:46:45Z",
+   "checked": "2026-11-23T06:48:24Z",
    "title": "Cloud Computing Services | Microsoft Azure",
    "generator": null,
    "feeds": [],

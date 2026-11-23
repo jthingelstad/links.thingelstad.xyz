@@ -36,7 +36,7 @@
   }
  },
  "500ish.com": {
-  "checked": "2026-10-24T05:50:40Z",
+  "checked": "2026-11-23T06:52:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -61,7 +61,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:50:40Z",
+   "checked": "2026-11-23T06:52:03Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -168,7 +168,7 @@
   }
  },
  "512pixels.net": {
-  "checked": "2026-10-24T05:43:49Z",
+  "checked": "2026-11-23T06:45:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -196,9 +196,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:43:49Z",
+   "checked": "2026-11-23T06:45:31Z",
    "title": "512 Pixels",
-   "generator": "Hugo 0.163.1",
+   "generator": "Hugo 0.170.1",
    "feeds": [
     {
      "type": "rss",
@@ -294,7 +294,7 @@
   }
  },
  "5by5.tv": {
-  "checked": "2026-10-24T06:01:36Z",
+  "checked": "2026-11-23T07:02:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -320,7 +320,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:01:36Z",
+   "checked": "2026-11-23T07:02:18Z",
    "title": "5by5",
    "generator": null,
    "feeds": [],

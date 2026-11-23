@@ -236,7 +236,7 @@
   }
  },
  "jacobian.org": {
-  "checked": "2026-10-24T06:08:15Z",
+  "checked": "2026-11-23T07:08:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -262,7 +262,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:15Z",
+   "checked": "2026-11-23T07:08:16Z",
    "title": "Jacob Kaplan-Moss",
    "generator": "Hugo 0.147.8",
    "feeds": [
@@ -308,7 +308,7 @@
   }
  },
  "jacquesmattheij.com": {
-  "checked": "2026-10-24T06:08:18Z",
+  "checked": "2026-11-23T07:08:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -330,7 +330,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:18Z",
+   "checked": "2026-11-23T07:08:18Z",
    "title": "Jacques Mattheij",
    "generator": "Hugo (http://gohugo.io)",
    "feeds": [
@@ -476,7 +476,7 @@
   }
  },
  "jalopnik.com": {
-  "checked": "2026-10-24T06:08:23Z",
+  "checked": "2026-11-23T07:08:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -503,7 +503,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:23Z",
+   "checked": "2026-11-23T07:08:24Z",
    "title": "Jalopnik | Obsessed with the culture of cars",
    "generator": null,
    "feeds": [
@@ -703,7 +703,7 @@
   }
  },
  "jamesclear.com": {
-  "checked": "2026-10-24T06:08:26Z",
+  "checked": "2026-11-23T07:08:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -729,7 +729,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:26Z",
+   "checked": "2026-11-23T07:08:26Z",
    "title": "James Clear",
    "generator": "WordPress 6.8.10",
    "feeds": [
@@ -779,7 +779,7 @@
   }
  },
  "jamesg.blog": {
-  "checked": "2026-10-24T05:52:46Z",
+  "checked": "2026-11-23T06:54:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -805,7 +805,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:52:46Z",
+   "checked": "2026-11-23T06:54:03Z",
    "title": "home ;; with words, wonder",
    "generator": null,
    "feeds": [
@@ -819,7 +819,7 @@
    "rel_me": [
     "https://github.com/capjamesg"
    ],
-   "webmention": null
+   "webmention": "https://artemis.jamesg.blog/wm"
   },
   "rdap": {
    "domain": "jamesg.blog",
@@ -923,16 +923,16 @@
   }
  },
  "jamesshelley.com": {
-  "checked": "2026-10-24T05:52:49Z",
+  "checked": "2026-11-23T06:54:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "52.84.127.32",
-    "52.84.127.80",
-    "52.84.127.100",
-    "52.84.127.119"
+    "54.192.55.9",
+    "54.192.55.13",
+    "54.192.55.95",
+    "54.192.55.109"
    ],
    "aaaa": [],
    "cname": null,
@@ -950,7 +950,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:52:49Z",
+   "checked": "2026-11-23T06:54:06Z",
    "title": "James Shelley",
    "generator": "Publii Open-Source CMS for Static Site",
    "feeds": [
@@ -3145,7 +3145,7 @@
   }
  },
  "jimmymow.medium.com": {
-  "checked": "2026-10-24T05:57:29Z",
+  "checked": "2026-11-23T06:58:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3168,7 +3168,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:57:29Z",
+   "checked": "2026-11-23T06:58:03Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -3447,15 +3447,19 @@
   }
  },
  "jmduke.com": {
-  "checked": "2026-10-24T06:08:28Z",
+  "checked": "2026-11-23T07:08:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "216.198.79.1"
+    "104.21.52.169",
+    "172.67.201.143"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2606:4700:3030::6815:34a9",
+    "2606:4700:3033::ac43:c98f"
+   ],
    "cname": null,
    "ns": [
     "joan.ns.cloudflare.com",
@@ -3469,7 +3473,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:28Z",
+   "checked": "2026-11-23T07:08:29Z",
    "title": "Applied Cartography | Justin Duke",
    "generator": null,
    "feeds": [
@@ -3565,7 +3569,7 @@
   }
  },
  "joanwestenberg.com": {
-  "checked": "2026-10-24T06:08:31Z",
+  "checked": "2026-11-23T07:08:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3587,7 +3591,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:31Z",
+   "checked": "2026-11-23T07:08:30Z",
    "title": "WESTENBERG | Substack",
    "generator": null,
    "feeds": [
@@ -3877,7 +3881,7 @@
   }
  },
  "joebuhlig.com": {
-  "checked": "2026-10-24T06:08:34Z",
+  "checked": "2026-11-23T07:08:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3899,7 +3903,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:34Z",
+   "checked": "2026-11-23T07:08:33Z",
    "title": "Joe Buhlig | an analog mind in a digital world",
    "generator": null,
    "feeds": [
@@ -4064,7 +4068,7 @@
   }
  },
  "joelonsoftware.com": {
-  "checked": "2026-10-24T05:49:51Z",
+  "checked": "2026-11-23T06:51:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4089,7 +4093,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:49:51Z",
+   "checked": "2026-11-23T06:51:18Z",
    "title": "Joel on Software",
    "generator": null,
    "feeds": [
@@ -4413,7 +4417,7 @@
   }
  },
  "johndcook.com": {
-  "checked": "2026-10-24T06:08:38Z",
+  "checked": "2026-11-23T07:08:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4436,9 +4440,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:08:38Z",
+   "checked": "2026-11-23T07:08:37Z",
    "title": "Expert consulting in applied mathematics & data privacy",
-   "generator": "All in One SEO (AIOSEO) 5.0.4",
+   "generator": "All in One SEO (AIOSEO) 5.0.5.1",
    "feeds": [
     {
      "type": "rss",
@@ -5146,7 +5150,7 @@
   }
  },
  "jordanmerrick.com": {
-  "checked": "2026-10-24T05:57:33Z",
+  "checked": "2026-11-23T06:58:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5167,7 +5171,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-24T05:57:33Z",
+   "checked": "2026-11-23T06:58:07Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8232,7 +8236,7 @@
   }
  },
  "justinobeirne.com": {
-  "checked": "2026-10-24T05:48:08Z",
+  "checked": "2026-11-23T06:49:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8254,7 +8258,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:48:08Z",
+   "checked": "2026-11-23T06:49:44Z",
    "title": "justinobeirne.com",
    "generator": null,
    "feeds": [],
@@ -8606,7 +8610,7 @@
   }
  },
  "jvns.ca": {
-  "checked": "2026-10-24T05:30:22Z",
+  "checked": "2026-11-23T06:32:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8629,7 +8633,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T05:30:22Z",
+   "checked": "2026-11-23T06:32:27Z",
    "title": "Julia Evans",
    "generator": "Hugo 0.135.0",
    "feeds": [
