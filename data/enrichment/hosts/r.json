@@ -1,6 +1,6 @@
 {
  "raanan.com": {
-  "checked": "2026-10-25T05:32:17Z",
+  "checked": "2026-11-24T06:47:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -24,7 +24,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:17Z",
+   "checked": "2026-11-24T06:47:22Z",
    "title": "Private Site",
    "generator": null,
    "feeds": [],
@@ -358,7 +358,7 @@
   }
  },
  "radiosilenceapp.com": {
-  "checked": "2026-10-25T05:32:20Z",
+  "checked": "2026-11-24T06:47:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -383,7 +383,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:20Z",
+   "checked": "2026-11-24T06:47:25Z",
    "title": "Radio Silence | Network monitor and firewall for Mac",
    "generator": null,
    "feeds": [],
@@ -604,7 +604,7 @@
   }
  },
  "railspikes.com": {
-  "checked": "2026-10-25T05:32:24Z",
+  "checked": "2026-11-24T06:47:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -615,8 +615,8 @@
    "aaaa": [],
    "cname": null,
    "ns": [
-    "ns1.rentondc.com",
-    "ns2.rentondc.com"
+    "ns1.dingodns.com",
+    "ns2.dingodns.com"
    ],
    "mx": false
   },
@@ -626,7 +626,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:24Z",
+   "checked": "2026-11-24T06:47:28Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -977,7 +977,7 @@
   }
  },
  "randomfoo.net": {
-  "checked": "2026-10-25T05:32:26Z",
+  "checked": "2026-11-24T06:47:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1001,7 +1001,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:26Z",
+   "checked": "2026-11-24T06:47:30Z",
    "title": "random($foo)",
    "generator": null,
    "feeds": [
@@ -1132,7 +1132,7 @@
   }
  },
  "raptitude.com": {
-  "checked": "2026-10-25T05:32:29Z",
+  "checked": "2026-11-24T06:47:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1158,7 +1158,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:29Z",
+   "checked": "2026-11-24T06:47:33Z",
    "title": "Raptitude.com – Getting Better at Being Human",
    "generator": null,
    "feeds": [
@@ -1250,7 +1250,7 @@
   }
  },
  "raspberrypi.com": {
-  "checked": "2026-10-25T05:32:31Z",
+  "checked": "2026-11-24T06:47:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1276,7 +1276,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:31Z",
+   "checked": "2026-11-24T06:47:35Z",
    "title": "Raspberry Pi",
    "generator": "Gatsby 5.16.1",
    "feeds": [],
@@ -1286,7 +1286,7 @@
   }
  },
  "raspberrypi.org": {
-  "checked": "2026-10-25T05:32:33Z",
+  "checked": "2026-11-24T06:47:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1312,7 +1312,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:33Z",
+   "checked": "2026-11-24T06:47:37Z",
    "title": "Teach, learn, and make with the Raspberry Pi Foundation",
    "generator": null,
    "feeds": [],
@@ -4160,7 +4160,7 @@
   }
  },
  "relay.fm": {
-  "checked": "2026-10-25T05:32:34Z",
+  "checked": "2026-11-24T06:47:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4188,7 +4188,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:34Z",
+   "checked": "2026-11-24T06:47:38Z",
    "title": "Relay",
    "generator": null,
    "feeds": [
@@ -5481,7 +5481,7 @@
   }
  },
  "retailmenot.com": {
-  "checked": "2026-10-25T05:32:37Z",
+  "checked": "2026-11-24T06:47:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5507,8 +5507,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:37Z",
-   "title": "RetailMeNot: Save with Coupons & Promo Codes for October 2026",
+   "checked": "2026-11-24T06:47:41Z",
+   "title": "RetailMeNot: Save with Coupons & Promo Codes for November 2026",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -6327,7 +6327,7 @@
   }
  },
  "ricksegal.typepad.com": {
-  "checked": "2026-10-25T05:32:38Z",
+  "checked": "2026-11-24T06:47:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6350,7 +6350,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:38Z",
+   "checked": "2026-11-24T06:47:42Z",
    "title": "Typepad | Network Solutions",
    "generator": null,
    "feeds": [],
@@ -6606,7 +6606,7 @@
   }
  },
  "risnews.edgl.com": {
-  "checked": "2026-10-25T05:32:40Z",
+  "checked": "2026-11-24T06:47:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6631,7 +6631,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:40Z",
+   "checked": "2026-11-24T06:47:44Z",
    "title": "Chain Store Age: Retail News | Chain Store Age",
    "generator": null,
    "feeds": [],
@@ -6746,7 +6746,7 @@
   }
  },
  "riverfold.com": {
-  "checked": "2026-10-25T05:32:44Z",
+  "checked": "2026-11-24T06:47:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6771,7 +6771,7 @@
    "error": "tls: self-signed certificate"
   },
   "home": {
-   "checked": "2026-10-25T05:32:44Z",
+   "checked": "2026-11-24T06:47:45Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7292,7 +7292,7 @@
   }
  },
  "robertglazer.com": {
-  "checked": "2026-10-25T05:32:46Z",
+  "checked": "2026-11-24T06:47:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7318,9 +7318,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:46Z",
+   "checked": "2026-11-24T06:47:47Z",
    "title": "Robert Glazer | Entrepreneur, Author, and Leadership Speaker",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [
     {
      "type": "rss",
@@ -7334,7 +7334,7 @@
   }
  },
  "robertheaton.com": {
-  "checked": "2026-10-25T05:32:48Z",
+  "checked": "2026-11-24T06:47:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7360,7 +7360,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:48Z",
+   "checked": "2026-11-24T06:47:49Z",
    "title": "Robert Heaton",
    "generator": null,
    "feeds": [],
@@ -7718,7 +7718,7 @@
   }
  },
  "robm.me.uk": {
-  "checked": "2026-10-25T05:32:51Z",
+  "checked": "2026-11-24T06:47:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7740,7 +7740,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:51Z",
+   "checked": "2026-11-24T06:47:52Z",
    "title": "Roblog, the blog of Rob Miller",
    "generator": null,
    "feeds": [
@@ -7957,7 +7957,7 @@
   }
  },
  "robservatory.com": {
-  "checked": "2026-10-25T05:32:55Z",
+  "checked": "2026-11-24T06:47:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7983,9 +7983,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:55Z",
+   "checked": "2026-11-24T06:47:56Z",
    "title": "The Robservatory – Robservations on everything…",
-   "generator": "WordPress 7.1.3",
+   "generator": null,
    "feeds": [
     {
      "type": "rss",
@@ -8156,7 +8156,7 @@
   }
  },
  "rocksbarbque.com": {
-  "checked": "2026-10-25T05:33:01Z",
+  "checked": "2026-11-24T06:48:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8182,7 +8182,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:01Z",
+   "checked": "2026-11-24T06:48:01Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9150,7 +9150,7 @@
   }
  },
  "rowansimpson.com": {
-  "checked": "2026-10-25T05:33:02Z",
+  "checked": "2026-11-24T06:48:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9175,7 +9175,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:02Z",
+   "checked": "2026-11-24T06:48:03Z",
    "title": "Rowan Simpson",
    "generator": "Hugo 0.166.0",
    "feeds": [
@@ -9262,7 +9262,7 @@
   }
  },
  "royal.pingdom.com": {
-  "checked": "2026-10-25T05:33:05Z",
+  "checked": "2026-11-24T06:48:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9283,7 +9283,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:05Z",
+   "checked": "2026-11-24T06:48:06Z",
    "title": "Blog Posts Archive - Pingdom",
    "generator": null,
    "feeds": [
@@ -9970,16 +9970,16 @@
   }
  },
  "rstephens.blogspot.com": {
-  "checked": "2026-10-25T05:33:09Z",
+  "checked": "2026-11-24T06:48:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.210.97"
+    "142.251.211.1"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81e::2001"
+    "2607:f8b0:4009:80c::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -9991,7 +9991,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:09Z",
+   "checked": "2026-11-24T06:48:09Z",
    "title": "Robert Stephens",
    "generator": "blogger",
    "feeds": [
@@ -10014,7 +10014,7 @@
   }
  },
  "rsync.net": {
-  "checked": "2026-10-25T05:33:10Z",
+  "checked": "2026-11-24T06:48:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10038,7 +10038,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:10Z",
+   "checked": "2026-11-24T06:48:10Z",
    "title": "Cloud Storage for Offsite Backup",
    "generator": null,
    "feeds": [],
@@ -10965,7 +10965,7 @@
   }
  },
  "ryanfrantz.com": {
-  "checked": "2026-10-25T05:33:12Z",
+  "checked": "2026-11-24T06:48:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10990,7 +10990,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:12Z",
+   "checked": "2026-11-24T06:48:12Z",
    "title": "ryanfrantz.com",
    "generator": null,
    "feeds": [

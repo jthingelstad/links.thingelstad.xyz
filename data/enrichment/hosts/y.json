@@ -433,7 +433,7 @@
   }
  },
  "ykatkov.name": {
-  "checked": "2026-10-25T05:39:45Z",
+  "checked": "2026-11-24T06:54:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -452,7 +452,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-25T05:39:45Z",
+   "checked": "2026-11-24T06:54:31Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -922,13 +922,13 @@
   }
  },
  "youtube-global.blogspot.com": {
-  "checked": "2026-10-25T05:39:45Z",
+  "checked": "2026-11-24T06:54:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.214.65"
+    "142.251.32.1"
    ],
    "aaaa": [
     "2607:f8b0:4009:81e::2001"
@@ -943,7 +943,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:39:45Z",
+   "checked": "2026-11-24T06:54:31Z",
    "title": "Official YouTube Blog for Latest YouTube News & Insights",
    "generator": null,
    "feeds": [],

@@ -1,6 +1,6 @@
 {
  "0x74696d.com": {
-  "checked": "2026-10-25T05:40:03Z",
+  "checked": "2026-11-24T06:54:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -22,7 +22,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:40:03Z",
+   "checked": "2026-11-24T06:54:50Z",
    "title": "0x74696d",
    "generator": "Hugo 0.117.0",
    "feeds": [
@@ -38,7 +38,7 @@
   }
  },
  "0xadada.pub": {
-  "checked": "2026-10-25T05:40:07Z",
+  "checked": "2026-11-24T06:54:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -64,7 +64,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:40:07Z",
+   "checked": "2026-11-24T06:54:53Z",
    "title": "0xADADA produces code, essays, and films that explore idleness, time, and lived experience",
    "generator": null,
    "feeds": [
@@ -87,7 +87,7 @@
   }
  },
  "0xerr0r.github.io": {
-  "checked": "2026-10-25T05:40:09Z",
+  "checked": "2026-11-24T06:54:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -114,7 +114,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-25T05:40:09Z",
+   "checked": "2026-11-24T06:54:56Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -125,14 +125,14 @@
   }
  },
  "0xkato.xyz": {
-  "checked": "2026-10-25T05:40:11Z",
+  "checked": "2026-11-24T06:54:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "216.150.1.193",
-    "216.150.16.193"
+    "64.29.17.2",
+    "216.198.79.194"
    ],
    "aaaa": [],
    "cname": null,
@@ -148,7 +148,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:40:11Z",
+   "checked": "2026-11-24T06:54:57Z",
    "title": "Home | 0xkato",
    "generator": "Jekyll v3.10.0",
    "feeds": [

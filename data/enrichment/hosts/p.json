@@ -766,7 +766,7 @@
   }
  },
  "panteracapital.com": {
-  "checked": "2026-10-25T05:30:26Z",
+  "checked": "2026-11-24T06:45:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -793,9 +793,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:30:26Z",
+   "checked": "2026-11-24T06:45:34Z",
    "title": "Home | Pantera",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -871,7 +871,7 @@
   }
  },
  "paperplanes.de": {
-  "checked": "2026-10-25T05:30:29Z",
+  "checked": "2026-11-24T06:45:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -899,7 +899,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:30:29Z",
+   "checked": "2026-11-24T06:45:36Z",
    "title": "Mathias Meyer | Executive Leadership Coach, Author",
    "generator": "Jekyll v4.2.0",
    "feeds": [
@@ -1602,7 +1602,7 @@
   }
  },
  "paul.af": {
-  "checked": "2026-10-25T05:30:32Z",
+  "checked": "2026-11-24T06:45:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1624,7 +1624,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:30:32Z",
+   "checked": "2026-11-24T06:45:39Z",
    "title": "Howdy - Paul's Weblog",
    "generator": null,
    "feeds": [
@@ -2181,7 +2181,7 @@
   }
  },
  "pcmag.com": {
-  "checked": "2026-10-25T05:30:36Z",
+  "checked": "2026-11-24T06:45:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2207,7 +2207,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:30:36Z",
+   "checked": "2026-11-24T06:45:42Z",
    "title": "The Latest Technology Product Reviews, News, Tips, and Deals | PCMag",
    "generator": null,
    "feeds": [
@@ -2223,7 +2223,7 @@
   }
  },
  "pcworld.com": {
-  "checked": "2026-10-25T05:30:37Z",
+  "checked": "2026-11-24T06:45:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2249,7 +2249,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:30:37Z",
+   "checked": "2026-11-24T06:45:43Z",
    "title": "PCWorld",
    "generator": null,
    "feeds": [
@@ -3358,7 +3358,7 @@
   }
  },
  "performancing.com": {
-  "checked": "2026-10-25T05:30:40Z",
+  "checked": "2026-11-24T06:45:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3385,7 +3385,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-25T05:30:40Z",
+   "checked": "2026-11-24T06:45:46Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3611,7 +3611,7 @@
   }
  },
  "perspectives.mvdirona.com": {
-  "checked": "2026-10-25T05:31:13Z",
+  "checked": "2026-11-24T06:46:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3630,9 +3630,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:13Z",
+   "checked": "2026-11-24T06:46:19Z",
    "title": "Perspectives – James Hamilton's Blog",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.4",
    "feeds": [
     {
      "type": "rss",
@@ -3872,7 +3872,7 @@
   }
  },
  "petersens.ws": {
-  "checked": "2026-10-25T05:31:16Z",
+  "checked": "2026-11-24T06:46:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3895,17 +3895,16 @@
   "https": {
    "reachable": true,
    "redirects_http": false,
-   "status": 403
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:16Z",
-   "title": null,
+   "checked": "2026-11-24T06:46:22Z",
+   "title": "Coming Soon",
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null,
-   "error": "HTTP 403"
+   "webmention": null
   }
  },
  "petewarden.com": {
@@ -4632,7 +4631,7 @@
   }
  },
  "philschmid.de": {
-  "checked": "2026-10-25T05:31:18Z",
+  "checked": "2026-11-24T06:46:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4655,7 +4654,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:18Z",
+   "checked": "2026-11-24T06:46:24Z",
    "title": "Philschmid",
    "generator": null,
    "feeds": [],
@@ -5343,14 +5342,14 @@
   }
  },
  "phx.corporate-ir.net": {
-  "checked": "2026-10-25T05:31:20Z",
+  "checked": "2026-11-24T06:46:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.217.104.121",
-    "23.217.104.122"
+    "23.217.104.74",
+    "23.217.104.92"
    ],
    "aaaa": [
     "2600:1418:1000:d::17d9:6879",
@@ -5367,7 +5366,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'phx.corporate-ir.net'"
   },
   "home": {
-   "checked": "2026-10-25T05:31:20Z",
+   "checked": "2026-11-24T06:46:26Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5449,7 +5448,7 @@
   }
  },
  "pi-hole.net": {
-  "checked": "2026-10-25T05:31:22Z",
+  "checked": "2026-11-24T06:46:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5461,9 +5460,7 @@
    "cname": null,
    "ns": [
     "ns1.pi-hole.net",
-    "ns2.pi-hole.net",
-    "ns3.pi-hole.net",
-    "ns4.pi-hole.net"
+    "ns2.pi-hole.net"
    ],
    "mx": true
   },
@@ -5473,9 +5470,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:22Z",
+   "checked": "2026-11-24T06:46:28Z",
    "title": "Pi-hole – Network-wide Ad Blocking",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -6135,7 +6132,7 @@
   }
  },
  "pinboard.in": {
-  "checked": "2026-10-25T05:31:25Z",
+  "checked": "2026-11-24T06:46:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6158,7 +6155,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:25Z",
+   "checked": "2026-11-24T06:46:30Z",
    "title": "Welcome to Pinboard—Social bookmarking for introverts!",
    "generator": null,
    "feeds": [],
@@ -6488,7 +6485,7 @@
   }
  },
  "pitchfork.com": {
-  "checked": "2026-10-25T05:31:26Z",
+  "checked": "2026-11-24T06:46:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6500,14 +6497,14 @@
     "52.84.127.119"
    ],
    "aaaa": [
-    "2600:9000:2203:600:1a:1603:8940:93a1",
-    "2600:9000:2203:a00:1a:1603:8940:93a1",
-    "2600:9000:2203:4200:1a:1603:8940:93a1",
-    "2600:9000:2203:7400:1a:1603:8940:93a1",
-    "2600:9000:2203:9a00:1a:1603:8940:93a1",
-    "2600:9000:2203:e400:1a:1603:8940:93a1",
-    "2600:9000:2203:e800:1a:1603:8940:93a1",
-    "2600:9000:2203:ee00:1a:1603:8940:93a1"
+    "2600:9000:2203:400:1a:1603:8940:93a1",
+    "2600:9000:2203:1000:1a:1603:8940:93a1",
+    "2600:9000:2203:3400:1a:1603:8940:93a1",
+    "2600:9000:2203:7c00:1a:1603:8940:93a1",
+    "2600:9000:2203:9600:1a:1603:8940:93a1",
+    "2600:9000:2203:bc00:1a:1603:8940:93a1",
+    "2600:9000:2203:be00:1a:1603:8940:93a1",
+    "2600:9000:2203:f400:1a:1603:8940:93a1"
    ],
    "cname": null,
    "ns": [
@@ -6524,7 +6521,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:26Z",
+   "checked": "2026-11-24T06:46:32Z",
    "title": "Pitchfork | The Most Trusted Voice in Music. | Pitchfork",
    "generator": null,
    "feeds": [
@@ -6577,7 +6574,7 @@
   }
  },
  "piwik.org": {
-  "checked": "2026-10-25T05:31:29Z",
+  "checked": "2026-11-24T06:46:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6603,9 +6600,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:29Z",
+   "checked": "2026-11-24T06:46:35Z",
    "title": "Privacy-first analytics you can trust - Analytics Platform - Matomo",
-   "generator": "WPML ver:5.1.0 stt:1,4;",
+   "generator": "WPML ver:5.2.0 stt:1,4;",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -6824,26 +6821,26 @@
   }
  },
  "plainlanguage.gov": {
-  "checked": "2026-10-25T05:31:31Z",
+  "checked": "2026-11-24T06:46:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "65.8.27.58",
-    "65.8.27.76",
-    "65.8.27.99",
-    "65.8.27.109"
+    "3.167.183.22",
+    "3.167.183.76",
+    "3.167.183.97",
+    "3.167.183.98"
    ],
    "aaaa": [
-    "2600:9000:2123:3800:6:9122:3280:93a1",
-    "2600:9000:2123:4e00:6:9122:3280:93a1",
-    "2600:9000:2123:5800:6:9122:3280:93a1",
-    "2600:9000:2123:9200:6:9122:3280:93a1",
-    "2600:9000:2123:9c00:6:9122:3280:93a1",
-    "2600:9000:2123:b600:6:9122:3280:93a1",
-    "2600:9000:2123:be00:6:9122:3280:93a1",
-    "2600:9000:2123:ea00:6:9122:3280:93a1"
+    "2600:9000:2123:3600:6:9122:3280:93a1",
+    "2600:9000:2123:5600:6:9122:3280:93a1",
+    "2600:9000:2123:7600:6:9122:3280:93a1",
+    "2600:9000:2123:8200:6:9122:3280:93a1",
+    "2600:9000:2123:9800:6:9122:3280:93a1",
+    "2600:9000:2123:c800:6:9122:3280:93a1",
+    "2600:9000:2123:cc00:6:9122:3280:93a1",
+    "2600:9000:2123:d200:6:9122:3280:93a1"
    ],
    "cname": null,
    "ns": [
@@ -6860,7 +6857,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:31Z",
+   "checked": "2026-11-24T06:46:36Z",
    "title": "Plain language guide series | Digital.gov",
    "generator": "Drupal 10 (https://www.drupal.org)",
    "feeds": [],
@@ -6946,7 +6943,7 @@
   }
  },
  "planetary.social": {
-  "checked": "2026-10-25T05:31:34Z",
+  "checked": "2026-11-24T06:46:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6969,7 +6966,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:34Z",
+   "checked": "2026-11-24T06:46:39Z",
    "title": "Planetary - Social media for humans, not algorithms.",
    "generator": "Webflow",
    "feeds": [],
@@ -7511,7 +7508,7 @@
   }
  },
  "platonphoto.com": {
-  "checked": "2026-10-25T05:31:37Z",
+  "checked": "2026-11-24T06:46:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7535,7 +7532,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:37Z",
+   "checked": "2026-11-24T06:46:42Z",
    "title": "Platon - Photographer, Storyteller, Public Speaker",
    "generator": null,
    "feeds": [],
@@ -7658,7 +7655,7 @@
   }
  },
  "play.date": {
-  "checked": "2026-10-25T05:31:38Z",
+  "checked": "2026-11-24T06:46:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7684,7 +7681,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:38Z",
+   "checked": "2026-11-24T06:46:44Z",
    "title": "Playdate",
    "generator": null,
    "feeds": [],
@@ -8018,7 +8015,7 @@
   }
  },
  "ploum.net": {
-  "checked": "2026-10-25T05:31:41Z",
+  "checked": "2026-11-24T06:46:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8043,7 +8040,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:41Z",
+   "checked": "2026-11-24T06:46:47Z",
    "title": "Ploum.net",
    "generator": null,
    "feeds": [
@@ -8152,7 +8149,7 @@
   }
  },
  "plus.codes": {
-  "checked": "2026-10-25T05:31:45Z",
+  "checked": "2026-11-24T06:46:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8184,7 +8181,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:45Z",
+   "checked": "2026-11-24T06:46:51Z",
    "title": "Redirecting...",
    "generator": null,
    "feeds": [],
@@ -9506,7 +9503,7 @@
   }
  },
  "popsci.com": {
-  "checked": "2026-10-25T05:31:49Z",
+  "checked": "2026-11-24T06:46:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9528,7 +9525,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:49Z",
+   "checked": "2026-11-24T06:46:54Z",
    "title": "Popular Science | Science and Technology Stories Since 1872",
    "generator": null,
    "feeds": [
@@ -10049,7 +10046,7 @@
   }
  },
  "powazek.com": {
-  "checked": "2026-10-25T05:31:51Z",
+  "checked": "2026-11-24T06:46:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10072,9 +10069,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:51Z",
+   "checked": "2026-11-24T06:46:57Z",
    "title": "Derek Powazek - It's pronounced poe-WAH-zek.",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -12447,7 +12444,7 @@
   }
  },
  "programmableweb.com": {
-  "checked": "2026-10-25T05:31:54Z",
+  "checked": "2026-11-24T06:47:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12478,7 +12475,7 @@
    "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
   },
   "home": {
-   "checked": "2026-10-25T05:31:54Z",
+   "checked": "2026-11-24T06:47:00Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -12894,7 +12891,7 @@
   }
  },
  "projects.propublica.org": {
-  "checked": "2026-10-25T05:31:56Z",
+  "checked": "2026-11-24T06:47:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12917,9 +12914,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:31:56Z",
+   "checked": "2026-11-24T06:47:01Z",
    "title": "News App Archives — ProPublica",
-   "generator": "WordPress 7.0.7",
+   "generator": "WordPress 7.0.9",
    "feeds": [
     {
      "type": "rss",
@@ -12989,7 +12986,7 @@
   }
  },
  "prolost.com": {
-  "checked": "2026-10-25T05:32:00Z",
+  "checked": "2026-11-24T06:47:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13011,7 +13008,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:00Z",
+   "checked": "2026-11-24T06:47:05Z",
    "title": "Prolost",
    "generator": null,
    "feeds": [
@@ -13750,7 +13747,7 @@
   }
  },
  "psyche.co": {
-  "checked": "2026-10-25T05:32:03Z",
+  "checked": "2026-11-24T06:47:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13774,7 +13771,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:03Z",
+   "checked": "2026-11-24T06:47:08Z",
    "title": "Psyche | Know Your Self",
    "generator": null,
    "feeds": [
@@ -13833,14 +13830,14 @@
   }
  },
  "psychologytoday.com": {
-  "checked": "2026-10-25T05:32:06Z",
+  "checked": "2026-11-24T06:47:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "35.169.129.115",
-    "100.29.92.208"
+    "35.171.98.94",
+    "100.31.15.145"
    ],
    "aaaa": [],
    "cname": null,
@@ -13858,7 +13855,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:06Z",
+   "checked": "2026-11-24T06:47:10Z",
    "title": "Psychology Today: Health, Help, Happiness + Find a Therapist",
    "generator": null,
    "feeds": [
@@ -15196,7 +15193,7 @@
   }
  },
  "pypi.python.org": {
-  "checked": "2026-10-25T05:32:12Z",
+  "checked": "2026-11-24T06:47:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -15223,7 +15220,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:12Z",
+   "checked": "2026-11-24T06:47:17Z",
    "title": "PyPI · The Python Package Index",
    "generator": null,
    "feeds": [
@@ -15513,7 +15510,7 @@
   }
  },
  "pythonhosted.org": {
-  "checked": "2026-10-25T05:32:15Z",
+  "checked": "2026-11-24T06:47:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -15545,7 +15542,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:32:15Z",
+   "checked": "2026-11-24T06:47:19Z",
    "title": "PyPI Package and Documentation Storage",
    "generator": null,
    "feeds": [],

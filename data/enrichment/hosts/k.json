@@ -985,7 +985,7 @@
   }
  },
  "keepachangelog.com": {
-  "checked": "2026-10-24T06:39:12Z",
+  "checked": "2026-11-24T06:39:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1017,7 +1017,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:12Z",
+   "checked": "2026-11-24T06:39:45Z",
    "title": "Keep a Changelog",
    "generator": null,
    "feeds": [],
@@ -1136,7 +1136,7 @@
   }
  },
  "kellanem.com": {
-  "checked": "2026-10-24T06:39:14Z",
+  "checked": "2026-11-24T06:39:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1163,7 +1163,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:14Z",
+   "checked": "2026-11-24T06:39:48Z",
    "title": "Kellan Elliott-McCrea | Hello, world.",
    "generator": "Jekyll v3.10.0",
    "feeds": [
@@ -2614,7 +2614,7 @@
   }
  },
  "kkovacs.eu": {
-  "checked": "2026-10-24T06:39:17Z",
+  "checked": "2026-11-24T06:39:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2640,7 +2640,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:17Z",
+   "checked": "2026-11-24T06:39:50Z",
    "title": "Kristof Kovacs ✈️",
    "generator": "Hugo 0.123.7",
    "feeds": [
@@ -2804,7 +2804,7 @@
   }
  },
  "knowyourcompany.com": {
-  "checked": "2026-10-24T06:39:20Z",
+  "checked": "2026-11-24T06:39:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2826,34 +2826,33 @@
   },
   "https": {
    "reachable": true,
-   "redirects_http": true,
-   "status": 200
+   "redirects_http": false,
+   "status": 403
   },
   "home": {
-   "checked": "2026-10-24T06:39:20Z",
-   "title": "Top 10 Online Casinos for US Players (New Brands)",
+   "checked": "2026-11-24T06:39:53Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 403"
   }
  },
  "knowyourteam.com": {
-  "checked": "2026-10-24T06:39:23Z",
+  "checked": "2026-11-24T06:39:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.26.12.65",
-    "104.26.13.65",
-    "172.67.68.87"
+    "104.21.79.160",
+    "172.67.146.148"
    ],
    "aaaa": [
-    "2606:4700:20::681a:c41",
-    "2606:4700:20::681a:d41",
-    "2606:4700:20::ac43:4457"
+    "2606:4700:3033::6815:4fa0",
+    "2606:4700:3037::ac43:9294"
    ],
    "cname": null,
    "ns": [
@@ -2868,7 +2867,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:23Z",
+   "checked": "2026-11-24T06:39:54Z",
    "title": "Canopy: CEO Coaching, Advising & Leadership Development",
    "generator": null,
    "feeds": [],
@@ -3236,7 +3235,7 @@
   }
  },
  "kotaku.com": {
-  "checked": "2026-10-24T06:39:27Z",
+  "checked": "2026-11-24T06:39:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3264,7 +3263,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:27Z",
+   "checked": "2026-11-24T06:39:57Z",
    "title": "Kotaku - Gaming Reviews, News, Tips and More.",
    "generator": null,
    "feeds": [
@@ -3427,7 +3426,7 @@
   }
  },
  "kpcb.com": {
-  "checked": "2026-10-24T06:39:29Z",
+  "checked": "2026-11-24T06:40:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3453,9 +3452,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:29Z",
+   "checked": "2026-11-24T06:40:00Z",
    "title": "Home | Kleiner Perkins",
-   "generator": "Site Kit by Google 1.175.0",
+   "generator": "Site Kit by Google 1.191.0",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -3970,7 +3969,7 @@
   }
  },
  "kungfugrippe.com": {
-  "checked": "2026-10-24T06:39:31Z",
+  "checked": "2026-11-24T06:40:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3993,7 +3992,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:31Z",
+   "checked": "2026-11-24T06:40:01Z",
    "title": "Parked",
    "generator": null,
    "feeds": [],

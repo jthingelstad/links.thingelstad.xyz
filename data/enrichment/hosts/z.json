@@ -1,6 +1,6 @@
 {
  "zachholman.com": {
-  "checked": "2026-10-25T05:39:51Z",
+  "checked": "2026-11-24T06:54:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -26,7 +26,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:39:51Z",
+   "checked": "2026-11-24T06:54:37Z",
    "title": "Zach Holman",
    "generator": null,
    "feeds": [
@@ -94,7 +94,7 @@
   }
  },
  "zachstronaut.com": {
-  "checked": "2026-10-25T05:39:54Z",
+  "checked": "2026-11-24T06:54:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -117,7 +117,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:39:54Z",
+   "checked": "2026-11-24T06:54:40Z",
    "title": "zachstronaut - creative developer zachary johnson",
    "generator": null,
    "feeds": [],
@@ -834,7 +834,7 @@
   }
  },
  "zerohedge.com": {
-  "checked": "2026-10-25T05:39:57Z",
+  "checked": "2026-11-24T06:54:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -858,7 +858,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:39:57Z",
+   "checked": "2026-11-24T06:54:43Z",
    "title": "ZeroHedge",
    "generator": null,
    "feeds": [],
@@ -868,7 +868,7 @@
   }
  },
  "zerotier.com": {
-  "checked": "2026-10-25T05:39:59Z",
+  "checked": "2026-11-24T06:54:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -892,9 +892,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:39:59Z",
+   "checked": "2026-11-24T06:54:44Z",
    "title": "ZeroTier | Software-Defined and Post-Quantum Networking",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.191.0",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -1566,7 +1566,7 @@
   }
  },
  "zurb.com": {
-  "checked": "2026-10-25T05:40:00Z",
+  "checked": "2026-11-24T06:54:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1594,7 +1594,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:40:00Z",
+   "checked": "2026-11-24T06:54:47Z",
    "title": "ZURB - Product Design Company",
    "generator": null,
    "feeds": [],

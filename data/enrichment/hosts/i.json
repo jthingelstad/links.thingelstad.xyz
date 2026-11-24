@@ -1,6 +1,6 @@
 {
  "i-programmer.info": {
-  "checked": "2026-10-24T06:31:47Z",
+  "checked": "2026-11-24T06:31:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -19,34 +19,20 @@
    "mx": true
   },
   "https": {
-   "reachable": true,
-   "redirects_http": true,
-   "status": 200
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-24T06:31:47Z",
-   "title": "i-programmer.info",
-   "generator": "I Programmer CMS",
-   "feeds": [
-    {
-     "type": "rss",
-     "url": "https://www.i-programmer.info/index.php?format=feed&type=rss",
-     "title": "RSS 2.0"
-    },
-    {
-     "type": "atom",
-     "url": "https://www.i-programmer.info/index.php?format=feed&type=atom",
-     "title": "Atom 1.0"
-    },
-    {
-     "type": "rss",
-     "url": "https://www.i-programmer.info/index.php?option=com_ninjarsssyndicator&feed_id=3&format=raw",
-     "title": "I Programmer - full contents"
-    }
-   ],
+   "checked": "2026-11-24T06:31:48Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "timeout"
   }
  },
  "ia.net": {
@@ -286,7 +272,7 @@
   }
  },
  "ianbicking.org": {
-  "checked": "2026-10-24T06:31:49Z",
+  "checked": "2026-11-24T06:32:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -312,7 +298,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:31:49Z",
+   "checked": "2026-11-24T06:32:20Z",
    "title": "Ian Bicking: a home page",
    "generator": null,
    "feeds": [
@@ -601,7 +587,7 @@
   }
  },
  "iconnectdots.com": {
-  "checked": "2026-10-24T06:31:51Z",
+  "checked": "2026-11-24T06:32:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -624,7 +610,7 @@
    "error": "network: Network is unreachable"
   },
   "home": {
-   "checked": "2026-10-24T06:31:51Z",
+   "checked": "2026-11-24T06:32:22Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -849,18 +835,24 @@
   }
  },
  "ideas.ted.com": {
-  "checked": "2026-10-24T06:32:03Z",
+  "checked": "2026-11-24T06:32:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "192.0.66.44"
+    "151.101.2.132",
+    "151.101.66.132",
+    "151.101.130.132",
+    "151.101.194.132"
    ],
    "aaaa": [
-    "2a04:fa87:fffd::c000:422c"
+    "2a04:4e42::644",
+    "2a04:4e42:200::644",
+    "2a04:4e42:400::644",
+    "2a04:4e42:600::644"
    ],
-   "cname": "ted.go-vip.net",
+   "cname": "dualstack.j.sni.global.fastly.net",
    "ns": [],
    "mx": false
   },
@@ -870,19 +862,19 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:32:03Z",
-   "title": null,
-   "generator": "WordPress 7.1.3",
+   "checked": "2026-11-24T06:32:34Z",
+   "title": "ideas.ted.com | Ideas change everything",
+   "generator": null,
    "feeds": [
     {
      "type": "rss",
-     "url": "https://ideas.ted.com/feed/",
+     "url": "https://www.ted.com/ideas/feed/",
      "title": "ideas.ted.com » Feed"
     },
     {
-     "type": "rss",
-     "url": "https://ideas.ted.com/comments/feed/",
-     "title": "ideas.ted.com » Comments Feed"
+     "type": "atom",
+     "url": "https://www.ted.com/ideas/feed/atom/",
+     "title": "ideas.ted.com » Atom Feed"
     }
    ],
    "hcard": false,
@@ -1127,7 +1119,7 @@
   }
  },
  "ietf.org": {
-  "checked": "2026-10-24T06:32:06Z",
+  "checked": "2026-11-24T06:32:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1153,7 +1145,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:32:06Z",
+   "checked": "2026-11-24T06:32:37Z",
    "title": "IETF | Internet Engineering Task Force",
    "generator": null,
    "feeds": [],
@@ -2055,13 +2047,13 @@
   }
  },
  "imperialviolet.org": {
-  "checked": "2026-10-24T06:32:07Z",
+  "checked": "2026-11-24T06:32:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "164.90.146.65"
+    "161.35.100.125"
    ],
    "aaaa": [],
    "cname": null,
@@ -2077,7 +2069,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:32:07Z",
+   "checked": "2026-11-24T06:32:38Z",
    "title": "ImperialViolet - ImperialViolet.org",
    "generator": null,
    "feeds": [
@@ -2375,7 +2367,7 @@
   }
  },
  "incisive.nu": {
-  "checked": "2026-10-24T06:32:09Z",
+  "checked": "2026-11-24T06:32:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2397,9 +2389,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:32:09Z",
+   "checked": "2026-11-24T06:32:40Z",
    "title": "Incisive.nu",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -2671,7 +2663,7 @@
   }
  },
  "independent.co.uk": {
-  "checked": "2026-10-24T06:32:11Z",
+  "checked": "2026-11-24T06:32:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2696,7 +2688,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:32:11Z",
+   "checked": "2026-11-24T06:32:41Z",
    "title": "The Independent | Latest news and features from US, UK and worldwide",
    "generator": null,
    "feeds": [
@@ -2712,7 +2704,7 @@
   }
  },
  "indiegogo.com": {
-  "checked": "2026-10-24T06:32:15Z",
+  "checked": "2026-11-24T06:32:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2738,7 +2730,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:32:15Z",
+   "checked": "2026-11-24T06:32:45Z",
    "title": "Indiegogo",
    "generator": null,
    "feeds": [],
@@ -3022,7 +3014,7 @@
   }
  },
  "inflecthealth.medium.com": {
-  "checked": "2026-10-24T06:32:19Z",
+  "checked": "2026-11-24T06:32:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3045,7 +3037,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:32:19Z",
+   "checked": "2026-11-24T06:32:50Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -3202,7 +3194,7 @@
   }
  },
  "info.org.il": {
-  "checked": "2026-10-24T06:32:24Z",
+  "checked": "2026-11-24T06:32:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3225,7 +3217,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:32:24Z",
+   "checked": "2026-11-24T06:32:59Z",
    "title": "חנן כהן / מידע דיגיטאלי",
    "generator": null,
    "feeds": [],
@@ -3325,7 +3317,7 @@
   }
  },
  "informationarbitrage.com": {
-  "checked": "2026-10-24T06:32:26Z",
+  "checked": "2026-11-24T06:33:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3347,7 +3339,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-24T06:32:26Z",
+   "checked": "2026-11-24T06:33:00Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4318,7 +4310,7 @@
   }
  },
  "insidetv.ew.com": {
-  "checked": "2026-10-24T06:32:29Z",
+  "checked": "2026-11-24T06:33:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4337,7 +4329,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-24T06:32:29Z",
+   "checked": "2026-11-24T06:33:03Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4424,7 +4416,7 @@
   }
  },
  "insights.stackoverflow.com": {
-  "checked": "2026-10-24T06:32:29Z",
+  "checked": "2026-11-24T06:33:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4443,7 +4435,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:32:29Z",
+   "checked": "2026-11-24T06:33:03Z",
    "title": "Stack Overflow Developer Survey",
    "generator": null,
    "feeds": [],
@@ -5227,7 +5219,7 @@
   }
  },
  "internetretailer.com": {
-  "checked": "2026-10-24T06:32:31Z",
+  "checked": "2026-11-24T06:33:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5250,7 +5242,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:32:31Z",
+   "checked": "2026-11-24T06:33:06Z",
    "title": "Retail News, Ecommerce Market Research I Digital Commerce 360",
    "generator": null,
    "feeds": [],
@@ -5532,7 +5524,7 @@
   }
  },
  "inventwithpython.com": {
-  "checked": "2026-10-24T06:32:33Z",
+  "checked": "2026-11-24T06:33:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5558,7 +5550,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:32:33Z",
+   "checked": "2026-11-24T06:33:07Z",
    "title": "Learn to program. For free. - Invent with Python",
    "generator": "Pelican (VoidyBootstrap theme)",
    "feeds": [],
@@ -5804,7 +5796,7 @@
   }
  },
  "io9.com": {
-  "checked": "2026-10-24T06:32:36Z",
+  "checked": "2026-11-24T06:33:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5830,7 +5822,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:32:36Z",
+   "checked": "2026-11-24T06:33:10Z",
    "title": "io9 | We Come From the Future",
    "generator": null,
    "feeds": [
@@ -6010,7 +6002,7 @@
   }
  },
  "ippawards.com": {
-  "checked": "2026-10-24T06:32:38Z",
+  "checked": "2026-11-24T06:33:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6036,7 +6028,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:32:38Z",
+   "checked": "2026-11-24T06:33:12Z",
    "title": "IPPAWARDS",
    "generator": null,
    "feeds": [],
@@ -7148,7 +7140,7 @@
   }
  },
  "itsyourturnblog.com": {
-  "checked": "2026-10-24T06:32:41Z",
+  "checked": "2026-11-24T06:33:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7182,7 +7174,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-24T06:32:41Z",
+   "checked": "2026-11-24T06:33:15Z",
    "title": null,
    "generator": null,
    "feeds": [],

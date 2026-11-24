@@ -1180,7 +1180,7 @@
   }
  },
  "hardmac.com": {
-  "checked": "2026-10-24T06:30:09Z",
+  "checked": "2026-11-24T06:30:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1203,7 +1203,7 @@
    "error": "connection reset"
   },
   "home": {
-   "checked": "2026-10-24T06:30:09Z",
+   "checked": "2026-11-24T06:30:13Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2771,7 +2771,7 @@
   }
  },
  "help.ubuntu.com": {
-  "checked": "2026-10-24T06:30:12Z",
+  "checked": "2026-11-24T06:30:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2798,7 +2798,7 @@
    "status": 503
   },
   "home": {
-   "checked": "2026-10-24T06:30:12Z",
+   "checked": "2026-11-24T06:30:16Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2840,7 +2840,7 @@
   }
  },
  "henrikkarlsson.xyz": {
-  "checked": "2026-10-24T06:30:36Z",
+  "checked": "2026-11-24T06:30:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2866,7 +2866,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:30:36Z",
+   "checked": "2026-11-24T06:30:40Z",
    "title": "Escaping Flatland | Henrik Karlsson | Substack",
    "generator": null,
    "feeds": [
@@ -3146,7 +3146,7 @@
   }
  },
  "hexmode.com": {
-  "checked": "2026-10-24T06:30:38Z",
+  "checked": "2026-11-24T06:30:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3170,7 +3170,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:30:38Z",
+   "checked": "2026-11-24T06:30:41Z",
    "title": "Hexmode's Weblog – MediaWiki stuff",
    "generator": null,
    "feeds": [
@@ -3230,7 +3230,7 @@
   }
  },
  "heydingus.net": {
-  "checked": "2026-10-24T06:30:40Z",
+  "checked": "2026-11-24T06:30:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3252,7 +3252,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:30:40Z",
+   "checked": "2026-11-24T06:30:44Z",
    "title": "HeyDingus",
    "generator": null,
    "feeds": [
@@ -3262,7 +3262,7 @@
      "title": "RSS Feed for HeyDingus"
     }
    ],
-   "hcard": true,
+   "hcard": false,
    "rel_me": [
     "https://mas.to/@HeyDingus",
     "https://micro.blog/jarrod",
@@ -3745,7 +3745,7 @@
   }
  },
  "hillelwayne.com": {
-  "checked": "2026-10-24T06:30:44Z",
+  "checked": "2026-11-24T06:30:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3757,14 +3757,14 @@
     "99.84.203.84"
    ],
    "aaaa": [
-    "2600:9000:20c5:2e00:11:cd0:93c0:93a1",
-    "2600:9000:20c5:3600:11:cd0:93c0:93a1",
-    "2600:9000:20c5:4e00:11:cd0:93c0:93a1",
-    "2600:9000:20c5:8200:11:cd0:93c0:93a1",
-    "2600:9000:20c5:9a00:11:cd0:93c0:93a1",
-    "2600:9000:20c5:ce00:11:cd0:93c0:93a1",
-    "2600:9000:20c5:d400:11:cd0:93c0:93a1",
-    "2600:9000:20c5:f000:11:cd0:93c0:93a1"
+    "2600:9000:20c5:3c00:11:cd0:93c0:93a1",
+    "2600:9000:20c5:4800:11:cd0:93c0:93a1",
+    "2600:9000:20c5:5800:11:cd0:93c0:93a1",
+    "2600:9000:20c5:7600:11:cd0:93c0:93a1",
+    "2600:9000:20c5:a400:11:cd0:93c0:93a1",
+    "2600:9000:20c5:bc00:11:cd0:93c0:93a1",
+    "2600:9000:20c5:c800:11:cd0:93c0:93a1",
+    "2600:9000:20c5:ec00:11:cd0:93c0:93a1"
    ],
    "cname": null,
    "ns": [
@@ -3781,7 +3781,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:30:44Z",
+   "checked": "2026-11-24T06:30:46Z",
    "title": "Hillel Wayne",
    "generator": "Hugo 0.37.1",
    "feeds": [
@@ -4851,7 +4851,7 @@
   }
  },
  "homepage.mac.com": {
-  "checked": "2026-10-24T06:30:46Z",
+  "checked": "2026-11-24T06:30:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4871,7 +4871,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-24T06:30:46Z",
+   "checked": "2026-11-24T06:30:49Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5250,7 +5250,7 @@
   }
  },
  "hostingfu.com": {
-  "checked": "2026-10-24T06:31:17Z",
+  "checked": "2026-11-24T06:31:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5273,7 +5273,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:31:17Z",
+   "checked": "2026-11-24T06:31:20Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5536,7 +5536,7 @@
   }
  },
  "howsoftwareisbuilt.com": {
-  "checked": "2026-10-24T06:31:19Z",
+  "checked": "2026-11-24T06:31:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5559,7 +5559,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-24T06:31:19Z",
+   "checked": "2026-11-24T06:31:22Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6539,7 +6539,7 @@
   }
  },
  "huffpost.com": {
-  "checked": "2026-10-24T06:31:37Z",
+  "checked": "2026-11-24T06:31:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6566,7 +6566,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:31:37Z",
+   "checked": "2026-11-24T06:31:39Z",
    "title": "HuffPost - Breaking News, Politics, Entertainment & Opinion",
    "generator": null,
    "feeds": [],
@@ -6628,7 +6628,7 @@
   }
  },
  "hughrundle.net": {
-  "checked": "2026-10-24T06:31:38Z",
+  "checked": "2026-11-24T06:31:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6651,7 +6651,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:31:38Z",
+   "checked": "2026-11-24T06:31:41Z",
    "title": "Information Flaneur",
    "generator": "Zola",
    "feeds": [
@@ -7103,36 +7103,37 @@
   }
  },
  "humidityandhope.com": {
-  "checked": "2026-10-24T06:31:43Z",
+  "checked": "2026-11-24T06:31:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "219.94.250.69"
+    "185.53.179.109"
    ],
    "aaaa": [],
    "cname": null,
    "ns": [
-    "dns01.muumuu-domain.com",
-    "dns02.muumuu-domain.com"
+    "ns1.muumuu-domain.com",
+    "ns2.muumuu-domain.com"
    ],
    "mx": false
   },
   "https": {
-   "reachable": true,
+   "reachable": false,
    "redirects_http": false,
-   "status": 403
+   "status": null,
+   "error": "tls: Hostname mismatch, certificate is not valid for 'humidityandhope.com'"
   },
   "home": {
-   "checked": "2026-10-24T06:31:43Z",
+   "checked": "2026-11-24T06:31:46Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "HTTP 403"
+   "error": "tls: Hostname mismatch, certificate is not valid for 'humidityandhope.com'"
   }
  },
  "hungryflix.com": {

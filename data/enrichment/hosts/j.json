@@ -1672,20 +1672,18 @@
   }
  },
  "jaxenter.com": {
-  "checked": "2026-10-24T06:38:43Z",
+  "checked": "2026-11-24T06:39:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.26.8.7",
-    "104.26.9.7",
-    "172.67.68.10"
+    "104.21.26.89",
+    "172.67.135.204"
    ],
    "aaaa": [
-    "2606:4700:20::681a:807",
-    "2606:4700:20::681a:907",
-    "2606:4700:20::ac43:440a"
+    "2606:4700:3035::ac43:87cc",
+    "2606:4700:3036::6815:1a59"
    ],
    "cname": null,
    "ns": [
@@ -1700,9 +1698,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:38:43Z",
+   "checked": "2026-11-24T06:39:16Z",
    "title": "blog - devmio - Software Know-How",
-   "generator": "WordPress 7.1.2",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -1916,7 +1914,7 @@
   }
  },
  "jeffgeerling.com": {
-  "checked": "2026-10-24T06:38:45Z",
+  "checked": "2026-11-24T06:39:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1942,7 +1940,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:38:45Z",
+   "checked": "2026-11-24T06:39:19Z",
    "title": "Jeff Geerling | Home",
    "generator": null,
    "feeds": [
@@ -2338,7 +2336,7 @@
   }
  },
  "jeremy.zawodny.com": {
-  "checked": "2026-10-24T06:38:47Z",
+  "checked": "2026-11-24T06:39:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2357,7 +2355,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:38:47Z",
+   "checked": "2026-11-24T06:39:21Z",
    "title": "Jeremy D. Zawodny - Home Page",
    "generator": null,
    "feeds": [],
@@ -2817,7 +2815,7 @@
   }
  },
  "jezebel.com": {
-  "checked": "2026-10-24T06:38:48Z",
+  "checked": "2026-11-24T06:39:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2843,7 +2841,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:38:48Z",
+   "checked": "2026-11-24T06:39:22Z",
    "title": "Home",
    "generator": null,
    "feeds": [
@@ -3035,7 +3033,7 @@
   }
  },
  "jimbernard.net": {
-  "checked": "2026-10-24T06:38:50Z",
+  "checked": "2026-11-24T06:39:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3057,7 +3055,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:38:50Z",
+   "checked": "2026-11-24T06:39:24Z",
    "title": "Jim Bernard",
    "generator": "Hugo 0.91.2",
    "feeds": [
@@ -5840,7 +5838,7 @@
   }
  },
  "journals.plos.org": {
-  "checked": "2026-10-24T06:38:52Z",
+  "checked": "2026-11-24T06:39:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5859,9 +5857,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:38:52Z",
+   "checked": "2026-11-24T06:39:26Z",
    "title": "Our journal portfolio - PLOS",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -7371,7 +7369,7 @@
   }
  },
  "julian.com": {
-  "checked": "2026-10-24T06:38:57Z",
+  "checked": "2026-11-24T06:39:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7397,7 +7395,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:38:57Z",
+   "checked": "2026-11-24T06:39:30Z",
    "title": "Julian Shapiro",
    "generator": null,
    "feeds": [],
@@ -7407,7 +7405,7 @@
   }
  },
  "julian.digital": {
-  "checked": "2026-10-24T06:39:00Z",
+  "checked": "2026-11-24T06:39:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7429,9 +7427,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:00Z",
+   "checked": "2026-11-24T06:39:33Z",
    "title": "julian.digital",
-   "generator": "WordPress 6.7.10",
+   "generator": "WordPress 6.7.12",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -8005,7 +8003,7 @@
   }
  },
  "justgetflux.com": {
-  "checked": "2026-10-24T06:39:04Z",
+  "checked": "2026-11-24T06:39:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8029,7 +8027,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:04Z",
+   "checked": "2026-11-24T06:39:38Z",
    "title": "f.lux: software to make your life better",
    "generator": null,
    "feeds": [],
@@ -8039,7 +8037,7 @@
   }
  },
  "justice.gov": {
-  "checked": "2026-10-24T06:39:07Z",
+  "checked": "2026-11-24T06:39:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8069,7 +8067,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:07Z",
+   "checked": "2026-11-24T06:39:41Z",
    "title": "Department of Justice | Homepage | United States Department of Justice",
    "generator": "Drupal 11 (https://www.drupal.org)",
    "feeds": [],
@@ -8666,7 +8664,7 @@
   }
  },
  "jwz.org": {
-  "checked": "2026-10-24T06:39:09Z",
+  "checked": "2026-11-24T06:39:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8688,7 +8686,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:09Z",
+   "checked": "2026-11-24T06:39:42Z",
    "title": "jwz.org",
    "generator": null,
    "feeds": [],

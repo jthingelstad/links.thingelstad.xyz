@@ -1,6 +1,6 @@
 {
  "90percentofeverything.com": {
-  "checked": "2026-10-25T05:42:13Z",
+  "checked": "2026-11-24T06:56:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -26,7 +26,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for '90percentofeverything.com'"
   },
   "home": {
-   "checked": "2026-10-25T05:42:13Z",
+   "checked": "2026-11-24T06:56:54Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -37,7 +37,7 @@
   }
  },
  "99daysoffreedom.com": {
-  "checked": "2026-10-25T05:42:14Z",
+  "checked": "2026-11-24T06:56:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -63,7 +63,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:42:14Z",
+   "checked": "2026-11-24T06:56:56Z",
    "title": "Pinco rəsmi sayt: 10 000 AZN bonus, giriş və qeydiyyat Pinco AZ",
    "generator": null,
    "feeds": [
@@ -79,20 +79,18 @@
   }
  },
  "99percentinvisible.org": {
-  "checked": "2026-10-25T05:42:19Z",
+  "checked": "2026-11-24T06:57:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.26.14.9",
-    "104.26.15.9",
-    "172.67.72.237"
+    "104.21.57.43",
+    "172.67.189.32"
    ],
    "aaaa": [
-    "2606:4700:20::681a:e09",
-    "2606:4700:20::681a:f09",
-    "2606:4700:20::ac43:48ed"
+    "2606:4700:3030::6815:392b",
+    "2606:4700:3036::ac43:bd20"
    ],
    "cname": null,
    "ns": [
@@ -107,9 +105,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:42:19Z",
+   "checked": "2026-11-24T06:57:06Z",
    "title": "99% Invisible",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -117,7 +115,7 @@
   }
  },
  "99u.com": {
-  "checked": "2026-10-25T05:42:22Z",
+  "checked": "2026-11-24T06:57:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -141,26 +139,21 @@
   "https": {
    "reachable": true,
    "redirects_http": true,
-   "status": 200
+   "status": 403
   },
   "home": {
-   "checked": "2026-10-25T05:42:22Z",
-   "title": "Blog :: Behance",
+   "checked": "2026-11-24T06:57:08Z",
+   "title": null,
    "generator": null,
-   "feeds": [
-    {
-     "type": "rss",
-     "url": "http://feeds.feedburner.com/behance/vorr",
-     "title": "RSS"
-    }
-   ],
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 403"
   }
  },
  "9elements.com": {
-  "checked": "2026-10-25T05:42:24Z",
+  "checked": "2026-11-24T06:57:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -184,7 +177,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:42:24Z",
+   "checked": "2026-11-24T06:57:10Z",
    "title": "Home - 9elements",
    "generator": null,
    "feeds": [
@@ -202,7 +195,7 @@
   }
  },
  "9news.com": {
-  "checked": "2026-10-25T05:42:27Z",
+  "checked": "2026-11-24T06:57:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -227,7 +220,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:42:27Z",
+   "checked": "2026-11-24T06:57:13Z",
    "title": "Denver's Leading Local News: Weather, Traffic, Sports and more | Denver, Colorado | 9news.com",
    "generator": null,
    "feeds": [
@@ -243,7 +236,7 @@
   }
  },
  "9rules.com": {
-  "checked": "2026-10-25T05:42:29Z",
+  "checked": "2026-11-24T06:57:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -270,7 +263,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-25T05:42:29Z",
+   "checked": "2026-11-24T06:57:15Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -281,7 +274,7 @@
   }
  },
  "9to5google.com": {
-  "checked": "2026-10-25T05:43:00Z",
+  "checked": "2026-11-24T06:57:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -304,7 +297,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:43:00Z",
+   "checked": "2026-11-24T06:57:46Z",
    "title": "9to5Google - Google news, Pixel, Android, Gemini, Home, more",
    "generator": null,
    "feeds": [

@@ -1,6 +1,6 @@
 {
  "t37.net": {
-  "checked": "2026-10-25T05:35:39Z",
+  "checked": "2026-11-24T06:50:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -25,7 +25,7 @@
    "error": "network: No route to host"
   },
   "home": {
-   "checked": "2026-10-25T05:35:39Z",
+   "checked": "2026-11-24T06:50:39Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2213,7 +2213,7 @@
   }
  },
  "tech.wayfair.com": {
-  "checked": "2026-10-25T05:35:41Z",
+  "checked": "2026-11-24T06:50:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2238,7 +2238,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:41Z",
+   "checked": "2026-11-24T06:50:40Z",
    "title": "About Wayfair | Wayfair Tech Blog",
    "generator": null,
    "feeds": [
@@ -2392,7 +2392,7 @@
   }
  },
  "techcommunity.microsoft.com": {
-  "checked": "2026-10-25T05:35:42Z",
+  "checked": "2026-11-24T06:50:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2413,7 +2413,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:42Z",
+   "checked": "2026-11-24T06:50:42Z",
    "title": "Home | Microsoft Community Hub",
    "generator": null,
    "feeds": [],
@@ -2656,7 +2656,7 @@
   }
  },
  "techmeme.com": {
-  "checked": "2026-10-25T05:35:55Z",
+  "checked": "2026-11-24T06:50:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2682,7 +2682,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:55Z",
+   "checked": "2026-11-24T06:50:53Z",
    "title": "Techmeme",
    "generator": null,
    "feeds": [
@@ -3037,7 +3037,7 @@
   }
  },
  "techradar.com": {
-  "checked": "2026-10-25T05:35:57Z",
+  "checked": "2026-11-24T06:50:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3062,7 +3062,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:57Z",
+   "checked": "2026-11-24T06:50:55Z",
    "title": "TechRadar | the technology experts",
    "generator": null,
    "feeds": [
@@ -3490,7 +3490,7 @@
   }
  },
  "teddziuba.com": {
-  "checked": "2026-10-25T05:35:58Z",
+  "checked": "2026-11-24T06:50:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3511,7 +3511,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-25T05:35:58Z",
+   "checked": "2026-11-24T06:50:57Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3917,7 +3917,7 @@
   }
  },
  "tent.io": {
-  "checked": "2026-10-25T05:35:58Z",
+  "checked": "2026-11-24T06:50:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3940,7 +3940,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-25T05:35:58Z",
+   "checked": "2026-11-24T06:50:57Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4379,7 +4379,7 @@
   }
  },
  "teslamotors.com": {
-  "checked": "2026-10-25T05:35:59Z",
+  "checked": "2026-11-24T06:50:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4410,7 +4410,7 @@
    "error": "connection refused"
   },
   "home": {
-   "checked": "2026-10-25T05:35:59Z",
+   "checked": "2026-11-24T06:50:58Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4529,7 +4529,7 @@
   }
  },
  "tex.stackexchange.com": {
-  "checked": "2026-10-25T05:36:02Z",
+  "checked": "2026-11-24T06:51:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4548,7 +4548,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:02Z",
+   "checked": "2026-11-24T06:51:01Z",
    "title": "TeX - LaTeX Stack Exchange",
    "generator": null,
    "feeds": [
@@ -4564,7 +4564,7 @@
   }
  },
  "texasmonthly.com": {
-  "checked": "2026-10-25T05:36:05Z",
+  "checked": "2026-11-24T06:51:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4587,7 +4587,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:05Z",
+   "checked": "2026-11-24T06:51:03Z",
    "title": "Texas Monthly – The National Magazine of Texas",
    "generator": null,
    "feeds": [],
@@ -6000,7 +6000,7 @@
   }
  },
  "theblock.co": {
-  "checked": "2026-10-25T05:36:08Z",
+  "checked": "2026-11-24T06:51:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6026,7 +6026,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:08Z",
+   "checked": "2026-11-24T06:51:06Z",
    "title": "The Block: Bitcoin, Ethereum & Crypto News | Live Prices, Data & Indices",
    "generator": null,
    "feeds": [
@@ -6667,7 +6667,7 @@
   }
  },
  "thedailybeast.com": {
-  "checked": "2026-10-25T05:36:10Z",
+  "checked": "2026-11-24T06:51:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6693,7 +6693,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:10Z",
+   "checked": "2026-11-24T06:51:09Z",
    "title": "The Daily Beast: The Latest in Politics, Media & Entertainment News",
    "generator": null,
    "feeds": [],
@@ -6703,7 +6703,7 @@
   }
  },
  "thedailyshow.cc.com": {
-  "checked": "2026-10-25T05:36:12Z",
+  "checked": "2026-11-24T06:51:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6728,7 +6728,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:12Z",
+   "checked": "2026-11-24T06:51:10Z",
    "title": "Comedy Central The Daily Show Fan Page",
    "generator": null,
    "feeds": [],
@@ -6823,7 +6823,7 @@
   }
  },
  "thediff.co": {
-  "checked": "2026-10-25T05:36:16Z",
+  "checked": "2026-11-24T06:51:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6845,9 +6845,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:16Z",
+   "checked": "2026-11-24T06:51:15Z",
    "title": "The Diff - Inflections in finance and tech",
-   "generator": "Ghost 6.73",
+   "generator": "Ghost 6.79",
    "feeds": [
     {
      "type": "rss",
@@ -7551,7 +7551,7 @@
   }
  },
  "thehill.com": {
-  "checked": "2026-10-25T05:36:19Z",
+  "checked": "2026-11-24T06:51:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7576,9 +7576,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:19Z",
+   "checked": "2026-11-24T06:51:19Z",
    "title": "The Hill - covering Congress, Politics, Political Campaigns and Capitol Hill",
-   "generator": "WordPress 6.9.10",
+   "generator": "WordPress 6.9.12",
    "feeds": [
     {
      "type": "rss",
@@ -7597,7 +7597,7 @@
   }
  },
  "thehistoryoftheweb.com": {
-  "checked": "2026-10-25T05:36:24Z",
+  "checked": "2026-11-24T06:51:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7619,9 +7619,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:24Z",
+   "checked": "2026-11-24T06:51:21Z",
    "title": "Unraveling the Web's Story - The History of the Web",
-   "generator": "WordPress 6.8.11",
+   "generator": "WordPress 6.8.13",
    "feeds": [],
    "hcard": false,
    "rel_me": [
@@ -7666,7 +7666,7 @@
   }
  },
  "thehustle.co": {
-  "checked": "2026-10-25T05:36:28Z",
+  "checked": "2026-11-24T06:51:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7692,7 +7692,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:28Z",
+   "checked": "2026-11-24T06:51:25Z",
    "title": "Subscribe to The Hustle Daily Newsletter - The Hustle",
    "generator": "HubSpot",
    "feeds": [],
@@ -8388,18 +8388,18 @@
   }
  },
  "themarkup.org": {
-  "checked": "2026-10-25T05:36:31Z",
+  "checked": "2026-11-24T06:51:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "18.210.61.95",
-    "34.206.117.241",
-    "34.206.240.118",
-    "54.175.10.39",
-    "98.95.77.77",
-    "184.196.53.57"
+    "34.195.53.136",
+    "34.198.43.126",
+    "34.237.188.230",
+    "35.153.218.127",
+    "35.171.175.146",
+    "54.221.210.19"
    ],
    "aaaa": [],
    "cname": null,
@@ -8417,7 +8417,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:31Z",
+   "checked": "2026-11-24T06:51:28Z",
    "title": "The Markup",
    "generator": null,
    "feeds": [
@@ -8547,7 +8547,7 @@
   }
  },
  "themplsegotist.com": {
-  "checked": "2026-10-25T05:36:35Z",
+  "checked": "2026-11-24T06:51:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8573,9 +8573,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:35Z",
+   "checked": "2026-11-24T06:51:31Z",
    "title": "The MPLS Egotist - The MPLS Egotist",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -9020,7 +9020,7 @@
   }
  },
  "theomnishow.omnigroup.com": {
-  "checked": "2026-10-25T05:36:37Z",
+  "checked": "2026-11-24T06:51:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9039,7 +9039,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:37Z",
+   "checked": "2026-11-24T06:51:33Z",
    "title": "The Omni Show",
    "generator": null,
    "feeds": [],
@@ -10115,7 +10115,7 @@
   }
  },
  "thesample.ai": {
-  "checked": "2026-10-25T05:36:40Z",
+  "checked": "2026-11-24T06:51:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10138,7 +10138,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:40Z",
+   "checked": "2026-11-24T06:51:37Z",
    "title": "Yakread",
    "generator": null,
    "feeds": [],
@@ -11864,7 +11864,7 @@
   }
  },
  "thisamericanlife.org": {
-  "checked": "2026-10-25T05:36:44Z",
+  "checked": "2026-11-24T06:51:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11890,7 +11890,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:44Z",
+   "checked": "2026-11-24T06:51:40Z",
    "title": "This American Life",
    "generator": null,
    "feeds": [
@@ -11906,7 +11906,7 @@
   }
  },
  "thisiscolossal.com": {
-  "checked": "2026-10-25T05:36:46Z",
+  "checked": "2026-11-24T06:51:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11934,9 +11934,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:46Z",
+   "checked": "2026-11-24T06:51:42Z",
    "title": "Colossal: Explore contemporary art, craft, photography, and the natural world.",
-   "generator": "WordPress 7.1",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -12207,7 +12207,7 @@
   }
  },
  "thomashawk.com": {
-  "checked": "2026-10-25T05:36:49Z",
+  "checked": "2026-11-24T06:51:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12231,7 +12231,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:49Z",
+   "checked": "2026-11-24T06:51:45Z",
    "title": "Thomas Hawk Digital Connection",
    "generator": null,
    "feeds": [
@@ -14059,7 +14059,7 @@
   }
  },
  "timesofindia.indiatimes.com": {
-  "checked": "2026-10-25T05:36:51Z",
+  "checked": "2026-11-24T06:51:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14082,7 +14082,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:51Z",
+   "checked": "2026-11-24T06:51:47Z",
    "title": "US News: US News, Top News in India, US election news, Business news, Sports & International News | Times of India",
    "generator": null,
    "feeds": [],
@@ -15141,14 +15141,14 @@
   }
  },
  "tldraw.com": {
-  "checked": "2026-10-25T05:36:56Z",
+  "checked": "2026-11-24T06:51:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "64.29.17.66",
-    "216.198.79.66"
+    "216.150.1.65",
+    "216.150.16.193"
    ],
    "aaaa": [],
    "cname": null,
@@ -15164,7 +15164,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:56Z",
+   "checked": "2026-11-24T06:51:52Z",
    "title": "tldraw • very good free whiteboard",
    "generator": null,
    "feeds": [],
@@ -15315,7 +15315,7 @@
   }
  },
  "tobyord.com": {
-  "checked": "2026-10-25T05:36:59Z",
+  "checked": "2026-11-24T06:51:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -15343,7 +15343,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:36:59Z",
+   "checked": "2026-11-24T06:51:55Z",
    "title": "Toby Ord",
    "generator": null,
    "feeds": [],
@@ -15501,7 +15501,7 @@
   }
  },
  "todogroup.org": {
-  "checked": "2026-10-25T05:37:01Z",
+  "checked": "2026-11-24T06:51:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -15511,8 +15511,8 @@
     "15.197.167.90"
    ],
    "aaaa": [
-    "2600:1f16:1a4:a001::1f5",
-    "2600:1f16:1a4:a001::1f6"
+    "2600:1f18:16e:df01::1f5",
+    "2600:1f18:16e:df01::1f6"
    ],
    "cname": null,
    "ns": [
@@ -15529,7 +15529,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:37:01Z",
+   "checked": "2026-11-24T06:51:57Z",
    "title": "TODO Group // Talk openly, develop openly",
    "generator": "Hugo 0.126.1",
    "feeds": [],
@@ -16178,7 +16178,7 @@
   }
  },
  "tomforb.es": {
-  "checked": "2026-10-25T05:37:04Z",
+  "checked": "2026-11-24T06:52:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16204,7 +16204,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:37:04Z",
+   "checked": "2026-11-24T06:52:00Z",
    "title": "Tom Forbes",
    "generator": "Astro v4.16.6",
    "feeds": [
@@ -16327,7 +16327,7 @@
   }
  },
  "tompeters.com": {
-  "checked": "2026-10-25T05:37:07Z",
+  "checked": "2026-11-24T06:52:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16353,7 +16353,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:37:07Z",
+   "checked": "2026-11-24T06:52:02Z",
    "title": "Home - Tom Peters",
    "generator": null,
    "feeds": [],
@@ -16532,7 +16532,7 @@
   }
  },
  "tomtunguz.com": {
-  "checked": "2026-10-25T05:37:10Z",
+  "checked": "2026-11-24T06:52:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16556,7 +16556,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:37:10Z",
+   "checked": "2026-11-24T06:52:07Z",
    "title": "Tomasz Tunguz",
    "generator": "Hugo 0.167.0",
    "feeds": [],
@@ -17831,7 +17831,7 @@
   }
  },
  "tracydurnell.com": {
-  "checked": "2026-10-25T05:37:13Z",
+  "checked": "2026-11-24T06:52:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -17853,7 +17853,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:37:13Z",
+   "checked": "2026-11-24T06:52:10Z",
    "title": "Tracy Durnell's Mind Garden – Thinking and Learning In Public",
    "generator": null,
    "feeds": [
@@ -18196,7 +18196,7 @@
   }
  },
  "tratt.net": {
-  "checked": "2026-10-25T05:37:16Z",
+  "checked": "2026-11-24T06:52:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -18220,7 +18220,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:37:16Z",
+   "checked": "2026-11-24T06:52:13Z",
    "title": "tratt.net",
    "generator": null,
    "feeds": [],
@@ -18677,7 +18677,7 @@
   }
  },
  "tripmode.ch": {
-  "checked": "2026-10-25T05:37:19Z",
+  "checked": "2026-11-24T06:52:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -18699,7 +18699,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:37:19Z",
+   "checked": "2026-11-24T06:52:16Z",
    "title": "TripMode - Save data, browse faster",
    "generator": null,
    "feeds": [],
@@ -18906,7 +18906,7 @@
   }
  },
  "truewealth.substack.com": {
-  "checked": "2026-10-25T05:37:22Z",
+  "checked": "2026-11-24T06:52:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -18929,7 +18929,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:37:22Z",
+   "checked": "2026-11-24T06:52:19Z",
    "title": "True Wealth | Gordo Byrn | Substack",
    "generator": null,
    "feeds": [
@@ -20788,7 +20788,7 @@
   }
  },
  "txt.fyi": {
-  "checked": "2026-10-25T05:37:24Z",
+  "checked": "2026-11-24T06:52:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -20814,7 +20814,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:37:24Z",
+   "checked": "2026-11-24T06:52:22Z",
    "title": "txt.fyi",
    "generator": null,
    "feeds": [],
@@ -20824,7 +20824,7 @@
   }
  },
  "tyler.io": {
-  "checked": "2026-10-25T05:37:27Z",
+  "checked": "2026-11-24T06:52:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -20850,7 +20850,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:37:27Z",
+   "checked": "2026-11-24T06:52:25Z",
    "title": "tyler.io – mostly nonsense",
    "generator": "Hugo 0.166.0",
    "feeds": [
@@ -20973,7 +20973,7 @@
   }
  },
  "tympanus.net": {
-  "checked": "2026-10-25T05:37:30Z",
+  "checked": "2026-11-24T06:52:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -21001,9 +21001,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:37:30Z",
+   "checked": "2026-11-24T06:52:27Z",
    "title": "Codrops | Fueling web creativity since 2009",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -21017,7 +21017,7 @@
   }
  },
  "tynan.com": {
-  "checked": "2026-10-25T05:37:38Z",
+  "checked": "2026-11-24T06:52:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -21043,7 +21043,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:37:38Z",
+   "checked": "2026-11-24T06:52:35Z",
    "title": "Life outside the box · Tynan",
    "generator": null,
    "feeds": [
@@ -21427,7 +21427,7 @@
   }
  },
  "typora.io": {
-  "checked": "2026-10-25T05:37:41Z",
+  "checked": "2026-11-24T06:52:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -21455,7 +21455,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:37:41Z",
+   "checked": "2026-11-24T06:52:38Z",
    "title": "Typora — simple yet powerful Markdown reader.",
    "generator": null,
    "feeds": [],

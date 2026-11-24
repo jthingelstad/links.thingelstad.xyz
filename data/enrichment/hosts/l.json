@@ -801,7 +801,7 @@
   }
  },
  "lanyrd.com": {
-  "checked": "2026-10-24T06:39:33Z",
+  "checked": "2026-11-24T06:40:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -828,7 +828,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:33Z",
+   "checked": "2026-11-24T06:40:03Z",
    "title": "Eventbrite - Discover the Best Local Events & Things to Do",
    "generator": null,
    "feeds": [],
@@ -1235,7 +1235,7 @@
   }
  },
  "latent.space": {
-  "checked": "2026-10-24T06:39:35Z",
+  "checked": "2026-11-24T06:40:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1261,7 +1261,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:35Z",
+   "checked": "2026-11-24T06:40:06Z",
    "title": "Latent Space — The AI Engineer publication",
    "generator": null,
    "feeds": [
@@ -1442,7 +1442,7 @@
   }
  },
  "laughingmeme.org": {
-  "checked": "2026-10-24T06:39:39Z",
+  "checked": "2026-11-24T06:40:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1468,7 +1468,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:39Z",
+   "checked": "2026-11-24T06:40:08Z",
    "title": "Kellan Elliott-McCrea: Blog | A personal blog of Kellan Elliott-McCrea. I don’t really know what a “laughing meme” is. It sounded cool in 1999.",
    "generator": "Jekyll v4.2.2",
    "feeds": [
@@ -1484,7 +1484,7 @@
   }
  },
  "laughingsquid.com": {
-  "checked": "2026-10-24T06:39:41Z",
+  "checked": "2026-11-24T06:40:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1506,9 +1506,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:41Z",
+   "checked": "2026-11-24T06:40:11Z",
    "title": "Laughing Squid",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -2021,20 +2021,18 @@
   }
  },
  "leadership.garden": {
-  "checked": "2026-10-24T06:39:44Z",
+  "checked": "2026-11-24T06:40:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.26.14.22",
-    "104.26.15.22",
-    "172.67.74.242"
+    "104.21.64.227",
+    "172.67.156.43"
    ],
    "aaaa": [
-    "2606:4700:20::681a:e16",
-    "2606:4700:20::681a:f16",
-    "2606:4700:20::ac43:4af2"
+    "2606:4700:3031::ac43:9c2b",
+    "2606:4700:3035::6815:40e3"
    ],
    "cname": null,
    "ns": [
@@ -2049,7 +2047,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:44Z",
+   "checked": "2026-11-24T06:40:14Z",
    "title": "Leadership Garden",
    "generator": null,
    "feeds": [
@@ -3007,7 +3005,7 @@
   }
  },
  "leehanchung.github.io": {
-  "checked": "2026-10-24T06:39:47Z",
+  "checked": "2026-11-24T06:40:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3034,7 +3032,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:47Z",
+   "checked": "2026-11-24T06:40:17Z",
    "title": "Han Lee on Machine Learning Systems and AI Evaluation",
    "generator": null,
    "feeds": [
@@ -5280,7 +5278,7 @@
   }
  },
  "lightroom-blog.com": {
-  "checked": "2026-10-24T06:39:50Z",
+  "checked": "2026-11-24T06:40:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5303,7 +5301,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:50Z",
+   "checked": "2026-11-24T06:40:20Z",
    "title": "Lightroom Blog - Tips, Tricks, Presets and Addons for Lightroom",
    "generator": "All in One SEO (AIOSEO) 4.9.7.2",
    "feeds": [
@@ -5417,7 +5415,7 @@
   }
  },
  "lightroomkillertips.com": {
-  "checked": "2026-10-24T06:39:53Z",
+  "checked": "2026-11-24T06:40:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5443,9 +5441,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:53Z",
+   "checked": "2026-11-24T06:40:23Z",
    "title": "Lightroom Killer Tips - The Latest Lightroom Tips, Tricks & Techniques",
-   "generator": "Redux 4.5.16",
+   "generator": "Redux 4.5.19",
    "feeds": [
     {
      "type": "rss",
@@ -6162,7 +6160,7 @@
   }
  },
  "linode.com": {
-  "checked": "2026-10-24T06:39:56Z",
+  "checked": "2026-11-24T06:40:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6192,7 +6190,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:39:56Z",
+   "checked": "2026-11-24T06:40:26Z",
    "title": "The World's Most Distributed Cloud Computing Platform | Akamai",
    "generator": null,
    "feeds": [],
@@ -6237,7 +6235,7 @@
   }
  },
  "linux.com": {
-  "checked": "2026-10-24T06:40:06Z",
+  "checked": "2026-11-24T06:40:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6264,9 +6262,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:40:06Z",
+   "checked": "2026-11-24T06:40:31Z",
    "title": "Linux.com - News For Open Source Professionals",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -6853,7 +6851,7 @@
   }
  },
  "littlebits.com": {
-  "checked": "2026-10-24T06:40:09Z",
+  "checked": "2026-11-24T06:40:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6879,7 +6877,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:40:09Z",
+   "checked": "2026-11-24T06:40:34Z",
    "title": "The complete littleBits library of STEAM and Coding lessons",
    "generator": null,
    "feeds": [],
@@ -6983,7 +6981,7 @@
   }
  },
  "livestream.com": {
-  "checked": "2026-10-24T06:40:12Z",
+  "checked": "2026-11-24T06:40:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7008,7 +7006,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:40:12Z",
+   "checked": "2026-11-24T06:40:37Z",
    "title": "Online Live Streaming Platform: Broadcast Events with Vimeo",
    "generator": null,
    "feeds": [],
@@ -7218,7 +7216,7 @@
   }
  },
  "lmnt.me": {
-  "checked": "2026-10-24T06:40:13Z",
+  "checked": "2026-11-24T06:40:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7240,7 +7238,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:40:13Z",
+   "checked": "2026-11-24T06:40:38Z",
    "title": "LMNT",
    "generator": null,
    "feeds": [
@@ -7501,7 +7499,7 @@
   }
  },
  "locusmag.com": {
-  "checked": "2026-10-24T06:40:16Z",
+  "checked": "2026-11-24T06:40:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7523,9 +7521,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:40:16Z",
+   "checked": "2026-11-24T06:40:41Z",
    "title": "Locus – The Magazine of the Science Fiction and Fantasy Field",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -7713,7 +7711,7 @@
   }
  },
  "log.liminastudio.com": {
-  "checked": "2026-10-24T06:40:22Z",
+  "checked": "2026-11-24T06:40:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7736,7 +7734,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:40:22Z",
+   "checked": "2026-11-24T06:40:50Z",
    "title": "BALAKSIX: SLOT88 Link Situs Slot Gacor Hari Ini Terpercaya",
    "generator": null,
    "feeds": [],
@@ -7842,7 +7840,7 @@
   }
  },
  "logicmag.io": {
-  "checked": "2026-10-24T06:40:27Z",
+  "checked": "2026-11-24T06:40:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7868,7 +7866,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:40:27Z",
+   "checked": "2026-11-24T06:40:54Z",
    "title": "Home | Logic(s) Magazine",
    "generator": null,
    "feeds": [
@@ -8520,7 +8518,7 @@
   }
  },
  "lorelle.wordpress.com": {
-  "checked": "2026-10-24T06:40:29Z",
+  "checked": "2026-11-24T06:40:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8540,7 +8538,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:40:29Z",
+   "checked": "2026-11-24T06:40:57Z",
    "title": "Lorelle on WordPress",
    "generator": "WordPress.com",
    "feeds": [
@@ -8665,7 +8663,7 @@
   }
  },
  "loupventures.com": {
-  "checked": "2026-10-24T06:40:32Z",
+  "checked": "2026-11-24T06:40:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8688,7 +8686,7 @@
    "error": "tls: certificate has expired"
   },
   "home": {
-   "checked": "2026-10-24T06:40:32Z",
+   "checked": "2026-11-24T06:40:59Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9606,7 +9604,7 @@
   }
  },
  "luxurydaily.com": {
-  "checked": "2026-10-24T06:40:35Z",
+  "checked": "2026-11-24T06:41:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9634,7 +9632,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:40:35Z",
+   "checked": "2026-11-24T06:41:02Z",
    "title": "Luxury Daily",
    "generator": "WordPress 6.9.1",
    "feeds": [],

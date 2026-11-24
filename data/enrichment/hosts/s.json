@@ -828,18 +828,26 @@
   }
  },
  "samcurry.net": {
-  "checked": "2026-10-25T05:33:15Z",
+  "checked": "2026-11-24T06:48:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.21.36.211",
-    "172.67.199.156"
+    "18.154.185.74",
+    "18.154.185.87",
+    "18.154.185.114",
+    "18.154.185.122"
    ],
    "aaaa": [
-    "2606:4700:3037::6815:24d3",
-    "2606:4700:3037::ac43:c79c"
+    "2600:9000:2507:800:11:8b67:5300:93a1",
+    "2600:9000:2507:2800:11:8b67:5300:93a1",
+    "2600:9000:2507:3c00:11:8b67:5300:93a1",
+    "2600:9000:2507:4600:11:8b67:5300:93a1",
+    "2600:9000:2507:7c00:11:8b67:5300:93a1",
+    "2600:9000:2507:b600:11:8b67:5300:93a1",
+    "2600:9000:2507:ce00:11:8b67:5300:93a1",
+    "2600:9000:2507:e000:11:8b67:5300:93a1"
    ],
    "cname": null,
    "ns": [
@@ -854,7 +862,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:15Z",
+   "checked": "2026-11-24T06:48:15Z",
    "title": "Blog | Sam Curry",
    "generator": null,
    "feeds": [],
@@ -864,7 +872,7 @@
   }
  },
  "sametab.com": {
-  "checked": "2026-10-25T05:33:17Z",
+  "checked": "2026-11-24T06:48:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -890,7 +898,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:17Z",
+   "checked": "2026-11-24T06:48:18Z",
    "title": "Pulse - Message boards for modern teams | Pulse",
    "generator": null,
    "feeds": [],
@@ -932,7 +940,7 @@
   }
  },
  "samharris.org": {
-  "checked": "2026-10-25T05:33:19Z",
+  "checked": "2026-11-24T06:48:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -956,7 +964,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:19Z",
+   "checked": "2026-11-24T06:48:19Z",
    "title": "Sam Harris | Home of the Making Sense Podcast",
    "generator": null,
    "feeds": [],
@@ -1361,7 +1369,7 @@
   }
  },
  "sanspoint.com": {
-  "checked": "2026-10-25T05:33:22Z",
+  "checked": "2026-11-24T06:48:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1385,7 +1393,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-25T05:33:22Z",
+   "checked": "2026-11-24T06:48:22Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1947,7 +1955,7 @@
   }
  },
  "scattered-thoughts.net": {
-  "checked": "2026-10-25T05:33:25Z",
+  "checked": "2026-11-24T06:48:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1969,7 +1977,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:25Z",
+   "checked": "2026-11-24T06:48:25Z",
    "title": "Jamie Brandon",
    "generator": null,
    "feeds": [
@@ -2230,7 +2238,7 @@
   }
  },
  "science.nasa.gov": {
-  "checked": "2026-10-25T05:33:26Z",
+  "checked": "2026-11-24T06:48:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2249,9 +2257,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:26Z",
+   "checked": "2026-11-24T06:48:26Z",
    "title": "NASA Science",
-   "generator": "WordPress 7.0.7",
+   "generator": "WordPress 7.0.9",
    "feeds": [
     {
      "type": "rss",
@@ -2379,7 +2387,7 @@
   }
  },
  "sciencemag.org": {
-  "checked": "2026-10-25T05:33:31Z",
+  "checked": "2026-11-24T06:48:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2403,7 +2411,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-25T05:33:31Z",
+   "checked": "2026-11-24T06:48:30Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2692,7 +2700,7 @@
   }
  },
  "scottberkun.com": {
-  "checked": "2026-10-25T05:33:32Z",
+  "checked": "2026-11-24T06:48:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2715,9 +2723,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:32Z",
+   "checked": "2026-11-24T06:48:31Z",
    "title": "Scott Berkun | Author and Speaker Scott Berkun",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -3653,7 +3661,7 @@
   }
  },
  "seangoedecke.com": {
-  "checked": "2026-10-25T05:33:36Z",
+  "checked": "2026-11-24T06:48:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3678,9 +3686,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:36Z",
+   "checked": "2026-11-24T06:48:34Z",
    "title": "All posts",
-   "generator": "Gatsby 2.32.13",
+   "generator": null,
    "feeds": [
     {
      "type": "rss",
@@ -4285,7 +4293,7 @@
   }
  },
  "security.apple.com": {
-  "checked": "2026-10-25T05:33:39Z",
+  "checked": "2026-11-24T06:48:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4304,7 +4312,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:39Z",
+   "checked": "2026-11-24T06:48:37Z",
    "title": "Apple Security Research",
    "generator": null,
    "feeds": [
@@ -4535,7 +4543,7 @@
   }
  },
  "securosis.com": {
-  "checked": "2026-10-25T05:33:41Z",
+  "checked": "2026-11-24T06:48:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4547,14 +4555,14 @@
     "13.227.246.102"
    ],
    "aaaa": [
-    "2600:9000:2044:4400:6:fb33:5e80:93a1",
-    "2600:9000:2044:7800:6:fb33:5e80:93a1",
-    "2600:9000:2044:7e00:6:fb33:5e80:93a1",
+    "2600:9000:2044:3200:6:fb33:5e80:93a1",
+    "2600:9000:2044:6a00:6:fb33:5e80:93a1",
     "2600:9000:2044:a600:6:fb33:5e80:93a1",
-    "2600:9000:2044:b000:6:fb33:5e80:93a1",
-    "2600:9000:2044:c200:6:fb33:5e80:93a1",
-    "2600:9000:2044:d400:6:fb33:5e80:93a1",
-    "2600:9000:2044:f800:6:fb33:5e80:93a1"
+    "2600:9000:2044:a800:6:fb33:5e80:93a1",
+    "2600:9000:2044:bc00:6:fb33:5e80:93a1",
+    "2600:9000:2044:d000:6:fb33:5e80:93a1",
+    "2600:9000:2044:da00:6:fb33:5e80:93a1",
+    "2600:9000:2044:f600:6:fb33:5e80:93a1"
    ],
    "cname": null,
    "ns": [
@@ -4570,7 +4578,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:41Z",
+   "checked": "2026-11-24T06:48:40Z",
    "title": "Securosis",
    "generator": "Hugo 0.163.1",
    "feeds": [
@@ -4795,7 +4803,7 @@
   }
  },
  "seldo.com": {
-  "checked": "2026-10-25T05:33:44Z",
+  "checked": "2026-11-24T06:48:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4817,7 +4825,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:44Z",
+   "checked": "2026-11-24T06:48:43Z",
    "title": "Seldo.com",
    "generator": null,
    "feeds": [
@@ -5198,7 +5206,7 @@
   }
  },
  "sense.com": {
-  "checked": "2026-10-25T05:33:47Z",
+  "checked": "2026-11-24T06:48:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5222,9 +5230,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:47Z",
+   "checked": "2026-11-24T06:48:46Z",
    "title": "Sense - Control your home energy use",
-   "generator": "WordPress 7.0.7",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -5549,7 +5557,7 @@
   }
  },
  "seriouseats.com": {
-  "checked": "2026-10-25T05:33:51Z",
+  "checked": "2026-11-24T06:48:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5576,7 +5584,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:51Z",
+   "checked": "2026-11-24T06:48:49Z",
    "title": "Serious Eats: Good Cooks Know How. Great Cooks Know Why.",
    "generator": null,
    "feeds": [
@@ -5861,7 +5869,7 @@
   }
  },
  "servethehome.com": {
-  "checked": "2026-10-25T05:33:52Z",
+  "checked": "2026-11-24T06:48:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5885,9 +5893,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:52Z",
+   "checked": "2026-11-24T06:48:51Z",
    "title": "ServeTheHome Server Storage and Networking Reviews",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -5975,7 +5983,7 @@
   }
  },
  "sethmlarson.dev": {
-  "checked": "2026-10-25T05:33:55Z",
+  "checked": "2026-11-24T06:48:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6005,7 +6013,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:55Z",
+   "checked": "2026-11-24T06:48:53Z",
    "title": "Seth Larson",
    "generator": null,
    "feeds": [
@@ -6579,7 +6587,7 @@
   }
  },
  "sharelatex.com": {
-  "checked": "2026-10-25T05:33:57Z",
+  "checked": "2026-11-24T06:48:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6601,7 +6609,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:33:57Z",
+   "checked": "2026-11-24T06:48:55Z",
    "title": "Overleaf, Online LaTeX Editor",
    "generator": null,
    "feeds": [],
@@ -7023,7 +7031,7 @@
   }
  },
  "shift.newco.co": {
-  "checked": "2026-10-25T05:34:00Z",
+  "checked": "2026-11-24T06:48:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7042,7 +7050,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-25T05:34:00Z",
+   "checked": "2026-11-24T06:48:58Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7228,7 +7236,7 @@
   }
  },
  "shkspr.mobi": {
-  "checked": "2026-10-25T05:34:00Z",
+  "checked": "2026-11-24T06:48:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7250,9 +7258,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:00Z",
+   "checked": "2026-11-24T06:48:58Z",
    "title": "Terence Eden’s Blog – Regular nonsense about tech and its effects 🙃",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "atom",
@@ -8174,7 +8182,7 @@
   }
  },
  "shwin.co": {
-  "checked": "2026-10-25T05:34:08Z",
+  "checked": "2026-11-24T06:49:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8196,7 +8204,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:08Z",
+   "checked": "2026-11-24T06:49:12Z",
    "title": "Ashwin Mathews",
    "generator": "Super",
    "feeds": [],
@@ -9087,14 +9095,15 @@
   }
  },
  "siliconangle.com": {
-  "checked": "2026-10-25T05:34:12Z",
+  "checked": "2026-11-24T06:49:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "13.248.234.17",
-    "15.197.95.101"
+    "44.238.16.91",
+    "44.241.95.131",
+    "184.35.60.192"
    ],
    "aaaa": [],
    "cname": null,
@@ -9112,9 +9121,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:12Z",
+   "checked": "2026-11-24T06:49:15Z",
    "title": "Homepage - SiliconANGLE",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -9914,16 +9923,16 @@
   }
  },
  "simpleoptout.com": {
-  "checked": "2026-10-25T05:34:15Z",
+  "checked": "2026-11-24T06:49:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "52.84.127.45",
-    "52.84.127.90",
-    "52.84.127.122",
-    "52.84.127.124"
+    "3.168.51.20",
+    "3.168.51.57",
+    "3.168.51.89",
+    "3.168.51.97"
    ],
    "aaaa": [],
    "cname": null,
@@ -9941,7 +9950,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:15Z",
+   "checked": "2026-11-24T06:49:18Z",
    "title": "Deep links to opt-out of data sharing by 100+ companies – Simple Opt Out",
    "generator": null,
    "feeds": [],
@@ -10622,16 +10631,16 @@
   }
  },
  "sites.google.com": {
-  "checked": "2026-10-25T05:34:17Z",
+  "checked": "2026-11-24T06:49:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.250.177.78"
+    "142.250.217.110"
    ],
    "aaaa": [
-    "2607:f8b0:4009:802::200e"
+    "2607:f8b0:4009:803::200e"
    ],
    "cname": null,
    "ns": [],
@@ -10643,7 +10652,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:17Z",
+   "checked": "2026-11-24T06:49:21Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -10693,7 +10702,7 @@
   }
  },
  "sive.rs": {
-  "checked": "2026-10-25T05:34:21Z",
+  "checked": "2026-11-24T06:49:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10717,7 +10726,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:21Z",
+   "checked": "2026-11-24T06:49:25Z",
    "title": "Derek Sivers",
    "generator": null,
    "feeds": [],
@@ -11035,7 +11044,7 @@
   }
  },
  "skilldrick.github.io": {
-  "checked": "2026-10-25T05:34:24Z",
+  "checked": "2026-11-24T06:49:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11062,7 +11071,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-25T05:34:24Z",
+   "checked": "2026-11-24T06:49:28Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -11268,7 +11277,7 @@
   }
  },
  "slackhq.com": {
-  "checked": "2026-10-25T05:34:26Z",
+  "checked": "2026-11-24T06:49:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11296,7 +11305,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:26Z",
+   "checked": "2026-11-24T06:49:29Z",
    "title": "Slack Blog | Slack",
    "generator": null,
    "feeds": [],
@@ -11990,7 +11999,7 @@
   }
  },
  "sloanreview.mit.edu": {
-  "checked": "2026-10-25T05:34:29Z",
+  "checked": "2026-11-24T06:49:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12010,7 +12019,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:29Z",
+   "checked": "2026-11-24T06:49:32Z",
    "title": "MIT Sloan Management Review",
    "generator": null,
    "feeds": [
@@ -12173,7 +12182,7 @@
   }
  },
  "slowperc.blogspot.com": {
-  "checked": "2026-10-25T05:34:32Z",
+  "checked": "2026-11-24T06:49:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12182,7 +12191,7 @@
     "142.250.189.97"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81e::2001"
+    "2607:f8b0:4009:80c::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -12194,7 +12203,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:32Z",
+   "checked": "2026-11-24T06:49:35Z",
    "title": "Slowly Percolating Forms",
    "generator": "blogger",
    "feeds": [
@@ -13036,15 +13045,15 @@
   }
  },
  "smithsonianmag.com": {
-  "checked": "2026-10-25T05:34:35Z",
+  "checked": "2026-11-24T06:49:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "18.210.72.169",
-    "34.225.92.247",
-    "34.235.4.21"
+    "18.208.74.246",
+    "32.194.131.175",
+    "100.59.145.151"
    ],
    "aaaa": [],
    "cname": null,
@@ -13062,7 +13071,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:35Z",
+   "checked": "2026-11-24T06:49:37Z",
    "title": "Smithsonian Magazine: Explore History, Science, Arts & Culture",
    "generator": null,
    "feeds": [],
@@ -13072,7 +13081,7 @@
   }
  },
  "smittenkitchen.com": {
-  "checked": "2026-10-25T05:34:38Z",
+  "checked": "2026-11-24T06:49:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13096,7 +13105,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:38Z",
+   "checked": "2026-11-24T06:49:40Z",
    "title": "smitten kitchen – Fearless cooking from a tiny NYC kitchen.",
    "generator": null,
    "feeds": [
@@ -13234,7 +13243,7 @@
   }
  },
  "smw.referata.com": {
-  "checked": "2026-10-25T05:34:40Z",
+  "checked": "2026-11-24T06:49:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13253,7 +13262,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:40Z",
+   "checked": "2026-11-24T06:49:42Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -14354,7 +14363,7 @@
   }
  },
  "solar.lowtechmagazine.com": {
-  "checked": "2026-10-25T05:34:42Z",
+  "checked": "2026-11-24T06:49:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14373,7 +14382,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:42Z",
+   "checked": "2026-11-24T06:49:44Z",
    "title": "LOW←TECH MAGAZINE",
    "generator": "Hugo 0.111.3",
    "feeds": [
@@ -15073,7 +15082,7 @@
   }
  },
  "source.opennews.org": {
-  "checked": "2026-10-25T05:34:46Z",
+  "checked": "2026-11-24T06:49:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -15095,7 +15104,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:46Z",
+   "checked": "2026-11-24T06:49:48Z",
    "title": "Source: An OpenNews project",
    "generator": null,
    "feeds": [],
@@ -15898,7 +15907,7 @@
   }
  },
  "speakerdeck.com": {
-  "checked": "2026-10-25T05:34:49Z",
+  "checked": "2026-11-24T06:49:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -15924,7 +15933,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:49Z",
+   "checked": "2026-11-24T06:49:51Z",
    "title": "Speaker Deck | Easily Share Your Presentations Online",
    "generator": null,
    "feeds": [],
@@ -16527,26 +16536,26 @@
   }
  },
  "spotvirtual.com": {
-  "checked": "2026-10-25T05:34:52Z",
+  "checked": "2026-11-24T06:49:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "99.84.203.13",
-    "99.84.203.14",
-    "99.84.203.116",
-    "99.84.203.123"
+    "99.86.77.2",
+    "99.86.77.3",
+    "99.86.77.34",
+    "99.86.77.52"
    ],
    "aaaa": [
-    "2600:9000:20c5:600:1d:7ba1:78c0:93a1",
-    "2600:9000:20c5:800:1d:7ba1:78c0:93a1",
-    "2600:9000:20c5:4800:1d:7ba1:78c0:93a1",
-    "2600:9000:20c5:5c00:1d:7ba1:78c0:93a1",
-    "2600:9000:20c5:6200:1d:7ba1:78c0:93a1",
-    "2600:9000:20c5:bc00:1d:7ba1:78c0:93a1",
-    "2600:9000:20c5:e200:1d:7ba1:78c0:93a1",
-    "2600:9000:20c5:fa00:1d:7ba1:78c0:93a1"
+    "2600:9000:20c5:4200:1d:7ba1:78c0:93a1",
+    "2600:9000:20c5:4a00:1d:7ba1:78c0:93a1",
+    "2600:9000:20c5:6400:1d:7ba1:78c0:93a1",
+    "2600:9000:20c5:a200:1d:7ba1:78c0:93a1",
+    "2600:9000:20c5:a600:1d:7ba1:78c0:93a1",
+    "2600:9000:20c5:ea00:1d:7ba1:78c0:93a1",
+    "2600:9000:20c5:fc00:1d:7ba1:78c0:93a1",
+    "2600:9000:20c5:fe00:1d:7ba1:78c0:93a1"
    ],
    "cname": null,
    "ns": [
@@ -16563,7 +16572,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:52Z",
+   "checked": "2026-11-24T06:49:53Z",
    "title": "Spot",
    "generator": null,
    "feeds": [],
@@ -16573,7 +16582,7 @@
   }
  },
  "spreadprivacy.com": {
-  "checked": "2026-10-25T05:34:55Z",
+  "checked": "2026-11-24T06:49:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16601,7 +16610,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:55Z",
+   "checked": "2026-11-24T06:49:56Z",
    "title": "Spread Privacy",
    "generator": "Ghost 6.39",
    "feeds": [
@@ -16963,7 +16972,7 @@
   }
  },
  "square.github.io": {
-  "checked": "2026-10-25T05:34:57Z",
+  "checked": "2026-11-24T06:49:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -16990,7 +16999,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:34:57Z",
+   "checked": "2026-11-24T06:49:58Z",
    "title": "Square Open Source",
    "generator": null,
    "feeds": [],
@@ -17200,7 +17209,7 @@
   }
  },
  "ssd.eff.org": {
-  "checked": "2026-10-25T05:35:00Z",
+  "checked": "2026-11-24T06:50:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -17227,7 +17236,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:00Z",
+   "checked": "2026-11-24T06:50:01Z",
    "title": "Surveillance Self-Defense",
    "generator": null,
    "feeds": [],
@@ -17737,7 +17746,7 @@
   }
  },
  "staltz.com": {
-  "checked": "2026-10-25T05:35:04Z",
+  "checked": "2026-11-24T06:50:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -17759,7 +17768,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:04Z",
+   "checked": "2026-11-24T06:50:04Z",
    "title": "André Staltz",
    "generator": null,
    "feeds": [
@@ -18462,18 +18471,18 @@
   }
  },
  "static.googleusercontent.com": {
-  "checked": "2026-10-25T05:35:07Z",
+  "checked": "2026-11-24T06:50:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.34.225"
+    "142.250.189.129"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81e::2001"
+    "2607:f8b0:4009:803::2001"
    ],
-   "cname": "googlehosted.l.googleusercontent.com",
+   "cname": null,
    "ns": [],
    "mx": false
   },
@@ -18483,7 +18492,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-25T05:35:07Z",
+   "checked": "2026-11-24T06:50:07Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -18692,16 +18701,16 @@
   }
  },
  "status.linode.com": {
-  "checked": "2026-10-25T05:35:08Z",
+  "checked": "2026-11-24T06:50:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "52.84.127.24",
-    "52.84.127.72",
-    "52.84.127.104",
-    "52.84.127.109"
+    "3.166.118.56",
+    "3.166.118.59",
+    "3.166.118.74",
+    "3.166.118.93"
    ],
    "aaaa": [],
    "cname": "8dn0wstr1chc.stspg-customer.com",
@@ -18714,7 +18723,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:08Z",
+   "checked": "2026-11-24T06:50:08Z",
    "title": "Linode Status",
    "generator": null,
    "feeds": [
@@ -18885,7 +18894,7 @@
   }
  },
  "staysaasy.com": {
-  "checked": "2026-10-25T05:35:11Z",
+  "checked": "2026-11-24T06:50:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -18909,7 +18918,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:11Z",
+   "checked": "2026-11-24T06:50:11Z",
    "title": "Stay SaaSy | Keeping it SaaSy",
    "generator": "Jekyll v4.0.1",
    "feeds": [
@@ -19116,7 +19125,7 @@
   }
  },
  "steipete.me": {
-  "checked": "2026-10-25T05:35:13Z",
+  "checked": "2026-11-24T06:50:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -19138,9 +19147,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:13Z",
+   "checked": "2026-11-24T06:50:12Z",
    "title": "Peter Steinberger",
-   "generator": "Astro v7.4.1",
+   "generator": "Astro v7.4.11",
    "feeds": [
     {
      "type": "rss",
@@ -19364,7 +19373,7 @@
   }
  },
  "stevejobsarchive.com": {
-  "checked": "2026-10-25T05:35:15Z",
+  "checked": "2026-11-24T06:50:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -19387,7 +19396,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:15Z",
+   "checked": "2026-11-24T06:50:15Z",
    "title": "The Steve Jobs Archive",
    "generator": null,
    "feeds": [],
@@ -20471,16 +20480,16 @@
   }
  },
  "straitstimes.com": {
-  "checked": "2026-10-25T05:35:18Z",
+  "checked": "2026-11-24T06:50:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "52.84.127.18",
-    "52.84.127.19",
-    "52.84.127.57",
-    "52.84.127.67"
+    "13.225.47.10",
+    "13.225.47.73",
+    "13.225.47.99",
+    "13.225.47.126"
    ],
    "aaaa": [],
    "cname": null,
@@ -20498,7 +20507,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:18Z",
+   "checked": "2026-11-24T06:50:18Z",
    "title": "The Straits Times - Breaking news, Singapore news, Asia and world news & multimedia",
    "generator": null,
    "feeds": [],
@@ -20599,7 +20608,7 @@
   }
  },
  "strategy-business.com": {
-  "checked": "2026-10-25T05:35:23Z",
+  "checked": "2026-11-24T06:50:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -20621,7 +20630,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:23Z",
+   "checked": "2026-11-24T06:50:23Z",
    "title": "strategy+business: international business strategy news articles and award-winning analysis",
    "generator": null,
    "feeds": [],
@@ -21002,7 +21011,7 @@
   }
  },
  "stripe.dev": {
-  "checked": "2026-10-25T05:35:26Z",
+  "checked": "2026-11-24T06:50:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -21026,7 +21035,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:26Z",
+   "checked": "2026-11-24T06:50:25Z",
    "title": "Stripe Dot Dev",
    "generator": null,
    "feeds": [],
@@ -21237,7 +21246,7 @@
   }
  },
  "stuffwhitepeoplelike.com": {
-  "checked": "2026-10-25T05:35:29Z",
+  "checked": "2026-11-24T06:50:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -21262,7 +21271,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'stuffwhitepeoplelike.com'"
   },
   "home": {
-   "checked": "2026-10-25T05:35:29Z",
+   "checked": "2026-11-24T06:50:28Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -21890,14 +21899,14 @@
   }
  },
  "sudhir.io": {
-  "checked": "2026-10-25T05:35:31Z",
+  "checked": "2026-11-24T06:50:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "66.33.60.66",
-    "76.76.21.123"
+    "66.33.60.35",
+    "76.76.21.61"
    ],
    "aaaa": [],
    "cname": null,
@@ -21913,7 +21922,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:31Z",
+   "checked": "2026-11-24T06:50:29Z",
    "title": "Sudhir Jonathan",
    "generator": null,
    "feeds": [],
@@ -22271,7 +22280,7 @@
   }
  },
  "suntimes.com": {
-  "checked": "2026-10-25T05:35:34Z",
+  "checked": "2026-11-24T06:50:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -22298,7 +22307,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:34Z",
+   "checked": "2026-11-24T06:50:32Z",
    "title": "Chicago Sun-Times: Chicago news, politics, sports and more",
    "generator": null,
    "feeds": [
@@ -23551,7 +23560,7 @@
   }
  },
  "swift.org": {
-  "checked": "2026-10-25T05:35:38Z",
+  "checked": "2026-11-24T06:50:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -23575,7 +23584,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:35:38Z",
+   "checked": "2026-11-24T06:50:38Z",
    "title": "Swift Programming Language",
    "generator": null,
    "feeds": [

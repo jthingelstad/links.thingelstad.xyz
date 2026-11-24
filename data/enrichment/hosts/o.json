@@ -995,7 +995,7 @@
   }
  },
  "odyclub.com": {
-  "checked": "2026-10-24T06:43:48Z",
+  "checked": "2026-11-24T06:44:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1022,7 +1022,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:43:48Z",
+   "checked": "2026-11-24T06:44:23Z",
    "title": "Honda Odyssey Forum",
    "generator": null,
    "feeds": [],
@@ -1533,7 +1533,7 @@
   }
  },
  "okayhq.com": {
-  "checked": "2026-10-24T06:43:50Z",
+  "checked": "2026-11-24T06:44:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1556,7 +1556,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-24T06:43:50Z",
+   "checked": "2026-11-24T06:44:26Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2993,7 +2993,7 @@
   }
  },
  "ontwik.com": {
-  "checked": "2026-10-24T06:44:07Z",
+  "checked": "2026-11-24T06:44:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3015,9 +3015,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:44:07Z",
+   "checked": "2026-11-24T06:44:42Z",
    "title": "OTK Tech Info",
-   "generator": "All in One SEO (AIOSEO) 5.0.2",
+   "generator": "All in One SEO (AIOSEO) 5.0.5",
    "feeds": [
     {
      "type": "rss",
@@ -3529,7 +3529,7 @@
   }
  },
  "openclaw.ai": {
-  "checked": "2026-10-24T06:44:12Z",
+  "checked": "2026-11-24T06:44:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3551,7 +3551,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:44:12Z",
+   "checked": "2026-11-24T06:44:47Z",
    "title": "OpenClaw — Open-Source AI Assistant",
    "generator": null,
    "feeds": [
@@ -3986,7 +3986,7 @@
   }
  },
  "openrss.org": {
-  "checked": "2026-10-24T06:44:14Z",
+  "checked": "2026-11-24T06:44:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4014,7 +4014,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-24T06:44:14Z",
+   "checked": "2026-11-24T06:44:50Z",
    "title": "Open RSS",
    "generator": null,
    "feeds": [
@@ -4538,7 +4538,7 @@
   }
  },
  "openwatch.net": {
-  "checked": "2026-10-24T06:44:17Z",
+  "checked": "2026-11-24T06:44:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4558,7 +4558,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-24T06:44:17Z",
+   "checked": "2026-11-24T06:44:52Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5415,7 +5415,7 @@
   }
  },
  "orientdb.com": {
-  "checked": "2026-10-25T05:30:16Z",
+  "checked": "2026-11-24T06:45:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5438,7 +5438,7 @@
    "error": "tls: certificate has expired"
   },
   "home": {
-   "checked": "2026-10-25T05:30:16Z",
+   "checked": "2026-11-24T06:45:24Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5670,7 +5670,7 @@
   }
  },
  "osnews.com": {
-  "checked": "2026-10-25T05:30:18Z",
+  "checked": "2026-11-24T06:45:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5696,9 +5696,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:30:18Z",
+   "checked": "2026-11-24T06:45:27Z",
    "title": "OSnews - Exploring the Future of Computing",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [
     {
      "type": "rss",
@@ -6101,7 +6101,7 @@
   }
  },
  "ouraring.com": {
-  "checked": "2026-10-25T05:30:22Z",
+  "checked": "2026-11-24T06:45:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6113,14 +6113,14 @@
     "99.84.203.66"
    ],
    "aaaa": [
-    "2600:9000:20c5:1000:9:bfb6:b180:93a1",
-    "2600:9000:20c5:4c00:9:bfb6:b180:93a1",
-    "2600:9000:20c5:5a00:9:bfb6:b180:93a1",
-    "2600:9000:20c5:6a00:9:bfb6:b180:93a1",
-    "2600:9000:20c5:7200:9:bfb6:b180:93a1",
-    "2600:9000:20c5:a400:9:bfb6:b180:93a1",
-    "2600:9000:20c5:f400:9:bfb6:b180:93a1",
-    "2600:9000:20c5:f800:9:bfb6:b180:93a1"
+    "2600:9000:21f2:3c00:9:bfb6:b180:93a1",
+    "2600:9000:21f2:5a00:9:bfb6:b180:93a1",
+    "2600:9000:21f2:7000:9:bfb6:b180:93a1",
+    "2600:9000:21f2:8600:9:bfb6:b180:93a1",
+    "2600:9000:21f2:9000:9:bfb6:b180:93a1",
+    "2600:9000:21f2:d400:9:bfb6:b180:93a1",
+    "2600:9000:21f2:dc00:9:bfb6:b180:93a1",
+    "2600:9000:21f2:e400:9:bfb6:b180:93a1"
    ],
    "cname": null,
    "ns": [
@@ -6137,7 +6137,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-25T05:30:22Z",
+   "checked": "2026-11-24T06:45:30Z",
    "title": "Oura Ring. Smart Ring for Fitness, Stress, Sleep & Health.",
    "generator": null,
    "feeds": [],
