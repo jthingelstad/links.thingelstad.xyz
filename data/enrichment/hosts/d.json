@@ -12309,7 +12309,7 @@
   }
  },
  "dragonflydb.io": {
-  "checked": "2026-10-26T06:21:46Z",
+  "checked": "2026-11-26T06:30:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12333,7 +12333,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:21:46Z",
+   "checked": "2026-11-26T06:30:03Z",
    "title": "Dragonfly | An In-Memory Data Store without Limits",
    "generator": null,
    "feeds": [],
@@ -12343,7 +12343,7 @@
   }
  },
  "dragtimes.com": {
-  "checked": "2026-10-26T06:21:49Z",
+  "checked": "2026-11-26T06:30:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12369,7 +12369,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-26T06:21:49Z",
+   "checked": "2026-11-26T06:30:06Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -12380,7 +12380,7 @@
   }
  },
  "dramatiq.io": {
-  "checked": "2026-10-26T06:21:52Z",
+  "checked": "2026-11-26T06:30:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12406,7 +12406,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:21:52Z",
+   "checked": "2026-11-26T06:30:08Z",
    "title": "Dramatiq: background tasks — Dramatiq 2.2.0 documentation",
    "generator": null,
    "feeds": [],
@@ -12416,7 +12416,7 @@
   }
  },
  "draw.audio": {
-  "checked": "2026-10-26T06:21:55Z",
+  "checked": "2026-11-26T06:30:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12428,14 +12428,14 @@
     "3.166.118.48"
    ],
    "aaaa": [
-    "2600:9000:279b:a00:c:5df7:ae80:93a1",
-    "2600:9000:279b:1c00:c:5df7:ae80:93a1",
-    "2600:9000:279b:3000:c:5df7:ae80:93a1",
-    "2600:9000:279b:4800:c:5df7:ae80:93a1",
-    "2600:9000:279b:6000:c:5df7:ae80:93a1",
-    "2600:9000:279b:9600:c:5df7:ae80:93a1",
-    "2600:9000:279b:9e00:c:5df7:ae80:93a1",
-    "2600:9000:279b:f600:c:5df7:ae80:93a1"
+    "2600:9000:279b:1e00:c:5df7:ae80:93a1",
+    "2600:9000:279b:5a00:c:5df7:ae80:93a1",
+    "2600:9000:279b:7400:c:5df7:ae80:93a1",
+    "2600:9000:279b:b400:c:5df7:ae80:93a1",
+    "2600:9000:279b:b600:c:5df7:ae80:93a1",
+    "2600:9000:279b:c800:c:5df7:ae80:93a1",
+    "2600:9000:279b:de00:c:5df7:ae80:93a1",
+    "2600:9000:279b:ec00:c:5df7:ae80:93a1"
    ],
    "cname": null,
    "ns": [
@@ -12450,7 +12450,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:21:55Z",
+   "checked": "2026-11-26T06:30:12Z",
    "title": "Draw.Audio: Free Music Composer, Sequencer, Synth & Beat Maker",
    "generator": null,
    "feeds": [],
@@ -12460,7 +12460,7 @@
   }
  },
  "drcathicks.com": {
-  "checked": "2026-10-26T06:21:58Z",
+  "checked": "2026-11-26T06:30:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12484,7 +12484,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:21:58Z",
+   "checked": "2026-11-26T06:30:15Z",
    "title": "Dr. Cat Hicks",
    "generator": "Wix.com Website Builder",
    "feeds": [
@@ -12500,7 +12500,7 @@
   }
  },
  "drdobbs.com": {
-  "checked": "2026-10-26T06:22:03Z",
+  "checked": "2026-11-26T06:30:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12521,7 +12521,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:22:03Z",
+   "checked": "2026-11-26T06:30:18Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -12532,7 +12532,7 @@
   }
  },
  "dressaday.com": {
-  "checked": "2026-10-26T06:22:03Z",
+  "checked": "2026-11-26T06:30:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12555,7 +12555,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:03Z",
+   "checked": "2026-11-26T06:30:18Z",
    "title": "A Dress A Day – A dress, nearly every day.",
    "generator": "WordPress.com",
    "feeds": [
@@ -12576,7 +12576,7 @@
   }
  },
  "dresscode.renttherunway.com": {
-  "checked": "2026-10-26T06:22:07Z",
+  "checked": "2026-11-26T06:30:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12598,7 +12598,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:07Z",
+   "checked": "2026-11-26T06:30:22Z",
    "title": "RTR Dress Code",
    "generator": null,
    "feeds": [
@@ -12702,26 +12702,26 @@
   }
  },
  "dribbble.com": {
-  "checked": "2026-10-26T06:22:10Z",
+  "checked": "2026-11-26T06:30:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "18.172.134.24",
-    "18.172.134.50",
-    "18.172.134.57",
-    "18.172.134.120"
+    "13.227.47.10",
+    "13.227.47.36",
+    "13.227.47.93",
+    "13.227.47.112"
    ],
    "aaaa": [
-    "2600:9000:210b:c00:18:db55:bf00:93a1",
-    "2600:9000:210b:3400:18:db55:bf00:93a1",
-    "2600:9000:210b:4200:18:db55:bf00:93a1",
-    "2600:9000:210b:9800:18:db55:bf00:93a1",
-    "2600:9000:210b:a400:18:db55:bf00:93a1",
-    "2600:9000:210b:ae00:18:db55:bf00:93a1",
-    "2600:9000:210b:b000:18:db55:bf00:93a1",
-    "2600:9000:210b:fc00:18:db55:bf00:93a1"
+    "2600:9000:21fa:800:18:db55:bf00:93a1",
+    "2600:9000:21fa:2600:18:db55:bf00:93a1",
+    "2600:9000:21fa:3400:18:db55:bf00:93a1",
+    "2600:9000:21fa:3c00:18:db55:bf00:93a1",
+    "2600:9000:21fa:6e00:18:db55:bf00:93a1",
+    "2600:9000:21fa:7c00:18:db55:bf00:93a1",
+    "2600:9000:21fa:c000:18:db55:bf00:93a1",
+    "2600:9000:21fa:ea00:18:db55:bf00:93a1"
    ],
    "cname": null,
    "ns": [
@@ -12738,7 +12738,7 @@
    "status": 202
   },
   "home": {
-   "checked": "2026-10-26T06:22:10Z",
+   "checked": "2026-11-26T06:30:25Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -12748,7 +12748,7 @@
   }
  },
  "driesdepoorter.be": {
-  "checked": "2026-10-26T06:22:13Z",
+  "checked": "2026-11-26T06:30:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12772,19 +12772,14 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:13Z",
+   "checked": "2026-11-26T06:30:27Z",
    "title": "Dries Depoorter – artist and speaker working with technology 🔥",
    "generator": "Powered by LayerSlider 8.2.0 - Build Heros, Sliders, and Popups. Create Animations and Beautiful, Rich Web Content as Easy as Never Before on WordPress.",
    "feeds": [
     {
      "type": "rss",
-     "url": "https://driesdepoorter.be/feed/",
-     "title": "Dries Depoorter » Feed"
-    },
-    {
-     "type": "rss",
-     "url": "https://driesdepoorter.be/comments/feed/",
-     "title": "Dries Depoorter » Comments Feed"
+     "url": "https://driesdepoorter.be/feed/new/",
+     "title": "Dries Depoorter"
     }
    ],
    "hcard": false,
@@ -12867,7 +12862,7 @@
   }
  },
  "driveteslacanada.ca": {
-  "checked": "2026-10-26T06:22:18Z",
+  "checked": "2026-11-26T06:30:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12893,9 +12888,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:18Z",
+   "checked": "2026-11-26T06:30:32Z",
    "title": "Drive Tesla - Your source for everything Tesla & EV",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -12914,37 +12909,40 @@
   }
  },
  "drivetrainagency.com": {
-  "checked": "2026-10-26T06:22:20Z",
+  "checked": "2026-11-26T06:30:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
-   "resolves": false,
-   "a": [],
+   "resolves": true,
+   "a": [
+    "3.33.130.190",
+    "15.197.148.33"
+   ],
    "aaaa": [],
    "cname": null,
-   "ns": [],
-   "mx": false,
-   "error": "NXDOMAIN"
+   "ns": [
+    "ns45.domaincontrol.com",
+    "ns46.domaincontrol.com"
+   ],
+   "mx": false
   },
   "https": {
-   "reachable": false,
+   "reachable": true,
    "redirects_http": false,
-   "status": null,
-   "error": "does not resolve"
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:20Z",
+   "checked": "2026-11-26T06:30:34Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null,
-   "error": "does not resolve"
+   "webmention": null
   }
  },
  "drizzle.org": {
-  "checked": "2026-10-26T06:22:20Z",
+  "checked": "2026-11-26T06:30:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -12970,7 +12968,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:20Z",
+   "checked": "2026-11-26T06:30:36Z",
    "title": "Drizzle - A database for the cloud",
    "generator": "iWeb 3.0.1",
    "feeds": [],
@@ -12980,7 +12978,7 @@
   }
  },
  "dropbase.io": {
-  "checked": "2026-10-26T06:22:23Z",
+  "checked": "2026-11-26T06:30:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13001,7 +12999,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:22:23Z",
+   "checked": "2026-11-26T06:30:38Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -13048,7 +13046,7 @@
   }
  },
  "dropbox.tech": {
-  "checked": "2026-10-26T06:22:24Z",
+  "checked": "2026-11-26T06:30:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13075,7 +13073,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:24Z",
+   "checked": "2026-11-26T06:30:38Z",
    "title": "Dropbox Tech Blog - Dropbox",
    "generator": null,
    "feeds": [],
@@ -13085,7 +13083,7 @@
   }
  },
  "dropcam.com": {
-  "checked": "2026-10-26T06:22:29Z",
+  "checked": "2026-11-26T06:30:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13109,7 +13107,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:29Z",
+   "checked": "2026-11-26T06:30:44Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -13119,7 +13117,7 @@
   }
  },
  "dropcases.com": {
-  "checked": "2026-10-26T06:22:32Z",
+  "checked": "2026-11-26T06:30:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13140,24 +13138,23 @@
    "mx": false
   },
   "https": {
-   "reachable": false,
+   "reachable": true,
    "redirects_http": true,
-   "status": null,
-   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+   "status": 403
   },
   "home": {
-   "checked": "2026-10-26T06:22:32Z",
+   "checked": "2026-11-26T06:30:46Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+   "error": "HTTP 403 (Cloudflare challenge)"
   }
  },
  "dropleaf.app": {
-  "checked": "2026-10-26T06:22:34Z",
+  "checked": "2026-11-26T06:30:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13179,7 +13176,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:34Z",
+   "checked": "2026-11-26T06:30:47Z",
    "title": "DropLeaf — Share Markdown, Instantly",
    "generator": null,
    "feeds": [],
@@ -13189,7 +13186,7 @@
   }
  },
  "drumbeat.org": {
-  "checked": "2026-10-26T06:22:37Z",
+  "checked": "2026-11-26T06:30:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13215,7 +13212,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:37Z",
+   "checked": "2026-11-26T06:30:50Z",
    "title": "Welcome to Mozilla Foundation - Mozilla Foundation",
    "generator": null,
    "feeds": [],
@@ -13225,7 +13222,7 @@
   }
  },
  "drumbit.app": {
-  "checked": "2026-10-26T06:22:41Z",
+  "checked": "2026-11-26T06:30:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13248,7 +13245,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:41Z",
+   "checked": "2026-11-26T06:30:54Z",
    "title": "drumbit | Online drum machine",
    "generator": null,
    "feeds": [],
@@ -13293,7 +13290,7 @@
   }
  },
  "druriley.com": {
-  "checked": "2026-10-26T06:22:44Z",
+  "checked": "2026-11-26T06:30:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13319,7 +13316,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:44Z",
+   "checked": "2026-11-26T06:30:57Z",
    "title": "Dru Riley",
    "generator": null,
    "feeds": [
@@ -13340,7 +13337,7 @@
   }
  },
  "dry.ly": {
-  "checked": "2026-10-26T06:22:47Z",
+  "checked": "2026-11-26T06:31:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13365,7 +13362,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:47Z",
+   "checked": "2026-11-26T06:31:00Z",
    "title": "dry.ly",
    "generator": null,
    "feeds": [],
@@ -13411,7 +13408,7 @@
   }
  },
  "dslrsolutions.net": {
-  "checked": "2026-10-26T06:22:50Z",
+  "checked": "2026-11-26T06:31:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13437,7 +13434,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:50Z",
+   "checked": "2026-11-26T06:31:03Z",
    "title": "Best Online Casino Australia | Fast Payouts & High RTP Games AU",
    "generator": null,
    "feeds": [],
@@ -13447,7 +13444,7 @@
   }
  },
  "dspace.mit.edu": {
-  "checked": "2026-10-26T06:22:53Z",
+  "checked": "2026-11-26T06:31:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13469,7 +13466,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:53Z",
+   "checked": "2026-11-26T06:31:06Z",
    "title": "MIT Open Scholarship - Home",
    "generator": "DSpace 8.2",
    "feeds": [],
@@ -13479,7 +13476,7 @@
   }
  },
  "dt.plumbing": {
-  "checked": "2026-10-26T06:22:58Z",
+  "checked": "2026-11-26T06:31:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13509,7 +13506,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:22:58Z",
+   "checked": "2026-11-26T06:31:10Z",
    "title": "dt: duck tape for your unix pipes",
    "generator": null,
    "feeds": [],
@@ -13579,7 +13576,7 @@
   }
  },
  "duartes.org": {
-  "checked": "2026-10-26T06:23:01Z",
+  "checked": "2026-11-26T06:31:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13607,7 +13604,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'duartes.org'"
   },
   "home": {
-   "checked": "2026-10-26T06:23:01Z",
+   "checked": "2026-11-26T06:31:13Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -13618,13 +13615,13 @@
   }
  },
  "dubiousquality.blogspot.com": {
-  "checked": "2026-10-26T06:23:03Z",
+  "checked": "2026-11-26T06:31:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.214.65"
+    "142.251.41.129"
    ],
    "aaaa": [
     "2607:f8b0:4009:81e::2001"
@@ -13639,7 +13636,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:03Z",
+   "checked": "2026-11-26T06:31:15Z",
    "title": "Dubious Quality",
    "generator": "Blogger",
    "feeds": [
@@ -13662,7 +13659,7 @@
   }
  },
  "duck.co": {
-  "checked": "2026-10-26T06:23:04Z",
+  "checked": "2026-11-26T06:31:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13686,7 +13683,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:04Z",
+   "checked": "2026-11-26T06:31:17Z",
    "title": "DuckDuckGo Lite: Fast, Lightweight Private Search",
    "generator": null,
    "feeds": [],
@@ -13734,7 +13731,7 @@
   }
  },
  "duckduckgo.com": {
-  "checked": "2026-10-26T06:23:06Z",
+  "checked": "2026-11-26T06:31:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13762,7 +13759,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:06Z",
+   "checked": "2026-11-26T06:31:18Z",
    "title": "DuckDuckGo Lite: Fast, Lightweight Private Search",
    "generator": null,
    "feeds": [],
@@ -13772,7 +13769,7 @@
   }
  },
  "ducklake.select": {
-  "checked": "2026-10-26T06:23:08Z",
+  "checked": "2026-11-26T06:31:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13798,7 +13795,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:08Z",
+   "checked": "2026-11-26T06:31:20Z",
    "title": "DuckLake is an integrated data lake and catalog format – DuckLake",
    "generator": "Jekyll v4.4.1",
    "feeds": [],
@@ -13841,7 +13838,7 @@
   }
  },
  "duluthnewstribune.com": {
-  "checked": "2026-10-26T06:23:11Z",
+  "checked": "2026-11-26T06:31:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13868,7 +13865,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:11Z",
+   "checked": "2026-11-26T06:31:23Z",
    "title": "Duluth News Tribune",
    "generator": null,
    "feeds": [
@@ -13884,7 +13881,7 @@
   }
  },
  "dumbmatter.com": {
-  "checked": "2026-10-26T06:23:14Z",
+  "checked": "2026-11-26T06:31:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13907,7 +13904,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:14Z",
+   "checked": "2026-11-26T06:31:29Z",
    "title": "dumbmatter.com",
    "generator": null,
    "feeds": [
@@ -13923,7 +13920,7 @@
   }
  },
  "duncan.dev": {
-  "checked": "2026-10-26T06:23:17Z",
+  "checked": "2026-11-26T06:31:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -13949,7 +13946,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:17Z",
+   "checked": "2026-11-26T06:31:32Z",
    "title": "Duncan Davidson — Notes on AI, craft, systems, and the web",
    "generator": null,
    "feeds": [
@@ -14031,7 +14028,7 @@
   }
  },
  "dune.xyz": {
-  "checked": "2026-10-26T06:23:18Z",
+  "checked": "2026-11-26T06:31:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14055,7 +14052,7 @@
    "status": 429
   },
   "home": {
-   "checked": "2026-10-26T06:23:18Z",
+   "checked": "2026-11-26T06:31:33Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -14066,7 +14063,7 @@
   }
  },
  "duosecurity.com": {
-  "checked": "2026-10-26T06:23:21Z",
+  "checked": "2026-11-26T06:31:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14093,7 +14090,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:21Z",
+   "checked": "2026-11-26T06:31:36Z",
    "title": "IAM & MFA Identity Security for Business, Humans, AI | Cisco Duo",
    "generator": null,
    "feeds": [],
@@ -14103,7 +14100,7 @@
   }
  },
  "duratrax.com": {
-  "checked": "2026-10-26T06:23:24Z",
+  "checked": "2026-11-26T06:31:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14127,7 +14124,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:24Z",
+   "checked": "2026-11-26T06:31:38Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -14180,7 +14177,7 @@
   }
  },
  "dvdfab.com": {
-  "checked": "2026-10-26T06:23:27Z",
+  "checked": "2026-11-26T06:31:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14199,7 +14196,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:23:27Z",
+   "checked": "2026-11-26T06:31:41Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -14210,7 +14207,7 @@
   }
  },
  "dvorak.org": {
-  "checked": "2026-10-26T06:23:27Z",
+  "checked": "2026-11-26T06:31:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14233,7 +14230,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:27Z",
+   "checked": "2026-11-26T06:31:41Z",
    "title": "Home Page of Columnist John C. Dvorak",
    "generator": null,
    "feeds": [],
@@ -14243,7 +14240,7 @@
   }
  },
  "dw.com": {
-  "checked": "2026-10-26T06:23:31Z",
+  "checked": "2026-11-26T06:31:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14268,7 +14265,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:31Z",
+   "checked": "2026-11-26T06:31:45Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -14278,14 +14275,12 @@
   }
  },
  "dwarkesh.com": {
-  "checked": "2026-10-26T06:23:34Z",
+  "checked": "2026-11-26T06:31:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
-   "resolves": true,
-   "a": [
-    "3.231.35.217"
-   ],
+   "resolves": false,
+   "a": [],
    "aaaa": [],
    "cname": null,
    "ns": [
@@ -14294,31 +14289,28 @@
     "ns-cloud-e3.googledomains.com",
     "ns-cloud-e4.googledomains.com"
    ],
-   "mx": false
+   "mx": false,
+   "error": "SERVFAIL"
   },
   "https": {
-   "reachable": true,
-   "redirects_http": true,
-   "status": 200
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:23:34Z",
-   "title": "Dwarkesh Podcast | Substack",
+   "checked": "2026-11-26T06:31:48Z",
+   "title": null,
    "generator": null,
-   "feeds": [
-    {
-     "type": "rss",
-     "url": "https://www.dwarkesh.com/feed",
-     "title": "Dwarkesh Podcast"
-    }
-   ],
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "does not resolve"
   }
  },
  "dwellito.com": {
-  "checked": "2026-10-26T06:23:37Z",
+  "checked": "2026-11-26T06:31:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14344,7 +14336,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:37Z",
+   "checked": "2026-11-26T06:31:48Z",
    "title": "Dwellito | Prefab & Modular Homes Marketplace",
    "generator": null,
    "feeds": [],
@@ -14354,7 +14346,7 @@
   }
  },
  "dwheeler.com": {
-  "checked": "2026-10-26T06:23:38Z",
+  "checked": "2026-11-26T06:31:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14384,7 +14376,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:38Z",
+   "checked": "2026-11-26T06:31:50Z",
    "title": "David A. Wheeler's Personal Home Page",
    "generator": "vim",
    "feeds": [
@@ -14402,13 +14394,13 @@
   }
  },
  "dwyer.co.za": {
-  "checked": "2026-10-26T06:23:41Z",
+  "checked": "2026-11-26T06:31:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "65.21.92.114"
+    "91.107.222.144"
    ],
    "aaaa": [],
    "cname": null,
@@ -14424,7 +14416,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:41Z",
+   "checked": "2026-11-26T06:31:53Z",
    "title": "Gareth Dwyer | Writer and Software Developer",
    "generator": null,
    "feeds": [],
@@ -14434,7 +14426,7 @@
   }
  },
  "dx.tips": {
-  "checked": "2026-10-26T06:23:46Z",
+  "checked": "2026-11-26T06:31:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14460,7 +14452,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:46Z",
+   "checked": "2026-11-26T06:31:58Z",
    "title": "DX Tips: The DevTools Magazine",
    "generator": null,
    "feeds": [
@@ -14476,7 +14468,7 @@
   }
  },
  "dxo.com": {
-  "checked": "2026-10-26T06:23:50Z",
+  "checked": "2026-11-26T06:32:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14501,7 +14493,7 @@
    "error": "connection refused"
   },
   "home": {
-   "checked": "2026-10-26T06:23:50Z",
+   "checked": "2026-11-26T06:32:01Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -14512,7 +14504,7 @@
   }
  },
  "dxzone.com": {
-  "checked": "2026-10-26T06:23:54Z",
+  "checked": "2026-11-26T06:32:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14534,9 +14526,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:54Z",
+   "checked": "2026-11-26T06:32:06Z",
    "title": "Amateur Radio Internet Guide - The DXZone",
-   "generator": "WordPress Download Manager 3.3.72",
+   "generator": "WordPress Download Manager 3.3.79",
    "feeds": [
     {
      "type": "rss",
@@ -14555,7 +14547,7 @@
   }
  },
  "dyers.org": {
-  "checked": "2026-10-26T06:23:58Z",
+  "checked": "2026-11-26T06:32:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14577,7 +14569,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:23:58Z",
+   "checked": "2026-11-26T06:32:10Z",
    "title": "Jon Dyer | No Longer Quietly Acquiring All Your Base",
    "generator": null,
    "feeds": [
@@ -14598,7 +14590,7 @@
   }
  },
  "dygraphs.com": {
-  "checked": "2026-10-26T06:24:03Z",
+  "checked": "2026-11-26T06:32:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14624,7 +14616,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:24:03Z",
+   "checked": "2026-11-26T06:32:14Z",
    "title": "Dygraphs — main page",
    "generator": null,
    "feeds": [],
@@ -14634,7 +14626,7 @@
   }
  },
  "dynalon.github.io": {
-  "checked": "2026-10-26T06:24:06Z",
+  "checked": "2026-11-26T06:32:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14661,7 +14653,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:24:06Z",
+   "checked": "2026-11-26T06:32:17Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -14671,7 +14663,7 @@
   }
  },
  "dzone.com": {
-  "checked": "2026-10-26T06:24:07Z",
+  "checked": "2026-11-26T06:32:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -14699,7 +14691,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:24:07Z",
+   "checked": "2026-11-26T06:32:18Z",
    "title": "DZone: Programming & DevOps news, tutorials & tools",
    "generator": null,
    "feeds": [],

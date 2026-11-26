@@ -1,6 +1,6 @@
 {
  "f-secure.com": {
-  "checked": "2026-10-26T06:55:40Z",
+  "checked": "2026-11-26T06:46:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9,8 +9,8 @@
     "23.2.147.70"
    ],
    "aaaa": [
-    "2600:1418:1000:38e::1690",
-    "2600:1418:1000:396::1690"
+    "2600:1418:1000:498::1690",
+    "2600:1418:1000:499::1690"
    ],
    "cname": null,
    "ns": [
@@ -29,7 +29,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:55:40Z",
+   "checked": "2026-11-26T06:46:35Z",
    "title": "Protect your digital moments | F‑Secure",
    "generator": null,
    "feeds": [],
@@ -39,7 +39,7 @@
   }
  },
  "f1fanatic.co.uk": {
-  "checked": "2026-10-26T06:55:44Z",
+  "checked": "2026-11-26T06:46:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -61,7 +61,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:55:44Z",
+   "checked": "2026-11-26T06:46:39Z",
    "title": "RaceFans – Formula 1, IndyCar, WEC, F2 and more independent motorsport coverage",
    "generator": null,
    "feeds": [
@@ -82,16 +82,16 @@
   }
  },
  "fa.bianp.net": {
-  "checked": "2026-10-26T06:55:47Z",
+  "checked": "2026-11-26T06:46:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "65.8.27.11",
-    "65.8.27.57",
-    "65.8.27.102",
-    "65.8.27.125"
+    "13.225.47.79",
+    "13.225.47.83",
+    "13.225.47.88",
+    "13.225.47.105"
    ],
    "aaaa": [],
    "cname": null,
@@ -104,7 +104,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:55:47Z",
+   "checked": "2026-11-26T06:46:42Z",
    "title": "Keep the gradient flowing",
    "generator": null,
    "feeds": [
@@ -125,7 +125,7 @@
   }
  },
  "fabbaloo.com": {
-  "checked": "2026-10-26T06:55:50Z",
+  "checked": "2026-11-26T06:46:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -153,7 +153,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:55:50Z",
+   "checked": "2026-11-26T06:46:44Z",
    "title": "3D Printing News ~ Fabbaloo",
    "generator": null,
    "feeds": [
@@ -182,7 +182,7 @@
   }
  },
  "fabiensanglard.net": {
-  "checked": "2026-10-26T06:55:53Z",
+  "checked": "2026-11-26T06:46:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -204,7 +204,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:55:53Z",
+   "checked": "2026-11-26T06:46:47Z",
    "title": "Homepage",
    "generator": null,
    "feeds": [
@@ -220,7 +220,7 @@
   }
  },
  "fabricatedknowledge.com": {
-  "checked": "2026-10-26T06:55:56Z",
+  "checked": "2026-11-26T06:46:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -241,7 +241,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:55:56Z",
+   "checked": "2026-11-26T06:46:50Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -252,7 +252,7 @@
   }
  },
  "facebook-studio.com": {
-  "checked": "2026-10-26T06:55:56Z",
+  "checked": "2026-11-26T06:46:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -279,7 +279,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'facebook-studio.com'"
   },
   "home": {
-   "checked": "2026-10-26T06:55:56Z",
+   "checked": "2026-11-26T06:46:50Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -384,7 +384,7 @@
   }
  },
  "facebookresearch.github.io": {
-  "checked": "2026-10-26T06:56:00Z",
+  "checked": "2026-11-26T06:46:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -411,7 +411,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:00Z",
+   "checked": "2026-11-26T06:46:53Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -457,7 +457,7 @@
   }
  },
  "fadingred.com": {
-  "checked": "2026-10-26T06:56:02Z",
+  "checked": "2026-11-26T06:46:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -479,21 +479,22 @@
   },
   "https": {
    "reachable": true,
-   "redirects_http": true,
-   "status": 200
+   "redirects_http": false,
+   "status": 403
   },
   "home": {
-   "checked": "2026-10-26T06:56:02Z",
-   "title": "Canadian Online Casino Free Spins - Top Sites for Playing in CAD",
+   "checked": "2026-11-26T06:46:56Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 403"
   }
  },
  "faithandfear.blogharbor.com": {
-  "checked": "2026-10-26T06:56:06Z",
+  "checked": "2026-11-26T06:46:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -516,9 +517,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:06Z",
+   "checked": "2026-11-26T06:46:57Z",
    "title": "PressHarbor WordPress Hosting - WordPress Hosting for Serious Sites",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -579,7 +580,7 @@
   }
  },
  "falseisnottrue.tumblr.com": {
-  "checked": "2026-10-26T06:56:07Z",
+  "checked": "2026-11-26T06:46:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -599,7 +600,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-26T06:56:07Z",
+   "checked": "2026-11-26T06:46:59Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -610,7 +611,7 @@
   }
  },
  "family.1password.com": {
-  "checked": "2026-10-26T06:56:10Z",
+  "checked": "2026-11-26T06:47:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -632,7 +633,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:10Z",
+   "checked": "2026-11-26T06:47:01Z",
    "title": "Password Manager for Individuals & Families | 1Password",
    "generator": null,
    "feeds": [],
@@ -642,7 +643,7 @@
   }
  },
  "family.co": {
-  "checked": "2026-10-26T06:56:14Z",
+  "checked": "2026-11-26T06:47:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -668,7 +669,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:14Z",
+   "checked": "2026-11-26T06:47:06Z",
    "title": "Family",
    "generator": null,
    "feeds": [],
@@ -678,7 +679,7 @@
   }
  },
  "familyfinds.com": {
-  "checked": "2026-10-26T06:56:16Z",
+  "checked": "2026-11-26T06:47:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -700,7 +701,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:16Z",
+   "checked": "2026-11-26T06:47:08Z",
    "title": "Family Finds | Fashion, Style, Clothing & Apparel News",
    "generator": null,
    "feeds": [],
@@ -710,7 +711,7 @@
   }
  },
  "fancyhands.com": {
-  "checked": "2026-10-26T06:56:21Z",
+  "checked": "2026-11-26T06:47:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -736,7 +737,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:21Z",
+   "checked": "2026-11-26T06:47:11Z",
    "title": "Assistants for Everyone - Fancy Hands",
    "generator": null,
    "feeds": [],
@@ -746,7 +747,7 @@
   }
  },
  "farcaster.xyz": {
-  "checked": "2026-10-26T06:56:23Z",
+  "checked": "2026-11-26T06:47:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -772,7 +773,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:23Z",
+   "checked": "2026-11-26T06:47:12Z",
    "title": "Farcaster",
    "generator": null,
    "feeds": [],
@@ -782,7 +783,7 @@
   }
  },
  "farmingdale-observer.com": {
-  "checked": "2026-10-26T06:56:25Z",
+  "checked": "2026-11-26T06:47:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -808,9 +809,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:25Z",
+   "checked": "2026-11-26T06:47:15Z",
    "title": "Farmingdale Observer",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -829,7 +830,7 @@
   }
  },
  "farmtofork.net": {
-  "checked": "2026-10-26T06:56:30Z",
+  "checked": "2026-11-26T06:47:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -854,7 +855,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:30Z",
+   "checked": "2026-11-26T06:47:20Z",
    "title": "Farm to Fork",
    "generator": null,
    "feeds": [],
@@ -911,7 +912,7 @@
   }
  },
  "fas.org": {
-  "checked": "2026-10-26T06:56:32Z",
+  "checked": "2026-11-26T06:47:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -933,7 +934,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:32Z",
+   "checked": "2026-11-26T06:47:22Z",
    "title": "Home - Federation of American Scientists",
    "generator": "WordPress 7.0.4",
    "feeds": [
@@ -949,7 +950,7 @@
   }
  },
  "fast-poll.com": {
-  "checked": "2026-10-26T06:56:34Z",
+  "checked": "2026-11-26T06:47:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -971,7 +972,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:34Z",
+   "checked": "2026-11-26T06:47:24Z",
    "title": "Fast Poll – Create a Free Quick Poll in Seconds",
    "generator": null,
    "feeds": [],
@@ -981,7 +982,7 @@
   }
  },
  "fast.ai": {
-  "checked": "2026-10-26T06:56:37Z",
+  "checked": "2026-11-26T06:47:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1009,7 +1010,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:37Z",
+   "checked": "2026-11-26T06:47:27Z",
    "title": "fast.ai—Making neural nets uncool again – fast.ai",
    "generator": "quarto-1.9.38",
    "feeds": [
@@ -1025,7 +1026,7 @@
   }
  },
  "fastapi.tiangolo.com": {
-  "checked": "2026-10-26T06:56:41Z",
+  "checked": "2026-11-26T06:47:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1048,7 +1049,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:41Z",
+   "checked": "2026-11-26T06:47:31Z",
    "title": "FastAPI - FastAPI",
    "generator": "zensical-0.0.65",
    "feeds": [],
@@ -1058,7 +1059,7 @@
   }
  },
  "fastcharts.io": {
-  "checked": "2026-10-26T06:56:44Z",
+  "checked": "2026-11-26T06:47:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1077,7 +1078,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:56:44Z",
+   "checked": "2026-11-26T06:47:33Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1142,7 +1143,7 @@
   }
  },
  "fastcomments.com": {
-  "checked": "2026-10-26T06:56:45Z",
+  "checked": "2026-11-26T06:47:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1169,7 +1170,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:45Z",
+   "checked": "2026-11-26T06:47:34Z",
    "title": "Live Commenting System For Any Website or Application - FastComments",
    "generator": null,
    "feeds": [],
@@ -1233,7 +1234,7 @@
   }
  },
  "fasterthanli.me": {
-  "checked": "2026-10-26T06:56:50Z",
+  "checked": "2026-11-26T06:47:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1259,7 +1260,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:50Z",
+   "checked": "2026-11-26T06:47:39Z",
    "title": "fasterthanli.me",
    "generator": null,
    "feeds": [
@@ -1271,10 +1272,10 @@
    ],
    "hcard": false,
    "rel_me": [
-    "https://bsky.app/profile/fasterthanli.me",
     "https://github.com/sponsors/fasterthanlime",
-    "https://www.linkedin.com/in/fasterthanlime",
-    "https://hachyderm.io/@fasterthanlime"
+    "https://bsky.app/profile/fasterthanli.me",
+    "https://hachyderm.io/@fasterthanlime",
+    "https://www.linkedin.com/in/fasterthanlime"
    ],
    "webmention": null
   }
@@ -1406,7 +1407,7 @@
   }
  },
  "fastorslow.com": {
-  "checked": "2026-10-26T06:56:53Z",
+  "checked": "2026-11-26T06:47:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1429,7 +1430,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:56:53Z",
+   "checked": "2026-11-26T06:47:42Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1440,7 +1441,7 @@
   }
  },
  "fatalerror.wordpress.com": {
-  "checked": "2026-10-26T06:56:53Z",
+  "checked": "2026-11-26T06:47:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1460,7 +1461,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:53Z",
+   "checked": "2026-11-26T06:47:42Z",
    "title": "Blue Screen Of Duds | Where the alter ego of codelust plays",
    "generator": "WordPress.com",
    "feeds": [
@@ -1484,7 +1485,7 @@
   }
  },
  "faz.net": {
-  "checked": "2026-10-26T06:56:58Z",
+  "checked": "2026-11-26T06:47:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1495,8 +1496,8 @@
    "aaaa": [],
    "cname": null,
    "ns": [
-    "anycast1.irondns.net",
-    "anycast2.irondns.net"
+    "anycast102.irondns.net",
+    "anycast112.irondns.de"
    ],
    "mx": true
   },
@@ -1506,7 +1507,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:56:58Z",
+   "checked": "2026-11-26T06:47:45Z",
    "title": "Aktuelle Nachrichten online - FAZ.NET",
    "generator": null,
    "feeds": [
@@ -1522,7 +1523,7 @@
   }
  },
  "fb.textile.photos": {
-  "checked": "2026-10-26T06:57:03Z",
+  "checked": "2026-11-26T06:47:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1545,7 +1546,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-26T06:57:03Z",
+   "checked": "2026-11-26T06:47:50Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1556,7 +1557,7 @@
   }
  },
  "fbaexperiment.com": {
-  "checked": "2026-10-26T06:57:07Z",
+  "checked": "2026-11-26T06:47:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1575,7 +1576,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:57:07Z",
+   "checked": "2026-11-26T06:47:53Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1586,7 +1587,7 @@
   }
  },
  "fbcmd.dtompkins.com": {
-  "checked": "2026-10-26T06:57:07Z",
+  "checked": "2026-11-26T06:47:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1613,7 +1614,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:57:07Z",
+   "checked": "2026-11-26T06:47:53Z",
    "title": "FBCMD (R.I.P.)",
    "generator": null,
    "feeds": [],
@@ -1623,7 +1624,7 @@
   }
  },
  "fcp.co": {
-  "checked": "2026-10-26T06:57:10Z",
+  "checked": "2026-11-26T06:47:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1647,7 +1648,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:57:10Z",
+   "checked": "2026-11-26T06:47:56Z",
    "title": "FCPX & Final Cut Pro Dedicated News, Tutorials, Reviews & Forums",
    "generator": "Joomla! - Open Source Content Management",
    "feeds": [],
@@ -1657,7 +1658,7 @@
   }
  },
  "fda.gov": {
-  "checked": "2026-10-26T06:57:14Z",
+  "checked": "2026-11-26T06:48:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1667,8 +1668,8 @@
     "23.217.55.187"
    ],
    "aaaa": [
-    "2600:1418:1000:5::17d9:37ac",
-    "2600:1418:1000:5::17d9:37bb"
+    "2600:1418:a000:15::1726:6da8",
+    "2600:1418:a000:15::1726:6dbe"
    ],
    "cname": null,
    "ns": [
@@ -1687,7 +1688,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-26T06:57:14Z",
+   "checked": "2026-11-26T06:48:00Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1698,7 +1699,7 @@
   }
  },
  "feather.wiki": {
-  "checked": "2026-10-26T06:57:19Z",
+  "checked": "2026-11-26T06:48:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1730,7 +1731,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:57:19Z",
+   "checked": "2026-11-26T06:48:04Z",
    "title": "Feather Wiki",
    "generator": null,
    "feeds": [],
@@ -1740,7 +1741,7 @@
   }
  },
  "federalreserve.gov": {
-  "checked": "2026-10-26T06:57:22Z",
+  "checked": "2026-11-26T06:48:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1766,7 +1767,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:57:22Z",
+   "checked": "2026-11-26T06:48:07Z",
    "title": "Federal Reserve Board - Home",
    "generator": null,
    "feeds": [],
@@ -1776,14 +1777,14 @@
   }
  },
  "federation.wtf": {
-  "checked": "2026-10-26T06:57:24Z",
+  "checked": "2026-11-26T06:48:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "64.29.17.194",
-    "216.198.79.66"
+    "216.150.1.129",
+    "216.150.16.1"
    ],
    "aaaa": [],
    "cname": null,
@@ -1799,7 +1800,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:57:24Z",
+   "checked": "2026-11-26T06:48:09Z",
    "title": "Federation",
    "generator": null,
    "feeds": [],
@@ -1809,7 +1810,7 @@
   }
  },
  "fedipact.online": {
-  "checked": "2026-10-26T06:57:27Z",
+  "checked": "2026-11-26T06:48:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1833,7 +1834,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:57:27Z",
+   "checked": "2026-11-26T06:48:12Z",
    "title": "🖤 ANTI-META FEDI PACT 🖤",
    "generator": null,
    "feeds": [],
@@ -1875,7 +1876,7 @@
   }
  },
  "feedafever.com": {
-  "checked": "2026-10-26T06:57:30Z",
+  "checked": "2026-11-26T06:48:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1898,7 +1899,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-26T06:57:30Z",
+   "checked": "2026-11-26T06:48:15Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1909,7 +1910,7 @@
   }
  },
  "feedbase.io": {
-  "checked": "2026-10-27T05:30:21Z",
+  "checked": "2026-11-26T06:48:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1932,7 +1933,7 @@
    "error": "connection refused"
   },
   "home": {
-   "checked": "2026-10-27T05:30:21Z",
+   "checked": "2026-11-26T06:48:46Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2002,7 +2003,7 @@
   }
  },
  "feedwrangler.net": {
-  "checked": "2026-10-27T05:30:23Z",
+  "checked": "2026-11-26T06:48:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2028,7 +2029,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T05:30:23Z",
+   "checked": "2026-11-26T06:48:48Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2099,14 +2100,14 @@
   }
  },
  "feelu.vercel.app": {
-  "checked": "2026-10-27T05:30:55Z",
+  "checked": "2026-11-26T06:49:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "64.29.17.131",
-    "216.198.79.131"
+    "64.29.17.3",
+    "216.198.79.3"
    ],
    "aaaa": [],
    "cname": null,
@@ -2119,7 +2120,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:30:55Z",
+   "checked": "2026-11-26T06:49:19Z",
    "title": "feeels",
    "generator": null,
    "feeds": [],
@@ -2188,7 +2189,7 @@
   }
  },
  "felionstudios.com": {
-  "checked": "2026-10-27T05:30:57Z",
+  "checked": "2026-11-26T06:49:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2210,9 +2211,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:30:57Z",
+   "checked": "2026-11-26T06:49:22Z",
    "title": "Home | FeLion Studios",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -2220,7 +2221,7 @@
   }
  },
  "fellerts.no": {
-  "checked": "2026-10-27T05:31:06Z",
+  "checked": "2026-11-26T06:49:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2242,7 +2243,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:31:06Z",
+   "checked": "2026-11-26T06:49:30Z",
    "title": "Home - Fredrik Flornes Ellertsen",
    "generator": null,
    "feeds": [],
@@ -2252,21 +2253,23 @@
   }
  },
  "felt.com": {
-  "checked": "2026-10-27T05:31:11Z",
+  "checked": "2026-11-26T06:49:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "216.24.57.1"
+    "104.21.78.96",
+    "172.67.219.239"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2606:4700:3034::6815:4e60",
+    "2606:4700:3035::ac43:dbef"
+   ],
    "cname": null,
    "ns": [
-    "ns-1145.awsdns-15.org",
-    "ns-1567.awsdns-03.co.uk",
-    "ns-243.awsdns-30.com",
-    "ns-734.awsdns-27.net"
+    "agustin.ns.cloudflare.com",
+    "frida.ns.cloudflare.com"
    ],
    "mx": true
   },
@@ -2276,7 +2279,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:31:11Z",
+   "checked": "2026-11-26T06:49:34Z",
    "title": "The map your business runs on: AI-native GIS | Felt",
    "generator": null,
    "feeds": [],
@@ -2332,7 +2335,7 @@
   }
  },
  "ferd.ca": {
-  "checked": "2026-10-27T05:31:14Z",
+  "checked": "2026-11-26T06:49:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2356,7 +2359,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:31:14Z",
+   "checked": "2026-11-26T06:49:37Z",
    "title": "ferd.ca",
    "generator": null,
    "feeds": [
@@ -2375,7 +2378,7 @@
   }
  },
  "ffffallback.com": {
-  "checked": "2026-10-27T05:31:17Z",
+  "checked": "2026-11-26T06:49:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2399,7 +2402,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'ffffallback.com'"
   },
   "home": {
-   "checked": "2026-10-27T05:31:17Z",
+   "checked": "2026-11-26T06:49:40Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2410,18 +2413,18 @@
   }
  },
  "fi-le.net": {
-  "checked": "2026-10-27T05:31:19Z",
+  "checked": "2026-11-26T06:49:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "2.57.91.33",
-    "84.32.84.179"
+    "84.32.84.160",
+    "88.222.222.121"
    ],
    "aaaa": [
-    "2a02:4780:84:4f5e:ceb2:cac0:fe6e:ebd",
-    "2a02:4780:84:f115:7b99:f4dc:a7b1:3764"
+    "2a02:4780:4b:8699:d45d:299:9af8:c76b",
+    "2a02:4780:4c:dd2:bd8f:1c52:fc9c:3b1b"
    ],
    "cname": null,
    "ns": [
@@ -2436,7 +2439,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:31:19Z",
+   "checked": "2026-11-26T06:49:42Z",
    "title": "fi-le.net - fi-le.net",
    "generator": null,
    "feeds": [
@@ -2452,7 +2455,7 @@
   }
  },
  "ficly.com": {
-  "checked": "2026-10-27T05:31:24Z",
+  "checked": "2026-11-26T06:49:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2475,7 +2478,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:31:24Z",
+   "checked": "2026-11-26T06:49:47Z",
    "title": "Ficly: A Better Shorter Story",
    "generator": null,
    "feeds": [],
@@ -2485,7 +2488,7 @@
   }
  },
  "fieldguide.gizmodo.com": {
-  "checked": "2026-10-27T05:31:27Z",
+  "checked": "2026-11-26T06:49:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2510,7 +2513,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:31:27Z",
+   "checked": "2026-11-26T06:49:49Z",
    "title": "Gizmodo | The Future Is Here",
    "generator": null,
    "feeds": [
@@ -2526,7 +2529,7 @@
   }
  },
  "fieldnotesbrand.com": {
-  "checked": "2026-10-27T05:31:30Z",
+  "checked": "2026-11-26T06:49:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2554,7 +2557,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:31:30Z",
+   "checked": "2026-11-26T06:49:52Z",
    "title": "Field Notes | Memo Books, Notebooks, Journals & Planners",
    "generator": "SEOmatic",
    "feeds": [
@@ -2570,18 +2573,18 @@
   }
  },
  "fifa.com": {
-  "checked": "2026-10-27T05:31:34Z",
+  "checked": "2026-11-26T06:49:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.119.189.208",
-    "104.119.189.241"
+    "23.33.29.147",
+    "23.33.29.151"
    ],
    "aaaa": [
-    "2600:1407:e800:19::b81e:2a8a",
-    "2600:1407:e800:19::b81e:2a92"
+    "2600:1407:3c00:5::17d5:353e",
+    "2600:1407:3c00:5::17d5:3543"
    ],
    "cname": null,
    "ns": [
@@ -2600,7 +2603,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:31:34Z",
+   "checked": "2026-11-26T06:49:55Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2610,7 +2613,7 @@
   }
  },
  "fiftyfive.one": {
-  "checked": "2026-10-27T05:31:35Z",
+  "checked": "2026-11-26T06:49:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2633,9 +2636,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:31:35Z",
+   "checked": "2026-11-26T06:49:57Z",
    "title": "FiftyFive.One - The News From Soccer’s North",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -2654,17 +2657,12 @@
   }
  },
  "fig.io": {
-  "checked": "2026-10-27T05:31:40Z",
+  "checked": "2026-11-26T06:50:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
-   "resolves": true,
-   "a": [
-    "3.171.22.38",
-    "3.171.22.69",
-    "3.171.22.97",
-    "3.171.22.105"
-   ],
+   "resolves": false,
+   "a": [],
    "aaaa": [],
    "cname": null,
    "ns": [
@@ -2676,23 +2674,24 @@
    "mx": true
   },
   "https": {
-   "reachable": true,
-   "redirects_http": true,
-   "status": 503
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:31:40Z",
+   "checked": "2026-11-26T06:50:01Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "HTTP 503"
+   "error": "does not resolve"
   }
  },
  "figamajigs.com": {
-  "checked": "2026-10-27T05:32:03Z",
+  "checked": "2026-11-26T06:50:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2715,7 +2714,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'figamajigs.com'"
   },
   "home": {
-   "checked": "2026-10-27T05:32:03Z",
+   "checked": "2026-11-26T06:50:02Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2726,7 +2725,7 @@
   }
  },
  "figr.app": {
-  "checked": "2026-10-27T05:32:06Z",
+  "checked": "2026-11-26T06:50:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2749,7 +2748,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:06Z",
+   "checked": "2026-11-26T06:50:05Z",
    "title": "figr.app - Your notepad calculator",
    "generator": null,
    "feeds": [],
@@ -2759,7 +2758,7 @@
   }
  },
  "filamenthound.com": {
-  "checked": "2026-10-27T05:32:09Z",
+  "checked": "2026-11-26T06:50:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2785,8 +2784,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:09Z",
-   "title": "FilamentHound - Best Prices on 3D Printing Filament",
+   "checked": "2026-11-26T06:50:08Z",
+   "title": "Filament Price Tracker & Comparison | FilamentHound",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -2831,7 +2830,7 @@
   "rdap_error": "no RDAP service for .io"
  },
  "files.spritely.institute": {
-  "checked": "2026-10-27T05:32:12Z",
+  "checked": "2026-11-26T06:50:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2852,7 +2851,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:12Z",
+   "checked": "2026-11-26T06:50:11Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2862,7 +2861,7 @@
   }
  },
  "filestash.app": {
-  "checked": "2026-10-27T05:32:15Z",
+  "checked": "2026-11-26T06:50:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2879,24 +2878,22 @@
    "mx": true
   },
   "https": {
-   "reachable": false,
-   "redirects_http": false,
-   "status": null,
-   "error": "tls: Hostname mismatch, certificate is not valid for 'filestash.app'"
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:15Z",
-   "title": null,
+   "checked": "2026-11-26T06:50:14Z",
+   "title": "Filestash — Self-hosted client for your data",
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null,
-   "error": "tls: Hostname mismatch, certificate is not valid for 'filestash.app'"
+   "webmention": null
   }
  },
  "filippo.io": {
-  "checked": "2026-10-27T05:32:17Z",
+  "checked": "2026-11-26T06:50:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2922,7 +2919,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:17Z",
+   "checked": "2026-11-26T06:50:17Z",
    "title": "Filippo Valsorda",
    "generator": null,
    "feeds": [],
@@ -2937,16 +2934,19 @@
   }
  },
  "finance-commerce.com": {
-  "checked": "2026-10-27T05:32:19Z",
+  "checked": "2026-11-26T06:50:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "141.193.213.20",
-    "141.193.213.21"
+    "104.18.2.178",
+    "104.18.3.178"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2606:4700::6812:2b2",
+    "2606:4700::6812:3b2"
+   ],
    "cname": null,
    "ns": [
     "aspen.ns.cloudflare.com",
@@ -2960,7 +2960,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:19Z",
+   "checked": "2026-11-26T06:50:20Z",
    "title": "Finance & Commerce",
    "generator": "WordPress",
    "feeds": [
@@ -2968,11 +2968,6 @@
      "type": "rss",
      "url": "https://finance-commerce.com/feed/",
      "title": "Finance & Commerce » Feed"
-    },
-    {
-     "type": "rss",
-     "url": "https://finance-commerce.com/comments/feed/",
-     "title": "Finance & Commerce » Comments Feed"
     }
    ],
    "hcard": false,
@@ -3014,7 +3009,7 @@
   }
  },
  "findarticles.com": {
-  "checked": "2026-10-27T05:32:22Z",
+  "checked": "2026-11-26T06:50:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3042,9 +3037,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:22Z",
-   "title": "FindArticles: News & Information That Matters",
-   "generator": "Elementor 3.32.5; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap",
+   "checked": "2026-11-26T06:50:22Z",
+   "title": "FindArticles – News & Information That Matters",
+   "generator": "WP Rocket 3.24.2",
    "feeds": [
     {
      "type": "rss",
@@ -3058,7 +3053,7 @@
   }
  },
  "finger.farm": {
-  "checked": "2026-10-27T05:32:23Z",
+  "checked": "2026-11-26T06:50:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3080,7 +3075,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:23Z",
+   "checked": "2026-11-26T06:50:24Z",
    "title": "Finger.Farm - Advanced Finger Protocol Hosting",
    "generator": null,
    "feeds": [],
@@ -3090,7 +3085,7 @@
   }
  },
  "fireballed.org": {
-  "checked": "2026-10-27T05:32:27Z",
+  "checked": "2026-11-26T06:50:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3113,7 +3108,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:27Z",
+   "checked": "2026-11-26T06:50:27Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3123,7 +3118,7 @@
   }
  },
  "firecracker-microvm.github.io": {
-  "checked": "2026-10-27T05:32:28Z",
+  "checked": "2026-11-26T06:50:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3150,7 +3145,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:28Z",
+   "checked": "2026-11-26T06:50:29Z",
    "title": "Firecracker",
    "generator": null,
    "feeds": [],
@@ -3160,14 +3155,14 @@
   }
  },
  "firehose3d.theo.io": {
-  "checked": "2026-10-27T05:32:31Z",
+  "checked": "2026-11-26T06:50:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "66.33.60.67",
-    "76.76.21.98"
+    "66.33.60.34",
+    "76.76.21.164"
    ],
    "aaaa": [],
    "cname": "cname.vercel-dns.com",
@@ -3180,7 +3175,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:31Z",
+   "checked": "2026-11-26T06:50:32Z",
    "title": "Bluesky Firehose in 3D (live)",
    "generator": null,
    "feeds": [],
@@ -3230,7 +3225,7 @@
   }
  },
  "fireuploader.com": {
-  "checked": "2026-10-27T05:32:34Z",
+  "checked": "2026-11-26T06:50:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3256,7 +3251,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:34Z",
+   "checked": "2026-11-26T06:50:35Z",
    "title": "Give me five stars",
    "generator": null,
    "feeds": [],
@@ -3266,7 +3261,7 @@
   }
  },
  "firewood.com": {
-  "checked": "2026-10-27T05:32:36Z",
+  "checked": "2026-11-26T06:50:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3276,10 +3271,7 @@
    ],
    "aaaa": [],
    "cname": null,
-   "ns": [
-    "ns69.worldnic.com",
-    "ns70.worldnic.com"
-   ],
+   "ns": [],
    "mx": true
   },
   "https": {
@@ -3288,7 +3280,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:36Z",
+   "checked": "2026-11-26T06:50:36Z",
    "title": "Firewood For Sale - Wood For Fireplaces - Smokers - BBQ - Restaurants",
    "generator": "Advanced Coupons for WooCommerce Free v4.7.6.1",
    "feeds": [
@@ -3309,7 +3301,7 @@
   }
  },
  "firstfivefollowers.com": {
-  "checked": "2026-10-27T05:32:39Z",
+  "checked": "2026-11-26T06:50:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3328,7 +3320,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:32:39Z",
+   "checked": "2026-11-26T06:50:39Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3339,14 +3331,14 @@
   }
  },
  "firstgiving.com": {
-  "checked": "2026-10-27T05:32:40Z",
+  "checked": "2026-11-26T06:50:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "3.16.87.20",
-    "18.221.146.191"
+    "3.136.252.12",
+    "13.184.202.135"
    ],
    "aaaa": [],
    "cname": null,
@@ -3364,7 +3356,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:40Z",
+   "checked": "2026-11-26T06:50:40Z",
    "title": "FirstGiving is now part of FrontStream | Simplify Fundraising Events",
    "generator": "HubSpot",
    "feeds": [],
@@ -3374,7 +3366,7 @@
   }
  },
  "firstlook.org": {
-  "checked": "2026-10-27T05:32:45Z",
+  "checked": "2026-11-26T06:50:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3397,7 +3389,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:45Z",
+   "checked": "2026-11-26T06:50:45Z",
    "title": "Outerlight Entertainment",
    "generator": null,
    "feeds": [],
@@ -3453,7 +3445,7 @@
   }
  },
  "fisher-price.com": {
-  "checked": "2026-10-27T05:32:47Z",
+  "checked": "2026-11-26T06:50:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3481,7 +3473,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:32:47Z",
+   "checked": "2026-11-26T06:50:46Z",
    "title": "Fisher Price Toys & Baby Gear | Mattel Shop",
    "generator": null,
    "feeds": [],
@@ -3491,7 +3483,7 @@
   }
  },
  "fishingbuddy.com": {
-  "checked": "2026-10-27T05:32:52Z",
+  "checked": "2026-11-26T06:50:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3514,7 +3506,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T05:32:52Z",
+   "checked": "2026-11-26T06:50:51Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3565,7 +3557,7 @@
   }
  },
  "fitbit.com": {
-  "checked": "2026-10-27T05:33:23Z",
+  "checked": "2026-11-26T06:51:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3589,7 +3581,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:33:23Z",
+   "checked": "2026-11-26T06:51:23Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3599,7 +3591,7 @@
   }
  },
  "fitzgeraldtheater.publicradio.org": {
-  "checked": "2026-10-27T05:33:28Z",
+  "checked": "2026-11-26T06:51:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3618,7 +3610,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:33:28Z",
+   "checked": "2026-11-26T06:51:27Z",
    "title": "Events | Minnesota Public Radio",
    "generator": null,
    "feeds": [],
@@ -3628,7 +3620,7 @@
   }
  },
  "fivethirtyeight.blogs.nytimes.com": {
-  "checked": "2026-10-27T05:33:30Z",
+  "checked": "2026-11-26T06:51:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3650,7 +3642,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:33:30Z",
+   "checked": "2026-11-26T06:51:28Z",
    "title": "U.S. Politics - The New York Times",
    "generator": null,
    "feeds": [
@@ -3714,7 +3706,7 @@
   }
  },
  "fixiejs.com": {
-  "checked": "2026-10-27T05:33:34Z",
+  "checked": "2026-11-26T06:51:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3740,7 +3732,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:33:34Z",
+   "checked": "2026-11-26T06:51:33Z",
    "title": "FixieJs Blog |",
    "generator": null,
    "feeds": [
@@ -3761,7 +3753,7 @@
   }
  },
  "fixmyfund.com": {
-  "checked": "2026-10-27T05:33:37Z",
+  "checked": "2026-11-26T06:51:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3786,7 +3778,7 @@
    "error": "tls: unable to get local issuer certificate"
   },
   "home": {
-   "checked": "2026-10-27T05:33:37Z",
+   "checked": "2026-11-26T06:51:36Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3797,7 +3789,7 @@
   }
  },
  "fixtunes.com": {
-  "checked": "2026-10-27T05:33:39Z",
+  "checked": "2026-11-26T06:51:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3816,7 +3808,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:33:39Z",
+   "checked": "2026-11-26T06:51:38Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3827,7 +3819,7 @@
   }
  },
  "fizzy.do": {
-  "checked": "2026-10-27T05:33:41Z",
+  "checked": "2026-11-26T06:51:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3850,7 +3842,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:33:41Z",
+   "checked": "2026-11-26T06:51:39Z",
    "title": "Fizzy — Kanban as it should be. Not as it has been.",
    "generator": null,
    "feeds": [],
@@ -3860,7 +3852,7 @@
   }
  },
  "flagicons.lipis.dev": {
-  "checked": "2026-10-27T05:33:43Z",
+  "checked": "2026-11-26T06:51:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3887,7 +3879,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:33:43Z",
+   "checked": "2026-11-26T06:51:42Z",
    "title": "flag-icons: Free Country Flags in SVG",
    "generator": null,
    "feeds": [],
@@ -3897,7 +3889,7 @@
   }
  },
  "flamedfury.com": {
-  "checked": "2026-10-27T05:33:46Z",
+  "checked": "2026-11-26T06:51:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3906,7 +3898,7 @@
     "38.142.94.218"
    ],
    "aaaa": [
-    "2400:52e0:1a00::1232:1"
+    "2001:550:2:dc::5e:2"
    ],
    "cname": null,
    "ns": [
@@ -3921,7 +3913,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:33:46Z",
+   "checked": "2026-11-26T06:51:44Z",
    "title": "fLaMEd fury",
    "generator": "Eleventy v3.1.6",
    "feeds": [
@@ -3977,7 +3969,7 @@
   }
  },
  "flamingodao.xyz": {
-  "checked": "2026-10-27T05:33:49Z",
+  "checked": "2026-11-26T06:51:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3999,7 +3991,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:33:49Z",
+   "checked": "2026-11-26T06:51:47Z",
    "title": "Flamingo DAO",
    "generator": null,
    "feeds": [],
@@ -4009,7 +4001,7 @@
   }
  },
  "flat-earth.ece.cmu.edu": {
-  "checked": "2026-10-27T05:33:52Z",
+  "checked": "2026-11-26T06:51:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4028,7 +4020,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:33:52Z",
+   "checked": "2026-11-26T06:51:50Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4039,7 +4031,7 @@
   }
  },
  "flatpanelshd.com": {
-  "checked": "2026-10-27T05:33:52Z",
+  "checked": "2026-11-26T06:51:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4065,7 +4057,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:33:52Z",
+   "checked": "2026-11-26T06:51:50Z",
    "title": "FlatpanelsHD - Guide to TVs, media streamers & monitors",
    "generator": null,
    "feeds": [
@@ -4086,7 +4078,7 @@
   }
  },
  "fletcherpenney.net": {
-  "checked": "2026-10-27T05:33:56Z",
+  "checked": "2026-11-26T06:51:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4110,7 +4102,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:33:56Z",
+   "checked": "2026-11-26T06:51:54Z",
    "title": "Home --- fletcherpenney.net",
    "generator": null,
    "feeds": [
@@ -4187,7 +4179,7 @@
   }
  },
  "flightaware.com": {
-  "checked": "2026-10-27T05:34:01Z",
+  "checked": "2026-11-26T06:51:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4213,7 +4205,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:01Z",
+   "checked": "2026-11-26T06:51:59Z",
    "title": "FlightAware - Flight Tracker / Flight Status",
    "generator": null,
    "feeds": [],
@@ -4223,7 +4215,7 @@
   }
  },
  "flightradar24.com": {
-  "checked": "2026-10-27T05:34:02Z",
+  "checked": "2026-11-26T06:52:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4249,7 +4241,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:02Z",
+   "checked": "2026-11-26T06:52:00Z",
    "title": "Flightradar24: Live Flight Tracker - Real-Time Flight Tracker Map | Flightradar24",
    "generator": null,
    "feeds": [],
@@ -4259,7 +4251,7 @@
   }
  },
  "flix.dev": {
-  "checked": "2026-10-27T05:34:04Z",
+  "checked": "2026-11-26T06:52:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4283,7 +4275,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:04Z",
+   "checked": "2026-11-26T06:52:02Z",
    "title": "The Flix Programming Language",
    "generator": null,
    "feeds": [],
@@ -4293,7 +4285,7 @@
   }
  },
  "floatingsheep.org": {
-  "checked": "2026-10-27T05:34:07Z",
+  "checked": "2026-11-26T06:52:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4319,7 +4311,7 @@
    "error": "tls: UNEXPECTED_EOF_WHILE_READING"
   },
   "home": {
-   "checked": "2026-10-27T05:34:07Z",
+   "checked": "2026-11-26T06:52:04Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4330,7 +4322,7 @@
   }
  },
  "floodgap.com": {
-  "checked": "2026-10-27T05:34:08Z",
+  "checked": "2026-11-26T06:52:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4353,7 +4345,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'floodgap.com'"
   },
   "home": {
-   "checked": "2026-10-27T05:34:08Z",
+   "checked": "2026-11-26T06:52:05Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4364,7 +4356,7 @@
   }
  },
  "florinouns.xyz": {
-  "checked": "2026-10-27T05:34:11Z",
+  "checked": "2026-11-26T06:52:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4387,7 +4379,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:11Z",
+   "checked": "2026-11-26T06:52:08Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4397,13 +4389,13 @@
   }
  },
  "flow.microsoft.com": {
-  "checked": "2026-10-27T05:34:13Z",
+  "checked": "2026-11-26T06:52:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "150.171.110.211"
+    "150.171.109.183"
    ],
    "aaaa": [
     "2603:1061:14:b6::1"
@@ -4418,7 +4410,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:13Z",
+   "checked": "2026-11-26T06:52:10Z",
    "title": "Microsoft Power Automate",
    "generator": null,
    "feeds": [],
@@ -4472,7 +4464,7 @@
   }
  },
  "fluentcpp.com": {
-  "checked": "2026-10-27T05:34:16Z",
+  "checked": "2026-11-26T06:52:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4494,7 +4486,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:16Z",
+   "checked": "2026-11-26T06:52:12Z",
    "title": "Fluent C++ - Jonathan Boccara's blog",
    "generator": "WordPress 7.1.3",
    "feeds": [],
@@ -4504,7 +4496,7 @@
   }
  },
  "fluid.com": {
-  "checked": "2026-10-27T05:34:19Z",
+  "checked": "2026-11-26T06:52:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4524,20 +4516,21 @@
   "https": {
    "reachable": true,
    "redirects_http": true,
-   "status": 200
+   "status": 999
   },
   "home": {
-   "checked": "2026-10-27T05:34:19Z",
-   "title": "Joshua Schoen - Greater Phoenix Area | Professional Profile | LinkedIn",
+   "checked": "2026-11-26T06:52:16Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 999"
   }
  },
  "fluidwatermeter.com": {
-  "checked": "2026-10-27T05:34:24Z",
+  "checked": "2026-11-26T06:52:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4556,7 +4549,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:34:24Z",
+   "checked": "2026-11-26T06:52:20Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4644,7 +4637,7 @@
   }
  },
  "flylyf.com": {
-  "checked": "2026-10-27T05:34:25Z",
+  "checked": "2026-11-26T06:52:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4667,7 +4660,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:25Z",
+   "checked": "2026-11-26T06:52:21Z",
    "title": "Flylyf (@flylyf) on Flipboard",
    "generator": null,
    "feeds": [
@@ -4683,7 +4676,7 @@
   }
  },
  "flynnlives.com": {
-  "checked": "2026-10-27T05:34:28Z",
+  "checked": "2026-11-26T06:52:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4706,7 +4699,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:28Z",
+   "checked": "2026-11-26T06:52:24Z",
    "title": "42 Entertainment",
    "generator": null,
    "feeds": [],
@@ -4716,7 +4709,7 @@
   }
  },
  "flyspy.com": {
-  "checked": "2026-10-27T05:34:32Z",
+  "checked": "2026-11-26T06:52:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4741,7 +4734,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'flyspy.com'"
   },
   "home": {
-   "checked": "2026-10-27T05:34:32Z",
+   "checked": "2026-11-26T06:52:28Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4752,7 +4745,7 @@
   }
  },
  "fodnyc.org": {
-  "checked": "2026-10-27T05:34:34Z",
+  "checked": "2026-11-26T06:52:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4776,7 +4769,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:34Z",
+   "checked": "2026-11-26T06:52:30Z",
    "title": "Future of Design NYC",
    "generator": "WordPress.com",
    "feeds": [
@@ -4797,7 +4790,7 @@
   }
  },
  "foldershare.com": {
-  "checked": "2026-10-27T05:34:36Z",
+  "checked": "2026-11-26T06:52:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4820,7 +4813,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:34:36Z",
+   "checked": "2026-11-26T06:52:32Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4831,7 +4824,7 @@
   }
  },
  "foldifyapp.com": {
-  "checked": "2026-10-27T05:34:36Z",
+  "checked": "2026-11-26T06:52:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4854,7 +4847,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'foldifyapp.com'"
   },
   "home": {
-   "checked": "2026-10-27T05:34:36Z",
+   "checked": "2026-11-26T06:52:33Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4907,13 +4900,13 @@
   }
  },
  "folklore.org": {
-  "checked": "2026-10-27T05:34:41Z",
+  "checked": "2026-11-26T06:52:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "150.171.109.178"
+    "150.171.109.183"
    ],
    "aaaa": [
     "2603:1061:14:b6::1"
@@ -4931,7 +4924,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:41Z",
+   "checked": "2026-11-26T06:52:37Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4941,7 +4934,7 @@
   }
  },
  "fomonouns.wtf": {
-  "checked": "2026-10-27T05:34:44Z",
+  "checked": "2026-11-26T06:52:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4966,7 +4959,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:44Z",
+   "checked": "2026-11-26T06:52:39Z",
    "title": "FOMO Nouns",
    "generator": null,
    "feeds": [],
@@ -4976,7 +4969,7 @@
   }
  },
  "fontspring.com": {
-  "checked": "2026-10-27T05:34:48Z",
+  "checked": "2026-11-26T06:52:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5002,7 +4995,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:48Z",
+   "checked": "2026-11-26T06:52:42Z",
    "title": "Fontspring. Worry-Free fonts for everyone.",
    "generator": null,
    "feeds": [
@@ -5018,16 +5011,16 @@
   }
  },
  "fooda.com": {
-  "checked": "2026-10-27T05:34:49Z",
+  "checked": "2026-11-26T06:52:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "34.207.10.97",
-    "52.205.110.167",
-    "54.152.195.109",
-    "100.27.85.32"
+    "32.194.126.133",
+    "98.90.222.63",
+    "100.61.67.7",
+    "100.61.249.165"
    ],
    "aaaa": [],
    "cname": null,
@@ -5045,7 +5038,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:49Z",
+   "checked": "2026-11-26T06:52:44Z",
    "title": "Office Lunch Services | Fooda",
    "generator": null,
    "feeds": [],
@@ -5055,7 +5048,7 @@
   }
  },
  "foodandwine.com": {
-  "checked": "2026-10-27T05:34:51Z",
+  "checked": "2026-11-26T06:52:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5082,7 +5075,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:51Z",
+   "checked": "2026-11-26T06:52:45Z",
    "title": "Food & Wine: Rigorously tested recipes and trusted culinary content",
    "generator": null,
    "feeds": [
@@ -5135,7 +5128,7 @@
   }
  },
  "foodpress.com": {
-  "checked": "2026-10-27T05:34:52Z",
+  "checked": "2026-11-26T06:52:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5159,7 +5152,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:52Z",
+   "checked": "2026-11-26T06:52:47Z",
    "title": "Private Site",
    "generator": null,
    "feeds": [],
@@ -5169,7 +5162,7 @@
   }
  },
  "foodsafetynews.com": {
-  "checked": "2026-10-27T05:34:55Z",
+  "checked": "2026-11-26T06:52:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5195,9 +5188,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:55Z",
+   "checked": "2026-11-26T06:52:50Z",
    "title": "Home | Food Safety News",
-   "generator": "Ghost 6.73",
+   "generator": "Ghost 6.80",
    "feeds": [
     {
      "type": "rss",
@@ -5211,7 +5204,7 @@
   }
  },
  "foodsense.is": {
-  "checked": "2026-10-27T05:34:58Z",
+  "checked": "2026-11-26T06:52:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5237,9 +5230,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:34:58Z",
+   "checked": "2026-11-26T06:52:52Z",
    "title": "Home - Food Sense",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -5258,16 +5251,16 @@
   }
  },
  "foodwishes.blogspot.com": {
-  "checked": "2026-10-27T05:35:02Z",
+  "checked": "2026-11-26T06:52:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.250.189.129"
+    "142.251.211.1"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81c::2001"
+    "2607:f8b0:4009:802::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -5279,7 +5272,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:35:02Z",
+   "checked": "2026-11-26T06:52:56Z",
    "title": "Food Wishes Video Recipes",
    "generator": "blogger",
    "feeds": [
@@ -5300,7 +5293,7 @@
   }
  },
  "fooledbyrandomness.com": {
-  "checked": "2026-10-27T05:35:04Z",
+  "checked": "2026-11-26T06:52:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5322,7 +5315,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:35:04Z",
+   "checked": "2026-11-26T06:52:59Z",
    "title": "Nassim Nicholas Taleb Home & Professional Page",
    "generator": null,
    "feeds": [],
@@ -5332,7 +5325,7 @@
   }
  },
  "foosel.org": {
-  "checked": "2026-10-27T05:35:07Z",
+  "checked": "2026-11-26T06:53:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5358,7 +5351,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'foosel.org'"
   },
   "home": {
-   "checked": "2026-10-27T05:35:07Z",
+   "checked": "2026-11-26T06:53:01Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5369,7 +5362,7 @@
   }
  },
  "fora.tv": {
-  "checked": "2026-10-27T05:35:12Z",
+  "checked": "2026-11-26T06:53:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5395,7 +5388,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:35:12Z",
+   "checked": "2026-11-26T06:53:06Z",
    "title": "Vaoroi TV – Link xem trực tiếp bóng đá Vào Rồi TV full HD miễn phí",
    "generator": "WordPress 5.9.18",
    "feeds": [],
@@ -5461,7 +5454,7 @@
   }
  },
  "forbrukerradet.no": {
-  "checked": "2026-10-27T05:35:14Z",
+  "checked": "2026-11-26T06:53:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5486,9 +5479,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:35:14Z",
+   "checked": "2026-11-26T06:53:08Z",
    "title": "Forside – Forbrukerrådet",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -5496,7 +5489,7 @@
   }
  },
  "fordhaminstitute.org": {
-  "checked": "2026-10-27T05:35:20Z",
+  "checked": "2026-11-26T06:53:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5524,7 +5517,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:35:20Z",
+   "checked": "2026-11-26T06:53:13Z",
    "title": "The Thomas B. Fordham Institute",
    "generator": "Drupal 9 (https://www.drupal.org)",
    "feeds": [],
@@ -5576,7 +5569,7 @@
   }
  },
  "foreignpolicy.com": {
-  "checked": "2026-10-27T05:35:23Z",
+  "checked": "2026-11-26T06:53:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5604,9 +5597,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:35:23Z",
+   "checked": "2026-11-26T06:53:15Z",
    "title": "Foreign Policy – the Global Magazine of News and Ideas",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -5653,7 +5646,7 @@
   }
  },
  "forksoverknives.com": {
-  "checked": "2026-10-27T05:35:26Z",
+  "checked": "2026-11-26T06:53:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5676,17 +5669,28 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:35:26Z",
-   "title": "The Leader in Plant-Based Living – Forks Over Knives",
+   "checked": "2026-11-26T06:53:18Z",
+   "title": "The Leader in Plant-Based Living - Forks Over Knives",
    "generator": null,
-   "feeds": [],
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.forksoverknives.com/feed/",
+     "title": "Forks Over Knives » Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://www.forksoverknives.com/comments/feed/",
+     "title": "Forks Over Knives » Comments Feed"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
    "webmention": null
   }
  },
  "formassembly.com": {
-  "checked": "2026-10-27T05:35:29Z",
+  "checked": "2026-11-26T06:53:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5711,9 +5715,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:35:29Z",
+   "checked": "2026-11-26T06:53:19Z",
    "title": "FormAssembly | Secure Web Forms & Salesforce Data Collection",
-   "generator": "WP Rocket 3.23.5.1",
+   "generator": "WP Rocket 3.24.2",
    "feeds": [
     {
      "type": "rss",
@@ -5737,7 +5741,7 @@
   }
  },
  "formito.com": {
-  "checked": "2026-10-27T05:35:31Z",
+  "checked": "2026-11-26T06:53:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5762,7 +5766,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:35:31Z",
+   "checked": "2026-11-26T06:53:21Z",
    "title": "A Chatbot Builder to Replace Your Website Forms — Formito",
    "generator": null,
    "feeds": [],
@@ -5772,7 +5776,7 @@
   }
  },
  "formsubmit.co": {
-  "checked": "2026-10-27T05:35:33Z",
+  "checked": "2026-11-26T06:53:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5798,7 +5802,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:35:33Z",
+   "checked": "2026-11-26T06:53:23Z",
    "title": "FormSubmit | Easy to use form backend - form endpoints for your HTML forms",
    "generator": null,
    "feeds": [],
@@ -5808,7 +5812,7 @@
   }
  },
  "fornetto.com": {
-  "checked": "2026-10-27T05:35:36Z",
+  "checked": "2026-11-26T06:53:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5832,9 +5836,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:35:36Z",
+   "checked": "2026-11-26T06:53:26Z",
    "title": "Fornetto - smokers, grills, kamados and accessories",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -5985,20 +5989,18 @@
   }
  },
  "forum.makerdao.com": {
-  "checked": "2026-10-27T05:35:45Z",
+  "checked": "2026-11-26T06:53:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.26.14.15",
-    "104.26.15.15",
-    "172.67.74.86"
+    "104.21.7.179",
+    "172.67.137.37"
    ],
    "aaaa": [
-    "2606:4700:20::681a:e0f",
-    "2606:4700:20::681a:f0f",
-    "2606:4700:20::ac43:4a56"
+    "2606:4700:3034::6815:7b3",
+    "2606:4700:3036::ac43:8925"
    ],
    "cname": null,
    "ns": [],
@@ -6010,9 +6012,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:35:45Z",
+   "checked": "2026-11-26T06:53:33Z",
    "title": "Sky Forum - Transparent and sustainable finance",
-   "generator": "Discourse 2026.10.0-latest.1 - https://github.com/discourse/discourse version c93049d4af8324b1f8e3a76f178083959d8a5fa0",
+   "generator": "Discourse 2026.11.0-latest.2 - https://github.com/discourse/discourse version 6909203b9a0edd64f818886c0b5bbd1df595782c",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -6020,7 +6022,7 @@
   }
  },
  "forum.piwik.org": {
-  "checked": "2026-10-27T05:35:48Z",
+  "checked": "2026-11-26T06:53:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6039,9 +6041,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:35:48Z",
+   "checked": "2026-11-26T06:53:35Z",
    "title": "Matomo forums",
-   "generator": "Discourse 2026.7.4 - https://github.com/discourse/discourse version b20f7267b131e4f3c90d84ff3474138eef416eab",
+   "generator": "Discourse 2026.7.7 - https://github.com/discourse/discourse version 78d7551ae8add99c89768afbc8b351eb34219d14",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -6049,7 +6051,7 @@
   }
  },
  "forums.cacti.net": {
-  "checked": "2026-10-27T05:35:53Z",
+  "checked": "2026-11-26T06:53:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6065,20 +6067,21 @@
   "https": {
    "reachable": true,
    "redirects_http": true,
-   "status": 200
+   "status": 403
   },
   "home": {
-   "checked": "2026-10-27T05:35:53Z",
-   "title": "Cacti - Index page",
+   "checked": "2026-11-26T06:53:40Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 403"
   }
  },
  "forums.juniper.net": {
-  "checked": "2026-10-27T05:35:56Z",
+  "checked": "2026-11-26T06:53:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6099,7 +6102,7 @@
    "error": "dns: name does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:35:56Z",
+   "checked": "2026-11-26T06:53:42Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6110,7 +6113,7 @@
   }
  },
  "forums.macrumors.com": {
-  "checked": "2026-10-27T05:35:59Z",
+  "checked": "2026-11-26T06:53:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6133,7 +6136,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:35:59Z",
+   "checked": "2026-11-26T06:53:45Z",
    "title": "Apple, Mac, iPhone Discussion | MacRumors Forums",
    "generator": null,
    "feeds": [],
@@ -6143,7 +6146,7 @@
   }
  },
  "forums.omnigroup.com": {
-  "checked": "2026-10-27T05:36:02Z",
+  "checked": "2026-11-26T06:53:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6163,7 +6166,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T05:36:02Z",
+   "checked": "2026-11-26T06:53:48Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6174,7 +6177,7 @@
   }
  },
  "forwarddomain.net": {
-  "checked": "2026-10-27T05:36:34Z",
+  "checked": "2026-11-26T06:54:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6199,7 +6202,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:36:34Z",
+   "checked": "2026-11-26T06:54:19Z",
    "title": "Forward Domain Using DNS | Free HTTPS URL Redirect Service",
    "generator": "Gatsby 5.13.7",
    "feeds": [],
@@ -6209,18 +6212,18 @@
   }
  },
  "foryou.micro.blog": {
-  "checked": "2026-10-27T05:36:35Z",
+  "checked": "2026-11-26T06:54:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.200.22.214"
+    "173.255.203.22"
    ],
    "aaaa": [
-    "2600:3c00:1::68c8:16d6"
+    "2600:3c00::f03c:92ff:fe6c:496"
    ],
-   "cname": "nb-104-200-22-214.dallas.nodebalancer.linode.com",
+   "cname": "li213-22.members.linode.com",
    "ns": [],
    "mx": false
   },
@@ -6230,7 +6233,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:36:35Z",
+   "checked": "2026-11-26T06:54:21Z",
    "title": "For You",
    "generator": "Hugo 0.91.2",
    "feeds": [
@@ -6294,7 +6297,7 @@
   }
  },
  "fotoforensics.com": {
-  "checked": "2026-10-27T05:36:38Z",
+  "checked": "2026-11-26T06:54:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6322,7 +6325,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:36:38Z",
+   "checked": "2026-11-26T06:54:23Z",
    "title": "FotoForensics",
    "generator": null,
    "feeds": [],
@@ -6373,7 +6376,7 @@
   }
  },
  "foundersatwork.posthaven.com": {
-  "checked": "2026-10-27T05:36:41Z",
+  "checked": "2026-11-26T06:54:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6394,7 +6397,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:36:41Z",
+   "checked": "2026-11-26T06:54:26Z",
    "title": "Jessica Livingston",
    "generator": null,
    "feeds": [
@@ -6410,14 +6413,14 @@
   }
  },
  "founderscard.com": {
-  "checked": "2026-10-27T05:36:44Z",
+  "checked": "2026-11-26T06:54:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "3.220.34.126",
-    "50.19.222.57"
+    "3.233.227.212",
+    "98.83.58.66"
    ],
    "aaaa": [],
    "cname": null,
@@ -6435,7 +6438,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:36:44Z",
+   "checked": "2026-11-26T06:54:29Z",
    "title": "FoundersCard",
    "generator": null,
    "feeds": [],
@@ -6489,49 +6492,44 @@
   }
  },
  "fowling.org": {
-  "checked": "2026-10-27T05:36:47Z",
+  "checked": "2026-11-26T06:54:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
-   "resolves": true,
-   "a": [
-    "2.59.170.20",
-    "104.219.250.37"
-   ],
+   "resolves": false,
+   "a": [],
    "aaaa": [],
    "cname": null,
-   "ns": [
-    "ns1.lander.d.parity.domains",
-    "ns2.lander.d.parity.domains"
-   ],
-   "mx": false
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
   },
   "https": {
    "reachable": false,
    "redirects_http": false,
    "status": null,
-   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+   "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:36:47Z",
+   "checked": "2026-11-26T06:54:32Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+   "error": "does not resolve"
   }
  },
  "fox26houston.com": {
-  "checked": "2026-10-27T05:37:19Z",
+  "checked": "2026-11-26T06:54:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.46.176.12",
-    "23.46.176.59"
+    "23.200.156.134",
+    "23.200.156.149"
    ],
    "aaaa": [
     "2600:1407:3c00:1868::17dc:9014",
@@ -6556,7 +6554,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:37:19Z",
+   "checked": "2026-11-26T06:54:32Z",
    "title": "FOX 26 Houston | Local News, Weather, and Live Streams | KRIV",
    "generator": null,
    "feeds": [
@@ -6667,13 +6665,13 @@
   }
  },
  "foxnews.com": {
-  "checked": "2026-10-27T05:37:21Z",
+  "checked": "2026-11-26T06:54:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.14.93.136"
+    "23.54.41.108"
    ],
    "aaaa": [],
    "cname": null,
@@ -6695,7 +6693,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:37:21Z",
+   "checked": "2026-11-26T06:54:34Z",
    "title": "Fox News - Breaking News Updates | Latest News Headlines | Photos & News Videos",
    "generator": null,
    "feeds": [
@@ -6711,7 +6709,7 @@
   }
  },
  "fractal.garden": {
-  "checked": "2026-10-27T05:37:23Z",
+  "checked": "2026-11-26T06:54:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6737,7 +6735,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:37:23Z",
+   "checked": "2026-11-26T06:54:37Z",
    "title": "Fractal Garden | Interactive Fractal Explorers",
    "generator": null,
    "feeds": [],
@@ -6797,7 +6795,7 @@
   }
  },
  "fractional.art": {
-  "checked": "2026-10-27T05:37:26Z",
+  "checked": "2026-11-26T06:54:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6814,32 +6812,33 @@
    "mx": true
   },
   "https": {
-   "reachable": true,
-   "redirects_http": true,
-   "status": 404
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
   },
   "home": {
-   "checked": "2026-10-27T05:37:26Z",
+   "checked": "2026-11-26T06:54:39Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "HTTP 404"
+   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
   }
  },
  "fractureme.com": {
-  "checked": "2026-10-27T05:37:29Z",
+  "checked": "2026-11-26T06:54:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "13.32.205.90",
-    "13.32.205.105",
-    "13.32.205.117",
-    "13.32.205.127"
+    "99.84.203.11",
+    "99.84.203.14",
+    "99.84.203.46",
+    "99.84.203.75"
    ],
    "aaaa": [],
    "cname": null,
@@ -6857,7 +6856,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:37:29Z",
+   "checked": "2026-11-26T06:54:41Z",
    "title": "Glass Pictures | Single Photo Print | Gallery Walls | Fracture",
    "generator": null,
    "feeds": [],
@@ -6867,7 +6866,7 @@
   }
  },
  "fraidyc.at": {
-  "checked": "2026-10-27T05:37:32Z",
+  "checked": "2026-11-26T06:54:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6893,7 +6892,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:37:32Z",
+   "checked": "2026-11-26T06:54:43Z",
    "title": "Fraidycat",
    "generator": null,
    "feeds": [
@@ -6911,7 +6910,7 @@
   }
  },
  "frameos.net": {
-  "checked": "2026-10-27T05:37:35Z",
+  "checked": "2026-11-26T06:54:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6937,7 +6936,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:37:35Z",
+   "checked": "2026-11-26T06:54:46Z",
    "title": "FrameOS - The operating system for smart frames",
    "generator": null,
    "feeds": [],
@@ -6947,7 +6946,7 @@
   }
  },
  "framethink.wordpress.com": {
-  "checked": "2026-10-27T05:37:38Z",
+  "checked": "2026-11-26T06:54:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6967,7 +6966,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:37:38Z",
+   "checked": "2026-11-26T06:54:48Z",
    "title": "FrameThink | Frameworks for Thinking People",
    "generator": "WordPress.com",
    "feeds": [
@@ -6988,7 +6987,7 @@
   }
  },
  "franconia.org": {
-  "checked": "2026-10-27T05:37:40Z",
+  "checked": "2026-11-26T06:54:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7010,7 +7009,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:37:40Z",
+   "checked": "2026-11-26T06:54:51Z",
    "title": "Franconia Sculpture Park",
    "generator": "Child Theme for Divi v.1.0",
    "feeds": [
@@ -7087,7 +7086,7 @@
   }
  },
  "franken.senate.gov": {
-  "checked": "2026-10-27T05:37:44Z",
+  "checked": "2026-11-26T06:54:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7106,7 +7105,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:37:44Z",
+   "checked": "2026-11-26T06:54:55Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7117,7 +7116,7 @@
   }
  },
  "franktisellano.github.io": {
-  "checked": "2026-10-27T05:37:44Z",
+  "checked": "2026-11-26T06:54:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7144,7 +7143,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-27T05:37:44Z",
+   "checked": "2026-11-26T06:54:55Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7155,7 +7154,7 @@
   }
  },
  "frappe.github.io": {
-  "checked": "2026-10-27T05:37:47Z",
+  "checked": "2026-11-26T06:54:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7182,7 +7181,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-27T05:37:47Z",
+   "checked": "2026-11-26T06:54:57Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7193,7 +7192,7 @@
   }
  },
  "freddie.witherden.org": {
-  "checked": "2026-10-27T05:37:48Z",
+  "checked": "2026-11-26T06:54:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7220,7 +7219,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:37:48Z",
+   "checked": "2026-11-26T06:54:58Z",
    "title": "Freddie Witherden",
    "generator": null,
    "feeds": [],
@@ -7264,7 +7263,7 @@
   }
  },
  "freedom-to-tinker.com": {
-  "checked": "2026-10-27T05:37:51Z",
+  "checked": "2026-11-26T06:55:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7289,9 +7288,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:37:51Z",
+   "checked": "2026-11-26T06:55:01Z",
    "title": "CITP Blog - Center for Information Technology Policy (CITP)",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -7310,7 +7309,7 @@
   }
  },
  "freenas.org": {
-  "checked": "2026-10-27T05:37:54Z",
+  "checked": "2026-11-26T06:55:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7333,7 +7332,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:37:54Z",
+   "checked": "2026-11-26T06:55:04Z",
    "title": "TrueNAS | Mission-Critical Open Enterprise Storage",
    "generator": "Divi Child v.4.4.6.1589213894",
    "feeds": [
@@ -7359,7 +7358,7 @@
   }
  },
  "freenetproject.org": {
-  "checked": "2026-10-27T05:37:56Z",
+  "checked": "2026-11-26T06:55:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7371,14 +7370,14 @@
     "18.160.181.111"
    ],
    "aaaa": [
-    "2600:9000:212f:400:1c:d127:3940:93a1",
-    "2600:9000:212f:2a00:1c:d127:3940:93a1",
-    "2600:9000:212f:6800:1c:d127:3940:93a1",
-    "2600:9000:212f:b600:1c:d127:3940:93a1",
-    "2600:9000:212f:ce00:1c:d127:3940:93a1",
-    "2600:9000:212f:d000:1c:d127:3940:93a1",
-    "2600:9000:212f:d600:1c:d127:3940:93a1",
-    "2600:9000:212f:f600:1c:d127:3940:93a1"
+    "2600:9000:254a:1000:1c:d127:3940:93a1",
+    "2600:9000:254a:2800:1c:d127:3940:93a1",
+    "2600:9000:254a:4800:1c:d127:3940:93a1",
+    "2600:9000:254a:8200:1c:d127:3940:93a1",
+    "2600:9000:254a:9c00:1c:d127:3940:93a1",
+    "2600:9000:254a:ce00:1c:d127:3940:93a1",
+    "2600:9000:254a:d000:1c:d127:3940:93a1",
+    "2600:9000:254a:f000:1c:d127:3940:93a1"
    ],
    "cname": null,
    "ns": [
@@ -7393,7 +7392,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:37:56Z",
+   "checked": "2026-11-26T06:55:05Z",
    "title": "Hyphanet",
    "generator": null,
    "feeds": [],
@@ -7405,7 +7404,7 @@
   }
  },
  "freetinytools.com": {
-  "checked": "2026-10-27T05:37:59Z",
+  "checked": "2026-11-26T06:55:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7430,7 +7429,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:37:59Z",
+   "checked": "2026-11-26T06:55:08Z",
    "title": "VIRTUSPLAY | Situs Gacor Resmi, JP Nggak Pake Lama!",
    "generator": null,
    "feeds": [],
@@ -7440,7 +7439,7 @@
   }
  },
  "freetubeapp.io": {
-  "checked": "2026-10-27T05:38:03Z",
+  "checked": "2026-11-26T06:55:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7465,7 +7464,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:38:03Z",
+   "checked": "2026-11-26T06:55:11Z",
    "title": "FreeTube - The Private YouTube Client",
    "generator": null,
    "feeds": [],
@@ -7475,16 +7474,19 @@
   }
  },
  "freightwaves.com": {
-  "checked": "2026-10-27T05:38:06Z",
+  "checked": "2026-11-26T06:55:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "75.2.42.97",
-    "166.117.233.182"
+    "104.21.64.132",
+    "172.67.151.10"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2606:4700:3032::6815:4084",
+    "2606:4700:3032::ac43:970a"
+   ],
    "cname": null,
    "ns": [
     "emma.ns.cloudflare.com",
@@ -7498,7 +7500,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:38:06Z",
+   "checked": "2026-11-26T06:55:15Z",
    "title": "Supply Chain, Logistics, and Trucking Media and News - FreightWaves",
    "generator": "dominant-color-images 1.2.0",
    "feeds": [],
@@ -7508,7 +7510,7 @@
   }
  },
  "frenzic.com": {
-  "checked": "2026-10-27T05:38:08Z",
+  "checked": "2026-11-26T06:55:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7530,7 +7532,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:38:08Z",
+   "checked": "2026-11-26T06:55:16Z",
    "title": "Frenzic: Overtime",
    "generator": null,
    "feeds": [],
@@ -7540,7 +7542,7 @@
   }
  },
  "frenzyapp.com": {
-  "checked": "2026-10-27T05:38:11Z",
+  "checked": "2026-11-26T06:55:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7566,8 +7568,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:38:11Z",
-   "title": "Frenzy",
+   "checked": "2026-11-26T06:55:19Z",
+   "title": "frenzy · friends only - play, share and stay close",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -7576,7 +7578,7 @@
   }
  },
  "fresh.deno.dev": {
-  "checked": "2026-10-27T05:38:13Z",
+  "checked": "2026-11-26T06:55:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7597,7 +7599,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:38:13Z",
+   "checked": "2026-11-26T06:55:22Z",
    "title": "Fresh - The simple, approachable, productive web framework.",
    "generator": null,
    "feeds": [],
@@ -7607,7 +7609,7 @@
   }
  },
  "freshpaint.io": {
-  "checked": "2026-10-27T05:38:16Z",
+  "checked": "2026-11-26T06:55:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7631,7 +7633,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:38:16Z",
+   "checked": "2026-11-26T06:55:28Z",
    "title": "Healthcare Marketing Performance & Compliance Platform | Freshpaint",
    "generator": "Webflow",
    "feeds": [],
@@ -7641,7 +7643,7 @@
   }
  },
  "freshrss.org": {
-  "checked": "2026-10-27T05:38:19Z",
+  "checked": "2026-11-26T06:55:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7665,7 +7667,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:38:19Z",
+   "checked": "2026-11-26T06:55:31Z",
    "title": "FreshRSS, a free, self-hostable feeds aggregator",
    "generator": null,
    "feeds": [
@@ -7731,7 +7733,7 @@
   }
  },
  "frij.io": {
-  "checked": "2026-10-27T05:38:23Z",
+  "checked": "2026-11-26T06:55:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7754,7 +7756,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:38:23Z",
+   "checked": "2026-11-26T06:55:35Z",
    "title": "Fridge Magnets",
    "generator": null,
    "feeds": [],
@@ -7764,7 +7766,7 @@
   }
  },
  "frond.com": {
-  "checked": "2026-10-27T05:38:26Z",
+  "checked": "2026-11-26T06:55:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7787,7 +7789,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:38:26Z",
+   "checked": "2026-11-26T06:55:38Z",
    "title": "Frond",
    "generator": null,
    "feeds": [],
@@ -7797,15 +7799,15 @@
   }
  },
  "frontendmasters.com": {
-  "checked": "2026-10-27T05:38:29Z",
+  "checked": "2026-11-26T06:55:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "35.162.117.196",
-    "52.24.45.189",
-    "100.21.246.212"
+    "32.191.232.108",
+    "44.247.69.96",
+    "52.11.175.141"
    ],
    "aaaa": [],
    "cname": null,
@@ -7823,8 +7825,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:38:29Z",
-   "title": "Learn JavaScript, React, and TypeScript to Node.js, Fullstack, and Backend | Master.dev",
+   "checked": "2026-11-26T06:55:40Z",
+   "title": "Full Stack and AI Engineering Courses for Devs | Master.dev",
    "generator": null,
    "feeds": [
     {
@@ -7839,7 +7841,7 @@
   }
  },
  "fronterablog.com": {
-  "checked": "2026-10-27T05:38:32Z",
+  "checked": "2026-11-26T06:55:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7865,9 +7867,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:38:32Z",
+   "checked": "2026-11-26T06:55:43Z",
    "title": "Frontera - Marketing For Consulting Firms",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -7886,7 +7888,7 @@
   }
  },
  "frozbroz.com": {
-  "checked": "2026-10-27T05:38:34Z",
+  "checked": "2026-11-26T06:55:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7909,9 +7911,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:38:34Z",
+   "checked": "2026-11-26T06:55:45Z",
    "title": "FROZBROZ – Minneapolis Craft Ice Cream",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -7991,7 +7993,7 @@
   }
  },
  "fse.guru": {
-  "checked": "2026-10-27T05:38:38Z",
+  "checked": "2026-11-26T06:55:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8001,18 +8003,14 @@
     "5.161.47.86",
     "5.161.230.87",
     "46.62.237.138",
-    "76.223.91.20",
     "195.201.128.179"
    ],
    "aaaa": [
-    "2406:da1e:214:c901:7cfd:5bc9:51ed:204f",
-    "2600:1f18:6a07:601:6471:b5e4:ef15:3b72",
-    "2600:1f1c:6db:8801:480d:a96f:bfcd:d178",
     "2a01:4f8:1c1e:d6f1::1",
-    "2a01:4ff:1f0:dd50::1",
-    "2a05:d014:179b:c400:2fc6:8141:276a:b7e9",
-    "2a05:d018:1d22:800:6673:f7c3:558e:5d73",
-    "2a05:d018:1d22:801:a216:a799:8c87:df21"
+    "2a01:4f9:c013:29f7::1",
+    "2a01:4ff:f0:5f41::1",
+    "2a01:4ff:f0:a884::1",
+    "2a01:4ff:1f0:dd50::1"
    ],
    "cname": null,
    "ns": [
@@ -8027,7 +8025,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:38:38Z",
+   "checked": "2026-11-26T06:55:52Z",
    "title": "fse.guru — Buy this expired domain | ExpiredDomains.com",
    "generator": null,
    "feeds": [],
@@ -8037,7 +8035,7 @@
   }
  },
  "fsf.org": {
-  "checked": "2026-10-27T05:38:40Z",
+  "checked": "2026-11-26T06:55:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8058,11 +8056,11 @@
   },
   "https": {
    "reachable": true,
-   "redirects_http": false,
+   "redirects_http": true,
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:38:40Z",
+   "checked": "2026-11-26T06:55:54Z",
    "title": "Front Page — Free Software Foundation — working together for free software",
    "generator": "Plone - https://plone.org",
    "feeds": [
@@ -8196,7 +8194,7 @@
   }
  },
  "ftp.arl.mil": {
-  "checked": "2026-10-27T05:38:57Z",
+  "checked": "2026-11-26T06:56:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8216,7 +8214,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'ftp.arl.mil'"
   },
   "home": {
-   "checked": "2026-10-27T05:38:57Z",
+   "checked": "2026-11-26T06:56:11Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8307,7 +8305,7 @@
   }
  },
  "fueledcollectivemn.com": {
-  "checked": "2026-10-27T05:39:01Z",
+  "checked": "2026-11-26T06:56:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8333,9 +8331,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:39:01Z",
-   "title": "Coco – Minneapolis' Original Coworking & Office Workspace",
-   "generator": "Elementor 4.1.4; settings: css_print_method-external, google_font-enabled, font_display-auto",
+   "checked": "2026-11-26T06:56:18Z",
+   "title": "Coco Northeast Minneapolis | Coworking, Offices & Meeting Rooms",
+   "generator": "Elementor 4.3.5; settings: css_print_method-external, google_font-enabled, font_display-auto",
    "feeds": [
     {
      "type": "rss",
@@ -8354,7 +8352,7 @@
   }
  },
  "fuertecases.com": {
-  "checked": "2026-10-27T05:39:02Z",
+  "checked": "2026-11-26T06:56:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8380,7 +8378,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:39:02Z",
+   "checked": "2026-11-26T06:56:19Z",
    "title": "FuerteCases.com",
    "generator": null,
    "feeds": [],
@@ -8431,7 +8429,7 @@
   }
  },
  "fullscalefalcon.com": {
-  "checked": "2026-10-27T05:39:06Z",
+  "checked": "2026-11-26T06:56:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8450,7 +8448,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:39:06Z",
+   "checked": "2026-11-26T06:56:22Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8461,7 +8459,7 @@
   }
  },
  "funnyordie.com": {
-  "checked": "2026-10-27T05:39:06Z",
+  "checked": "2026-11-26T06:56:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8487,9 +8485,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:39:06Z",
+   "checked": "2026-11-26T06:56:22Z",
    "title": "Funny Or Die | We love to make you laugh.",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [
     {
      "type": "rss",
@@ -8549,7 +8547,7 @@
   }
  },
  "fusion.net": {
-  "checked": "2026-10-27T05:39:10Z",
+  "checked": "2026-11-26T06:56:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8572,7 +8570,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:39:10Z",
+   "checked": "2026-11-26T06:56:26Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8583,7 +8581,7 @@
   }
  },
  "futhark-lang.org": {
-  "checked": "2026-10-27T05:39:10Z",
+  "checked": "2026-11-26T06:56:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8608,7 +8606,7 @@
    "error": "tls: TLSV1_ALERT_DECODE_ERROR"
   },
   "home": {
-   "checked": "2026-10-27T05:39:10Z",
+   "checked": "2026-11-26T06:56:26Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8648,7 +8646,7 @@
   }
  },
  "future.com": {
-  "checked": "2026-10-27T05:39:15Z",
+  "checked": "2026-11-26T06:56:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8672,7 +8670,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:39:15Z",
+   "checked": "2026-11-26T06:56:31Z",
    "title": "Future | Understand the Future and How to Build It",
    "generator": null,
    "feeds": [],
@@ -8682,7 +8680,7 @@
   }
  },
  "futureblind.com": {
-  "checked": "2026-10-27T05:39:20Z",
+  "checked": "2026-11-26T06:56:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8705,7 +8703,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:39:20Z",
+   "checked": "2026-11-26T06:56:35Z",
    "title": "FutureBlind | Max Olson | Substack",
    "generator": null,
    "feeds": [
@@ -8721,7 +8719,7 @@
   }
  },
  "futureengine.org": {
-  "checked": "2026-10-27T05:39:22Z",
+  "checked": "2026-11-26T06:56:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8751,7 +8749,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-27T05:39:22Z",
+   "checked": "2026-11-26T06:56:37Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8762,7 +8760,7 @@
   }
  },
  "futureme.org": {
-  "checked": "2026-10-27T05:39:24Z",
+  "checked": "2026-11-26T06:56:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8789,7 +8787,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:39:24Z",
+   "checked": "2026-11-26T06:56:38Z",
    "title": "FutureMe: Write a Letter to your Future Self",
    "generator": null,
    "feeds": [],
@@ -8799,7 +8797,7 @@
   }
  },
  "futureoflife.org": {
-  "checked": "2026-10-27T05:39:27Z",
+  "checked": "2026-11-26T06:56:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8827,9 +8825,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:39:27Z",
+   "checked": "2026-11-26T06:56:41Z",
    "title": "Home - Future of Life Institute",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -8837,7 +8835,7 @@
   }
  },
  "futureofprivacy.org": {
-  "checked": "2026-10-27T05:39:29Z",
+  "checked": "2026-11-26T06:56:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8862,9 +8860,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:39:29Z",
+   "checked": "2026-11-26T06:56:44Z",
    "title": "The Future of Privacy Forum",
-   "generator": "WordPress 7.1.2",
+   "generator": "WordPress 7.1.4",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -8912,7 +8910,7 @@
   }
  },
  "fuzzlogic.com": {
-  "checked": "2026-10-27T05:39:31Z",
+  "checked": "2026-11-26T06:56:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8938,9 +8936,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:39:31Z",
+   "checked": "2026-11-26T06:56:45Z",
    "title": "VinylKnut – Musikk føles enda bedre på vinyl",
-   "generator": "WordPress 6.9.10",
+   "generator": "WordPress 6.9.12",
    "feeds": [
     {
      "type": "rss",
@@ -8959,7 +8957,7 @@
   }
  },
  "fvsch.com": {
-  "checked": "2026-10-27T05:39:38Z",
+  "checked": "2026-11-26T06:56:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8983,7 +8981,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:39:38Z",
+   "checked": "2026-11-26T06:56:52Z",
    "title": "Florens Verschelde",
    "generator": null,
    "feeds": [
@@ -8999,7 +8997,7 @@
   }
  },
  "fwfest.com": {
-  "checked": "2026-10-27T05:39:43Z",
+  "checked": "2026-11-26T06:56:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9025,7 +9023,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:39:43Z",
+   "checked": "2026-11-26T06:56:56Z",
    "title": "FWFest.com - Fort Worth Football Festival",
    "generator": null,
    "feeds": [
@@ -9046,7 +9044,7 @@
   }
  },
  "fx.wtf": {
-  "checked": "2026-10-27T05:39:47Z",
+  "checked": "2026-11-26T06:57:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9073,7 +9071,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:39:47Z",
+   "checked": "2026-11-26T06:57:00Z",
    "title": "fx – a terminal JSON viewer & processor",
    "generator": "VitePress v1.6.4",
    "feeds": [],

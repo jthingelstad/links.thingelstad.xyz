@@ -1,6 +1,6 @@
 {
  "h30565.www3.hp.com": {
-  "checked": "2026-10-27T05:57:54Z",
+  "checked": "2026-11-26T07:19:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -19,7 +19,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:57:54Z",
+   "checked": "2026-11-26T07:19:06Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -30,7 +30,7 @@
   }
  },
  "h3geo.org": {
-  "checked": "2026-10-27T05:57:54Z",
+  "checked": "2026-11-26T07:19:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -62,7 +62,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:57:54Z",
+   "checked": "2026-11-26T07:19:06Z",
    "title": "Home | H3",
    "generator": "Docusaurus v3.10.2",
    "feeds": [],
@@ -72,7 +72,7 @@
   }
  },
  "ha.reesun.me": {
-  "checked": "2026-10-27T05:57:56Z",
+  "checked": "2026-11-26T07:19:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -91,7 +91,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:57:56Z",
+   "checked": "2026-11-26T07:19:08Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -102,7 +102,7 @@
   }
  },
  "ha.x0r.be": {
-  "checked": "2026-10-27T05:57:56Z",
+  "checked": "2026-11-26T07:19:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -126,7 +126,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T05:57:56Z",
+   "checked": "2026-11-26T07:19:09Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -137,7 +137,7 @@
   }
  },
  "habr.com": {
-  "checked": "2026-10-27T05:58:29Z",
+  "checked": "2026-11-26T07:19:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -160,7 +160,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:58:29Z",
+   "checked": "2026-11-26T07:19:41Z",
    "title": "Публикации / Моя лента / Хабр",
    "generator": null,
    "feeds": [],
@@ -170,7 +170,7 @@
   }
  },
  "hack8s.com": {
-  "checked": "2026-10-27T05:58:36Z",
+  "checked": "2026-11-26T07:19:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -192,7 +192,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:58:36Z",
+   "checked": "2026-11-26T07:19:49Z",
    "title": "H[ack]-∞S – hack8s.com",
    "generator": "Drupal 11 (https://www.drupal.org)",
    "feeds": [
@@ -213,7 +213,7 @@
   }
  },
  "hackaday.com": {
-  "checked": "2026-10-27T05:58:42Z",
+  "checked": "2026-11-26T07:19:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -236,9 +236,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:58:42Z",
+   "checked": "2026-11-26T07:19:54Z",
    "title": "Hackaday | Fresh Hacks Every Day",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -257,7 +257,7 @@
   }
  },
  "hackerfactor.com": {
-  "checked": "2026-10-27T05:58:44Z",
+  "checked": "2026-11-26T07:19:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -283,7 +283,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:58:44Z",
+   "checked": "2026-11-26T07:19:57Z",
    "title": "Hacker Factor: Home Page",
    "generator": null,
    "feeds": [],
@@ -293,37 +293,44 @@
   }
  },
  "hackerhub.org": {
-  "checked": "2026-10-27T05:58:47Z",
+  "checked": "2026-11-26T07:20:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
-   "resolves": false,
-   "a": [],
+   "resolves": true,
+   "a": [
+    "207.207.210.107",
+    "207.207.210.229"
+   ],
    "aaaa": [],
    "cname": null,
-   "ns": [],
-   "mx": false,
-   "error": "NXDOMAIN"
+   "ns": [
+    "curitiba.ns.porkbun.com",
+    "fortaleza.ns.porkbun.com",
+    "maceio.ns.porkbun.com",
+    "salvador.ns.porkbun.com"
+   ],
+   "mx": false
   },
   "https": {
    "reachable": false,
    "redirects_http": false,
    "status": null,
-   "error": "does not resolve"
+   "error": "tls: TLS_ALERT_HANDSHAKE_FAILURE"
   },
   "home": {
-   "checked": "2026-10-27T05:58:47Z",
+   "checked": "2026-11-26T07:20:00Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "does not resolve"
+   "error": "tls: TLS_ALERT_HANDSHAKE_FAILURE"
   }
  },
  "hackermonthly.com": {
-  "checked": "2026-10-27T05:58:47Z",
+  "checked": "2026-11-26T07:20:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -344,7 +351,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:58:47Z",
+   "checked": "2026-11-26T07:20:01Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -355,7 +362,7 @@
   }
  },
  "hackernewsletter.com": {
-  "checked": "2026-10-27T05:58:49Z",
+  "checked": "2026-11-26T07:20:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -379,7 +386,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:58:49Z",
+   "checked": "2026-11-26T07:20:02Z",
    "title": "Hacker Newsletter",
    "generator": null,
    "feeds": [],
@@ -516,7 +523,7 @@
   }
  },
  "haddonsoftware.com": {
-  "checked": "2026-10-27T05:58:52Z",
+  "checked": "2026-11-26T07:20:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -541,7 +548,7 @@
    "error": "tls: unable to get local issuer certificate"
   },
   "home": {
-   "checked": "2026-10-27T05:58:52Z",
+   "checked": "2026-11-26T07:20:06Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -552,7 +559,7 @@
   }
  },
  "hadonejob.com": {
-  "checked": "2026-10-27T05:58:55Z",
+  "checked": "2026-11-26T07:20:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -578,7 +585,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:58:55Z",
+   "checked": "2026-11-26T07:20:09Z",
    "title": "You Had One Job!",
    "generator": null,
    "feeds": [],
@@ -588,7 +595,7 @@
   }
  },
  "hadoop.apache.org": {
-  "checked": "2026-10-27T05:58:57Z",
+  "checked": "2026-11-26T07:20:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -609,7 +616,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:58:57Z",
+   "checked": "2026-11-26T07:20:10Z",
    "title": "Apache Hadoop",
    "generator": "Hugo 0.152.2",
    "feeds": [],
@@ -619,7 +626,7 @@
   }
  },
  "hadrian.io": {
-  "checked": "2026-10-27T05:59:00Z",
+  "checked": "2026-11-26T07:20:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -643,7 +650,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:00Z",
+   "checked": "2026-11-26T07:20:12Z",
    "title": "Know your attack surface, pentest it continuously | Hadrian",
    "generator": null,
    "feeds": [],
@@ -653,7 +660,7 @@
   }
  },
  "hakibenita.com": {
-  "checked": "2026-10-27T05:59:02Z",
+  "checked": "2026-11-26T07:20:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -675,7 +682,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:02Z",
+   "checked": "2026-11-26T07:20:15Z",
    "title": "Welcome! | Haki Benita",
    "generator": null,
    "feeds": [
@@ -693,7 +700,7 @@
   }
  },
  "halcyonmaps.com": {
-  "checked": "2026-10-27T05:59:06Z",
+  "checked": "2026-11-26T07:20:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -719,7 +726,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:06Z",
+   "checked": "2026-11-26T07:20:19Z",
    "title": "Halcyon Maps",
    "generator": null,
    "feeds": [
@@ -735,7 +742,7 @@
   }
  },
  "halfhalf.posterous.com": {
-  "checked": "2026-10-27T05:59:08Z",
+  "checked": "2026-11-26T07:20:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -754,7 +761,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:59:08Z",
+   "checked": "2026-11-26T07:20:20Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -765,7 +772,7 @@
   }
  },
  "halide.cam": {
-  "checked": "2026-10-27T05:59:08Z",
+  "checked": "2026-11-26T07:20:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -789,7 +796,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:08Z",
+   "checked": "2026-11-26T07:20:20Z",
    "title": "Halide — The best pro camera for iPhone and iPad",
    "generator": null,
    "feeds": [],
@@ -799,7 +806,7 @@
   }
  },
  "halifaxexaminer.ca": {
-  "checked": "2026-10-27T05:59:12Z",
+  "checked": "2026-11-26T07:20:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -824,9 +831,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:12Z",
+   "checked": "2026-11-26T07:20:24Z",
    "title": "Home - Halifax Examiner",
-   "generator": "Site Kit by Google 1.189.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [
     {
      "type": "rss",
@@ -891,7 +898,7 @@
   }
  },
  "hammerspoon.org": {
-  "checked": "2026-10-27T05:59:15Z",
+  "checked": "2026-11-26T07:20:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -916,7 +923,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:15Z",
+   "checked": "2026-11-26T07:20:27Z",
    "title": "Hammerspoon",
    "generator": null,
    "feeds": [],
@@ -926,7 +933,7 @@
   }
  },
  "handbrake.m0k.org": {
-  "checked": "2026-10-27T05:59:16Z",
+  "checked": "2026-11-26T07:20:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -945,7 +952,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T05:59:16Z",
+   "checked": "2026-11-26T07:20:28Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -956,7 +963,7 @@
   }
  },
  "handel-pl.github.io": {
-  "checked": "2026-10-27T05:59:17Z",
+  "checked": "2026-11-26T07:20:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -983,7 +990,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:17Z",
+   "checked": "2026-11-26T07:20:29Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1056,7 +1063,7 @@
   }
  },
  "hanselminutes.com": {
-  "checked": "2026-10-27T05:59:20Z",
+  "checked": "2026-11-26T07:20:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1082,8 +1089,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:20Z",
-   "title": "Hanselminutes Technology Podcast - Fresh Air and Fresh Perspectives for Developers - Changing how Engineering works with Ironclad CTO Sunita Verma",
+   "checked": "2026-11-26T07:20:32Z",
+   "title": "Hanselminutes Technology Podcast - Fresh Air and Fresh Perspectives for Developers - Emma Marie Cryer on the importance of the Open in OpenRouter",
    "generator": null,
    "feeds": [
     {
@@ -1105,7 +1112,7 @@
   }
  },
  "happyfeed.co": {
-  "checked": "2026-10-27T05:59:24Z",
+  "checked": "2026-11-26T07:20:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1131,7 +1138,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:24Z",
+   "checked": "2026-11-26T07:20:35Z",
    "title": "Orca (Formerly Happyfeed) - Shared Gratitude Journal App",
    "generator": null,
    "feeds": [],
@@ -1141,7 +1148,7 @@
   }
  },
  "hardcoresoftware.learningbyshipping.com": {
-  "checked": "2026-10-27T05:59:25Z",
+  "checked": "2026-11-26T07:20:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1164,7 +1171,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:25Z",
+   "checked": "2026-11-26T07:20:37Z",
    "title": "Hardcore Software by Steven Sinofsky | Substack",
    "generator": null,
    "feeds": [
@@ -1214,7 +1221,7 @@
   }
  },
  "harper.blog": {
-  "checked": "2026-10-27T05:59:28Z",
+  "checked": "2026-11-26T07:20:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1240,7 +1247,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:28Z",
+   "checked": "2026-11-26T07:20:39Z",
    "title": "Harper Reed's Blog",
    "generator": "Hugo 0.164.0",
    "feeds": [
@@ -1266,7 +1273,7 @@
   }
  },
  "harpercollins.com": {
-  "checked": "2026-10-27T05:59:31Z",
+  "checked": "2026-11-26T07:20:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1288,7 +1295,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:31Z",
+   "checked": "2026-11-26T07:20:42Z",
    "title": "HarperCollins Publishers: World-Leading Book Publisher",
    "generator": null,
    "feeds": [],
@@ -1298,7 +1305,7 @@
   }
  },
  "harpers.org": {
-  "checked": "2026-10-27T05:59:34Z",
+  "checked": "2026-11-26T07:20:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1322,9 +1329,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:34Z",
+   "checked": "2026-11-26T07:20:45Z",
    "title": "Home | Harper's Magazine",
-   "generator": "WordPress 6.9.10",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -1332,7 +1339,7 @@
   }
  },
  "harrietbrewing.com": {
-  "checked": "2026-10-27T05:59:36Z",
+  "checked": "2026-11-26T07:20:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1354,7 +1361,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:36Z",
+   "checked": "2026-11-26T07:20:47Z",
    "title": "harrietbrewing.com",
    "generator": null,
    "feeds": [],
@@ -1364,7 +1371,7 @@
   }
  },
  "harshal.sheth.io": {
-  "checked": "2026-10-27T05:59:38Z",
+  "checked": "2026-11-26T07:20:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1383,7 +1390,7 @@
    ],
    "cname": "hsheth2.github.io",
    "ns": [],
-   "mx": false
+   "mx": true
   },
   "https": {
    "reachable": true,
@@ -1391,7 +1398,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:38Z",
+   "checked": "2026-11-26T07:20:49Z",
    "title": "Home | Harshal Sheth",
    "generator": "Jekyll v3.10.0",
    "feeds": [
@@ -1442,7 +1449,7 @@
   }
  },
  "hashids.org": {
-  "checked": "2026-10-27T05:59:41Z",
+  "checked": "2026-11-26T07:20:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1468,7 +1475,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:41Z",
+   "checked": "2026-11-26T07:20:52Z",
    "title": "Sqids (formerly Hashids) · Generate Short Unique IDs",
    "generator": null,
    "feeds": [],
@@ -1478,7 +1485,7 @@
   }
  },
  "haskell.org": {
-  "checked": "2026-10-27T05:59:42Z",
+  "checked": "2026-11-26T07:20:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1500,7 +1507,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:42Z",
+   "checked": "2026-11-26T07:20:53Z",
    "title": "Haskell Language",
    "generator": null,
    "feeds": [],
@@ -1510,7 +1517,7 @@
   }
  },
  "hasura.io": {
-  "checked": "2026-10-27T05:59:45Z",
+  "checked": "2026-11-26T07:20:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1536,7 +1543,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:45Z",
+   "checked": "2026-11-26T07:20:56Z",
    "title": "Hasura: Creator of PromptQL, Data Delivery Network & GraphQL Engine",
    "generator": null,
    "feeds": [],
@@ -1546,16 +1553,16 @@
   }
  },
  "hatchtravel.blogspot.com": {
-  "checked": "2026-10-27T05:59:48Z",
+  "checked": "2026-11-26T07:20:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.214.65"
+    "142.251.41.129"
    ],
    "aaaa": [
-    "2607:f8b0:4009:815::2001"
+    "2607:f8b0:4009:81c::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -1567,7 +1574,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T05:59:48Z",
+   "checked": "2026-11-26T07:20:58Z",
    "title": "traveling hatches",
    "generator": "Blogger",
    "feeds": [
@@ -1588,7 +1595,7 @@
   }
  },
  "haveamint.com": {
-  "checked": "2026-10-27T05:59:49Z",
+  "checked": "2026-11-26T07:21:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1611,7 +1618,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T05:59:49Z",
+   "checked": "2026-11-26T07:21:00Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1622,7 +1629,7 @@
   }
  },
  "haveibeenexpired.com": {
-  "checked": "2026-10-27T06:00:21Z",
+  "checked": "2026-11-26T07:21:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1644,7 +1651,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:00:21Z",
+   "checked": "2026-11-26T07:21:31Z",
    "title": "SSL Certificate Monitoring & Expiration Alerts - haveibeenexpired",
    "generator": null,
    "feeds": [],
@@ -1654,7 +1661,7 @@
   }
  },
  "haveibeenpwned.com": {
-  "checked": "2026-10-27T06:00:24Z",
+  "checked": "2026-11-26T07:21:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1680,7 +1687,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:00:24Z",
+   "checked": "2026-11-26T07:21:34Z",
    "title": "Have I Been Pwned: Check if your email address has been exposed in a data breach",
    "generator": null,
    "feeds": [
@@ -1696,29 +1703,23 @@
   }
  },
  "hawksley.org": {
-  "checked": "2026-10-27T06:00:26Z",
+  "checked": "2026-11-26T07:21:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "185.199.108.153",
-    "185.199.109.153",
-    "185.199.110.153",
-    "185.199.111.153"
+    "104.21.25.128",
+    "172.67.134.62"
    ],
    "aaaa": [
-    "2606:50c0:8000::153",
-    "2606:50c0:8001::153",
-    "2606:50c0:8002::153",
-    "2606:50c0:8003::153"
+    "2606:4700:3031::6815:1980",
+    "2606:4700:3033::ac43:863e"
    ],
    "cname": null,
    "ns": [
-    "ns-103.awsdns-12.com",
-    "ns-1530.awsdns-63.org",
-    "ns-1952.awsdns-52.co.uk",
-    "ns-872.awsdns-45.net"
+    "coco.ns.cloudflare.com",
+    "lex.ns.cloudflare.com"
    ],
    "mx": true
   },
@@ -1728,7 +1729,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:00:26Z",
+   "checked": "2026-11-26T07:21:36Z",
    "title": "Joel Hawksley",
    "generator": null,
    "feeds": [
@@ -1746,7 +1747,7 @@
   }
  },
  "hayn.com": {
-  "checked": "2026-10-27T06:00:29Z",
+  "checked": "2026-11-26T07:21:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1769,7 +1770,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:00:29Z",
+   "checked": "2026-11-26T07:21:39Z",
    "title": "Home - Hayn",
    "generator": "HubSpot",
    "feeds": [],
@@ -1779,7 +1780,7 @@
   }
  },
  "haystacksoftware.com": {
-  "checked": "2026-10-27T06:00:32Z",
+  "checked": "2026-11-26T07:21:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1804,7 +1805,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'haystacksoftware.com'"
   },
   "home": {
-   "checked": "2026-10-27T06:00:32Z",
+   "checked": "2026-11-26T07:21:41Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1815,7 +1816,7 @@
   }
  },
  "hbfs.wordpress.com": {
-  "checked": "2026-10-27T06:00:34Z",
+  "checked": "2026-11-26T07:21:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1835,7 +1836,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:00:34Z",
+   "checked": "2026-11-26T07:21:43Z",
    "title": "Harder, Better, Faster, Stronger | Explorations in better, faster, stronger code.",
    "generator": "WordPress.com",
    "feeds": [
@@ -1911,7 +1912,7 @@
   }
  },
  "headmelted.com": {
-  "checked": "2026-10-27T06:00:36Z",
+  "checked": "2026-11-26T07:21:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1932,7 +1933,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:00:36Z",
+   "checked": "2026-11-26T07:21:45Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1943,7 +1944,7 @@
   }
  },
  "headshotpro.com": {
-  "checked": "2026-10-27T06:00:36Z",
+  "checked": "2026-11-26T07:21:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1965,7 +1966,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:00:36Z",
+   "checked": "2026-11-26T07:21:45Z",
    "title": "AI Headshot Generator for Professional Headshots | HeadshotPro",
    "generator": null,
    "feeds": [],
@@ -1975,7 +1976,7 @@
   }
  },
  "health.howstuffworks.com": {
-  "checked": "2026-10-27T06:00:40Z",
+  "checked": "2026-11-26T07:21:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1997,7 +1998,7 @@
    "status": 202
   },
   "home": {
-   "checked": "2026-10-27T06:00:40Z",
+   "checked": "2026-11-26T07:21:49Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2007,7 +2008,7 @@
   }
  },
  "healthdata.org": {
-  "checked": "2026-10-27T06:00:43Z",
+  "checked": "2026-11-26T07:21:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2033,7 +2034,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:00:43Z",
+   "checked": "2026-11-26T07:21:51Z",
    "title": "Homepage | Institute for Health Metrics and Evaluation",
    "generator": "Drupal 10 (https://www.drupal.org)",
    "feeds": [],
@@ -2043,7 +2044,7 @@
   }
  },
  "healthengage.com": {
-  "checked": "2026-10-27T06:00:46Z",
+  "checked": "2026-11-26T07:21:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2066,7 +2067,7 @@
    "error": "tls: self-signed certificate"
   },
   "home": {
-   "checked": "2026-10-27T06:00:46Z",
+   "checked": "2026-11-26T07:21:54Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2077,7 +2078,7 @@
   }
  },
  "healthyamericans.org": {
-  "checked": "2026-10-27T06:00:47Z",
+  "checked": "2026-11-26T07:21:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2103,9 +2104,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:00:47Z",
+   "checked": "2026-11-26T07:21:56Z",
    "title": "Healthy Americans",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -2129,7 +2130,7 @@
   }
  },
  "healthysleep.med.harvard.edu": {
-  "checked": "2026-10-27T06:00:50Z",
+  "checked": "2026-11-26T07:21:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2148,7 +2149,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-27T06:00:50Z",
+   "checked": "2026-11-26T07:21:59Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2159,7 +2160,7 @@
   }
  },
  "heart.org": {
-  "checked": "2026-10-27T06:00:52Z",
+  "checked": "2026-11-26T07:22:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2183,7 +2184,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:00:52Z",
+   "checked": "2026-11-26T07:22:00Z",
    "title": "American Heart Association | To be a relentless force for a world of longer, healthier lives",
    "generator": null,
    "feeds": [],
@@ -2193,7 +2194,7 @@
   }
  },
  "heavybit.com": {
-  "checked": "2026-10-27T06:00:55Z",
+  "checked": "2026-11-26T07:22:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2219,7 +2220,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:00:55Z",
+   "checked": "2026-11-26T07:22:06Z",
    "title": "Heavybit is the leading investor in enterprise infrastructure | Heavybit",
    "generator": null,
    "feeds": [],
@@ -2274,7 +2275,7 @@
   }
  },
  "hecate.co": {
-  "checked": "2026-10-27T06:00:59Z",
+  "checked": "2026-11-26T07:22:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2300,7 +2301,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:00:59Z",
+   "checked": "2026-11-26T07:22:09Z",
    "title": "Shutting down Hecate",
    "generator": null,
    "feeds": [
@@ -2316,14 +2317,14 @@
   }
  },
  "hector.me": {
-  "checked": "2026-10-27T06:01:03Z",
+  "checked": "2026-11-26T07:22:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "216.150.1.1",
-    "216.150.1.65"
+    "216.150.1.193",
+    "216.150.16.129"
    ],
    "aaaa": [],
    "cname": null,
@@ -2339,7 +2340,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:03Z",
+   "checked": "2026-11-26T07:22:13Z",
    "title": "Hector Simpson",
    "generator": null,
    "feeds": [],
@@ -2349,7 +2350,7 @@
   }
  },
  "hedy.org": {
-  "checked": "2026-10-27T06:01:07Z",
+  "checked": "2026-11-26T07:22:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2376,7 +2377,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:07Z",
+   "checked": "2026-11-26T07:22:17Z",
    "title": "Hedy - Textual programming made easy",
    "generator": null,
    "feeds": [],
@@ -2386,7 +2387,7 @@
   }
  },
  "heeltoe.com": {
-  "checked": "2026-10-27T06:01:10Z",
+  "checked": "2026-11-26T07:22:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2407,7 +2408,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:01:10Z",
+   "checked": "2026-11-26T07:22:20Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2418,7 +2419,7 @@
   }
  },
  "heitorpb.github.io": {
-  "checked": "2026-10-27T06:01:11Z",
+  "checked": "2026-11-26T07:22:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2445,7 +2446,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:11Z",
+   "checked": "2026-11-26T07:22:20Z",
    "title": "Heitor's log",
    "generator": null,
    "feeds": [
@@ -2461,7 +2462,7 @@
   }
  },
  "helidirect.com": {
-  "checked": "2026-10-27T06:01:15Z",
+  "checked": "2026-11-26T07:22:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2483,7 +2484,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:15Z",
+   "checked": "2026-11-26T07:22:24Z",
    "title": "HeliDirect - Your #1 Sources for R/C Helicopters, Cars, Jets and More.",
    "generator": null,
    "feeds": [],
@@ -2493,7 +2494,7 @@
   }
  },
  "helituning.com": {
-  "checked": "2026-10-27T06:01:18Z",
+  "checked": "2026-11-26T07:22:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2516,7 +2517,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:18Z",
+   "checked": "2026-11-26T07:22:27Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2526,7 +2527,7 @@
   }
  },
  "hellolumio.com": {
-  "checked": "2026-10-27T06:01:20Z",
+  "checked": "2026-11-26T07:22:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2548,7 +2549,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:20Z",
+   "checked": "2026-11-26T07:22:28Z",
    "title": "Lumio | Award-Winning Portable Lamps & Sound Sculptures",
    "generator": null,
    "feeds": [],
@@ -2558,7 +2559,7 @@
   }
  },
  "hellowebbooks.com": {
-  "checked": "2026-10-27T06:01:23Z",
+  "checked": "2026-11-26T07:22:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2584,7 +2585,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:23Z",
+   "checked": "2026-11-26T07:22:31Z",
    "title": "Hello Web Books - Really Friendly Beginner Web Books by Tracy Osborn",
    "generator": null,
    "feeds": [],
@@ -2594,7 +2595,7 @@
   }
  },
  "help.dayoneapp.com": {
-  "checked": "2026-10-27T06:01:25Z",
+  "checked": "2026-11-26T07:22:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2614,7 +2615,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:25Z",
+   "checked": "2026-11-26T07:22:34Z",
    "title": "Help Guides",
    "generator": null,
    "feeds": [
@@ -2635,7 +2636,7 @@
   }
  },
  "help.micro.blog": {
-  "checked": "2026-10-27T06:01:28Z",
+  "checked": "2026-11-26T07:22:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2654,9 +2655,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:28Z",
+   "checked": "2026-11-26T07:22:36Z",
    "title": "Micro.blog Help Center",
-   "generator": "Discourse 2026.7.4 - https://github.com/discourse/discourse version b20f7267b131e4f3c90d84ff3474138eef416eab",
+   "generator": "Discourse 2026.7.7 - https://github.com/discourse/discourse version 78d7551ae8add99c89768afbc8b351eb34219d14",
    "feeds": [
     {
      "type": "rss",
@@ -2675,7 +2676,7 @@
   }
  },
  "help.nabaztag.com": {
-  "checked": "2026-10-27T06:01:31Z",
+  "checked": "2026-11-26T07:22:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2695,7 +2696,7 @@
    "error": "connection reset"
   },
   "home": {
-   "checked": "2026-10-27T06:01:31Z",
+   "checked": "2026-11-26T07:22:39Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2706,7 +2707,7 @@
   }
  },
  "help.openai.com": {
-  "checked": "2026-10-27T06:01:35Z",
+  "checked": "2026-11-26T07:22:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2729,7 +2730,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:35Z",
+   "checked": "2026-11-26T07:22:43Z",
    "title": "OpenAI Help Center",
    "generator": null,
    "feeds": [],
@@ -2739,7 +2740,7 @@
   }
  },
  "help.opscode.com": {
-  "checked": "2026-10-27T06:01:40Z",
+  "checked": "2026-11-26T07:22:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2761,7 +2762,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:40Z",
+   "checked": "2026-11-26T07:22:48Z",
    "title": "Chef Support for Automation & DevOps | Chef",
    "generator": null,
    "feeds": [],
@@ -2809,7 +2810,7 @@
   }
  },
  "henchmon.kickoffpages.com": {
-  "checked": "2026-10-27T06:01:45Z",
+  "checked": "2026-11-26T07:22:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2830,7 +2831,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:45Z",
+   "checked": "2026-11-26T07:22:52Z",
    "title": "Landing Page Not Found",
    "generator": null,
    "feeds": [],
@@ -2882,7 +2883,7 @@
   }
  },
  "henrikwarne.com": {
-  "checked": "2026-10-27T06:01:48Z",
+  "checked": "2026-11-26T07:22:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2906,7 +2907,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:48Z",
+   "checked": "2026-11-26T07:22:55Z",
    "title": "Henrik Warne's blog | Thoughts on programming…",
    "generator": "WordPress.com",
    "feeds": [
@@ -2927,7 +2928,7 @@
   }
  },
  "herbertlui.net": {
-  "checked": "2026-10-27T06:01:51Z",
+  "checked": "2026-11-26T07:22:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2953,7 +2954,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:51Z",
+   "checked": "2026-11-26T07:22:58Z",
    "title": "Herbert Lui – Blog on creativity, marketing, and the human condition.",
    "generator": "Site Kit by Google 1.78.0",
    "feeds": [
@@ -2974,7 +2975,7 @@
   }
  },
  "herbertograca.com": {
-  "checked": "2026-10-27T06:01:53Z",
+  "checked": "2026-11-26T07:23:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2998,7 +2999,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:01:53Z",
+   "checked": "2026-11-26T07:23:00Z",
    "title": "@hgraca",
    "generator": "WordPress.com",
    "feeds": [
@@ -3024,7 +3025,7 @@
   }
  },
  "herd.garden": {
-  "checked": "2026-10-27T06:01:56Z",
+  "checked": "2026-11-26T07:23:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3047,7 +3048,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T06:01:56Z",
+   "checked": "2026-11-26T07:23:03Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3058,7 +3059,7 @@
   }
  },
  "herecomesthemoon.net": {
-  "checked": "2026-10-27T06:02:27Z",
+  "checked": "2026-11-26T07:23:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3082,9 +3083,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:02:27Z",
+   "checked": "2026-11-26T07:23:34Z",
    "title": "MOND←TECH MAGAZINE",
-   "generator": "Hugo 0.163.3",
+   "generator": "Hugo 0.168.0",
    "feeds": [
     {
      "type": "rss",
@@ -3191,7 +3192,7 @@
   }
  },
  "hey.com": {
-  "checked": "2026-10-27T06:02:30Z",
+  "checked": "2026-11-26T07:23:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3214,7 +3215,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:02:30Z",
+   "checked": "2026-11-26T07:23:37Z",
    "title": "HEY — A delightfully fresh take on email + calendar, from 37signals",
    "generator": null,
    "feeds": [
@@ -3273,7 +3274,7 @@
   }
  },
  "heyfromthefuture.com": {
-  "checked": "2026-10-27T06:02:33Z",
+  "checked": "2026-11-26T07:23:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3304,7 +3305,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:02:33Z",
+   "checked": "2026-11-26T07:23:39Z",
    "title": "Select An Age - Hey From The Future",
    "generator": null,
    "feeds": [],
@@ -3314,7 +3315,7 @@
   }
  },
  "heymeta.com": {
-  "checked": "2026-10-27T06:02:35Z",
+  "checked": "2026-11-26T07:23:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3340,7 +3341,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:02:35Z",
+   "checked": "2026-11-26T07:23:41Z",
    "title": "Hey Meta: meta tag and AI readiness checker",
    "generator": null,
    "feeds": [],
@@ -3350,7 +3351,7 @@
   }
  },
  "hibariapp.com": {
-  "checked": "2026-10-27T06:02:37Z",
+  "checked": "2026-11-26T07:23:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3373,7 +3374,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:02:37Z",
+   "checked": "2026-11-26T07:23:43Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3383,7 +3384,7 @@
   }
  },
  "hicksdesign.co.uk": {
-  "checked": "2026-10-27T06:02:39Z",
+  "checked": "2026-11-26T07:23:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3405,7 +3406,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:02:39Z",
+   "checked": "2026-11-26T07:23:45Z",
    "title": "Hicks.design: Visual languages for digital & physical spaces.",
    "generator": null,
    "feeds": [
@@ -3433,7 +3434,7 @@
   }
  },
  "hiddenapp.com": {
-  "checked": "2026-10-27T06:02:43Z",
+  "checked": "2026-11-26T07:23:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3459,7 +3460,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:02:43Z",
+   "checked": "2026-11-26T07:23:48Z",
    "title": "HiddenApp",
    "generator": null,
    "feeds": [],
@@ -3469,7 +3470,7 @@
   }
  },
  "hiddentribes.us": {
-  "checked": "2026-10-27T06:02:48Z",
+  "checked": "2026-11-26T07:23:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3491,7 +3492,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:02:48Z",
+   "checked": "2026-11-26T07:23:53Z",
    "title": "The Hidden Tribes of America",
    "generator": null,
    "feeds": [],
@@ -3501,7 +3502,7 @@
   }
  },
  "highcaffeinecontent.com": {
-  "checked": "2026-10-27T06:02:51Z",
+  "checked": "2026-11-26T07:23:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3523,7 +3524,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:02:51Z",
+   "checked": "2026-11-26T07:23:56Z",
    "title": "High Caffeine Content",
    "generator": null,
    "feeds": [],
@@ -3544,7 +3545,7 @@
   }
  },
  "highlighted-app.webflow.io": {
-  "checked": "2026-10-27T06:02:53Z",
+  "checked": "2026-11-26T07:23:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3567,7 +3568,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:02:53Z",
+   "checked": "2026-11-26T07:23:58Z",
    "title": "Highlighted: Book Highlighter",
    "generator": "Webflow",
    "feeds": [],
@@ -3672,7 +3673,7 @@
   }
  },
  "hilariusbookbinder.substack.com": {
-  "checked": "2026-10-27T06:02:56Z",
+  "checked": "2026-11-26T07:24:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3695,7 +3696,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:02:56Z",
+   "checked": "2026-11-26T07:24:01Z",
    "title": "Scriptorium Philosophia | Hilarius Bookbinder | Substack",
    "generator": null,
    "feeds": [
@@ -3711,7 +3712,7 @@
   }
  },
  "hillcrestlabs.com": {
-  "checked": "2026-10-27T06:02:58Z",
+  "checked": "2026-11-26T07:24:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3734,7 +3735,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T06:02:58Z",
+   "checked": "2026-11-26T07:24:04Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3797,7 +3798,7 @@
   }
  },
  "hillsidelounge.com": {
-  "checked": "2026-10-27T06:03:30Z",
+  "checked": "2026-11-26T07:24:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3820,7 +3821,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:03:30Z",
+   "checked": "2026-11-26T07:24:35Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3830,7 +3831,7 @@
   }
  },
  "hint.fm": {
-  "checked": "2026-10-27T06:03:31Z",
+  "checked": "2026-11-26T07:24:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3854,7 +3855,7 @@
    "error": "tls: self-signed certificate"
   },
   "home": {
-   "checked": "2026-10-27T06:03:31Z",
+   "checked": "2026-11-26T07:24:36Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3865,7 +3866,7 @@
   }
  },
  "hipchat-emoticons.nyh.name": {
-  "checked": "2026-10-27T06:03:33Z",
+  "checked": "2026-11-26T07:24:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3884,7 +3885,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:03:33Z",
+   "checked": "2026-11-26T07:24:38Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3895,7 +3896,7 @@
   }
  },
  "hiringengineersbook.com": {
-  "checked": "2026-10-27T06:03:33Z",
+  "checked": "2026-11-26T07:24:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3920,7 +3921,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:03:33Z",
+   "checked": "2026-11-26T07:24:38Z",
    "title": "Hiring Engineers - Hiring Engineers",
    "generator": "Hugo 0.54.0",
    "feeds": [],
@@ -3930,7 +3931,7 @@
   }
  },
  "hisham.hm": {
-  "checked": "2026-10-27T06:03:37Z",
+  "checked": "2026-11-26T07:24:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3953,7 +3954,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:03:37Z",
+   "checked": "2026-11-26T07:24:42Z",
    "title": "hisham.hm",
    "generator": "FlatPress fp-1.3.dev [master]",
    "feeds": [
@@ -3977,7 +3978,7 @@
   }
  },
  "hitchhackerguide.com": {
-  "checked": "2026-10-27T06:03:43Z",
+  "checked": "2026-11-26T07:24:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4001,7 +4002,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:03:43Z",
+   "checked": "2026-11-26T07:24:45Z",
    "title": "A HitchHackers guide through WordPress | the source for WordPress News, Tips and Help",
    "generator": "WordPress.com",
    "feeds": [
@@ -4072,7 +4073,7 @@
   }
  },
  "hjertnes.social": {
-  "checked": "2026-10-27T06:03:46Z",
+  "checked": "2026-11-26T07:24:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4091,7 +4092,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:03:46Z",
+   "checked": "2026-11-26T07:24:48Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4102,7 +4103,7 @@
   }
  },
  "hjson.org": {
-  "checked": "2026-10-27T06:03:46Z",
+  "checked": "2026-11-26T07:24:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4128,7 +4129,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-27T06:03:46Z",
+   "checked": "2026-11-26T07:24:48Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4139,7 +4140,7 @@
   }
  },
  "hlvticons.ch": {
-  "checked": "2026-10-27T06:03:49Z",
+  "checked": "2026-11-26T07:24:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4163,7 +4164,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:03:49Z",
+   "checked": "2026-11-26T07:24:50Z",
    "title": "Hlvticons",
    "generator": null,
    "feeds": [],
@@ -4173,7 +4174,7 @@
   }
  },
  "hmmdaily.com": {
-  "checked": "2026-10-27T06:03:51Z",
+  "checked": "2026-11-26T07:24:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4197,7 +4198,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:03:51Z",
+   "checked": "2026-11-26T07:24:52Z",
    "title": "Hmm Daily – THINK AGAIN",
    "generator": null,
    "feeds": [
@@ -4218,37 +4219,37 @@
   }
  },
  "hn.wilsonl.in": {
-  "checked": "2026-10-27T06:03:54Z",
+  "checked": "2026-11-26T07:24:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
-   "resolves": true,
-   "a": [
-    "95.216.114.90"
-   ],
+   "resolves": false,
+   "a": [],
    "aaaa": [],
-   "cname": "personal.wlin.me",
+   "cname": null,
    "ns": [],
-   "mx": false
+   "mx": false,
+   "error": "NXDOMAIN"
   },
   "https": {
-   "reachable": true,
-   "redirects_http": true,
-   "status": 502
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:03:54Z",
+   "checked": "2026-11-26T07:24:55Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "HTTP 502"
+   "error": "does not resolve"
   }
  },
  "hnbooks.pieterma.es": {
-  "checked": "2026-10-27T06:04:19Z",
+  "checked": "2026-11-26T07:24:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4271,7 +4272,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:04:19Z",
+   "checked": "2026-11-26T07:24:55Z",
    "title": "Hacker News Book Map",
    "generator": "Astro v7.3.2",
    "feeds": [],
@@ -4281,7 +4282,7 @@
   }
  },
  "hobix.com": {
-  "checked": "2026-10-27T06:04:22Z",
+  "checked": "2026-11-26T07:24:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4307,7 +4308,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:04:22Z",
+   "checked": "2026-11-26T07:24:59Z",
    "title": "Hobix · HTML, CSS, Ruby & static publishing",
    "generator": null,
    "feeds": [
@@ -4379,7 +4380,7 @@
   }
  },
  "hogbaysoftware.com": {
-  "checked": "2026-10-27T06:04:25Z",
+  "checked": "2026-11-26T07:25:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4407,7 +4408,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:04:25Z",
+   "checked": "2026-11-26T07:25:02Z",
    "title": "Hog Bay Software",
    "generator": null,
    "feeds": [
@@ -4425,7 +4426,7 @@
   }
  },
  "hokstad.com": {
-  "checked": "2026-10-27T06:04:28Z",
+  "checked": "2026-11-26T07:25:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4451,7 +4452,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:04:28Z",
+   "checked": "2026-11-26T07:25:04Z",
    "title": null,
    "generator": null,
    "feeds": [
@@ -4469,7 +4470,7 @@
   }
  },
  "holisticproductivity.net": {
-  "checked": "2026-10-27T06:04:29Z",
+  "checked": "2026-11-26T07:25:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4491,9 +4492,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:04:29Z",
+   "checked": "2026-11-26T07:25:06Z",
    "title": "Approach - Holistic Productivity",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -4517,7 +4518,7 @@
   }
  },
  "hollisrobbinsanecdotal.substack.com": {
-  "checked": "2026-10-27T06:04:32Z",
+  "checked": "2026-11-26T07:25:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4540,7 +4541,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:04:32Z",
+   "checked": "2026-11-26T07:25:08Z",
    "title": "Anecdotal Value | Hollis Robbins | Substack",
    "generator": null,
    "feeds": [
@@ -4590,7 +4591,7 @@
   }
  },
  "holovaty.com": {
-  "checked": "2026-10-27T06:04:35Z",
+  "checked": "2026-11-26T07:25:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4615,7 +4616,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:04:35Z",
+   "checked": "2026-11-26T07:25:11Z",
    "title": "Adrian Holovaty",
    "generator": null,
    "feeds": [
@@ -4631,7 +4632,7 @@
   }
  },
  "holypost.com": {
-  "checked": "2026-10-27T06:04:36Z",
+  "checked": "2026-11-26T07:25:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4655,7 +4656,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:04:36Z",
+   "checked": "2026-11-26T07:25:12Z",
    "title": "Holy Post Media: See the Bigger Picture",
    "generator": "Wix.com Website Builder",
    "feeds": [
@@ -4671,7 +4672,7 @@
   }
  },
  "holzschu.github.io": {
-  "checked": "2026-10-27T06:04:39Z",
+  "checked": "2026-11-26T07:25:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4698,7 +4699,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-27T06:04:39Z",
+   "checked": "2026-11-26T07:25:15Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4709,7 +4710,7 @@
   }
  },
  "home.earthlink.net": {
-  "checked": "2026-10-27T06:04:41Z",
+  "checked": "2026-11-26T07:25:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4727,7 +4728,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:04:41Z",
+   "checked": "2026-11-26T07:25:16Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4738,7 +4739,7 @@
   }
  },
  "home.fnal.gov": {
-  "checked": "2026-10-27T06:04:41Z",
+  "checked": "2026-11-26T07:25:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4765,7 +4766,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:04:41Z",
+   "checked": "2026-11-26T07:25:16Z",
    "title": "Select Authentication System",
    "generator": null,
    "feeds": [],
@@ -4775,7 +4776,7 @@
   }
  },
  "home.snafu.de": {
-  "checked": "2026-10-27T06:04:48Z",
+  "checked": "2026-11-26T07:25:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4794,7 +4795,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:04:48Z",
+   "checked": "2026-11-26T07:25:24Z",
    "title": "IT-Infrastruktur, Digitalisierung & Prozessoptimierung für KMU und E-Commerce | mit JTL & Odoo - snafu",
    "generator": "WordPress 7.0.2",
    "feeds": [
@@ -4815,7 +4816,7 @@
   }
  },
  "homekitty.world": {
-  "checked": "2026-10-27T06:04:52Z",
+  "checked": "2026-11-26T07:25:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4841,7 +4842,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:04:52Z",
+   "checked": "2026-11-26T07:25:27Z",
    "title": "Coming Soon",
    "generator": null,
    "feeds": [],
@@ -4882,7 +4883,7 @@
   }
  },
  "homepower.com": {
-  "checked": "2026-10-27T06:04:55Z",
+  "checked": "2026-11-26T07:25:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4906,7 +4907,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:04:55Z",
+   "checked": "2026-11-26T07:25:30Z",
    "title": "Home Power Magazine | Downloadable Archive | Home",
    "generator": "Wix.com Website Builder",
    "feeds": [],
@@ -4916,7 +4917,7 @@
   }
  },
  "honest-broker.com": {
-  "checked": "2026-10-27T06:04:58Z",
+  "checked": "2026-11-26T07:25:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4939,7 +4940,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:04:58Z",
+   "checked": "2026-11-26T07:25:33Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4949,7 +4950,7 @@
   }
  },
  "honest.engineering": {
-  "checked": "2026-10-27T06:04:59Z",
+  "checked": "2026-11-26T07:25:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4968,7 +4969,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:04:59Z",
+   "checked": "2026-11-26T07:25:34Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5017,7 +5018,7 @@
   "rdap_error": "no RDAP service for .io"
  },
  "honk.me": {
-  "checked": "2026-10-27T06:05:06Z",
+  "checked": "2026-11-26T07:25:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5043,7 +5044,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:05:06Z",
+   "checked": "2026-11-26T07:25:40Z",
    "title": "Honk",
    "generator": null,
    "feeds": [],
@@ -5053,7 +5054,7 @@
   }
  },
  "hookproductivity.com": {
-  "checked": "2026-10-27T06:05:10Z",
+  "checked": "2026-11-26T07:25:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5075,9 +5076,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:05:10Z",
+   "checked": "2026-11-26T07:25:44Z",
    "title": "Hookmark – Links beat searching",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -5104,7 +5105,7 @@
   }
  },
  "hop.exchange": {
-  "checked": "2026-10-27T06:05:15Z",
+  "checked": "2026-11-26T07:25:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5127,20 +5128,21 @@
   "https": {
    "reachable": true,
    "redirects_http": true,
-   "status": 200
+   "status": 404
   },
   "home": {
-   "checked": "2026-10-27T06:05:15Z",
-   "title": "JUDIMPO Situs Judi Mpo Slot 10k dengan Peluang Maxwin Terbaik",
+   "checked": "2026-11-26T07:25:50Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 404"
   }
  },
  "hopelessgeek.com": {
-  "checked": "2026-10-27T06:05:18Z",
+  "checked": "2026-11-26T07:25:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5160,21 +5162,21 @@
    "reachable": false,
    "redirects_http": false,
    "status": null,
-   "error": "timeout"
+   "error": "connection refused"
   },
   "home": {
-   "checked": "2026-10-27T06:05:18Z",
+   "checked": "2026-11-26T07:25:53Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "timeout"
+   "error": "connection refused"
   }
  },
  "hopkinsartscenter.com": {
-  "checked": "2026-10-27T06:05:49Z",
+  "checked": "2026-11-26T07:25:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5196,7 +5198,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:05:49Z",
+   "checked": "2026-11-26T07:25:54Z",
    "title": "Hopkins Arts Center, MN | Official Website",
    "generator": null,
    "feeds": [],
@@ -5206,16 +5208,16 @@
   }
  },
  "horicky.blogspot.com": {
-  "checked": "2026-10-27T06:05:51Z",
+  "checked": "2026-11-26T07:25:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.34.225"
+    "142.250.177.65"
    ],
    "aaaa": [
-    "2607:f8b0:4009:80f::2001"
+    "2607:f8b0:4009:81c::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -5227,7 +5229,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:05:51Z",
+   "checked": "2026-11-26T07:25:56Z",
    "title": "Pragmatic Programming Techniques",
    "generator": "blogger",
    "feeds": [
@@ -5283,7 +5285,7 @@
   }
  },
  "hotgarbage.org": {
-  "checked": "2026-10-27T06:05:53Z",
+  "checked": "2026-11-26T07:25:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5309,7 +5311,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:05:53Z",
+   "checked": "2026-11-26T07:25:57Z",
    "title": "HOT GARBAGE!",
    "generator": null,
    "feeds": [],
@@ -5319,7 +5321,7 @@
   }
  },
  "hottakes.space": {
-  "checked": "2026-10-27T06:05:56Z",
+  "checked": "2026-11-26T07:26:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5328,10 +5330,10 @@
    "aaaa": [],
    "cname": null,
    "ns": [
-    "dns1.p09.nsone.net",
-    "dns2.p09.nsone.net",
-    "dns3.p09.nsone.net",
-    "dns4.p09.nsone.net",
+    "dns1.p01.nsone.net",
+    "dns2.p01.nsone.net",
+    "dns3.p01.nsone.net",
+    "dns4.p01.nsone.net",
     "ns01.squarespacedns.com",
     "ns02.squarespacedns.com",
     "ns03.squarespacedns.com",
@@ -5346,7 +5348,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:05:56Z",
+   "checked": "2026-11-26T07:26:00Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5357,7 +5359,7 @@
   }
  },
  "houseoffaulkner.com": {
-  "checked": "2026-10-27T06:05:56Z",
+  "checked": "2026-11-26T07:26:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5376,7 +5378,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:05:56Z",
+   "checked": "2026-11-26T07:26:00Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5387,7 +5389,7 @@
   }
  },
  "hovding.com": {
-  "checked": "2026-10-27T06:05:57Z",
+  "checked": "2026-11-26T07:26:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5410,8 +5412,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:05:57Z",
-   "title": "Wearable airbag protection for cyclists – Hövding",
+   "checked": "2026-11-26T07:26:01Z",
+   "title": "Hövding - Airbag for urban cyclists",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -5420,7 +5422,7 @@
   }
  },
  "how-did-i-get-here.net": {
-  "checked": "2026-10-27T06:06:01Z",
+  "checked": "2026-11-26T07:26:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5442,7 +5444,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:01Z",
+   "checked": "2026-11-26T07:26:06Z",
    "title": "How Did I Get Here?",
    "generator": null,
    "feeds": [],
@@ -5452,26 +5454,26 @@
   }
  },
  "how.complexsystems.fail": {
-  "checked": "2026-10-27T06:06:05Z",
+  "checked": "2026-11-26T07:26:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "3.171.22.22",
-    "3.171.22.39",
-    "3.171.22.56",
-    "3.171.22.96"
+    "65.8.27.17",
+    "65.8.27.61",
+    "65.8.27.105",
+    "65.8.27.119"
    ],
    "aaaa": [
-    "2600:9000:289d:2400:10:2a32:8440:93a1",
-    "2600:9000:289d:5800:10:2a32:8440:93a1",
-    "2600:9000:289d:6400:10:2a32:8440:93a1",
-    "2600:9000:289d:6c00:10:2a32:8440:93a1",
-    "2600:9000:289d:9600:10:2a32:8440:93a1",
-    "2600:9000:289d:9e00:10:2a32:8440:93a1",
-    "2600:9000:289d:d200:10:2a32:8440:93a1",
-    "2600:9000:289d:ee00:10:2a32:8440:93a1"
+    "2600:9000:2123:1400:10:2a32:8440:93a1",
+    "2600:9000:2123:1800:10:2a32:8440:93a1",
+    "2600:9000:2123:2c00:10:2a32:8440:93a1",
+    "2600:9000:2123:3800:10:2a32:8440:93a1",
+    "2600:9000:2123:3a00:10:2a32:8440:93a1",
+    "2600:9000:2123:5c00:10:2a32:8440:93a1",
+    "2600:9000:2123:6200:10:2a32:8440:93a1",
+    "2600:9000:2123:ea00:10:2a32:8440:93a1"
    ],
    "cname": null,
    "ns": [],
@@ -5483,7 +5485,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:05Z",
+   "checked": "2026-11-26T07:26:10Z",
    "title": "How Complex Systems Fail",
    "generator": null,
    "feeds": [],
@@ -5493,7 +5495,7 @@
   }
  },
  "howonlee.github.io": {
-  "checked": "2026-10-27T06:06:09Z",
+  "checked": "2026-11-26T07:26:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5520,7 +5522,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:09Z",
+   "checked": "2026-11-26T07:26:12Z",
    "title": "Ferns",
    "generator": null,
    "feeds": [
@@ -5570,7 +5572,7 @@
   }
  },
  "howtoforge.com": {
-  "checked": "2026-10-27T06:06:12Z",
+  "checked": "2026-11-26T07:26:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5598,7 +5600,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:12Z",
+   "checked": "2026-11-26T07:26:15Z",
    "title": "Howtoforge Linux Tutorials.",
    "generator": null,
    "feeds": [
@@ -5650,7 +5652,7 @@
   }
  },
  "howtographql.com": {
-  "checked": "2026-10-27T06:06:16Z",
+  "checked": "2026-11-26T07:26:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5674,7 +5676,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:16Z",
+   "checked": "2026-11-26T07:26:19Z",
    "title": "How to GraphQL - The Fullstack Tutorial for GraphQL",
    "generator": null,
    "feeds": [],
@@ -5684,7 +5686,7 @@
   }
  },
  "howtoons.com": {
-  "checked": "2026-10-27T06:06:19Z",
+  "checked": "2026-11-26T07:26:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5707,7 +5709,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:19Z",
+   "checked": "2026-11-26T07:26:21Z",
    "title": "Howtoons",
    "generator": null,
    "feeds": [
@@ -5723,7 +5725,7 @@
   }
  },
  "hoytech.com": {
-  "checked": "2026-10-27T06:06:22Z",
+  "checked": "2026-11-26T07:26:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5748,7 +5750,7 @@
    "error": "tls: TLSV1_ALERT_DECODE_ERROR"
   },
   "home": {
-   "checked": "2026-10-27T06:06:22Z",
+   "checked": "2026-11-26T07:26:25Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5759,7 +5761,7 @@
   }
  },
  "hpcwire.com": {
-  "checked": "2026-10-27T06:06:25Z",
+  "checked": "2026-11-26T07:26:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5784,21 +5786,26 @@
   "https": {
    "reachable": true,
    "redirects_http": true,
-   "status": 403
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:25Z",
-   "title": null,
-   "generator": null,
-   "feeds": [],
+   "checked": "2026-11-26T07:26:27Z",
+   "title": "HPCwire - Since 1987 – Covering the Fastest Computers in the World and the People Who Run Them",
+   "generator": "Site Kit by Google 1.191.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://www.hpcwire.com/feed/podcast-archive",
+     "title": "Podcast RSS feed"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
-   "webmention": null,
-   "error": "HTTP 403 (Cloudflare challenge)"
+   "webmention": null
   }
  },
  "hrexaminer.com": {
-  "checked": "2026-10-27T06:06:28Z",
+  "checked": "2026-11-26T07:26:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5820,7 +5827,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:28Z",
+   "checked": "2026-11-26T07:26:30Z",
    "title": "HRExaminer | John Sumser | Substack",
    "generator": null,
    "feeds": [
@@ -5836,7 +5843,7 @@
   }
  },
  "hrtapps.com": {
-  "checked": "2026-10-27T06:06:31Z",
+  "checked": "2026-11-26T07:26:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5858,7 +5865,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:31Z",
+   "checked": "2026-11-26T07:26:33Z",
    "title": "Hunter Research & Technology",
    "generator": null,
    "feeds": [],
@@ -5868,7 +5875,7 @@
   }
  },
  "hsivonen.fi": {
-  "checked": "2026-10-27T06:06:32Z",
+  "checked": "2026-11-26T07:26:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5893,7 +5900,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:32Z",
+   "checked": "2026-11-26T07:26:35Z",
    "title": "Henri Sivonen's pages",
    "generator": null,
    "feeds": [],
@@ -5907,7 +5914,7 @@
   }
  },
  "html5.labs.ap.org": {
-  "checked": "2026-10-27T06:06:36Z",
+  "checked": "2026-11-26T07:26:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5925,7 +5932,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:06:36Z",
+   "checked": "2026-11-26T07:26:38Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5936,7 +5943,7 @@
   }
  },
  "html5boilerplate.com": {
-  "checked": "2026-10-27T06:06:36Z",
+  "checked": "2026-11-26T07:26:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5964,7 +5971,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:36Z",
+   "checked": "2026-11-26T07:26:39Z",
    "title": "HTML5 Boilerplate: The web’s most popular front-end template",
    "generator": null,
    "feeds": [],
@@ -5974,16 +5981,16 @@
   }
  },
  "html5rocks.com": {
-  "checked": "2026-10-27T06:06:40Z",
+  "checked": "2026-11-26T07:26:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.214.83"
+    "142.251.210.115"
    ],
    "aaaa": [
-    "2607:f8b0:4009:80e::2013"
+    "2607:f8b0:4009:80d::2013"
    ],
    "cname": null,
    "ns": [
@@ -6000,7 +6007,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:40Z",
+   "checked": "2026-11-26T07:26:42Z",
    "title": "web.dev",
    "generator": null,
    "feeds": [],
@@ -6010,7 +6017,7 @@
   }
  },
  "html5test.com": {
-  "checked": "2026-10-27T06:06:43Z",
+  "checked": "2026-11-26T07:26:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6036,7 +6043,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:43Z",
+   "checked": "2026-11-26T07:26:45Z",
    "title": "HTML5test - How well does your browser support HTML5?",
    "generator": null,
    "feeds": [],
@@ -6048,7 +6055,7 @@
   }
  },
  "htmlforpeople.com": {
-  "checked": "2026-10-27T06:06:46Z",
+  "checked": "2026-11-26T07:26:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6074,7 +6081,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:46Z",
+   "checked": "2026-11-26T07:26:48Z",
    "title": "HTML for People",
    "generator": null,
    "feeds": [],
@@ -6086,7 +6093,7 @@
   }
  },
  "htmlhobbyist.com": {
-  "checked": "2026-10-27T06:06:49Z",
+  "checked": "2026-11-26T07:26:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6109,7 +6116,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:49Z",
+   "checked": "2026-11-26T07:26:50Z",
    "title": "The HTML Hobbyist",
    "generator": null,
    "feeds": [
@@ -6140,22 +6147,23 @@
   }
  },
  "htmx.org": {
-  "checked": "2026-10-27T06:06:50Z",
+  "checked": "2026-11-26T07:26:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "18.208.88.157",
-    "98.84.224.111"
+    "104.21.7.75",
+    "172.67.135.205"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2606:4700:3031::ac43:87cd",
+    "2606:4700:3035::6815:74b"
+   ],
    "cname": null,
    "ns": [
-    "dns1.p02.nsone.net",
-    "dns2.p02.nsone.net",
-    "dns3.p02.nsone.net",
-    "dns4.p02.nsone.net"
+    "lex.ns.cloudflare.com",
+    "vita.ns.cloudflare.com"
    ],
    "mx": false
   },
@@ -6165,7 +6173,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:50Z",
+   "checked": "2026-11-26T07:26:52Z",
    "title": "</> htmx - high power tools for html",
    "generator": "Zola v.TODO",
    "feeds": [
@@ -6181,7 +6189,7 @@
   }
  },
  "http.cat": {
-  "checked": "2026-10-27T06:06:54Z",
+  "checked": "2026-11-26T07:26:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6207,7 +6215,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:54Z",
+   "checked": "2026-11-26T07:26:55Z",
    "title": "HTTP Cats",
    "generator": null,
    "feeds": [],
@@ -6223,22 +6231,21 @@
   }
  },
  "httpbin.org": {
-  "checked": "2026-10-27T06:06:56Z",
+  "checked": "2026-11-26T07:26:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "3.211.106.232",
-    "3.220.166.81",
-    "35.170.125.171",
-    "44.206.195.5",
-    "44.210.74.85",
-    "52.6.78.96",
-    "52.44.60.253",
-    "184.194.160.148"
+    "3.221.253.123",
+    "44.209.237.184",
+    "54.172.45.38"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2600:1f18:2da1:d400:5c03:f07e:e0be:7edd",
+    "2600:1f18:2da1:d401:3bc4:1b7d:6e3d:8acb",
+    "2600:1f18:2da1:d402:54c2:29a8:4a48:2547"
+   ],
    "cname": null,
    "ns": [
     "ns-1053.awsdns-03.org",
@@ -6254,7 +6261,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:56Z",
+   "checked": "2026-11-26T07:26:57Z",
    "title": "httpbin.org",
    "generator": null,
    "feeds": [],
@@ -6264,7 +6271,7 @@
   }
  },
  "httpd.apache.org": {
-  "checked": "2026-10-27T06:06:58Z",
+  "checked": "2026-11-26T07:26:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6285,7 +6292,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:06:58Z",
+   "checked": "2026-11-26T07:26:58Z",
    "title": "Welcome! - The Apache HTTP Server Project",
    "generator": null,
    "feeds": [],
@@ -6295,7 +6302,7 @@
   }
  },
  "httptoolkit.com": {
-  "checked": "2026-10-27T06:07:00Z",
+  "checked": "2026-11-26T07:27:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6319,7 +6326,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:07:00Z",
+   "checked": "2026-11-26T07:27:01Z",
    "title": "Intercept, debug & build with HTTP",
    "generator": null,
    "feeds": [
@@ -6335,16 +6342,16 @@
   }
  },
  "httptoolkit.tech": {
-  "checked": "2026-10-27T06:07:03Z",
+  "checked": "2026-11-26T07:27:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "143.244.60.196"
+    "38.142.94.218"
    ],
    "aaaa": [
-    "2400:52e0:1a00::1232:1"
+    "2001:550:2:dc::5e:2"
    ],
    "cname": null,
    "ns": [
@@ -6359,7 +6366,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:07:03Z",
+   "checked": "2026-11-26T07:27:03Z",
    "title": "Intercept, debug & build with HTTP",
    "generator": null,
    "feeds": [
@@ -6375,7 +6382,7 @@
   }
  },
  "hu.ma.ne": {
-  "checked": "2026-10-27T06:07:05Z",
+  "checked": "2026-11-26T07:27:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6395,7 +6402,7 @@
    "error": "dns: name does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:07:05Z",
+   "checked": "2026-11-26T07:27:06Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6406,7 +6413,7 @@
   }
  },
  "hueniverse.com": {
-  "checked": "2026-10-27T06:07:09Z",
+  "checked": "2026-11-26T07:27:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6429,7 +6436,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:07:09Z",
+   "checked": "2026-11-26T07:27:08Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6439,7 +6446,7 @@
   }
  },
  "huffduffer.com": {
-  "checked": "2026-10-27T06:07:10Z",
+  "checked": "2026-11-26T07:27:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6465,7 +6472,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:07:10Z",
+   "checked": "2026-11-26T07:27:10Z",
    "title": "Huffduffer",
    "generator": null,
    "feeds": [
@@ -6670,7 +6677,7 @@
   }
  },
  "hugo.blog": {
-  "checked": "2026-10-27T06:07:14Z",
+  "checked": "2026-11-26T07:27:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6694,7 +6701,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:07:14Z",
+   "checked": "2026-11-26T07:27:13Z",
    "title": "Hugo's Blog",
    "generator": "WordPress.com",
    "feeds": [
@@ -6715,25 +6722,25 @@
   }
  },
  "huhmagazine.co.uk": {
-  "checked": "2026-10-27T06:07:17Z",
+  "checked": "2026-11-26T07:27:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.21.30.70",
-    "172.67.172.58"
+    "104.21.7.216",
+    "172.67.188.13"
    ],
    "aaaa": [
-    "2606:4700:3031::6815:1e46",
-    "2606:4700:3033::ac43:ac3a"
+    "2606:4700:3031::ac43:bc0d",
+    "2606:4700:3036::6815:7d8"
    ],
    "cname": null,
    "ns": [
-    "daisy.ns.cloudflare.com",
-    "ezra.ns.cloudflare.com"
+    "nadia.ns.cloudflare.com",
+    "peter.ns.cloudflare.com"
    ],
-   "mx": true
+   "mx": false
   },
   "https": {
    "reachable": true,
@@ -6741,7 +6748,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-27T06:07:17Z",
+   "checked": "2026-11-26T07:27:16Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6752,7 +6759,7 @@
   }
  },
  "hulry.com": {
-  "checked": "2026-10-27T06:07:18Z",
+  "checked": "2026-11-26T07:27:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6782,9 +6789,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:07:18Z",
+   "checked": "2026-11-26T07:27:17Z",
    "title": "Hulry — Be 1% Better Every Day",
-   "generator": "Ghost 6.73",
+   "generator": "Ghost 6.80",
    "feeds": [
     {
      "type": "rss",
@@ -6798,7 +6805,7 @@
   }
  },
  "humaaans.com": {
-  "checked": "2026-10-27T06:07:21Z",
+  "checked": "2026-11-26T07:27:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6820,7 +6827,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:07:21Z",
+   "checked": "2026-11-26T07:27:20Z",
    "title": "Humaaans: Mix-&-Match illustration library",
    "generator": "Webflow",
    "feeds": [],
@@ -6830,7 +6837,7 @@
   }
  },
  "humanewebmanifesto.com": {
-  "checked": "2026-10-27T06:07:24Z",
+  "checked": "2026-11-26T07:27:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6855,7 +6862,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:07:24Z",
+   "checked": "2026-11-26T07:27:22Z",
    "title": "Manifesto for a Humane Web",
    "generator": null,
    "feeds": [],
@@ -6865,7 +6872,7 @@
   }
  },
  "humanitix.com": {
-  "checked": "2026-10-27T06:07:27Z",
+  "checked": "2026-11-26T07:27:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6891,7 +6898,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:07:27Z",
+   "checked": "2026-11-26T07:27:25Z",
    "title": "Humanitix | Find the Best Events & Things to Do",
    "generator": null,
    "feeds": [],
@@ -6901,16 +6908,16 @@
   }
  },
  "humanonastick.com": {
-  "checked": "2026-10-27T06:07:34Z",
+  "checked": "2026-11-26T07:27:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "162.252.204.215"
+    "162.252.205.5"
    ],
    "aaaa": [
-    "2602:ff3a:1::215"
+    "2602:ff3a:7::5"
    ],
    "cname": null,
    "ns": [
@@ -6925,19 +6932,19 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:07:34Z",
-   "title": "My Blog – Minnesota's Leading Segway Tours",
-   "generator": "WordPress 6.8.11",
+   "checked": "2026-11-26T07:27:32Z",
+   "title": "HumanOnaStick – Minnesota's Leading Segway Tours",
+   "generator": "WordPress 6.8.13",
    "feeds": [
     {
      "type": "rss",
      "url": "https://humanonastick.com/feed/",
-     "title": "My Blog » Feed"
+     "title": "HumanOnaStick » Feed"
     },
     {
      "type": "rss",
      "url": "https://humanonastick.com/comments/feed/",
-     "title": "My Blog » Comments Feed"
+     "title": "HumanOnaStick » Comments Feed"
     }
    ],
    "hcard": false,
@@ -6946,42 +6953,43 @@
   }
  },
  "humanreadablemag.com": {
-  "checked": "2026-10-27T06:07:40Z",
+  "checked": "2026-11-26T07:27:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "2.59.170.20",
-    "104.219.250.37"
+    "104.21.21.12",
+    "172.67.195.170"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2606:4700:3030::ac43:c3aa",
+    "2606:4700:3033::6815:150c"
+   ],
    "cname": null,
    "ns": [
-    "ns1.lander.d.parity.domains",
-    "ns2.lander.d.parity.domains"
+    "becky.ns.cloudflare.com",
+    "melnicoff.ns.cloudflare.com"
    ],
    "mx": false
   },
   "https": {
-   "reachable": false,
-   "redirects_http": false,
-   "status": null,
-   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:07:40Z",
+   "checked": "2026-11-26T07:27:37Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null,
-   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+   "webmention": null
   }
  },
  "humanstxt.org": {
-  "checked": "2026-10-27T06:07:57Z",
+  "checked": "2026-11-26T07:27:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7002,7 +7010,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:07:57Z",
+   "checked": "2026-11-26T07:27:42Z",
    "title": "Humans TXT: We Are People, Not Machines.",
    "generator": null,
    "feeds": [],
@@ -7012,7 +7020,7 @@
   }
  },
  "humanwhocodes.com": {
-  "checked": "2026-10-27T06:08:02Z",
+  "checked": "2026-11-26T07:27:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7038,7 +7046,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:08:02Z",
+   "checked": "2026-11-26T07:27:46Z",
    "title": "Human Who Codes - Human Who Codes",
    "generator": "Astro v7.2.1",
    "feeds": [
@@ -7066,7 +7074,7 @@
   }
  },
  "humblesoftware.com": {
-  "checked": "2026-10-27T06:08:08Z",
+  "checked": "2026-11-26T07:27:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7093,7 +7101,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:08:08Z",
+   "checked": "2026-11-26T07:27:52Z",
    "title": "humble software development - home",
    "generator": null,
    "feeds": [],
@@ -7137,7 +7145,7 @@
   }
  },
  "hungryflix.com": {
-  "checked": "2026-10-27T06:08:11Z",
+  "checked": "2026-11-26T07:27:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7156,7 +7164,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:08:11Z",
+   "checked": "2026-11-26T07:27:55Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7167,7 +7175,7 @@
   }
  },
  "hunterwalk.com": {
-  "checked": "2026-10-27T06:08:37Z",
+  "checked": "2026-11-26T07:28:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7191,7 +7199,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:08:37Z",
+   "checked": "2026-11-26T07:28:13Z",
    "title": "Hunter Walk | Self-Aware Self-Promotion",
    "generator": null,
    "feeds": [
@@ -7212,7 +7220,7 @@
   }
  },
  "hupix.net": {
-  "checked": "2026-10-27T06:08:41Z",
+  "checked": "2026-11-26T07:28:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7238,7 +7246,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:08:41Z",
+   "checked": "2026-11-26T07:28:17Z",
    "title": "Hugh Symonds - Photographs",
    "generator": null,
    "feeds": [],
@@ -7248,7 +7256,7 @@
   }
  },
  "hussain.io": {
-  "checked": "2026-10-27T06:08:44Z",
+  "checked": "2026-11-26T07:28:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7274,7 +7282,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:08:44Z",
+   "checked": "2026-11-26T07:28:20Z",
    "title": "Blogging about tech stuff",
    "generator": null,
    "feeds": [
@@ -7290,7 +7298,7 @@
   }
  },
  "hutaffe.blog": {
-  "checked": "2026-10-27T06:08:45Z",
+  "checked": "2026-11-26T07:28:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7316,7 +7324,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:08:45Z",
+   "checked": "2026-11-26T07:28:22Z",
    "title": "hutaffe.blog",
    "generator": "Hugo 0.158.0",
    "feeds": [
@@ -7334,7 +7342,7 @@
   }
  },
  "hwcdn.libsyn.com": {
-  "checked": "2026-10-27T06:08:49Z",
+  "checked": "2026-11-26T07:28:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7354,7 +7362,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-27T06:08:49Z",
+   "checked": "2026-11-26T07:28:25Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7365,7 +7373,7 @@
   }
  },
  "hybridhacker.email": {
-  "checked": "2026-10-27T06:08:52Z",
+  "checked": "2026-11-26T07:28:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7391,7 +7399,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:08:52Z",
+   "checked": "2026-11-26T07:28:28Z",
    "title": "Hybrid Hacker | Substack",
    "generator": null,
    "feeds": [
@@ -7407,7 +7415,7 @@
   }
  },
  "hynek.me": {
-  "checked": "2026-10-27T06:08:55Z",
+  "checked": "2026-11-26T07:28:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7431,9 +7439,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:08:55Z",
+   "checked": "2026-11-26T07:28:30Z",
    "title": "Hynek Schlawack",
-   "generator": "Hugo 0.167.0",
+   "generator": "Hugo 0.170.1",
    "feeds": [
     {
      "type": "atom",
@@ -7450,16 +7458,16 @@
   }
  },
  "hypebeast.com": {
-  "checked": "2026-10-27T06:08:58Z",
+  "checked": "2026-11-26T07:28:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "3.167.152.22",
-    "3.167.152.65",
-    "3.167.152.76",
-    "3.167.152.112"
+    "52.84.127.12",
+    "52.84.127.62",
+    "52.84.127.76",
+    "52.84.127.97"
    ],
    "aaaa": [],
    "cname": null,
@@ -7477,8 +7485,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:08:58Z",
-   "title": "Hypebeast - Fashion, Sneakers, Art, Design & Culture",
+   "checked": "2026-11-26T07:28:34Z",
+   "title": "Hypebeast | Fashion, Sneakers, Art, Design & Culture News",
    "generator": null,
    "feeds": [
     {
@@ -7493,14 +7501,14 @@
   }
  },
  "hyper.is": {
-  "checked": "2026-10-27T06:09:01Z",
+  "checked": "2026-11-26T07:28:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "64.239.109.65",
-    "64.239.109.129"
+    "64.239.109.1",
+    "64.239.123.129"
    ],
    "aaaa": [],
    "cname": null,
@@ -7516,7 +7524,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:09:01Z",
+   "checked": "2026-11-26T07:28:36Z",
    "title": "Hyper™",
    "generator": null,
    "feeds": [],
@@ -7526,7 +7534,7 @@
   }
  },
  "hyperact.co.uk": {
-  "checked": "2026-10-27T06:09:04Z",
+  "checked": "2026-11-26T07:28:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7550,7 +7558,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:09:04Z",
+   "checked": "2026-11-26T07:28:39Z",
    "title": "Hyperact - Product transformation partners",
    "generator": null,
    "feeds": [],
@@ -7560,7 +7568,7 @@
   }
  },
  "hyperbo.la": {
-  "checked": "2026-10-27T06:09:07Z",
+  "checked": "2026-11-26T07:28:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7592,7 +7600,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:09:07Z",
+   "checked": "2026-11-26T07:28:42Z",
    "title": "hyperbola",
    "generator": null,
    "feeds": [],
@@ -7602,16 +7610,16 @@
   }
  },
  "hyperboleandahalf.blogspot.com": {
-  "checked": "2026-10-27T06:09:09Z",
+  "checked": "2026-11-26T07:28:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.250.177.65"
+    "142.250.189.97"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81c::2001"
+    "2607:f8b0:4009:810::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -7623,7 +7631,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:09:09Z",
+   "checked": "2026-11-26T07:28:44Z",
    "title": "Hyperbole and a Half",
    "generator": "blogger",
    "feeds": [
@@ -7698,7 +7706,7 @@
   }
  },
  "hyperdeck.io": {
-  "checked": "2026-10-27T06:09:11Z",
+  "checked": "2026-11-26T07:28:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7724,7 +7732,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:09:11Z",
+   "checked": "2026-11-26T07:28:46Z",
    "title": "Hyperdeck Markdown Presentations for iPad and macOS",
    "generator": null,
    "feeds": [],
@@ -7734,7 +7742,7 @@
   }
  },
  "hyperdimensional.co": {
-  "checked": "2026-10-27T06:09:14Z",
+  "checked": "2026-11-26T07:28:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7756,7 +7764,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:09:14Z",
+   "checked": "2026-11-26T07:28:49Z",
    "title": "Hyperdimensional | Dean W. Ball | Substack",
    "generator": null,
    "feeds": [
@@ -7772,7 +7780,7 @@
   }
  },
  "hyperledger.org": {
-  "checked": "2026-10-27T06:09:17Z",
+  "checked": "2026-11-26T07:28:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7796,7 +7804,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:09:17Z",
+   "checked": "2026-11-26T07:28:52Z",
    "title": "LF Decentralized Trust - The open source foundation for decentralized technologies",
    "generator": "HubSpot",
    "feeds": [],
@@ -7806,7 +7814,7 @@
   }
  },
  "hyrumslaw.com": {
-  "checked": "2026-10-27T06:09:19Z",
+  "checked": "2026-11-26T07:28:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7829,7 +7837,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T06:09:19Z",
+   "checked": "2026-11-26T07:28:53Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7840,7 +7848,7 @@
   }
  },
  "hyvector.com": {
-  "checked": "2026-10-27T06:09:37Z",
+  "checked": "2026-11-26T07:29:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7864,7 +7872,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:09:37Z",
+   "checked": "2026-11-26T07:29:11Z",
    "title": "Hyvector - Free Browser-Based SVG & Vector Graphics Editor",
    "generator": null,
    "feeds": [],
@@ -7874,16 +7882,16 @@
   }
  },
  "hyvesblogonproductdevelopment.blogspot.com": {
-  "checked": "2026-10-27T06:09:41Z",
+  "checked": "2026-11-26T07:29:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.210.225"
+    "142.250.189.97"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81c::2001"
+    "2607:f8b0:4009:810::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -7895,7 +7903,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:09:41Z",
+   "checked": "2026-11-26T07:29:15Z",
    "title": "Hyves Product Development",
    "generator": "blogger",
    "feeds": [

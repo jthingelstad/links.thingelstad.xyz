@@ -1,6 +1,6 @@
 {
  "eagletreesystems.com": {
-  "checked": "2026-10-26T06:24:12Z",
+  "checked": "2026-11-26T06:32:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -22,7 +22,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:24:12Z",
+   "checked": "2026-11-26T06:32:22Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -83,7 +83,7 @@
   }
  },
  "earni.fi": {
-  "checked": "2026-10-26T06:24:26Z",
+  "checked": "2026-11-26T06:32:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -109,7 +109,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-26T06:24:26Z",
+   "checked": "2026-11-26T06:32:27Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -120,7 +120,7 @@
   }
  },
  "earth.nullschool.net": {
-  "checked": "2026-10-26T06:24:29Z",
+  "checked": "2026-11-26T06:32:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -145,7 +145,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:24:29Z",
+   "checked": "2026-11-26T06:32:29Z",
    "title": "earth :: a global map of wind, weather, and ocean conditions",
    "generator": null,
    "feeds": [],
@@ -155,7 +155,7 @@
   }
  },
  "earthcode.com": {
-  "checked": "2026-10-26T06:24:31Z",
+  "checked": "2026-11-26T06:32:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -176,7 +176,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:24:31Z",
+   "checked": "2026-11-26T06:32:32Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -187,7 +187,7 @@
   }
  },
  "earthquake.usgs.gov": {
-  "checked": "2026-10-26T06:24:32Z",
+  "checked": "2026-11-26T06:32:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -199,14 +199,14 @@
     "3.166.118.95"
    ],
    "aaaa": [
-    "2600:9000:279b:0:12:a982:df80:93a1",
-    "2600:9000:279b:1000:12:a982:df80:93a1",
-    "2600:9000:279b:2400:12:a982:df80:93a1",
-    "2600:9000:279b:3400:12:a982:df80:93a1",
-    "2600:9000:279b:6e00:12:a982:df80:93a1",
-    "2600:9000:279b:b000:12:a982:df80:93a1",
-    "2600:9000:279b:e200:12:a982:df80:93a1",
-    "2600:9000:279b:ee00:12:a982:df80:93a1"
+    "2600:9000:279b:200:12:a982:df80:93a1",
+    "2600:9000:279b:5600:12:a982:df80:93a1",
+    "2600:9000:279b:6800:12:a982:df80:93a1",
+    "2600:9000:279b:9a00:12:a982:df80:93a1",
+    "2600:9000:279b:cc00:12:a982:df80:93a1",
+    "2600:9000:279b:ce00:12:a982:df80:93a1",
+    "2600:9000:279b:e400:12:a982:df80:93a1",
+    "2600:9000:279b:f600:12:a982:df80:93a1"
    ],
    "cname": "d1n6ynkhwz6a2m.cloudfront.net",
    "ns": [],
@@ -218,7 +218,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:24:32Z",
+   "checked": "2026-11-26T06:32:32Z",
    "title": "USGS Earthquake Hazards Program",
    "generator": null,
    "feeds": [],
@@ -228,7 +228,7 @@
   }
  },
  "earthroamer.com": {
-  "checked": "2026-10-26T06:24:35Z",
+  "checked": "2026-11-26T06:32:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -251,7 +251,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:24:35Z",
+   "checked": "2026-11-26T06:32:35Z",
    "title": "EarthRoamer – Luxury Expedition Vehicles for Overlanders | Custom RVs",
    "generator": "Elementor 3.35.6; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap",
    "feeds": [],
@@ -261,7 +261,7 @@
   }
  },
  "earthwormlawncare.com": {
-  "checked": "2026-10-26T06:24:38Z",
+  "checked": "2026-11-26T06:32:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -279,24 +279,22 @@
    "mx": false
   },
   "https": {
-   "reachable": false,
+   "reachable": true,
    "redirects_http": false,
-   "status": null,
-   "error": "tls: TLSV1_UNRECOGNIZED_NAME"
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:24:38Z",
+   "checked": "2026-11-26T06:32:38Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null,
-   "error": "tls: TLSV1_UNRECOGNIZED_NAME"
+   "webmention": null
   }
  },
  "easylang.online": {
-  "checked": "2026-10-26T06:24:40Z",
+  "checked": "2026-11-26T06:32:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -318,7 +316,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:24:40Z",
+   "checked": "2026-11-26T06:32:39Z",
    "title": "Easylang",
    "generator": null,
    "feeds": [],
@@ -328,7 +326,7 @@
   }
  },
  "eatlocalchallenge.com": {
-  "checked": "2026-10-26T06:24:43Z",
+  "checked": "2026-11-26T06:32:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -354,8 +352,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:24:43Z",
-   "title": "Huddol – Practical wellness for real everyday life",
+   "checked": "2026-11-26T06:32:43Z",
+   "title": "Huddol",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -364,7 +362,7 @@
   }
  },
  "eatmy.art": {
-  "checked": "2026-10-26T06:24:47Z",
+  "checked": "2026-11-26T06:32:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -390,7 +388,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:24:47Z",
+   "checked": "2026-11-26T06:32:46Z",
    "title": "Animation. For everyone. | Arteater",
    "generator": "Gatsby 2.32.13",
    "feeds": [
@@ -406,14 +404,14 @@
   }
  },
  "ebay.com": {
-  "checked": "2026-10-26T06:24:48Z",
+  "checked": "2026-11-26T06:32:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.222.241.51",
-    "23.222.241.52"
+    "23.200.156.15",
+    "23.200.156.17"
    ],
    "aaaa": [],
    "cname": null,
@@ -435,7 +433,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-26T06:24:48Z",
+   "checked": "2026-11-26T06:32:48Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -446,7 +444,7 @@
   }
  },
  "ebayinc.com": {
-  "checked": "2026-10-26T06:24:51Z",
+  "checked": "2026-11-26T06:32:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -474,7 +472,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-26T06:24:51Z",
+   "checked": "2026-11-26T06:32:51Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -485,18 +483,18 @@
   }
  },
  "ecamm.com": {
-  "checked": "2026-10-26T06:24:54Z",
+  "checked": "2026-11-26T06:32:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "15.223.55.253",
-    "99.79.186.29"
+    "3.98.158.76",
+    "52.60.171.106"
    ],
    "aaaa": [
-    "2600:1f11:d91:c800:8867:9379:aa42:b580",
-    "2600:1f11:d91:c801:f3a7:8e42:e66c:bf1e"
+    "2600:1f11:d91:c800:c35f:75fb:bc83:a774",
+    "2600:1f11:d91:c801:225d:8a74:54e3:4cfc"
    ],
    "cname": null,
    "ns": [
@@ -513,7 +511,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:24:54Z",
+   "checked": "2026-11-26T06:32:54Z",
    "title": "Ecamm - Powerful Live Streaming Platform for Mac",
    "generator": null,
    "feeds": [],
@@ -523,7 +521,7 @@
   }
  },
  "ecasd.k12.wi.us": {
-  "checked": "2026-10-26T06:24:57Z",
+  "checked": "2026-11-26T06:32:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -544,7 +542,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:24:57Z",
+   "checked": "2026-11-26T06:32:57Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -555,7 +553,7 @@
   }
  },
  "echarts.apache.org": {
-  "checked": "2026-10-26T06:24:58Z",
+  "checked": "2026-11-26T06:32:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -576,7 +574,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:24:58Z",
+   "checked": "2026-11-26T06:32:57Z",
    "title": "Apache ECharts",
    "generator": null,
    "feeds": [],
@@ -586,7 +584,7 @@
   }
  },
  "echochess.com": {
-  "checked": "2026-10-26T06:25:04Z",
+  "checked": "2026-11-26T06:33:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -609,7 +607,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:04Z",
+   "checked": "2026-11-26T06:33:03Z",
    "title": "Echo Chess — Play Daily Puzzles — Free Online Game",
    "generator": null,
    "feeds": [],
@@ -619,7 +617,7 @@
   }
  },
  "echofeed.app": {
-  "checked": "2026-10-26T06:25:07Z",
+  "checked": "2026-11-26T06:33:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -641,7 +639,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:07Z",
+   "checked": "2026-11-26T06:33:06Z",
    "title": "EchoFeed - Cross post your RSS feed to Mastodon, Bluesky, Micro.blog, Discord, and more!",
    "generator": null,
    "feeds": [],
@@ -701,7 +699,7 @@
   "rdap_error": "no RDAP service for .co"
  },
  "econ.st": {
-  "checked": "2026-10-26T06:25:11Z",
+  "checked": "2026-11-26T06:33:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -731,7 +729,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'econ.st'"
   },
   "home": {
-   "checked": "2026-10-26T06:25:11Z",
+   "checked": "2026-11-26T06:33:10Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -742,7 +740,7 @@
   }
  },
  "econgraphs.org": {
-  "checked": "2026-10-26T06:25:13Z",
+  "checked": "2026-11-26T06:33:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -770,7 +768,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'econgraphs.org'"
   },
   "home": {
-   "checked": "2026-10-26T06:25:13Z",
+   "checked": "2026-11-26T06:33:13Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -883,7 +881,7 @@
   }
  },
  "ecsspert.com": {
-  "checked": "2026-10-26T06:25:15Z",
+  "checked": "2026-11-26T06:33:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -908,7 +906,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:15Z",
+   "checked": "2026-11-26T06:33:14Z",
    "title": "Having fun with CSS | eCSSpert.com",
    "generator": null,
    "feeds": [],
@@ -957,7 +955,7 @@
   }
  },
  "edgeandnode.com": {
-  "checked": "2026-10-26T06:25:18Z",
+  "checked": "2026-11-26T06:33:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -983,7 +981,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:18Z",
+   "checked": "2026-11-26T06:33:17Z",
    "title": "Edge & Node: Infrastructure for blockchain data",
    "generator": null,
    "feeds": [],
@@ -993,7 +991,7 @@
   }
  },
  "edgedb.com": {
-  "checked": "2026-10-26T06:25:21Z",
+  "checked": "2026-11-26T06:33:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1017,7 +1015,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:21Z",
+   "checked": "2026-11-26T06:33:20Z",
    "title": "Gel | Postgres Unchained",
    "generator": null,
    "feeds": [
@@ -1033,7 +1031,7 @@
   }
  },
  "edinagis.maps.arcgis.com": {
-  "checked": "2026-10-26T06:25:24Z",
+  "checked": "2026-11-26T06:33:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1055,7 +1053,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:24Z",
+   "checked": "2026-11-26T06:33:23Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1065,7 +1063,7 @@
   }
  },
  "edinamn.gov": {
-  "checked": "2026-10-26T06:25:27Z",
+  "checked": "2026-11-26T06:33:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1088,7 +1086,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:27Z",
+   "checked": "2026-11-26T06:33:26Z",
    "title": "Edina, MN | Official Website",
    "generator": null,
    "feeds": [],
@@ -1098,7 +1096,7 @@
   }
  },
  "edition.cnn.com": {
-  "checked": "2026-10-26T06:25:29Z",
+  "checked": "2026-11-26T06:33:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1125,7 +1123,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:29Z",
+   "checked": "2026-11-26T06:33:28Z",
    "title": "Breaking News, Latest News and Videos | CNN",
    "generator": null,
    "feeds": [],
@@ -1135,7 +1133,7 @@
   }
  },
  "editorandpublisher.com": {
-  "checked": "2026-10-26T06:25:32Z",
+  "checked": "2026-11-26T06:33:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1157,7 +1155,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:32Z",
+   "checked": "2026-11-26T06:33:30Z",
    "title": "Home | Editor and Publisher",
    "generator": null,
    "feeds": [],
@@ -1167,7 +1165,7 @@
   }
  },
  "editorjs.io": {
-  "checked": "2026-10-26T06:25:34Z",
+  "checked": "2026-11-26T06:33:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1193,7 +1191,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:34Z",
+   "checked": "2026-11-26T06:33:33Z",
    "title": "Editor.js",
    "generator": null,
    "feeds": [],
@@ -1203,7 +1201,7 @@
   }
  },
  "editsquarterly.com": {
-  "checked": "2026-10-26T06:25:36Z",
+  "checked": "2026-11-26T06:33:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1226,7 +1224,7 @@
    "error": "tls: TLSV1_ALERT_INTERNAL_ERROR"
   },
   "home": {
-   "checked": "2026-10-26T06:25:36Z",
+   "checked": "2026-11-26T06:33:35Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1237,7 +1235,7 @@
   }
  },
  "edmunds.com": {
-  "checked": "2026-10-26T06:25:40Z",
+  "checked": "2026-11-26T06:33:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1264,7 +1262,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-26T06:25:40Z",
+   "checked": "2026-11-26T06:33:39Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1275,7 +1273,7 @@
   }
  },
  "edri.org": {
-  "checked": "2026-10-26T06:25:41Z",
+  "checked": "2026-11-26T06:33:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1294,11 +1292,11 @@
   },
   "https": {
    "reachable": true,
-   "redirects_http": false,
+   "redirects_http": true,
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:41Z",
+   "checked": "2026-11-26T06:33:40Z",
    "title": "European Digital Rights (EDRi)",
    "generator": null,
    "feeds": [
@@ -1321,7 +1319,7 @@
   }
  },
  "edtr.io": {
-  "checked": "2026-10-26T06:25:44Z",
+  "checked": "2026-11-26T06:33:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1344,7 +1342,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:25:44Z",
+   "checked": "2026-11-26T06:33:44Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1355,7 +1353,7 @@
   }
  },
  "edu.mkrecny.com": {
-  "checked": "2026-10-26T06:25:44Z",
+  "checked": "2026-11-26T06:33:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1377,7 +1375,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:44Z",
+   "checked": "2026-11-26T06:33:45Z",
    "title": "mkrecny.com",
    "generator": null,
    "feeds": [],
@@ -1459,7 +1457,7 @@
   }
  },
  "edwardtufte.github.io": {
-  "checked": "2026-10-26T06:25:47Z",
+  "checked": "2026-11-26T06:33:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1486,7 +1484,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:47Z",
+   "checked": "2026-11-26T06:33:47Z",
    "title": "Edward Tufte on GitHub",
    "generator": null,
    "feeds": [],
@@ -1496,7 +1494,7 @@
   }
  },
  "eecs.engin.umich.edu": {
-  "checked": "2026-10-26T06:25:50Z",
+  "checked": "2026-11-26T06:33:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1519,7 +1517,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:50Z",
+   "checked": "2026-11-26T06:33:50Z",
    "title": "Electrical Engineering and Computer Science at the University of Michigan",
    "generator": null,
    "feeds": [],
@@ -1529,15 +1527,15 @@
   }
  },
  "eero.com": {
-  "checked": "2026-10-26T06:25:52Z",
+  "checked": "2026-11-26T06:33:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "32.191.118.239",
-    "35.167.68.126",
-    "44.229.203.49"
+    "32.190.2.170",
+    "32.191.172.89",
+    "35.84.79.117"
    ],
    "aaaa": [],
    "cname": null,
@@ -1555,7 +1553,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:52Z",
+   "checked": "2026-11-26T06:33:53Z",
    "title": "eero: The way wifi should be",
    "generator": null,
    "feeds": [],
@@ -1565,39 +1563,43 @@
   }
  },
  "eerolanguage.org": {
-  "checked": "2026-10-26T06:25:56Z",
+  "checked": "2026-11-26T06:33:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
-   "resolves": false,
-   "a": [],
-   "aaaa": [],
+   "resolves": true,
+   "a": [
+    "104.21.6.75",
+    "172.67.134.154"
+   ],
+   "aaaa": [
+    "2606:4700:3030::6815:64b",
+    "2606:4700:3031::ac43:869a"
+   ],
    "cname": null,
    "ns": [
-    "a.share-dns.com",
-    "b.share-dns.net"
+    "bethany.ns.cloudflare.com",
+    "kayden.ns.cloudflare.com"
    ],
    "mx": false
   },
   "https": {
-   "reachable": false,
-   "redirects_http": false,
-   "status": null,
-   "error": "does not resolve"
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:56Z",
-   "title": null,
+   "checked": "2026-11-26T06:33:56Z",
+   "title": "京都景点资讯 | 京都景点最新资讯2026",
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null,
-   "error": "does not resolve"
+   "webmention": null
   }
  },
  "eev.ee": {
-  "checked": "2026-10-26T06:25:56Z",
+  "checked": "2026-11-26T06:34:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1624,7 +1626,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:25:56Z",
+   "checked": "2026-11-26T06:34:00Z",
    "title": "fuzzy notepad",
    "generator": null,
    "feeds": [
@@ -1728,7 +1730,7 @@
   }
  },
  "eheat.com": {
-  "checked": "2026-10-26T06:26:00Z",
+  "checked": "2026-11-26T06:34:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1751,7 +1753,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:00Z",
+   "checked": "2026-11-26T06:34:02Z",
    "title": "Envi",
    "generator": null,
    "feeds": [],
@@ -1761,7 +1763,7 @@
   }
  },
  "ehmorris.com": {
-  "checked": "2026-10-26T06:26:03Z",
+  "checked": "2026-11-26T06:34:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1787,7 +1789,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:03Z",
+   "checked": "2026-11-26T06:34:05Z",
    "title": "Edwin Morris, product designer and front-end developer",
    "generator": "Gatsby 2.32.13",
    "feeds": [],
@@ -1797,7 +1799,7 @@
   }
  },
  "eidosmedia.com": {
-  "checked": "2026-10-26T06:26:06Z",
+  "checked": "2026-11-26T06:34:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1820,7 +1822,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:06Z",
+   "checked": "2026-11-26T06:34:08Z",
    "title": "Eidosmedia | Excellence in Headless CMS & Enterprise content management systems",
    "generator": null,
    "feeds": [],
@@ -1874,7 +1876,7 @@
   }
  },
  "eightface.com": {
-  "checked": "2026-10-26T06:26:10Z",
+  "checked": "2026-11-26T06:34:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1897,7 +1899,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:10Z",
+   "checked": "2026-11-26T06:34:12Z",
    "title": "Eightface",
    "generator": null,
    "feeds": [
@@ -1913,7 +1915,7 @@
   }
  },
  "ejholmes.github.io": {
-  "checked": "2026-10-26T06:26:14Z",
+  "checked": "2026-11-26T06:34:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1940,7 +1942,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:14Z",
+   "checked": "2026-11-26T06:34:17Z",
    "title": "Eric Holmes",
    "generator": null,
    "feeds": [
@@ -1956,16 +1958,16 @@
   }
  },
  "ejroundtheworld.blogspot.com": {
-  "checked": "2026-10-26T06:26:16Z",
+  "checked": "2026-11-26T06:34:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.210.97"
+    "142.251.214.65"
    ],
    "aaaa": [
-    "2607:f8b0:4009:813::2001"
+    "2607:f8b0:4009:810::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -1977,7 +1979,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:16Z",
+   "checked": "2026-11-26T06:34:20Z",
    "title": "Around The World and Back Again",
    "generator": "blogger",
    "feeds": [
@@ -2000,7 +2002,7 @@
   }
  },
  "ekownimako.com": {
-  "checked": "2026-10-26T06:26:19Z",
+  "checked": "2026-11-26T06:34:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2031,7 +2033,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:19Z",
+   "checked": "2026-11-26T06:34:23Z",
    "title": "ekownimako.com - Ekow Nimako Studios",
    "generator": null,
    "feeds": [],
@@ -2041,7 +2043,7 @@
   }
  },
  "elasticdog.com": {
-  "checked": "2026-10-26T06:26:21Z",
+  "checked": "2026-11-26T06:34:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2067,23 +2069,17 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:21Z",
+   "checked": "2026-11-26T06:34:24Z",
    "title": "Welcome to My Digital Garden | ElasticDog",
    "generator": "Quartz",
-   "feeds": [
-    {
-     "type": "rss",
-     "url": "https://www.elasticdog.com/index.xml",
-     "title": "RSS Feed"
-    }
-   ],
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
   }
  },
  "elasticsearch.org": {
-  "checked": "2026-10-26T06:26:23Z",
+  "checked": "2026-11-26T06:34:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2109,7 +2105,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:23Z",
+   "checked": "2026-11-26T06:34:25Z",
    "title": "Elastic: The search database for AI | Search, AI agents, Observability, and Security | Elastic",
    "generator": null,
    "feeds": [],
@@ -2119,7 +2115,7 @@
   }
  },
  "electoral-vote.com": {
-  "checked": "2026-10-26T06:26:27Z",
+  "checked": "2026-11-26T06:34:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2141,7 +2137,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:27Z",
+   "checked": "2026-11-26T06:34:28Z",
    "title": "Electoral-vote.com",
    "generator": null,
    "feeds": [
@@ -2208,7 +2204,7 @@
   "rdap_error": "no RDAP service for .co"
  },
  "electricbikereview.com": {
-  "checked": "2026-10-26T06:26:29Z",
+  "checked": "2026-11-26T06:34:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2236,9 +2232,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:29Z",
+   "checked": "2026-11-26T06:34:31Z",
    "title": "Electric Bike Review | Unbiased, In-Depth Analysis of the Best Electric Bikes",
-   "generator": "WordPress 7.0.7",
+   "generator": "WordPress 7.0.9",
    "feeds": [
     {
      "type": "rss",
@@ -2257,7 +2253,7 @@
   }
  },
  "electriccoin.co": {
-  "checked": "2026-10-26T06:26:33Z",
+  "checked": "2026-11-26T06:34:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2283,7 +2279,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:33Z",
+   "checked": "2026-11-26T06:34:34Z",
    "title": "Blog - Electric Coin Company",
    "generator": null,
    "feeds": [
@@ -2304,7 +2300,7 @@
   }
  },
  "electricsheep.org": {
-  "checked": "2026-10-26T06:26:36Z",
+  "checked": "2026-11-26T06:34:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2329,7 +2325,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:36Z",
+   "checked": "2026-11-26T06:34:37Z",
    "title": "Electric Sheep : Crowdsourced Evolving Art",
    "generator": null,
    "feeds": [],
@@ -2339,7 +2335,7 @@
   }
  },
  "electronicshub.org": {
-  "checked": "2026-10-26T06:26:39Z",
+  "checked": "2026-11-26T06:34:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2363,9 +2359,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:39Z",
+   "checked": "2026-11-26T06:34:40Z",
    "title": "Expert Product Reviews, Guides & Latest Trends - ElectronicsHub",
-   "generator": "Elementor 4.3.5; settings: css_print_method-external, google_font-enabled, font_display-auto",
+   "generator": "Elementor 4.4.2; settings: css_print_method-external, google_font-enabled, font_display-auto",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -2412,7 +2408,7 @@
   }
  },
  "elenacross7.medium.com": {
-  "checked": "2026-10-26T06:26:53Z",
+  "checked": "2026-11-26T06:34:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2435,7 +2431,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:26:53Z",
+   "checked": "2026-11-26T06:34:45Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -2451,7 +2447,7 @@
   }
  },
  "elenco.com": {
-  "checked": "2026-10-26T06:26:57Z",
+  "checked": "2026-11-26T06:34:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2475,7 +2471,7 @@
    "status": 307
   },
   "home": {
-   "checked": "2026-10-26T06:26:57Z",
+   "checked": "2026-11-26T06:34:49Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2486,7 +2482,7 @@
   }
  },
  "elevationlab.com": {
-  "checked": "2026-10-26T06:26:58Z",
+  "checked": "2026-11-26T06:34:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2509,7 +2505,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-26T06:26:58Z",
+   "checked": "2026-11-26T06:34:52Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2605,7 +2601,7 @@
   }
  },
  "elgato.com": {
-  "checked": "2026-10-26T06:27:16Z",
+  "checked": "2026-11-26T06:35:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2632,8 +2628,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:27:16Z",
-   "title": "Elgato | Elgato",
+   "checked": "2026-11-26T06:35:09Z",
+   "title": "Black Friday 2026 at Elgato",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -2642,7 +2638,7 @@
   }
  },
  "elidedbranches.com": {
-  "checked": "2026-10-26T06:27:21Z",
+  "checked": "2026-11-26T06:35:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2674,7 +2670,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:27:21Z",
+   "checked": "2026-11-26T06:35:13Z",
    "title": "Elided Branches",
    "generator": "blogger",
    "feeds": [
@@ -2697,7 +2693,7 @@
   }
  },
  "elimishachildrensproject.org": {
-  "checked": "2026-10-26T06:27:24Z",
+  "checked": "2026-11-26T06:35:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2716,7 +2712,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:27:24Z",
+   "checked": "2026-11-26T06:35:16Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2727,7 +2723,7 @@
   }
  },
  "elinchrom.com": {
-  "checked": "2026-10-26T06:27:24Z",
+  "checked": "2026-11-26T06:35:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2751,7 +2747,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:27:24Z",
+   "checked": "2026-11-26T06:35:16Z",
    "title": "Elinchrom | Professional Lighting for Photography, Video & Content Creation",
    "generator": null,
    "feeds": [],
@@ -2761,7 +2757,7 @@
   }
  },
  "elizabethyin.com": {
-  "checked": "2026-10-26T06:27:31Z",
+  "checked": "2026-11-26T06:35:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2785,7 +2781,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:27:31Z",
+   "checked": "2026-11-26T06:35:23Z",
    "title": "Tactical fundraising by Elizabeth Yin",
    "generator": "WordPress.com",
    "feeds": [
@@ -2806,7 +2802,7 @@
   }
  },
  "eljojo.github.io": {
-  "checked": "2026-10-26T06:27:34Z",
+  "checked": "2026-11-26T06:35:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2833,7 +2829,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-26T06:27:34Z",
+   "checked": "2026-11-26T06:35:26Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2844,7 +2840,7 @@
   }
  },
  "elk.audio": {
-  "checked": "2026-10-26T06:27:36Z",
+  "checked": "2026-11-26T06:35:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2868,7 +2864,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:27:36Z",
+   "checked": "2026-11-26T06:35:27Z",
    "title": "Embedded Linux for Audio | Elk Audio",
    "generator": null,
    "feeds": [],
@@ -2878,7 +2874,7 @@
   }
  },
  "elkospeedway.com": {
-  "checked": "2026-10-26T06:27:39Z",
+  "checked": "2026-11-26T06:35:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2900,9 +2896,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:27:39Z",
+   "checked": "2026-11-26T06:35:30Z",
    "title": "ELKO! Speedway",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -2921,7 +2917,7 @@
   }
  },
  "elkriverrv.com": {
-  "checked": "2026-10-26T06:27:41Z",
+  "checked": "2026-11-26T06:35:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2948,7 +2944,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:27:41Z",
+   "checked": "2026-11-26T06:35:33Z",
    "title": "Elk River RV - Elk River, MN - Specializing in RV Service for Over 30 Years - Offering New & Used RVs, Travel Trailers and More for Sale",
    "generator": null,
    "feeds": [],
@@ -2958,7 +2954,7 @@
   }
  },
  "ellegriffin.substack.com": {
-  "checked": "2026-10-26T06:27:43Z",
+  "checked": "2026-11-26T06:35:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2981,13 +2977,13 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:27:43Z",
+   "checked": "2026-11-26T06:35:34Z",
    "title": "The Elysian | Elle Griffin | Substack",
    "generator": null,
    "feeds": [
     {
      "type": "rss",
-     "url": "https://www.elysian.press/feed",
+     "url": "https://ellegriffin.substack.com/feed",
      "title": "The Elysian"
     }
    ],
@@ -2997,7 +2993,7 @@
   }
  },
  "elliot.land": {
-  "checked": "2026-10-26T06:27:46Z",
+  "checked": "2026-11-26T06:35:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3021,7 +3017,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-26T06:27:46Z",
+   "checked": "2026-11-26T06:35:37Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3032,7 +3028,7 @@
   }
  },
  "elliot.my": {
-  "checked": "2026-10-26T06:28:19Z",
+  "checked": "2026-11-26T06:36:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3054,7 +3050,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:28:19Z",
+   "checked": "2026-11-26T06:36:10Z",
    "title": "elliot.my",
    "generator": null,
    "feeds": [
@@ -3075,7 +3071,7 @@
   }
  },
  "elliotjaystocks.com": {
-  "checked": "2026-10-26T06:28:22Z",
+  "checked": "2026-11-26T06:36:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3101,7 +3097,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:28:22Z",
+   "checked": "2026-11-26T06:36:13Z",
    "title": "Elliot Jay Stocks",
    "generator": null,
    "feeds": [
@@ -3132,29 +3128,23 @@
   }
  },
  "elliottkember.com": {
-  "checked": "2026-10-26T06:28:26Z",
+  "checked": "2026-11-26T06:36:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "185.199.108.153",
-    "185.199.109.153",
-    "185.199.110.153",
-    "185.199.111.153"
+    "104.21.71.30",
+    "172.67.142.197"
    ],
    "aaaa": [
-    "2606:50c0:8000::153",
-    "2606:50c0:8001::153",
-    "2606:50c0:8002::153",
-    "2606:50c0:8003::153"
+    "2606:4700:3030::ac43:8ec5",
+    "2606:4700:3037::6815:471e"
    ],
    "cname": null,
    "ns": [
-    "ns-cloud-c1.googledomains.com",
-    "ns-cloud-c2.googledomains.com",
-    "ns-cloud-c3.googledomains.com",
-    "ns-cloud-c4.googledomains.com"
+    "melissa.ns.cloudflare.com",
+    "yadiel.ns.cloudflare.com"
    ],
    "mx": false
   },
@@ -3164,7 +3154,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:28:26Z",
+   "checked": "2026-11-26T06:36:17Z",
    "title": "Elliott Kember — Software Engineer",
    "generator": null,
    "feeds": [],
@@ -3174,41 +3164,40 @@
   }
  },
  "eloncodereview.com": {
-  "checked": "2026-10-26T06:28:27Z",
+  "checked": "2026-11-26T06:36:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
-   "resolves": true,
-   "a": [
-    "69.57.162.7"
-   ],
+   "resolves": false,
+   "a": [],
    "aaaa": [],
    "cname": null,
    "ns": [
-    "dns1.namecheaphosting.com",
-    "dns2.namecheaphosting.com"
+    "ns1.lander.d.parity.domains",
+    "ns2.lander.d.parity.domains"
    ],
-   "mx": true
+   "mx": false,
+   "error": "SERVFAIL"
   },
   "https": {
    "reachable": false,
-   "redirects_http": true,
+   "redirects_http": false,
    "status": null,
-   "error": "tls: certificate has expired"
+   "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:28:27Z",
+   "checked": "2026-11-26T06:36:19Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "tls: certificate has expired"
+   "error": "does not resolve"
   }
  },
  "eloqua.com": {
-  "checked": "2026-10-26T06:28:30Z",
+  "checked": "2026-11-26T06:36:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3233,7 +3222,7 @@
    "error": "network: No route to host"
   },
   "home": {
-   "checked": "2026-10-26T06:28:30Z",
+   "checked": "2026-11-26T06:36:29Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3244,14 +3233,14 @@
   }
  },
  "elpais.com": {
-  "checked": "2026-10-26T06:28:39Z",
+  "checked": "2026-11-26T06:36:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.217.104.115",
-    "23.217.104.121"
+    "23.217.104.196",
+    "23.217.104.206"
    ],
    "aaaa": [
     "2600:1418:1000:d::17d9:6873",
@@ -3270,27 +3259,22 @@
   },
   "https": {
    "reachable": true,
-   "redirects_http": true,
-   "status": 200
+   "redirects_http": false,
+   "status": 403
   },
   "home": {
-   "checked": "2026-10-26T06:28:39Z",
-   "title": "EL PAÍS Edición US: el periódico global",
+   "checked": "2026-11-26T06:36:32Z",
+   "title": null,
    "generator": null,
-   "feeds": [
-    {
-     "type": "rss",
-     "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/us/portada",
-     "title": "RSS de la portada de El País US"
-    }
-   ],
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 403 (DataDome)"
   }
  },
  "emailcharter.org": {
-  "checked": "2026-10-26T06:28:44Z",
+  "checked": "2026-11-26T06:36:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3309,7 +3293,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:28:44Z",
+   "checked": "2026-11-26T06:36:35Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3320,14 +3304,14 @@
   }
  },
  "emailmarketingskill.com": {
-  "checked": "2026-10-26T06:28:44Z",
+  "checked": "2026-11-26T06:36:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "64.29.17.65",
-    "216.198.79.1"
+    "64.29.17.1",
+    "64.29.17.65"
    ],
    "aaaa": [],
    "cname": null,
@@ -3343,7 +3327,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:28:44Z",
+   "checked": "2026-11-26T06:36:35Z",
    "title": "Email Marketing Bible: the AI email automation skill | Email Marketing Bible V2.8",
    "generator": "Astro v5.17.1",
    "feeds": [],
@@ -3391,7 +3375,7 @@
   }
  },
  "embd.cc": {
-  "checked": "2026-10-26T06:28:48Z",
+  "checked": "2026-11-26T06:36:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3413,7 +3397,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:28:48Z",
+   "checked": "2026-11-26T06:36:39Z",
    "title": "embd.cc",
    "generator": null,
    "feeds": [],
@@ -3423,7 +3407,7 @@
   }
  },
  "embeddedarm.com": {
-  "checked": "2026-10-26T06:28:50Z",
+  "checked": "2026-11-26T06:36:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3442,7 +3426,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:28:50Z",
+   "checked": "2026-11-26T06:36:41Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3453,7 +3437,7 @@
   }
  },
  "embedresponsively.com": {
-  "checked": "2026-10-26T06:28:51Z",
+  "checked": "2026-11-26T06:36:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3476,7 +3460,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:28:51Z",
+   "checked": "2026-11-26T06:36:42Z",
    "title": "embedresponsively.com",
    "generator": null,
    "feeds": [],
@@ -3486,7 +3470,7 @@
   }
  },
  "ember.com": {
-  "checked": "2026-10-26T06:28:54Z",
+  "checked": "2026-11-26T06:36:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3510,7 +3494,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:28:54Z",
+   "checked": "2026-11-26T06:36:45Z",
    "title": "Ember Mug 3 & Tumbler 2 | Temperature-Control Drinkware – Ember®",
    "generator": null,
    "feeds": [],
@@ -3520,7 +3504,7 @@
   }
  },
  "emergent.urbanpug.com": {
-  "checked": "2026-10-26T06:28:57Z",
+  "checked": "2026-11-26T06:36:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3540,7 +3524,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'emergent.urbanpug.com'"
   },
   "home": {
-   "checked": "2026-10-26T06:28:57Z",
+   "checked": "2026-11-26T06:36:47Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3551,7 +3535,7 @@
   }
  },
  "emily.space": {
-  "checked": "2026-10-26T06:28:58Z",
+  "checked": "2026-11-26T06:36:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3583,7 +3567,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:28:58Z",
+   "checked": "2026-11-26T06:36:49Z",
    "title": "Dr. Emily L. Hunt",
    "generator": null,
    "feeds": [],
@@ -3595,7 +3579,7 @@
   }
  },
  "emilybellwether.wordpress.com": {
-  "checked": "2026-10-26T06:29:01Z",
+  "checked": "2026-11-26T06:36:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3615,7 +3599,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:29:01Z",
+   "checked": "2026-11-26T06:36:51Z",
    "title": "Emily Bell(wether) | An Englishwoman in New York",
    "generator": "WordPress.com",
    "feeds": [
@@ -3636,7 +3620,7 @@
   }
  },
  "emilykager.com": {
-  "checked": "2026-10-26T06:29:04Z",
+  "checked": "2026-11-26T06:36:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3660,7 +3644,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'emilykager.com'"
   },
   "home": {
-   "checked": "2026-10-26T06:29:04Z",
+   "checked": "2026-11-26T06:36:54Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3671,7 +3655,7 @@
   }
  },
  "emilyliu.me": {
-  "checked": "2026-10-26T06:29:05Z",
+  "checked": "2026-11-26T06:36:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3693,7 +3677,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:29:05Z",
+   "checked": "2026-11-26T06:36:55Z",
    "title": "Emily Liu",
    "generator": null,
    "feeds": [],
@@ -3737,7 +3721,7 @@
   }
  },
  "emma.best": {
-  "checked": "2026-10-26T06:29:08Z",
+  "checked": "2026-11-26T06:36:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3761,7 +3745,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:29:08Z",
+   "checked": "2026-11-26T06:36:58Z",
    "title": "emma best – A mosaic",
    "generator": "Drupal 11 (https://www.drupal.org)",
    "feeds": [
@@ -3784,7 +3768,7 @@
   }
  },
  "emoji.fly.dev": {
-  "checked": "2026-10-26T06:29:12Z",
+  "checked": "2026-11-26T06:37:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3806,7 +3790,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-26T06:29:12Z",
+   "checked": "2026-11-26T06:37:02Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3817,7 +3801,7 @@
   }
  },
  "emoji.shadycharacters.co.uk": {
-  "checked": "2026-10-26T06:29:45Z",
+  "checked": "2026-11-26T06:37:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3836,7 +3820,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:29:45Z",
+   "checked": "2026-11-26T06:37:35Z",
    "title": "The Periodic Table of Emoji, presented by Shady Characters",
    "generator": null,
    "feeds": [],
@@ -3851,7 +3835,7 @@
   }
  },
  "emojipedia.org": {
-  "checked": "2026-10-26T06:29:48Z",
+  "checked": "2026-11-26T06:37:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3877,7 +3861,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:29:48Z",
+   "checked": "2026-11-26T06:37:38Z",
    "title": "📙 Emojipedia — 😃 Home of Emoji Meanings 💁👌🎍😍",
    "generator": null,
    "feeds": [],
@@ -3892,7 +3876,7 @@
   }
  },
  "emptysqua.re": {
-  "checked": "2026-10-26T06:29:51Z",
+  "checked": "2026-11-26T06:37:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3917,7 +3901,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:29:51Z",
+   "checked": "2026-11-26T06:37:40Z",
    "title": "A. Jesse Jiryu Davis",
    "generator": "Hugo",
    "feeds": [
@@ -4002,7 +3986,7 @@
   }
  },
  "en.flossmanuals.net": {
-  "checked": "2026-10-26T06:29:57Z",
+  "checked": "2026-11-26T06:37:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4021,7 +4005,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:29:57Z",
+   "checked": "2026-11-26T06:37:45Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4032,7 +4016,7 @@
   }
  },
  "en.m.wikipedia.org": {
-  "checked": "2026-10-26T06:29:57Z",
+  "checked": "2026-11-26T06:37:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4053,9 +4037,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:29:57Z",
+   "checked": "2026-11-26T06:37:46Z",
    "title": "Wikipedia, the free encyclopedia",
-   "generator": "MediaWiki 1.47.0-wmf.24",
+   "generator": "MediaWiki 1.48.0-wmf.5",
    "feeds": [
     {
      "type": "atom",
@@ -4084,18 +4068,18 @@
   }
  },
  "en.vedur.is": {
-  "checked": "2026-10-26T06:30:03Z",
+  "checked": "2026-11-26T06:37:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "94.142.156.174"
+    "130.208.87.200"
    ],
    "aaaa": [],
-   "cname": "vedur.is",
+   "cname": "web-gw.vedur.is",
    "ns": [],
-   "mx": true
+   "mx": false
   },
   "https": {
    "reachable": true,
@@ -4103,7 +4087,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:30:03Z",
+   "checked": "2026-11-26T06:37:51Z",
    "title": "Home-page - Icelandic Meteorological Office | Icelandic Meteorological office",
    "generator": null,
    "feeds": [],
@@ -4113,7 +4097,7 @@
   }
  },
  "en.wikibooks.org": {
-  "checked": "2026-10-26T06:30:08Z",
+  "checked": "2026-11-26T06:37:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4134,9 +4118,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:30:08Z",
+   "checked": "2026-11-26T06:37:56Z",
    "title": "Wikibooks",
-   "generator": "MediaWiki 1.47.0-wmf.24",
+   "generator": "MediaWiki 1.48.0-wmf.6",
    "feeds": [
     {
      "type": "atom",
@@ -4219,19 +4203,16 @@
   }
  },
  "encore.dev": {
-  "checked": "2026-10-26T06:30:13Z",
+  "checked": "2026-11-26T06:38:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.20.42.184",
-    "172.66.167.228"
+    "216.150.1.1",
+    "216.150.16.1"
    ],
-   "aaaa": [
-    "2606:4700:10::6814:2ab8",
-    "2606:4700:10::ac42:a7e4"
-   ],
+   "aaaa": [],
    "cname": null,
    "ns": [
     "justin.ns.cloudflare.com",
@@ -4245,7 +4226,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:30:13Z",
+   "checked": "2026-11-26T06:38:01Z",
    "title": "Infrastructure Automation for AI-Powered Development | Encore",
    "generator": null,
    "feeds": [],
@@ -4255,7 +4236,7 @@
   }
  },
  "endaoment.mirror.xyz": {
-  "checked": "2026-10-26T06:30:17Z",
+  "checked": "2026-11-26T06:38:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4280,7 +4261,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:30:17Z",
+   "checked": "2026-11-26T06:38:04Z",
    "title": "Endaoment",
    "generator": null,
    "feeds": [],
@@ -4290,7 +4271,7 @@
   }
  },
  "endaoment.org": {
-  "checked": "2026-10-26T06:30:20Z",
+  "checked": "2026-11-26T06:38:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4314,7 +4295,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:30:20Z",
+   "checked": "2026-11-26T06:38:05Z",
    "title": "Giving Tools for Every Portfolio | Endaoment",
    "generator": null,
    "feeds": [],
@@ -4324,7 +4305,7 @@
   }
  },
  "endbasic.dev": {
-  "checked": "2026-10-26T06:30:23Z",
+  "checked": "2026-11-26T06:38:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4349,7 +4330,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:30:23Z",
+   "checked": "2026-11-26T06:38:08Z",
    "title": "Online BASIC Interpreter - EndBASIC",
    "generator": "Hugo 0.162.1",
    "feeds": [
@@ -4365,7 +4346,7 @@
   }
  },
  "energyfederation.org": {
-  "checked": "2026-10-26T06:30:25Z",
+  "checked": "2026-11-26T06:38:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4384,7 +4365,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:30:25Z",
+   "checked": "2026-11-26T06:38:09Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4462,7 +4443,7 @@
   }
  },
  "engineering-management.space": {
-  "checked": "2026-10-26T06:30:26Z",
+  "checked": "2026-11-26T06:38:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4487,7 +4468,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:30:26Z",
+   "checked": "2026-11-26T06:38:11Z",
    "title": "Engineering Management",
    "generator": "Hugo 0.46",
    "feeds": [
@@ -4546,7 +4527,7 @@
   }
  },
  "engineering.grab.com": {
-  "checked": "2026-10-26T06:30:31Z",
+  "checked": "2026-11-26T06:38:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4568,7 +4549,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:30:31Z",
+   "checked": "2026-11-26T06:38:15Z",
    "title": "Grab Tech",
    "generator": null,
    "feeds": [
@@ -4584,7 +4565,7 @@
   }
  },
  "engineering.gusto.com": {
-  "checked": "2026-10-26T06:30:34Z",
+  "checked": "2026-11-26T06:38:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4604,7 +4585,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:30:34Z",
+   "checked": "2026-11-26T06:38:18Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -4620,7 +4601,7 @@
   }
  },
  "engineering.heroku.com": {
-  "checked": "2026-10-26T06:30:39Z",
+  "checked": "2026-11-26T06:38:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4632,14 +4613,14 @@
     "99.84.203.115"
    ],
    "aaaa": [
-    "2600:9000:20c5:a00:7:3b45:5d40:93a1",
-    "2600:9000:20c5:e00:7:3b45:5d40:93a1",
-    "2600:9000:20c5:1800:7:3b45:5d40:93a1",
-    "2600:9000:20c5:1e00:7:3b45:5d40:93a1",
-    "2600:9000:20c5:6e00:7:3b45:5d40:93a1",
-    "2600:9000:20c5:a200:7:3b45:5d40:93a1",
-    "2600:9000:20c5:a800:7:3b45:5d40:93a1",
-    "2600:9000:20c5:e400:7:3b45:5d40:93a1"
+    "2600:9000:20c5:2e00:7:3b45:5d40:93a1",
+    "2600:9000:20c5:5a00:7:3b45:5d40:93a1",
+    "2600:9000:20c5:9a00:7:3b45:5d40:93a1",
+    "2600:9000:20c5:ae00:7:3b45:5d40:93a1",
+    "2600:9000:20c5:b000:7:3b45:5d40:93a1",
+    "2600:9000:20c5:b600:7:3b45:5d40:93a1",
+    "2600:9000:20c5:ba00:7:3b45:5d40:93a1",
+    "2600:9000:20c5:e600:7:3b45:5d40:93a1"
    ],
    "cname": "d1b7i4n11spbat.cloudfront.net",
    "ns": [],
@@ -4651,7 +4632,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:30:39Z",
+   "checked": "2026-11-26T06:38:24Z",
    "title": "Engineering | Heroku",
    "generator": null,
    "feeds": [
@@ -4672,7 +4653,7 @@
   }
  },
  "engineering.instawork.com": {
-  "checked": "2026-10-26T06:30:45Z",
+  "checked": "2026-11-26T06:38:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4692,7 +4673,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:30:45Z",
+   "checked": "2026-11-26T06:38:30Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -4741,7 +4722,7 @@
   }
  },
  "engineering.mayvenn.com": {
-  "checked": "2026-10-26T06:30:51Z",
+  "checked": "2026-11-26T06:38:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4760,7 +4741,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:30:51Z",
+   "checked": "2026-11-26T06:38:36Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4771,7 +4752,7 @@
   }
  },
  "engineering.pinterest.com": {
-  "checked": "2026-10-26T06:30:51Z",
+  "checked": "2026-11-26T06:38:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4793,7 +4774,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:30:51Z",
+   "checked": "2026-11-26T06:38:36Z",
    "title": "Engineering | Pinterest Careers",
    "generator": null,
    "feeds": [],
@@ -4803,7 +4784,7 @@
   }
  },
  "engineering.quora.com": {
-  "checked": "2026-10-26T06:30:55Z",
+  "checked": "2026-11-26T06:38:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4820,16 +4801,17 @@
   "https": {
    "reachable": true,
    "redirects_http": true,
-   "status": 200
+   "status": 403
   },
   "home": {
-   "checked": "2026-10-26T06:30:55Z",
-   "title": "Engineering at Quora - Quora",
+   "checked": "2026-11-26T06:38:40Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 403 (Cloudflare challenge)"
   }
  },
  "engineering.shopify.com": {
@@ -4871,7 +4853,7 @@
   }
  },
  "engineering.skroutz.gr": {
-  "checked": "2026-10-26T06:30:58Z",
+  "checked": "2026-11-26T06:38:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4898,7 +4880,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:30:58Z",
+   "checked": "2026-11-26T06:38:42Z",
    "title": "Skroutz Engineering",
    "generator": null,
    "feeds": [
@@ -4914,7 +4896,7 @@
   }
  },
  "engineering.tamu.edu": {
-  "checked": "2026-10-26T06:31:01Z",
+  "checked": "2026-11-26T06:38:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4926,14 +4908,14 @@
     "52.84.127.86"
    ],
    "aaaa": [
-    "2600:9000:2203:1000:f:d72f:2380:93a1",
-    "2600:9000:2203:5000:f:d72f:2380:93a1",
-    "2600:9000:2203:5e00:f:d72f:2380:93a1",
-    "2600:9000:2203:6000:f:d72f:2380:93a1",
-    "2600:9000:2203:6a00:f:d72f:2380:93a1",
-    "2600:9000:2203:6c00:f:d72f:2380:93a1",
-    "2600:9000:2203:7a00:f:d72f:2380:93a1",
-    "2600:9000:2203:fc00:f:d72f:2380:93a1"
+    "2600:9000:2203:800:f:d72f:2380:93a1",
+    "2600:9000:2203:1600:f:d72f:2380:93a1",
+    "2600:9000:2203:2800:f:d72f:2380:93a1",
+    "2600:9000:2203:3800:f:d72f:2380:93a1",
+    "2600:9000:2203:7e00:f:d72f:2380:93a1",
+    "2600:9000:2203:9000:f:d72f:2380:93a1",
+    "2600:9000:2203:9600:f:d72f:2380:93a1",
+    "2600:9000:2203:f600:f:d72f:2380:93a1"
    ],
    "cname": "d2atfowf6cg0we.cloudfront.net",
    "ns": [],
@@ -4945,7 +4927,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:31:01Z",
+   "checked": "2026-11-26T06:38:45Z",
    "title": "College of Engineering | Texas A&M University Engineering",
    "generator": null,
    "feeds": [],
@@ -4955,12 +4937,13 @@
   }
  },
  "engineering.twitter.com": {
-  "checked": "2026-10-26T06:31:04Z",
+  "checked": "2026-11-26T06:38:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
+    "162.159.140.229",
     "172.66.0.227"
    ],
    "aaaa": [],
@@ -4974,7 +4957,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:31:04Z",
+   "checked": "2026-11-26T06:38:48Z",
    "title": "Engineering",
    "generator": null,
    "feeds": [],
@@ -4984,7 +4967,7 @@
   }
  },
  "engineeringblog.yelp.com": {
-  "checked": "2026-10-26T06:32:06Z",
+  "checked": "2026-11-26T06:39:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5006,7 +4989,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:32:06Z",
+   "checked": "2026-11-26T06:39:50Z",
    "title": "Yelp Engineering and Product Blog",
    "generator": null,
    "feeds": [
@@ -5022,7 +5005,7 @@
   }
  },
  "engineroom.ft.com": {
-  "checked": "2026-10-26T06:32:09Z",
+  "checked": "2026-11-26T06:39:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5035,13 +5018,13 @@
    ],
    "aaaa": [
     "2600:9000:2123:400:13:1714:3540:93a1",
-    "2600:9000:2123:1800:13:1714:3540:93a1",
-    "2600:9000:2123:6400:13:1714:3540:93a1",
-    "2600:9000:2123:9200:13:1714:3540:93a1",
-    "2600:9000:2123:9e00:13:1714:3540:93a1",
-    "2600:9000:2123:ac00:13:1714:3540:93a1",
-    "2600:9000:2123:be00:13:1714:3540:93a1",
-    "2600:9000:2123:d200:13:1714:3540:93a1"
+    "2600:9000:2123:5000:13:1714:3540:93a1",
+    "2600:9000:2123:7000:13:1714:3540:93a1",
+    "2600:9000:2123:a800:13:1714:3540:93a1",
+    "2600:9000:2123:ca00:13:1714:3540:93a1",
+    "2600:9000:2123:d000:13:1714:3540:93a1",
+    "2600:9000:2123:d800:13:1714:3540:93a1",
+    "2600:9000:2123:dc00:13:1714:3540:93a1"
    ],
    "cname": null,
    "ns": [],
@@ -5053,7 +5036,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:32:09Z",
+   "checked": "2026-11-26T06:39:52Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -5069,14 +5052,14 @@
   }
  },
  "english.elpais.com": {
-  "checked": "2026-10-26T06:32:12Z",
+  "checked": "2026-11-26T06:39:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.217.104.231",
-    "23.217.104.237"
+    "23.217.104.196",
+    "23.217.104.206"
    ],
    "aaaa": [
     "2600:1418:1000:d::17d9:6873",
@@ -5089,26 +5072,21 @@
   "https": {
    "reachable": true,
    "redirects_http": false,
-   "status": 200
+   "status": 403
   },
   "home": {
-   "checked": "2026-10-26T06:32:12Z",
-   "title": "EL PAÍS English",
+   "checked": "2026-11-26T06:39:55Z",
+   "title": null,
    "generator": null,
-   "feeds": [
-    {
-     "type": "rss",
-     "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/english.elpais.com/portada",
-     "title": "RSS de la portada de EL PAÍS English"
-    }
-   ],
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 403 (DataDome)"
   }
  },
  "englishrussia.com": {
-  "checked": "2026-10-26T06:32:14Z",
+  "checked": "2026-11-26T06:39:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5135,7 +5113,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-26T06:32:14Z",
+   "checked": "2026-11-26T06:39:57Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5146,7 +5124,7 @@
   }
  },
  "eno-lang.org": {
-  "checked": "2026-10-26T06:32:46Z",
+  "checked": "2026-11-26T06:40:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5171,7 +5149,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:32:46Z",
+   "checked": "2026-11-26T06:40:29Z",
    "title": "Eno · A Data Language For Everyone",
    "generator": null,
    "feeds": [],
@@ -5273,15 +5251,19 @@
   }
  },
  "ensfairy.xyz": {
-  "checked": "2026-10-26T06:32:50Z",
+  "checked": "2026-11-26T06:40:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "76.76.21.21"
+    "104.21.71.92",
+    "172.67.170.79"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2606:4700:3033::6815:475c",
+    "2606:4700:3036::ac43:aa4f"
+   ],
    "cname": null,
    "ns": [
     "aron.ns.cloudflare.com",
@@ -5291,11 +5273,11 @@
   },
   "https": {
    "reachable": true,
-   "redirects_http": true,
+   "redirects_http": false,
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:32:50Z",
+   "checked": "2026-11-26T06:40:33Z",
    "title": "ENS Fairy",
    "generator": null,
    "feeds": [],
@@ -5305,56 +5287,49 @@
   }
  },
  "ensmerchshop.xyz": {
-  "checked": "2026-10-26T06:32:53Z",
+  "checked": "2026-11-26T06:40:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
-   "resolves": true,
-   "a": [
-    "2.59.170.20",
-    "104.219.250.37"
-   ],
+   "resolves": false,
+   "a": [],
    "aaaa": [],
    "cname": null,
-   "ns": [
-    "ns1.lander.d.parity.domains",
-    "ns2.lander.d.parity.domains"
-   ],
-   "mx": false
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
   },
   "https": {
    "reachable": false,
    "redirects_http": false,
    "status": null,
-   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+   "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:32:53Z",
+   "checked": "2026-11-26T06:40:35Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+   "error": "does not resolve"
   }
  },
  "ensredirect.xyz": {
-  "checked": "2026-10-26T06:33:10Z",
+  "checked": "2026-11-26T06:40:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "89.106.200.1"
+    "104.219.250.37",
+    "203.161.32.252"
    ],
    "aaaa": [],
    "cname": null,
-   "ns": [
-    "dns1.registrar-servers.com",
-    "dns2.registrar-servers.com"
-   ],
-   "mx": true
+   "ns": [],
+   "mx": false
   },
   "https": {
    "reachable": true,
@@ -5362,8 +5337,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:33:10Z",
-   "title": "namepoint — point an ENS name at a URL",
+   "checked": "2026-11-26T06:40:35Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -5372,7 +5347,7 @@
   }
  },
  "enterprise.travis-ci.com": {
-  "checked": "2026-10-26T06:33:12Z",
+  "checked": "2026-11-26T06:41:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5391,9 +5366,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:33:12Z",
+   "checked": "2026-11-26T06:41:26Z",
    "title": "CI CD Server to Deploy Yourself - Travis CI",
-   "generator": "WP Rocket 3.23.5.1",
+   "generator": "WP Rocket 3.24",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -5401,7 +5376,7 @@
   }
  },
  "enterprisersproject.com": {
-  "checked": "2026-10-26T06:33:15Z",
+  "checked": "2026-11-26T06:41:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5411,8 +5386,8 @@
     "23.200.156.23"
    ],
    "aaaa": [
-    "2600:1407:3c00:5::17d5:3509",
-    "2600:1407:3c00:5::17d5:350c"
+    "2600:1407:3c00:cc::172d:2ec7",
+    "2600:1407:3c00:cc::172d:2ecb"
    ],
    "cname": null,
    "ns": [
@@ -5429,7 +5404,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:33:15Z",
+   "checked": "2026-11-26T06:41:29Z",
    "title": "The Enterprisers Project | A community helping CIOs and IT leaders solve problems",
    "generator": null,
    "feeds": [],
@@ -5439,7 +5414,7 @@
   }
  },
  "enterprisetech.com": {
-  "checked": "2026-10-26T06:33:18Z",
+  "checked": "2026-11-26T06:41:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5465,7 +5440,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-26T06:33:18Z",
+   "checked": "2026-11-26T06:41:32Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5476,7 +5451,7 @@
   }
  },
  "entertainment.slashdot.org": {
-  "checked": "2026-10-26T06:33:19Z",
+  "checked": "2026-11-26T06:41:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5496,7 +5471,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:33:19Z",
+   "checked": "2026-11-26T06:41:33Z",
    "title": "Entertainment News | Slashdot",
    "generator": null,
    "feeds": [
@@ -5553,7 +5528,7 @@
   }
  },
  "entreviewblog.com": {
-  "checked": "2026-10-26T06:33:25Z",
+  "checked": "2026-11-26T06:41:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5581,7 +5556,7 @@
    "error": "tls: UNEXPECTED_EOF_WHILE_READING"
   },
   "home": {
-   "checked": "2026-10-26T06:33:25Z",
+   "checked": "2026-11-26T06:41:38Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5592,16 +5567,16 @@
   }
  },
  "epeus.blogspot.com": {
-  "checked": "2026-10-26T06:33:26Z",
+  "checked": "2026-11-26T06:41:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.32.1"
+    "142.250.189.97"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81e::2001"
+    "2607:f8b0:4009:810::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -5613,7 +5588,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:33:26Z",
+   "checked": "2026-11-26T06:41:40Z",
    "title": "Epeus' epigone",
    "generator": "blogger",
    "feeds": [
@@ -5639,7 +5614,7 @@
   }
  },
  "epsilontheory.com": {
-  "checked": "2026-10-26T06:33:28Z",
+  "checked": "2026-11-26T06:41:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5667,7 +5642,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:33:28Z",
+   "checked": "2026-11-26T06:41:41Z",
    "title": "Panoptica Home Page - Panoptica featuring Epsilon Theory",
    "generator": null,
    "feeds": [],
@@ -5677,7 +5652,7 @@
   }
  },
  "ergo.human.cornell.edu": {
-  "checked": "2026-10-26T06:33:31Z",
+  "checked": "2026-11-26T06:41:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5696,7 +5671,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:33:31Z",
+   "checked": "2026-11-26T06:41:44Z",
    "title": "Cornell University Ergonomics Web",
    "generator": "Microsoft FrontPage 12.0",
    "feeds": [],
@@ -5706,7 +5681,7 @@
   }
  },
  "ergotron.com": {
-  "checked": "2026-10-26T06:33:34Z",
+  "checked": "2026-11-26T06:41:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5729,20 +5704,21 @@
   "https": {
    "reachable": true,
    "redirects_http": true,
-   "status": 200
+   "status": 403
   },
   "home": {
-   "checked": "2026-10-26T06:33:34Z",
-   "title": "Monitor Mounts, Computer Carts, Sit to Stand Desks | Ergotron",
+   "checked": "2026-11-26T06:41:46Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 403 (Cloudflare challenge)"
   }
  },
  "eric.jain.name": {
-  "checked": "2026-10-26T06:33:38Z",
+  "checked": "2026-11-26T06:41:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5769,7 +5745,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:33:38Z",
+   "checked": "2026-11-26T06:41:48Z",
    "title": "Eric Jain's Blog",
    "generator": "Hexo 8.1.1",
    "feeds": [
@@ -5785,7 +5761,7 @@
   }
  },
  "ericholscher.com": {
-  "checked": "2026-10-26T06:33:41Z",
+  "checked": "2026-11-26T06:41:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5811,7 +5787,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:33:41Z",
+   "checked": "2026-11-26T06:41:50Z",
    "title": "Eric Holscher",
    "generator": null,
    "feeds": [
@@ -5831,7 +5807,7 @@
   }
  },
  "ericportis.com": {
-  "checked": "2026-10-26T06:33:44Z",
+  "checked": "2026-11-26T06:41:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5854,7 +5830,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:33:44Z",
+   "checked": "2026-11-26T06:41:53Z",
    "title": "ericportis.com",
    "generator": null,
    "feeds": [
@@ -5872,7 +5848,7 @@
   }
  },
  "ericsink.com": {
-  "checked": "2026-10-26T06:33:47Z",
+  "checked": "2026-11-26T06:41:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5899,7 +5875,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:33:47Z",
+   "checked": "2026-11-26T06:41:56Z",
    "title": "Selected Blog Posts",
    "generator": null,
    "feeds": [
@@ -5964,7 +5940,7 @@
   }
  },
  "erinbromage.com": {
-  "checked": "2026-10-26T06:33:49Z",
+  "checked": "2026-11-26T06:41:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5990,7 +5966,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:33:49Z",
+   "checked": "2026-11-26T06:41:58Z",
    "title": "Xoilac TV - Xem Trực Tiếp Bóng Đá XoilacTV - Link Xoilac86 TV",
    "generator": "WordPress 5.9.18",
    "feeds": [],
@@ -6000,7 +5976,7 @@
   }
  },
  "erinmeyer.com": {
-  "checked": "2026-10-26T06:33:52Z",
+  "checked": "2026-11-26T06:42:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6022,7 +5998,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:33:52Z",
+   "checked": "2026-11-26T06:42:01Z",
    "title": "Erin Meyer – Author of The Culture Map",
    "generator": null,
    "feeds": [
@@ -6043,7 +6019,7 @@
   }
  },
  "erlang.org": {
-  "checked": "2026-10-26T06:34:03Z",
+  "checked": "2026-11-26T06:42:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6060,24 +6036,33 @@
    "mx": true
   },
   "https": {
-   "reachable": false,
+   "reachable": true,
    "redirects_http": true,
-   "status": null,
-   "error": "tls: TLSV1_ALERT_DECODE_ERROR"
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:03Z",
-   "title": null,
+   "checked": "2026-11-26T06:42:17Z",
+   "title": "Index - Erlang/OTP",
    "generator": null,
-   "feeds": [],
+   "feeds": [
+    {
+     "type": "atom",
+     "url": "https://www.erlang.org/news.xml",
+     "title": "News Atom Feed"
+    },
+    {
+     "type": "atom",
+     "url": "https://www.erlang.org/blog.xml",
+     "title": "Blog Atom Feed"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
-   "webmention": null,
-   "error": "tls: TLSV1_ALERT_DECODE_ERROR"
+   "webmention": null
   }
  },
  "erleuchtet.org": {
-  "checked": "2026-10-26T06:34:05Z",
+  "checked": "2026-11-26T06:42:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6104,7 +6089,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'erleuchtet.org'"
   },
   "home": {
-   "checked": "2026-10-26T06:34:05Z",
+   "checked": "2026-11-26T06:42:19Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6115,7 +6100,7 @@
   }
  },
  "erlywarn.com": {
-  "checked": "2026-10-26T06:34:09Z",
+  "checked": "2026-11-26T06:42:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6134,7 +6119,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:34:09Z",
+   "checked": "2026-11-26T06:42:23Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6145,7 +6130,7 @@
   }
  },
  "errorprone.info": {
-  "checked": "2026-10-26T06:34:09Z",
+  "checked": "2026-11-26T06:42:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6172,7 +6157,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:09Z",
+   "checked": "2026-11-26T06:42:23Z",
    "title": "Error Prone",
    "generator": null,
    "feeds": [],
@@ -6182,7 +6167,7 @@
   }
  },
  "ervinbarta.com": {
-  "checked": "2026-10-26T06:34:12Z",
+  "checked": "2026-11-26T06:42:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6208,7 +6193,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:12Z",
+   "checked": "2026-11-26T06:42:25Z",
    "title": "ervin's blog",
    "generator": "Jekyll v3.9.0",
    "feeds": [
@@ -6224,7 +6209,7 @@
   }
  },
  "escapebigtech.info": {
-  "checked": "2026-10-26T06:34:14Z",
+  "checked": "2026-11-26T06:42:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6243,7 +6228,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:34:14Z",
+   "checked": "2026-11-26T06:42:28Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6254,7 +6239,7 @@
   }
  },
  "escism.net": {
-  "checked": "2026-10-26T06:34:14Z",
+  "checked": "2026-11-26T06:42:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6280,7 +6265,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:14Z",
+   "checked": "2026-11-26T06:42:28Z",
    "title": "[esc]ism",
    "generator": null,
    "feeds": [
@@ -6296,7 +6281,7 @@
   }
  },
  "esecurityplanet.com": {
-  "checked": "2026-10-26T06:34:19Z",
+  "checked": "2026-11-26T06:42:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6322,7 +6307,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:19Z",
+   "checked": "2026-11-26T06:42:33Z",
    "title": "eSecurity Planet: Latest Cybersecurity News for IT Professionals",
    "generator": null,
    "feeds": [
@@ -6338,7 +6323,7 @@
   }
  },
  "eshop.macsales.com": {
-  "checked": "2026-10-26T06:34:22Z",
+  "checked": "2026-11-26T06:42:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6347,8 +6332,8 @@
     "23.7.64.205"
    ],
    "aaaa": [
-    "2600:1418:1000:383::1293",
-    "2600:1418:1000:385::1293"
+    "2600:1418:1000:488::1293",
+    "2600:1418:1000:48c::1293"
    ],
    "cname": "eshop.macsales.com.edgekey.net",
    "ns": [],
@@ -6360,8 +6345,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:22Z",
-   "title": "Apple Mac Upgrades and Computer Products – RAM, SSDs & More",
+   "checked": "2026-11-26T06:42:35Z",
+   "title": "Security Check - MacSales.com",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -6370,7 +6355,7 @@
   }
  },
  "esolangs.org": {
-  "checked": "2026-10-26T06:34:24Z",
+  "checked": "2026-11-26T06:42:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6383,11 +6368,11 @@
    ],
    "cname": null,
    "ns": [
-    "ns0.1984.is",
-    "ns1.1984.is",
-    "ns1.1984hosting.com",
-    "ns2.1984.is",
-    "ns2.1984hosting.com",
+    "ns1.he.net",
+    "ns2.he.net",
+    "ns3.he.net",
+    "ns4.he.net",
+    "ns5.he.net",
     "selene.zem.fi"
    ],
    "mx": true
@@ -6398,7 +6383,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:24Z",
+   "checked": "2026-11-26T06:42:38Z",
    "title": "Esolang, the esoteric programming languages wiki",
    "generator": "MediaWiki 1.43.9",
    "feeds": [
@@ -6479,7 +6464,7 @@
   }
  },
  "espn.go.com": {
-  "checked": "2026-10-26T06:34:31Z",
+  "checked": "2026-11-26T06:42:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6506,7 +6491,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:31Z",
+   "checked": "2026-11-26T06:42:43Z",
    "title": "ESPN - Serving Sports Fans. Anytime. Anywhere.",
    "generator": null,
    "feeds": [],
@@ -6516,7 +6501,7 @@
   }
  },
  "espressovivace.com": {
-  "checked": "2026-10-26T06:34:32Z",
+  "checked": "2026-11-26T06:42:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6538,9 +6523,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:32Z",
+   "checked": "2026-11-26T06:42:44Z",
    "title": "Home - Espresso Vivace",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -6601,7 +6586,7 @@
   }
  },
  "estherschindler.medium.com": {
-  "checked": "2026-10-26T06:34:35Z",
+  "checked": "2026-11-26T06:42:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6624,7 +6609,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:35Z",
+   "checked": "2026-11-26T06:42:47Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -6642,16 +6627,16 @@
   }
  },
  "esurientpit.blogspot.com": {
-  "checked": "2026-10-26T06:34:39Z",
+  "checked": "2026-11-26T06:42:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.210.97"
+    "142.251.41.129"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81e::2001"
+    "2607:f8b0:4009:810::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -6663,7 +6648,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:39Z",
+   "checked": "2026-11-26T06:42:53Z",
    "title": "This old damn house",
    "generator": "blogger",
    "feeds": [
@@ -6686,7 +6671,7 @@
   }
  },
  "eternalstorms.at": {
-  "checked": "2026-10-26T06:34:41Z",
+  "checked": "2026-11-26T06:42:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6708,7 +6693,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:41Z",
+   "checked": "2026-11-26T06:42:55Z",
    "title": "Eternal Storms Software - Apps Crafted with Care",
    "generator": null,
    "feeds": [],
@@ -6720,14 +6705,14 @@
   }
  },
  "eth.xyz": {
-  "checked": "2026-10-26T06:34:47Z",
+  "checked": "2026-11-26T06:43:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "54.183.177.41",
-    "54.241.96.93"
+    "13.52.56.9",
+    "54.177.70.41"
    ],
    "aaaa": [],
    "cname": null,
@@ -6745,7 +6730,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:47Z",
+   "checked": "2026-11-26T06:43:01Z",
    "title": "Eth.xyz | View the ENS profile & NFTs of any .eth name",
    "generator": null,
    "feeds": [],
@@ -6755,7 +6740,7 @@
   }
  },
  "ethanmarcotte.com": {
-  "checked": "2026-10-26T06:34:50Z",
+  "checked": "2026-11-26T06:43:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6778,7 +6763,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:50Z",
+   "checked": "2026-11-26T06:43:04Z",
    "title": "Welcome to Ethan Marcotte’s website — Ethan Marcotte",
    "generator": "Eleventy v3.1.1",
    "feeds": [
@@ -6802,7 +6787,7 @@
   }
  },
  "ethanzuckerman.com": {
-  "checked": "2026-10-26T06:34:53Z",
+  "checked": "2026-11-26T06:43:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6824,7 +6809,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:53Z",
+   "checked": "2026-11-26T06:43:06Z",
    "title": "Home - Ethan Zuckerman",
    "generator": null,
    "feeds": [
@@ -6845,31 +6830,31 @@
   }
  },
  "ethdash.xyz": {
-  "checked": "2026-10-26T06:34:56Z",
+  "checked": "2026-11-26T06:43:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "76.76.21.93",
-    "76.76.21.123"
+    "13.248.213.45",
+    "76.223.67.189"
    ],
    "aaaa": [],
    "cname": null,
    "ns": [
-    "ns1.vercel-dns.com",
-    "ns2.vercel-dns.com"
+    "ns33.domaincontrol.com",
+    "ns34.domaincontrol.com"
    ],
    "mx": false
   },
   "https": {
    "reachable": true,
-   "redirects_http": true,
+   "redirects_http": false,
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:56Z",
-   "title": "Ethereum Dashboards",
+   "checked": "2026-11-26T06:43:09Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -6878,7 +6863,7 @@
   }
  },
  "ethereum.org": {
-  "checked": "2026-10-26T06:34:59Z",
+  "checked": "2026-11-26T06:43:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6906,7 +6891,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:34:59Z",
+   "checked": "2026-11-26T06:43:11Z",
    "title": "Ethereum - The complete guide from ethereum.org",
    "generator": null,
    "feeds": [],
@@ -6916,7 +6901,7 @@
   }
  },
  "ethereumgt.notion.site": {
-  "checked": "2026-10-26T06:35:02Z",
+  "checked": "2026-11-26T06:43:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6936,7 +6921,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:35:02Z",
+   "checked": "2026-11-26T06:43:13Z",
    "title": "Notion",
    "generator": null,
    "feeds": [],
@@ -6946,39 +6931,39 @@
   }
  },
  "ethernow.xyz": {
-  "checked": "2026-10-26T06:35:04Z",
+  "checked": "2026-11-26T06:43:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
-   "resolves": true,
-   "a": [
-    "64.190.63.111"
-   ],
+   "resolves": false,
+   "a": [],
    "aaaa": [],
    "cname": null,
    "ns": [
     "ns1.sedoparking.com",
     "ns2.sedoparking.com"
    ],
-   "mx": true
+   "mx": false
   },
   "https": {
-   "reachable": true,
+   "reachable": false,
    "redirects_http": false,
-   "status": 200
+   "status": null,
+   "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:35:04Z",
-   "title": "ethernow.xyz - This website is for sale! - ethernow Resources and Information.",
+   "checked": "2026-11-26T06:43:16Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "does not resolve"
   }
  },
  "etherpad.com": {
-  "checked": "2026-10-26T06:35:07Z",
+  "checked": "2026-11-26T06:43:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7001,7 +6986,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-26T06:35:07Z",
+   "checked": "2026-11-26T06:43:16Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7012,7 +6997,7 @@
   }
  },
  "ethfollow.xyz": {
-  "checked": "2026-10-26T06:35:25Z",
+  "checked": "2026-11-26T06:43:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7034,7 +7019,7 @@
    "status": 429
   },
   "home": {
-   "checked": "2026-10-26T06:35:25Z",
+   "checked": "2026-11-26T06:43:35Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7045,7 +7030,7 @@
   }
  },
  "ethisphere.com": {
-  "checked": "2026-10-26T06:35:28Z",
+  "checked": "2026-11-26T06:43:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7071,9 +7056,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:35:28Z",
+   "checked": "2026-11-26T06:43:38Z",
    "title": "Ethics and Compliance: Building Ethical Value with Ethisphere",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.191.0",
    "feeds": [
     {
      "type": "rss",
@@ -7087,7 +7072,7 @@
   }
  },
  "ethsign.xyz": {
-  "checked": "2026-10-26T06:35:30Z",
+  "checked": "2026-11-26T06:43:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7114,7 +7099,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:35:30Z",
+   "checked": "2026-11-26T06:43:40Z",
    "title": "EthSign",
    "generator": null,
    "feeds": [],
@@ -7124,7 +7109,7 @@
   }
  },
  "ethsunshine.com": {
-  "checked": "2026-10-26T06:35:33Z",
+  "checked": "2026-11-26T06:43:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7149,7 +7134,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:35:33Z",
+   "checked": "2026-11-26T06:43:43Z",
    "title": "Project Sunshine | Ethereum",
    "generator": null,
    "feeds": [],
@@ -7197,7 +7182,7 @@
   }
  },
  "eugenewei.com": {
-  "checked": "2026-10-26T06:35:36Z",
+  "checked": "2026-11-26T06:43:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7223,7 +7208,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'eugenewei.com'"
   },
   "home": {
-   "checked": "2026-10-26T06:35:36Z",
+   "checked": "2026-11-26T06:43:46Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7234,7 +7219,7 @@
   }
  },
  "eugeneyan.com": {
-  "checked": "2026-10-26T06:35:38Z",
+  "checked": "2026-11-26T06:43:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7260,17 +7245,27 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:35:38Z",
-   "title": "Eugene Yan",
-   "generator": null,
-   "feeds": [],
+   "checked": "2026-11-26T06:43:48Z",
+   "title": "eugeneyan",
+   "generator": "Hugo 0.169.0",
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://eugeneyan.com/rss/",
+     "title": "eugeneyan.com"
+    }
+   ],
    "hcard": false,
-   "rel_me": [],
+   "rel_me": [
+    "https://twitter.com/eugeneyan",
+    "https://www.linkedin.com/in/eugeneyan/",
+    "https://github.com/eugeneyan/"
+   ],
    "webmention": null
   }
  },
  "eurasiagroup.net": {
-  "checked": "2026-10-26T06:35:41Z",
+  "checked": "2026-11-26T06:43:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7293,7 +7288,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:35:41Z",
+   "checked": "2026-11-26T06:43:50Z",
    "title": "Eurasia Group | Home",
    "generator": null,
    "feeds": [],
@@ -7303,7 +7298,7 @@
   }
  },
  "euromaidanpress.com": {
-  "checked": "2026-10-26T06:35:43Z",
+  "checked": "2026-11-26T06:43:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7331,9 +7326,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:35:43Z",
+   "checked": "2026-11-26T06:43:52Z",
    "title": "Euromaidan Press: Ukrainian News in English, News from Ukraine",
-   "generator": "WPML ver:4.9.6 stt:1,2;",
+   "generator": "WPML ver:5.2.0 stt:1,2;",
    "feeds": [
     {
      "type": "rss",
@@ -7390,7 +7385,7 @@
   }
  },
  "europeanpharmaceuticalreview.com": {
-  "checked": "2026-10-26T06:35:45Z",
+  "checked": "2026-11-26T06:43:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7412,7 +7407,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:35:45Z",
+   "checked": "2026-11-26T06:43:55Z",
    "title": "European Pharmaceutical Review",
    "generator": null,
    "feeds": [],
@@ -7422,36 +7417,39 @@
   }
  },
  "eurorscg.com": {
-  "checked": "2026-10-26T06:35:49Z",
+  "checked": "2026-11-26T06:43:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
-   "resolves": true,
-   "a": [
-    "208.91.197.132"
-   ],
+   "resolves": false,
+   "a": [],
    "aaaa": [],
    "cname": null,
-   "ns": [],
-   "mx": false
+   "ns": [
+    "keyla.ns.cloudflare.com",
+    "quinton.ns.cloudflare.com"
+   ],
+   "mx": true
   },
   "https": {
-   "reachable": true,
+   "reachable": false,
    "redirects_http": false,
-   "status": 200
+   "status": null,
+   "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:35:49Z",
+   "checked": "2026-11-26T06:43:58Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "does not resolve"
   }
  },
  "ev.medium.com": {
-  "checked": "2026-10-26T06:35:56Z",
+  "checked": "2026-11-26T06:43:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7474,7 +7472,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:35:56Z",
+   "checked": "2026-11-26T06:43:59Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -7533,7 +7531,7 @@
   }
  },
  "evanhatch.medium.com": {
-  "checked": "2026-10-26T06:36:00Z",
+  "checked": "2026-11-26T06:44:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7556,7 +7554,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:36:00Z",
+   "checked": "2026-11-26T06:44:05Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -7574,7 +7572,7 @@
   }
  },
  "evanjones.ca": {
-  "checked": "2026-10-26T06:36:04Z",
+  "checked": "2026-11-26T06:44:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7597,7 +7595,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-26T06:36:04Z",
+   "checked": "2026-11-26T06:44:09Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7608,7 +7606,7 @@
   }
  },
  "evanmiller.org": {
-  "checked": "2026-10-26T06:36:21Z",
+  "checked": "2026-11-26T06:44:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7632,7 +7630,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:36:21Z",
+   "checked": "2026-11-26T06:44:26Z",
    "title": "Home Page of Evan Miller",
    "generator": null,
    "feeds": [
@@ -7648,7 +7646,7 @@
   }
  },
  "evantravers.com": {
-  "checked": "2026-10-26T06:36:23Z",
+  "checked": "2026-11-26T06:44:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7674,7 +7672,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:36:23Z",
+   "checked": "2026-11-26T06:44:28Z",
    "title": "evantravers.com",
    "generator": null,
    "feeds": [
@@ -7700,7 +7698,7 @@
   }
  },
  "eve-lang.com": {
-  "checked": "2026-10-26T06:36:26Z",
+  "checked": "2026-11-26T06:44:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7726,7 +7724,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-26T06:36:26Z",
+   "checked": "2026-11-26T06:44:31Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7737,7 +7735,7 @@
   }
  },
  "evening-edition.com": {
-  "checked": "2026-10-26T06:36:27Z",
+  "checked": "2026-11-26T06:44:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7763,7 +7761,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-26T06:36:27Z",
+   "checked": "2026-11-26T06:44:32Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7808,7 +7806,7 @@
   }
  },
  "eventlet.net": {
-  "checked": "2026-10-26T06:36:29Z",
+  "checked": "2026-11-26T06:44:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7833,7 +7831,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:36:29Z",
+   "checked": "2026-11-26T06:44:34Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7873,7 +7871,7 @@
   }
  },
  "eventstore.org": {
-  "checked": "2026-10-26T06:36:30Z",
+  "checked": "2026-11-26T06:44:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7899,7 +7897,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:36:30Z",
+   "checked": "2026-11-26T06:44:35Z",
    "title": "Kurrent – The Event-Native Database for Modern Systems",
    "generator": "Astro v5.13.8",
    "feeds": [],
@@ -7947,7 +7945,7 @@
   }
  },
  "everyfuckingwebsite.com": {
-  "checked": "2026-10-26T06:36:47Z",
+  "checked": "2026-11-26T06:44:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7973,7 +7971,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:36:47Z",
+   "checked": "2026-11-26T06:44:52Z",
    "title": "every fucking website. — a short essay in two screens",
    "generator": null,
    "feeds": [],
@@ -7983,7 +7981,7 @@
   }
  },
  "everypoet.com": {
-  "checked": "2026-10-26T06:36:50Z",
+  "checked": "2026-11-26T06:44:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8007,7 +8005,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'everypoet.com'"
   },
   "home": {
-   "checked": "2026-10-26T06:36:50Z",
+   "checked": "2026-11-26T06:44:54Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8018,18 +8016,18 @@
   }
  },
  "everything2.com": {
-  "checked": "2026-10-26T06:36:51Z",
+  "checked": "2026-11-26T06:44:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "44.236.21.0",
-    "52.25.14.174"
+    "44.253.172.73",
+    "184.33.146.14"
    ],
    "aaaa": [
-    "2600:1f14:d30:6600:e043:78d7:66d8:601",
-    "2600:1f14:d30:6601:3a90:df57:d85c:2470"
+    "2600:1f14:d30:6600:865c:edc1:b343:959a",
+    "2600:1f14:d30:6601:4b69:8316:1913:e8af"
    ],
    "cname": null,
    "ns": [
@@ -8046,7 +8044,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:36:51Z",
+   "checked": "2026-11-26T06:44:56Z",
    "title": "Welcome to Everything",
    "generator": null,
    "feeds": [
@@ -8062,13 +8060,13 @@
   }
  },
  "everythingbeep.com": {
-  "checked": "2026-10-26T06:36:54Z",
+  "checked": "2026-11-26T06:44:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "185.150.189.29"
+    "212.92.105.21"
    ],
    "aaaa": [],
    "cname": null,
@@ -8081,17 +8079,16 @@
   "https": {
    "reachable": true,
    "redirects_http": false,
-   "status": 401
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:36:54Z",
+   "checked": "2026-11-26T06:44:59Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null,
-   "error": "HTTP 401"
+   "webmention": null
   }
  },
  "everythingisaremix.info": {
@@ -8130,7 +8127,7 @@
   }
  },
  "everythingsysadmin.com": {
-  "checked": "2026-10-26T06:36:56Z",
+  "checked": "2026-11-26T06:45:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8156,7 +8153,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:36:56Z",
+   "checked": "2026-11-26T06:45:01Z",
    "title": "Tom Limoncelli's EverythingSysadmin Blog",
    "generator": "Movable Type",
    "feeds": [
@@ -8206,7 +8203,7 @@
   }
  },
  "evil-icons.io": {
-  "checked": "2026-10-26T06:36:59Z",
+  "checked": "2026-11-26T06:45:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8232,28 +8229,17 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:36:59Z",
-   "title": "JugaBet Chile | Casino Online y Apuestas Deportivas 2026",
-   "generator": "WordPress 7.1.3",
-   "feeds": [
-    {
-     "type": "rss",
-     "url": "https://juego-bet.cl/feed/",
-     "title": "juego-bet.cl » Feed"
-    },
-    {
-     "type": "rss",
-     "url": "https://juego-bet.cl/comments/feed/",
-     "title": "juego-bet.cl » Feed de comentarios"
-    }
-   ],
+   "checked": "2026-11-26T06:45:04Z",
+   "title": "Jugabet online: casino y apuestas deportivas en una cuenta",
+   "generator": null,
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
   }
  },
  "evolution-control.com": {
-  "checked": "2026-10-26T06:37:05Z",
+  "checked": "2026-11-26T06:45:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8275,7 +8261,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:37:05Z",
+   "checked": "2026-11-26T06:45:06Z",
    "title": "Untitled Document",
    "generator": null,
    "feeds": [],
@@ -8285,7 +8271,7 @@
   }
  },
  "evri.com": {
-  "checked": "2026-10-26T06:37:08Z",
+  "checked": "2026-11-26T06:45:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8312,7 +8298,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:37:08Z",
+   "checked": "2026-11-26T06:45:09Z",
    "title": "Evri | Send Parcels with Cheap UK Delivery & Courier Service",
    "generator": null,
    "feeds": [],
@@ -8322,75 +8308,37 @@
   }
  },
  "ewanvalentine.io": {
-  "checked": "2026-10-26T06:37:10Z",
+  "checked": "2026-11-26T06:45:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
-   "resolves": true,
-   "a": [
-    "51.15.34.156",
-    "51.15.36.20",
-    "51.15.43.157",
-    "51.15.43.192",
-    "51.15.47.124",
-    "51.15.47.223",
-    "51.15.50.114",
-    "51.15.51.112",
-    "51.15.53.150",
-    "51.15.54.200",
-    "51.15.79.68",
-    "51.15.81.71",
-    "51.15.86.22",
-    "51.15.86.85",
-    "51.15.93.230",
-    "51.15.95.115",
-    "51.15.97.203",
-    "51.15.100.175",
-    "51.15.105.5",
-    "51.15.111.94",
-    "51.15.112.83",
-    "51.15.115.76",
-    "51.15.116.75",
-    "51.15.119.25",
-    "51.15.119.64",
-    "51.15.121.151",
-    "51.15.123.61",
-    "51.15.126.79",
-    "51.15.127.178",
-    "51.158.161.36",
-    "51.158.161.106",
-    "51.158.161.188",
-    "51.158.162.134",
-    "51.158.185.128",
-    "51.158.191.71"
-   ],
+   "resolves": false,
+   "a": [],
    "aaaa": [],
    "cname": null,
-   "ns": [
-    "luke.ns.cloudflare.com",
-    "rachel.ns.cloudflare.com"
-   ],
-   "mx": true
+   "ns": [],
+   "mx": false,
+   "error": "SERVFAIL"
   },
   "https": {
    "reachable": false,
    "redirects_http": false,
    "status": null,
-   "error": "timeout"
+   "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-26T06:37:10Z",
+   "checked": "2026-11-26T06:45:11Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "timeout"
+   "error": "does not resolve"
   }
  },
  "ewedding.com": {
-  "checked": "2026-10-26T06:54:42Z",
+  "checked": "2026-11-26T06:45:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8415,7 +8363,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:54:42Z",
+   "checked": "2026-11-26T06:45:38Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8425,7 +8373,7 @@
   }
  },
  "ewg.org": {
-  "checked": "2026-10-26T06:54:45Z",
+  "checked": "2026-11-26T06:45:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8447,11 +8395,11 @@
   },
   "https": {
    "reachable": true,
-   "redirects_http": true,
+   "redirects_http": false,
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:54:45Z",
+   "checked": "2026-11-26T06:45:42Z",
    "title": "Environmental Working Group",
    "generator": null,
    "feeds": [],
@@ -8461,7 +8409,7 @@
   }
  },
  "examinedlife.substack.com": {
-  "checked": "2026-10-26T06:54:46Z",
+  "checked": "2026-11-26T06:45:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8484,7 +8432,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:54:46Z",
+   "checked": "2026-11-26T06:45:43Z",
    "title": "The Examined Life | Amogh | Substack",
    "generator": null,
    "feeds": [
@@ -8500,7 +8448,7 @@
   }
  },
  "execution.com": {
-  "checked": "2026-10-26T06:54:49Z",
+  "checked": "2026-11-26T06:45:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8522,7 +8470,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:54:49Z",
+   "checked": "2026-11-26T06:45:45Z",
    "title": "Execution.com — Premium Domain For Sale | Atom",
    "generator": null,
    "feeds": [],
@@ -8532,7 +8480,7 @@
   }
  },
  "exoscale.com": {
-  "checked": "2026-10-26T06:54:50Z",
+  "checked": "2026-11-26T06:45:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8558,7 +8506,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:54:50Z",
+   "checked": "2026-11-26T06:45:47Z",
    "title": "European cloud provider Exoscale for modern infrastructure",
    "generator": null,
    "feeds": [],
@@ -8568,7 +8516,7 @@
   }
  },
  "expandrive.com": {
-  "checked": "2026-10-26T06:54:55Z",
+  "checked": "2026-11-26T06:45:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8590,7 +8538,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:54:55Z",
+   "checked": "2026-11-26T06:45:51Z",
    "title": "Mount cloud storage as a drive on Mac, Windows, and Linux | ExpanDrive",
    "generator": null,
    "feeds": [],
@@ -8600,7 +8548,7 @@
   }
  },
  "experimentalhistory.substack.com": {
-  "checked": "2026-10-26T06:54:57Z",
+  "checked": "2026-11-26T06:45:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8623,7 +8571,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:54:57Z",
+   "checked": "2026-11-26T06:45:54Z",
    "title": "Experimental History | Adam Mastroianni | Substack",
    "generator": null,
    "feeds": [
@@ -8639,7 +8587,7 @@
   }
  },
  "explainer.net": {
-  "checked": "2026-10-26T06:55:00Z",
+  "checked": "2026-11-26T06:45:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8663,9 +8611,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:55:00Z",
+   "checked": "2026-11-26T06:45:56Z",
    "title": "Explainer – One question, answered properly",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -8684,7 +8632,7 @@
   }
  },
  "explorefall.com": {
-  "checked": "2026-10-26T06:55:02Z",
+  "checked": "2026-11-26T06:45:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8711,7 +8659,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:55:02Z",
+   "checked": "2026-11-26T06:45:58Z",
    "title": "Explore Fall: Interactive Foliage Map",
    "generator": null,
    "feeds": [],
@@ -8721,7 +8669,7 @@
   }
  },
  "expresso-app.org": {
-  "checked": "2026-10-26T06:55:04Z",
+  "checked": "2026-11-26T06:45:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8745,7 +8693,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-26T06:55:04Z",
+   "checked": "2026-11-26T06:45:59Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8798,7 +8746,7 @@
   }
  },
  "exurbe.com": {
-  "checked": "2026-10-26T06:55:35Z",
+  "checked": "2026-11-26T06:46:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8821,7 +8769,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:55:35Z",
+   "checked": "2026-11-26T06:46:31Z",
    "title": "Ex Urbe – History, Philosophy, Books, Food & Fandom",
    "generator": null,
    "feeds": [],
@@ -8831,7 +8779,7 @@
   }
  },
  "eyeofestival.com": {
-  "checked": "2026-10-26T06:55:38Z",
+  "checked": "2026-11-26T06:46:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8853,9 +8801,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-26T06:55:38Z",
+   "checked": "2026-11-26T06:46:33Z",
    "title": "Eyeo Festival | Converge to Inspire",
-   "generator": "WordPress 5.3.26",
+   "generator": "WordPress 5.3.28",
    "feeds": [
     {
      "type": "rss",

@@ -42,7 +42,7 @@
   }
  },
  "jackcheng.com": {
-  "checked": "2026-10-27T06:19:36Z",
+  "checked": "2026-11-26T07:39:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -68,7 +68,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:19:36Z",
+   "checked": "2026-11-26T07:39:48Z",
    "title": "Jack Cheng",
    "generator": null,
    "feeds": [
@@ -84,7 +84,7 @@
   }
  },
  "jackrusher.com": {
-  "checked": "2026-10-27T06:19:39Z",
+  "checked": "2026-11-26T07:39:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -99,7 +99,7 @@
     "ns-127-a.gandi.net",
     "ns-204-b.gandi.net"
    ],
-   "mx": true
+   "mx": false
   },
   "https": {
    "reachable": true,
@@ -107,7 +107,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:19:39Z",
+   "checked": "2026-11-26T07:39:51Z",
    "title": "Jack Rusher: Multidisciplined",
    "generator": null,
    "feeds": [
@@ -123,7 +123,7 @@
   }
  },
  "jackwelch.strayer.edu": {
-  "checked": "2026-10-27T06:19:43Z",
+  "checked": "2026-11-26T07:39:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -146,7 +146,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:19:43Z",
+   "checked": "2026-11-26T07:39:55Z",
    "title": "Jack Welch Management Institute Online MBA | Strayer University",
    "generator": "AEM",
    "feeds": [],
@@ -156,7 +156,7 @@
   }
  },
  "jacobbartlett.substack.com": {
-  "checked": "2026-10-27T06:19:45Z",
+  "checked": "2026-11-26T07:39:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -179,7 +179,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:19:45Z",
+   "checked": "2026-11-26T07:39:57Z",
    "title": "Jacob’s Tech Tavern | Substack",
    "generator": null,
    "feeds": [
@@ -195,7 +195,7 @@
   }
  },
  "jacobbrazeal.wordpress.com": {
-  "checked": "2026-10-27T06:19:48Z",
+  "checked": "2026-11-26T07:40:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -215,7 +215,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:19:48Z",
+   "checked": "2026-11-26T07:40:00Z",
    "title": "Jacob Brazeal",
    "generator": "WordPress.com",
    "feeds": [
@@ -278,7 +278,7 @@
   }
  },
  "jacobyyoung.com": {
-  "checked": "2026-10-27T06:19:51Z",
+  "checked": "2026-11-26T07:40:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -297,7 +297,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:19:51Z",
+   "checked": "2026-11-26T07:40:02Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -346,7 +346,7 @@
   }
  },
  "jakevdp.github.io": {
-  "checked": "2026-10-27T06:19:51Z",
+  "checked": "2026-11-26T07:40:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -373,7 +373,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:19:51Z",
+   "checked": "2026-11-26T07:40:02Z",
    "title": "Home | Pythonic Perambulations",
    "generator": null,
    "feeds": [
@@ -391,7 +391,7 @@
   }
  },
  "jakobgreenfeld.com": {
-  "checked": "2026-10-27T06:19:53Z",
+  "checked": "2026-11-26T07:40:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -421,7 +421,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:19:53Z",
+   "checked": "2026-11-26T07:40:05Z",
    "title": "Home – Jakob Greenfeld",
    "generator": null,
    "feeds": [
@@ -442,7 +442,7 @@
   }
  },
  "jalbum.net": {
-  "checked": "2026-10-27T06:19:56Z",
+  "checked": "2026-11-26T07:40:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -466,7 +466,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:19:56Z",
+   "checked": "2026-11-26T07:40:08Z",
    "title": "jAlbum",
    "generator": null,
    "feeds": [],
@@ -524,7 +524,7 @@
   }
  },
  "jama.jamanetwork.com": {
-  "checked": "2026-10-27T06:20:03Z",
+  "checked": "2026-11-26T07:40:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -545,7 +545,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-27T06:20:03Z",
+   "checked": "2026-11-26T07:40:15Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -556,7 +556,7 @@
   }
  },
  "jamcorder.com": {
-  "checked": "2026-10-27T06:20:06Z",
+  "checked": "2026-11-26T07:40:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -582,7 +582,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:06Z",
+   "checked": "2026-11-26T07:40:18Z",
    "title": "Jamcorder | MIDI Piano Recorder",
    "generator": null,
    "feeds": [],
@@ -592,7 +592,7 @@
   }
  },
  "james-pritchard.com": {
-  "checked": "2026-10-27T06:20:08Z",
+  "checked": "2026-11-26T07:40:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -616,7 +616,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:08Z",
+   "checked": "2026-11-26T07:40:20Z",
    "title": "SuedePritch · Blog",
    "generator": null,
    "feeds": [],
@@ -626,7 +626,7 @@
   }
  },
  "jamesallworth.medium.com": {
-  "checked": "2026-10-27T06:20:15Z",
+  "checked": "2026-11-26T07:40:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -649,7 +649,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:15Z",
+   "checked": "2026-11-26T07:40:26Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -667,7 +667,7 @@
   }
  },
  "jamesaltucher.com": {
-  "checked": "2026-10-27T06:20:20Z",
+  "checked": "2026-11-26T07:40:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -693,7 +693,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:20Z",
+   "checked": "2026-11-26T07:40:31Z",
    "title": "James Altucher",
    "generator": null,
    "feeds": [],
@@ -745,7 +745,7 @@
   }
  },
  "jamesdrandall.com": {
-  "checked": "2026-10-27T06:20:21Z",
+  "checked": "2026-11-26T07:40:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -769,7 +769,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:21Z",
+   "checked": "2026-11-26T07:40:32Z",
    "title": "James Randall",
    "generator": "Hugo 0.165.0",
    "feeds": [],
@@ -837,7 +837,7 @@
   }
  },
  "jameshard.ing": {
-  "checked": "2026-10-27T06:20:24Z",
+  "checked": "2026-11-26T07:40:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -863,7 +863,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:24Z",
+   "checked": "2026-11-26T07:40:35Z",
    "title": "Home - James Harding",
    "generator": null,
    "feeds": [
@@ -885,7 +885,7 @@
   }
  },
  "jamesporter.me": {
-  "checked": "2026-10-27T06:20:27Z",
+  "checked": "2026-11-26T07:40:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -907,7 +907,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:27Z",
+   "checked": "2026-11-26T07:40:38Z",
    "title": "James Porter",
    "generator": "Hugo 0.155.1",
    "feeds": [
