@@ -982,7 +982,7 @@
   }
  },
  "jamesshore.com": {
-  "checked": "2026-10-27T06:20:30Z",
+  "checked": "2026-11-27T06:30:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1004,7 +1004,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:30Z",
+   "checked": "2026-11-27T06:30:15Z",
    "title": "James Shore: Successful Software",
    "generator": null,
    "feeds": [
@@ -1020,7 +1020,7 @@
   }
  },
  "jamesturk.github.io": {
-  "checked": "2026-10-27T06:20:31Z",
+  "checked": "2026-11-27T06:30:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1047,7 +1047,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-27T06:20:31Z",
+   "checked": "2026-11-27T06:30:17Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1058,16 +1058,16 @@
   }
  },
  "jamesyu.org": {
-  "checked": "2026-10-27T06:20:33Z",
+  "checked": "2026-11-27T06:30:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "54.192.55.13",
-    "54.192.55.43",
-    "54.192.55.76",
-    "54.192.55.79"
+    "99.84.203.27",
+    "99.84.203.37",
+    "99.84.203.42",
+    "99.84.203.74"
    ],
    "aaaa": [],
    "cname": null,
@@ -1085,7 +1085,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:33Z",
+   "checked": "2026-11-27T06:30:18Z",
    "title": "James Yu",
    "generator": null,
    "feeds": [],
@@ -1095,15 +1095,15 @@
   }
  },
  "jamf.com": {
-  "checked": "2026-10-27T06:20:36Z",
+  "checked": "2026-11-27T06:30:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "34.224.118.31",
-    "44.206.44.100",
-    "54.146.115.97"
+    "3.217.175.104",
+    "3.234.43.214",
+    "100.56.187.55"
    ],
    "aaaa": [],
    "cname": null,
@@ -1121,23 +1121,17 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:36Z",
+   "checked": "2026-11-27T06:30:21Z",
    "title": "Jamf Apple Device Management. Mac iPad iPhone TV Apple MDM",
    "generator": null,
-   "feeds": [
-    {
-     "type": "rss",
-     "url": "https://www.jamf.com/blog/rss/",
-     "title": "Jamf Blog"
-    }
-   ],
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
   }
  },
  "jampa.dev": {
-  "checked": "2026-10-27T06:20:38Z",
+  "checked": "2026-11-27T06:30:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1159,7 +1153,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:38Z",
+   "checked": "2026-11-27T06:30:23Z",
    "title": "Jampa.dev | Substack",
    "generator": null,
    "feeds": [
@@ -1175,16 +1169,16 @@
   }
  },
  "janet-lang.org": {
-  "checked": "2026-10-27T06:20:41Z",
+  "checked": "2026-11-27T06:30:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "3.167.152.90",
-    "3.167.152.93",
-    "3.167.152.100",
-    "3.167.152.106"
+    "52.84.127.35",
+    "52.84.127.48",
+    "52.84.127.56",
+    "52.84.127.106"
    ],
    "aaaa": [],
    "cname": null,
@@ -1202,7 +1196,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:41Z",
+   "checked": "2026-11-27T06:30:26Z",
    "title": "Janet Programming Language",
    "generator": null,
    "feeds": [],
@@ -1212,7 +1206,7 @@
   }
  },
  "jann.is": {
-  "checked": "2026-10-27T06:20:44Z",
+  "checked": "2026-11-27T06:30:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1238,7 +1232,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:44Z",
+   "checked": "2026-11-27T06:30:29Z",
    "title": "I like turtles!!1",
    "generator": "Hugo 0.80.0",
    "feeds": [
@@ -1254,7 +1248,7 @@
   }
  },
  "janrain.com": {
-  "checked": "2026-10-27T06:20:46Z",
+  "checked": "2026-11-27T06:30:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1280,7 +1274,7 @@
    "error": "network: No route to host"
   },
   "home": {
-   "checked": "2026-10-27T06:20:46Z",
+   "checked": "2026-11-27T06:30:31Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1291,7 +1285,7 @@
   }
  },
  "jarango.com": {
-  "checked": "2026-10-27T06:20:48Z",
+  "checked": "2026-11-27T06:30:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1314,7 +1308,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:48Z",
+   "checked": "2026-11-27T06:30:32Z",
    "title": "Jorge Arango | Information Architecture Consulting & Training Services",
    "generator": "Jekyll v4.2.2",
    "feeds": [
@@ -1332,7 +1326,7 @@
   }
  },
  "jarthurscoffee.com": {
-  "checked": "2026-10-27T06:20:51Z",
+  "checked": "2026-11-27T06:30:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1354,7 +1348,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:20:51Z",
+   "checked": "2026-11-27T06:30:35Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1365,7 +1359,7 @@
   }
  },
  "jaruzel.com": {
-  "checked": "2026-10-27T06:20:51Z",
+  "checked": "2026-11-27T06:30:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1389,7 +1383,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'jaruzel.com'"
   },
   "home": {
-   "checked": "2026-10-27T06:20:51Z",
+   "checked": "2026-11-27T06:30:35Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1400,7 +1394,7 @@
   }
  },
  "jasondunn.com": {
-  "checked": "2026-10-27T06:20:55Z",
+  "checked": "2026-11-27T06:30:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1426,9 +1420,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:55Z",
+   "checked": "2026-11-27T06:30:40Z",
    "title": "Jason Dunn – a canadian geek dad living in the USA sharing thoughts on personal finance, technology, photography, parenting, and other random things",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -1453,7 +1447,7 @@
   }
  },
  "jasoneckert.github.io": {
-  "checked": "2026-10-27T06:20:59Z",
+  "checked": "2026-11-27T06:30:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1480,7 +1474,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:20:59Z",
+   "checked": "2026-11-27T06:30:43Z",
    "title": "Jason Eckert's Website and Blog",
    "generator": "Jason Eckert Hugo 0.160.1",
    "feeds": [],
@@ -1490,7 +1484,7 @@
   }
  },
  "jasonhare.com": {
-  "checked": "2026-10-27T06:21:02Z",
+  "checked": "2026-11-27T06:30:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1513,7 +1507,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T06:21:02Z",
+   "checked": "2026-11-27T06:30:46Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1524,7 +1518,7 @@
   }
  },
  "jasonroell.com": {
-  "checked": "2026-10-27T06:21:33Z",
+  "checked": "2026-11-27T06:31:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1547,7 +1541,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:21:33Z",
+   "checked": "2026-11-27T06:31:17Z",
    "title": "Jason Roell | The Curious Programmer",
    "generator": null,
    "feeds": [
@@ -1563,7 +1557,7 @@
   }
  },
  "jasonschaeffer.net": {
-  "checked": "2026-10-27T06:21:36Z",
+  "checked": "2026-11-27T06:31:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1582,7 +1576,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:21:36Z",
+   "checked": "2026-11-27T06:31:20Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1593,7 +1587,7 @@
   }
  },
  "jasq.org": {
-  "checked": "2026-10-27T06:21:36Z",
+  "checked": "2026-11-27T06:31:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1615,9 +1609,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:21:36Z",
+   "checked": "2026-11-27T06:31:20Z",
    "title": "Belajar Finansial, Teknologi, dan Wawasan Masa Kini",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -1631,7 +1625,7 @@
   }
  },
  "javascriptweblog.wordpress.com": {
-  "checked": "2026-10-27T06:21:41Z",
+  "checked": "2026-11-27T06:31:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1651,7 +1645,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:21:41Z",
+   "checked": "2026-11-27T06:31:31Z",
    "title": "JavaScript, JavaScript… – by Angus Croll",
    "generator": "WordPress.com",
    "feeds": [
@@ -1719,7 +1713,7 @@
   }
  },
  "jaydrainjr.substack.com": {
-  "checked": "2026-10-27T06:21:44Z",
+  "checked": "2026-11-27T06:31:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1742,7 +1736,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:21:44Z",
+   "checked": "2026-11-27T06:31:34Z",
    "title": "The Blueprint | Jay Drain Jr. | Substack",
    "generator": null,
    "feeds": [
@@ -1758,7 +1752,7 @@
   }
  },
  "jaygraber.medium.com": {
-  "checked": "2026-10-27T06:21:46Z",
+  "checked": "2026-11-27T06:31:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1781,7 +1775,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:21:46Z",
+   "checked": "2026-11-27T06:31:36Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -1797,7 +1791,7 @@
   }
  },
  "jborichevskiy.com": {
-  "checked": "2026-10-27T06:21:50Z",
+  "checked": "2026-11-27T06:31:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1822,7 +1816,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:21:50Z",
+   "checked": "2026-11-27T06:31:40Z",
    "title": "Coming Soon",
    "generator": null,
    "feeds": [],
@@ -1832,7 +1826,7 @@
   }
  },
  "jchyip.medium.com": {
-  "checked": "2026-10-27T06:21:53Z",
+  "checked": "2026-11-27T06:31:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1855,7 +1849,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:21:53Z",
+   "checked": "2026-11-27T06:31:43Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -1871,7 +1865,7 @@
   }
  },
  "jdmeier.com": {
-  "checked": "2026-10-27T06:21:57Z",
+  "checked": "2026-11-27T06:31:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1893,9 +1887,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:21:57Z",
+   "checked": "2026-11-27T06:31:48Z",
    "title": "JD Meier | High Performance. Innovation. Leadership.",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -1962,7 +1956,7 @@
   }
  },
  "jeffgothelf.com": {
-  "checked": "2026-10-27T06:22:01Z",
+  "checked": "2026-11-27T06:31:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1986,7 +1980,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:01Z",
+   "checked": "2026-11-27T06:31:51Z",
    "title": "Jeff Gothelf -- AI, Product management, OKRs and Product Discovery training",
    "generator": null,
    "feeds": [
@@ -2007,7 +2001,7 @@
   }
  },
  "jeffhuang.com": {
-  "checked": "2026-10-27T06:22:04Z",
+  "checked": "2026-11-27T06:31:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2031,7 +2025,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:04Z",
+   "checked": "2026-11-27T06:31:54Z",
    "title": "Jeff Huang · Computer Science at Brown University",
    "generator": null,
    "feeds": [],
@@ -2043,7 +2037,7 @@
   }
  },
  "jeffwalker.com": {
-  "checked": "2026-10-27T06:22:06Z",
+  "checked": "2026-11-27T06:31:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2065,7 +2059,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:06Z",
+   "checked": "2026-11-27T06:31:56Z",
    "title": "Home - Jeff Walker",
    "generator": null,
    "feeds": [],
@@ -2075,7 +2069,7 @@
   }
  },
  "jeffwidener.com": {
-  "checked": "2026-10-27T06:22:09Z",
+  "checked": "2026-11-27T06:31:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2097,7 +2091,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:09Z",
+   "checked": "2026-11-27T06:31:59Z",
    "title": "Index",
    "generator": null,
    "feeds": [
@@ -2113,7 +2107,7 @@
   }
  },
  "jeffwofford.com": {
-  "checked": "2026-10-27T06:22:13Z",
+  "checked": "2026-11-27T06:32:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2137,9 +2131,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:13Z",
+   "checked": "2026-11-27T06:32:02Z",
    "title": "Holy Ghost Stories – Faith, technology, and everything in between.",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -2158,7 +2152,7 @@
   }
  },
  "jekyllrb.com": {
-  "checked": "2026-10-27T06:22:15Z",
+  "checked": "2026-11-27T06:32:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2188,7 +2182,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:15Z",
+   "checked": "2026-11-27T06:32:04Z",
    "title": "Jekyll • Simple, blog-aware, static sites | Transform your plain text into static websites and blogs",
    "generator": "Jekyll v4.4.1",
    "feeds": [
@@ -2214,7 +2208,7 @@
   }
  },
  "jemma.dev": {
-  "checked": "2026-10-27T06:22:16Z",
+  "checked": "2026-11-27T06:32:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2237,7 +2231,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:16Z",
+   "checked": "2026-11-27T06:32:06Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2247,7 +2241,7 @@
   }
  },
  "jennstrater.blogspot.com": {
-  "checked": "2026-10-27T06:22:19Z",
+  "checked": "2026-11-27T06:32:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2256,7 +2250,7 @@
     "142.251.214.65"
    ],
    "aaaa": [
-    "2607:f8b0:4009:812::2001"
+    "2607:f8b0:4009:81e::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -2268,7 +2262,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:19Z",
+   "checked": "2026-11-27T06:32:07Z",
    "title": "jennstrater",
    "generator": "blogger",
    "feeds": [
@@ -2291,7 +2285,7 @@
   }
  },
  "jenson.org": {
-  "checked": "2026-10-27T06:22:22Z",
+  "checked": "2026-11-27T06:32:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2315,9 +2309,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:22Z",
+   "checked": "2026-11-27T06:32:10Z",
    "title": "Scott Jenson – Exploring the world beyond mobile",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -2365,16 +2359,16 @@
   }
  },
  "jeremydaly.com": {
-  "checked": "2026-10-27T06:22:26Z",
+  "checked": "2026-11-27T06:32:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "3.168.51.2",
-    "3.168.51.66",
-    "3.168.51.91",
-    "3.168.51.108"
+    "18.160.102.15",
+    "18.160.102.28",
+    "18.160.102.95",
+    "18.160.102.105"
    ],
    "aaaa": [],
    "cname": null,
@@ -2392,7 +2386,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:26Z",
+   "checked": "2026-11-27T06:32:13Z",
    "title": "Product Builder, Cloud Architect & Startup Veteran - Jeremy Daly",
    "generator": null,
    "feeds": [
@@ -2408,7 +2402,7 @@
   }
  },
  "jeroendedauw.github.io": {
-  "checked": "2026-10-27T06:22:28Z",
+  "checked": "2026-11-27T06:32:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2435,7 +2429,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-27T06:22:28Z",
+   "checked": "2026-11-27T06:32:16Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2446,7 +2440,7 @@
   }
  },
  "jerssoftwarehut.com": {
-  "checked": "2026-10-27T06:22:30Z",
+  "checked": "2026-11-27T06:32:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2471,9 +2465,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:30Z",
+   "checked": "2026-11-27T06:32:17Z",
    "title": "Jer’s Software Hut | Home of Jer’s Novel Writer",
-   "generator": "WordPress 6.0.17",
+   "generator": "WordPress 6.0.19",
    "feeds": [
     {
      "type": "rss",
@@ -2492,7 +2486,7 @@
   }
  },
  "jeskin.net": {
-  "checked": "2026-10-27T06:22:33Z",
+  "checked": "2026-11-27T06:32:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2519,7 +2513,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:33Z",
+   "checked": "2026-11-27T06:32:20Z",
    "title": "Jon Eskin's Blog - Home",
    "generator": null,
    "feeds": [
@@ -2535,7 +2529,7 @@
   }
  },
  "jessandruss.us": {
-  "checked": "2026-10-27T06:22:36Z",
+  "checked": "2026-11-27T06:32:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2561,7 +2555,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:36Z",
+   "checked": "2026-11-27T06:32:23Z",
    "title": "Aviamasters Casino: fast crash play, mobile-ready (2025)",
    "generator": "WordPress 7.0",
    "feeds": [],
@@ -2571,7 +2565,7 @@
   }
  },
  "jessicalexicus.medium.com": {
-  "checked": "2026-10-27T06:22:39Z",
+  "checked": "2026-11-27T06:32:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2594,7 +2588,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:39Z",
+   "checked": "2026-11-27T06:32:26Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -2610,7 +2604,7 @@
   }
  },
  "jessiediggins.com": {
-  "checked": "2026-10-27T06:22:45Z",
+  "checked": "2026-11-27T06:32:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2636,7 +2630,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:45Z",
+   "checked": "2026-11-27T06:32:31Z",
    "title": "Jessie Diggins – Racing and training around the world – loving life as a professional Nordic skier!",
    "generator": "Powered by WPBakery Page Builder - drag and drop page builder for WordPress.",
    "feeds": [
@@ -2662,7 +2656,7 @@
   }
  },
  "jessitron.com": {
-  "checked": "2026-10-27T06:22:48Z",
+  "checked": "2026-11-27T06:32:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2685,7 +2679,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:48Z",
+   "checked": "2026-11-27T06:32:35Z",
    "title": "Jessitron – symmathecist, in the medium of code",
    "generator": null,
    "feeds": [
@@ -2706,7 +2700,7 @@
   }
  },
  "jetpack.me": {
-  "checked": "2026-10-27T06:22:51Z",
+  "checked": "2026-11-27T06:32:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2730,8 +2724,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:22:51Z",
-   "title": "Jetpack — Essential Security & Performance for WordPress",
+   "checked": "2026-11-27T06:32:37Z",
+   "title": "Jetpack — Security, Performance & AI for WordPress",
    "generator": "WordPress.com",
    "feeds": [
     {
@@ -2751,7 +2745,7 @@
   }
  },
  "jetstrap.com": {
-  "checked": "2026-10-27T06:22:54Z",
+  "checked": "2026-11-27T06:32:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2770,7 +2764,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:22:54Z",
+   "checked": "2026-11-27T06:32:40Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2781,7 +2775,7 @@
   }
  },
  "jex.im": {
-  "checked": "2026-10-27T06:22:56Z",
+  "checked": "2026-11-27T06:32:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2804,7 +2798,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-27T06:22:56Z",
+   "checked": "2026-11-27T06:32:41Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2857,7 +2851,7 @@
   }
  },
  "jhische.com": {
-  "checked": "2026-10-27T06:23:00Z",
+  "checked": "2026-11-27T06:32:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2874,21 +2868,21 @@
    "reachable": false,
    "redirects_http": false,
    "status": null,
-   "error": "connection reset"
+   "error": "connection refused"
   },
   "home": {
-   "checked": "2026-10-27T06:23:00Z",
+   "checked": "2026-11-27T06:32:45Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "connection reset"
+   "error": "connection refused"
   }
  },
  "jibranelbazi.com": {
-  "checked": "2026-10-27T06:23:01Z",
+  "checked": "2026-11-27T06:32:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2914,7 +2908,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:23:01Z",
+   "checked": "2026-11-27T06:32:51Z",
    "title": "Meaning-Making | Jibran el Bazi | Substack",
    "generator": null,
    "feeds": [
@@ -2930,7 +2924,7 @@
   }
  },
  "jiggypuzzles.com": {
-  "checked": "2026-10-27T06:23:04Z",
+  "checked": "2026-11-27T06:32:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2952,7 +2946,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:23:04Z",
+   "checked": "2026-11-27T06:32:53Z",
    "title": "Jiggy Puzzles - We make puzzles worth framing – JIGGY Puzzles",
    "generator": null,
    "feeds": [],
@@ -2962,33 +2956,33 @@
   }
  },
  "jilles.net": {
-  "checked": "2026-10-27T06:23:08Z",
+  "checked": "2026-11-27T06:32:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "185.111.111.154",
-    "185.111.111.156",
-    "185.111.111.158"
+    "104.21.92.49",
+    "172.67.186.138"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2606:4700:3035::6815:5c31",
+    "2606:4700:3035::ac43:ba8a"
+   ],
    "cname": null,
    "ns": [
-    "ns1-08.azure-dns.com",
-    "ns2-08.azure-dns.net",
-    "ns3-08.azure-dns.org",
-    "ns4-08.azure-dns.info"
+    "anita.ns.cloudflare.com",
+    "quentin.ns.cloudflare.com"
    ],
    "mx": false
   },
   "https": {
    "reachable": true,
-   "redirects_http": true,
+   "redirects_http": false,
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:23:08Z",
+   "checked": "2026-11-27T06:32:56Z",
    "title": "SLOT DEPO 5K : Link Resmi Login Situs Slot Deposit 5000 Terpercaya 2026",
    "generator": null,
    "feeds": [],
@@ -2998,7 +2992,7 @@
   }
  },
  "jillgreenberg.com": {
-  "checked": "2026-10-27T06:23:11Z",
+  "checked": "2026-11-27T06:32:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3023,7 +3017,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:23:11Z",
+   "checked": "2026-11-27T06:32:58Z",
    "title": "Jill Greenberg Studio",
    "generator": null,
    "feeds": [],
@@ -3073,7 +3067,7 @@
   }
  },
  "jimbly.github.io": {
-  "checked": "2026-10-27T06:23:13Z",
+  "checked": "2026-11-27T06:33:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3100,7 +3094,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-27T06:23:13Z",
+   "checked": "2026-11-27T06:33:00Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3111,7 +3105,7 @@
   }
  },
  "jimcollins.com": {
-  "checked": "2026-10-27T06:23:15Z",
+  "checked": "2026-11-27T06:33:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3133,7 +3127,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:23:15Z",
+   "checked": "2026-11-27T06:33:02Z",
    "title": "Jim Collins",
    "generator": null,
    "feeds": [],
@@ -3184,7 +3178,7 @@
   }
  },
  "jimromenesko.com": {
-  "checked": "2026-10-27T06:23:16Z",
+  "checked": "2026-11-27T06:33:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3210,9 +3204,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:23:16Z",
+   "checked": "2026-11-27T06:33:03Z",
    "title": "Jim Romenesko",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -3231,7 +3225,7 @@
   }
  },
  "jimseven.com": {
-  "checked": "2026-10-27T06:23:20Z",
+  "checked": "2026-11-27T06:33:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3254,7 +3248,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T06:23:20Z",
+   "checked": "2026-11-27T06:33:06Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3265,7 +3259,7 @@
   }
  },
  "jimyi.com": {
-  "checked": "2026-10-27T06:23:51Z",
+  "checked": "2026-11-27T06:33:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3291,7 +3285,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T06:23:51Z",
+   "checked": "2026-11-27T06:33:38Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3302,7 +3296,7 @@
   }
  },
  "jinja.pocoo.org": {
-  "checked": "2026-10-27T06:24:08Z",
+  "checked": "2026-11-27T06:33:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3322,7 +3316,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'jinja.pocoo.org'"
   },
   "home": {
-   "checked": "2026-10-27T06:24:08Z",
+   "checked": "2026-11-27T06:33:54Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3333,7 +3327,7 @@
   }
  },
  "jirafe.com": {
-  "checked": "2026-10-27T06:24:11Z",
+  "checked": "2026-11-27T06:33:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3356,7 +3350,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:24:11Z",
+   "checked": "2026-11-27T06:33:57Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3366,7 +3360,7 @@
   }
  },
  "jless.io": {
-  "checked": "2026-10-27T06:24:14Z",
+  "checked": "2026-11-27T06:33:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3391,7 +3385,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:24:14Z",
+   "checked": "2026-11-27T06:33:59Z",
    "title": "jless - A Command-Line JSON Viewer",
    "generator": null,
    "feeds": [],
@@ -3401,7 +3395,7 @@
   }
  },
  "jmason.ie": {
-  "checked": "2026-10-27T06:24:17Z",
+  "checked": "2026-11-27T06:34:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3424,9 +3418,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:24:17Z",
-   "title": "Justin's Linklog – (Things I found interesting recently.)",
-   "generator": "WordPress 6.2.6 (compatible; ClassicPress 2.3.0)",
+   "checked": "2026-11-27T06:34:02Z",
+   "title": "Justin's Linklog",
+   "generator": null,
    "feeds": [
     {
      "type": "rss",
@@ -3434,13 +3428,15 @@
      "title": "Justin's Linklog » Feed"
     },
     {
-     "type": "rss",
-     "url": "https://jmason.ie/comments/feed",
-     "title": "Justin's Linklog » Comments Feed"
+     "type": "atom",
+     "url": "https://jmason.ie/feed/atom",
+     "title": "Justin's Linklog » Atom Feed"
     }
    ],
    "hcard": false,
-   "rel_me": [],
+   "rel_me": [
+    "https://mastodon.ie/@jmason"
+   ],
    "webmention": null
   }
  },
@@ -3492,7 +3488,7 @@
   }
  },
  "jmresearchgroup.wordpress.com": {
-  "checked": "2026-10-27T06:24:20Z",
+  "checked": "2026-11-27T06:34:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3512,7 +3508,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:24:20Z",
+   "checked": "2026-11-27T06:34:04Z",
    "title": "jmresearchgroup | Share some knowledge and experience",
    "generator": "WordPress.com",
    "feeds": [
@@ -3533,7 +3529,7 @@
   }
  },
  "jntrnr.com": {
-  "checked": "2026-10-27T06:24:23Z",
+  "checked": "2026-11-27T06:34:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3556,7 +3552,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T06:24:23Z",
+   "checked": "2026-11-27T06:34:07Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3605,7 +3601,7 @@
   }
  },
  "jobo.com": {
-  "checked": "2026-10-27T06:24:47Z",
+  "checked": "2026-11-27T06:34:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3628,7 +3624,7 @@
    "error": "connection refused"
   },
   "home": {
-   "checked": "2026-10-27T06:24:47Z",
+   "checked": "2026-11-27T06:34:23Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3639,7 +3635,7 @@
   }
  },
  "jocelyngoldfein.com": {
-  "checked": "2026-10-27T06:24:49Z",
+  "checked": "2026-11-27T06:34:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3662,7 +3658,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:24:49Z",
+   "checked": "2026-11-27T06:34:25Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -3678,7 +3674,7 @@
   }
  },
  "jodidavis.com": {
-  "checked": "2026-10-27T06:24:56Z",
+  "checked": "2026-11-27T06:34:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3701,7 +3697,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'jodidavis.com'"
   },
   "home": {
-   "checked": "2026-10-27T06:24:56Z",
+   "checked": "2026-11-27T06:34:31Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3712,7 +3708,7 @@
   }
  },
  "jodiettenberg.com": {
-  "checked": "2026-10-27T06:24:58Z",
+  "checked": "2026-11-27T06:34:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3736,9 +3732,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:24:58Z",
+   "checked": "2026-11-27T06:34:34Z",
    "title": "Jodi Ettenberg - Curious About Everything",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -3757,7 +3753,7 @@
   }
  },
  "jods.mitpress.mit.edu": {
-  "checked": "2026-10-27T06:25:03Z",
+  "checked": "2026-11-27T06:34:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3777,26 +3773,21 @@
   "https": {
    "reachable": true,
    "redirects_http": false,
-   "status": 200
+   "status": 403
   },
   "home": {
-   "checked": "2026-10-27T06:25:03Z",
-   "title": "Journal of Design and Science",
+   "checked": "2026-11-27T06:34:39Z",
+   "title": null,
    "generator": null,
-   "feeds": [
-    {
-     "type": "rss",
-     "url": "https://jods.mitpress.mit.edu/rss.xml",
-     "title": "Journal of Design and Science RSS Feed"
-    }
-   ],
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 403 (Cloudflare challenge)"
   }
  },
  "joe-antognini.github.io": {
-  "checked": "2026-10-27T06:25:06Z",
+  "checked": "2026-11-27T06:34:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3823,7 +3814,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:25:06Z",
+   "checked": "2026-11-27T06:34:41Z",
    "title": "Joe Antognini",
    "generator": null,
    "feeds": [
@@ -3839,7 +3830,7 @@
   }
  },
  "joeblu.com": {
-  "checked": "2026-10-27T06:25:08Z",
+  "checked": "2026-11-27T06:34:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3861,7 +3852,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:25:08Z",
+   "checked": "2026-11-27T06:34:43Z",
    "title": "joe blubaugh",
    "generator": "Hugo 0.147.7",
    "feeds": [
@@ -3957,7 +3948,7 @@
   }
  },
  "joedarnell.com": {
-  "checked": "2026-10-27T06:25:12Z",
+  "checked": "2026-11-27T06:34:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3983,7 +3974,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'joedarnell.com'"
   },
   "home": {
-   "checked": "2026-10-27T06:25:12Z",
+   "checked": "2026-11-27T06:34:46Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3994,45 +3985,40 @@
   }
  },
  "joekelly.org": {
-  "checked": "2026-10-27T06:25:13Z",
+  "checked": "2026-11-27T06:34:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.21.48.110",
-    "172.67.184.46"
+    "13.248.213.45",
+    "76.223.67.189"
    ],
-   "aaaa": [
-    "2606:4700:3034::6815:306e",
-    "2606:4700:3035::ac43:b82e"
-   ],
+   "aaaa": [],
    "cname": null,
    "ns": [
-    "merlin.ns.cloudflare.com",
-    "serenity.ns.cloudflare.com"
+    "ns53.domaincontrol.com",
+    "ns54.domaincontrol.com"
    ],
    "mx": false
   },
   "https": {
-   "reachable": false,
-   "redirects_http": true,
-   "status": null,
-   "error": "timeout"
+   "reachable": true,
+   "redirects_http": false,
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:25:13Z",
+   "checked": "2026-11-27T06:34:48Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null,
-   "error": "timeout"
+   "webmention": null
   }
  },
  "joekraus.com": {
-  "checked": "2026-10-27T06:25:46Z",
+  "checked": "2026-11-27T06:34:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4055,7 +4041,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'joekraus.com'"
   },
   "home": {
-   "checked": "2026-10-27T06:25:46Z",
+   "checked": "2026-11-27T06:34:49Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4128,7 +4114,7 @@
   }
  },
  "joemorrison.medium.com": {
-  "checked": "2026-10-27T06:25:47Z",
+  "checked": "2026-11-27T06:34:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4151,7 +4137,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:25:47Z",
+   "checked": "2026-11-27T06:34:51Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -4169,7 +4155,7 @@
   }
  },
  "joesgoals.com": {
-  "checked": "2026-10-27T06:25:52Z",
+  "checked": "2026-11-27T06:34:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4196,7 +4182,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:25:52Z",
+   "checked": "2026-11-27T06:34:56Z",
    "title": "Joe's Goals is back — habit & goal tracking",
    "generator": null,
    "feeds": [],
@@ -4206,7 +4192,7 @@
   }
  },
  "joeydevilla.com": {
-  "checked": "2026-10-27T06:25:55Z",
+  "checked": "2026-11-27T06:34:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4227,7 +4213,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:25:55Z",
+   "checked": "2026-11-27T06:34:58Z",
    "title": "The Adventures of Accordion Guy in the 21st Century - Joey deVilla's Personal Blog",
    "generator": "AMP for WP 1.1.19",
    "feeds": [
@@ -4248,7 +4234,7 @@
   }
  },
  "joeyehand.com": {
-  "checked": "2026-10-27T06:25:58Z",
+  "checked": "2026-11-27T06:35:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4274,7 +4260,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:25:58Z",
+   "checked": "2026-11-27T06:35:02Z",
    "title": "Portfolio - Joey's Hoard of Stuff",
    "generator": "mkdocs-1.6.1, mkdocs-material-9.5.49",
    "feeds": [
@@ -4295,7 +4281,7 @@
   }
  },
  "john.onolan.org": {
-  "checked": "2026-10-27T06:26:01Z",
+  "checked": "2026-11-27T06:35:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4322,9 +4308,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:01Z",
+   "checked": "2026-11-27T06:35:04Z",
    "title": "John O'Nolan",
-   "generator": "Ghost 6.73",
+   "generator": "Ghost 6.80",
    "feeds": [
     {
      "type": "rss",
@@ -4343,7 +4329,7 @@
   }
  },
  "johnbarton.co": {
-  "checked": "2026-10-27T06:26:04Z",
+  "checked": "2026-11-27T06:35:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4369,7 +4355,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:04Z",
+   "checked": "2026-11-27T06:35:07Z",
    "title": "John Barton - Engineering Lead",
    "generator": "Hugo 0.54.0",
    "feeds": [
@@ -4385,7 +4371,7 @@
   }
  },
  "johncarlis.weebly.com": {
-  "checked": "2026-10-27T06:26:06Z",
+  "checked": "2026-11-27T06:35:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4405,7 +4391,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:06Z",
+   "checked": "2026-11-27T06:35:09Z",
    "title": "Home",
    "generator": null,
    "feeds": [],
@@ -4459,7 +4445,7 @@
   }
  },
  "johnmacfarlane.net": {
-  "checked": "2026-10-27T06:26:09Z",
+  "checked": "2026-11-27T06:35:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4484,7 +4470,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:09Z",
+   "checked": "2026-11-27T06:35:12Z",
    "title": "John MacFarlane - Home",
    "generator": null,
    "feeds": [],
@@ -4494,7 +4480,7 @@
   }
  },
  "johnmathews.eu": {
-  "checked": "2026-10-27T06:26:13Z",
+  "checked": "2026-11-27T06:35:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4519,7 +4505,7 @@
    "error": "tls: WRONG_VERSION_NUMBER"
   },
   "home": {
-   "checked": "2026-10-27T06:26:13Z",
+   "checked": "2026-11-27T06:35:15Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4530,7 +4516,7 @@
   }
  },
  "johnny.chadda.se": {
-  "checked": "2026-10-27T06:26:17Z",
+  "checked": "2026-11-27T06:35:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4553,23 +4539,23 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:17Z",
-   "title": "Johnny Chadda",
-   "generator": "Ghost 5.74",
+   "checked": "2026-11-27T06:35:20Z",
+   "title": "Johnny Chadda — Software, AI, and the tools I use",
+   "generator": null,
    "feeds": [
     {
      "type": "rss",
-     "url": "https://johnny.chadda.se/rss/",
+     "url": "https://johnny.chadda.se/rss.xml",
      "title": "Johnny Chadda"
     }
    ],
    "hcard": false,
    "rel_me": [],
-   "webmention": "https://johnny.chadda.se/webmentions/receive/"
+   "webmention": null
   }
  },
  "johnnydecimal.com": {
-  "checked": "2026-10-27T06:26:21Z",
+  "checked": "2026-11-27T06:35:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4597,9 +4583,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:21Z",
+   "checked": "2026-11-27T06:35:23Z",
    "title": "Johnny.Decimal",
-   "generator": "Astro v7.4.2",
+   "generator": "Astro v7.4.12",
    "feeds": [
     {
      "type": "rss",
@@ -4618,7 +4604,7 @@
   }
  },
  "johnnyrodgers.is": {
-  "checked": "2026-10-27T06:26:24Z",
+  "checked": "2026-11-27T06:35:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4640,9 +4626,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:24Z",
+   "checked": "2026-11-27T06:35:26Z",
    "title": "Johnny Rodgers",
-   "generator": "Ghost 6.73",
+   "generator": "Ghost 6.80",
    "feeds": [
     {
      "type": "rss",
@@ -4656,7 +4642,7 @@
   }
  },
  "johnowhitaker.github.io": {
-  "checked": "2026-10-27T06:26:27Z",
+  "checked": "2026-11-27T06:35:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4683,7 +4669,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-27T06:26:27Z",
+   "checked": "2026-11-27T06:35:29Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4694,7 +4680,7 @@
   }
  },
  "johnpaulcaponigro.com": {
-  "checked": "2026-10-27T06:26:29Z",
+  "checked": "2026-11-27T06:35:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4716,9 +4702,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:29Z",
+   "checked": "2026-11-27T06:35:31Z",
    "title": "Home - John Paul Caponigro",
-   "generator": "WordPress 5.9.19",
+   "generator": "WordPress 5.9.21",
    "feeds": [
     {
      "type": "rss",
@@ -4737,7 +4723,7 @@
   }
  },
  "johnschlimm.com": {
-  "checked": "2026-10-27T06:26:32Z",
+  "checked": "2026-11-27T06:35:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4759,7 +4745,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:32Z",
+   "checked": "2026-11-27T06:35:34Z",
    "title": "John Schlimm | Author of \"WHAT WOULD GEN-Z DO?\"",
    "generator": "All in One SEO (AIOSEO) 4.9.2",
    "feeds": [
@@ -4780,7 +4766,7 @@
   }
  },
  "joinclubhouse.com": {
-  "checked": "2026-10-27T06:26:36Z",
+  "checked": "2026-11-27T06:35:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4806,7 +4792,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:36Z",
+   "checked": "2026-11-27T06:35:37Z",
    "title": "Clubhouse",
    "generator": null,
    "feeds": [],
@@ -4816,7 +4802,7 @@
   }
  },
  "joinmastodon.org": {
-  "checked": "2026-10-27T06:26:37Z",
+  "checked": "2026-11-27T06:35:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4852,7 +4838,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:37Z",
+   "checked": "2026-11-27T06:35:38Z",
    "title": "Mastodon - Decentralized social media",
    "generator": null,
    "feeds": [],
@@ -4868,7 +4854,7 @@
   }
  },
  "jonashietala.se": {
-  "checked": "2026-10-27T06:26:41Z",
+  "checked": "2026-11-27T06:35:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4892,7 +4878,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:41Z",
+   "checked": "2026-11-27T06:35:41Z",
    "title": "Jonas Hietala: Home",
    "generator": null,
    "feeds": [
@@ -4908,7 +4894,7 @@
   }
  },
  "jonathanfields.com": {
-  "checked": "2026-10-27T06:26:45Z",
+  "checked": "2026-11-27T06:35:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4932,7 +4918,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:45Z",
+   "checked": "2026-11-27T06:35:46Z",
    "title": "Home - Jonathan fields",
    "generator": "WordPress 7.1",
    "feeds": [
@@ -4953,7 +4939,7 @@
   }
  },
  "jonathanhaidt.substack.com": {
-  "checked": "2026-10-27T06:26:47Z",
+  "checked": "2026-11-27T06:35:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4976,7 +4962,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:47Z",
+   "checked": "2026-11-27T06:35:48Z",
    "title": "After Babel | Jon Haidt | Substack",
    "generator": null,
    "feeds": [
@@ -4992,7 +4978,7 @@
   }
  },
  "jonathanturner.org": {
-  "checked": "2026-10-27T06:26:50Z",
+  "checked": "2026-11-27T06:35:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5018,23 +5004,17 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:50Z",
-   "title": "BONANZA138: Link Alternatif Portal Game Terbaru & Terpercaya",
+   "checked": "2026-11-27T06:35:50Z",
+   "title": "bonanza138win.sbs",
    "generator": null,
-   "feeds": [
-    {
-     "type": "rss",
-     "url": "https://members.phpmu.com/rss",
-     "title": null
-    }
-   ],
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
   }
  },
  "jonayre.uk": {
-  "checked": "2026-10-27T06:26:52Z",
+  "checked": "2026-11-27T06:35:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5060,7 +5040,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:26:52Z",
+   "checked": "2026-11-27T06:35:52Z",
    "title": "Jon Ayre - Business, technology and strategic thinking",
    "generator": "All in One SEO (AIOSEO) 4.9.10",
    "feeds": [
@@ -5081,7 +5061,7 @@
   }
  },
  "joomla.org": {
-  "checked": "2026-10-27T06:27:06Z",
+  "checked": "2026-11-27T06:36:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5109,7 +5089,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:27:06Z",
+   "checked": "2026-11-27T06:36:02Z",
    "title": "Joomla Content Management System (CMS) - try it! It's free!",
    "generator": "Joomla! - Open Source Content Management",
    "feeds": [],
@@ -5119,7 +5099,7 @@
   }
  },
  "joplin.cozic.net": {
-  "checked": "2026-10-27T06:27:09Z",
+  "checked": "2026-11-27T06:36:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5137,7 +5117,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:27:09Z",
+   "checked": "2026-11-27T06:36:05Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5180,7 +5160,7 @@
   }
  },
  "jose-chess.sourceforge.net": {
-  "checked": "2026-10-27T06:27:10Z",
+  "checked": "2026-11-27T06:36:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5203,7 +5183,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:27:10Z",
+   "checked": "2026-11-27T06:36:06Z",
    "title": "jose Home Page",
    "generator": null,
    "feeds": [],
@@ -5213,7 +5193,7 @@
   }
  },
  "josebiro.medium.com": {
-  "checked": "2026-10-27T06:27:14Z",
+  "checked": "2026-11-27T06:36:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5236,7 +5216,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:27:14Z",
+   "checked": "2026-11-27T06:36:15Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -5252,7 +5232,7 @@
   }
  },
  "josefassad.com": {
-  "checked": "2026-10-27T06:27:19Z",
+  "checked": "2026-11-27T06:36:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5273,7 +5253,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:27:19Z",
+   "checked": "2026-11-27T06:36:20Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5284,7 +5264,7 @@
   }
  },
  "joshbersin.com": {
-  "checked": "2026-10-27T06:27:19Z",
+  "checked": "2026-11-27T06:36:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5306,7 +5286,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:27:19Z",
+   "checked": "2026-11-27T06:36:20Z",
    "title": "JOSH BERSIN – Insights on Work, Talent, Learning, Leadership, and HR Technology",
    "generator": null,
    "feeds": [
@@ -5332,7 +5312,7 @@
   }
  },
  "joshblais.com": {
-  "checked": "2026-10-27T06:27:23Z",
+  "checked": "2026-11-27T06:36:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5354,7 +5334,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:27:23Z",
+   "checked": "2026-11-27T06:36:24Z",
    "title": "The Home of Joshua Blais - The Universe of Joshua Blais",
    "generator": "Astro v5.12.1",
    "feeds": [
@@ -5378,7 +5358,7 @@
   }
  },
  "joshcsimmons.com": {
-  "checked": "2026-10-27T06:27:26Z",
+  "checked": "2026-11-27T06:36:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5401,7 +5381,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T06:27:26Z",
+   "checked": "2026-11-27T06:36:27Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5412,7 +5392,7 @@
   }
  },
  "joshdata.me": {
-  "checked": "2026-10-27T06:28:14Z",
+  "checked": "2026-11-27T06:36:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5434,7 +5414,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:28:14Z",
+   "checked": "2026-11-27T06:36:45Z",
    "title": "Joshua Tauberer’s Homepage",
    "generator": null,
    "feeds": [],
@@ -5446,7 +5426,7 @@
   }
  },
  "joshholtsclaw.com": {
-  "checked": "2026-10-27T06:28:18Z",
+  "checked": "2026-11-27T06:36:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5460,10 +5440,10 @@
    "aaaa": [],
    "cname": null,
    "ns": [
-    "dns1.p06.nsone.net",
-    "dns2.p06.nsone.net",
-    "dns3.p06.nsone.net",
-    "dns4.p06.nsone.net",
+    "dns1.p01.nsone.net",
+    "dns2.p01.nsone.net",
+    "dns3.p01.nsone.net",
+    "dns4.p01.nsone.net",
     "ns01.squarespacedns.com",
     "ns02.squarespacedns.com",
     "ns03.squarespacedns.com",
@@ -5477,7 +5457,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:28:18Z",
+   "checked": "2026-11-27T06:36:49Z",
    "title": "Josh Holtsclaw",
    "generator": null,
    "feeds": [
@@ -5493,7 +5473,7 @@
   }
  },
  "joshjahans.com": {
-  "checked": "2026-10-27T06:28:20Z",
+  "checked": "2026-11-27T06:36:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5512,7 +5492,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:28:20Z",
+   "checked": "2026-11-27T06:36:50Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5523,7 +5503,7 @@
   }
  },
  "joshjames.com": {
-  "checked": "2026-10-27T06:28:20Z",
+  "checked": "2026-11-27T06:36:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5549,7 +5529,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:28:20Z",
+   "checked": "2026-11-27T06:36:50Z",
    "title": "Josh James — Founder. Operator. Company builder.",
    "generator": null,
    "feeds": [],
@@ -5559,7 +5539,7 @@
   }
  },
  "joshkaufman.net": {
-  "checked": "2026-10-27T06:28:24Z",
+  "checked": "2026-11-27T06:36:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5585,7 +5565,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:28:24Z",
+   "checked": "2026-11-27T06:36:55Z",
    "title": "Welcome to the official website of Josh Kaufman, bestselling author – Josh Kaufman",
    "generator": null,
    "feeds": [
@@ -5601,7 +5581,7 @@
   }
  },
  "joshspector.com": {
-  "checked": "2026-10-27T06:28:27Z",
+  "checked": "2026-11-27T06:36:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5623,17 +5603,23 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:28:27Z",
-   "title": null,
+   "checked": "2026-11-27T06:36:57Z",
+   "title": "Get more clients from your content | Josh Spector",
    "generator": null,
-   "feeds": [],
+   "feeds": [
+    {
+     "type": "rss",
+     "url": "https://joshspector.com/feed/",
+     "title": "Josh Spector » Feed"
+    }
+   ],
    "hcard": false,
    "rel_me": [],
    "webmention": null
   }
  },
  "joshwalsh.com": {
-  "checked": "2026-10-27T06:28:30Z",
+  "checked": "2026-11-27T06:37:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5655,7 +5641,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:28:30Z",
+   "checked": "2026-11-27T06:37:01Z",
    "title": "Josh Walsh - Strategic advisory services for marketing technology.",
    "generator": null,
    "feeds": [
@@ -5671,7 +5657,7 @@
   }
  },
  "joshworth.com": {
-  "checked": "2026-10-27T06:28:33Z",
+  "checked": "2026-11-27T06:37:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5694,7 +5680,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:28:33Z",
+   "checked": "2026-11-27T06:37:04Z",
    "title": "Josh Worth Art & Design – Creative direction for the interactive age",
    "generator": null,
    "feeds": [],
@@ -5704,7 +5690,7 @@
   }
  },
  "jotform.com": {
-  "checked": "2026-10-27T06:28:36Z",
+  "checked": "2026-11-27T06:37:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5726,7 +5712,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:28:36Z",
+   "checked": "2026-11-27T06:37:07Z",
    "title": "Jotform: Free Online Form Builder | Create Forms in Seconds",
    "generator": null,
    "feeds": [],
@@ -5736,7 +5722,7 @@
   }
  },
  "journal.duncandavidson.com": {
-  "checked": "2026-10-27T06:28:39Z",
+  "checked": "2026-11-27T06:37:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5754,7 +5740,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:28:39Z",
+   "checked": "2026-11-27T06:37:10Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5765,7 +5751,7 @@
   }
  },
  "journal.uggedal.com": {
-  "checked": "2026-10-27T06:28:39Z",
+  "checked": "2026-11-27T06:37:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5784,7 +5770,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:28:39Z",
+   "checked": "2026-11-27T06:37:10Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5795,7 +5781,7 @@
   }
  },
  "journalong.com": {
-  "checked": "2026-10-27T06:28:41Z",
+  "checked": "2026-11-27T06:37:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5817,7 +5803,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:28:41Z",
+   "checked": "2026-11-27T06:37:11Z",
    "title": "Travel Friend Finder App on iOS and Android -- JournAlong App",
    "generator": "WordPress 7.1",
    "feeds": [
@@ -5867,7 +5853,7 @@
   }
  },
  "journals.sagepub.com": {
-  "checked": "2026-10-27T06:28:48Z",
+  "checked": "2026-11-27T06:37:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5887,32 +5873,31 @@
   "https": {
    "reachable": true,
    "redirects_http": true,
-   "status": 403
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:28:48Z",
-   "title": null,
+   "checked": "2026-11-27T06:37:17Z",
+   "title": "Sage Journals: Discover world-class research",
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null,
-   "error": "HTTP 403 (Cloudflare challenge)"
+   "webmention": null
   }
  },
  "jowel.micro.blog": {
-  "checked": "2026-10-27T06:28:50Z",
+  "checked": "2026-11-27T06:37:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.200.22.214"
+    "173.255.203.22"
    ],
    "aaaa": [
-    "2600:3c00:1::68c8:16d6"
+    "2600:3c00::f03c:92ff:fe6c:496"
    ],
-   "cname": "nb-104-200-22-214.dallas.nodebalancer.linode.com",
+   "cname": "li213-22.members.linode.com",
    "ns": [],
    "mx": false
   },
@@ -5922,7 +5907,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:28:50Z",
+   "checked": "2026-11-27T06:37:20Z",
    "title": "jay tha 🥷",
    "generator": "Hugo 0.91.2",
    "feeds": [
@@ -5940,7 +5925,7 @@
   }
  },
  "joyeur.com": {
-  "checked": "2026-10-27T06:28:53Z",
+  "checked": "2026-11-27T06:37:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5966,7 +5951,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:28:53Z",
+   "checked": "2026-11-27T06:37:23Z",
    "title": "Top Joy Coding School - WE CHANGE LEARNING, YOU CHANGE THE WORLD.",
    "generator": "WordPress 7.0.4",
    "feeds": [
@@ -5987,7 +5972,7 @@
   }
  },
  "joyofcryptography.com": {
-  "checked": "2026-10-27T06:28:55Z",
+  "checked": "2026-11-27T06:37:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6013,7 +5998,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:28:55Z",
+   "checked": "2026-11-27T06:37:25Z",
    "title": "The Joy of Cryptography",
    "generator": null,
    "feeds": [],
@@ -6023,7 +6008,7 @@
   }
  },
  "jpattonassociates.com": {
-  "checked": "2026-10-27T06:28:57Z",
+  "checked": "2026-11-27T06:37:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6046,7 +6031,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:28:57Z",
+   "checked": "2026-11-27T06:37:27Z",
    "title": "Product thinking made fun, practical, & profitable",
    "generator": null,
    "feeds": [
@@ -6067,16 +6052,16 @@
   }
  },
  "jpkoning.blogspot.com": {
-  "checked": "2026-10-27T06:29:00Z",
+  "checked": "2026-11-27T06:37:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.32.1"
+    "142.251.210.97"
    ],
    "aaaa": [
-    "2607:f8b0:4009:802::2001"
+    "2607:f8b0:4009:810::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -6088,7 +6073,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:00Z",
+   "checked": "2026-11-27T06:37:30Z",
    "title": "Moneyness",
    "generator": "blogger",
    "feeds": [
@@ -6111,7 +6096,7 @@
   }
  },
  "jpl.nasa.gov": {
-  "checked": "2026-10-27T06:29:03Z",
+  "checked": "2026-11-27T06:37:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6139,7 +6124,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-27T06:29:03Z",
+   "checked": "2026-11-27T06:37:33Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6150,7 +6135,7 @@
   }
  },
  "jpmens.net": {
-  "checked": "2026-10-27T06:29:05Z",
+  "checked": "2026-11-27T06:37:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6176,7 +6161,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:05Z",
+   "checked": "2026-11-27T06:37:35Z",
    "title": "Jan-Piet Mens",
    "generator": null,
    "feeds": [
@@ -6194,7 +6179,7 @@
   }
  },
  "jpmorgan.com": {
-  "checked": "2026-10-27T06:29:10Z",
+  "checked": "2026-11-27T06:37:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6222,7 +6207,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:10Z",
+   "checked": "2026-11-27T06:37:39Z",
    "title": "J.P. Morgan | Official Website",
    "generator": null,
    "feeds": [],
@@ -6232,7 +6217,7 @@
   }
  },
  "jqfundamentals.com": {
-  "checked": "2026-10-27T06:29:14Z",
+  "checked": "2026-11-27T06:37:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6258,7 +6243,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:14Z",
+   "checked": "2026-11-27T06:37:44Z",
    "title": "Jqfundamentals - jQuery & dasar JavaScript",
    "generator": null,
    "feeds": [
@@ -6279,7 +6264,7 @@
   }
  },
  "jqplot.com": {
-  "checked": "2026-10-27T06:29:17Z",
+  "checked": "2026-11-27T06:37:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6301,7 +6286,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:29:17Z",
+   "checked": "2026-11-27T06:37:46Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6312,7 +6297,7 @@
   }
  },
  "jrepository.engblom.org": {
-  "checked": "2026-10-27T06:29:17Z",
+  "checked": "2026-11-27T06:37:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6332,7 +6317,7 @@
    "error": "connection reset"
   },
   "home": {
-   "checked": "2026-10-27T06:29:17Z",
+   "checked": "2026-11-27T06:37:46Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6343,7 +6328,7 @@
   }
  },
  "jrsinclair.com": {
-  "checked": "2026-10-27T06:29:22Z",
+  "checked": "2026-11-27T06:37:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6369,7 +6354,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:22Z",
+   "checked": "2026-11-27T06:37:51Z",
    "title": "The enchanted electrical website of Dr. Sinclair",
    "generator": "Astro v5.10.1",
    "feeds": [
@@ -6391,7 +6376,7 @@
   }
  },
  "js.cytoscape.org": {
-  "checked": "2026-10-27T06:29:25Z",
+  "checked": "2026-11-27T06:37:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6418,7 +6403,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:25Z",
+   "checked": "2026-11-27T06:37:54Z",
    "title": "Cytoscape.js",
    "generator": null,
    "feeds": [],
@@ -6428,7 +6413,7 @@
   }
  },
  "jsbarretto.com": {
-  "checked": "2026-10-27T06:29:27Z",
+  "checked": "2026-11-27T06:37:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6439,10 +6424,8 @@
    "aaaa": [],
    "cname": null,
    "ns": [
-    "dns1.p05.nsone.net",
-    "dns2.p05.nsone.net",
-    "dns3.p05.nsone.net",
-    "dns4.p05.nsone.net"
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
    ],
    "mx": true
   },
@@ -6452,7 +6435,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:27Z",
+   "checked": "2026-11-27T06:37:56Z",
    "title": "Home",
    "generator": null,
    "feeds": [
@@ -6470,13 +6453,13 @@
   }
  },
  "jsdate.wtf": {
-  "checked": "2026-10-27T06:29:31Z",
+  "checked": "2026-11-27T06:38:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "161.210.92.5"
+    "103.133.1.1"
    ],
    "aaaa": [],
    "cname": null,
@@ -6494,7 +6477,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:31Z",
+   "checked": "2026-11-27T06:38:00Z",
    "title": "The JavaScript Date Quiz",
    "generator": null,
    "feeds": [],
@@ -6504,7 +6487,7 @@
   }
  },
  "jshint.com": {
-  "checked": "2026-10-27T06:29:35Z",
+  "checked": "2026-11-27T06:38:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6527,7 +6510,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:35Z",
+   "checked": "2026-11-27T06:38:02Z",
    "title": "JSHint, a JavaScript Code Quality Tool",
    "generator": null,
    "feeds": [],
@@ -6537,7 +6520,7 @@
   }
  },
  "jsjaspreet.com": {
-  "checked": "2026-10-27T06:29:38Z",
+  "checked": "2026-11-27T06:38:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6556,7 +6539,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:29:38Z",
+   "checked": "2026-11-27T06:38:05Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6567,7 +6550,7 @@
   }
  },
  "json-ld.org": {
-  "checked": "2026-10-27T06:29:38Z",
+  "checked": "2026-11-27T06:38:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6593,7 +6576,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:38Z",
+   "checked": "2026-11-27T06:38:05Z",
    "title": "JSON-LD - JSON for Linked Data",
    "generator": null,
    "feeds": [],
@@ -6603,7 +6586,7 @@
   }
  },
  "jsonbox.io": {
-  "checked": "2026-10-27T06:29:42Z",
+  "checked": "2026-11-27T06:38:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6629,9 +6612,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:42Z",
+   "checked": "2026-11-27T06:38:09Z",
    "title": "Thread Mastery: Strategies for Navigating Twitter Threads Like a Pro",
-   "generator": "WordPress 6.4.13",
+   "generator": "WordPress 6.4.15",
    "feeds": [
     {
      "type": "rss",
@@ -6650,7 +6633,7 @@
   }
  },
  "jsoncanvas.org": {
-  "checked": "2026-10-27T06:29:45Z",
+  "checked": "2026-11-27T06:38:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6675,7 +6658,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:45Z",
+   "checked": "2026-11-27T06:38:13Z",
    "title": "JSON Canvas — An open file format for infinite canvas data.",
    "generator": null,
    "feeds": [],
@@ -6685,7 +6668,7 @@
   }
  },
  "jsoncrack.com": {
-  "checked": "2026-10-27T06:29:48Z",
+  "checked": "2026-11-27T06:38:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6711,7 +6694,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:48Z",
+   "checked": "2026-11-27T06:38:16Z",
    "title": "JSON Crack | Online JSON Viewer - Transform your data into interactive graphs",
    "generator": null,
    "feeds": [],
@@ -6721,7 +6704,7 @@
   }
  },
  "jsonfeed.org": {
-  "checked": "2026-10-27T06:29:51Z",
+  "checked": "2026-11-27T06:38:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6745,7 +6728,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:51Z",
+   "checked": "2026-11-27T06:38:19Z",
    "title": "JSON Feed",
    "generator": "Hugo 0.54.0",
    "feeds": [
@@ -6768,7 +6751,7 @@
   }
  },
  "jsongenerator.io": {
-  "checked": "2026-10-27T06:29:54Z",
+  "checked": "2026-11-27T06:38:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6792,7 +6775,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:54Z",
+   "checked": "2026-11-27T06:38:22Z",
    "title": "JSONGenerator - Create Random JSON Data",
    "generator": null,
    "feeds": [],
@@ -6802,7 +6785,7 @@
   }
  },
  "jsonhero.io": {
-  "checked": "2026-10-27T06:29:59Z",
+  "checked": "2026-11-27T06:38:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6828,7 +6811,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:29:59Z",
+   "checked": "2026-11-27T06:38:27Z",
    "title": "JSON Hero - a beautiful JSON viewer for the web",
    "generator": null,
    "feeds": [],
@@ -6838,7 +6821,7 @@
   }
  },
  "jsonlint.com": {
-  "checked": "2026-10-27T06:30:02Z",
+  "checked": "2026-11-27T06:38:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6866,7 +6849,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:30:02Z",
+   "checked": "2026-11-27T06:38:29Z",
    "title": "JSONLint - The JSON Validator",
    "generator": null,
    "feeds": [],
@@ -6876,7 +6859,7 @@
   }
  },
  "jsonlogic.com": {
-  "checked": "2026-10-27T06:30:04Z",
+  "checked": "2026-11-27T06:38:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6903,7 +6886,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:30:04Z",
+   "checked": "2026-11-27T06:38:32Z",
    "title": "JsonLogic",
    "generator": null,
    "feeds": [],
@@ -6913,7 +6896,7 @@
   }
  },
  "jsonmatic.com": {
-  "checked": "2026-10-27T06:30:07Z",
+  "checked": "2026-11-27T06:38:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6936,7 +6919,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T06:30:07Z",
+   "checked": "2026-11-27T06:38:34Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6947,7 +6930,7 @@
   }
  },
  "jsonquerylang.org": {
-  "checked": "2026-10-27T06:30:25Z",
+  "checked": "2026-11-27T06:38:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6974,7 +6957,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:30:25Z",
+   "checked": "2026-11-27T06:38:53Z",
    "title": "JSON Query - a small, flexible, and expandable JSON query language",
    "generator": "Astro v5.16.4",
    "feeds": [],
@@ -6984,7 +6967,7 @@
   }
  },
  "jsonstub.com": {
-  "checked": "2026-10-27T06:30:28Z",
+  "checked": "2026-11-27T06:38:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7006,7 +6989,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:30:28Z",
+   "checked": "2026-11-27T06:38:55Z",
    "title": "Online JSON Viewer and Formatter",
    "generator": null,
    "feeds": [],
@@ -7016,7 +6999,7 @@
   }
  },
  "jstracer.sourceforge.net": {
-  "checked": "2026-10-27T06:30:32Z",
+  "checked": "2026-11-27T06:38:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7039,7 +7022,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:30:32Z",
+   "checked": "2026-11-27T06:38:58Z",
    "title": "jsTracer | Debugging Web 2.0",
    "generator": null,
    "feeds": [],
@@ -7049,7 +7032,7 @@
   }
  },
  "jtaby.com": {
-  "checked": "2026-10-27T06:30:34Z",
+  "checked": "2026-11-27T06:39:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7073,7 +7056,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:30:34Z",
+   "checked": "2026-11-27T06:39:01Z",
    "title": "Majd Taby",
    "generator": "WordPress.com",
    "feeds": [
@@ -7094,7 +7077,7 @@
   }
  },
  "jthink.net": {
-  "checked": "2026-10-27T06:30:39Z",
+  "checked": "2026-11-27T06:39:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7116,7 +7099,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:30:39Z",
+   "checked": "2026-11-27T06:39:05Z",
    "title": "JThink",
    "generator": null,
    "feeds": [],
@@ -7126,7 +7109,7 @@
   }
  },
  "jttmicroscale.com": {
-  "checked": "2026-10-27T06:30:40Z",
+  "checked": "2026-11-27T06:39:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7148,7 +7131,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:30:40Z",
+   "checked": "2026-11-27T06:39:07Z",
    "title": "SceneryProducts",
    "generator": "PrestaShop",
    "feeds": [],
@@ -7158,7 +7141,7 @@
   }
  },
  "judgmentalmaps.com": {
-  "checked": "2026-10-27T06:30:44Z",
+  "checked": "2026-11-27T06:39:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7182,7 +7165,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-27T06:30:44Z",
+   "checked": "2026-11-27T06:39:10Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7193,7 +7176,7 @@
   }
  },
  "jules.google": {
-  "checked": "2026-10-27T06:30:46Z",
+  "checked": "2026-11-27T06:39:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7219,9 +7202,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:30:46Z",
-   "title": null,
-   "generator": null,
+   "checked": "2026-11-27T06:39:13Z",
+   "title": "Jules - An Autonomous Coding Agent",
+   "generator": "Astro v5.7.12",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -7229,7 +7212,7 @@
   }
  },
  "jules.thegrommet.com": {
-  "checked": "2026-10-27T06:30:50Z",
+  "checked": "2026-11-27T06:39:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7247,7 +7230,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:30:50Z",
+   "checked": "2026-11-27T06:39:16Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7258,7 +7241,7 @@
   }
  },
  "julesjacobs.github.io": {
-  "checked": "2026-10-27T06:30:50Z",
+  "checked": "2026-11-27T06:39:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7285,7 +7268,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:30:50Z",
+   "checked": "2026-11-27T06:39:16Z",
    "title": "Jules Jacobs",
    "generator": null,
    "feeds": [],
@@ -7295,7 +7278,7 @@
   }
  },
  "julespieri.com": {
-  "checked": "2026-10-27T06:30:52Z",
+  "checked": "2026-11-27T06:39:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7319,7 +7302,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:30:52Z",
+   "checked": "2026-11-27T06:39:18Z",
    "title": "Jules Pieri",
    "generator": "WordPress.com",
    "feeds": [],
@@ -7329,7 +7312,7 @@
   }
  },
  "julialang.org": {
-  "checked": "2026-10-27T06:30:55Z",
+  "checked": "2026-11-27T06:39:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7359,7 +7342,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:30:55Z",
+   "checked": "2026-11-27T06:39:21Z",
    "title": "The Julia Programming Language",
    "generator": null,
    "feeds": [],
@@ -7437,7 +7420,7 @@
   }
  },
  "juliankyhl.dk": {
-  "checked": "2026-10-27T06:30:58Z",
+  "checked": "2026-11-27T06:39:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7463,7 +7446,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:30:58Z",
+   "checked": "2026-11-27T06:39:23Z",
    "title": "Vindercasino App & Mobil Casino – Spil på Farten i 2026",
    "generator": null,
    "feeds": [],
@@ -7473,7 +7456,7 @@
   }
  },
  "julien.danjou.info": {
-  "checked": "2026-10-27T06:30:59Z",
+  "checked": "2026-11-27T06:39:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7492,7 +7475,7 @@
    ],
    "cname": "jd.github.io",
    "ns": [],
-   "mx": true
+   "mx": false
   },
   "https": {
    "reachable": true,
@@ -7500,9 +7483,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:30:59Z",
+   "checked": "2026-11-27T06:39:25Z",
    "title": "jd:/dev/blog",
-   "generator": "Astro v7.3.8",
+   "generator": "Astro v7.4.13",
    "feeds": [
     {
      "type": "rss",
@@ -7516,7 +7499,7 @@
   }
  },
  "juliensauctions.com": {
-  "checked": "2026-10-27T06:31:02Z",
+  "checked": "2026-11-27T06:39:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7538,7 +7521,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:02Z",
+   "checked": "2026-11-27T06:39:28Z",
    "title": "Welcome to Julien's Auctions!",
    "generator": null,
    "feeds": [],
@@ -7548,18 +7531,18 @@
   }
  },
  "julius.ai": {
-  "checked": "2026-10-27T06:31:09Z",
+  "checked": "2026-11-27T06:39:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.18.16.48",
-    "104.18.17.48"
+    "104.21.81.134",
+    "172.67.161.50"
    ],
    "aaaa": [
-    "2606:4700::6812:1030",
-    "2606:4700::6812:1130"
+    "2606:4700:3032::ac43:a132",
+    "2606:4700:3035::6815:5186"
    ],
    "cname": null,
    "ns": [
@@ -7574,7 +7557,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:09Z",
+   "checked": "2026-11-27T06:39:34Z",
    "title": "AI Tools for Excel, Presentations, Websites & More | Julius AI",
    "generator": null,
    "feeds": [],
@@ -7584,7 +7567,7 @@
   }
  },
  "juneteenth.com": {
-  "checked": "2026-10-27T06:31:11Z",
+  "checked": "2026-11-27T06:39:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7606,9 +7589,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:11Z",
+   "checked": "2026-11-27T06:39:37Z",
    "title": "Juneteenth World Wide Celebration",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -7627,7 +7610,7 @@
   }
  },
  "jungledisk.com": {
-  "checked": "2026-10-27T06:31:16Z",
+  "checked": "2026-11-27T06:39:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7652,7 +7635,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:16Z",
+   "checked": "2026-11-27T06:39:41Z",
    "title": "Secure Your Data with JungleDisk Backup Solution",
    "generator": "Site Kit by Google 1.158.0",
    "feeds": [
@@ -7673,7 +7656,7 @@
   }
  },
  "jungletrain.net": {
-  "checked": "2026-10-27T06:31:18Z",
+  "checked": "2026-11-27T06:39:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7696,7 +7679,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:18Z",
+   "checked": "2026-11-27T06:39:44Z",
    "title": "jungletrain.net - 24/7 jungle/drum & bass radio",
    "generator": null,
    "feeds": [],
@@ -7706,7 +7689,7 @@
   }
  },
  "juokaz.com": {
-  "checked": "2026-10-27T06:31:23Z",
+  "checked": "2026-11-27T06:39:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7732,7 +7715,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:23Z",
+   "checked": "2026-11-27T06:39:48Z",
    "title": "Juozas Kaziukėnas",
    "generator": null,
    "feeds": [],
@@ -7742,7 +7725,7 @@
   }
  },
  "jupyter.org": {
-  "checked": "2026-10-27T06:31:25Z",
+  "checked": "2026-11-27T06:39:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7772,7 +7755,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:25Z",
+   "checked": "2026-11-27T06:39:50Z",
    "title": "Project Jupyter | Home",
    "generator": null,
    "feeds": [],
@@ -7784,7 +7767,7 @@
   }
  },
  "just.makecrap.com": {
-  "checked": "2026-10-27T06:31:28Z",
+  "checked": "2026-11-27T06:39:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7803,7 +7786,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-27T06:31:28Z",
+   "checked": "2026-11-27T06:39:53Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7814,7 +7797,7 @@
   }
  },
  "just.systems": {
-  "checked": "2026-10-27T06:31:28Z",
+  "checked": "2026-11-27T06:39:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7844,7 +7827,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:28Z",
+   "checked": "2026-11-27T06:39:53Z",
    "title": "Just: A Command Runner",
    "generator": null,
    "feeds": [],
@@ -7854,7 +7837,7 @@
   }
  },
  "justaname.id": {
-  "checked": "2026-10-27T06:31:32Z",
+  "checked": "2026-11-27T06:39:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7877,7 +7860,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:32Z",
+   "checked": "2026-11-27T06:39:57Z",
    "title": "JustaName - Identity-First Web3 Experiences",
    "generator": null,
    "feeds": [],
@@ -7887,7 +7870,7 @@
   }
  },
  "justaqrcode.com": {
-  "checked": "2026-10-27T06:31:35Z",
+  "checked": "2026-11-27T06:39:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7910,7 +7893,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:35Z",
+   "checked": "2026-11-27T06:39:59Z",
    "title": "Just a QR Code",
    "generator": null,
    "feeds": [],
@@ -7920,7 +7903,7 @@
   }
  },
  "justdeleteme.xyz": {
-  "checked": "2026-10-27T06:31:37Z",
+  "checked": "2026-11-27T06:40:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7946,7 +7929,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:37Z",
+   "checked": "2026-11-27T06:40:01Z",
    "title": "Just Delete Me | A directory of direct links to delete your account from web services.",
    "generator": null,
    "feeds": [],
@@ -7956,7 +7939,7 @@
   }
  },
  "justgage.com": {
-  "checked": "2026-10-27T06:31:39Z",
+  "checked": "2026-11-27T06:40:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7982,9 +7965,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:39Z",
+   "checked": "2026-11-27T06:40:03Z",
    "title": "Free Adult Dating Apps To Get Laid Online (No Registration or CC Needed!)",
-   "generator": "WordPress 6.7.10",
+   "generator": "WordPress 6.7.12",
    "feeds": [
     {
      "type": "rss",
@@ -8077,7 +8060,7 @@
   }
  },
  "justindfuller.com": {
-  "checked": "2026-10-27T06:31:43Z",
+  "checked": "2026-11-27T06:40:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8103,7 +8086,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:43Z",
+   "checked": "2026-11-27T06:40:07Z",
    "title": "Justin D Fuller",
    "generator": null,
    "feeds": [],
@@ -8113,7 +8096,7 @@
   }
  },
  "justingarrison.com": {
-  "checked": "2026-10-27T06:31:46Z",
+  "checked": "2026-11-27T06:40:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8139,7 +8122,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:46Z",
+   "checked": "2026-11-27T06:40:09Z",
    "title": "Justin Garrison's Homepage - Justin Garrison",
    "generator": "Hugo 0.156.0",
    "feeds": [
@@ -8157,7 +8140,7 @@
   }
  },
  "justinkan.com": {
-  "checked": "2026-10-27T06:31:48Z",
+  "checked": "2026-11-27T06:40:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8177,21 +8160,21 @@
    "reachable": false,
    "redirects_http": false,
    "status": null,
-   "error": "tls: self-signed certificate"
+   "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-27T06:31:48Z",
+   "checked": "2026-11-27T06:40:12Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "tls: self-signed certificate"
+   "error": "timeout"
   }
  },
  "justinmiller.io": {
-  "checked": "2026-10-27T06:31:50Z",
+  "checked": "2026-11-27T06:40:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8213,9 +8196,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:50Z",
+   "checked": "2026-11-27T06:40:43Z",
    "title": "./jm",
-   "generator": "Hugo 0.147.8",
+   "generator": "Hugo 0.155.0",
    "feeds": [
     {
      "type": "rss",
@@ -8280,7 +8263,7 @@
   }
  },
  "justinram.wordpress.com": {
-  "checked": "2026-10-27T06:31:53Z",
+  "checked": "2026-11-27T06:40:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8300,7 +8283,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:53Z",
+   "checked": "2026-11-27T06:40:46Z",
    "title": "just in ram | A list of stuff I should remember but never do",
    "generator": "WordPress.com",
    "feeds": [
@@ -8321,7 +8304,7 @@
   }
  },
  "justinrummel.com": {
-  "checked": "2026-10-27T06:31:55Z",
+  "checked": "2026-11-27T06:40:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8343,7 +8326,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-27T06:31:55Z",
+   "checked": "2026-11-27T06:40:49Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8354,7 +8337,7 @@
   }
  },
  "justinwelsh.me": {
-  "checked": "2026-10-27T06:31:57Z",
+  "checked": "2026-11-27T06:40:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8376,23 +8359,17 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:31:57Z",
+   "checked": "2026-11-27T06:40:50Z",
    "title": "Justin Welsh — Writer & Entrepreneur",
    "generator": null,
-   "feeds": [
-    {
-     "type": "rss",
-     "url": "https://justinwelsh.me/rss.xml",
-     "title": "Justin Welsh — Essays"
-    }
-   ],
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null
   }
  },
  "justlooking.recursion.org": {
-  "checked": "2026-10-27T06:31:59Z",
+  "checked": "2026-11-27T06:40:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8412,7 +8389,7 @@
    "error": "tls: self-signed certificate"
   },
   "home": {
-   "checked": "2026-10-27T06:31:59Z",
+   "checked": "2026-11-27T06:40:53Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8423,7 +8400,7 @@
   }
  },
  "justmytype.co": {
-  "checked": "2026-10-27T06:32:01Z",
+  "checked": "2026-11-27T06:40:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8448,7 +8425,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:32:01Z",
+   "checked": "2026-11-27T06:40:55Z",
    "title": "Just My Type",
    "generator": null,
    "feeds": [],
@@ -8458,7 +8435,7 @@
   }
  },
  "justoffbyone.com": {
-  "checked": "2026-10-27T06:32:05Z",
+  "checked": "2026-11-27T06:40:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8484,7 +8461,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:32:05Z",
+   "checked": "2026-11-27T06:40:58Z",
    "title": "Home | Off by One",
    "generator": "Astro v5.14.8",
    "feeds": [
@@ -8500,7 +8477,7 @@
   }
  },
  "justspamjustin.github.io": {
-  "checked": "2026-10-27T06:32:07Z",
+  "checked": "2026-11-27T06:41:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8527,7 +8504,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-27T06:32:07Z",
+   "checked": "2026-11-27T06:41:00Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8538,7 +8515,7 @@
   }
  },
  "juzaphoto.com": {
-  "checked": "2026-10-27T06:32:09Z",
+  "checked": "2026-11-27T06:41:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8562,7 +8539,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:32:09Z",
+   "checked": "2026-11-27T06:41:02Z",
    "title": "JuzaPhoto",
    "generator": null,
    "feeds": [],
@@ -8572,7 +8549,7 @@
   }
  },
  "jvectormap.com": {
-  "checked": "2026-10-27T06:32:12Z",
+  "checked": "2026-11-27T06:41:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8598,9 +8575,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-27T06:32:12Z",
-   "title": "Top 10 Nhà Cái Uy Tín 2026 - Cá Cược Hợp Pháp, Bảo Mật",
-   "generator": "WordPress 7.1.3",
+   "checked": "2026-11-27T06:41:05Z",
+   "title": "Nhà Cái Uy Tín 2026 - Top 10 Đăng Ký An Toàn, Rút Tiền Nhanh",
+   "generator": "WordPress 7.1.5",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
