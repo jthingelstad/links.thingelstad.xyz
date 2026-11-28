@@ -34,7 +34,7 @@
   }
  },
  "rabbitu.de": {
-  "checked": "2026-10-29T05:50:23Z",
+  "checked": "2026-11-28T07:06:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -60,7 +60,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-29T05:50:23Z",
+   "checked": "2026-11-28T07:06:56Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -108,7 +108,7 @@
   }
  },
  "rachelnabors.com": {
-  "checked": "2026-10-29T05:50:24Z",
+  "checked": "2026-11-28T07:06:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -132,7 +132,7 @@
    "error": "tls: self-signed certificate"
   },
   "home": {
-   "checked": "2026-10-29T05:50:24Z",
+   "checked": "2026-11-28T07:06:57Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -143,22 +143,23 @@
   }
  },
  "rachsmith.com": {
-  "checked": "2026-10-29T05:50:26Z",
+  "checked": "2026-11-28T07:06:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "18.208.88.157",
-    "98.84.224.111"
+    "104.21.56.158",
+    "172.67.187.40"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2606:4700:3031::6815:389e",
+    "2606:4700:3036::ac43:bb28"
+   ],
    "cname": null,
    "ns": [
-    "dns1.p06.nsone.net",
-    "dns2.p06.nsone.net",
-    "dns3.p06.nsone.net",
-    "dns4.p06.nsone.net"
+    "meadow.ns.cloudflare.com",
+    "stan.ns.cloudflare.com"
    ],
    "mx": true
   },
@@ -168,27 +169,29 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:50:26Z",
-   "title": "Home | Rach Smith's digital garden",
+   "checked": "2026-11-28T07:06:59Z",
+   "title": "Rach Smith's notes & nuggets",
    "generator": null,
    "feeds": [
     {
      "type": "rss",
-     "url": "https://rachsmith.com/rss/",
-     "title": "RSS Feed for rachsmith.com"
+     "url": "https://rachsmith.com/feed.xml",
+     "title": null
     }
    ],
    "hcard": false,
    "rel_me": [
     "https://codepen.io/rachsmith",
     "https://github.com/rachsmithcodes",
-    "https://mastodon.social/@rachsmith"
+    "https://bsky.app/profile/rachsmith.com",
+    "https://mastodon.social/@rachsmith",
+    "https://rachsmith.com/cdn-cgi/l/email-protection#7e1d11100a1f1d0a3e0c1f1d160d13170a16501d1113"
    ],
-   "webmention": "https://webmention.io/rachsmith.com/webmention"
+   "webmention": null
   }
  },
  "racked.com": {
-  "checked": "2026-10-29T05:50:30Z",
+  "checked": "2026-11-28T07:07:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -197,10 +200,10 @@
    "aaaa": [],
    "cname": null,
    "ns": [
-    "ns-1107.awsdns-10.org",
-    "ns-1596.awsdns-07.co.uk",
-    "ns-402.awsdns-50.com",
-    "ns-674.awsdns-20.net"
+    "ns-1119.awsdns-11.org",
+    "ns-123.awsdns-15.com",
+    "ns-1908.awsdns-46.co.uk",
+    "ns-711.awsdns-24.net"
    ],
    "mx": true
   },
@@ -211,7 +214,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T05:50:30Z",
+   "checked": "2026-11-28T07:07:02Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -283,7 +286,7 @@
   }
  },
  "radio.garden": {
-  "checked": "2026-10-29T05:50:30Z",
+  "checked": "2026-11-28T07:07:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -311,7 +314,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:50:30Z",
+   "checked": "2026-11-28T07:07:02Z",
    "title": "Radio Garden – Explore live radio by rotating the globe",
    "generator": null,
    "feeds": [],
@@ -321,16 +324,16 @@
   }
  },
  "radiolab.org": {
-  "checked": "2026-10-29T05:50:33Z",
+  "checked": "2026-11-28T07:07:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "13.227.87.13",
-    "13.227.87.44",
-    "13.227.87.102",
-    "13.227.87.122"
+    "52.84.127.41",
+    "52.84.127.48",
+    "52.84.127.64",
+    "52.84.127.68"
    ],
    "aaaa": [],
    "cname": null,
@@ -348,7 +351,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:50:33Z",
+   "checked": "2026-11-28T07:07:06Z",
    "title": "Radiolab: Podcasts | WNYC Studios | Podcasts",
    "generator": null,
    "feeds": [],
@@ -393,7 +396,7 @@
   }
  },
  "radware.com": {
-  "checked": "2026-10-29T05:50:36Z",
+  "checked": "2026-11-28T07:07:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -420,7 +423,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:50:36Z",
+   "checked": "2026-11-28T07:07:08Z",
    "title": "Radware Captcha Page",
    "generator": null,
    "feeds": [],
@@ -430,7 +433,7 @@
   }
  },
  "rafekettler.com": {
-  "checked": "2026-10-29T05:50:39Z",
+  "checked": "2026-11-28T07:07:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -448,22 +451,24 @@
    "mx": false
   },
   "https": {
-   "reachable": true,
+   "reachable": false,
    "redirects_http": true,
-   "status": 200
+   "status": null,
+   "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-29T05:50:39Z",
-   "title": "Account Suspended",
+   "checked": "2026-11-28T07:07:11Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "timeout"
   }
  },
  "raganwald.com": {
-  "checked": "2026-10-29T05:50:45Z",
+  "checked": "2026-11-28T07:07:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -488,7 +493,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:50:45Z",
+   "checked": "2026-11-28T07:07:43Z",
    "title": "Reginald Braithwaite - Product Engineering Leadership & Technical Product Management",
    "generator": null,
    "feeds": [
@@ -511,7 +516,7 @@
   }
  },
  "ragingmenace.com": {
-  "checked": "2026-10-29T05:50:48Z",
+  "checked": "2026-11-28T07:07:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -534,7 +539,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:50:48Z",
+   "checked": "2026-11-28T07:07:45Z",
    "title": "Raging Menace",
    "generator": null,
    "feeds": [],
@@ -544,7 +549,7 @@
   }
  },
  "railedit.dk": {
-  "checked": "2026-10-29T05:50:51Z",
+  "checked": "2026-11-28T07:07:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -563,7 +568,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T05:50:51Z",
+   "checked": "2026-11-28T07:07:48Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -574,7 +579,7 @@
   }
  },
  "rails.techno-weenie.net": {
-  "checked": "2026-10-29T05:50:51Z",
+  "checked": "2026-11-28T07:07:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -593,7 +598,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T05:50:51Z",
+   "checked": "2026-11-28T07:07:48Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -636,7 +641,7 @@
   }
  },
  "rainbowtreecare.com": {
-  "checked": "2026-10-29T05:50:53Z",
+  "checked": "2026-11-28T07:07:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -661,7 +666,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:50:53Z",
+   "checked": "2026-11-28T07:07:50Z",
    "title": "Tree Removal, Trimming & Diagnosis in MN | Rainbow Treecare",
    "generator": "Elementor 3.32.0; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap",
    "feeds": [
@@ -682,7 +687,7 @@
   }
  },
  "raindesigninc.com": {
-  "checked": "2026-10-29T05:50:57Z",
+  "checked": "2026-11-28T07:07:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -706,7 +711,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:50:57Z",
+   "checked": "2026-11-28T07:07:54Z",
    "title": "Rain Design Laptop Stands - Tablet Stands - Mobile Stands",
    "generator": null,
    "feeds": [],
@@ -716,7 +721,7 @@
   }
  },
  "raindrop.io": {
-  "checked": "2026-10-29T05:51:00Z",
+  "checked": "2026-11-28T07:07:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -742,7 +747,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:00Z",
+   "checked": "2026-11-28T07:07:56Z",
    "title": "Raindrop.io — All-in-one bookmark manager",
    "generator": null,
    "feeds": [],
@@ -812,7 +817,7 @@
   }
  },
  "rakhim.org": {
-  "checked": "2026-10-29T05:51:03Z",
+  "checked": "2026-11-28T07:07:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -834,7 +839,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:03Z",
+   "checked": "2026-11-28T07:07:59Z",
    "title": "Rakhim's homepage",
    "generator": "Hugo 0.133.0",
    "feeds": [
@@ -852,7 +857,7 @@
   }
  },
  "ralsina.me": {
-  "checked": "2026-10-29T05:51:06Z",
+  "checked": "2026-11-28T07:08:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -878,7 +883,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:06Z",
+   "checked": "2026-11-28T07:08:02Z",
    "title": "Ralsina.Me",
    "generator": null,
    "feeds": [
@@ -894,7 +899,7 @@
   }
  },
  "rameznaam.com": {
-  "checked": "2026-10-29T05:51:10Z",
+  "checked": "2026-11-28T07:08:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -920,7 +925,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:10Z",
+   "checked": "2026-11-28T07:08:05Z",
    "title": "Ramez Naam | Substack",
    "generator": null,
    "feeds": [
@@ -936,7 +941,7 @@
   }
  },
  "ranchero.com": {
-  "checked": "2026-10-29T05:51:17Z",
+  "checked": "2026-11-28T07:08:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -959,7 +964,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:17Z",
+   "checked": "2026-11-28T07:08:12Z",
    "title": "weblog - ranchero.com",
    "generator": null,
    "feeds": [
@@ -1089,7 +1094,7 @@
   }
  },
  "raphaeljs.com": {
-  "checked": "2026-10-29T05:51:20Z",
+  "checked": "2026-11-28T07:08:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1111,9 +1116,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:20Z",
+   "checked": "2026-11-28T07:08:15Z",
    "title": "An Intro to Raphaël - Raphaël",
-   "generator": "WordPress 6.6.2",
+   "generator": "WordPress 6.6.11",
    "feeds": [
     {
      "type": "rss",
@@ -1174,7 +1179,7 @@
   }
  },
  "rasagy.in": {
-  "checked": "2026-10-29T05:51:24Z",
+  "checked": "2026-11-28T07:08:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1200,7 +1205,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:24Z",
+   "checked": "2026-11-28T07:08:19Z",
    "title": "Rasagy Sharma | Design Leader, Data Artist, Design Educator & Sketchnoter",
    "generator": "Hugo 0.109.0",
    "feeds": [
@@ -1216,7 +1221,7 @@
   }
  },
  "rash-lang.org": {
-  "checked": "2026-10-29T05:51:27Z",
+  "checked": "2026-11-28T07:08:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1236,11 +1241,11 @@
   },
   "https": {
    "reachable": true,
-   "redirects_http": false,
+   "redirects_http": true,
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:27Z",
+   "checked": "2026-11-28T07:08:22Z",
    "title": "Rash - The Reckless Racket Shell",
    "generator": null,
    "feeds": [],
@@ -1322,7 +1327,7 @@
   }
  },
  "rateyourpkmncards.com": {
-  "checked": "2026-10-29T05:51:29Z",
+  "checked": "2026-11-28T07:08:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1348,7 +1353,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:29Z",
+   "checked": "2026-11-28T07:08:25Z",
    "title": "RateYourPKMNCards - rate every Pokémon card",
    "generator": null,
    "feeds": [],
@@ -1358,14 +1363,15 @@
   }
  },
  "rauchg.com": {
-  "checked": "2026-10-29T05:51:32Z",
+  "checked": "2026-11-28T07:08:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "216.198.79.1",
-    "216.198.79.65"
+    "155.121.0.3",
+    "155.121.1.3",
+    "155.121.2.3"
    ],
    "aaaa": [],
    "cname": null,
@@ -1381,7 +1387,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:32Z",
+   "checked": "2026-11-28T07:08:28Z",
    "title": "Guillermo Rauch's blog",
    "generator": null,
    "feeds": [],
@@ -1391,15 +1397,23 @@
   }
  },
  "rawgraphs.io": {
-  "checked": "2026-10-29T05:51:35Z",
+  "checked": "2026-11-28T07:08:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "198.202.211.1"
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+   ],
    "cname": null,
    "ns": [
     "ns1.dreamhost.com",
@@ -1414,7 +1428,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:35Z",
+   "checked": "2026-11-28T07:08:31Z",
    "title": "RAWGraphs",
    "generator": null,
    "feeds": [],
@@ -1424,7 +1438,7 @@
   }
  },
  "rawsyntax.com": {
-  "checked": "2026-10-29T05:51:38Z",
+  "checked": "2026-11-28T07:08:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1448,7 +1462,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'rawsyntax.com'"
   },
   "home": {
-   "checked": "2026-10-29T05:51:38Z",
+   "checked": "2026-11-28T07:08:34Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1459,7 +1473,7 @@
   }
  },
  "raycast.com": {
-  "checked": "2026-10-29T05:51:39Z",
+  "checked": "2026-11-28T07:08:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1483,7 +1497,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:39Z",
+   "checked": "2026-11-28T07:08:35Z",
    "title": "Raycast - Your shortcut to everything",
    "generator": null,
    "feeds": [],
@@ -1493,7 +1507,7 @@
   }
  },
  "raynersoftware.com": {
-  "checked": "2026-10-29T05:51:42Z",
+  "checked": "2026-11-28T07:08:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1518,7 +1532,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:42Z",
+   "checked": "2026-11-28T07:08:38Z",
    "title": "Rayner Software",
    "generator": null,
    "feeds": [],
@@ -1528,7 +1542,7 @@
   }
  },
  "rayninfo.co.uk": {
-  "checked": "2026-10-29T05:51:45Z",
+  "checked": "2026-11-28T07:08:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1551,7 +1565,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'rayninfo.co.uk'"
   },
   "home": {
-   "checked": "2026-10-29T05:51:45Z",
+   "checked": "2026-11-28T07:08:41Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1562,17 +1576,17 @@
   }
  },
  "raywenderlich.com": {
-  "checked": "2026-10-29T05:51:48Z",
+  "checked": "2026-11-28T07:08:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "32.196.160.81",
-    "52.70.171.214",
-    "98.89.138.160",
-    "184.196.5.213",
-    "184.197.29.170"
+    "3.214.32.104",
+    "34.226.137.0",
+    "34.232.221.198",
+    "52.21.186.30",
+    "52.73.207.236"
    ],
    "aaaa": [],
    "cname": null,
@@ -1590,7 +1604,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:48Z",
+   "checked": "2026-11-28T07:08:43Z",
    "title": "Kodeco | Learn iOS, Android & Flutter",
    "generator": null,
    "feeds": [
@@ -1606,7 +1620,7 @@
   }
  },
  "raz.sh": {
-  "checked": "2026-10-29T05:51:50Z",
+  "checked": "2026-11-28T07:08:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1628,7 +1642,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:51:50Z",
+   "checked": "2026-11-28T07:08:45Z",
    "title": "Raz Blog",
    "generator": null,
    "feeds": [
@@ -1649,7 +1663,7 @@
   }
  },
  "razorfast.com": {
-  "checked": "2026-10-29T05:51:54Z",
+  "checked": "2026-11-28T07:08:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1676,7 +1690,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-29T05:51:54Z",
+   "checked": "2026-11-28T07:08:48Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1687,7 +1701,7 @@
   }
  },
  "rbth.com": {
-  "checked": "2026-10-29T05:52:25Z",
+  "checked": "2026-11-28T07:09:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1713,7 +1727,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:52:25Z",
+   "checked": "2026-11-28T07:09:19Z",
    "title": "Russia Beyond",
    "generator": null,
    "feeds": [],
@@ -1723,7 +1737,7 @@
   }
  },
  "rc-cam.com": {
-  "checked": "2026-10-29T05:52:30Z",
+  "checked": "2026-11-28T07:09:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1745,7 +1759,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:52:30Z",
+   "checked": "2026-11-28T07:09:24Z",
    "title": "RC-CAM: R/C Model Video Projects and More!",
    "generator": null,
    "feeds": [],
@@ -1755,7 +1769,7 @@
   }
  },
  "rc.runryder.com": {
-  "checked": "2026-10-29T05:52:34Z",
+  "checked": "2026-11-28T07:09:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1778,7 +1792,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:52:34Z",
+   "checked": "2026-11-28T07:09:28Z",
    "title": "markrunryder",
    "generator": null,
    "feeds": [],
@@ -1788,7 +1802,7 @@
   }
  },
  "reactivemanifesto.org": {
-  "checked": "2026-10-29T05:52:36Z",
+  "checked": "2026-11-28T07:09:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1811,7 +1825,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:52:36Z",
+   "checked": "2026-11-28T07:09:29Z",
    "title": "The Reactive Manifesto",
    "generator": null,
    "feeds": [],
@@ -1850,7 +1864,7 @@
   }
  },
  "read.iopipe.com": {
-  "checked": "2026-10-29T05:52:38Z",
+  "checked": "2026-11-28T07:09:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1881,7 +1895,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-29T05:52:38Z",
+   "checked": "2026-11-28T07:09:31Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1892,7 +1906,7 @@
   }
  },
  "readsomethinggreat.com": {
-  "checked": "2026-10-29T05:58:39Z",
+  "checked": "2026-11-28T07:15:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1914,7 +1928,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:58:39Z",
+   "checked": "2026-11-28T07:15:33Z",
    "title": "Read Something Great",
    "generator": null,
    "feeds": [],
@@ -1924,7 +1938,7 @@
   }
  },
  "readthefuckinghig.tumblr.com": {
-  "checked": "2026-10-29T05:58:42Z",
+  "checked": "2026-11-28T07:15:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1944,7 +1958,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-29T05:58:42Z",
+   "checked": "2026-11-28T07:15:35Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2016,7 +2030,7 @@
   }
  },
  "readwriteown.com": {
-  "checked": "2026-10-29T05:58:45Z",
+  "checked": "2026-11-28T07:15:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2041,7 +2055,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:58:45Z",
+   "checked": "2026-11-28T07:15:38Z",
    "title": "Read Write Own - Chris Dixon",
    "generator": "Elementor 4.1.4; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap",
    "feeds": [
@@ -2123,7 +2137,7 @@
   }
  },
  "realitycards.io": {
-  "checked": "2026-10-29T05:58:47Z",
+  "checked": "2026-11-28T07:15:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2146,21 +2160,21 @@
   "https": {
    "reachable": true,
    "redirects_http": true,
-   "status": 404
+   "status": 530
   },
   "home": {
-   "checked": "2026-10-29T05:58:47Z",
+   "checked": "2026-11-28T07:15:41Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "HTTP 404"
+   "error": "HTTP 530"
   }
  },
  "realityscaled.tripod.com": {
-  "checked": "2026-10-29T05:58:52Z",
+  "checked": "2026-11-28T07:16:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2179,7 +2193,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T05:58:52Z",
+   "checked": "2026-11-28T07:16:03Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2246,16 +2260,16 @@
   }
  },
  "realvision.com": {
-  "checked": "2026-10-29T05:58:52Z",
+  "checked": "2026-11-28T07:16:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "13.249.141.2",
-    "13.249.141.5",
-    "13.249.141.108",
-    "13.249.141.117"
+    "52.84.127.44",
+    "52.84.127.76",
+    "52.84.127.106",
+    "52.84.127.120"
    ],
    "aaaa": [],
    "cname": null,
@@ -2273,8 +2287,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:58:52Z",
-   "title": "Real Vision: You've got about four years to unfuck your future.",
+   "checked": "2026-11-28T07:16:03Z",
+   "title": "Real Vision Black Friday: 50% off Pro, up to 60% off Alpha",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -2283,7 +2297,7 @@
   }
  },
  "reason.com": {
-  "checked": "2026-10-29T05:58:56Z",
+  "checked": "2026-11-28T07:16:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2307,7 +2321,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:58:56Z",
+   "checked": "2026-11-28T07:16:07Z",
    "title": "Reason Magazine - Free Minds and Free Markets",
    "generator": null,
    "feeds": [
@@ -2323,7 +2337,7 @@
   }
  },
  "reasonable.io": {
-  "checked": "2026-10-29T05:58:59Z",
+  "checked": "2026-11-28T07:16:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2348,7 +2362,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:58:59Z",
+   "checked": "2026-11-28T07:16:10Z",
    "title": "Reasonable | Proof Follows Function",
    "generator": null,
    "feeds": [],
@@ -2358,7 +2372,7 @@
   }
  },
  "reb00ted.org": {
-  "checked": "2026-10-29T05:59:03Z",
+  "checked": "2026-11-28T07:16:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2382,7 +2396,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:03Z",
+   "checked": "2026-11-28T07:16:13Z",
    "title": "reb00ted | reb00ted",
    "generator": null,
    "feeds": [
@@ -2400,7 +2414,7 @@
   }
  },
  "rebeccatoh.co": {
-  "checked": "2026-10-29T05:59:06Z",
+  "checked": "2026-11-28T07:16:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2423,7 +2437,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:06Z",
+   "checked": "2026-11-28T07:16:16Z",
    "title": "Rebecca Toh",
    "generator": null,
    "feeds": [],
@@ -2433,7 +2447,7 @@
   }
  },
  "rebeccatoh.ghost.io": {
-  "checked": "2026-10-29T05:59:09Z",
+  "checked": "2026-11-28T07:16:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2460,7 +2474,7 @@
    "status": 402
   },
   "home": {
-   "checked": "2026-10-29T05:59:09Z",
+   "checked": "2026-11-28T07:16:19Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2471,7 +2485,7 @@
   }
  },
  "receipts.xyz": {
-  "checked": "2026-10-29T05:59:12Z",
+  "checked": "2026-11-28T07:16:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2493,7 +2507,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:12Z",
+   "checked": "2026-11-28T07:16:22Z",
    "title": "Receipts | IRL Rewards",
    "generator": null,
    "feeds": [],
@@ -2555,7 +2569,7 @@
   }
  },
  "reconnector.com": {
-  "checked": "2026-10-29T05:59:15Z",
+  "checked": "2026-11-28T07:16:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2578,7 +2592,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:15Z",
+   "checked": "2026-11-28T07:16:25Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -2588,7 +2602,7 @@
   }
  },
  "recoveringjournalist.typepad.com": {
-  "checked": "2026-10-29T05:59:16Z",
+  "checked": "2026-11-28T07:16:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2611,7 +2625,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:16Z",
+   "checked": "2026-11-28T07:16:26Z",
    "title": "Typepad | Network Solutions",
    "generator": null,
    "feeds": [],
@@ -2621,7 +2635,7 @@
   }
  },
  "rectangleapp.com": {
-  "checked": "2026-10-29T05:59:18Z",
+  "checked": "2026-11-28T07:16:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2647,7 +2661,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:18Z",
+   "checked": "2026-11-28T07:16:28Z",
    "title": "Rectangle",
    "generator": null,
    "feeds": [],
@@ -2657,16 +2671,16 @@
   }
  },
  "recurse.com": {
-  "checked": "2026-10-29T05:59:19Z",
+  "checked": "2026-11-28T07:16:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "3.162.163.15",
-    "3.162.163.58",
-    "3.162.163.82",
-    "3.162.163.89"
+    "52.84.127.29",
+    "52.84.127.96",
+    "52.84.127.113",
+    "52.84.127.127"
    ],
    "aaaa": [],
    "cname": null,
@@ -2684,7 +2698,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:19Z",
+   "checked": "2026-11-28T07:16:29Z",
    "title": "The Recurse Center",
    "generator": null,
    "feeds": [
@@ -2750,7 +2764,7 @@
   }
  },
  "red-gate.com": {
-  "checked": "2026-10-29T05:59:21Z",
+  "checked": "2026-11-28T07:16:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2775,7 +2789,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:21Z",
+   "checked": "2026-11-28T07:16:30Z",
    "title": "Redgate — Database DevOps tools for SQL Server, Oracle & PostgreSQL",
    "generator": null,
    "feeds": [],
@@ -2838,7 +2852,7 @@
   }
  },
  "redact.dev": {
-  "checked": "2026-10-29T05:59:28Z",
+  "checked": "2026-11-28T07:16:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2866,7 +2880,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:28Z",
+   "checked": "2026-11-28T07:16:33Z",
    "title": "Redact - Mass Delete Posts & Opt Out from Data Brokers",
    "generator": null,
    "feeds": [],
@@ -2876,7 +2890,7 @@
   }
  },
  "redash.io": {
-  "checked": "2026-10-29T05:59:31Z",
+  "checked": "2026-11-28T07:16:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2902,7 +2916,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:31Z",
+   "checked": "2026-11-28T07:16:36Z",
    "title": "Redash helps you make sense of your data",
    "generator": null,
    "feeds": [],
@@ -2912,7 +2926,7 @@
   }
  },
  "redbot.org": {
-  "checked": "2026-10-29T05:59:33Z",
+  "checked": "2026-11-28T07:16:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2936,7 +2950,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:33Z",
+   "checked": "2026-11-28T07:16:38Z",
    "title": "REDbot: Lint for your HTTP Resources",
    "generator": null,
    "feeds": [],
@@ -2946,7 +2960,7 @@
   }
  },
  "redbull.com": {
-  "checked": "2026-10-29T05:59:36Z",
+  "checked": "2026-11-28T07:16:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2976,7 +2990,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:36Z",
+   "checked": "2026-11-28T07:16:40Z",
    "title": "Red Bull Energy Drink – Gives You Wiiings",
    "generator": null,
    "feeds": [],
@@ -2986,7 +3000,7 @@
   }
  },
  "reddark.untone.uk": {
-  "checked": "2026-10-29T05:59:40Z",
+  "checked": "2026-11-28T07:16:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3009,7 +3023,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:40Z",
+   "checked": "2026-11-28T07:16:44Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3082,7 +3096,7 @@
   }
  },
  "redditreads.com": {
-  "checked": "2026-10-29T05:59:43Z",
+  "checked": "2026-11-28T07:16:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3108,7 +3122,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:43Z",
+   "checked": "2026-11-28T07:16:47Z",
    "title": "Reddit Reads: Book recommendations from reddit",
    "generator": null,
    "feeds": [],
@@ -3118,7 +3132,7 @@
   }
  },
  "redhat.com": {
-  "checked": "2026-10-29T05:59:44Z",
+  "checked": "2026-11-28T07:16:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3145,7 +3159,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:44Z",
+   "checked": "2026-11-28T07:16:48Z",
    "title": "Red Hat - We make open source technologies for the enterprise",
    "generator": "Drupal 10 (https://www.drupal.org)",
    "feeds": [],
@@ -3155,7 +3169,7 @@
   }
  },
  "redherring.com": {
-  "checked": "2026-10-29T05:59:46Z",
+  "checked": "2026-11-28T07:16:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3177,7 +3191,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:46Z",
+   "checked": "2026-11-28T07:16:50Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3187,7 +3201,7 @@
   }
  },
  "redirect.pizza": {
-  "checked": "2026-10-29T05:59:54Z",
+  "checked": "2026-11-28T07:16:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3211,7 +3225,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:54Z",
+   "checked": "2026-11-28T07:16:51Z",
    "title": "Domain Redirects with Automatic HTTPS | redirect.pizza",
    "generator": null,
    "feeds": [],
@@ -3221,7 +3235,7 @@
   }
  },
  "redis.antirez.com": {
-  "checked": "2026-10-29T05:59:58Z",
+  "checked": "2026-11-28T07:16:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3240,7 +3254,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T05:59:58Z",
+   "checked": "2026-11-28T07:16:55Z",
    "title": "Redis Patterns for Coding Agents",
    "generator": null,
    "feeds": [],
@@ -3250,7 +3264,7 @@
   }
  },
  "redis.io": {
-  "checked": "2026-10-29T06:00:02Z",
+  "checked": "2026-11-28T07:16:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3274,7 +3288,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:02Z",
+   "checked": "2026-11-28T07:16:59Z",
    "title": "Redis - Real-time data for agents & apps",
    "generator": "Redis",
    "feeds": [],
@@ -3284,7 +3298,7 @@
   }
  },
  "redisgraph.io": {
-  "checked": "2026-10-29T06:00:05Z",
+  "checked": "2026-11-28T07:17:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3309,7 +3323,7 @@
    "error": "connection refused"
   },
   "home": {
-   "checked": "2026-10-29T06:00:05Z",
+   "checked": "2026-11-28T07:17:01Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3376,7 +3390,7 @@
   }
  },
  "redqueencoder.com": {
-  "checked": "2026-10-29T06:00:08Z",
+  "checked": "2026-11-28T07:17:04Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3399,9 +3413,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:08Z",
+   "checked": "2026-11-28T07:17:04Z",
    "title": "The Red Queen Coder – If you give a person a program, you'll frustrate them for a day. If you teach a person to program, you will frustrate them for a lifetime!",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -3420,7 +3434,7 @@
   }
  },
  "redsymbol.net": {
-  "checked": "2026-10-29T06:00:15Z",
+  "checked": "2026-11-28T07:17:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3443,7 +3457,7 @@
    "error": "tls: CA cert does not include key usage extension"
   },
   "home": {
-   "checked": "2026-10-29T06:00:15Z",
+   "checked": "2026-11-28T07:17:08Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3454,7 +3468,7 @@
   }
  },
  "redteamsecure.com": {
-  "checked": "2026-10-29T06:00:17Z",
+  "checked": "2026-11-28T07:17:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3480,9 +3494,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:17Z",
+   "checked": "2026-11-28T07:17:10Z",
    "title": "Offensive Security & Pen Testing | DeepSeas",
-   "generator": "Elementor 4.3.5; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap",
+   "generator": "Elementor 4.4.1; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -3490,7 +3504,7 @@
   }
  },
  "refactoring.fm": {
-  "checked": "2026-10-29T06:00:21Z",
+  "checked": "2026-11-28T07:17:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3505,7 +3519,7 @@
    ],
    "cname": "target.substack-custom-domains.com",
    "ns": [],
-   "mx": true
+   "mx": false
   },
   "https": {
    "reachable": true,
@@ -3513,7 +3527,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:21Z",
+   "checked": "2026-11-28T07:17:14Z",
    "title": "Refactoring | Luca Rossi | Substack",
    "generator": null,
    "feeds": [
@@ -3569,7 +3583,7 @@
   }
  },
  "refactoringui.com": {
-  "checked": "2026-10-29T06:00:24Z",
+  "checked": "2026-11-28T07:17:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3595,7 +3609,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:24Z",
+   "checked": "2026-11-28T07:17:16Z",
    "title": "Refactoring UI",
    "generator": null,
    "feeds": [],
@@ -3605,7 +3619,7 @@
   }
  },
  "referata.com": {
-  "checked": "2026-10-29T06:00:27Z",
+  "checked": "2026-11-28T07:17:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3627,7 +3641,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:27Z",
+   "checked": "2026-11-28T07:17:19Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3637,7 +3651,7 @@
   }
  },
  "refine.sh": {
-  "checked": "2026-10-29T06:00:29Z",
+  "checked": "2026-11-28T07:17:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3663,7 +3677,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:29Z",
+   "checked": "2026-11-28T07:17:21Z",
    "title": "Offline AI Grammar Checker for Mac | Refine",
    "generator": "Next.js",
    "feeds": [],
@@ -3673,7 +3687,7 @@
   }
  },
  "regdeveloper.co.uk": {
-  "checked": "2026-10-29T06:00:31Z",
+  "checked": "2026-11-28T07:17:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3696,7 +3710,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:31Z",
+   "checked": "2026-11-28T07:17:23Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3706,7 +3720,7 @@
   }
  },
  "regenerationmusicproject.com": {
-  "checked": "2026-10-29T06:00:33Z",
+  "checked": "2026-11-28T07:17:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3732,7 +3746,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:33Z",
+   "checked": "2026-11-28T07:17:24Z",
    "title": "Site is created successfully!",
    "generator": null,
    "feeds": [],
@@ -3742,7 +3756,7 @@
   }
  },
  "regex.alf.nu": {
-  "checked": "2026-10-29T06:00:37Z",
+  "checked": "2026-11-28T07:17:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3761,7 +3775,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:37Z",
+   "checked": "2026-11-28T07:17:28Z",
    "title": "Regex Golf",
    "generator": null,
    "feeds": [],
@@ -3804,7 +3818,7 @@
   }
  },
  "regex.learncodethehardway.org": {
-  "checked": "2026-10-29T06:00:40Z",
+  "checked": "2026-11-28T07:17:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3823,7 +3837,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:40Z",
+   "checked": "2026-11-28T07:17:31Z",
    "title": "Learn Regular Expressions the Hard Way",
    "generator": null,
    "feeds": [],
@@ -3833,7 +3847,7 @@
   }
  },
  "regex101.com": {
-  "checked": "2026-10-29T06:00:44Z",
+  "checked": "2026-11-28T07:17:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3857,7 +3871,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:44Z",
+   "checked": "2026-11-28T07:17:34Z",
    "title": "regex101: Online Regex Tester, Builder, Converter & Debugger",
    "generator": null,
    "feeds": [],
@@ -3867,7 +3881,7 @@
   }
  },
  "regexcrossword.com": {
-  "checked": "2026-10-29T06:00:48Z",
+  "checked": "2026-11-28T07:17:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3889,7 +3903,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:48Z",
+   "checked": "2026-11-28T07:17:38Z",
    "title": "Regex Crossword",
    "generator": null,
    "feeds": [
@@ -3905,7 +3919,7 @@
   }
  },
  "regexlearn.com": {
-  "checked": "2026-10-29T06:00:50Z",
+  "checked": "2026-11-28T07:17:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3931,7 +3945,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:50Z",
+   "checked": "2026-11-28T07:17:41Z",
    "title": "Regex Learn - Step by step, from zero to advanced.",
    "generator": null,
    "feeds": [],
@@ -3941,7 +3955,7 @@
   }
  },
  "regexone.com": {
-  "checked": "2026-10-29T06:00:53Z",
+  "checked": "2026-11-28T07:17:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3965,7 +3979,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:53Z",
+   "checked": "2026-11-28T07:17:43Z",
    "title": "RegexOne - Learn Regular Expressions - Lesson 1: An Introduction, and the ABCs",
    "generator": null,
    "feeds": [],
@@ -3975,7 +3989,7 @@
   }
  },
  "regexper.com": {
-  "checked": "2026-10-29T06:00:56Z",
+  "checked": "2026-11-28T07:17:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4000,7 +4014,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:00:56Z",
+   "checked": "2026-11-28T07:17:46Z",
    "title": "Regexper",
    "generator": null,
    "feeds": [],
@@ -4010,7 +4024,7 @@
   }
  },
  "regexr.com": {
-  "checked": "2026-10-29T06:01:00Z",
+  "checked": "2026-11-28T07:17:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4036,8 +4050,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:00Z",
-   "title": "RegExr: Learn, Build, & Test RegEx",
+   "checked": "2026-11-28T07:17:49Z",
+   "title": "RegExr: Temporarily Offline",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -4046,7 +4060,7 @@
   }
  },
  "reincubate.com": {
-  "checked": "2026-10-29T06:01:03Z",
+  "checked": "2026-11-28T07:17:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4074,7 +4088,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:03Z",
+   "checked": "2026-11-28T07:17:53Z",
    "title": "Reincubate — Unlock your potential",
    "generator": null,
    "feeds": [
@@ -4090,7 +4104,7 @@
   }
  },
  "reinertsenassociates.com": {
-  "checked": "2026-10-29T06:01:06Z",
+  "checked": "2026-11-28T07:17:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4115,7 +4129,7 @@
    "error": "tls: self-signed certificate"
   },
   "home": {
-   "checked": "2026-10-29T06:01:06Z",
+   "checked": "2026-11-28T07:17:55Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4126,7 +4140,7 @@
   }
  },
  "reinventvideos.com": {
-  "checked": "2026-10-29T06:01:08Z",
+  "checked": "2026-11-28T07:17:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4135,10 +4149,10 @@
    "aaaa": [],
    "cname": null,
    "ns": [
-    "ns-cloud-e1.googledomains.com",
-    "ns-cloud-e2.googledomains.com",
-    "ns-cloud-e3.googledomains.com",
-    "ns-cloud-e4.googledomains.com"
+    "ns-1044.awsdns-02.org",
+    "ns-1830.awsdns-36.co.uk",
+    "ns-257.awsdns-32.com",
+    "ns-574.awsdns-07.net"
    ],
    "mx": false
   },
@@ -4149,7 +4163,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:01:08Z",
+   "checked": "2026-11-28T07:17:57Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4208,7 +4222,7 @@
   }
  },
  "releasecandidateone.com": {
-  "checked": "2026-10-29T06:01:08Z",
+  "checked": "2026-11-28T07:17:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4231,7 +4245,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:08Z",
+   "checked": "2026-11-28T07:17:57Z",
    "title": "Release Candidate One",
    "generator": null,
    "feeds": [
@@ -4247,7 +4261,7 @@
   }
  },
  "remarkable.com": {
-  "checked": "2026-10-29T06:01:11Z",
+  "checked": "2026-11-28T07:18:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4271,7 +4285,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:11Z",
+   "checked": "2026-11-28T07:18:00Z",
    "title": "reMarkable: The Paper Tablets for Focused Work | reMarkable",
    "generator": null,
    "feeds": [],
@@ -4281,13 +4295,13 @@
   }
  },
  "remars.amazon.com": {
-  "checked": "2026-10-29T06:01:14Z",
+  "checked": "2026-11-28T07:18:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "18.154.191.113"
+    "3.166.121.122"
    ],
    "aaaa": [],
    "cname": "tp.05b37ba3e-frontier.amazon.com",
@@ -4300,7 +4314,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:14Z",
+   "checked": "2026-11-28T07:18:02Z",
    "title": "Cloud Events, Webinars and Conferences - AWS",
    "generator": null,
    "feeds": [],
@@ -4310,7 +4324,7 @@
   }
  },
  "remcobron.com": {
-  "checked": "2026-10-29T06:01:16Z",
+  "checked": "2026-11-28T07:18:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4336,9 +4350,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:16Z",
+   "checked": "2026-11-28T07:18:05Z",
    "title": "Remco Bron - Remco Bron",
-   "generator": "WordPress 6.9.11",
+   "generator": "WordPress 6.9.12",
    "feeds": [
     {
      "type": "rss",
@@ -4357,7 +4371,7 @@
   }
  },
  "remembear.com": {
-  "checked": "2026-10-29T06:01:21Z",
+  "checked": "2026-11-28T07:18:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4378,7 +4392,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:01:21Z",
+   "checked": "2026-11-28T07:18:11Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4389,7 +4403,7 @@
   }
  },
  "remiel.info": {
-  "checked": "2026-10-29T06:01:21Z",
+  "checked": "2026-11-28T07:18:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4412,7 +4426,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:21Z",
+   "checked": "2026-11-28T07:18:11Z",
    "title": "Domain Details Page",
    "generator": null,
    "feeds": [],
@@ -4422,7 +4436,7 @@
   }
  },
  "remixrats.tumblr.com": {
-  "checked": "2026-10-29T06:01:25Z",
+  "checked": "2026-11-28T07:18:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4442,7 +4456,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-29T06:01:25Z",
+   "checked": "2026-11-28T07:18:15Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4453,7 +4467,7 @@
   }
  },
  "remoteretro.io": {
-  "checked": "2026-10-29T06:01:28Z",
+  "checked": "2026-11-28T07:18:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4480,7 +4494,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:28Z",
+   "checked": "2026-11-28T07:18:18Z",
    "title": "RemoteRetro — make retros easy!",
    "generator": null,
    "feeds": [],
@@ -4490,7 +4504,7 @@
   }
  },
  "remstate.com": {
-  "checked": "2026-10-29T06:01:32Z",
+  "checked": "2026-11-28T07:18:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4516,7 +4530,7 @@
    "error": "tls: self-signed certificate"
   },
   "home": {
-   "checked": "2026-10-29T06:01:32Z",
+   "checked": "2026-11-28T07:18:21Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4527,7 +4541,7 @@
   }
  },
  "remysharp.com": {
-  "checked": "2026-10-29T06:01:33Z",
+  "checked": "2026-11-28T07:18:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4553,7 +4567,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:33Z",
+   "checked": "2026-11-28T07:18:22Z",
    "title": "remy sharp's b:log",
    "generator": null,
    "feeds": [
@@ -4599,7 +4613,7 @@
   }
  },
  "rendall.github.io": {
-  "checked": "2026-10-29T06:01:37Z",
+  "checked": "2026-11-28T07:18:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4626,7 +4640,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-29T06:01:37Z",
+   "checked": "2026-11-28T07:18:25Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4637,7 +4651,7 @@
   }
  },
  "rentzsch.github.com": {
-  "checked": "2026-10-29T06:01:38Z",
+  "checked": "2026-11-28T07:18:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4655,7 +4669,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:01:38Z",
+   "checked": "2026-11-28T07:18:26Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4666,7 +4680,7 @@
   }
  },
  "reorchestrate.com": {
-  "checked": "2026-10-29T06:01:38Z",
+  "checked": "2026-11-28T07:18:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4691,7 +4705,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:38Z",
+   "checked": "2026-11-28T07:18:26Z",
    "title": "reorchestrate",
    "generator": "Hugo 0.155.2",
    "feeds": [],
@@ -4701,7 +4715,7 @@
   }
  },
  "reorx.com": {
-  "checked": "2026-10-29T06:01:42Z",
+  "checked": "2026-11-28T07:18:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4727,7 +4741,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:42Z",
+   "checked": "2026-11-28T07:18:30Z",
    "title": "Reorx’s Forge",
    "generator": "Hugo 0.101.0",
    "feeds": [
@@ -4750,7 +4764,7 @@
   }
  },
  "repebble.com": {
-  "checked": "2026-10-29T06:01:45Z",
+  "checked": "2026-11-28T07:18:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4776,8 +4790,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:45Z",
-   "title": "Pebble Smartwatch — Official Store",
+   "checked": "2026-11-28T07:18:33Z",
+   "title": "Pebble Smartwatch Black Friday Sale — Pebble Time 2 & 2 Duo",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -4786,7 +4800,7 @@
   }
  },
  "repeller.com": {
-  "checked": "2026-10-29T06:01:48Z",
+  "checked": "2026-11-28T07:18:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4805,7 +4819,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:01:48Z",
+   "checked": "2026-11-28T07:18:35Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4816,7 +4830,7 @@
   }
  },
  "repl.it": {
-  "checked": "2026-10-29T06:01:48Z",
+  "checked": "2026-11-28T07:18:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4842,8 +4856,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:48Z",
-   "title": "AI App and Website Builder | Replit",
+   "checked": "2026-11-28T07:18:36Z",
+   "title": "Transform your business and become a Self-Driving Company | Replit",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -4852,7 +4866,7 @@
   }
  },
  "reproof.app": {
-  "checked": "2026-10-29T06:01:51Z",
+  "checked": "2026-11-28T07:18:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4874,7 +4888,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:51Z",
+   "checked": "2026-11-28T07:18:38Z",
    "title": "Reproof | The writing app for perfectionists.",
    "generator": null,
    "feeds": [
@@ -4890,7 +4904,7 @@
   }
  },
  "reputablejournal.com": {
-  "checked": "2026-10-29T06:01:53Z",
+  "checked": "2026-11-28T07:18:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4912,7 +4926,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:53Z",
+   "checked": "2026-11-28T07:18:41Z",
    "title": "A Reputable Journal",
    "generator": "Hugo 0.91.2",
    "feeds": [
@@ -4931,7 +4945,7 @@
   }
  },
  "requestb.in": {
-  "checked": "2026-10-29T06:01:56Z",
+  "checked": "2026-11-28T07:18:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4957,7 +4971,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:01:56Z",
+   "checked": "2026-11-28T07:18:43Z",
    "title": "Pipedream — The integration layer for AI agents",
    "generator": null,
    "feeds": [],
@@ -4967,26 +4981,26 @@
   }
  },
  "research.adobe.com": {
-  "checked": "2026-10-29T06:02:01Z",
+  "checked": "2026-11-28T07:18:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "3.167.152.39",
-    "3.167.152.55",
-    "3.167.152.67",
-    "3.167.152.72"
+    "99.84.203.24",
+    "99.84.203.25",
+    "99.84.203.78",
+    "99.84.203.111"
    ],
    "aaaa": [
-    "2600:9000:27d7:1800:1f:3c15:dd00:93a1",
-    "2600:9000:27d7:3400:1f:3c15:dd00:93a1",
-    "2600:9000:27d7:3e00:1f:3c15:dd00:93a1",
-    "2600:9000:27d7:5e00:1f:3c15:dd00:93a1",
-    "2600:9000:27d7:c600:1f:3c15:dd00:93a1",
-    "2600:9000:27d7:e400:1f:3c15:dd00:93a1",
-    "2600:9000:27d7:e800:1f:3c15:dd00:93a1",
-    "2600:9000:27d7:ec00:1f:3c15:dd00:93a1"
+    "2600:9000:20c5:a00:1f:3c15:dd00:93a1",
+    "2600:9000:20c5:3600:1f:3c15:dd00:93a1",
+    "2600:9000:20c5:5a00:1f:3c15:dd00:93a1",
+    "2600:9000:20c5:7000:1f:3c15:dd00:93a1",
+    "2600:9000:20c5:7e00:1f:3c15:dd00:93a1",
+    "2600:9000:20c5:be00:1f:3c15:dd00:93a1",
+    "2600:9000:20c5:e400:1f:3c15:dd00:93a1",
+    "2600:9000:20c5:f200:1f:3c15:dd00:93a1"
    ],
    "cname": "d1xpgggtndud84.cloudfront.net",
    "ns": [],
@@ -4998,7 +5012,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:02:01Z",
+   "checked": "2026-11-28T07:18:47Z",
    "title": "Adobe Research",
    "generator": null,
    "feeds": [],
@@ -5008,7 +5022,7 @@
   }
  },
  "research.ark-invest.com": {
-  "checked": "2026-10-29T06:02:05Z",
+  "checked": "2026-11-28T07:18:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5031,7 +5045,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-29T06:02:05Z",
+   "checked": "2026-11-28T07:18:51Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5042,7 +5056,7 @@
   }
  },
  "research.att.com": {
-  "checked": "2026-10-29T06:02:07Z",
+  "checked": "2026-11-28T07:18:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5069,7 +5083,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-29T06:02:07Z",
+   "checked": "2026-11-28T07:18:54Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5080,16 +5094,16 @@
   }
  },
  "research.facebook.com": {
-  "checked": "2026-10-29T06:02:39Z",
+  "checked": "2026-11-28T07:19:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "157.240.254.12"
+    "57.144.204.141"
    ],
    "aaaa": [
-    "2a03:2880:f356:8d:face:b00c:0:2"
+    "2a03:2880:f03a:12:face:b00c:0:2"
    ],
    "cname": "star.c10r.facebook.com",
    "ns": [],
@@ -5101,7 +5115,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:02:39Z",
+   "checked": "2026-11-28T07:19:27Z",
    "title": "Meta Research",
    "generator": null,
    "feeds": [],
@@ -5111,13 +5125,13 @@
   }
  },
  "research.google.com": {
-  "checked": "2026-10-29T06:02:44Z",
+  "checked": "2026-11-28T07:19:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.210.206"
+    "142.250.189.110"
    ],
    "aaaa": [
     "2607:f8b0:4009:812::200e"
@@ -5132,7 +5146,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:02:44Z",
+   "checked": "2026-11-28T07:19:33Z",
    "title": "Google Research - Explore Our Latest Research in Science and AI",
    "generator": null,
    "feeds": [],
@@ -5142,16 +5156,16 @@
   }
  },
  "research.googleblog.com": {
-  "checked": "2026-10-29T06:02:46Z",
+  "checked": "2026-11-28T07:19:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.211.33"
+    "142.250.217.97"
    ],
    "aaaa": [
-    "2607:f8b0:4009:80f::2001"
+    "2607:f8b0:4009:81e::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -5163,7 +5177,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:02:46Z",
+   "checked": "2026-11-28T07:19:34Z",
    "title": "Latest News from Google Research Blog - Google Research",
    "generator": null,
    "feeds": [],
@@ -5173,17 +5187,17 @@
   }
  },
  "research.hackerrank.com": {
-  "checked": "2026-10-29T06:02:49Z",
+  "checked": "2026-11-28T07:19:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.194.147.111"
+    "23.2.159.170"
    ],
    "aaaa": [
-    "2600:1418:1000:385::22e9",
-    "2600:1418:1000:39a::22e9"
+    "2600:1418:1000:484::22e9",
+    "2600:1418:1000:494::22e9"
    ],
    "cname": "research.hackerrank.com.edgekey.net",
    "ns": [],
@@ -5195,18 +5209,18 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:02:49Z",
+   "checked": "2026-11-28T07:19:37Z",
    "title": "Research - HackerRank",
    "generator": null,
    "feeds": [
     {
      "type": "rss",
-     "url": "https://www.hackerrank.com/research/feed",
+     "url": "https://researchhr.wpengine.com/research/feed",
      "title": "HackerRank » Feed"
     },
     {
      "type": "rss",
-     "url": "https://www.hackerrank.com/research/comments/feed",
+     "url": "https://researchhr.wpengine.com/research/comments/feed",
      "title": "HackerRank » Comments Feed"
     }
    ],
@@ -5216,7 +5230,7 @@
   }
  },
  "research.microsoft.com": {
-  "checked": "2026-10-29T06:02:50Z",
+  "checked": "2026-11-28T07:19:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5244,9 +5258,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:02:50Z",
+   "checked": "2026-11-28T07:19:38Z",
    "title": "Microsoft Research – Emerging Technology, Computer, & Software Research",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -5260,7 +5274,7 @@
   }
  },
  "research.umn.edu": {
-  "checked": "2026-10-29T06:02:56Z",
+  "checked": "2026-11-28T07:19:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5287,7 +5301,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:02:56Z",
+   "checked": "2026-11-28T07:19:44Z",
    "title": "Research & Innovation Office | Research & Innovation Office",
    "generator": "Drupal 11 (https://www.drupal.org)",
    "feeds": [],
@@ -5297,7 +5311,7 @@
   }
  },
  "researchgate.net": {
-  "checked": "2026-10-29T06:02:58Z",
+  "checked": "2026-11-28T07:19:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5323,7 +5337,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-29T06:02:58Z",
+   "checked": "2026-11-28T07:19:46Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5334,7 +5348,7 @@
   }
  },
  "resources.github.com": {
-  "checked": "2026-10-29T06:03:01Z",
+  "checked": "2026-11-28T07:19:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5361,7 +5375,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:01Z",
+   "checked": "2026-11-28T07:19:49Z",
    "title": "Resources to help you build, secure, and scale with GitHub · GitHub",
    "generator": null,
    "feeds": [],
@@ -5371,7 +5385,7 @@
   }
  },
  "responsively.app": {
-  "checked": "2026-10-29T06:03:04Z",
+  "checked": "2026-11-28T07:19:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5397,7 +5411,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:04Z",
+   "checked": "2026-11-28T07:19:52Z",
    "title": "Responsively App - A web developer's browser",
    "generator": null,
    "feeds": [],
@@ -5407,7 +5421,7 @@
   }
  },
  "restlet.com": {
-  "checked": "2026-10-29T06:03:07Z",
+  "checked": "2026-11-28T07:19:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5432,7 +5446,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:07Z",
+   "checked": "2026-11-28T07:19:54Z",
    "title": "Restlet framework",
    "generator": "Hugo 0.165.0",
    "feeds": [],
@@ -5442,7 +5456,7 @@
   }
  },
  "restofworld.org": {
-  "checked": "2026-10-29T06:03:10Z",
+  "checked": "2026-11-28T07:19:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5465,7 +5479,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:10Z",
+   "checked": "2026-11-28T07:19:57Z",
    "title": "Rest of World - Reporting Global Tech Stories",
    "generator": null,
    "feeds": [
@@ -5517,18 +5531,18 @@
   }
  },
  "rethinkdb.com": {
-  "checked": "2026-10-29T06:03:12Z",
+  "checked": "2026-11-28T07:19:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "13.215.239.219",
-    "52.74.6.109"
+    "18.208.88.157",
+    "98.84.224.111"
    ],
    "aaaa": [
-    "2406:da18:b3d:e201::258",
-    "2406:da18:b3d:e201::259"
+    "2600:1f18:16e:df01::258",
+    "2600:1f18:16e:df01::259"
    ],
    "cname": null,
    "ns": [
@@ -5545,7 +5559,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:12Z",
+   "checked": "2026-11-28T07:19:59Z",
    "title": "RethinkDB: the open-source database for the realtime web",
    "generator": null,
    "feeds": [
@@ -5561,7 +5575,7 @@
   }
  },
  "rethinkingsoftware.substack.com": {
-  "checked": "2026-10-29T06:03:18Z",
+  "checked": "2026-11-28T07:20:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5584,7 +5598,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:18Z",
+   "checked": "2026-11-28T07:20:02Z",
    "title": "Rethinking Software | Adam Ard | Substack",
    "generator": null,
    "feeds": [
@@ -5600,7 +5614,7 @@
   }
  },
  "retired.getsatisfaction.com": {
-  "checked": "2026-10-29T06:03:21Z",
+  "checked": "2026-11-28T07:20:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5618,7 +5632,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:03:21Z",
+   "checked": "2026-11-28T07:20:05Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5629,7 +5643,7 @@
   }
  },
  "retool.com": {
-  "checked": "2026-10-29T06:03:21Z",
+  "checked": "2026-11-28T07:20:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5651,7 +5665,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:21Z",
+   "checked": "2026-11-28T07:20:05Z",
    "title": "Build internal software better, with AI. | Retool",
    "generator": null,
    "feeds": [],
@@ -5661,7 +5675,7 @@
   }
  },
  "retr0.id": {
-  "checked": "2026-10-29T06:03:25Z",
+  "checked": "2026-11-28T07:20:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5685,7 +5699,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:25Z",
+   "checked": "2026-11-28T07:20:08Z",
    "title": "Retr0id",
    "generator": null,
    "feeds": [],
@@ -5695,7 +5709,7 @@
   }
  },
  "returntonow.net": {
-  "checked": "2026-10-29T06:03:28Z",
+  "checked": "2026-11-28T07:20:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5717,7 +5731,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:28Z",
+   "checked": "2026-11-28T07:20:12Z",
    "title": "ReturnToNow.net",
    "generator": null,
    "feeds": [],
@@ -5783,7 +5797,7 @@
   }
  },
  "reverendbayes.wordpress.com": {
-  "checked": "2026-10-29T06:03:31Z",
+  "checked": "2026-11-28T07:20:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5803,7 +5817,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:31Z",
+   "checked": "2026-11-28T07:20:15Z",
    "title": "Reverendbayes's Weblog | Just another WordPress.com weblog",
    "generator": "WordPress.com",
    "feeds": [
@@ -5863,16 +5877,16 @@
   }
  },
  "reviver.com": {
-  "checked": "2026-10-29T06:03:34Z",
+  "checked": "2026-11-28T07:20:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "143.204.204.5",
-    "143.204.204.70",
-    "143.204.204.103",
-    "143.204.204.119"
+    "52.84.127.28",
+    "52.84.127.80",
+    "52.84.127.84",
+    "52.84.127.88"
    ],
    "aaaa": [],
    "cname": null,
@@ -5890,7 +5904,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:34Z",
+   "checked": "2026-11-28T07:20:17Z",
    "title": "Reviver Digital License Plate Street Legal & DMV-Approved",
    "generator": null,
    "feeds": [],
@@ -5900,7 +5914,7 @@
   }
  },
  "revoke.cash": {
-  "checked": "2026-10-29T06:03:37Z",
+  "checked": "2026-11-28T07:20:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5928,7 +5942,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:37Z",
+   "checked": "2026-11-28T07:20:20Z",
    "title": "Revoke Your Token Approvals on Over 80 Networks | Revoke.cash",
    "generator": "Next.js",
    "feeds": [],
@@ -5938,7 +5952,7 @@
   }
  },
  "revolutiontruth.org": {
-  "checked": "2026-10-29T06:03:40Z",
+  "checked": "2026-11-28T07:20:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5961,7 +5975,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:40Z",
+   "checked": "2026-11-28T07:20:23Z",
    "title": "RevolutionTruth",
    "generator": null,
    "feeds": [],
@@ -5971,16 +5985,16 @@
   }
  },
  "rework.withgoogle.com": {
-  "checked": "2026-10-29T06:03:43Z",
+  "checked": "2026-11-28T07:20:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.214.81"
+    "142.250.189.145"
    ],
    "aaaa": [
-    "2607:f8b0:4009:80e::2011"
+    "2607:f8b0:4009:815::2011"
    ],
    "cname": null,
    "ns": [],
@@ -5992,7 +6006,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:43Z",
+   "checked": "2026-11-28T07:20:26Z",
    "title": "Google re:Work",
    "generator": null,
    "feeds": [
@@ -6008,7 +6022,7 @@
   }
  },
  "rfc.fyi": {
-  "checked": "2026-10-29T06:03:49Z",
+  "checked": "2026-11-28T07:20:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6038,7 +6052,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:49Z",
+   "checked": "2026-11-28T07:20:31Z",
    "title": "rfc.fyi",
    "generator": null,
    "feeds": [],
@@ -6048,7 +6062,7 @@
   }
  },
  "rfpose.csail.mit.edu": {
-  "checked": "2026-10-29T06:03:51Z",
+  "checked": "2026-11-28T07:20:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6067,7 +6081,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:51Z",
+   "checked": "2026-11-28T07:20:34Z",
    "title": "Through-Wall Human Pose Estimation Using Radio Signals",
    "generator": null,
    "feeds": [],
@@ -6077,7 +6091,7 @@
   }
  },
  "rhinostew.itch.io": {
-  "checked": "2026-10-29T06:03:54Z",
+  "checked": "2026-11-28T07:20:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6102,7 +6116,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:54Z",
+   "checked": "2026-11-28T07:20:36Z",
    "title": "Rhino Stew - itch.io",
    "generator": null,
    "feeds": [],
@@ -6164,7 +6178,7 @@
   }
  },
  "ricardodeazambuja.com": {
-  "checked": "2026-10-29T06:03:57Z",
+  "checked": "2026-11-28T07:20:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6191,7 +6205,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:03:57Z",
+   "checked": "2026-11-28T07:20:39Z",
    "title": "Ricardo's Place · Robotics, machine learning, or simply random thoughts!",
    "generator": null,
    "feeds": [
@@ -6207,7 +6221,7 @@
   }
  },
  "richard.stallman.usesthis.com": {
-  "checked": "2026-10-29T06:04:00Z",
+  "checked": "2026-11-28T07:20:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6226,7 +6240,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:04:00Z",
+   "checked": "2026-11-28T07:20:42Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6237,7 +6251,7 @@
   }
  },
  "richardkmiller.com": {
-  "checked": "2026-10-29T06:04:00Z",
+  "checked": "2026-11-28T07:20:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6263,7 +6277,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:04:00Z",
+   "checked": "2026-11-28T07:20:42Z",
    "title": "Richard K. Miller - Richard K Miller",
    "generator": "WordPress 7.1.2",
    "feeds": [
@@ -6284,7 +6298,7 @@
   }
  },
  "ricklepage.com": {
-  "checked": "2026-10-29T06:04:05Z",
+  "checked": "2026-11-28T07:20:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6306,9 +6320,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:04:05Z",
+   "checked": "2026-11-28T07:20:46Z",
    "title": "wonder and beauty",
-   "generator": "WordPress 7.0.8",
+   "generator": "WordPress 7.0.9",
    "feeds": [
     {
      "type": "rss",
@@ -6360,7 +6374,7 @@
   }
  },
  "rideweehoo.com": {
-  "checked": "2026-10-29T06:04:07Z",
+  "checked": "2026-11-28T07:20:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6385,7 +6399,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:04:07Z",
+   "checked": "2026-11-28T07:20:49Z",
    "title": "USA Weehoo Kid Bike Trailers | Trailer Bikes | Bicycle Trailers - Bike Trailers, Trailer Bikes, and Bicycle Trailers by Weehoo",
    "generator": null,
    "feeds": [
@@ -6401,7 +6415,7 @@
   }
  },
  "righto.com": {
-  "checked": "2026-10-29T06:04:10Z",
+  "checked": "2026-11-28T07:20:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6427,7 +6441,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:04:10Z",
+   "checked": "2026-11-28T07:20:52Z",
    "title": "Ken Shirriff's blog",
    "generator": "blogger",
    "feeds": [
@@ -6450,7 +6464,7 @@
   }
  },
  "ringling.libguides.com": {
-  "checked": "2026-10-29T06:04:12Z",
+  "checked": "2026-11-28T07:20:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6472,7 +6486,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:04:12Z",
+   "checked": "2026-11-28T07:20:53Z",
    "title": "Home - LibGuides at Ringling College of Art + Design",
    "generator": null,
    "feeds": [],
@@ -6482,7 +6496,7 @@
   }
  },
  "rinzewind.org": {
-  "checked": "2026-10-29T06:04:15Z",
+  "checked": "2026-11-28T07:20:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6504,7 +6518,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:04:15Z",
+   "checked": "2026-11-28T07:20:56Z",
    "title": "rinzewind.org: choose your language",
    "generator": null,
    "feeds": [],
@@ -6516,7 +6530,7 @@
   }
  },
  "rioterm.com": {
-  "checked": "2026-10-29T06:04:18Z",
+  "checked": "2026-11-28T07:20:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6541,7 +6555,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:04:18Z",
+   "checked": "2026-11-28T07:20:59Z",
    "title": "Meet Rio | Rio Terminal",
    "generator": "Docusaurus v3.10.2",
    "feeds": [
@@ -6562,7 +6576,7 @@
   }
  },
  "rippling.com": {
-  "checked": "2026-10-29T06:04:21Z",
+  "checked": "2026-11-28T07:21:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6574,14 +6588,14 @@
     "52.84.127.129"
    ],
    "aaaa": [
-    "2600:9000:2203:a00:e:72f2:cfc0:93a1",
-    "2600:9000:2203:9800:e:72f2:cfc0:93a1",
-    "2600:9000:2203:bc00:e:72f2:cfc0:93a1",
-    "2600:9000:2203:c600:e:72f2:cfc0:93a1",
-    "2600:9000:2203:d000:e:72f2:cfc0:93a1",
-    "2600:9000:2203:d400:e:72f2:cfc0:93a1",
-    "2600:9000:2203:dc00:e:72f2:cfc0:93a1",
-    "2600:9000:2203:f400:e:72f2:cfc0:93a1"
+    "2600:9000:2203:1400:e:72f2:cfc0:93a1",
+    "2600:9000:2203:2000:e:72f2:cfc0:93a1",
+    "2600:9000:2203:3800:e:72f2:cfc0:93a1",
+    "2600:9000:2203:5400:e:72f2:cfc0:93a1",
+    "2600:9000:2203:6000:e:72f2:cfc0:93a1",
+    "2600:9000:2203:b400:e:72f2:cfc0:93a1",
+    "2600:9000:2203:e200:e:72f2:cfc0:93a1",
+    "2600:9000:2203:f200:e:72f2:cfc0:93a1"
    ],
    "cname": null,
    "ns": [
@@ -6596,7 +6610,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:04:21Z",
+   "checked": "2026-11-28T07:21:02Z",
    "title": "Rippling: #1 Workforce Management System | HR, IT, Finance",
    "generator": null,
    "feeds": [],
@@ -6641,7 +6655,7 @@
   }
  },
  "ritholtz.com": {
-  "checked": "2026-10-29T06:04:23Z",
+  "checked": "2026-11-28T07:21:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6669,9 +6683,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:04:23Z",
+   "checked": "2026-11-28T07:21:05Z",
    "title": "The Big Picture - Macro Perspective on the Capital Markets, Economy, Geopolitics, Technology, and Digital Media",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -6685,14 +6699,14 @@
   }
  },
  "river-runner.samlearner.com": {
-  "checked": "2026-10-29T06:04:27Z",
+  "checked": "2026-11-28T07:21:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "66.33.60.129",
-    "76.76.21.22"
+    "66.33.60.35",
+    "76.76.21.123"
    ],
    "aaaa": [],
    "cname": "cname.vercel-dns.com",
@@ -6705,7 +6719,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:04:27Z",
+   "checked": "2026-11-28T07:21:07Z",
    "title": "River Runner",
    "generator": null,
    "feeds": [],
@@ -6715,7 +6729,7 @@
   }
  },
  "river4.smallpict.com": {
-  "checked": "2026-10-29T06:04:30Z",
+  "checked": "2026-11-28T07:21:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6735,7 +6749,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-29T06:04:30Z",
+   "checked": "2026-11-28T07:21:10Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6782,7 +6796,7 @@
   }
  },
  "riya.com": {
-  "checked": "2026-10-29T06:05:02Z",
+  "checked": "2026-11-28T07:21:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6805,7 +6819,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:05:02Z",
+   "checked": "2026-11-28T07:21:42Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6816,7 +6830,7 @@
   }
  },
  "rjlipton.wordpress.com": {
-  "checked": "2026-10-29T06:05:02Z",
+  "checked": "2026-11-28T07:21:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6836,7 +6850,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:05:02Z",
+   "checked": "2026-11-28T07:21:42Z",
    "title": "Gödel's Lost Letter and P=NP | a personal view of the theory of computation",
    "generator": null,
    "feeds": [
@@ -6857,7 +6871,7 @@
   }
  },
  "rjzaworski.com": {
-  "checked": "2026-10-29T06:05:06Z",
+  "checked": "2026-11-28T07:21:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6879,7 +6893,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:05:06Z",
+   "checked": "2026-11-28T07:21:46Z",
    "title": "RJ Zaworski",
    "generator": null,
    "feeds": [
@@ -6900,7 +6914,7 @@
   }
  },
  "rknight.me": {
-  "checked": "2026-10-29T06:05:09Z",
+  "checked": "2026-11-28T07:21:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6922,7 +6936,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:05:09Z",
+   "checked": "2026-11-28T07:21:49Z",
    "title": "Robb Knight",
    "generator": "Eleventy (Build Awesome) v4.0.0",
    "feeds": [
@@ -6952,7 +6966,7 @@
   }
  },
  "rmarsh.com": {
-  "checked": "2026-10-29T06:05:12Z",
+  "checked": "2026-11-28T07:21:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6975,7 +6989,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:05:12Z",
+   "checked": "2026-11-28T07:21:52Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6985,7 +6999,7 @@
   }
  },
  "rmg.co.uk": {
-  "checked": "2026-10-29T06:05:14Z",
+  "checked": "2026-11-28T07:21:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7010,7 +7024,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:05:14Z",
+   "checked": "2026-11-28T07:21:54Z",
    "title": "Royal Museums Greenwich | Home",
    "generator": "Drupal 11 (https://www.drupal.org)",
    "feeds": [],
@@ -7020,7 +7034,7 @@
   }
  },
  "rmondello.com": {
-  "checked": "2026-10-29T06:05:16Z",
+  "checked": "2026-11-28T07:21:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7045,9 +7059,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:05:16Z",
+   "checked": "2026-11-28T07:21:55Z",
    "title": "Ricky Mondello",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.4",
    "feeds": [
     {
      "type": "rss",
@@ -7068,7 +7082,7 @@
   }
  },
  "rmurphey.com": {
-  "checked": "2026-10-29T06:05:19Z",
+  "checked": "2026-11-28T07:21:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7094,7 +7108,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:05:19Z",
+   "checked": "2026-11-28T07:21:58Z",
    "title": "Rebecca Murphey",
    "generator": null,
    "feeds": [
@@ -7110,7 +7124,7 @@
   }
  },
  "roadandtrack.com": {
-  "checked": "2026-10-29T06:05:22Z",
+  "checked": "2026-11-28T07:22:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7137,7 +7151,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:05:22Z",
+   "checked": "2026-11-28T07:22:01Z",
    "title": "Road & Track: Car Reviews, News and Car Culture",
    "generator": null,
    "feeds": [],
@@ -7147,7 +7161,7 @@
   }
  },
  "roadid.com": {
-  "checked": "2026-10-29T06:05:24Z",
+  "checked": "2026-11-28T07:22:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7172,7 +7186,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:05:24Z",
+   "checked": "2026-11-28T07:22:03Z",
    "title": "ROAD iD - World Leaders in Runner ID, Cycling ID & Medical ID",
    "generator": null,
    "feeds": [],
@@ -7182,7 +7196,7 @@
   }
  },
  "roadtrip.glitch.me": {
-  "checked": "2026-10-29T06:05:27Z",
+  "checked": "2026-11-28T07:22:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7209,7 +7223,7 @@
    "status": 410
   },
   "home": {
-   "checked": "2026-10-29T06:05:27Z",
+   "checked": "2026-11-28T07:22:06Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7220,7 +7234,7 @@
   }
  },
  "rob.by": {
-  "checked": "2026-10-29T06:05:29Z",
+  "checked": "2026-11-28T07:22:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7242,7 +7256,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:05:29Z",
+   "checked": "2026-11-28T07:22:07Z",
    "title": "Willkommen – robby",
    "generator": null,
    "feeds": [],
@@ -7252,7 +7266,7 @@
   }
  },
  "robert-glaser.de": {
-  "checked": "2026-10-29T06:05:36Z",
+  "checked": "2026-11-28T07:22:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7276,9 +7290,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:05:36Z",
+   "checked": "2026-11-28T07:22:14Z",
    "title": "Robert Glaser",
-   "generator": "Ghost 6.73",
+   "generator": "Ghost 6.80",
    "feeds": [
     {
      "type": "rss",
@@ -7370,7 +7384,7 @@
   }
  },
  "robertovitillo.com": {
-  "checked": "2026-10-29T06:05:39Z",
+  "checked": "2026-11-28T07:22:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7394,7 +7408,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:05:39Z",
+   "checked": "2026-11-28T07:22:17Z",
    "title": "Roberto's blog",
    "generator": "Hugo 0.124.1",
    "feeds": [
@@ -7410,7 +7424,7 @@
   }
  },
  "robertspeer.com": {
-  "checked": "2026-10-29T06:05:42Z",
+  "checked": "2026-11-28T07:22:20Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7437,7 +7451,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'robertspeer.com'"
   },
   "home": {
-   "checked": "2026-10-29T06:05:42Z",
+   "checked": "2026-11-28T07:22:20Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7448,7 +7462,7 @@
   }
  },
  "robertsrules.com": {
-  "checked": "2026-10-29T06:05:44Z",
+  "checked": "2026-11-28T07:22:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7470,9 +7484,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:05:44Z",
+   "checked": "2026-11-28T07:22:21Z",
    "title": "Robert's Rules of Order | The Official Website of Rober'ts Rules of Order",
-   "generator": "WordPress 7.1.4",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -7491,7 +7505,7 @@
   }
  },
  "robfelty.com": {
-  "checked": "2026-10-29T06:05:47Z",
+  "checked": "2026-11-28T07:22:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7514,9 +7528,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:05:47Z",
+   "checked": "2026-11-28T07:22:25Z",
    "title": "robfelty.com",
-   "generator": "WordPress 7.1.4",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -7540,7 +7554,7 @@
   }
  },
  "robgalbraith.com": {
-  "checked": "2026-10-29T06:05:50Z",
+  "checked": "2026-11-28T07:22:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7563,7 +7577,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-29T06:05:50Z",
+   "checked": "2026-11-28T07:22:39Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7574,13 +7588,13 @@
   }
  },
  "robida.net": {
-  "checked": "2026-10-29T06:06:21Z",
+  "checked": "2026-11-28T07:23:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "138.197.25.174"
+    "2.31.124.161"
    ],
    "aaaa": [],
    "cname": null,
@@ -7593,33 +7607,17 @@
   },
   "https": {
    "reachable": true,
-   "redirects_http": true,
+   "redirects_http": false,
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:06:21Z",
-   "title": "Beto Dealmeida",
+   "checked": "2026-11-28T07:23:10Z",
+   "title": "Robida.net",
    "generator": null,
-   "feeds": [
-    {
-     "type": "json",
-     "url": "https://robida.net/feed.json",
-     "title": "JSON Feed"
-    },
-    {
-     "type": "rss",
-     "url": "https://robida.net/feed.xml",
-     "title": "RSS Feed"
-    },
-    {
-     "type": "atom",
-     "url": "https://robida.net/feed.atom",
-     "title": "Atom Feed"
-    }
-   ],
+   "feeds": [],
    "hcard": true,
    "rel_me": [],
-   "webmention": "https://robida.net/webmention"
+   "webmention": null
   }
  },
  "robinrendle.com": {
@@ -7758,7 +7756,7 @@
   }
  },
  "robmathers.github.io": {
-  "checked": "2026-10-29T06:06:24Z",
+  "checked": "2026-11-28T07:23:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7785,7 +7783,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-29T06:06:24Z",
+   "checked": "2026-11-28T07:23:14Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7796,7 +7794,7 @@
   }
  },
  "robohash.org": {
-  "checked": "2026-10-29T06:06:26Z",
+  "checked": "2026-11-28T07:23:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7822,7 +7820,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:06:26Z",
+   "checked": "2026-11-28T07:23:15Z",
    "title": "RoboHash",
    "generator": null,
    "feeds": [],
@@ -7832,7 +7830,7 @@
   }
  },
  "robots.thoughtbot.com": {
-  "checked": "2026-10-29T06:06:28Z",
+  "checked": "2026-11-28T07:23:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7857,7 +7855,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:06:28Z",
+   "checked": "2026-11-28T07:23:18Z",
    "title": "Giant Robots: thoughtbot Blog",
    "generator": null,
    "feeds": [
@@ -7875,7 +7873,7 @@
   }
  },
  "robrhinehart.com": {
-  "checked": "2026-10-29T06:06:29Z",
+  "checked": "2026-11-28T07:23:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7899,7 +7897,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:06:29Z",
+   "checked": "2026-11-28T07:23:19Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7909,7 +7907,7 @@
   }
  },
  "robsanheim.com": {
-  "checked": "2026-10-29T06:06:32Z",
+  "checked": "2026-11-28T07:23:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7931,9 +7929,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:06:32Z",
+   "checked": "2026-11-28T07:23:22Z",
    "title": "Home",
-   "generator": "WordPress 6.7.11",
+   "generator": "WordPress 6.7.12",
    "feeds": [
     {
      "type": "rss",
@@ -8006,7 +8004,7 @@
   }
  },
  "roc.camera": {
-  "checked": "2026-10-29T06:06:37Z",
+  "checked": "2026-11-28T07:23:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8032,7 +8030,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:06:37Z",
+   "checked": "2026-11-28T07:23:27Z",
    "title": "Roc Camera",
    "generator": "Astro v5.18.1",
    "feeds": [],
@@ -8042,7 +8040,7 @@
   }
  },
  "rocketcharts.com": {
-  "checked": "2026-10-29T06:06:40Z",
+  "checked": "2026-11-28T07:23:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8063,24 +8061,23 @@
    "mx": false
   },
   "https": {
-   "reachable": false,
+   "reachable": true,
    "redirects_http": true,
-   "status": null,
-   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+   "status": 403
   },
   "home": {
-   "checked": "2026-10-29T06:06:40Z",
+   "checked": "2026-11-28T07:23:30Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "tls: UNEXPECTED_EOF_WHILE_READING"
+   "error": "HTTP 403 (Cloudflare challenge)"
   }
  },
  "rocketpool.net": {
-  "checked": "2026-10-29T06:06:42Z",
+  "checked": "2026-11-28T07:23:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8108,7 +8105,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:06:42Z",
+   "checked": "2026-11-28T07:23:32Z",
    "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
    "generator": null,
    "feeds": [],
@@ -8118,7 +8115,7 @@
   }
  },
  "rocketsoftware.com": {
-  "checked": "2026-10-29T06:06:44Z",
+  "checked": "2026-11-28T07:23:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8145,7 +8142,7 @@
    "error": "tls: TLS_ALERT_HANDSHAKE_FAILURE"
   },
   "home": {
-   "checked": "2026-10-29T06:06:44Z",
+   "checked": "2026-11-28T07:23:34Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8192,7 +8189,7 @@
   }
  },
  "rockstarprogrammer.org": {
-  "checked": "2026-10-29T06:06:46Z",
+  "checked": "2026-11-28T07:23:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8215,7 +8212,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:06:46Z",
+   "checked": "2026-11-28T07:23:35Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8226,7 +8223,7 @@
   }
  },
  "roddenberry.x.io": {
-  "checked": "2026-10-29T06:06:46Z",
+  "checked": "2026-11-28T07:23:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8249,7 +8246,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:06:46Z",
+   "checked": "2026-11-28T07:23:36Z",
    "title": "Roddenberry Archive",
    "generator": null,
    "feeds": [],
@@ -8259,16 +8256,16 @@
   }
  },
  "rode.com": {
-  "checked": "2026-10-29T06:06:49Z",
+  "checked": "2026-11-28T07:23:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "32.189.141.50",
-    "35.84.167.23",
-    "52.13.224.137",
-    "52.34.2.142"
+    "34.213.157.251",
+    "34.214.252.82",
+    "54.69.167.12",
+    "184.35.86.48"
    ],
    "aaaa": [],
    "cname": null,
@@ -8286,7 +8283,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:06:49Z",
+   "checked": "2026-11-28T07:23:38Z",
    "title": "RØDE (United States)",
    "generator": null,
    "feeds": [],
@@ -8296,7 +8293,7 @@
   }
  },
  "roelsworld.eu": {
-  "checked": "2026-10-29T06:06:55Z",
+  "checked": "2026-11-28T07:23:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8322,7 +8319,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:06:55Z",
+   "checked": "2026-11-28T07:23:44Z",
    "title": "Roel's World Blog - Music, Arts and more - Welcome!",
    "generator": null,
    "feeds": [],
@@ -8364,7 +8361,7 @@
   }
  },
  "rogermartin.medium.com": {
-  "checked": "2026-10-29T06:06:58Z",
+  "checked": "2026-11-28T07:23:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8387,7 +8384,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:06:58Z",
+   "checked": "2026-11-28T07:23:47Z",
    "title": "Medium",
    "generator": null,
    "feeds": [
@@ -8403,7 +8400,7 @@
   }
  },
  "rogersbacon.substack.com": {
-  "checked": "2026-10-29T06:07:02Z",
+  "checked": "2026-11-28T07:23:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8426,7 +8423,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:07:02Z",
+   "checked": "2026-11-28T07:23:52Z",
    "title": "Secretorum | Roger’s Bacon | Substack",
    "generator": null,
    "feeds": [
@@ -8442,7 +8439,7 @@
   }
  },
  "rogueamoeba.com": {
-  "checked": "2026-10-29T06:07:05Z",
+  "checked": "2026-11-28T07:23:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8464,7 +8461,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:07:05Z",
+   "checked": "2026-11-28T07:23:54Z",
    "title": "Rogue Amoeba | Quality Audio Software for MacOS",
    "generator": null,
    "feeds": [],
@@ -8474,7 +8471,7 @@
   }
  },
  "rokenbokeducation.org": {
-  "checked": "2026-10-29T06:07:08Z",
+  "checked": "2026-11-28T07:23:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8501,7 +8498,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:07:08Z",
+   "checked": "2026-11-28T07:23:57Z",
    "title": "Kid Spark Education",
    "generator": "HubSpot",
    "feeds": [],
@@ -8511,7 +8508,7 @@
   }
  },
  "rolandschorr.com": {
-  "checked": "2026-10-29T06:07:09Z",
+  "checked": "2026-11-28T07:23:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8537,9 +8534,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:07:09Z",
+   "checked": "2026-11-28T07:23:59Z",
    "title": "Home - Roland Schorr & Tower",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [
     {
      "type": "rss",
@@ -8609,13 +8606,13 @@
   }
  },
  "rooms.xyz": {
-  "checked": "2026-10-29T06:07:13Z",
+  "checked": "2026-11-28T07:24:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "216.150.1.65",
+    "216.150.1.129",
     "216.150.16.1"
    ],
    "aaaa": [],
@@ -8632,7 +8629,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:07:13Z",
+   "checked": "2026-11-28T07:24:03Z",
    "title": "Rooms®",
    "generator": null,
    "feeds": [],
@@ -8642,7 +8639,7 @@
   }
  },
  "roots.io": {
-  "checked": "2026-10-29T06:07:15Z",
+  "checked": "2026-11-28T07:24:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8670,7 +8667,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:07:15Z",
+   "checked": "2026-11-28T07:24:05Z",
    "title": "Roots | Modern WordPress Development",
    "generator": null,
    "feeds": [],
@@ -8680,7 +8677,7 @@
   }
  },
  "rootstrikers.org": {
-  "checked": "2026-10-29T06:07:18Z",
+  "checked": "2026-11-28T07:24:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8703,7 +8700,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-29T06:07:18Z",
+   "checked": "2026-11-28T07:24:08Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8714,7 +8711,7 @@
   }
  },
  "rortybomb.wordpress.com": {
-  "checked": "2026-10-29T06:07:35Z",
+  "checked": "2026-11-28T07:24:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8734,7 +8731,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:07:35Z",
+   "checked": "2026-11-28T07:24:24Z",
    "title": "Rortybomb",
    "generator": "WordPress.com",
    "feeds": [
@@ -8820,7 +8817,7 @@
   }
  },
  "rosspettit.com": {
-  "checked": "2026-10-29T06:07:38Z",
+  "checked": "2026-11-28T07:24:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8849,7 +8846,7 @@
    "error": "tls: UNEXPECTED_EOF_WHILE_READING"
   },
   "home": {
-   "checked": "2026-10-29T06:07:38Z",
+   "checked": "2026-11-28T07:24:27Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -8860,7 +8857,7 @@
   }
  },
  "rosstraining.com": {
-  "checked": "2026-10-29T06:07:39Z",
+  "checked": "2026-11-28T07:24:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8882,9 +8879,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:07:39Z",
+   "checked": "2026-11-28T07:24:29Z",
    "title": "RossTraining.com - Low-tech, high-effect training solutions for beast mode aficionados and fitness enthusiasts",
-   "generator": "WordPress 7.1.4",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -8903,7 +8900,7 @@
   }
  },
  "roughjs.com": {
-  "checked": "2026-10-29T06:07:47Z",
+  "checked": "2026-11-28T07:24:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -8928,7 +8925,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:07:47Z",
+   "checked": "2026-11-28T07:24:36Z",
    "title": "Rough.js",
    "generator": null,
    "feeds": [],
@@ -9002,7 +8999,7 @@
   }
  },
  "roundcube.net": {
-  "checked": "2026-10-29T06:07:50Z",
+  "checked": "2026-11-28T07:24:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9028,7 +9025,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:07:50Z",
+   "checked": "2026-11-28T07:24:39Z",
    "title": "Roundcube - Free and Open Source Webmail Software",
    "generator": null,
    "feeds": [
@@ -9079,7 +9076,7 @@
   }
  },
  "routine.co": {
-  "checked": "2026-10-29T06:07:53Z",
+  "checked": "2026-11-28T07:24:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9102,7 +9099,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:07:53Z",
+   "checked": "2026-11-28T07:24:42Z",
    "title": "One App for Tasks, Calendar & Notes, Powered by AI · Routine",
    "generator": null,
    "feeds": [],
@@ -9112,7 +9109,7 @@
   }
  },
  "routinehub.co": {
-  "checked": "2026-10-29T06:07:57Z",
+  "checked": "2026-11-28T07:24:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9138,7 +9135,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:07:57Z",
+   "checked": "2026-11-28T07:24:45Z",
    "title": "RoutineHub — Apple Shortcuts, AI Prompts, Skills & Plugins",
    "generator": null,
    "feeds": [],
@@ -9191,16 +9188,16 @@
   }
  },
  "rows.com": {
-  "checked": "2026-10-29T06:07:59Z",
+  "checked": "2026-11-28T07:24:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "13.32.164.9",
-    "13.32.164.18",
-    "13.32.164.55",
-    "13.32.164.107"
+    "18.160.181.10",
+    "18.160.181.65",
+    "18.160.181.82",
+    "18.160.181.104"
    ],
    "aaaa": [],
    "cname": null,
@@ -9218,7 +9215,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:07:59Z",
+   "checked": "2026-11-28T07:24:48Z",
    "title": "Rows - Your new AI Data Analyst",
    "generator": null,
    "feeds": [],
@@ -9228,7 +9225,7 @@
   }
  },
  "rowsncolumns.app": {
-  "checked": "2026-10-29T06:08:05Z",
+  "checked": "2026-11-28T07:24:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9252,7 +9249,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:08:05Z",
+   "checked": "2026-11-28T07:24:53Z",
    "title": "Home - Rows n' Columns",
    "generator": null,
    "feeds": [],
@@ -9299,7 +9296,7 @@
   }
  },
  "royaleapi.com": {
-  "checked": "2026-10-29T06:08:08Z",
+  "checked": "2026-11-28T07:24:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9327,7 +9324,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-29T06:08:08Z",
+   "checked": "2026-11-28T07:24:56Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9338,37 +9335,39 @@
   }
  },
  "rqarcade.com": {
-  "checked": "2026-10-29T06:08:10Z",
+  "checked": "2026-11-28T07:24:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "207.57.204.72"
+    "104.21.10.90",
+    "172.67.162.192"
    ],
-   "aaaa": [],
-   "cname": "www.rqarcade.com",
+   "aaaa": [
+    "2606:4700:3030::ac43:a2c0",
+    "2606:4700:3037::6815:a5a"
+   ],
+   "cname": null,
    "ns": [
-    "a.share-dns.com",
-    "b.share-dns.net"
+    "bingo.ns.cloudflare.com",
+    "micah.ns.cloudflare.com"
    ],
    "mx": false
   },
   "https": {
-   "reachable": false,
-   "redirects_http": false,
-   "status": null,
-   "error": "timeout"
+   "reachable": true,
+   "redirects_http": true,
+   "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:08:10Z",
-   "title": null,
+   "checked": "2026-11-28T07:24:59Z",
+   "title": "ดูบอลสดวันนี้ | เชลซี พบ ลีดส์ ยูไนเต็ด",
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null,
-   "error": "timeout"
+   "webmention": null
   }
  },
  "rqlite.io": {
@@ -9413,7 +9412,7 @@
   }
  },
  "rredc.nrel.gov": {
-  "checked": "2026-10-29T06:08:42Z",
+  "checked": "2026-11-28T07:25:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9431,7 +9430,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:08:42Z",
+   "checked": "2026-11-28T07:25:03Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9442,7 +9441,7 @@
   }
  },
  "rrtrack.com": {
-  "checked": "2026-10-29T06:08:42Z",
+  "checked": "2026-11-28T07:25:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9464,7 +9463,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:08:42Z",
+   "checked": "2026-11-28T07:25:03Z",
    "title": "RR-Track home",
    "generator": "NetObjects Fusion 9 for Windows",
    "feeds": [],
@@ -9474,7 +9473,7 @@
   }
  },
  "rsapkf.org": {
-  "checked": "2026-10-29T06:08:45Z",
+  "checked": "2026-11-28T07:25:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9489,39 +9488,29 @@
    ],
    "cname": null,
    "ns": [
-    "chase.ns.cloudflare.com",
-    "paloma.ns.cloudflare.com"
+    "dayana.ns.cloudflare.com",
+    "merlin.ns.cloudflare.com"
    ],
-   "mx": true
+   "mx": false
   },
   "https": {
    "reachable": true,
-   "redirects_http": true,
-   "status": 200
+   "redirects_http": false,
+   "status": 403
   },
   "home": {
-   "checked": "2026-10-29T06:08:45Z",
-   "title": "Online Casino UAE: Top 10 Best Emirates Sites",
-   "generator": "WordPress 7.1.3",
-   "feeds": [
-    {
-     "type": "rss",
-     "url": "https://www.onlinecasinosemirates.net/feed/",
-     "title": "onlinecasinosemirates.net » Feed"
-    },
-    {
-     "type": "rss",
-     "url": "https://www.onlinecasinosemirates.net/comments/feed/",
-     "title": "onlinecasinosemirates.net » Comments Feed"
-    }
-   ],
+   "checked": "2026-11-28T07:25:05Z",
+   "title": null,
+   "generator": null,
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "HTTP 403"
   }
  },
  "rslstandard.org": {
-  "checked": "2026-10-29T06:08:49Z",
+  "checked": "2026-11-28T07:25:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9547,7 +9536,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:08:49Z",
+   "checked": "2026-11-28T07:25:07Z",
    "title": "RSL: Really Simple Licensing",
    "generator": "VitePress v1.6.4",
    "feeds": [],
@@ -9557,7 +9546,7 @@
   }
  },
  "rsms.me": {
-  "checked": "2026-10-29T06:08:52Z",
+  "checked": "2026-11-28T07:25:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9583,7 +9572,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:08:52Z",
+   "checked": "2026-11-28T07:25:09Z",
    "title": "rsms",
    "generator": null,
    "feeds": [
@@ -9599,47 +9588,37 @@
   }
  },
  "rsnapshot.org": {
-  "checked": "2026-10-29T06:08:55Z",
+  "checked": "2026-11-28T07:25:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
-   "resolves": true,
-   "a": [
-    "185.199.108.153"
-   ],
+   "resolves": false,
+   "a": [],
    "aaaa": [],
    "cname": null,
-   "ns": [
-    "ns1.afraid.org",
-    "ns2.afraid.org",
-    "ns3.afraid.org",
-    "ns4.afraid.org"
-   ],
-   "mx": true
+   "ns": [],
+   "mx": false,
+   "error": "NXDOMAIN"
   },
   "https": {
-   "reachable": true,
-   "redirects_http": true,
-   "status": 200
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:08:55Z",
-   "title": "rsnapshot | rsnapshot",
+   "checked": "2026-11-28T07:25:12Z",
+   "title": null,
    "generator": null,
-   "feeds": [
-    {
-     "type": "atom",
-     "url": "http://rsnapshot.org/feed.xml",
-     "title": "rsnapshot"
-    }
-   ],
+   "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "does not resolve"
   }
  },
  "rss.app": {
-  "checked": "2026-10-29T06:08:57Z",
+  "checked": "2026-11-28T07:25:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9662,7 +9641,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:08:57Z",
+   "checked": "2026-11-28T07:25:12Z",
    "title": "RSS Feed Generator, Widgets & Bots: Web & Social feeds | RSS.app",
    "generator": null,
    "feeds": [],
@@ -9672,7 +9651,7 @@
   }
  },
  "rss.cloutbot.app": {
-  "checked": "2026-10-29T06:09:00Z",
+  "checked": "2026-11-28T07:25:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9691,7 +9670,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:09:00Z",
+   "checked": "2026-11-28T07:25:15Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9702,7 +9681,7 @@
   }
  },
  "rss.diffbot.com": {
-  "checked": "2026-10-29T06:09:00Z",
+  "checked": "2026-11-28T07:25:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9721,7 +9700,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:09:00Z",
+   "checked": "2026-11-28T07:25:15Z",
    "title": "RSS Anything",
    "generator": null,
    "feeds": [],
@@ -9731,7 +9710,7 @@
   }
  },
  "rss.nostr.band": {
-  "checked": "2026-10-29T06:09:04Z",
+  "checked": "2026-11-28T07:25:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9750,7 +9729,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:09:04Z",
+   "checked": "2026-11-28T07:25:19Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9761,7 +9740,7 @@
   }
  },
  "rss.slashdot.org": {
-  "checked": "2026-10-29T06:09:04Z",
+  "checked": "2026-11-28T07:25:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9781,7 +9760,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:09:04Z",
+   "checked": "2026-11-28T07:25:19Z",
    "title": "Slashdot: News for nerds, stuff that matters, & software",
    "generator": null,
    "feeds": [
@@ -9799,7 +9778,7 @@
   }
  },
  "rss.social": {
-  "checked": "2026-10-29T06:09:08Z",
+  "checked": "2026-11-28T07:25:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9825,7 +9804,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:09:08Z",
+   "checked": "2026-11-28T07:25:23Z",
    "title": "RSS.Social",
    "generator": null,
    "feeds": [],
@@ -9835,7 +9814,7 @@
   }
  },
  "rssbox.herokuapp.com": {
-  "checked": "2026-10-29T06:09:11Z",
+  "checked": "2026-11-28T07:25:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9857,7 +9836,7 @@
    "status": 503
   },
   "home": {
-   "checked": "2026-10-29T06:09:11Z",
+   "checked": "2026-11-28T07:25:26Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9868,7 +9847,7 @@
   }
  },
  "rsslookup.com": {
-  "checked": "2026-10-29T06:09:33Z",
+  "checked": "2026-11-28T07:25:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9894,7 +9873,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:09:33Z",
+   "checked": "2026-11-28T07:25:48Z",
    "title": "RSS Lookup - Find RSS feeds on any URL",
    "generator": null,
    "feeds": [],
@@ -9904,7 +9883,7 @@
   }
  },
  "rssmailer.app": {
-  "checked": "2026-10-29T06:09:35Z",
+  "checked": "2026-11-28T07:25:49Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9923,7 +9902,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:09:35Z",
+   "checked": "2026-11-28T07:25:49Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -9934,7 +9913,7 @@
   }
  },
  "rssrssrssrss.com": {
-  "checked": "2026-10-29T06:09:35Z",
+  "checked": "2026-11-28T07:25:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -9960,7 +9939,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:09:35Z",
+   "checked": "2026-11-28T07:25:50Z",
    "title": "rssrssrssrss - Combine Multiple RSS Feeds into One",
    "generator": null,
    "feeds": [],
@@ -10048,7 +10027,7 @@
   }
  },
  "rt.live": {
-  "checked": "2026-10-29T06:09:38Z",
+  "checked": "2026-11-28T07:25:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10071,7 +10050,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:09:38Z",
+   "checked": "2026-11-28T07:25:52Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -10081,7 +10060,7 @@
   }
  },
  "rtpg.co": {
-  "checked": "2026-10-29T06:09:41Z",
+  "checked": "2026-11-28T07:25:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10105,7 +10084,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:09:41Z",
+   "checked": "2026-11-28T07:25:55Z",
    "title": "Raphael",
    "generator": null,
    "feeds": [
@@ -10121,13 +10100,13 @@
   }
  },
  "rubbernetapp.com": {
-  "checked": "2026-10-29T06:09:44Z",
+  "checked": "2026-11-28T07:25:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "192.157.56.142"
+    "192.157.56.139"
    ],
    "aaaa": [],
    "cname": null,
@@ -10143,7 +10122,7 @@
    "status": 401
   },
   "home": {
-   "checked": "2026-10-29T06:09:44Z",
+   "checked": "2026-11-28T07:25:58Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -10154,7 +10133,7 @@
   }
  },
  "ruben.substack.com": {
-  "checked": "2026-10-29T06:09:46Z",
+  "checked": "2026-11-28T07:26:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10177,7 +10156,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:09:46Z",
+   "checked": "2026-11-28T07:26:00Z",
    "title": "How to AI | Ruben Hassid | Substack",
    "generator": null,
    "feeds": [
@@ -10193,7 +10172,7 @@
   }
  },
  "ruben.verborgh.org": {
-  "checked": "2026-10-29T06:09:48Z",
+  "checked": "2026-11-28T07:26:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10216,7 +10195,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:09:48Z",
+   "checked": "2026-11-28T07:26:02Z",
    "title": "Ruben Verborgh – Chief Executive Hallucinator",
    "generator": null,
    "feeds": [
@@ -10232,7 +10211,7 @@
   }
  },
  "rubular.com": {
-  "checked": "2026-10-29T06:09:51Z",
+  "checked": "2026-11-28T07:26:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10258,7 +10237,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:09:51Z",
+   "checked": "2026-11-28T07:26:05Z",
    "title": "Rubular: a Ruby regular expression editor",
    "generator": null,
    "feeds": [],
@@ -10268,7 +10247,7 @@
   }
  },
  "ruby-lang.org": {
-  "checked": "2026-10-29T06:09:54Z",
+  "checked": "2026-11-28T07:26:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10293,7 +10272,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:09:54Z",
+   "checked": "2026-11-28T07:26:07Z",
    "title": "Ruby Programming Language",
    "generator": null,
    "feeds": [],
@@ -10303,7 +10282,7 @@
   }
  },
  "ruby4kids.com": {
-  "checked": "2026-10-29T06:09:55Z",
+  "checked": "2026-11-28T07:26:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10325,7 +10304,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:09:55Z",
+   "checked": "2026-11-28T07:26:09Z",
    "title": "ruby4kids.com",
    "generator": null,
    "feeds": [],
@@ -10335,14 +10314,14 @@
   }
  },
  "rubyhack.ai": {
-  "checked": "2026-10-29T06:09:57Z",
+  "checked": "2026-11-28T07:26:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "64.29.17.65",
-    "216.198.79.1"
+    "216.198.79.1",
+    "216.198.79.65"
    ],
    "aaaa": [],
    "cname": null,
@@ -10358,7 +10337,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:09:57Z",
+   "checked": "2026-11-28T07:26:10Z",
    "title": "OpenAI agents carried out an undisclosed cyber-attack on RubyGems",
    "generator": null,
    "feeds": [],
@@ -10368,7 +10347,7 @@
   }
  },
  "rubyonrails.org": {
-  "checked": "2026-10-29T06:10:00Z",
+  "checked": "2026-11-28T07:26:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10390,14 +10369,14 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:10:00Z",
+   "checked": "2026-11-28T07:26:13Z",
    "title": "Ruby on Rails: Accelerate your agents with convention over configuration",
    "generator": null,
    "feeds": [
     {
      "type": "rss",
      "url": "https://rubyonrails.org/feed.xml",
-     "title": "The official Ruby on Rails: Compress the complexity of modern web apps blog"
+     "title": "The official Ruby on Rails: Accelerate your agents with convention over configuration blog"
     }
    ],
    "hcard": false,
@@ -10406,7 +10385,7 @@
   }
  },
  "rudism.com": {
-  "checked": "2026-10-29T06:10:02Z",
+  "checked": "2026-11-28T07:26:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10430,7 +10409,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:10:02Z",
+   "checked": "2026-11-28T07:26:16Z",
    "title": "Rudis Muiznieks",
    "generator": null,
    "feeds": [],
@@ -10442,7 +10421,7 @@
   }
  },
  "rufposten.de": {
-  "checked": "2026-10-29T06:10:05Z",
+  "checked": "2026-11-28T07:26:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10467,9 +10446,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:10:05Z",
+   "checked": "2026-11-28T07:26:18Z",
    "title": "Rufposten | Text. Bild. Ton. Das Weblog zum multimedialen Journalismus.",
-   "generator": "WordPress 7.1.4",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -10490,7 +10469,7 @@
   }
  },
  "ruk.ca": {
-  "checked": "2026-10-29T06:10:14Z",
+  "checked": "2026-11-28T07:26:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10513,7 +10492,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:10:14Z",
+   "checked": "2026-11-28T07:26:25Z",
    "title": "Peter Rukavina's Blog",
    "generator": null,
    "feeds": [],
@@ -10534,7 +10513,7 @@
   }
  },
  "rumorsontheinternets.org": {
-  "checked": "2026-10-29T06:10:18Z",
+  "checked": "2026-11-28T07:26:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10558,7 +10537,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:10:18Z",
+   "checked": "2026-11-28T07:26:29Z",
    "title": "Private Site",
    "generator": null,
    "feeds": [],
@@ -10568,7 +10547,7 @@
   }
  },
  "run.house": {
-  "checked": "2026-10-29T06:10:21Z",
+  "checked": "2026-11-28T07:26:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10595,7 +10574,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:10:21Z",
+   "checked": "2026-11-28T07:26:32Z",
    "title": "GitHub - run-house/kubetorch: Distribute and run AI workloads on Kubernetes magically in Python, like PyTorch for ML infra. · GitHub",
    "generator": null,
    "feeds": [],
@@ -10605,16 +10584,16 @@
   }
  },
  "rundeck.org": {
-  "checked": "2026-10-29T06:10:24Z",
+  "checked": "2026-11-28T07:26:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "18.154.110.28",
-    "18.154.110.50",
-    "18.154.110.71",
-    "18.154.110.73"
+    "99.84.203.52",
+    "99.84.203.60",
+    "99.84.203.71",
+    "99.84.203.98"
    ],
    "aaaa": [],
    "cname": null,
@@ -10632,7 +10611,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:10:24Z",
+   "checked": "2026-11-28T07:26:35Z",
    "title": "Rundeck Runbook Automation",
    "generator": "HubSpot",
    "feeds": [],
@@ -10642,7 +10621,7 @@
   }
  },
  "runpyxl.com": {
-  "checked": "2026-10-29T06:10:28Z",
+  "checked": "2026-11-28T07:26:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10664,7 +10643,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:10:28Z",
+   "checked": "2026-11-28T07:26:38Z",
    "title": "RunPyXL - Python, on hardware.",
    "generator": null,
    "feeds": [],
@@ -10674,7 +10653,7 @@
   }
  },
  "rushter.com": {
-  "checked": "2026-10-29T06:10:31Z",
+  "checked": "2026-11-28T07:26:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10700,7 +10679,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:10:31Z",
+   "checked": "2026-11-28T07:26:41Z",
    "title": "Artem Golubin (rushter)",
    "generator": null,
    "feeds": [
@@ -10716,7 +10695,7 @@
   }
  },
  "russellreynolds.com": {
-  "checked": "2026-10-29T06:10:34Z",
+  "checked": "2026-11-28T07:26:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10738,7 +10717,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:10:34Z",
+   "checked": "2026-11-28T07:26:44Z",
    "title": "Your Leadership Challenges, Solved | Russell Reynolds Associates",
    "generator": null,
    "feeds": [],
@@ -10748,7 +10727,7 @@
   }
  },
  "rust-gpu.github.io": {
-  "checked": "2026-10-29T06:10:40Z",
+  "checked": "2026-11-28T07:26:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10775,7 +10754,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:10:40Z",
+   "checked": "2026-11-28T07:26:51Z",
    "title": "Rust GPU",
    "generator": "Docusaurus v3.8.1",
    "feeds": [
@@ -10796,7 +10775,7 @@
   }
  },
  "ruv.is": {
-  "checked": "2026-10-29T06:10:42Z",
+  "checked": "2026-11-28T07:26:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10822,7 +10801,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:10:42Z",
+   "checked": "2026-11-28T07:26:53Z",
    "title": "RÚV.is",
    "generator": null,
    "feeds": [],
@@ -10832,7 +10811,7 @@
   }
  },
  "ruwix.com": {
-  "checked": "2026-10-29T06:10:45Z",
+  "checked": "2026-11-28T07:26:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10858,7 +10837,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:10:45Z",
+   "checked": "2026-11-28T07:26:54Z",
    "title": "Rubik's Cube and Twisty Puzzle Wiki - Ruwix",
    "generator": null,
    "feeds": [],
@@ -10868,7 +10847,7 @@
   }
  },
  "ryan.boren.me": {
-  "checked": "2026-10-29T06:10:48Z",
+  "checked": "2026-11-28T07:26:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10888,7 +10867,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-29T06:10:48Z",
+   "checked": "2026-11-28T07:26:58Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -10899,7 +10878,7 @@
   }
  },
  "ryanberg.co": {
-  "checked": "2026-10-29T06:11:05Z",
+  "checked": "2026-11-28T07:27:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -10920,7 +10899,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:11:05Z",
+   "checked": "2026-11-28T07:27:14Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -11070,7 +11049,7 @@
   }
  },
  "ryanj.substack.com": {
-  "checked": "2026-10-29T06:11:05Z",
+  "checked": "2026-11-28T07:27:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11093,7 +11072,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:11:05Z",
+   "checked": "2026-11-28T07:27:14Z",
    "title": "Culdesac & Ebikes | Ryan Johnson | Substack",
    "generator": null,
    "feeds": [
@@ -11109,7 +11088,7 @@
   }
  },
  "rys.io": {
-  "checked": "2026-10-29T06:11:09Z",
+  "checked": "2026-11-28T07:27:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -11134,7 +11113,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:11:09Z",
+   "checked": "2026-11-28T07:27:18Z",
    "title": "Songs on the Security of Networks",
    "generator": "Nikola (getnikola.com)",
    "feeds": [

@@ -1,6 +1,6 @@
 {
  "s2.q4cdn.com": {
-  "checked": "2026-10-29T06:11:17Z",
+  "checked": "2026-11-28T07:27:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -27,7 +27,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-29T06:11:17Z",
+   "checked": "2026-11-28T07:27:26Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -38,7 +38,7 @@
   }
  },
  "s2designinteractive.com": {
-  "checked": "2026-10-29T06:11:19Z",
+  "checked": "2026-11-28T07:27:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -61,7 +61,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:11:19Z",
+   "checked": "2026-11-28T07:27:27Z",
    "title": "Steve Sutherland",
    "generator": null,
    "feeds": [
@@ -77,20 +77,20 @@
   }
  },
  "s3.amazonaws.com": {
-  "checked": "2026-10-29T06:11:24Z",
+  "checked": "2026-11-28T07:27:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "16.15.237.15",
-    "16.15.244.105",
-    "16.15.255.178",
-    "52.216.25.254",
-    "52.216.211.112",
-    "52.216.212.216",
-    "52.216.243.22",
-    "52.217.113.112"
+    "16.15.160.162",
+    "16.15.191.181",
+    "16.15.214.63",
+    "16.15.228.110",
+    "16.15.252.91",
+    "52.216.41.152",
+    "52.217.131.56",
+    "52.217.161.176"
    ],
    "aaaa": [],
    "cname": null,
@@ -108,7 +108,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:11:24Z",
+   "checked": "2026-11-28T07:27:32Z",
    "title": "Cloud Object Storage – Amazon S3 – Amazon Web Services",
    "generator": null,
    "feeds": [],
@@ -118,16 +118,16 @@
   }
  },
  "s3backup.blogspot.com": {
-  "checked": "2026-10-29T06:11:26Z",
+  "checked": "2026-11-28T07:27:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.34.225"
+    "142.251.210.225"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81c::2001"
+    "2607:f8b0:4009:813::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -139,7 +139,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-29T06:11:26Z",
+   "checked": "2026-11-28T07:27:33Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -150,7 +150,7 @@
   }
  },
  "saastr.com": {
-  "checked": "2026-10-29T06:11:27Z",
+  "checked": "2026-11-28T07:27:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -173,7 +173,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:11:27Z",
+   "checked": "2026-11-28T07:27:35Z",
    "title": "SaaStrAI | B2B + AI Community, Events, Leads",
    "generator": "Polygon v.1.5",
    "feeds": [
@@ -194,7 +194,7 @@
   }
  },
  "sabbatical.blog": {
-  "checked": "2026-10-29T06:11:30Z",
+  "checked": "2026-11-28T07:27:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -220,7 +220,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:11:30Z",
+   "checked": "2026-11-28T07:27:37Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -230,7 +230,7 @@
   }
  },
  "sabretravelnetwork.com": {
-  "checked": "2026-10-29T06:11:33Z",
+  "checked": "2026-11-28T07:27:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -257,7 +257,7 @@
    "status": 500
   },
   "home": {
-   "checked": "2026-10-29T06:11:33Z",
+   "checked": "2026-11-28T07:27:40Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -268,7 +268,7 @@
   }
  },
  "sachajudd.com": {
-  "checked": "2026-10-29T06:11:56Z",
+  "checked": "2026-11-28T07:28:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -292,9 +292,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:11:56Z",
+   "checked": "2026-11-28T07:28:03Z",
    "title": "Sacha Judd - Author. Speaker. Writer.",
-   "generator": "All in One SEO (AIOSEO) 5.0.1.1",
+   "generator": "All in One SEO (AIOSEO) 5.0.5.1",
    "feeds": [
     {
      "type": "rss",
@@ -313,7 +313,7 @@
   }
  },
  "sacks.substack.com": {
-  "checked": "2026-10-29T06:11:59Z",
+  "checked": "2026-11-28T07:28:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -336,7 +336,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:11:59Z",
+   "checked": "2026-11-28T07:28:06Z",
    "title": "Bottom Up by David Sacks | Substack",
    "generator": null,
    "feeds": [
@@ -352,7 +352,7 @@
   }
  },
  "safariextensions.tumblr.com": {
-  "checked": "2026-10-29T06:12:02Z",
+  "checked": "2026-11-28T07:28:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -372,7 +372,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-29T06:12:02Z",
+   "checked": "2026-11-28T07:28:08Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -383,7 +383,7 @@
   }
  },
  "safehammad.com": {
-  "checked": "2026-10-29T06:12:04Z",
+  "checked": "2026-11-28T07:28:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -405,7 +405,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:12:04Z",
+   "checked": "2026-11-28T07:28:11Z",
    "title": "Home | The Safety Net",
    "generator": "Hugo 0.75.1",
    "feeds": [],
@@ -415,7 +415,7 @@
   }
  },
  "safetyresearch.net": {
-  "checked": "2026-10-29T06:12:08Z",
+  "checked": "2026-11-28T07:28:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -437,9 +437,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:12:08Z",
+   "checked": "2026-11-28T07:28:14Z",
    "title": "Home - Safety Research & Strategies, Inc. - Safety Matters",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -453,7 +453,7 @@
   }
  },
  "saffronmpls.com": {
-  "checked": "2026-10-29T06:12:11Z",
+  "checked": "2026-11-28T07:28:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -480,8 +480,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:12:11Z",
-   "title": "Saffron",
+   "checked": "2026-11-28T07:28:17Z",
+   "title": "Saffron | Palestinian Restaurant in Northeast Minneapolis",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -490,7 +490,7 @@
   }
  },
  "safing.io": {
-  "checked": "2026-10-29T06:12:13Z",
+  "checked": "2026-11-28T07:28:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -513,7 +513,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:12:13Z",
+   "checked": "2026-11-28T07:28:18Z",
    "title": "Portmaster - Application Firewall by Safing",
    "generator": null,
    "feeds": [],
@@ -523,7 +523,7 @@
   }
  },
  "saharshoza.github.io": {
-  "checked": "2026-10-29T06:12:16Z",
+  "checked": "2026-11-28T07:28:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -550,7 +550,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-29T06:12:16Z",
+   "checked": "2026-11-28T07:28:22Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -561,7 +561,7 @@
   }
  },
  "sailorproject.org": {
-  "checked": "2026-10-29T06:12:17Z",
+  "checked": "2026-11-28T07:28:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -583,9 +583,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:12:17Z",
+   "checked": "2026-11-28T07:28:23Z",
    "title": "Sailor Project: Anchored in Digital Innovation",
-   "generator": "WordPress 7.1.4",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -599,7 +599,7 @@
   }
  },
  "salesforcefoundation.org": {
-  "checked": "2026-10-29T06:12:23Z",
+  "checked": "2026-11-28T07:28:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -629,7 +629,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:12:23Z",
+   "checked": "2026-11-28T07:28:30Z",
    "title": "Impact | Salesforce",
    "generator": "PBC on Nunjucks",
    "feeds": [],
@@ -639,7 +639,7 @@
   }
  },
  "salimvirani.com": {
-  "checked": "2026-10-29T06:12:27Z",
+  "checked": "2026-11-28T07:28:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -664,7 +664,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:12:27Z",
+   "checked": "2026-11-28T07:28:34Z",
    "title": "Salim Virani",
    "generator": "Hexo 5.4.2",
    "feeds": [],
@@ -730,7 +730,7 @@
   }
  },
  "salsa.me": {
-  "checked": "2026-10-29T06:12:30Z",
+  "checked": "2026-11-28T07:28:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -753,7 +753,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-29T06:12:30Z",
+   "checked": "2026-11-28T07:28:37Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -764,7 +764,7 @@
   }
  },
  "saltandfat.com": {
-  "checked": "2026-10-29T06:12:33Z",
+  "checked": "2026-11-28T07:28:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -787,7 +787,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'saltandfat.com'"
   },
   "home": {
-   "checked": "2026-10-29T06:12:33Z",
+   "checked": "2026-11-28T07:28:40Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -798,7 +798,7 @@
   }
  },
  "saltaquarium.about.com": {
-  "checked": "2026-10-29T06:12:36Z",
+  "checked": "2026-11-28T07:28:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -817,7 +817,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:12:36Z",
+   "checked": "2026-11-28T07:28:42Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -908,7 +908,7 @@
   }
  },
  "samglover.net": {
-  "checked": "2026-10-29T06:12:36Z",
+  "checked": "2026-11-28T07:28:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -930,9 +930,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:12:36Z",
+   "checked": "2026-11-28T07:28:42Z",
    "title": "Sam Glover / Home",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [],
    "hcard": false,
    "rel_me": [],
@@ -974,7 +974,7 @@
   }
  },
  "sammyjs.org": {
-  "checked": "2026-10-29T06:12:40Z",
+  "checked": "2026-11-28T07:28:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -993,7 +993,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:12:40Z",
+   "checked": "2026-11-28T07:28:46Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1004,7 +1004,7 @@
   }
  },
  "sampatt.com": {
-  "checked": "2026-10-29T06:12:51Z",
+  "checked": "2026-11-28T07:28:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1029,7 +1029,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:12:51Z",
+   "checked": "2026-11-28T07:28:52Z",
    "title": "Sam Patterson",
    "generator": null,
    "feeds": [
@@ -1050,7 +1050,7 @@
   }
  },
  "samplesize.one": {
-  "checked": "2026-10-29T06:12:55Z",
+  "checked": "2026-11-28T07:28:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1078,7 +1078,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:12:55Z",
+   "checked": "2026-11-28T07:28:56Z",
    "title": "Hi!",
    "generator": null,
    "feeds": [],
@@ -1088,7 +1088,7 @@
   }
  },
  "samsaffron.com": {
-  "checked": "2026-10-29T06:12:59Z",
+  "checked": "2026-11-28T07:28:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1113,7 +1113,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:12:59Z",
+   "checked": "2026-11-28T07:28:59Z",
    "title": "Sam Saffron",
    "generator": null,
    "feeds": [
@@ -1133,7 +1133,7 @@
   }
  },
  "samwho.dev": {
-  "checked": "2026-10-29T06:13:01Z",
+  "checked": "2026-11-28T07:29:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1159,7 +1159,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:01Z",
+   "checked": "2026-11-28T07:29:01Z",
    "title": "samwho",
    "generator": null,
    "feeds": [
@@ -1178,7 +1178,7 @@
   }
  },
  "sanebox.com": {
-  "checked": "2026-10-29T06:13:05Z",
+  "checked": "2026-11-28T07:29:05Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1206,7 +1206,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:05Z",
+   "checked": "2026-11-28T07:29:05Z",
    "title": "SaneBox | Email Management for Any Inbox",
    "generator": null,
    "feeds": [],
@@ -1216,7 +1216,7 @@
   }
  },
  "sanfranmag.com": {
-  "checked": "2026-10-29T06:13:08Z",
+  "checked": "2026-11-28T07:29:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1242,7 +1242,7 @@
    "error": "connection refused"
   },
   "home": {
-   "checked": "2026-10-29T06:13:08Z",
+   "checked": "2026-11-28T07:29:08Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1253,7 +1253,7 @@
   }
  },
  "sanixdk.xyz": {
-  "checked": "2026-10-29T06:13:10Z",
+  "checked": "2026-11-28T07:29:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1279,7 +1279,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:10Z",
+   "checked": "2026-11-28T07:29:10Z",
    "title": "sanix blog",
    "generator": null,
    "feeds": [],
@@ -1289,7 +1289,7 @@
   }
  },
  "sankalp.bearblog.dev": {
-  "checked": "2026-10-29T06:13:14Z",
+  "checked": "2026-11-28T07:29:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1314,7 +1314,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:14Z",
+   "checked": "2026-11-28T07:29:13Z",
    "title": "sankalp's blog",
    "generator": null,
    "feeds": [
@@ -1335,7 +1335,7 @@
   }
  },
  "sankeymatic.com": {
-  "checked": "2026-10-29T06:13:17Z",
+  "checked": "2026-11-28T07:29:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1357,7 +1357,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:17Z",
+   "checked": "2026-11-28T07:29:16Z",
    "title": "SankeyMATIC: Make Beautiful Flow Diagrams",
    "generator": null,
    "feeds": [],
@@ -1404,7 +1404,7 @@
   }
  },
  "sapandiwakar.in": {
-  "checked": "2026-10-29T06:13:19Z",
+  "checked": "2026-11-28T07:29:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1432,7 +1432,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:19Z",
+   "checked": "2026-11-28T07:29:19Z",
    "title": "Sapan Diwakar",
    "generator": null,
    "feeds": [
@@ -1448,7 +1448,7 @@
   }
  },
  "sarasoueidan.com": {
-  "checked": "2026-10-29T06:13:23Z",
+  "checked": "2026-11-28T07:29:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1473,7 +1473,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:23Z",
+   "checked": "2026-11-28T07:29:22Z",
    "title": "Home",
    "generator": null,
    "feeds": [
@@ -1492,7 +1492,7 @@
   }
  },
  "satcom.sysnet.ucsd.edu": {
-  "checked": "2026-10-29T06:13:25Z",
+  "checked": "2026-11-28T07:29:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1519,7 +1519,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:25Z",
+   "checked": "2026-11-28T07:29:24Z",
    "title": "🛰️ SATCOM Security",
    "generator": null,
    "feeds": [],
@@ -1529,7 +1529,7 @@
   }
  },
  "saunas.org": {
-  "checked": "2026-10-29T06:13:28Z",
+  "checked": "2026-11-28T07:29:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1551,9 +1551,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:28Z",
+   "checked": "2026-11-28T07:29:27Z",
    "title": "Next Generation Infrared Saunas - Low EMF - Health Benefits",
-   "generator": "WordPress 7.1.4",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -1572,7 +1572,7 @@
   }
  },
  "saveall.ai": {
-  "checked": "2026-10-29T06:13:31Z",
+  "checked": "2026-11-28T07:29:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1592,57 +1592,51 @@
    "reachable": false,
    "redirects_http": true,
    "status": null,
-   "error": "tls: certificate has expired"
+   "error": "tls: Hostname mismatch, certificate is not valid for 'saveall.ai'"
   },
   "home": {
-   "checked": "2026-10-29T06:13:31Z",
+   "checked": "2026-11-28T07:29:30Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "tls: certificate has expired"
+   "error": "tls: Hostname mismatch, certificate is not valid for 'saveall.ai'"
   }
  },
  "savedarfur.org": {
-  "checked": "2026-10-29T06:13:34Z",
+  "checked": "2026-11-28T07:29:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
-   "resolves": true,
-   "a": [
-    "104.21.93.242",
-    "172.67.216.224"
-   ],
-   "aaaa": [
-    "2606:4700:3033::6815:5df2",
-    "2606:4700:3033::ac43:d8e0"
-   ],
+   "resolves": false,
+   "a": [],
+   "aaaa": [],
    "cname": null,
-   "ns": [
-    "bailey.ns.cloudflare.com",
-    "peter.ns.cloudflare.com"
-   ],
-   "mx": false
+   "ns": [],
+   "mx": false,
+   "error": "SERVFAIL"
   },
   "https": {
-   "reachable": true,
-   "redirects_http": true,
-   "status": 200
+   "reachable": false,
+   "redirects_http": false,
+   "status": null,
+   "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:13:34Z",
-   "title": "THESLOT777 - Platform Situs Slot 777 Online Gacor Terbaru Gampang Menang JP Malam Hari Ini",
+   "checked": "2026-11-28T07:29:33Z",
+   "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
-   "webmention": null
+   "webmention": null,
+   "error": "does not resolve"
   }
  },
  "savethepostoffice.com": {
-  "checked": "2026-10-29T06:13:41Z",
+  "checked": "2026-11-28T07:29:33Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1664,9 +1658,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:41Z",
+   "checked": "2026-11-28T07:29:33Z",
    "title": "Save the Post Office | Closures, consolidations, suspensions",
-   "generator": "Powered by LayerSlider 8.4.1 - Build Heros, Sliders, and Popups. Create Animations and Beautiful, Rich Web Content as Easy as Never Before on WordPress.",
+   "generator": "Powered by LayerSlider 9.0.0 - Build Heros, Sliders, and Popups. Create Animations and Beautiful, Rich Web Content as Easy as Never Before on WordPress.",
    "feeds": [
     {
      "type": "rss",
@@ -1685,7 +1679,7 @@
   }
  },
  "saveyourself.ca": {
-  "checked": "2026-10-29T06:13:45Z",
+  "checked": "2026-11-28T07:29:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1711,7 +1705,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:45Z",
+   "checked": "2026-11-28T07:29:38Z",
    "title": "PainScience.com",
    "generator": null,
    "feeds": [
@@ -1727,7 +1721,7 @@
   }
  },
  "sbooth.org": {
-  "checked": "2026-10-29T06:13:46Z",
+  "checked": "2026-11-28T07:29:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1754,7 +1748,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:46Z",
+   "checked": "2026-11-28T07:29:39Z",
    "title": "sbooth.org",
    "generator": null,
    "feeds": [],
@@ -1764,7 +1758,7 @@
   }
  },
  "sbs.com.au": {
-  "checked": "2026-10-29T06:13:49Z",
+  "checked": "2026-11-28T07:29:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1789,7 +1783,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:49Z",
+   "checked": "2026-11-28T07:29:42Z",
    "title": "SBS | Latest News, Audio, TV, Video Streaming, Sports, Food & More",
    "generator": null,
    "feeds": [],
@@ -1799,7 +1793,7 @@
   }
  },
  "sbstjn.github.io": {
-  "checked": "2026-10-29T06:13:52Z",
+  "checked": "2026-11-28T07:29:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1826,7 +1820,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-29T06:13:52Z",
+   "checked": "2026-11-28T07:29:44Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -1885,24 +1879,23 @@
   }
  },
  "scanofthemonth.com": {
-  "checked": "2026-10-29T06:13:53Z",
+  "checked": "2026-11-28T07:29:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "198.49.23.144",
-    "198.49.23.145",
-    "198.185.159.144",
-    "198.185.159.145"
+    "104.21.37.106",
+    "172.67.207.130"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2606:4700:3035::6815:256a",
+    "2606:4700:3035::ac43:cf82"
+   ],
    "cname": null,
    "ns": [
-    "ns-cloud-e1.googledomains.com",
-    "ns-cloud-e2.googledomains.com",
-    "ns-cloud-e3.googledomains.com",
-    "ns-cloud-e4.googledomains.com"
+    "betty.ns.cloudflare.com",
+    "nicolas.ns.cloudflare.com"
    ],
    "mx": true
   },
@@ -1912,7 +1905,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:53Z",
+   "checked": "2026-11-28T07:29:45Z",
    "title": "Scan of the Month—you've never seen anything like this.",
    "generator": "Webflow",
    "feeds": [],
@@ -1922,7 +1915,7 @@
   }
  },
  "scanomat.com": {
-  "checked": "2026-10-29T06:13:57Z",
+  "checked": "2026-11-28T07:29:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -1945,7 +1938,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:13:57Z",
+   "checked": "2026-11-28T07:29:47Z",
    "title": "Scanomat | Automatic TopBrewer coffee brewers and drink dispensers",
    "generator": null,
    "feeds": [],
@@ -1993,7 +1986,7 @@
   }
  },
  "scheduleu.org": {
-  "checked": "2026-10-29T06:14:02Z",
+  "checked": "2026-11-28T07:29:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2019,9 +2012,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:02Z",
+   "checked": "2026-11-28T07:29:51Z",
    "title": "Home - The School for Task Scheduling",
-   "generator": "All in One SEO (AIOSEO) 5.0.4",
+   "generator": "All in One SEO (AIOSEO) 5.0.6.1",
    "feeds": [
     {
      "type": "rss",
@@ -2035,16 +2028,16 @@
   }
  },
  "schema.org": {
-  "checked": "2026-10-29T06:14:07Z",
+  "checked": "2026-11-28T07:29:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.214.78"
+    "142.251.210.238"
    ],
    "aaaa": [
-    "2607:f8b0:4009:810::200e"
+    "2607:f8b0:4009:81e::200e"
    ],
    "cname": null,
    "ns": [
@@ -2061,7 +2054,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:07Z",
+   "checked": "2026-11-28T07:29:56Z",
    "title": "Schema.org - Schema.org",
    "generator": null,
    "feeds": [],
@@ -2071,7 +2064,7 @@
   }
  },
  "schibsted.github.io": {
-  "checked": "2026-10-29T06:14:10Z",
+  "checked": "2026-11-28T07:29:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2098,7 +2091,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:10Z",
+   "checked": "2026-11-28T07:29:59Z",
    "title": "Open source at Schibsted",
    "generator": null,
    "feeds": [],
@@ -2108,7 +2101,7 @@
   }
  },
  "schillmania.com": {
-  "checked": "2026-10-29T06:14:12Z",
+  "checked": "2026-11-28T07:30:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2131,7 +2124,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:12Z",
+   "checked": "2026-11-28T07:30:01Z",
    "title": "The creative and technical vents of Scott Schiller",
    "generator": null,
    "feeds": [
@@ -2205,7 +2198,7 @@
   }
  },
  "scid.sourceforge.net": {
-  "checked": "2026-10-29T06:14:14Z",
+  "checked": "2026-11-28T07:30:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2228,7 +2221,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:14Z",
+   "checked": "2026-11-28T07:30:03Z",
    "title": "Scid - Chess Database Software",
    "generator": null,
    "feeds": [],
@@ -2308,7 +2301,7 @@
   }
  },
  "sciencebasedmedicine.org": {
-  "checked": "2026-10-29T06:14:17Z",
+  "checked": "2026-11-28T07:30:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2331,9 +2324,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:17Z",
+   "checked": "2026-11-28T07:30:06Z",
    "title": "Science-Based Medicine",
-   "generator": "All in One SEO (AIOSEO) 5.0.4",
+   "generator": "All in One SEO (AIOSEO) 5.0.6.1",
    "feeds": [
     {
      "type": "rss",
@@ -2422,7 +2415,7 @@
   }
  },
  "scienceofcooking.com": {
-  "checked": "2026-10-29T06:14:20Z",
+  "checked": "2026-11-28T07:30:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2444,7 +2437,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:20Z",
+   "checked": "2026-11-28T07:30:09Z",
    "title": "Science of Cooking - Science of Food and Cooking",
    "generator": null,
    "feeds": [],
@@ -2525,7 +2518,7 @@
   }
  },
  "scitechdaily.com": {
-  "checked": "2026-10-29T06:14:21Z",
+  "checked": "2026-11-28T07:30:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2553,9 +2546,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:21Z",
+   "checked": "2026-11-28T07:30:10Z",
    "title": "SciTechDaily - Science, Space and Technology News 2026",
-   "generator": "WordPress 7.1.4",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -2628,7 +2621,7 @@
   }
  },
  "scott-fryxell.github.io": {
-  "checked": "2026-10-29T06:14:24Z",
+  "checked": "2026-11-28T07:30:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2655,7 +2648,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:24Z",
+   "checked": "2026-11-28T07:30:12Z",
    "title": "Scott Fryxell — Humanist Software Developer",
    "generator": null,
    "feeds": [],
@@ -2665,7 +2658,7 @@
   }
  },
  "scottantipa.com": {
-  "checked": "2026-10-29T06:14:25Z",
+  "checked": "2026-11-28T07:30:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2690,7 +2683,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:25Z",
+   "checked": "2026-11-28T07:30:14Z",
    "title": "Scott Antipa",
    "generator": null,
    "feeds": [],
@@ -2749,7 +2742,7 @@
   }
  },
  "scottboms.com": {
-  "checked": "2026-10-29T06:14:27Z",
+  "checked": "2026-11-28T07:30:15Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2774,7 +2767,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:27Z",
+   "checked": "2026-11-28T07:30:15Z",
    "title": "Scott Boms | Creative direction, Design, and Printmaking",
    "generator": null,
    "feeds": [
@@ -2818,7 +2811,7 @@
   }
  },
  "scottchacon.com": {
-  "checked": "2026-10-29T06:14:30Z",
+  "checked": "2026-11-28T07:30:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2842,7 +2835,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:30Z",
+   "checked": "2026-11-28T07:30:19Z",
    "title": "Scott Chacon - Scott Chacon",
    "generator": null,
    "feeds": [
@@ -2858,7 +2851,7 @@
   }
  },
  "scottkosman.com": {
-  "checked": "2026-10-29T06:14:34Z",
+  "checked": "2026-11-28T07:30:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2884,7 +2877,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:34Z",
+   "checked": "2026-11-28T07:30:22Z",
    "title": "scott kosman",
    "generator": "Hugo 0.166.0",
    "feeds": [],
@@ -2899,7 +2892,7 @@
   }
  },
  "scottlocklin.wordpress.com": {
-  "checked": "2026-10-29T06:14:37Z",
+  "checked": "2026-11-28T07:30:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2919,7 +2912,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:37Z",
+   "checked": "2026-11-28T07:30:24Z",
    "title": "Locklin on science | In which I explain things interesting, remarkable or silly.",
    "generator": "WordPress.com",
    "feeds": [
@@ -2940,7 +2933,7 @@
   }
  },
  "scottsmitelli.com": {
-  "checked": "2026-10-29T06:14:39Z",
+  "checked": "2026-11-28T07:30:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -2967,7 +2960,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:39Z",
+   "checked": "2026-11-28T07:30:27Z",
    "title": "Scott Smitelli",
    "generator": "Hugo 0.121.0",
    "feeds": [
@@ -2983,7 +2976,7 @@
   }
  },
  "scottw.com": {
-  "checked": "2026-10-29T06:14:41Z",
+  "checked": "2026-11-28T07:30:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3009,9 +3002,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:41Z",
+   "checked": "2026-11-28T07:30:29Z",
    "title": "Scott Watermasysk",
-   "generator": "Eleventy v3.1.6",
+   "generator": "Eleventy v3.1.8",
    "feeds": [
     {
      "type": "atom",
@@ -3030,17 +3023,26 @@
   }
  },
  "scout.org": {
-  "checked": "2026-10-29T06:14:44Z",
+  "checked": "2026-11-28T07:30:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "23.185.0.4"
+    "108.156.91.3",
+    "108.156.91.51",
+    "108.156.91.59",
+    "108.156.91.113"
    ],
    "aaaa": [
-    "2620:12a:8000::4",
-    "2620:12a:8001::4"
+    "2600:9000:2351:2800:2:590:a700:93a1",
+    "2600:9000:2351:2a00:2:590:a700:93a1",
+    "2600:9000:2351:8400:2:590:a700:93a1",
+    "2600:9000:2351:c400:2:590:a700:93a1",
+    "2600:9000:2351:d200:2:590:a700:93a1",
+    "2600:9000:2351:e000:2:590:a700:93a1",
+    "2600:9000:2351:e800:2:590:a700:93a1",
+    "2600:9000:2351:f400:2:590:a700:93a1"
    ],
    "cname": null,
    "ns": [
@@ -3055,7 +3057,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:14:44Z",
+   "checked": "2026-11-28T07:30:31Z",
    "title": "Home | WOSM",
    "generator": "Drupal 10 (https://www.drupal.org); 1xDXP (https://1xinternet.de)",
    "feeds": [],
@@ -3065,7 +3067,7 @@
   }
  },
  "scoutapp.github.io": {
-  "checked": "2026-10-29T06:14:46Z",
+  "checked": "2026-11-28T07:30:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3092,7 +3094,7 @@
    "status": 404
   },
   "home": {
-   "checked": "2026-10-29T06:14:46Z",
+   "checked": "2026-11-28T07:30:34Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3103,44 +3105,41 @@
   }
  },
  "scr.sc": {
-  "checked": "2026-10-29T06:14:47Z",
+  "checked": "2026-11-28T07:30:35Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.21.49.165",
-    "172.67.164.249"
+    "160.251.64.80"
    ],
-   "aaaa": [
-    "2606:4700:3033::6815:31a5",
-    "2606:4700:3033::ac43:a4f9"
-   ],
+   "aaaa": [],
    "cname": null,
    "ns": [
-    "jeremy.ns.cloudflare.com",
-    "wanda.ns.cloudflare.com"
+    "dns1.onamae-expired.com",
+    "dns2.onamae-expired.com"
    ],
-   "mx": true
+   "mx": false
   },
   "https": {
-   "reachable": true,
-   "redirects_http": false,
-   "status": 526
+   "reachable": false,
+   "redirects_http": true,
+   "status": null,
+   "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-29T06:14:47Z",
+   "checked": "2026-11-28T07:30:35Z",
    "title": null,
    "generator": null,
    "feeds": [],
    "hcard": false,
    "rel_me": [],
    "webmention": null,
-   "error": "HTTP 526"
+   "error": "timeout"
   }
  },
  "scrapy.org": {
-  "checked": "2026-10-29T06:15:00Z",
+  "checked": "2026-11-28T07:30:59Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3162,7 +3161,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:15:00Z",
+   "checked": "2026-11-28T07:30:59Z",
    "title": "Scrapy — open source web scraping framework for Python",
    "generator": null,
    "feeds": [],
@@ -3172,14 +3171,13 @@
   }
  },
  "scribblediffusion.com": {
-  "checked": "2026-10-29T06:15:03Z",
+  "checked": "2026-11-28T07:31:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.21.7.216",
-    "172.67.188.13"
+    "0.0.0.0"
    ],
    "aaaa": [
     "::"
@@ -3198,7 +3196,7 @@
    "error": "resolves to a non-public address; not fetched"
   },
   "home": {
-   "checked": "2026-10-29T06:15:03Z",
+   "checked": "2026-11-28T07:31:02Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3209,7 +3207,7 @@
   }
  },
  "scribbletone.com": {
-  "checked": "2026-10-29T06:15:03Z",
+  "checked": "2026-11-28T07:31:02Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3232,7 +3230,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-29T06:15:03Z",
+   "checked": "2026-11-28T07:31:02Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3280,7 +3278,7 @@
   }
  },
  "scribe.rip": {
-  "checked": "2026-10-29T06:15:22Z",
+  "checked": "2026-11-28T07:31:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3304,7 +3302,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:15:22Z",
+   "checked": "2026-11-28T07:31:21Z",
    "title": "Scribe Offline",
    "generator": null,
    "feeds": [],
@@ -3374,7 +3372,7 @@
   }
  },
  "scuttlebutt.nz": {
-  "checked": "2026-10-29T06:15:26Z",
+  "checked": "2026-11-28T07:31:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3397,7 +3395,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:15:26Z",
+   "checked": "2026-11-28T07:31:24Z",
    "title": "Scuttlebutt",
    "generator": "Hugo 0.109.0",
    "feeds": [],
@@ -3407,7 +3405,7 @@
   }
  },
  "sderosiaux.substack.com": {
-  "checked": "2026-10-29T06:15:29Z",
+  "checked": "2026-11-28T07:31:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3430,7 +3428,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:15:29Z",
+   "checked": "2026-11-28T07:31:27Z",
    "title": "The Technical Executive | Stephane Derosiaux | Substack",
    "generator": null,
    "feeds": [
@@ -3446,7 +3444,7 @@
   }
  },
  "sdtimes.com": {
-  "checked": "2026-10-29T06:15:32Z",
+  "checked": "2026-11-28T07:31:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3472,9 +3470,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:15:32Z",
+   "checked": "2026-11-28T07:31:30Z",
    "title": "SD Times - Software Development News",
-   "generator": "WordPress 7.1.4",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -3493,7 +3491,7 @@
   }
  },
  "seabreacher.com": {
-  "checked": "2026-10-29T06:15:34Z",
+  "checked": "2026-11-28T07:31:32Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3519,7 +3517,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:15:34Z",
+   "checked": "2026-11-28T07:31:32Z",
    "title": "Home - SeabreacherSeabreacher | The Ultimate Diving Machine",
    "generator": "Powered by WPBakery Page Builder - drag and drop page builder for WordPress.",
    "feeds": [
@@ -3545,7 +3543,7 @@
   }
  },
  "sean.heelan.io": {
-  "checked": "2026-10-29T06:15:38Z",
+  "checked": "2026-11-28T07:31:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3565,7 +3563,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:15:38Z",
+   "checked": "2026-11-28T07:31:37Z",
    "title": "Sean Heelan's Blog – Software Exploitation and Optimisation",
    "generator": "WordPress.com",
    "feeds": [
@@ -3586,7 +3584,7 @@
   }
  },
  "seanblanda.com": {
-  "checked": "2026-10-29T06:15:41Z",
+  "checked": "2026-11-28T07:31:40Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3611,7 +3609,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:15:41Z",
+   "checked": "2026-11-28T07:31:40Z",
    "title": "Sean Blanda | Owner of Gate Check Studios.",
    "generator": "Jekyll v4.3.4",
    "feeds": [
@@ -3627,7 +3625,7 @@
   }
  },
  "seancoleman.net": {
-  "checked": "2026-10-29T06:15:44Z",
+  "checked": "2026-11-28T07:31:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3650,7 +3648,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:15:44Z",
+   "checked": "2026-11-28T07:31:43Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3712,26 +3710,26 @@
   }
  },
  "search.brave.com": {
-  "checked": "2026-10-29T06:15:44Z",
+  "checked": "2026-11-28T07:31:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "3.170.103.79",
-    "3.170.103.90",
-    "3.170.103.100",
-    "3.170.103.117"
+    "65.8.27.68",
+    "65.8.27.101",
+    "65.8.27.104",
+    "65.8.27.129"
    ],
    "aaaa": [
-    "2600:9000:287c:200:5:a6ac:6100:93a1",
-    "2600:9000:287c:1e00:5:a6ac:6100:93a1",
-    "2600:9000:287c:4200:5:a6ac:6100:93a1",
-    "2600:9000:287c:4400:5:a6ac:6100:93a1",
-    "2600:9000:287c:5800:5:a6ac:6100:93a1",
-    "2600:9000:287c:b600:5:a6ac:6100:93a1",
-    "2600:9000:287c:b800:5:a6ac:6100:93a1",
-    "2600:9000:287c:c000:5:a6ac:6100:93a1"
+    "2600:9000:2123:600:5:a6ac:6100:93a1",
+    "2600:9000:2123:2000:5:a6ac:6100:93a1",
+    "2600:9000:2123:3400:5:a6ac:6100:93a1",
+    "2600:9000:2123:3600:5:a6ac:6100:93a1",
+    "2600:9000:2123:4200:5:a6ac:6100:93a1",
+    "2600:9000:2123:4c00:5:a6ac:6100:93a1",
+    "2600:9000:2123:7a00:5:a6ac:6100:93a1",
+    "2600:9000:2123:d200:5:a6ac:6100:93a1"
    ],
    "cname": null,
    "ns": [
@@ -3748,7 +3746,7 @@
    "status": 429
   },
   "home": {
-   "checked": "2026-10-29T06:15:44Z",
+   "checked": "2026-11-28T07:31:43Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3759,7 +3757,7 @@
   }
  },
  "search.creativecommons.org": {
-  "checked": "2026-10-29T06:16:09Z",
+  "checked": "2026-11-28T07:32:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3782,7 +3780,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:09Z",
+   "checked": "2026-11-28T07:32:07Z",
    "title": "CC Search Portal",
    "generator": null,
    "feeds": [],
@@ -3792,7 +3790,7 @@
   }
  },
  "search.thawte.com": {
-  "checked": "2026-10-29T06:16:11Z",
+  "checked": "2026-11-28T07:32:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3811,7 +3809,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:16:11Z",
+   "checked": "2026-11-28T07:32:10Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -3822,7 +3820,7 @@
   }
  },
  "searchengineland.com": {
-  "checked": "2026-10-29T06:16:11Z",
+  "checked": "2026-11-28T07:32:10Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3848,7 +3846,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:11Z",
+   "checked": "2026-11-28T07:32:10Z",
    "title": "Search Engine Land | SEO, PPC & AI Search News for Marketers",
    "generator": null,
    "feeds": [
@@ -3864,7 +3862,7 @@
   }
  },
  "seashells.io": {
-  "checked": "2026-10-29T06:16:14Z",
+  "checked": "2026-11-28T07:32:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3887,7 +3885,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:14Z",
+   "checked": "2026-11-28T07:32:12Z",
    "title": "Seashells",
    "generator": null,
    "feeds": [],
@@ -3945,7 +3943,7 @@
   }
  },
  "seattleweekly.com": {
-  "checked": "2026-10-29T06:16:18Z",
+  "checked": "2026-11-28T07:32:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -3967,7 +3965,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:18Z",
+   "checked": "2026-11-28T07:32:16Z",
    "title": "Seattle news, events, music, movies, restaurants, and reviews | Seattle Weekly",
    "generator": null,
    "feeds": [],
@@ -4049,7 +4047,7 @@
   }
  },
  "secondthoughts.ai": {
-  "checked": "2026-10-29T06:16:21Z",
+  "checked": "2026-11-28T07:32:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4072,7 +4070,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:21Z",
+   "checked": "2026-11-28T07:32:19Z",
    "title": "Second Thoughts | Steve Newman | Substack",
    "generator": null,
    "feeds": [
@@ -4088,7 +4086,7 @@
   }
  },
  "secretgeometry.com": {
-  "checked": "2026-10-29T06:16:24Z",
+  "checked": "2026-11-28T07:32:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4111,7 +4109,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:24Z",
+   "checked": "2026-11-28T07:32:22Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4121,7 +4119,7 @@
   }
  },
  "secrets.blacktree.com": {
-  "checked": "2026-10-29T06:16:25Z",
+  "checked": "2026-11-28T07:32:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4140,7 +4138,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:16:25Z",
+   "checked": "2026-11-28T07:32:23Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4151,13 +4149,13 @@
   }
  },
  "secure.logmein.com": {
-  "checked": "2026-10-29T06:16:26Z",
+  "checked": "2026-11-28T07:32:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "158.120.25.183"
+    "158.120.28.130"
    ],
    "aaaa": [],
    "cname": "secure.logmein.com.akadns.net",
@@ -4170,7 +4168,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:26Z",
+   "checked": "2026-11-28T07:32:23Z",
    "title": "AI-Powered Remote Access & Support Software | LogMeIn",
    "generator": null,
    "feeds": [],
@@ -4180,7 +4178,7 @@
   }
  },
  "secure.mysociety.org": {
-  "checked": "2026-10-29T06:16:32Z",
+  "checked": "2026-11-28T07:32:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4203,7 +4201,7 @@
    "status": 410
   },
   "home": {
-   "checked": "2026-10-29T06:16:32Z",
+   "checked": "2026-11-28T07:32:30Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4214,16 +4212,16 @@
   }
  },
  "secure.wikimedia.org": {
-  "checked": "2026-10-29T06:16:37Z",
+  "checked": "2026-11-28T07:32:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "208.80.153.224"
+    "208.80.154.224"
    ],
    "aaaa": [
-    "2620:0:860:ed1a::1"
+    "2620:0:861:ed1a::1"
    ],
    "cname": "dyna.wikimedia.org",
    "ns": [],
@@ -4235,7 +4233,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:37Z",
+   "checked": "2026-11-28T07:32:34Z",
    "title": "Wikimedia",
    "generator": null,
    "feeds": [],
@@ -4245,7 +4243,7 @@
   }
  },
  "securelist.com": {
-  "checked": "2026-10-29T06:16:40Z",
+  "checked": "2026-11-28T07:32:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4267,7 +4265,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:40Z",
+   "checked": "2026-11-28T07:32:37Z",
    "title": "Securelist | Kaspersky’s threat research and reports",
    "generator": null,
    "feeds": [
@@ -4328,16 +4326,16 @@
   }
  },
  "security.googleblog.com": {
-  "checked": "2026-10-29T06:16:45Z",
+  "checked": "2026-11-28T07:32:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "142.251.34.225"
+    "142.250.217.97"
    ],
    "aaaa": [
-    "2607:f8b0:4009:81e::2001"
+    "2607:f8b0:4009:810::2001"
    ],
    "cname": "blogspot.l.googleusercontent.com",
    "ns": [],
@@ -4349,7 +4347,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:45Z",
+   "checked": "2026-11-28T07:32:42Z",
    "title": "Security",
    "generator": null,
    "feeds": [],
@@ -4359,7 +4357,7 @@
   }
  },
  "securitycheckli.st": {
-  "checked": "2026-10-29T06:16:48Z",
+  "checked": "2026-11-28T07:32:45Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4383,7 +4381,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:48Z",
+   "checked": "2026-11-28T07:32:45Z",
    "title": "SecurityCheckli.st | Independent Cybersecurity Reviews, Tools & Research",
    "generator": null,
    "feeds": [],
@@ -4393,20 +4391,18 @@
   }
  },
  "securitydiscovery.com": {
-  "checked": "2026-10-29T06:16:50Z",
+  "checked": "2026-11-28T07:32:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "104.26.6.79",
-    "104.26.7.79",
-    "172.67.68.215"
+    "104.21.77.9",
+    "172.67.203.19"
    ],
    "aaaa": [
-    "2606:4700:20::681a:64f",
-    "2606:4700:20::681a:74f",
-    "2606:4700:20::ac43:44d7"
+    "2606:4700:3032::6815:4d09",
+    "2606:4700:3037::ac43:cb13"
    ],
    "cname": null,
    "ns": [
@@ -4421,7 +4417,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:50Z",
+   "checked": "2026-11-28T07:32:47Z",
    "title": "Security Discovery - Cyber Security News & Consulting Services",
    "generator": null,
    "feeds": [],
@@ -4431,7 +4427,7 @@
   }
  },
  "securityevaluators.com": {
-  "checked": "2026-10-29T06:16:53Z",
+  "checked": "2026-11-28T07:32:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4453,9 +4449,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:53Z",
+   "checked": "2026-11-28T07:32:50Z",
    "title": "Cyber Security Consulting Services - Independent Security Evaluators",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.4",
    "feeds": [
     {
      "type": "rss",
@@ -4474,7 +4470,7 @@
   }
  },
  "securitynewsdaily.com": {
-  "checked": "2026-10-29T06:16:55Z",
+  "checked": "2026-11-28T07:32:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4497,7 +4493,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:55Z",
+   "checked": "2026-11-28T07:32:51Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4507,7 +4503,7 @@
   }
  },
  "securitytxt.org": {
-  "checked": "2026-10-29T06:16:57Z",
+  "checked": "2026-11-28T07:32:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4533,7 +4529,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:16:57Z",
+   "checked": "2026-11-28T07:32:53Z",
    "title": "security.txt: Proposed standard for defining security policies",
    "generator": null,
    "feeds": [],
@@ -4594,7 +4590,7 @@
   }
  },
  "seed-project.io": {
-  "checked": "2026-10-29T06:17:00Z",
+  "checked": "2026-11-28T07:32:56Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4616,8 +4612,8 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:17:00Z",
-   "title": "SEED - SEED Early Access | A brand new world, ready to be populated",
+   "checked": "2026-11-28T07:32:56Z",
+   "title": "SEED - Early Access: Build a society on Avesta",
    "generator": null,
    "feeds": [],
    "hcard": false,
@@ -4626,7 +4622,7 @@
   }
  },
  "seedmagazine.com": {
-  "checked": "2026-10-29T06:17:05Z",
+  "checked": "2026-11-28T07:33:01Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4652,7 +4648,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:17:05Z",
+   "checked": "2026-11-28T07:33:01Z",
    "title": "Wallpapers.com | 1,500,000+ Free HD Wallpapers for Desktop, Mobiles & Tablets",
    "generator": null,
    "feeds": [],
@@ -4662,7 +4658,7 @@
   }
  },
  "seedsofmindfulness.com": {
-  "checked": "2026-10-29T06:17:07Z",
+  "checked": "2026-11-28T07:33:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4681,7 +4677,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:17:07Z",
+   "checked": "2026-11-28T07:33:03Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4692,7 +4688,7 @@
   }
  },
  "seekingalpha.com": {
-  "checked": "2026-10-29T06:17:07Z",
+  "checked": "2026-11-28T07:33:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4724,7 +4720,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:17:07Z",
+   "checked": "2026-11-28T07:33:03Z",
    "title": "Seeking Alpha | Stock Market Analysis & Tools for Investors",
    "generator": null,
    "feeds": [],
@@ -4734,7 +4730,7 @@
   }
  },
  "seekingwisdom.io": {
-  "checked": "2026-10-29T06:17:12Z",
+  "checked": "2026-11-28T07:33:07Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4757,7 +4753,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:17:12Z",
+   "checked": "2026-11-28T07:33:07Z",
    "title": "Redirecting...",
    "generator": null,
    "feeds": [],
@@ -4767,15 +4763,15 @@
   }
  },
  "segment.com": {
-  "checked": "2026-10-29T06:17:14Z",
+  "checked": "2026-11-28T07:33:09Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "32.186.58.174",
-    "35.82.46.240",
-    "44.240.188.220"
+    "32.191.197.11",
+    "52.25.161.215",
+    "184.32.22.119"
    ],
    "aaaa": [],
    "cname": null,
@@ -4793,7 +4789,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:17:14Z",
+   "checked": "2026-11-28T07:33:09Z",
    "title": "Twilio Segment Customer Data Platform | Twilio",
    "generator": null,
    "feeds": [],
@@ -4841,7 +4837,7 @@
   }
  },
  "selfseo.com": {
-  "checked": "2026-10-29T06:17:17Z",
+  "checked": "2026-11-28T07:33:12Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4866,7 +4862,7 @@
    "error": "network: No route to host"
   },
   "home": {
-   "checked": "2026-10-29T06:17:17Z",
+   "checked": "2026-11-28T07:33:12Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -4877,7 +4873,7 @@
   }
  },
  "semafor.com": {
-  "checked": "2026-10-29T06:17:19Z",
+  "checked": "2026-11-28T07:33:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4904,7 +4900,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:17:19Z",
+   "checked": "2026-11-28T07:33:14Z",
    "title": "Semafor - An intelligent, transparent global news platform for breaking stories, analysis and video",
    "generator": null,
    "feeds": [],
@@ -4972,7 +4968,7 @@
   }
  },
  "semantic.gs": {
-  "checked": "2026-10-29T06:17:22Z",
+  "checked": "2026-11-28T07:33:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -4994,7 +4990,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:17:22Z",
+   "checked": "2026-11-28T07:33:17Z",
    "title": "semantic.gs",
    "generator": null,
    "feeds": [],
@@ -5004,7 +5000,7 @@
   }
  },
  "semianalysis.com": {
-  "checked": "2026-10-29T06:17:23Z",
+  "checked": "2026-11-28T07:33:18Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5027,9 +5023,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:17:23Z",
+   "checked": "2026-11-28T07:33:18Z",
    "title": "SemiAnalysis | AI and Semiconductor Research, Models, Advisory",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [
     {
      "type": "rss",
@@ -5040,6 +5036,11 @@
      "type": "rss",
      "url": "https://semianalysis.com/comments/feed/",
      "title": "SemiAnalysis » Comments Feed"
+    },
+    {
+     "type": "rss",
+     "url": "https://semianalysis.com/home/feed/",
+     "title": "SemiAnalysis » Home Comments Feed"
     }
    ],
    "hcard": false,
@@ -5053,7 +5054,7 @@
   }
  },
  "semianalysis.substack.com": {
-  "checked": "2026-10-29T06:17:26Z",
+  "checked": "2026-11-28T07:33:21Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5076,7 +5077,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:17:26Z",
+   "checked": "2026-11-28T07:33:21Z",
    "title": "SemiAnalysis | Dylan Patel | Substack",
    "generator": null,
    "feeds": [
@@ -5092,7 +5093,7 @@
   }
  },
  "semver.org": {
-  "checked": "2026-10-29T06:17:29Z",
+  "checked": "2026-11-28T07:33:23Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5124,7 +5125,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:17:29Z",
+   "checked": "2026-11-28T07:33:23Z",
    "title": "Semantic Versioning 2.0.0 | Semantic Versioning",
    "generator": "Jekyll v3.10.0",
    "feeds": [],
@@ -5134,7 +5135,7 @@
   }
  },
  "sendachi.com": {
-  "checked": "2026-10-29T06:17:32Z",
+  "checked": "2026-11-28T07:33:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5159,7 +5160,7 @@
    "error": "connection refused"
   },
   "home": {
-   "checked": "2026-10-29T06:17:32Z",
+   "checked": "2026-11-28T07:33:26Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5170,7 +5171,7 @@
   }
  },
  "senduit.com": {
-  "checked": "2026-10-29T06:17:35Z",
+  "checked": "2026-11-28T07:33:28Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5195,7 +5196,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-29T06:17:35Z",
+   "checked": "2026-11-28T07:33:28Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5240,7 +5241,7 @@
   }
  },
  "sensible.so": {
-  "checked": "2026-10-29T06:18:07Z",
+  "checked": "2026-11-28T07:34:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5262,7 +5263,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:18:07Z",
+   "checked": "2026-11-28T07:34:00Z",
    "title": "Sensible: Hybrid Document Extraction for Production",
    "generator": null,
    "feeds": [],
@@ -5272,7 +5273,7 @@
   }
  },
  "sensortower.com": {
-  "checked": "2026-10-29T06:18:09Z",
+  "checked": "2026-11-28T07:34:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5296,7 +5297,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:18:09Z",
+   "checked": "2026-11-28T07:34:03Z",
    "title": "Digital Intelligence & App Data Analysis by Sensor Tower",
    "generator": null,
    "feeds": [],
@@ -5306,7 +5307,7 @@
   }
  },
  "sequelpro.com": {
-  "checked": "2026-10-29T06:18:13Z",
+  "checked": "2026-11-28T07:34:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5325,7 +5326,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:18:13Z",
+   "checked": "2026-11-28T07:34:06Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5336,7 +5337,7 @@
   }
  },
  "sequoia.makes.software": {
-  "checked": "2026-10-29T06:18:21Z",
+  "checked": "2026-11-28T07:34:14Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5363,7 +5364,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:18:21Z",
+   "checked": "2026-11-28T07:34:14Z",
    "title": "Home | Sequoia McDowell",
    "generator": null,
    "feeds": [
@@ -5381,26 +5382,26 @@
   }
  },
  "serfdom.io": {
-  "checked": "2026-10-29T06:18:25Z",
+  "checked": "2026-11-28T07:34:17Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "99.86.77.40",
-    "99.86.77.102",
-    "99.86.77.106",
-    "99.86.77.129"
+    "65.8.27.13",
+    "65.8.27.52",
+    "65.8.27.75",
+    "65.8.27.78"
    ],
    "aaaa": [
-    "2600:9000:2137:e00:3:2ec5:71c0:93a1",
-    "2600:9000:2137:1600:3:2ec5:71c0:93a1",
-    "2600:9000:2137:3400:3:2ec5:71c0:93a1",
-    "2600:9000:2137:5800:3:2ec5:71c0:93a1",
-    "2600:9000:2137:7200:3:2ec5:71c0:93a1",
-    "2600:9000:2137:8200:3:2ec5:71c0:93a1",
-    "2600:9000:2137:9600:3:2ec5:71c0:93a1",
-    "2600:9000:2137:fc00:3:2ec5:71c0:93a1"
+    "2600:9000:2123:2200:3:2ec5:71c0:93a1",
+    "2600:9000:2123:4200:3:2ec5:71c0:93a1",
+    "2600:9000:2123:4c00:3:2ec5:71c0:93a1",
+    "2600:9000:2123:6a00:3:2ec5:71c0:93a1",
+    "2600:9000:2123:8a00:3:2ec5:71c0:93a1",
+    "2600:9000:2123:bc00:3:2ec5:71c0:93a1",
+    "2600:9000:2123:cc00:3:2ec5:71c0:93a1",
+    "2600:9000:2123:d200:3:2ec5:71c0:93a1"
    ],
    "cname": null,
    "ns": [
@@ -5417,7 +5418,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:18:25Z",
+   "checked": "2026-11-28T07:34:17Z",
    "title": "serf/docs/index.html.markdown at master · hashicorp/serf · GitHub",
    "generator": null,
    "feeds": [],
@@ -5427,7 +5428,7 @@
   }
  },
  "serhack.me": {
-  "checked": "2026-10-29T06:18:31Z",
+  "checked": "2026-11-28T07:34:22Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5453,7 +5454,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:18:31Z",
+   "checked": "2026-11-28T07:34:22Z",
    "title": "SerHack – Security Researcher and Writer",
    "generator": "Olivetti 0.101.0",
    "feeds": [
@@ -5469,7 +5470,7 @@
   }
  },
  "serialpodcast.org": {
-  "checked": "2026-10-29T06:18:33Z",
+  "checked": "2026-11-28T07:34:25Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5500,7 +5501,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:18:33Z",
+   "checked": "2026-11-28T07:34:25Z",
    "title": "Serial Productions - The New York Times",
    "generator": null,
    "feeds": [
@@ -5516,7 +5517,7 @@
   }
  },
  "sericaia.me": {
-  "checked": "2026-10-29T06:18:36Z",
+  "checked": "2026-11-28T07:34:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5541,7 +5542,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:18:36Z",
+   "checked": "2026-11-28T07:34:27Z",
    "title": "articles | Daniela Matos de Carvalho",
    "generator": "Gatsby 2.24.65",
    "feeds": [
@@ -5600,7 +5601,7 @@
   }
  },
  "seroter.wordpress.com": {
-  "checked": "2026-10-29T06:18:39Z",
+  "checked": "2026-11-28T07:34:30Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5620,7 +5621,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:18:39Z",
+   "checked": "2026-11-28T07:34:30Z",
    "title": "Richard Seroter's Architecture Musings – Blog Featuring Links, Code, Thoughts, and Experiences with Software, AI, and Cloud Services",
    "generator": "WordPress.com",
    "feeds": [
@@ -5641,7 +5642,7 @@
   }
  },
  "serverdensity.com": {
-  "checked": "2026-10-29T06:18:43Z",
+  "checked": "2026-11-28T07:34:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5667,7 +5668,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:18:43Z",
+   "checked": "2026-11-28T07:34:34Z",
    "title": "Zarpra IT Support & Managed Applications",
    "generator": null,
    "feeds": [],
@@ -5677,7 +5678,7 @@
   }
  },
  "serverfault.com": {
-  "checked": "2026-10-29T06:18:44Z",
+  "checked": "2026-11-28T07:34:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5699,7 +5700,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:18:44Z",
+   "checked": "2026-11-28T07:34:36Z",
    "title": "Server Fault",
    "generator": null,
    "feeds": [
@@ -5715,16 +5716,16 @@
   }
  },
  "serverless.com": {
-  "checked": "2026-10-29T06:18:47Z",
+  "checked": "2026-11-28T07:34:38Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "108.156.107.37",
-    "108.156.107.54",
-    "108.156.107.58",
-    "108.156.107.120"
+    "52.84.127.30",
+    "52.84.127.34",
+    "52.84.127.82",
+    "52.84.127.114"
    ],
    "aaaa": [],
    "cname": null,
@@ -5742,7 +5743,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:18:47Z",
+   "checked": "2026-11-28T07:34:38Z",
    "title": "Serverless Framework - Build Serverless Applications on AWS",
    "generator": null,
    "feeds": [],
@@ -5752,7 +5753,7 @@
   }
  },
  "serverobjects.com": {
-  "checked": "2026-10-29T06:18:50Z",
+  "checked": "2026-11-28T07:34:41Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5774,9 +5775,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:18:50Z",
+   "checked": "2026-11-28T07:34:41Z",
    "title": "Server Objects – ASP DNS",
-   "generator": "WordPress 5.5.23",
+   "generator": "WordPress 5.5.25",
    "feeds": [
     {
      "type": "rss",
@@ -5795,7 +5796,7 @@
   }
  },
  "serversfor.dev": {
-  "checked": "2026-10-29T06:18:53Z",
+  "checked": "2026-11-28T07:34:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5819,7 +5820,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:18:53Z",
+   "checked": "2026-11-28T07:34:44Z",
    "title": "serversfor.dev",
    "generator": null,
    "feeds": [
@@ -5835,7 +5836,7 @@
   }
  },
  "serverunderground.com": {
-  "checked": "2026-10-29T06:18:57Z",
+  "checked": "2026-11-28T07:34:48Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5858,7 +5859,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-29T06:18:57Z",
+   "checked": "2026-11-28T07:34:48Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -5914,7 +5915,7 @@
   }
  },
  "servicemesh.io": {
-  "checked": "2026-10-29T06:19:28Z",
+  "checked": "2026-11-28T07:35:19Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -5940,7 +5941,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:19:28Z",
+   "checked": "2026-11-28T07:35:19Z",
    "title": "What is a Service Mesh? Service Mesh Explained",
    "generator": null,
    "feeds": [],
@@ -6078,7 +6079,7 @@
   }
  },
  "sevarg.net": {
-  "checked": "2026-10-29T06:19:34Z",
+  "checked": "2026-11-28T07:35:24Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6100,7 +6101,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:19:34Z",
+   "checked": "2026-11-28T07:35:24Z",
    "title": "Syonyk's Project Blog",
    "generator": "Jekyll v4.2.0",
    "feeds": [
@@ -6116,7 +6117,7 @@
   }
  },
  "severinghaus.org": {
-  "checked": "2026-10-29T06:19:35Z",
+  "checked": "2026-11-28T07:35:26Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6139,7 +6140,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'severinghaus.org'"
   },
   "home": {
-   "checked": "2026-10-29T06:19:35Z",
+   "checked": "2026-11-28T07:35:26Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6150,7 +6151,7 @@
   }
  },
  "sfard.posterous.com": {
-  "checked": "2026-10-29T06:19:37Z",
+  "checked": "2026-11-28T07:35:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6169,7 +6170,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:19:37Z",
+   "checked": "2026-11-28T07:35:27Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6180,7 +6181,7 @@
   }
  },
  "sfbay.techsolidarity.org": {
-  "checked": "2026-10-29T06:19:37Z",
+  "checked": "2026-11-28T07:35:27Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6199,7 +6200,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:19:37Z",
+   "checked": "2026-11-28T07:35:27Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6210,7 +6211,7 @@
   }
  },
  "sferik.github.io": {
-  "checked": "2026-10-29T06:19:38Z",
+  "checked": "2026-11-28T07:35:29Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6237,7 +6238,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:19:38Z",
+   "checked": "2026-11-28T07:35:29Z",
    "title": "Hi class",
    "generator": null,
    "feeds": [],
@@ -6284,7 +6285,7 @@
   }
  },
  "sha256algorithm.com": {
-  "checked": "2026-10-29T06:19:41Z",
+  "checked": "2026-11-28T07:35:31Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6309,7 +6310,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:19:41Z",
+   "checked": "2026-11-28T07:35:31Z",
    "title": "Sha256 Algorithm Explained",
    "generator": null,
    "feeds": [],
@@ -6319,7 +6320,7 @@
   }
  },
  "shademap.app": {
-  "checked": "2026-10-29T06:19:44Z",
+  "checked": "2026-11-28T07:35:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6345,7 +6346,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:19:44Z",
+   "checked": "2026-11-28T07:35:34Z",
    "title": "ShadeMap - Simulate sun shadows for any time and place on Earth",
    "generator": null,
    "feeds": [],
@@ -6355,7 +6356,7 @@
   }
  },
  "shadowfacts.net": {
-  "checked": "2026-10-29T06:19:47Z",
+  "checked": "2026-11-28T07:35:37Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6379,7 +6380,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:19:47Z",
+   "checked": "2026-11-28T07:35:37Z",
    "title": "Shadowfacts",
    "generator": null,
    "feeds": [
@@ -6395,7 +6396,7 @@
   }
  },
  "shadyurl.com": {
-  "checked": "2026-10-29T06:19:50Z",
+  "checked": "2026-11-28T07:35:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6416,7 +6417,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:19:50Z",
+   "checked": "2026-11-28T07:35:39Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6427,7 +6428,7 @@
   }
  },
  "shape-of-code.com": {
-  "checked": "2026-10-29T06:19:50Z",
+  "checked": "2026-11-28T07:35:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6449,7 +6450,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:19:50Z",
+   "checked": "2026-11-28T07:35:39Z",
    "title": "The Shape of Code",
    "generator": null,
    "feeds": [
@@ -6470,7 +6471,7 @@
   }
  },
  "shape.method.ac": {
-  "checked": "2026-10-29T06:19:53Z",
+  "checked": "2026-11-28T07:35:43Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6489,7 +6490,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:19:53Z",
+   "checked": "2026-11-28T07:35:43Z",
    "title": "Shape Type",
    "generator": null,
    "feeds": [],
@@ -6545,7 +6546,7 @@
   }
  },
  "sharecuts.app": {
-  "checked": "2026-10-29T06:19:58Z",
+  "checked": "2026-11-28T07:35:47Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6571,7 +6572,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:19:58Z",
+   "checked": "2026-11-28T07:35:47Z",
    "title": "Archive | Sharecuts",
    "generator": null,
    "feeds": [
@@ -6619,7 +6620,7 @@
   }
  },
  "sharplet.me": {
-  "checked": "2026-10-29T06:20:01Z",
+  "checked": "2026-11-28T07:35:50Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6641,7 +6642,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-29T06:20:01Z",
+   "checked": "2026-11-28T07:35:50Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6652,7 +6653,7 @@
   }
  },
  "shauninman.com": {
-  "checked": "2026-10-29T06:20:03Z",
+  "checked": "2026-11-28T07:35:53Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6678,7 +6679,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:20:03Z",
+   "checked": "2026-11-28T07:35:53Z",
    "title": "Shaun Inman says “Ratcheteer DX - Out Now!”",
    "generator": null,
    "feeds": [],
@@ -6749,7 +6750,7 @@
   }
  },
  "shawnwall.tumblr.com": {
-  "checked": "2026-10-29T06:20:05Z",
+  "checked": "2026-11-28T07:35:54Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6769,7 +6770,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-29T06:20:05Z",
+   "checked": "2026-11-28T07:35:54Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6780,7 +6781,7 @@
   }
  },
  "sheet-posting.me": {
-  "checked": "2026-10-29T06:20:08Z",
+  "checked": "2026-11-28T07:35:57Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6806,18 +6807,18 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:20:08Z",
-   "title": "23win ✔️ Trang Chủ 23win.Com ✔️ Link Uy Tín 【2026】",
+   "checked": "2026-11-28T07:35:57Z",
+   "title": "23WIN – Trang Chủ, Link Vào Và Thông Tin Thương Hiệu",
    "generator": "Site Kit by Google 1.180.0",
    "feeds": [
     {
      "type": "rss",
-     "url": "https://sheet-posting.me/feed/",
+     "url": "https://allperfu.me/feed/",
      "title": "Dòng thông tin 23win »"
     },
     {
      "type": "rss",
-     "url": "https://sheet-posting.me/comments/feed/",
+     "url": "https://allperfu.me/comments/feed/",
      "title": "23win » Dòng bình luận"
     }
    ],
@@ -6827,19 +6828,23 @@
   }
  },
  "sheets.works": {
-  "checked": "2026-10-29T06:20:13Z",
+  "checked": "2026-11-28T07:36:00Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
    "resolves": true,
    "a": [
-    "199.36.158.100"
+    "104.21.50.199",
+    "172.67.166.142"
    ],
-   "aaaa": [],
+   "aaaa": [
+    "2606:4700:3037::6815:32c7",
+    "2606:4700:3037::ac43:a68e"
+   ],
    "cname": null,
    "ns": [
-    "dns1.registrar-servers.com",
-    "dns2.registrar-servers.com"
+    "adam.ns.cloudflare.com",
+    "becky.ns.cloudflare.com"
    ],
    "mx": true
   },
@@ -6849,7 +6854,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:20:13Z",
+   "checked": "2026-11-28T07:36:00Z",
    "title": "sheets.works | Google Sheets Consulting",
    "generator": null,
    "feeds": [
@@ -6865,7 +6870,7 @@
   }
  },
  "sheety.co": {
-  "checked": "2026-10-29T06:20:16Z",
+  "checked": "2026-11-28T07:36:03Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6891,7 +6896,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:20:16Z",
+   "checked": "2026-11-28T07:36:03Z",
    "title": "Sheety - Turn your Google Sheet into an API",
    "generator": null,
    "feeds": [],
@@ -6901,7 +6906,7 @@
   }
  },
  "shekhargulati.com": {
-  "checked": "2026-10-29T06:20:19Z",
+  "checked": "2026-11-28T07:36:06Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6926,7 +6931,7 @@
    "error": "tls: Hostname mismatch, certificate is not valid for 'shekhargulati.com'"
   },
   "home": {
-   "checked": "2026-10-29T06:20:19Z",
+   "checked": "2026-11-28T07:36:06Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -6937,7 +6942,7 @@
   }
  },
  "shelf.nu": {
-  "checked": "2026-10-29T06:20:21Z",
+  "checked": "2026-11-28T07:36:08Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -6963,7 +6968,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:20:21Z",
+   "checked": "2026-11-28T07:36:08Z",
    "title": "Open Source Asset Management Software — Free for Teams | Shelf Asset Management",
    "generator": null,
    "feeds": [
@@ -6984,7 +6989,7 @@
   }
  },
  "shields.io": {
-  "checked": "2026-10-29T06:20:24Z",
+  "checked": "2026-11-28T07:36:11Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7010,7 +7015,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:20:24Z",
+   "checked": "2026-11-28T07:36:11Z",
    "title": "Shields.io",
    "generator": "Docusaurus v3.10.2",
    "feeds": [
@@ -7061,7 +7066,7 @@
   }
  },
  "shinesolutions.com": {
-  "checked": "2026-10-29T06:20:27Z",
+  "checked": "2026-11-28T07:36:13Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7085,9 +7090,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:20:27Z",
+   "checked": "2026-11-28T07:36:13Z",
    "title": "Shine Solutions Group – Trusted tech experts delivering value",
-   "generator": "Site Kit by Google 1.190.0",
+   "generator": "Site Kit by Google 1.192.0",
    "feeds": [
     {
      "type": "rss",
@@ -7106,7 +7111,7 @@
   }
  },
  "shinymetalthings.net": {
-  "checked": "2026-10-29T06:20:31Z",
+  "checked": "2026-11-28T07:36:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7125,7 +7130,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:20:31Z",
+   "checked": "2026-11-28T07:36:16Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7136,7 +7141,7 @@
   }
  },
  "shipmap.org": {
-  "checked": "2026-10-29T06:20:31Z",
+  "checked": "2026-11-28T07:36:16Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7163,7 +7168,7 @@
    "error": "timeout"
   },
   "home": {
-   "checked": "2026-10-29T06:20:31Z",
+   "checked": "2026-11-28T07:36:16Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7174,7 +7179,7 @@
   }
  },
  "shitphotojournalistslike.tumblr.com": {
-  "checked": "2026-10-29T06:20:49Z",
+  "checked": "2026-11-28T07:36:34Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7194,7 +7199,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-29T06:20:49Z",
+   "checked": "2026-11-28T07:36:34Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7205,7 +7210,7 @@
   }
  },
  "shitthatsirisays.tumblr.com": {
-  "checked": "2026-10-29T06:20:52Z",
+  "checked": "2026-11-28T07:36:36Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7225,7 +7230,7 @@
    "status": 403
   },
   "home": {
-   "checked": "2026-10-29T06:20:52Z",
+   "checked": "2026-11-28T07:36:36Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7291,7 +7296,7 @@
   }
  },
  "shloked.com": {
-  "checked": "2026-10-29T06:20:54Z",
+  "checked": "2026-11-28T07:36:39Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7315,7 +7320,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:20:54Z",
+   "checked": "2026-11-28T07:36:39Z",
    "title": "Shlok Khemani - Writer & Programmer",
    "generator": null,
    "feeds": [
@@ -7336,7 +7341,7 @@
   }
  },
  "sho.com": {
-  "checked": "2026-10-29T06:20:57Z",
+  "checked": "2026-11-28T07:36:42Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7368,7 +7373,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:20:57Z",
+   "checked": "2026-11-28T07:36:42Z",
    "title": "Watch Showtime Shows & Movies on Paramount+",
    "generator": null,
    "feeds": [],
@@ -7378,7 +7383,7 @@
   }
  },
  "shop.blackirishbooks.com": {
-  "checked": "2026-10-29T06:20:59Z",
+  "checked": "2026-11-28T07:36:44Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7398,7 +7403,7 @@
    "error": "tls: unable to get local issuer certificate"
   },
   "home": {
-   "checked": "2026-10-29T06:20:59Z",
+   "checked": "2026-11-28T07:36:44Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7409,7 +7414,7 @@
   }
  },
  "shop.ebay.com": {
-  "checked": "2026-10-29T06:21:02Z",
+  "checked": "2026-11-28T07:36:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7427,7 +7432,7 @@
    "error": "does not resolve"
   },
   "home": {
-   "checked": "2026-10-29T06:21:02Z",
+   "checked": "2026-11-28T07:36:46Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7438,7 +7443,7 @@
   }
  },
  "shop.lnbits.com": {
-  "checked": "2026-10-29T06:21:02Z",
+  "checked": "2026-11-28T07:36:46Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7457,9 +7462,9 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:21:02Z",
+   "checked": "2026-11-28T07:36:46Z",
    "title": "LNbits Shop",
-   "generator": "WordPress 7.1.3",
+   "generator": "WordPress 7.1.5",
    "feeds": [
     {
      "type": "rss",
@@ -7473,7 +7478,7 @@
   }
  },
  "shop.minibeerpong.com": {
-  "checked": "2026-10-29T06:21:08Z",
+  "checked": "2026-11-28T07:36:51Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7495,7 +7500,7 @@
    "error": "tls: TLS_ALERT_HANDSHAKE_FAILURE"
   },
   "home": {
-   "checked": "2026-10-29T06:21:08Z",
+   "checked": "2026-11-28T07:36:51Z",
    "title": null,
    "generator": null,
    "feeds": [],
@@ -7506,7 +7511,7 @@
   }
  },
  "shop.winefolly.com": {
-  "checked": "2026-10-29T06:21:09Z",
+  "checked": "2026-11-28T07:36:52Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7527,7 +7532,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:21:09Z",
+   "checked": "2026-11-28T07:36:52Z",
    "title": "Learn about Wine, Wine Courses, Books and Accessories | Wine Folly",
    "generator": null,
    "feeds": [],
@@ -7590,7 +7595,7 @@
   }
  },
  "shopify.github.io": {
-  "checked": "2026-10-29T06:21:12Z",
+  "checked": "2026-11-28T07:36:55Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7617,7 +7622,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:21:12Z",
+   "checked": "2026-11-28T07:36:55Z",
    "title": "Open Source Software - Shopify",
    "generator": null,
    "feeds": [],
@@ -7627,7 +7632,7 @@
   }
  },
  "shopmoment.com": {
-  "checked": "2026-10-29T06:21:15Z",
+  "checked": "2026-11-28T07:36:58Z",
   "method": "enrich_hosts",
   "version": 2,
   "dns": {
@@ -7649,7 +7654,7 @@
    "status": 200
   },
   "home": {
-   "checked": "2026-10-29T06:21:15Z",
+   "checked": "2026-11-28T07:36:58Z",
    "title": "Moment | Mobile Filmmaking & Photography Gear",
    "generator": null,
    "feeds": [],
